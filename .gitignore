@@ -4,5 +4,4 @@ dist/
 .output/
 *.log
 .DS_Store
-export/*.docx
-export/*.pdf
+export/*

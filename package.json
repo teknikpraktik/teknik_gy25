@@ -1,0 +1,17 @@
+{
+  "name": "teknik-gy25-produktion",
+  "type": "module",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Produktionsverktyg (validering, export) för läroboken Teknik Gy25. Webbplatsen ligger i ./site.",
+  "scripts": {
+    "skeleton": "node scripts/generate-skeleton.mjs",
+    "validate": "node scripts/validate.mjs",
+    "export": "node scripts/export-manuscript.mjs"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "yaml": "^2.6.1",
+    "zod": "^4.4.3"
+  }
+}

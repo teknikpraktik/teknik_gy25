@@ -40,7 +40,8 @@ Vid konflikter mellan olika dokument gäller följande ordning.
 8. Bokstruktur (06-bokstruktur.md)
 9. Innehållsmatris (07-kursplanetackning.md)
 10. Kvalitetssäkring (09-kvalitetssakring.md)
-11. Detta dokument
+11. Produktionsarkitektur (12-produktionsarkitektur.md)
+12. Detta dokument
 
 Denna hierarki avgör vilket dokument som gäller vid en direkt motsägelse mellan två dokument. Den ersätter inte 04:s Beslutstest, som används för att välja mellan likvärdiga lösningar inom ramen för principerna i ett och samma dokument, och inte heller Pedagogisk modells (03) roll att styra utformningen av struktur och uppgifter eller Ämnesfilosofins (10) roll att styra hur ett ämnesområde presenteras. Vid en verklig konflikt mellan 03, 04 och 10 gäller ordningen ovan: 03 väger tyngre än 04, som väger tyngre än 10.
 

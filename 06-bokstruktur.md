@@ -360,4 +360,4 @@ För varje modul registreras senare:
 - Språkgranskad
 - Klar
 
-Detta dokument fungerar därmed även som projektets produktionsöversikt.
+Detta dokument anger **målskelettet** — vilka kapitel, moduler och (så småningom) lärandemål som ska finnas. Det faktiska produktionsläget genereras automatiskt av valideringsskriptet i produktionsarkitekturen (se 12-produktionsarkitektur.md, "Kvalitetskontroller och kursplanetäckning") utifrån statusfältet i varje lärandemålsfil. De två ska alltid stämma överens i innehåll (samma kapitel/moduler); det är bara *var det faktiska läget avläses* som skiljer sig.
