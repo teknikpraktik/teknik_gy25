@@ -1,0 +1,289 @@
+# Dokumentnamn
+
+05-forfattarmanual.md
+
+---
+
+# Författarmanual
+
+Detta dokument definierar hur läroboken ska skrivas.
+
+Dokumentet reglerar språk, ton, disposition och berättarteknik. Det beskriver inte bokens struktur eller pedagogiska modell. Dessa behandlas i *03-bokens-arkitektur.md*.
+
+Målet är att hela boken ska upplevas som skriven av en erfaren tekniklärare med djupa ämneskunskaper och stor pedagogisk erfarenhet. Läsaren ska aldrig uppleva att texten är AI-genererad.
+
+---
+
+# Grundprincip
+
+Språket ska hjälpa eleven att förstå ämnet.
+
+Det ska aldrig dra uppmärksamheten till sig självt.
+
+Texten ska vara saklig, tydlig och naturlig utan att bli torr eller mekanisk.
+
+---
+
+# Författarröst
+
+Boken skrivs av en kunnig lärare.
+
+Inte av en forskare.
+
+Inte av en journalist.
+
+Inte av en marknadsförare.
+
+Inte av en AI.
+
+Författaren utgår från att eleven är intelligent men ännu inte behärskar ämnet.
+
+Författaren förenklar därför förklaringar, aldrig verkligheten.
+
+---
+
+# Ton
+
+Texten ska vara:
+
+- saklig
+- lugn
+- trygg
+- tydlig
+- professionell
+
+Texten ska aldrig vara:
+
+- överdrivet entusiastisk
+- säljande
+- skämtsam
+- tillgjord
+- ungdomlig
+- mästrande
+
+Intresset ska väckas av innehållet, inte av språket.
+
+---
+
+# Meningsbyggnad
+
+Meningslängden ska varieras naturligt.
+
+Kortare meningar används när precision eller tydlighet krävs.
+
+Längre meningar används när resonemang utvecklas.
+
+Undvik ett monotont skrivsätt där alla meningar har samma längd eller samma struktur.
+
+---
+
+# Stycken
+
+Stycken ska vara korta men inte onaturligt korta.
+
+Ett stycke ska behandla en sammanhängande idé.
+
+Nytt stycke används när läsaren behöver ett naturligt mentalt avbrott.
+
+Stycken delas aldrig upp enbart för att skapa luft.
+
+---
+
+# Ordval
+
+Använd ett naturligt och modernt språk.
+
+Välj enkla ord när de uttrycker samma sak.
+
+Tekniska begrepp används när de behövs och förklaras första gången de introduceras.
+
+Undvik onödigt akademiskt språk.
+
+Undvik vardagsslang.
+
+---
+
+# Informationstäthet
+
+Varje mening ska bidra med ny information.
+
+Om en mening kan tas bort utan att elevens förståelse försämras ska den tas bort.
+
+Information får aldrig upprepas enbart för att skapa flyt.
+
+---
+
+# Variation
+
+Texten ska ha ett naturligt tempo.
+
+Variera:
+
+- meningslängd
+- styckelängd
+- sätt att introducera nya idéer
+- sätt att formulera exempel
+
+Undvik symmetri.
+
+Alla avsnitt behöver inte innehålla samma antal exempel, figurer eller underrubriker.
+
+Dispositionen får varieras när det förbättrar förståelsen.
+
+---
+
+# Förklaringar
+
+Utgå från det konkreta.
+
+Abstrakta modeller introduceras först när eleven förstått det konkreta exemplet.
+
+Förklaringar ska utvecklas stegvis.
+
+Läsaren ska aldrig behöva gissa ett mellanled.
+
+---
+
+# Exempel
+
+Exempel ska vara verkliga.
+
+Verkliga produkter.
+
+Verkliga företag.
+
+Verkliga tekniska lösningar.
+
+Verkliga händelser.
+
+Exempel ska varieras genom hela boken.
+
+Samma exempel ska inte återkomma i flera kapitel om det inte finns ett tydligt pedagogiskt skäl.
+
+---
+
+# Formler
+
+Formler introduceras så snart de behövs.
+
+Formler skjuts inte upp av pedagogiska skäl.
+
+När en formel introduceras ska eleven förstå:
+
+- vad den beskriver
+- när den används
+- hur den används
+
+---
+
+# Punktlistor
+
+Punktlistor används sparsamt.
+
+De används endast när de ger bättre överblick än löpande text.
+
+Löpande text är förstahandsvalet.
+
+---
+
+# Rubriker
+
+Rubriker ska vara korta.
+
+Rubriker ska beskriva innehållet.
+
+Undvik rubriker som försöker vara fyndiga.
+
+---
+
+# Frågor till läsaren
+
+Retoriska frågor används mycket sparsamt.
+
+Texten ska inte bygga på ett samtal med läsaren.
+
+---
+
+# Tilltal
+
+Direkt tilltal ("du") används endast när det förbättrar tydligheten.
+
+Texten ska inte präglas av ett genomgående personligt tilltal.
+
+---
+
+# AI-språk som ska undvikas
+
+Undvik formuleringar som ofta förekommer i AI-genererad text.
+
+Exempel:
+
+- "Det är viktigt att..."
+- "Det handlar inte om X utan om Y."
+- "Låt oss..."
+- "Vi ska nu..."
+- "I dagens samhälle..."
+- "Som vi kommer att se..."
+- "Det är värt att notera..."
+- "Tänk på att..."
+- "Sammanfattningsvis..."
+
+Liknande formuleringar ska undvikas även om de inte finns i listan.
+
+---
+
+# Onödiga texttyper
+
+Boken ska inte innehålla:
+
+- utfyllnad
+- motivationsstycken
+- upprepningar
+- metakommentarer
+- självreferenser
+- sammanfattningar efter varje avsnitt
+- tomma övergångar mellan avsnitt
+
+Texten går direkt till innehållet.
+
+---
+
+# Övergångar
+
+Övergångar mellan avsnitt ska kännas naturliga.
+
+De ska inte förklara att ett nytt avsnitt börjar.
+
+De ska leda läsaren vidare genom ämnet.
+
+---
+
+# Disposition
+
+Claude får ändra dispositionen inom ett lärandemål när det förbättrar förståelsen.
+
+Exempel kan komma före teori.
+
+Teori kan delas upp av ett exempel.
+
+Ett begrepp kan introduceras senare om det ger bättre progression.
+
+Dispositionen ska alltid styras av elevens förståelse.
+
+---
+
+# Fakta
+
+Alla faktauppgifter ska vara korrekta.
+
+Vid osäkerhet ska den mest etablerade tekniska beskrivningen användas.
+
+Påståenden ska kunna verifieras.
+
+---
+
+# Slutlig kvalitetskontroll
+
+Den fullständiga kvalitetskontrollen av färdigt innehåll, inklusive de språkliga kriterierna, regleras av *09-kvalitetssakring.md*.
+
+Denna manual anger de språkliga principer som ska tillämpas under skrivandet: se avsnitten ovan om ton, meningsbyggnad, ordval, informationstäthet och AI-språk.
