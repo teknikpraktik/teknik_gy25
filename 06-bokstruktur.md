@@ -20,7 +20,7 @@ Ingen kursplanetäckning.
 
 Syftet är att utgöra projektets innehållsförteckning och produktionsplan.
 
-Listan över lärandemål under varje modul är preliminär. När Claude Code delar upp eller slår ihop lärandemål under produktionen (se 04-redaktionsprinciper.md och 08-claude-code-manual.md) ska listan uppdateras i motsvarande grad.
+Listan över lärandemål under varje modul är preliminär. När Claude Code delar upp eller slår ihop lärandemål under produktionen (se 04-redaktionsprinciper.md och 08-claude-code-manual.md) ska listan uppdateras i motsvarande grad, tillsammans med `scripts/bokstruktur-data.mjs` som är dokumentets maskinläsbara spegling.
 
 ---
 
@@ -40,28 +40,41 @@ Lärandemål
 
 ---
 
+# Lärandemålens format
+
+Varje lärandemål anges med id, kort arbetstitel och en mätbar målformulering.
+
+Målformuleringen beskriver vad eleven kan göra efter genomfört arbete (03-bokens-arkitektur.md, "Lärandemål"). Den inleds därför alltid med ett observerbart verb: beskriva, förklara, beräkna, tolka, välja, upprätta, genomföra, skissa och så vidare.
+
+Ett lärandemål omfattar normalt ett uppslag. Lärandemål som bedöms kräva flera uppslag är markerade med **(flera uppslag)** — antalet är en planeringsuppskattning som får justeras under produktionen, i linje med 03: antalet sidor styrs av pedagogiken.
+
+---
+
 # Kapitel 1 – Teknikhistoria
 
 ## Modul 1.1 Teknik – människans problemlösning
 
-- (Lärandemål)
-- (Lärandemål)
+- **1.1.1 Vad är teknik?** — Förklara vad teknik är och ge exempel på hur tekniska lösningar svarar mot mänskliga behov och problem.
+- **1.1.2 Teknik, naturvetenskap och matematik** — Beskriva hur teknik samspelar med naturvetenskap och matematik i en verklig teknisk lösning.
 
 ## Modul 1.2 Teknikens utveckling genom historien
 
-- (Lärandemål)
+- **1.2.1 Tekniska genombrott före industrialiseringen** — Beskriva tekniska genombrott från de första verktygen till 1700-talet och förklara deras betydelse för samhället. **(flera uppslag)**
+- **1.2.2 Teknikutvecklingens drivkrafter** — Förklara hur behov, kunskap och samhällsförändringar driver teknikutveckling, med historiska exempel.
 
 ## Modul 1.3 Industriella revolutionerna
 
-- (Lärandemål)
+- **1.3.1 Fyra industriella revolutioner** — Beskriva de fyra industriella revolutionerna och de teknikskiften som kännetecknar dem. **(flera uppslag)**
+- **1.3.2 Industrialiseringens samhällskonsekvenser** — Analysera hur industrialiseringen förändrade produktion, arbete och levnadsvillkor.
 
 ## Modul 1.4 Digitaliseringens framväxt
 
-- (Lärandemål)
+- **1.4.1 Från transistor till AI** — Beskriva digitalteknikens viktigaste utvecklingssteg från transistorn till internet och AI.
+- **1.4.2 Digitala teknikskiften** — Ge exempel på hur digitala teknikskiften har förändrat branscher och vardagsliv.
 
 ## Modul 1.5 Framtidens teknik
 
-- (Lärandemål)
+- **1.5.1 Att bedöma framtidens teknik** — Använda historiska teknikskiften för att resonera om hur dagens nya teknik kan utvecklas och påverka samhället.
 
 ---
 
@@ -69,15 +82,20 @@ Lärandemål
 
 ## Modul 2.1 Vad är ett tekniskt problem?
 
-- (Lärandemål)
+- **2.1.1 Tekniska problem** — Förklara vad som kännetecknar ett tekniskt problem och skilja mellan behov, problem och lösning.
+- **2.1.2 Problemformulering** — Formulera ett tekniskt problem med funktion, krav och begränsningar.
 
 ## Modul 2.2 Problemlösningsstrategier
 
-- (Lärandemål)
+- **2.2.1 Systematisk problemlösning** — Beskriva och tillämpa en systematisk problemlösningsprocess från problem till testad lösning.
+- **2.2.2 Nedbrytning i delproblem** — Bryta ned ett sammansatt tekniskt problem i delproblem och lösa dem var för sig.
+- **2.2.3 Val av strategi** — Välja problemlösningsstrategi utifrån problemets karaktär och motivera valet.
 
 ## Modul 2.3 Testning och utvärdering
 
-- (Lärandemål)
+- **2.3.1 Att testa mot krav** — Planera och genomföra ett test av en teknisk lösning mot uppställda krav.
+- **2.3.2 Utvärdering ur flera aspekter** — Utvärdera en teknisk lösning utifrån funktion, kostnad, säkerhet och hållbar utveckling.
+- **2.3.3 Från testresultat till förbättring** — Dra slutsatser av testresultat och föreslå konkreta förbättringar av lösningen.
 
 ---
 
@@ -85,27 +103,32 @@ Lärandemål
 
 ## Modul 3.1 Teknikutvecklingsprocessen
 
-- (Lärandemål)
+- **3.1.1 Processens faser** — Beskriva teknikutvecklingsprocessens delar från idé till återvinning och förklara hur de hänger samman. **(flera uppslag)**
+- **3.1.2 Iteration** — Förklara varför teknikutveckling är iterativ och ge exempel på hur testresultat leder tillbaka till tidigare faser.
 
 ## Modul 3.2 Kravspecifikation
 
-- (Lärandemål)
+- **3.2.1 Behov, krav och önskemål** — Skilja mellan behov, krav och önskemål och förklara varför mätbara krav behövs.
+- **3.2.2 Upprätta kravspecifikation** — Upprätta en kravspecifikation med mätbara krav för en produkt eller tjänst.
 
 ## Modul 3.3 Idégenerering
 
-- (Lärandemål)
+- **3.3.1 Idégenereringsmetoder** — Använda metoder för idégenerering för att ta fram flera olika lösningsförslag på ett tekniskt problem.
 
 ## Modul 3.4 Konceptutveckling
 
-- (Lärandemål)
+- **3.4.1 Från idé till koncept** — Utveckla en idé till ett koncept som beskriver funktion, utformning och tänkt användning.
+- **3.4.2 Konceptval** — Jämföra koncept med en viktad beslutsmatris och välja koncept med motivering.
 
 ## Modul 3.5 Prototyper
 
-- (Lärandemål)
+- **3.5.1 Prototypers roll** — Förklara vad prototyper används till och skilja mellan olika typer av prototyper.
+- **3.5.2 Bygga och testa prototyp** — Bygga en enkel prototyp och använda den för att testa och förbättra ett koncept.
 
 ## Modul 3.6 Produktens livscykel
 
-- (Lärandemål)
+- **3.6.1 Livscykelns faser** — Beskriva en produkts livscykel från råvara till återvinning och koppla miljöpåverkan till livscykelns faser.
+- **3.6.2 Design för livscykeln** — Förklara hur konstruktionsval påverkar produktens livslängd, underhåll och återvinning.
 
 ---
 
@@ -113,23 +136,29 @@ Lärandemål
 
 ## Modul 4.1 Skisser
 
-- (Lärandemål)
+- **4.1.1 Idéskisser** — Skissa tekniska idéer frihand så att form och funktion framgår.
+- **4.1.2 Volymskisser** — Skissa föremål i isometrisk vy så att proportioner och tredimensionell form framgår.
 
 ## Modul 4.2 Ritningar
 
-- (Lärandemål)
+- **4.2.1 Vyer och projektion** — Rita ett föremål i tre vyer och förklara hur vyerna placeras.
+- **4.2.2 Ritningens språk** — Tolka linjetyper, skala och ritningshuvud på en teknisk ritning.
 
 ## Modul 4.3 Måttsättning
 
-- (Lärandemål)
+- **4.3.1 Måttsätta ritningar** — Måttsätta en enkel ritning enligt gällande standard.
+- **4.3.2 Toleranser** — Förklara varför toleranser behövs och tolka toleransangivelser på en ritning.
 
 ## Modul 4.4 CAD
 
-- (Lärandemål)
+- **4.4.1 CAD och parametrisk modellering** — Förklara vad CAD är och hur parametrisk modellering bygger på skisser, mått och villkor.
+- **4.4.2 Modellera en detalj** — Skapa en 3D-modell av en enkel detalj i ett CAD-program. **(flera uppslag)**
+- **4.4.3 Sammanställningar** — Sätta samman flera detaljer till en sammanställning i CAD och förklara hur delarna förhåller sig till varandra.
 
 ## Modul 4.5 Ritningar och modeller
 
-- (Lärandemål)
+- **4.5.1 Ritning ur modell** — Ta fram en måttsatt ritning ur en 3D-modell.
+- **4.5.2 Presentera teknik** — Välja lämplig form för att dokumentera och presentera en teknisk lösning för en given mottagare, muntligt och skriftligt med digitala medier.
 
 ---
 
@@ -137,23 +166,27 @@ Lärandemål
 
 ## Modul 5.1 Materialgrupper
 
-- (Lärandemål)
+- **5.1.1 Materialens huvudgrupper** — Klassificera material i huvudgrupperna metaller, polymerer, keramer, kompositer och träbaserade material samt ge exempel på användningsområden. **(flera uppslag)**
 
 ## Modul 5.2 Materialegenskaper
 
-- (Lärandemål)
+- **5.2.1 Mekaniska egenskaper** — Förklara centrala mekaniska egenskaper som hållfasthet, styvhet, hårdhet och seghet samt ge exempel på när de är avgörande.
+- **5.2.2 Fysikaliska och kemiska egenskaper** — Förklara egenskaper som densitet, ledningsförmåga och korrosionsbeständighet samt ge exempel på när de är avgörande.
+- **5.2.3 Materialdata** — Tolka materialdata ur tabeller och datablad och jämföra material utifrån givna egenskaper.
 
 ## Modul 5.3 Materialval
 
-- (Lärandemål)
+- **5.3.1 Välja material** — Välja material till en given konstruktion utifrån krav och motivera valet som en avvägning mellan egenskaper, kostnad och hållbarhet.
 
 ## Modul 5.4 Tillverkning och material
 
-- (Lärandemål)
+- **5.4.1 Tillverkningsmetoder** — Beskriva vanliga tillverkningsmetoder och koppla dem till lämpliga materialgrupper. **(flera uppslag)**
+- **5.4.2 Tillverkningsanpassning** — Förklara hur valet av material och tillverkningsmetod påverkar en detaljs utformning och kostnad.
 
 ## Modul 5.5 Material i ett livscykelperspektiv
 
-- (Lärandemål)
+- **5.5.1 Materialets livscykel** — Bedöma ett materials miljöpåverkan genom livscykeln från utvinning till återvinning.
+- **5.5.2 Återvinning och materialval** — Förklara skillnaden mellan återanvändning, materialåtervinning och energiåtervinning samt hur materialvalet påverkar återvinningsbarheten.
 
 ---
 
@@ -161,27 +194,35 @@ Lärandemål
 
 ## Modul 6.1 Krafter
 
-- (Lärandemål)
+- **6.1.1 Kraftbegreppet** — Beskriva en kraft med storlek, riktning och angreppspunkt samt rita krafter som vektorer.
+- **6.1.2 Kraftresultanter** — Bestämma resultanten av flera krafter grafiskt och genom beräkning med komposanter.
+- **6.1.3 Friläggning** — Frilägga en enkel konstruktion och identifiera de krafter som verkar på den.
 
 ## Modul 6.2 Moment
 
-- (Lärandemål)
+- **6.2.1 Momentbegreppet** — Förklara vad ett moment är och beräkna moment kring en punkt.
+- **6.2.2 Hävarmsprincipen** — Använda hävarmsprincipen för att förklara och beräkna utväxling i enkla maskiner och verktyg.
 
 ## Modul 6.3 Jämvikt
 
-- (Lärandemål)
+- **6.3.1 Jämviktsvillkoren** — Formulera jämviktsvillkoren och använda dem för att beräkna okända krafter i enkla fall.
+- **6.3.2 Stödreaktioner** — Beräkna stödreaktioner för en enkelt belastad balk.
 
 ## Modul 6.4 Hållfasthet
 
-- (Lärandemål)
+- **6.4.1 Belastningstyper** — Identifiera drag, tryck, böjning, skjuvning, vridning och knäckning i verkliga konstruktioner.
+- **6.4.2 Spänning och töjning** — Förklara begreppen spänning och töjning samt beräkna normalspänning i en belastad detalj.
+- **6.4.3 Dragprovet** — Tolka en dragprovkurva och avläsa elasticitetsmodul, sträckgräns och brottgräns.
 
 ## Modul 6.5 Konstruktion
 
-- (Lärandemål)
+- **6.5.1 Geometri och styvhet** — Förklara hur tvärsnitt och geometri påverkar en konstruktions styvhet och bärförmåga.
+- **6.5.2 Fackverk och kraftvägar** — Identifiera drag- och tryckbelastade delar i ett fackverk och förklara hur laster förs ned till stöden.
 
 ## Modul 6.6 Dimensionering
 
-- (Lärandemål)
+- **6.6.1 Säkerhetsfaktor och dimensionering** — Dimensionera en enkel konstruktionsdetalj mot en given belastning med hjälp av tillåten spänning och säkerhetsfaktor. **(flera uppslag)**
+- **6.6.2 Rimlighetsbedömning** — Bedöma beräkningsresultats rimlighet med överslagsräkning och enhetskontroll.
 
 ---
 
@@ -189,23 +230,24 @@ Lärandemål
 
 ## Modul 7.1 Storheter och enheter
 
-- (Lärandemål)
+- **7.1.1 SI-systemet** — Använda SI-systemets storheter, enheter och prefix samt genomföra enhetsomvandlingar.
 
 ## Modul 7.2 Mätinstrument
 
-- (Lärandemål)
+- **7.2.1 Mäta med rätt instrument** — Välja lämpligt mätinstrument för en given mätuppgift och använda det korrekt. **(flera uppslag)**
 
 ## Modul 7.3 Mätfel
 
-- (Lärandemål)
+- **7.3.1 Mätosäkerhet** — Skilja mellan systematiska och slumpmässiga mätfel samt ange mätvärden med rimligt antal värdesiffror.
 
 ## Modul 7.4 Datainsamling
 
-- (Lärandemål)
+- **7.4.1 Planera och genomföra mätningar** — Planera och genomföra en mätserie med strukturerad dokumentation, manuellt eller med digital datainsamling.
 
 ## Modul 7.5 Dataanalys
 
-- (Lärandemål)
+- **7.5.1 Sammanställa mätdata** — Sammanställa mätdata i tabeller och diagram samt beräkna medelvärde och spridning.
+- **7.5.2 Tolka mätdata** — Tolka samband i mätdata, anpassa en enkel modell till data och dra slutsatser med hänsyn till mätosäkerheten.
 
 ---
 
@@ -213,19 +255,21 @@ Lärandemål
 
 ## Modul 8.1 Modeller
 
-- (Lärandemål)
+- **8.1.1 Modellbegreppet** — Förklara vad en modell är, varför modeller används och vilka begränsningar de har.
+- **8.1.2 Välja modelltyp** — Skilja mellan fysiska, matematiska och digitala modeller och välja modelltyp för ett givet syfte.
 
 ## Modul 8.2 Digital modellering
 
-- (Lärandemål)
+- **8.2.1 Bygga en digital modell** — Bygga en enkel digital modell av ett tekniskt förlopp i kalkylprogram eller Python. **(flera uppslag)**
 
 ## Modul 8.3 Simulering
 
-- (Lärandemål)
+- **8.3.1 Simuleringens princip** — Förklara vad simulering är och när simulering är att föredra framför fysisk provning.
+- **8.3.2 Genomföra en simulering** — Genomföra en enkel simulering, variera parametrar och tolka resultatet.
 
 ## Modul 8.4 Verifiering
 
-- (Lärandemål)
+- **8.4.1 Verifiering och validering** — Förklara skillnaden mellan verifiering och validering samt jämföra modellresultat med mätningar.
 
 ---
 
@@ -233,23 +277,25 @@ Lärandemål
 
 ## Modul 9.1 IT-system
 
-- (Lärandemål)
+- **9.1.1 IT-systemets delar** — Beskriva ett IT-systems uppbyggnad med hårdvara, mjukvara, data, nätverk och användare samt ge exempel på IT-systems roll i teknikutveckling.
 
 ## Modul 9.2 Datorer
 
-- (Lärandemål)
+- **9.2.1 Datorns uppbyggnad** — Beskriva datorns huvuddelar och förklara hur de samverkar när ett program körs.
+- **9.2.2 Digital representation** — Förklara hur tal, text och bilder representeras binärt.
 
 ## Modul 9.3 Nätverk
 
-- (Lärandemål)
+- **9.3.1 Nätverkets delar** — Beskriva hur lokala nätverk är uppbyggda och hur data tar sig mellan enheter.
 
 ## Modul 9.4 Internet
 
-- (Lärandemål)
+- **9.4.1 Så fungerar internet** — Förklara hur internet fungerar med IP-adresser, DNS och paketförmedling.
 
 ## Modul 9.5 Digitalisering
 
-- (Lärandemål)
+- **9.5.1 Digitaliseringens betydelse** — Förklara digitaliseringens betydelse för produktion, kommunikation och människans livsmiljö.
+- **9.5.2 Uppkopplade system** — Beskriva hur uppkopplade enheter och molntjänster används i tekniska system och produktion.
 
 ---
 
@@ -257,27 +303,29 @@ Lärandemål
 
 ## Modul 10.1 Python
 
-- (Lärandemål)
+- **10.1.1 Första programmet** — Skriva, köra och felsöka ett enkelt Python-program med utskrift och inmatning.
 
 ## Modul 10.2 Variabler
 
-- (Lärandemål)
+- **10.2.1 Variabler och datatyper** — Använda variabler och grundläggande datatyper för att utföra beräkningar i program.
 
 ## Modul 10.3 Villkor
 
-- (Lärandemål)
+- **10.3.1 Villkorssatser** — Skriva program som fattar beslut med villkorssatser och logiska uttryck.
 
 ## Modul 10.4 Loopar
 
-- (Lärandemål)
+- **10.4.1 for och while** — Använda for- och while-loopar för att upprepa beräkningar i program.
+- **10.4.2 Listor** — Använda listor för att lagra och bearbeta data i program.
 
 ## Modul 10.5 Funktioner
 
-- (Lärandemål)
+- **10.5.1 Funktioner** — Skriva och använda funktioner med parametrar och returvärden för att strukturera programkod.
 
 ## Modul 10.6 Problemlösning
 
-- (Lärandemål)
+- **10.6.1 Från problem till program** — Bryta ned ett tekniskt problem i delsteg och implementera lösningen som ett strukturerat Python-program. **(flera uppslag)**
+- **10.6.2 Testa och felsöka** — Testa ett program systematiskt samt lokalisera och rätta fel i programkod.
 
 ---
 
@@ -285,23 +333,25 @@ Lärandemål
 
 ## Modul 11.1 Projektarbete
 
-- (Lärandemål)
+- **11.1.1 Projektformen** — Förklara vad som kännetecknar ett projekt samt beskriva vanliga faser och roller i tekniska projekt.
 
 ## Modul 11.2 Projektplanering
 
-- (Lärandemål)
+- **11.2.1 Projektplan** — Upprätta en projektplan med mål, aktiviteter, tidsplan och ansvarsfördelning.
+- **11.2.2 Projektrisker** — Identifiera risker i ett projekt och planera förebyggande åtgärder.
 
 ## Modul 11.3 Entreprenörskap
 
-- (Lärandemål)
+- **11.3.1 Entreprenörskapets villkor** — Förklara entreprenörskapets roll i teknikutveckling och vilka villkor som påverkar vägen från idé till produkt på en marknad.
+- **11.3.2 Affärsmodell** — Beskriva en affärsmodell för en teknisk produkt eller tjänst med kundnytta, kostnader och intäkter.
 
 ## Modul 11.4 Genomförande
 
-- (Lärandemål)
+- **11.4.1 Arbeta i projekt** — Genomföra ett tekniskt projekt enligt plan med möten, dokumentation och uppföljning av tid och resultat. **(flera uppslag)**
 
 ## Modul 11.5 Projektutvärdering
 
-- (Lärandemål)
+- **11.5.1 Utvärdera och presentera** — Utvärdera ett projekts resultat och arbetsprocess samt presentera projektet för en mottagare.
 
 ---
 
@@ -309,19 +359,20 @@ Lärandemål
 
 ## Modul 12.1 Kvalitet
 
-- (Lärandemål)
+- **12.1.1 Kvalitet och kvalitetsarbete** — Förklara begreppet kvalitet och beskriva hur systematiskt kvalitetsarbete med ständiga förbättringar bedrivs.
+- **12.1.2 Kvalitetskontroll** — Kontrollmäta en detalj mot ställda krav och avgöra om den ska godkännas.
 
 ## Modul 12.2 Riskanalys
 
-- (Lärandemål)
+- **12.2.1 Genomföra riskanalys** — Genomföra en riskanalys med bedömning av sannolikhet och konsekvens samt föreslå riskreducerande åtgärder.
 
 ## Modul 12.3 Arbetsmiljö
 
-- (Lärandemål)
+- **12.3.1 Systematiskt arbetsmiljöarbete** — Beskriva hur systematiskt arbetsmiljöarbete bedrivs och identifiera arbetsmiljörisker i en teknisk miljö.
 
 ## Modul 12.4 Miljösäkring
 
-- (Lärandemål)
+- **12.4.1 Miljösäkring** — Förklara hur miljösäkring bedrivs och hur miljökrav påverkar tekniskt utvecklings- och produktionsarbete.
 
 ---
 
@@ -329,29 +380,32 @@ Lärandemål
 
 ## Modul 13.1 Teknik och samhälle
 
-- (Lärandemål)
+- **13.1.1 Teknikens växelverkan med samhället** — Analysera hur teknik förändrar samhället och hur samhällets behov och värderingar styr teknikutvecklingen.
+- **13.1.2 Teknikerns roll** — Beskriva teknikerns roll och ansvar i utvecklingen av ett hållbart samhälle.
 
 ## Modul 13.2 Etik
 
-- (Lärandemål)
+- **13.2.1 Etik i teknikutveckling** — Identifiera etiska frågor i teknikutveckling och värdera tekniska lösningar utifrån etiska aspekter.
 
 ## Modul 13.3 Genus och normer
 
-- (Lärandemål)
+- **13.3.1 Normer i tekniken** — Förklara hur normer och genusstrukturer påverkar teknikens utformning, användning och tillgänglighet.
+- **13.3.2 Normkritisk granskning** — Granska en teknisk lösning ur ett norm- och tillgänglighetsperspektiv och föreslå förbättringar.
 
 ## Modul 13.4 Hållbar utveckling
 
-- (Lärandemål)
+- **13.4.1 Hållbarhet som konstruktionskrav** — Förklara hållbar utveckling ur miljömässigt, ekonomiskt och socialt perspektiv och använda perspektiven vid värdering av tekniska lösningar.
+- **13.4.2 Cirkulär ekonomi** — Förklara cirkulär ekonomi och nya affärsmodeller samt hur de förändrar teknikutveckling och produktion.
 
 ## Modul 13.5 Framtidens teknik
 
-- (Lärandemål)
+- **13.5.1 Möjligheter och risker** — Beskriva möjligheter och risker med framtidens teknik och värdera teknikens roll i att möta samhällsutmaningar.
 
 ---
 
 # Produktionsstatus
 
-För varje modul registreras senare:
+För varje lärandemål registreras status i respektive fils frontmatter:
 
 - Ej påbörjad
 - Under utveckling
@@ -360,4 +414,4 @@ För varje modul registreras senare:
 - Språkgranskad
 - Klar
 
-Detta dokument anger **målskelettet** — vilka kapitel, moduler och (så småningom) lärandemål som ska finnas. Det faktiska produktionsläget genereras automatiskt av valideringsskriptet i produktionsarkitekturen (se 12-produktionsarkitektur.md, "Kvalitetskontroller och kursplanetäckning") utifrån statusfältet i varje lärandemålsfil. De två ska alltid stämma överens i innehåll (samma kapitel/moduler); det är bara *var det faktiska läget avläses* som skiljer sig.
+Detta dokument anger **målskelettet** — vilka kapitel, moduler och lärandemål som ska finnas. Det faktiska produktionsläget genereras automatiskt av valideringsskriptet i produktionsarkitekturen (se 12-produktionsarkitektur.md, "Kvalitetskontroller och kursplanetäckning") utifrån statusfältet i varje lärandemålsfil. De två ska alltid stämma överens i innehåll (samma kapitel/moduler/lärandemål); det är bara *var det faktiska läget avläses* som skiljer sig.

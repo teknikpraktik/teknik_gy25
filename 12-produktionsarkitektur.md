@@ -44,15 +44,17 @@ figures/
 schemas/
   larandemal.schema.mjs             # enda källan till metadataschemat (Zod)
 scripts/
-  bokstruktur-data.mjs              # maskinläsbar spegling av 06:s kapitel/moduler
-  generate-skeleton.mjs             # skapar mapp-/modulskelett, hittar inte på lärandemål
+  bokstruktur-data.mjs              # maskinläsbar spegling av 06:s kapitel/moduler/lärandemål
+  kursplan-data.mjs                 # maskinläsbar spegling av 07:s innehållsmatris
+  generate-skeleton.mjs             # skapar mapp-/modul-/lärandemålsskelett (tomma filer, ingen text)
   validate.mjs                      # tvärgående kvalitetskontroller (se nedan)
+  begreppsregister.mjs              # genererar centralt begreppsregister till export/
   export-manuscript.mjs             # sammanställer och exporterar bokmanus
 site/                               # Astro + Starlight, se "Webbformat" nedan
 export/                             # genererade manusfiler (gitignorad, byggs på nytt varje gång)
 ```
 
-Kapitel- och modulnamn i mappstrukturen speglar 06-bokstruktur.md exakt. Ändras ett kapitel- eller modulnamn i 06 ska `scripts/bokstruktur-data.mjs` uppdateras i samma steg (körs sedan via `npm run skeleton`), annars går strukturerna ur synk.
+Kapitel-, modul- och lärandemålsnamn i mappstrukturen speglar 06-bokstruktur.md exakt. Ändras 06 ska `scripts/bokstruktur-data.mjs` uppdateras i samma steg (körs sedan via `npm run skeleton`), annars går strukturerna ur synk — `scripts/validate.mjs` felar när content/ och bokstrukturen inte stämmer överens. Det operativa arbetsflödet beskrivs i 13-produktionsmanual.md.
 
 ---
 
@@ -65,6 +67,8 @@ id: "6.1.2"
 chapter: 6
 module: "6.1"
 title: "Kraftresultanter"
+goal: "Bestämma resultanten av flera krafter grafiskt och genom beräkning med komposanter."
+uppslag: 1                 # planerat antal uppslag; >1 markeras även i 06-bokstruktur.md
 status: under-utveckling   # ej-paborjad | under-utveckling | fardig-forsta-version | fackgranskad | sprakgranskad | klar
 curriculum:
   niva1: ["Begrepp, teorier och modeller"]
@@ -111,7 +115,9 @@ Alla tekniska begrepp har ett unikt huvudställe: den lärandemålsfil där begr
 
 Interna referenser till begreppet i andra lärandemål sker via shortcoden `[[begrepp:namn]]`, som webbplatsen länkar till huvudstället och som exportskriptet löser upp till vanlig text (ett bokmanus har inga klickbara länkar).
 
-`scripts/validate.mjs` kontrollerar att varje begrepp finns i `concepts_introduced` i högst en fil (maskinkontroll av 11-begreppsfilosofi.md, "Begrepp introduceras en gång").
+`scripts/validate.mjs` kontrollerar att varje begrepp finns i `concepts_introduced` i högst en fil (maskinkontroll av 11-begreppsfilosofi.md, "Begrepp introduceras en gång") och varnar när ett begrepp i `concepts_used` saknar huvudställe.
+
+Det centrala begreppsregistret är härlett, aldrig handredigerat: `scripts/begreppsregister.mjs` (`npm run begrepp`) sammanställer alla begrepp med huvudställe och användningsställen till `export/begreppsregister.md`.
 
 ---
 
@@ -131,13 +137,15 @@ Platshållarspecifikationen för en figur (se 01, 03, 08) ska alltid innehålla 
 
 `scripts/validate.mjs` körs automatiskt före varje bygge av webbplatsen (`prebuild`-steg) och kan köras fristående (`npm run validate`). Det kontrollerar:
 
-- **Begreppsunikhet** — varje begrepp introduceras i högst en fil.
+- **Struktursynk** — varje lärandemål i bokstrukturen (06 via `bokstruktur-data.mjs`) har en fil i content/, och varje lärandemålsfil finns i bokstrukturen; id, kapitel och modul stämmer överens.
+- **Begreppsunikhet** — varje begrepp introduceras i högst en fil; använda begrepp utan huvudställe flaggas.
 - **Figur-ID** — varje refererad figur finns i registret; oanvända figurer flaggas.
 - **Förkunskapsordning** — en fils `prerequisites` måste ligga tidigare i läsordningen (kapitel.modul.löpnummer), i linje med 04 §10.
-- **Kursplantaggning** — `curriculum.niva1`/`niva2` måste använda samma kategorinamn som 07-kursplanetackning.md.
-- **Statusöversikt** — sammanställer antal lärandemål per status, som ersättning för manuell bokföring i 06.
+- **Kursplantaggning** — `curriculum.niva1`/`niva2` måste använda samma kategorinamn som 07-kursplanetackning.md (via `kursplan-data.mjs`).
+- **Statusöversikt** — sammanställer antal lärandemål per status, totalt och per kapitel, som ersättning för manuell bokföring i 06.
+- **Kursplanetäckningsöversikt** — för varje punkt i det centrala innehållet: antal påbörjade lärandemål i punktens primärkapitel med rätt kategoritagg.
 
-07-kursplanetackning.md förblir den redaktionella auktoriteten för vilket kapitel som har primärt ansvar för vad. Valideringsskriptet läser referensdata därifrån (kategorinamnen) — det skriver aldrig till 07 och avgör aldrig själva täckningsbeslutet.
+07-kursplanetackning.md förblir den redaktionella auktoriteten för vilket kapitel som har primärt ansvar för vad. `scripts/kursplan-data.mjs` är dess maskinläsbara spegling och uppdateras i samma steg som 07 — skripten skriver aldrig till 07 och avgör aldrig själva täckningsbeslutet.
 
 ---
 

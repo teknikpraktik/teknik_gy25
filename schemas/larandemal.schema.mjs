@@ -21,6 +21,8 @@ export const larandemalFields = {
   id: z.string().describe('T.ex. "6.1.2"').optional(),
   chapter: z.number().int().optional(),
   module: z.string().optional(),
+  goal: z.string().describe('Mätbar målformulering, inleds med observerbart verb').optional(),
+  uppslag: z.number().int().min(1).describe('Planerat antal uppslag (03-bokens-arkitektur.md)').optional(),
   status: z.enum(statusEnum).optional(),
   curriculum: z
     .object({
@@ -45,6 +47,8 @@ export const larandemalRequiredSchema = z.object({
   chapter: z.number().int(),
   module: z.string(),
   title: z.string(),
+  goal: z.string(),
+  uppslag: z.number().int().min(1).default(1),
   status: z.enum(statusEnum),
   curriculum: z.object({
     niva1: z.array(z.string()).default([]),

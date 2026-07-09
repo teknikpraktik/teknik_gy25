@@ -1,5 +1,6 @@
 // Tvärgående valideringar som inte kan uttryckas i ett per-fil Zod-schema:
-// begreppsunikhet, figur-ID, förkunskapsordning och kursplanetaggning.
+// synk mellan bokstruktur och content/, begreppsunikhet, figur-ID,
+// förkunskapsordning, kursplantaggning samt status- och täckningsöversikt.
 // Körs som "prebuild" innan webbplatsen byggs (se site/package.json) och kan
 // köras fristående med `npm run validate`.
 //
@@ -13,18 +14,12 @@ import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import YAML from 'yaml';
 import { larandemalRequiredSchema } from '../schemas/larandemal.schema.mjs';
+import { allaLarandemal } from './bokstruktur-data.mjs';
+import { kursplanKategorier, niva1, niva2 } from './kursplan-data.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const contentDir = path.join(root, '..', 'content');
 const figuresRegistryPath = path.join(root, '..', 'figures', 'registry.yml');
-
-const kursplanKategorier = [
-	'Tekniska processer och system',
-	'Problemlösning',
-	'Begrepp, teorier och modeller',
-	'Teknik, människa och samhälle',
-	'Teknisk kommunikation',
-];
 
 let errors = [];
 let warnings = [];
@@ -63,7 +58,7 @@ const larandemal = [];
 for (const file of files) {
 	const raw = await readFile(file, 'utf8');
 	const { data } = matter(raw);
-	const relPath = path.relative(contentDir, file);
+	const relPath = path.relative(contentDir, file).replaceAll(path.sep, '/');
 
 	if (data.id === undefined) continue; // strukturell sida, inte lärandemål
 
@@ -75,6 +70,48 @@ for (const file of files) {
 	larandemal.push({ file: relPath, ...result.data });
 }
 
+// Synk mellan bokstruktur (06 via bokstruktur-data.mjs) och content/.
+// Bokstrukturen är målskelettet: varje planerat lärandemål ska ha en fil,
+// och varje lärandemålsfil ska finnas i planen. Delas/slås lärandemål ihop
+// under produktionen uppdateras 06 + bokstruktur-data.mjs i samma steg.
+const plan = allaLarandemal();
+const planById = new Map(plan.map((p) => [p.id, p]));
+const filesById = new Map(larandemal.map((lm) => [lm.id, lm]));
+
+for (const [id, dup] of Object.entries(
+	larandemal.reduce((acc, lm) => ((acc[lm.id] ??= []).push(lm.file), acc), {}),
+)) {
+	if (dup.length > 1) {
+		errors.push(`Lärandemåls-id "${id}" används av flera filer: ${dup.join(', ')}.`);
+	}
+}
+
+for (const p of plan) {
+	const lm = filesById.get(p.id);
+	if (!lm) {
+		errors.push(`Planerat lärandemål ${p.id} "${p.titel}" saknar fil (${p.relPath}) — kör \`npm run skeleton\`.`);
+		continue;
+	}
+	if (lm.chapter !== p.chapter || lm.module !== p.module) {
+		errors.push(`${lm.file}: chapter/module (${lm.chapter}/${lm.module}) stämmer inte med bokstrukturen (${p.chapter}/${p.module}).`);
+	}
+	if (lm.title !== p.titel) {
+		warnings.push(`${lm.file}: titeln "${lm.title}" avviker från bokstrukturens "${p.titel}" — uppdatera 06-bokstruktur.md + bokstruktur-data.mjs eller filen.`);
+	}
+	if (lm.goal !== p.mal) {
+		warnings.push(`${lm.file}: målformuleringen avviker från bokstrukturens — uppdatera 06-bokstruktur.md + bokstruktur-data.mjs eller filen.`);
+	}
+	if (lm.uppslag !== p.uppslag) {
+		warnings.push(`${lm.file}: uppslag (${lm.uppslag}) avviker från bokstrukturens (${p.uppslag}).`);
+	}
+}
+
+for (const lm of larandemal) {
+	if (!planById.has(lm.id)) {
+		errors.push(`${lm.file}: lärandemålet ${lm.id} finns inte i bokstrukturen — uppdatera 06-bokstruktur.md + bokstruktur-data.mjs (målskelettet styr).`);
+	}
+}
+
 // Begreppsunikhet
 const conceptOwners = new Map();
 for (const lm of larandemal) {
@@ -83,6 +120,16 @@ for (const lm of larandemal) {
 			errors.push(`Begreppet "${concept}" introduceras i både ${conceptOwners.get(concept)} och ${lm.file} — ska bara ha ett huvudställe (11-begreppsfilosofi.md).`);
 		} else {
 			conceptOwners.set(concept, lm.file);
+		}
+	}
+}
+
+// Begrepp som används utan att introduceras någonstans (varning: huvudstället
+// kan vara planerat men ännu inte skrivet).
+for (const lm of larandemal) {
+	for (const concept of lm.concepts_used) {
+		if (!conceptOwners.has(concept)) {
+			warnings.push(`${lm.file}: använder begreppet "${concept}" som inte introduceras (concepts_introduced) i någon fil ännu.`);
 		}
 	}
 }
@@ -124,7 +171,7 @@ for (const lm of larandemal) {
 	}
 }
 
-// Kursplanetaggning (kontrollerat vokabulär, ej fullständig diff mot 07:s tabeller)
+// Kursplanetaggning (kontrollerat vokabulär från kursplan-data.mjs, som speglar 07)
 for (const lm of larandemal) {
 	for (const niva of ['niva1', 'niva2']) {
 		for (const tag of lm.curriculum[niva] ?? []) {
@@ -135,21 +182,47 @@ for (const lm of larandemal) {
 	}
 }
 
-// Statusöversikt
+// Statusöversikt (totalt och per kapitel)
 const statusCount = {};
+const chapterStatus = new Map();
 for (const lm of larandemal) {
 	statusCount[lm.status] = (statusCount[lm.status] ?? 0) + 1;
+	if (!chapterStatus.has(lm.chapter)) chapterStatus.set(lm.chapter, { totalt: 0, klara: 0, paborjade: 0 });
+	const cs = chapterStatus.get(lm.chapter);
+	cs.totalt++;
+	if (lm.status === 'klar') cs.klara++;
+	if (lm.status !== 'ej-paborjad') cs.paborjade++;
 }
 
-console.log(`Kontrollerade ${larandemal.length} lärandemålsfiler av ${files.length} markdown-filer totalt.\n`);
+console.log(`Kontrollerade ${larandemal.length} lärandemålsfiler av ${files.length} markdown-filer totalt (${plan.length} lärandemål i bokstrukturen).\n`);
 
 if (larandemal.length > 0) {
 	console.log('Statusöversikt:');
 	for (const [status, count] of Object.entries(statusCount)) {
 		console.log(`  ${status}: ${count}`);
 	}
+	console.log('\nPer kapitel (påbörjade/klara av totalt):');
+	for (const [chapter, cs] of [...chapterStatus.entries()].sort((a, b) => a[0] - b[0])) {
+		console.log(`  Kapitel ${chapter}: ${cs.paborjade} påbörjade, ${cs.klara} klara av ${cs.totalt}`);
+	}
 	console.log('');
 }
+
+// Kursplanetäckningsöversikt: för varje punkt i centralt innehåll, hur många
+// lärandemål i punktens primärkapitel är taggade med punktens kategori och
+// påbörjade? Informativ rapport — 07 förblir den redaktionella auktoriteten.
+function tackningsrad(punkt, nivaKey) {
+	const traffar = larandemal.filter(
+		(lm) => lm.chapter === punkt.primar && (lm.curriculum[nivaKey] ?? []).includes(punkt.kategori) && lm.status !== 'ej-paborjad',
+	);
+	return `  ${traffar.length > 0 ? '●' : '·'} [kap ${String(punkt.primar).padStart(2)}] ${punkt.text.slice(0, 90)}${punkt.text.length > 90 ? '…' : ''} (${traffar.length} lärandemål)`;
+}
+console.log('Kursplanetäckning (påbörjade lärandemål taggade i punktens primärkapitel):');
+console.log(' Nivå 1:');
+for (const punkt of niva1) console.log(tackningsrad(punkt, 'niva1'));
+console.log(' Nivå 2:');
+for (const punkt of niva2) console.log(tackningsrad(punkt, 'niva2'));
+console.log('');
 
 if (warnings.length > 0) {
 	console.log(`Varningar (${warnings.length}):`);

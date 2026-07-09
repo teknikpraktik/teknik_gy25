@@ -7,6 +7,7 @@
   "scripts": {
     "skeleton": "node scripts/generate-skeleton.mjs",
     "validate": "node scripts/validate.mjs",
+    "begrepp": "node scripts/begreppsregister.mjs",
     "export": "node scripts/export-manuscript.mjs"
   },
   "dependencies": {
