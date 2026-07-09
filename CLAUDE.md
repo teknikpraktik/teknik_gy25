@@ -1,6 +1,6 @@
 # Teknik Gy25 — lärobok
 
-Lärobok i Teknik nivå 1+2 (Gy25) som utvecklas som en modulär kunskapsdatabas: ett lärandemål = en fil under `content/`. Produktionsmålet är förlagsfärdig text.
+Lärobok i Teknik nivå 1+2 (Gy25) som utvecklas som en modulär kunskapsdatabas: ett lärandemål = en fil under `content/`. Utöver startsidan finns inga andra filer i content/ — kapitel- och modulsidor är genererade vyer (`site/src/pages/[...oversikt].astro`) som härleds ur 06 + frontmatter vid varje bygge. Produktionsmålet är förlagsfärdig text.
 
 ## Källor — vad som styr vad
 

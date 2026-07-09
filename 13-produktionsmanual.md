@@ -137,3 +137,5 @@ Kapitel- och modulstruktur ändras inte utan uttryckligt beslut (08, "AI får in
 - **Kursplanetäckning** — antal påbörjade lärandemål per kursplanepunkt: `●` = täckt i primärkapitlet, `◐` = hittills endast i berörda kapitel, `·` = inget påbörjat innehåll ännu.
 
 Rapporten ersätter manuell bokföring i 06 (som endast anger målskelettet).
+
+Samma läge finns browsbart på webbplatsen: **kapitelvyn** visar modulstatus och kapitlets kursplanansvar med taggningsläge, **modulvyn** visar lärandemålstabell och begreppsflöde. Vyerna genereras vid varje bygge och används vid modul- och kapitelgranskning enligt 09 — checklistan visas direkt på respektive sida.

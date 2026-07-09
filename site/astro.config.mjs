@@ -17,24 +17,30 @@ function routeSegment(segment) {
 	return segment.replaceAll('.', '');
 }
 
+// Kapitel- och modulöversikterna är genererade vyer (src/pages/[...oversikt].astro),
+// inte content-poster — de länkas därför med `link`. Lärandemålen är content-poster
+// och länkas med `slug`, vilket ger byggfel om en sida i 06 saknas i content/.
 const sidebar = [
 	{ label: 'Start', link: '/' },
 	...kapitel.map((k) => ({
 		label: `${k.nr}. ${k.titel}`,
 		collapsed: true,
 		items: [
-			{ label: 'Kapitelöversikt', slug: kapitelSlug(k) },
+			{ label: 'Kapitelöversikt', link: `/${kapitelSlug(k)}/` },
 			...k.moduler.map((m, i) => ({
 				label: `${k.nr}.${i + 1} ${m.titel}`,
 				collapsed: true,
-				items: m.larandemal.map((lm, j) => ({
-					label: `${larandemalId(k, i, j)} ${lm.titel}`,
-					slug: [
-						kapitelSlug(k),
-						routeSegment(modulSlug(k, i)),
-						routeSegment(larandemalFilnamn(k, i, j).replace(/\.md$/, '')),
-					].join('/'),
-				})),
+				items: [
+					{ label: 'Modulöversikt', link: `/${kapitelSlug(k)}/${routeSegment(modulSlug(k, i))}/` },
+					...m.larandemal.map((lm, j) => ({
+						label: `${larandemalId(k, i, j)} ${lm.titel}`,
+						slug: [
+							kapitelSlug(k),
+							routeSegment(modulSlug(k, i)),
+							routeSegment(larandemalFilnamn(k, i, j).replace(/\.md$/, '')),
+						].join('/'),
+					})),
+				],
 			})),
 		],
 	})),

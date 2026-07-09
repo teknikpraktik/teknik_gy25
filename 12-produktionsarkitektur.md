@@ -32,11 +32,9 @@ Claude Code får aldrig skriva ett helt kapitel i en fil.
 
 ```
 content/
-  index.md                          # startsida för produktionsmiljön (ej bokinnehåll)
+  index.md                          # startsida för produktionsmiljön (enda strukturella sidan)
   06-mekanik-och-konstruktion/       # kapitel: <nr>-<slug>, slug från kapitlets titel
-    index.md                        # kapitelöversikt (strukturell sida, ej bokinnehåll)
     6.01-krafter/                   # modul: <kapitel>.<modulnr>-<slug>, modulnr nollutfyllt
-      _module.yml                   # modulmetadata: title, chapter, module, order
       6.01.01-kraftbegreppet.md     # lärandemål: <kapitel>.<modul>.<löpnr>-<slug>, nollutfyllt
       6.01.02-kraftresultanter.md
 figures/
@@ -84,7 +82,7 @@ practical_component: true
 
 Schemat är gemensamt för webbplatsens byggtidsvalidering (Astro content collections) och `scripts/validate.mjs`. Det finns bara på ett ställe och importeras av båda — ändra bara i `schemas/larandemal.schema.mjs`.
 
-Strukturella sidor (kapitel-/modulöversikter, startsidan) sätter bara `title` och eventuellt `chapter` — de är inte lärandemål och omfattas inte av kraven nedan.
+Enda strukturella sidan i content/ är startsidan (`index.md`), som bara sätter `title`. Kapitel- och modulöversikter är inte filer utan genererade vyer (se "Webbformat") och har därför ingen frontmatter alls.
 
 ---
 
@@ -96,6 +94,8 @@ Projektet har en statisk dokumentationswebbplats byggd med **Astro + Starlight**
 
 Varje lärandemålssida inleds med en **granskningsruta** (genererad ur frontmattern av `site/src/remark-granskning.mjs`): mål, status, kursplanetaggar, begrepp, figurer, förkunskaper och uppslag. Rutan finns bara i webbvyn och hamnar aldrig i exporten, som läser källfilerna direkt. Samma plugin renderar `[[begrepp:...]]` som länk till huvudstället och `[[figur:...]]` som platshållarruta ur registret; okänt begrepp eller okänd figur ger fel i både validate och bygget.
 
+**Kapitel- och modulsidor är genererade vyer**, inte filer i content/ (`site/src/pages/[...oversikt].astro`). De härleds vid varje bygge ur 06-bokstruktur.md, lärandemålens frontmatter och kursplan-data.mjs och kan därför aldrig gå ur synk eller visa cachad status. Modulvyn visar lärandemålstabell, begreppsflöde (med varning när ett begrepp används före sitt huvudställe) och 09:s modulchecklista; kapitelvyn visar modulöversikt med aggregerad status, kapitlets kursplanansvar med taggningsläge samt 09:s kapitelchecklista. Navigeringen är Start → Kapitel → Modul → Lärandemål.
+
 Markdown med frontmatter är källformatet. HTML genereras automatiskt av Astro vid varje bygge och committas inte till git.
 
 ---
@@ -104,9 +104,8 @@ Markdown med frontmatter är källformatet. HTML genereras automatiskt av Astro 
 
 Varje sida visar
 
-- föregående/nästa lärandemål inom modulen
-- modul
-- kapitel
+- föregående/nästa sida i läsordningen
+- modulöversikt och kapitelöversikt (genererade vyer, se "Webbformat")
 - innehållsförteckning (sidopanelen, genererad ur 06-bokstruktur.md via `scripts/bokstruktur-data.mjs`)
 
 Navigeringen genereras automatiskt ur bokstrukturen och underhålls aldrig manuellt, vilket gör det säkert för Claude Code att dela eller slå ihop lärandemål (04 §17) utan att länkar bryts. Sidopanelens poster är slug-baserade: bygget felar om en sida i 06 saknas i content/, vilket fungerar som extra synkkontroll.

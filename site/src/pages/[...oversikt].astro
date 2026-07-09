@@ -1,0 +1,332 @@
+---
+// Genererade översiktsvyer för kapitel och moduler. Sidorna härleds vid varje
+// bygge ur 06-bokstruktur.md (via bokstruktur-data.mjs), lärandemålens
+// frontmatter (content collection) och kursplan-data.mjs — de lagras aldrig
+// som filer i content/ och kan därför inte gå ur synk eller visa cachad,
+// inaktuell status (till skillnad från renderade markdown-sidor).
+//
+// Modulvyn stödjer modulgranskning enligt 09-kvalitetssakring.md
+// ("Granskning av modul"); kapitelvyn stödjer kapitelgranskning och
+// kursplanetäckning ("Granskning av kapitel" + 07-kursplanetackning.md).
+
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getCollection } from 'astro:content';
+import {
+	kapitel,
+	kapitelSlug,
+	modulSlug,
+	larandemalFilnamn,
+	larandemalId,
+	routeSegment,
+} from '../../../scripts/bokstruktur-data.mjs';
+import { niva1, niva2, syftesmal } from '../../../scripts/kursplan-data.mjs';
+
+export async function getStaticPaths() {
+	const paths = [];
+	for (const k of kapitel) {
+		paths.push({ params: { oversikt: kapitelSlug(k) }, props: { kapNr: k.nr, modIndex: -1 } });
+		for (let i = 0; i < k.moduler.length; i++) {
+			paths.push({
+				params: { oversikt: `${kapitelSlug(k)}/${routeSegment(modulSlug(k, i))}` },
+				props: { kapNr: k.nr, modIndex: i },
+			});
+		}
+	}
+	return paths;
+}
+
+const { kapNr, modIndex } = Astro.props;
+const k = kapitel.find((x) => x.nr === kapNr);
+const arModulvy = modIndex >= 0;
+
+const docs = await getCollection('docs');
+const fmById = new Map(docs.filter((e) => e.data.id !== undefined).map((e) => [e.data.id, e.data]));
+
+// Begreppens huvudställen, för kontroll av introduktionsordning (09, 11).
+const begreppsAgare = new Map();
+for (const [id, fm] of fmById) {
+	for (const namn of fm.concepts_introduced ?? []) begreppsAgare.set(namn, id);
+}
+function jamforIds(a, b) {
+	const ta = a.split('.').map(Number);
+	const tb = b.split('.').map(Number);
+	for (let i = 0; i < Math.max(ta.length, tb.length); i++) {
+		const diff = (ta[i] ?? 0) - (tb[i] ?? 0);
+		if (diff !== 0) return diff;
+	}
+	return 0;
+}
+
+const kapUrl = `/${kapitelSlug(k)}/`;
+const modUrl = (i) => `/${kapitelSlug(k)}/${routeSegment(modulSlug(k, i))}/`;
+const lmUrl = (i, j) =>
+	`/${kapitelSlug(k)}/${routeSegment(modulSlug(k, i))}/${routeSegment(larandemalFilnamn(k, i, j).replace(/\.md$/, ''))}/`;
+
+function modulRader(i) {
+	return k.moduler[i].larandemal.map((plan, j) => ({
+		j,
+		id: larandemalId(k, i, j),
+		plan,
+		fm: fmById.get(larandemalId(k, i, j)),
+	}));
+}
+
+// Aggregat per modul (används i kapitelvyn).
+const moduler = k.moduler.map((m, i) => {
+	const rader = modulRader(i);
+	return {
+		i,
+		titel: m.titel,
+		antal: rader.length,
+		uppslag: rader.reduce((a, r) => a + (r.plan.uppslag ?? 1), 0),
+		paborjade: rader.filter((r) => r.fm && r.fm.status !== 'ej-paborjad').length,
+		klara: rader.filter((r) => r.fm?.status === 'klar').length,
+	};
+});
+const kapitelTotal = {
+	lm: moduler.reduce((a, m) => a + m.antal, 0),
+	uppslag: moduler.reduce((a, m) => a + m.uppslag, 0),
+	paborjade: moduler.reduce((a, m) => a + m.paborjade, 0),
+	klara: moduler.reduce((a, m) => a + m.klara, 0),
+};
+
+// Kursplanansvar (kapitelvyn).
+const allaPunkterLista = [
+	...niva1.map((p) => ({ ...p, niva: 'Nivå 1' })),
+	...niva2.map((p) => ({ ...p, niva: 'Nivå 2' })),
+	...syftesmal.map((p) => ({ ...p, niva: 'Syftesmål' })),
+];
+const kapitletsLm = [...fmById.values()].filter((d) => d.chapter === k.nr);
+function tackning(p) {
+	const taggade = kapitletsLm.filter((d) =>
+		[...(d.curriculum?.niva1 ?? []), ...(d.curriculum?.niva2 ?? [])].includes(p.id),
+	);
+	return { taggade: taggade.length, paborjade: taggade.filter((d) => d.status !== 'ej-paborjad').length };
+}
+const primara = allaPunkterLista.filter((p) => p.primar === k.nr);
+const berorda = allaPunkterLista.filter((p) => Array.isArray(p.berors) && p.berors.includes(k.nr));
+const lopande = allaPunkterLista.filter((p) => p.berors.includes('löpande') && p.primar !== k.nr);
+
+const m = arModulvy ? k.moduler[modIndex] : null;
+const rader = arModulvy ? modulRader(modIndex) : [];
+const modulTotal = arModulvy ? moduler[modIndex] : null;
+
+const titel = arModulvy ? `Modul ${k.nr}.${modIndex + 1} ${m.titel}` : `Kapitel ${k.nr} – ${k.titel}`;
+
+// Checklistor ur 09-kvalitetssakring.md (påminnelse för granskaren; bockas
+// inte av digitalt — granskningen dokumenteras via statusfältet).
+const modulChecklista = [
+	'Alla lärandemål har naturlig progression.',
+	'Begrepp introduceras i rätt ordning.',
+	'Inga lärandemål överlappar.',
+	'Inga viktiga delar saknas.',
+	'Modulen känns sammanhängande.',
+];
+const kapitelChecklista = [
+	'Kapitlets syfte uppfylls.',
+	'Modulerna ligger i logisk ordning.',
+	'Kapitlet täcker sitt ansvar enligt innehållsmatrisen.',
+	'Praktiska moment förekommer där de passar.',
+	'Exempel varierar.',
+	'Kapitlet känns jämnt i kvalitet.',
+];
+---
+
+<StarlightPage frontmatter={{ title: titel, tableOfContents: false }}>
+	{
+		arModulvy ? (
+			<>
+				<p class="oversikt-meta">
+					<a href={kapUrl}>
+						Kapitel {k.nr} – {k.titel}
+					</a>{' '}
+					· {modulTotal.antal} lärandemål · {modulTotal.uppslag} planerade uppslag · {modulTotal.paborjade} påbörjade,{' '}
+					{modulTotal.klara} klara
+				</p>
+
+				<h2>Lärandemål</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Lärandemål</th>
+							<th>Mål</th>
+							<th>Uppslag</th>
+							<th>Praktiskt</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						{rader.map((r) => (
+							<tr>
+								<td>{r.id}</td>
+								<td>
+									<a href={lmUrl(modIndex, r.j)}>{r.plan.titel}</a>
+								</td>
+								<td>{r.plan.mal}</td>
+								<td>{r.plan.uppslag ?? 1}</td>
+								<td>{r.fm?.practical_component ? '✓' : '—'}</td>
+								<td>
+									{r.fm ? (
+										<span class={`gr-status gr-status-${r.fm.status}`}>{r.fm.status}</span>
+									) : (
+										<span class="gr-dammig">fil saknas!</span>
+									)}
+								</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+
+				<h2>Begreppsflöde</h2>
+				<p class="oversikt-meta">
+					För granskning av begreppsordningen (09, 11). "Introduceras senare" markerar begrepp som används före sitt
+					huvudställe i läsordningen.
+				</p>
+				<ul class="begreppsflode">
+					{rader.map((r) => (
+						<li>
+							<strong>
+								{r.id} {r.plan.titel}
+							</strong>
+							{' — introducerar: '}
+							{(r.fm?.concepts_introduced ?? []).join(', ') || '—'}
+							{' · använder: '}
+							{(r.fm?.concepts_used ?? []).length === 0
+								? '—'
+								: (r.fm?.concepts_used ?? []).map((namn, idx) => {
+										const agare = begreppsAgare.get(namn);
+										const sen = agare && jamforIds(agare, r.id) >= 0;
+										return (
+											<>
+												{idx > 0 && ', '}
+												{namn}
+												{!agare && <span class="gr-varning"> (saknar huvudställe)</span>}
+												{sen && <span class="gr-varning"> (introduceras senare: {agare}!)</span>}
+											</>
+										);
+									})}
+						</li>
+					))}
+				</ul>
+
+				<h2>Modulgranskning (09-kvalitetssakring.md)</h2>
+				<ul class="checklista">
+					{modulChecklista.map((punkt) => (
+						<li>☐ {punkt}</li>
+					))}
+				</ul>
+			</>
+		) : (
+			<>
+				<p class="oversikt-meta">
+					{k.moduler.length} moduler · {kapitelTotal.lm} lärandemål · {kapitelTotal.uppslag} planerade uppslag ·{' '}
+					{kapitelTotal.paborjade} påbörjade, {kapitelTotal.klara} klara
+				</p>
+
+				<h2>Moduler</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Modul</th>
+							<th>Lärandemål</th>
+							<th>Uppslag</th>
+							<th>Påbörjade</th>
+							<th>Klara</th>
+						</tr>
+					</thead>
+					<tbody>
+						{moduler.map((mod) => (
+							<tr>
+								<td>
+									<a href={modUrl(mod.i)}>
+										{k.nr}.{mod.i + 1} {mod.titel}
+									</a>
+								</td>
+								<td>{mod.antal}</td>
+								<td>{mod.uppslag}</td>
+								<td>{mod.paborjade}</td>
+								<td>{mod.klara}</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+
+				<h2>Kursplanansvar (07-kursplanetackning.md)</h2>
+				{primara.length > 0 && (
+					<>
+						<h3>● Primärt ansvar</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Punkt</th>
+									<th>Nivå</th>
+									<th>Taggade lärandemål</th>
+								</tr>
+							</thead>
+							<tbody>
+								{primara.map((p) => {
+									const t = tackning(p);
+									return (
+										<tr>
+											<td>{p.id}</td>
+											<td>{p.text}</td>
+											<td>{p.niva}</td>
+											<td>
+												{t.taggade} ({t.paborjade} påbörjade)
+											</td>
+										</tr>
+									);
+								})}
+							</tbody>
+						</table>
+					</>
+				)}
+				{berorda.length > 0 && (
+					<>
+						<h3>○ Berörs / vävs in</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Punkt</th>
+									<th>Nivå</th>
+									<th>Taggade lärandemål</th>
+								</tr>
+							</thead>
+							<tbody>
+								{berorda.map((p) => {
+									const t = tackning(p);
+									return (
+										<tr>
+											<td>{p.id}</td>
+											<td>{p.text}</td>
+											<td>{p.niva}</td>
+											<td>
+												{t.taggade} ({t.paborjade} påbörjade)
+											</td>
+										</tr>
+									);
+								})}
+							</tbody>
+						</table>
+					</>
+				)}
+				{lopande.length > 0 && (
+					<p class="oversikt-meta">
+						Löpande trådar som ska synas i varje kapitel (07, svag punkt 3): {lopande.map((p) => p.id).join(', ')} —
+						normer, genus och etik vävs in där de är relevanta, inte bara i kapitel 13.
+					</p>
+				)}
+
+				<h2>Kapitelgranskning (09-kvalitetssakring.md)</h2>
+				<ul class="checklista">
+					{kapitelChecklista.map((punkt) => (
+						<li>☐ {punkt}</li>
+					))}
+				</ul>
+			</>
+		)
+	}
+</StarlightPage>

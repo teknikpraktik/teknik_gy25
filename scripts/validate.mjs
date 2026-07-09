@@ -77,7 +77,14 @@ for (const file of files) {
 	const { data, content } = matter(raw);
 	const relPath = path.relative(contentDir, file).replaceAll(path.sep, '/');
 
-	if (data.id === undefined) continue; // strukturell sida, inte lärandemål
+	if (data.id === undefined) {
+		// Enda tillåtna strukturella sidan är startsidan — kapitel- och
+		// modulöversikter är genererade vyer och ska inte finnas i content/.
+		if (relPath !== 'index.md') {
+			warnings.push(`${relPath}: strukturell sida utan id — kapitel-/modulöversikter genereras av webbplatsen och filen bör tas bort.`);
+		}
+		continue;
+	}
 
 	const result = larandemalRequiredSchema.safeParse(data);
 	if (!result.success) {

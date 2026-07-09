@@ -9,12 +9,29 @@
 // stämmer även vid tvåsiffriga modul- och löpnummer. Id:t i frontmattern
 // förblir opaddat ("6.1.2").
 
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const root = path.dirname(fileURLToPath(import.meta.url));
-const bokstrukturPath = path.join(root, '..', '06-bokstruktur.md');
+// Filen importeras både direkt av Node (skripten, astro.config) och bundlad av
+// Vite (webbplatsens genererade kapitel-/modulvyer). I det senare fallet pekar
+// import.meta.url på byggartefakten — därför söks projektroten uppåt från
+// både filens plats och processens arbetskatalog.
+function hittaProjektRoot() {
+	const kandidater = [path.dirname(fileURLToPath(import.meta.url)), process.cwd()];
+	for (const start of kandidater) {
+		let dir = start;
+		for (let steg = 0; steg < 6; steg++) {
+			if (existsSync(path.join(dir, '06-bokstruktur.md'))) return dir;
+			const upp = path.dirname(dir);
+			if (upp === dir) break;
+			dir = upp;
+		}
+	}
+	throw new Error(`Hittar inte 06-bokstruktur.md (projektroten) utifrån ${kandidater.join(' eller ')}.`);
+}
+
+const bokstrukturPath = path.join(hittaProjektRoot(), '06-bokstruktur.md');
 
 function parseBokstruktur(text) {
 	const lines = text.split(/\r?\n/);
@@ -122,6 +139,13 @@ export function slugify(text) {
 
 function pad2(n) {
 	return String(n).padStart(2, '0');
+}
+
+// Astros routes slugifierar sökvägssegment genom att ta bort punkter:
+// "6.01-krafter" → "601-krafter". Används av webbplatsens sidopanel och
+// genererade vyer för att bygga URL:er som matchar content-sidornas routes.
+export function routeSegment(segment) {
+	return segment.replaceAll('.', '');
 }
 
 export function kapitelSlug(k) {

@@ -98,3 +98,24 @@
 	text-decoration-style: dotted;
 	text-underline-offset: 0.2em;
 }
+
+/* Genererade kapitel- och modulvyer */
+
+.oversikt-meta {
+	color: var(--sl-color-gray-3);
+	font-size: var(--sl-text-sm);
+}
+
+.checklista {
+	list-style: none;
+	padding-left: 0;
+}
+
+.begreppsflode {
+	font-size: var(--sl-text-sm);
+}
+
+.gr-varning {
+	color: var(--sl-color-orange-high);
+	font-weight: 600;
+}

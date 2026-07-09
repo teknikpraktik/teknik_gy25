@@ -14,9 +14,10 @@ export const statusEnum = [
   'klar',
 ];
 
-// Fält som gäller för en riktig lärandemålsfil. Strukturella sidor
-// (kapitel-/modulöversikter, startsida) sätter inget av detta och
-// behandlas då inte som lärandemål av valideringsskripten.
+// Fält som gäller för en riktig lärandemålsfil. Startsidan (enda strukturella
+// sidan i content/) sätter inget av detta och behandlas då inte som
+// lärandemål av valideringsskripten. Kapitel- och modulöversikter är
+// genererade vyer utan frontmatter (site/src/pages/[...oversikt].astro).
 export const larandemalFields = {
   id: z.string().describe('T.ex. "6.1.2"').optional(),
   chapter: z.number().int().optional(),

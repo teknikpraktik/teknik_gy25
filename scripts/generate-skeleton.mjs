@@ -3,6 +3,10 @@
 // filer med komplett frontmatter (id, titel, mål, status ej-paborjad) men
 // skriver INGEN lärobokstext — det är produktionsarbete, inte uppsättning.
 // Säker att köra flera gånger: skriver aldrig över en fil som redan finns.
+//
+// Kapitel- och modulöversikter genereras INTE här: de är härledda vyer som
+// webbplatsen bygger vid varje bygge (site/src/pages/[...oversikt].astro).
+// Content-databasen består enbart av lärandemålsfiler och startsidan.
 
 import { mkdir, writeFile, access } from 'node:fs/promises';
 import path from 'node:path';
@@ -47,42 +51,13 @@ Denna sida är inte bokinnehåll.
 }
 
 for (const k of kapitel) {
-	const kSlug = kapitelSlug(k);
-	const kDir = path.join(contentDir, kSlug);
+	const kDir = path.join(contentDir, kapitelSlug(k));
 	await mkdir(kDir, { recursive: true });
-
-	const kIndexPath = path.join(kDir, 'index.md');
-	if (
-		await writeIfMissing(
-			kIndexPath,
-			`---
-title: "${k.nr}. ${k.titel}"
-chapter: ${k.nr}
----
-
-Kapitelöversikt. Innehåll skrivs modul för modul, lärandemål för lärandemål
-(se 08-claude-code-manual.md, "Kapitelproduktion"). Denna sida är strukturell,
-inte bokinnehåll.
-`,
-		)
-	) {
-		created++;
-	}
 
 	for (let i = 0; i < k.moduler.length; i++) {
 		const m = k.moduler[i];
-		const mSlug = modulSlug(k, i);
-		const mDir = path.join(kDir, mSlug);
+		const mDir = path.join(kDir, modulSlug(k, i));
 		await mkdir(mDir, { recursive: true });
-
-		const modulePath = path.join(mDir, '_module.yml');
-		const doc = YAML.stringify({
-			title: m.titel,
-			chapter: k.nr,
-			module: `${k.nr}.${i + 1}`,
-			order: i + 1,
-		});
-		if (await writeIfMissing(modulePath, doc)) created++;
 
 		for (let j = 0; j < m.larandemal.length; j++) {
 			const lm = m.larandemal[j];
