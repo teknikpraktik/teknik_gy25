@@ -105,9 +105,9 @@ Varje sida visar
 - föregående/nästa lärandemål inom modulen
 - modul
 - kapitel
-- innehållsförteckning (sidopanelen, automatiskt genererad från mappstrukturen)
+- innehållsförteckning (sidopanelen, genererad ur 06-bokstruktur.md via `scripts/bokstruktur-data.mjs`)
 
-Navigeringen genereras automatiskt från kapitel-/modul-/id-metadata. Den underhålls aldrig manuellt, vilket gör det säkert för Claude Code att dela eller slå ihop lärandemål (04 §17) utan att länkar bryts.
+Navigeringen genereras automatiskt ur bokstrukturen och underhålls aldrig manuellt, vilket gör det säkert för Claude Code att dela eller slå ihop lärandemål (04 §17) utan att länkar bryts. Sidopanelens poster är slug-baserade: bygget felar om en sida i 06 saknas i content/, vilket fungerar som extra synkkontroll.
 
 ---
 

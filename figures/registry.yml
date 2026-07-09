@@ -1,10 +1,8 @@
 # Centralt figurregister. Varje figur som refereras från en lärandemålsfil
 # (via [[figur:ID]]) måste finnas här. Flera lärandemål får dela samma figur
 # (se 12-produktionsarkitektur.md, "Figurer").
-#
-# Exempelpost (avkommenterad när första riktiga figuren tillkommer):
-#
-# fig-6.1.2-a:
-#   syfte: "Visa hur två krafter adderas till en resultant"
-#   innehall: "Vektordiagram med två kraftpilar och deras resultant"
-#   anvands_i: ["6.1.2"]
+
+fig-1.1.1-a:
+  syfte: "Visa att vardagliga och avancerade föremål är samma sak i grunden: tekniska lösningar på mänskliga behov"
+  innehall: "Bildpar som ställer behov mot teknisk lösning, från enkel (skriva → penna) till komplex (resa → flygplan)"
+  anvands_i: ["1.1.1"]
