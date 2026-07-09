@@ -26,8 +26,8 @@ export const larandemalFields = {
   status: z.enum(statusEnum).optional(),
   curriculum: z
     .object({
-      niva1: z.array(z.string()).default([]),
-      niva2: z.array(z.string()).default([]),
+      niva1: z.array(z.string()).default([]).describe('Punkt-id:n (n1-xx, s-01) från 07/kursplan-data.mjs'),
+      niva2: z.array(z.string()).default([]).describe('Punkt-id:n (n2-xx, s-01) från 07/kursplan-data.mjs'),
     })
     .optional(),
   concepts_introduced: z.array(z.string()).default([]).optional(),

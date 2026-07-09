@@ -20,7 +20,9 @@ Ingen kursplanetäckning.
 
 Syftet är att utgöra projektets innehållsförteckning och produktionsplan.
 
-Listan över lärandemål under varje modul är preliminär. När Claude Code delar upp eller slår ihop lärandemål under produktionen (se 04-redaktionsprinciper.md och 08-claude-code-manual.md) ska listan uppdateras i motsvarande grad, tillsammans med `scripts/bokstruktur-data.mjs` som är dokumentets maskinläsbara spegling.
+Listan över lärandemål under varje modul är preliminär. När Claude Code delar upp eller slår ihop lärandemål under produktionen (se 04-redaktionsprinciper.md och 08-claude-code-manual.md) ska listan uppdateras i motsvarande grad.
+
+Detta dokument är den enda källan till bokens struktur, även maskinellt: `scripts/bokstruktur-data.mjs` tolkar dokumentet direkt vid varje körning av skeleton-, validerings- och exportskripten. Det finns ingen separat datafil att hålla i synk — men kapitel-, modul- och lärandemålsraderna måste därför följa radformatet nedan exakt. Vid formatfel stannar `npm run validate` med ett radnummer.
 
 ---
 
@@ -46,7 +48,18 @@ Varje lärandemål anges med id, kort arbetstitel och en mätbar målformulering
 
 Målformuleringen beskriver vad eleven kan göra efter genomfört arbete (03-bokens-arkitektur.md, "Lärandemål"). Den inleds därför alltid med ett observerbart verb: beskriva, förklara, beräkna, tolka, välja, upprätta, genomföra, skissa och så vidare.
 
-Ett lärandemål omfattar normalt ett uppslag. Lärandemål som bedöms kräva flera uppslag är markerade med **(flera uppslag)** — antalet är en planeringsuppskattning som får justeras under produktionen, i linje med 03: antalet sidor styrs av pedagogiken.
+Ett lärandemål omfattar normalt ett uppslag. Lärandemål som bedöms kräva flera uppslag markeras med **(2 uppslag)** (eller det antal som planeras) — antalet är en planeringsuppskattning som får justeras under produktionen, i linje med 03: antalet sidor styrs av pedagogiken.
+
+Maskinläst radformat (exakt):
+
+```
+# Kapitel <nr> – <titel>
+## Modul <nr>.<nr> <titel>
+- **<k>.<m>.<l> <Titel>** — <Målformulering.>
+- **<k>.<m>.<l> <Titel>** — <Målformulering.> **(<N> uppslag)**
+```
+
+Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–" och skiljetecknet mellan titel och mål är "—".
 
 ---
 
@@ -59,12 +72,12 @@ Ett lärandemål omfattar normalt ett uppslag. Lärandemål som bedöms kräva f
 
 ## Modul 1.2 Teknikens utveckling genom historien
 
-- **1.2.1 Tekniska genombrott före industrialiseringen** — Beskriva tekniska genombrott från de första verktygen till 1700-talet och förklara deras betydelse för samhället. **(flera uppslag)**
+- **1.2.1 Tekniska genombrott före industrialiseringen** — Beskriva tekniska genombrott från de första verktygen till 1700-talet och förklara deras betydelse för samhället. **(2 uppslag)**
 - **1.2.2 Teknikutvecklingens drivkrafter** — Förklara hur behov, kunskap och samhällsförändringar driver teknikutveckling, med historiska exempel.
 
 ## Modul 1.3 Industriella revolutionerna
 
-- **1.3.1 Fyra industriella revolutioner** — Beskriva de fyra industriella revolutionerna och de teknikskiften som kännetecknar dem. **(flera uppslag)**
+- **1.3.1 Fyra industriella revolutioner** — Beskriva de fyra industriella revolutionerna och de teknikskiften som kännetecknar dem. **(2 uppslag)**
 - **1.3.2 Industrialiseringens samhällskonsekvenser** — Analysera hur industrialiseringen förändrade produktion, arbete och levnadsvillkor.
 
 ## Modul 1.4 Digitaliseringens framväxt
@@ -103,7 +116,7 @@ Ett lärandemål omfattar normalt ett uppslag. Lärandemål som bedöms kräva f
 
 ## Modul 3.1 Teknikutvecklingsprocessen
 
-- **3.1.1 Processens faser** — Beskriva teknikutvecklingsprocessens delar från idé till återvinning och förklara hur de hänger samman. **(flera uppslag)**
+- **3.1.1 Processens faser** — Beskriva teknikutvecklingsprocessens delar från idé till återvinning och förklara hur de hänger samman. **(2 uppslag)**
 - **3.1.2 Iteration** — Förklara varför teknikutveckling är iterativ och ge exempel på hur testresultat leder tillbaka till tidigare faser.
 
 ## Modul 3.2 Kravspecifikation
@@ -152,7 +165,7 @@ Ett lärandemål omfattar normalt ett uppslag. Lärandemål som bedöms kräva f
 ## Modul 4.4 CAD
 
 - **4.4.1 CAD och parametrisk modellering** — Förklara vad CAD är och hur parametrisk modellering bygger på skisser, mått och villkor.
-- **4.4.2 Modellera en detalj** — Skapa en 3D-modell av en enkel detalj i ett CAD-program. **(flera uppslag)**
+- **4.4.2 Modellera en detalj** — Skapa en 3D-modell av en enkel detalj i ett CAD-program. **(2 uppslag)**
 - **4.4.3 Sammanställningar** — Sätta samman flera detaljer till en sammanställning i CAD och förklara hur delarna förhåller sig till varandra.
 
 ## Modul 4.5 Ritningar och modeller
@@ -166,7 +179,7 @@ Ett lärandemål omfattar normalt ett uppslag. Lärandemål som bedöms kräva f
 
 ## Modul 5.1 Materialgrupper
 
-- **5.1.1 Materialens huvudgrupper** — Klassificera material i huvudgrupperna metaller, polymerer, keramer, kompositer och träbaserade material samt ge exempel på användningsområden. **(flera uppslag)**
+- **5.1.1 Materialens huvudgrupper** — Klassificera material i huvudgrupperna metaller, polymerer, keramer, kompositer och träbaserade material samt ge exempel på användningsområden. **(2 uppslag)**
 
 ## Modul 5.2 Materialegenskaper
 
@@ -180,7 +193,7 @@ Ett lärandemål omfattar normalt ett uppslag. Lärandemål som bedöms kräva f
 
 ## Modul 5.4 Tillverkning och material
 
-- **5.4.1 Tillverkningsmetoder** — Beskriva vanliga tillverkningsmetoder och koppla dem till lämpliga materialgrupper. **(flera uppslag)**
+- **5.4.1 Tillverkningsmetoder** — Beskriva vanliga tillverkningsmetoder och koppla dem till lämpliga materialgrupper. **(2 uppslag)**
 - **5.4.2 Tillverkningsanpassning** — Förklara hur valet av material och tillverkningsmetod påverkar en detaljs utformning och kostnad.
 
 ## Modul 5.5 Material i ett livscykelperspektiv
@@ -221,7 +234,7 @@ Ett lärandemål omfattar normalt ett uppslag. Lärandemål som bedöms kräva f
 
 ## Modul 6.6 Dimensionering
 
-- **6.6.1 Säkerhetsfaktor och dimensionering** — Dimensionera en enkel konstruktionsdetalj mot en given belastning med hjälp av tillåten spänning och säkerhetsfaktor. **(flera uppslag)**
+- **6.6.1 Säkerhetsfaktor och dimensionering** — Dimensionera en enkel konstruktionsdetalj mot en given belastning med hjälp av tillåten spänning och säkerhetsfaktor. **(2 uppslag)**
 - **6.6.2 Rimlighetsbedömning** — Bedöma beräkningsresultats rimlighet med överslagsräkning och enhetskontroll.
 
 ---
@@ -234,7 +247,7 @@ Ett lärandemål omfattar normalt ett uppslag. Lärandemål som bedöms kräva f
 
 ## Modul 7.2 Mätinstrument
 
-- **7.2.1 Mäta med rätt instrument** — Välja lämpligt mätinstrument för en given mätuppgift och använda det korrekt. **(flera uppslag)**
+- **7.2.1 Mäta med rätt instrument** — Välja lämpligt mätinstrument för en given mätuppgift och använda det korrekt. **(2 uppslag)**
 
 ## Modul 7.3 Mätfel
 
@@ -260,7 +273,7 @@ Ett lärandemål omfattar normalt ett uppslag. Lärandemål som bedöms kräva f
 
 ## Modul 8.2 Digital modellering
 
-- **8.2.1 Bygga en digital modell** — Bygga en enkel digital modell av ett tekniskt förlopp i kalkylprogram eller Python. **(flera uppslag)**
+- **8.2.1 Bygga en digital modell** — Bygga en enkel digital modell av ett tekniskt förlopp i kalkylprogram eller Python. **(2 uppslag)**
 
 ## Modul 8.3 Simulering
 
@@ -324,7 +337,7 @@ Ett lärandemål omfattar normalt ett uppslag. Lärandemål som bedöms kräva f
 
 ## Modul 10.6 Problemlösning
 
-- **10.6.1 Från problem till program** — Bryta ned ett tekniskt problem i delsteg och implementera lösningen som ett strukturerat Python-program. **(flera uppslag)**
+- **10.6.1 Från problem till program** — Bryta ned ett tekniskt problem i delsteg och implementera lösningen som ett strukturerat Python-program. **(2 uppslag)**
 - **10.6.2 Testa och felsöka** — Testa ett program systematiskt samt lokalisera och rätta fel i programkod.
 
 ---
@@ -347,7 +360,7 @@ Ett lärandemål omfattar normalt ett uppslag. Lärandemål som bedöms kräva f
 
 ## Modul 11.4 Genomförande
 
-- **11.4.1 Arbeta i projekt** — Genomföra ett tekniskt projekt enligt plan med möten, dokumentation och uppföljning av tid och resultat. **(flera uppslag)**
+- **11.4.1 Arbeta i projekt** — Genomföra ett tekniskt projekt enligt plan med möten, dokumentation och uppföljning av tid och resultat. **(2 uppslag)**
 
 ## Modul 11.5 Projektutvärdering
 

@@ -1,20 +1,29 @@
-// Samlar alla lärandemålsfiler i kanonisk läsordning (kapitel → modul → id)
-// till ett sammanhängande manus och kör det genom Pandoc till .docx (till
-// förlaget) och valfritt PDF. Körs fristående (`npm run export`), frikopplat
-// från webbplatsens build — samma källfiler används av båda, i linje med
-// 12-produktionsarkitektur.md:s princip om presentationsoberoende källmaterial.
+// Sammanställer lärandemålsfilerna till ett bokmanus i kanonisk läsordning
+// (kapitel → modul → lärandemål, ordningen ur 06 via bokstruktur-data.mjs) och
+// kör resultatet genom Pandoc till .docx (till förlaget). Körs fristående
+// (`npm run export`), frikopplat från webbplatsens build — samma källfiler
+// används av båda, i linje med 12-produktionsarkitektur.md.
 //
-// Figur- och begreppsshortcodes ([[figur:ID]], [[begrepp:namn]]) löses upp till
-// löptext/figurplatshållare istället för webblänkar, eftersom ett bokmanus
-// inte har klickbara länkar.
+// Endast lärandemål som nått en viss status exporteras (arbetsmaterial ska
+// aldrig hamna i en leverans, se 09 "Förlagsgranskning"):
+//
+//   npm run export                                  → fardig-forsta-version och uppåt
+//   npm run export -- --status=sprakgranskad        → sprakgranskad och uppåt
+//   npm run export -- --status=alla                 → allt, oavsett status (internt bruk)
+//
+// HTML-kommentarer (arbetsanteckningar) strippas ur manuset. Figur- och
+// begreppsshortcodes ([[figur:ID]], [[begrepp:namn]]) löses upp till
+// figurplatshållartext respektive löptext — ett bokmanus har inga länkar.
 
-import { readFile, readdir, mkdir, writeFile } from 'node:fs/promises';
+import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import matter from 'gray-matter';
 import YAML from 'yaml';
+import { statusEnum } from '../schemas/larandemal.schema.mjs';
+import { kapitel, kapitelSlug, modulSlug, larandemalId, larandemalFilnamn } from './bokstruktur-data.mjs';
 
 const execFileAsync = promisify(execFile);
 
@@ -23,32 +32,17 @@ const contentDir = path.join(root, '..', 'content');
 const exportDir = path.join(root, '..', 'export');
 const figuresRegistryPath = path.join(root, '..', 'figures', 'registry.yml');
 
-async function walk(dir) {
-	const entries = await readdir(dir, { withFileTypes: true });
-	let files = [];
-	for (const entry of entries) {
-		const full = path.join(dir, entry.name);
-		if (entry.isDirectory()) {
-			files = files.concat(await walk(full));
-		} else if (entry.isFile() && entry.name.endsWith('.md') && !entry.name.startsWith('_')) {
-			files.push(full);
-		}
+// --status=<minstatus|alla>
+const statusArg = process.argv.find((a) => a.startsWith('--status='))?.split('=')[1] ?? 'fardig-forsta-version';
+let minStatusIdx;
+if (statusArg === 'alla') {
+	minStatusIdx = 0;
+} else {
+	minStatusIdx = statusEnum.indexOf(statusArg);
+	if (minStatusIdx === -1) {
+		console.error(`Okänd status "${statusArg}". Giltiga värden: ${statusEnum.join(', ')}, alla.`);
+		process.exit(1);
 	}
-	return files;
-}
-
-function idToTuple(id) {
-	return id.split('.').map((n) => Number.parseInt(n, 10));
-}
-
-function compareIds(a, b) {
-	const ta = idToTuple(a);
-	const tb = idToTuple(b);
-	for (let i = 0; i < Math.max(ta.length, tb.length); i++) {
-		const diff = (ta[i] ?? 0) - (tb[i] ?? 0);
-		if (diff !== 0) return diff;
-	}
-	return 0;
 }
 
 const figureRegistry = YAML.parse(await readFile(figuresRegistryPath, 'utf8')) || {};
@@ -63,37 +57,68 @@ function resolveShortcodes(body) {
 		.replace(/\[\[begrepp:([^\]]+)\]\]/g, (_match, concept) => concept);
 }
 
-const files = await walk(contentDir);
-const larandemal = [];
-
-for (const file of files) {
-	const raw = await readFile(file, 'utf8');
-	const { data, content } = matter(raw);
-	if (data.id === undefined) continue;
-	larandemal.push({ file, data, content });
-}
-
-larandemal.sort((a, b) => compareIds(a.data.id, b.data.id));
-
-if (larandemal.length === 0) {
-	console.log('Inga lärandemålsfiler hittades — inget att exportera ännu.');
-	process.exit(0);
+function stripArbetsanteckningar(body) {
+	return body.replace(/<!--[\s\S]*?-->/g, '').replace(/\n{3,}/g, '\n\n').trim();
 }
 
 let manuscript = '';
-let currentChapter = null;
-for (const lm of larandemal) {
-	if (lm.data.chapter !== currentChapter) {
-		currentChapter = lm.data.chapter;
-		manuscript += `\n\n# Kapitel ${currentChapter}\n\n`;
+let exporterade = 0;
+const utelamnade = {}; // status → antal
+const saknadeFiler = [];
+
+for (const k of kapitel) {
+	let kapitelDel = '';
+	for (let i = 0; i < k.moduler.length; i++) {
+		const m = k.moduler[i];
+		let modulDel = '';
+		for (let j = 0; j < m.larandemal.length; j++) {
+			const id = larandemalId(k, i, j);
+			const filePath = path.join(contentDir, kapitelSlug(k), modulSlug(k, i), larandemalFilnamn(k, i, j));
+			let raw;
+			try {
+				raw = await readFile(filePath, 'utf8');
+			} catch {
+				saknadeFiler.push(id);
+				continue;
+			}
+			const { data, content } = matter(raw);
+			const statusIdx = statusEnum.indexOf(data.status);
+			if (statusIdx < minStatusIdx) {
+				utelamnade[data.status] = (utelamnade[data.status] ?? 0) + 1;
+				continue;
+			}
+			modulDel += `\n\n### ${data.title}\n\n${resolveShortcodes(stripArbetsanteckningar(content))}\n`;
+			exporterade++;
+		}
+		if (modulDel !== '') {
+			kapitelDel += `\n\n## ${k.nr}.${i + 1} ${m.titel}\n${modulDel}`;
+		}
 	}
-	manuscript += `\n\n## ${lm.data.title}\n\n${resolveShortcodes(lm.content)}\n`;
+	if (kapitelDel !== '') {
+		manuscript += `\n\n# Kapitel ${k.nr} – ${k.titel}\n${kapitelDel}`;
+	}
+}
+
+const antalUtelamnade = Object.values(utelamnade).reduce((a, b) => a + b, 0);
+if (saknadeFiler.length > 0) {
+	console.log(`⚠ ${saknadeFiler.length} planerade lärandemål saknar fil (kör npm run skeleton / npm run validate): ${saknadeFiler.join(', ')}`);
+}
+if (antalUtelamnade > 0) {
+	console.log(`Utelämnade (status under ${statusArg === 'alla' ? '—' : statusArg}): ${antalUtelamnade} lärandemål`);
+	for (const [status, antal] of Object.entries(utelamnade)) {
+		console.log(`  ${status}: ${antal}`);
+	}
+}
+
+if (exporterade === 0) {
+	console.log(`\nInget lärandemål har nått status ${statusArg} ännu — inget manus att exportera.`);
+	process.exit(0);
 }
 
 await mkdir(exportDir, { recursive: true });
 const manuscriptPath = path.join(exportDir, 'manuscript.md');
-await writeFile(manuscriptPath, manuscript, 'utf8');
-console.log(`Manus sammanställt (${larandemal.length} lärandemål) → ${path.relative(process.cwd(), manuscriptPath)}`);
+await writeFile(manuscriptPath, manuscript.trim() + '\n', 'utf8');
+console.log(`\nManus sammanställt (${exporterade} lärandemål, lägsta status ${statusArg}) → ${path.relative(process.cwd(), manuscriptPath)}`);
 
 try {
 	await execFileAsync('pandoc', ['--version']);

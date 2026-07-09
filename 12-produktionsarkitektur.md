@@ -35,16 +35,16 @@ content/
   index.md                          # startsida för produktionsmiljön (ej bokinnehåll)
   06-mekanik-och-konstruktion/       # kapitel: <nr>-<slug>, slug från kapitlets titel
     index.md                        # kapitelöversikt (strukturell sida, ej bokinnehåll)
-    6.1-krafter/                    # modul: <kapitel>.<modulnr>-<slug>
+    6.01-krafter/                   # modul: <kapitel>.<modulnr>-<slug>, modulnr nollutfyllt
       _module.yml                   # modulmetadata: title, chapter, module, order
-      6.1.1-vad-ar-en-kraft.md      # lärandemål: <kapitel>.<modul>.<löpnr>-<slug>
-      6.1.2-kraftresultanter.md
+      6.01.01-kraftbegreppet.md     # lärandemål: <kapitel>.<modul>.<löpnr>-<slug>, nollutfyllt
+      6.01.02-kraftresultanter.md
 figures/
   registry.yml                      # centralt figur-ID-register
 schemas/
   larandemal.schema.mjs             # enda källan till metadataschemat (Zod)
 scripts/
-  bokstruktur-data.mjs              # maskinläsbar spegling av 06:s kapitel/moduler/lärandemål
+  bokstruktur-data.mjs              # tolkar 06-bokstruktur.md direkt (06 är enda källan)
   kursplan-data.mjs                 # maskinläsbar spegling av 07:s innehållsmatris
   generate-skeleton.mjs             # skapar mapp-/modul-/lärandemålsskelett (tomma filer, ingen text)
   validate.mjs                      # tvärgående kvalitetskontroller (se nedan)
@@ -54,7 +54,9 @@ site/                               # Astro + Starlight, se "Webbformat" nedan
 export/                             # genererade manusfiler (gitignorad, byggs på nytt varje gång)
 ```
 
-Kapitel-, modul- och lärandemålsnamn i mappstrukturen speglar 06-bokstruktur.md exakt. Ändras 06 ska `scripts/bokstruktur-data.mjs` uppdateras i samma steg (körs sedan via `npm run skeleton`), annars går strukturerna ur synk — `scripts/validate.mjs` felar när content/ och bokstrukturen inte stämmer överens. Det operativa arbetsflödet beskrivs i 13-produktionsmanual.md.
+Kapitel-, modul- och lärandemålsnamn i mappstrukturen speglar 06-bokstruktur.md exakt. 06 är enda redigeringsytan: `scripts/bokstruktur-data.mjs` tolkar dokumentet direkt vid varje körning, så det finns ingen datafil att hålla i synk. Efter en strukturändring i 06 räcker `npm run skeleton` — `scripts/validate.mjs` felar när content/ och 06 inte stämmer överens, inklusive fel filnamn.
+
+Modul- och löpnummer i mapp- och filnamn nollutfylls (`6.01`, `6.01.02`) så att lexikografisk sortering i webbplatsens sidopanel och navigering stämmer även vid tvåsiffriga nummer. Id:t i frontmattern skrivs utan utfyllnad (`6.1.2`). Det operativa arbetsflödet beskrivs i 13-produktionsmanual.md.
 
 ---
 
@@ -71,7 +73,7 @@ goal: "Bestämma resultanten av flera krafter grafiskt och genom beräkning med 
 uppslag: 1                 # planerat antal uppslag; >1 markeras även i 06-bokstruktur.md
 status: under-utveckling   # ej-paborjad | under-utveckling | fardig-forsta-version | fackgranskad | sprakgranskad | klar
 curriculum:
-  niva1: ["Begrepp, teorier och modeller"]
+  niva1: ["n1-09"]         # punkt-id från 07-kursplanetackning.md (n1-xx, n2-xx, s-01)
   niva2: []
 concepts_introduced: ["kraftresultant"]
 concepts_used: ["kraft", "vektor"]
@@ -137,13 +139,14 @@ Platshållarspecifikationen för en figur (se 01, 03, 08) ska alltid innehålla 
 
 `scripts/validate.mjs` körs automatiskt före varje bygge av webbplatsen (`prebuild`-steg) och kan köras fristående (`npm run validate`). Det kontrollerar:
 
-- **Struktursynk** — varje lärandemål i bokstrukturen (06 via `bokstruktur-data.mjs`) har en fil i content/, och varje lärandemålsfil finns i bokstrukturen; id, kapitel och modul stämmer överens.
+- **Struktursynk** — varje lärandemål i 06 har en fil i content/ på rätt sökväg, och varje lärandemålsfil finns i 06; id, kapitel och modul stämmer överens.
 - **Begreppsunikhet** — varje begrepp introduceras i högst en fil; använda begrepp utan huvudställe flaggas.
 - **Figur-ID** — varje refererad figur finns i registret; oanvända figurer flaggas.
 - **Förkunskapsordning** — en fils `prerequisites` måste ligga tidigare i läsordningen (kapitel.modul.löpnummer), i linje med 04 §10.
-- **Kursplantaggning** — `curriculum.niva1`/`niva2` måste använda samma kategorinamn som 07-kursplanetackning.md (via `kursplan-data.mjs`).
+- **Kursplantaggning** — `curriculum.niva1`/`niva2` innehåller punkt-id:n enligt 07 (via `kursplan-data.mjs`); tagg i ett kapitel utanför punktens matrisrad ger varning.
+- **Statusstyrda innehållskontroller** — från status `fardig-forsta-version` krävs uppgiftsdelarna Förstå/Utveckla/Utmana, icke-tom kursplantaggning och att inga HTML-kommentarer eller TODO finns kvar; saknade figurer och AI-typiska formuleringar (05) ger varning.
 - **Statusöversikt** — sammanställer antal lärandemål per status, totalt och per kapitel, som ersättning för manuell bokföring i 06.
-- **Kursplanetäckningsöversikt** — för varje punkt i det centrala innehållet: antal påbörjade lärandemål i punktens primärkapitel med rätt kategoritagg.
+- **Kursplanetäckningsöversikt** — antal påbörjade lärandemål per kursplanepunkt, uppdelat på primärkapitlet och övriga kapitel.
 
 07-kursplanetackning.md förblir den redaktionella auktoriteten för vilket kapitel som har primärt ansvar för vad. `scripts/kursplan-data.mjs` är dess maskinläsbara spegling och uppdateras i samma steg som 07 — skripten skriver aldrig till 07 och avgör aldrig själva täckningsbeslutet.
 
@@ -161,7 +164,7 @@ Projektet ska när som helst kunna exporteras till
 
 Källmaterialet är därför presentationsoberoende: samma `content/`-filer används av webbplatsen (granskning) och av `scripts/export-manuscript.mjs` (leverans).
 
-Exportskriptet samlar lärandemålsfilerna i kanonisk läsordning (kapitel → modul → id), löser upp `[[begrepp:...]]`/`[[figur:...]]`-shortcodes till löptext respektive figurplatshållartext, och kör resultatet genom **Pandoc** till `.docx` (till förlaget) och valfritt PDF. Pandoc är en extern systeminstallation, inte ett npm-paket — se README/installationssteg vid produktionsstart om det saknas.
+Exportskriptet samlar lärandemålsfilerna i kanonisk läsordning (kapitel → modul → id, med kapitel- och modulrubriker ur 06), löser upp `[[begrepp:...]]`/`[[figur:...]]`-shortcodes till löptext respektive figurplatshållartext, strippar arbetsanteckningar (HTML-kommentarer) och kör resultatet genom **Pandoc** till `.docx` (till förlaget) och valfritt PDF. Endast lärandemål med status `fardig-forsta-version` eller högre exporteras som standard; lägsta status väljs med `--status=` (se skriptets huvudkommentar). Pandoc är en extern systeminstallation, inte ett npm-paket — se README/installationssteg vid produktionsstart om det saknas.
 
 ---
 

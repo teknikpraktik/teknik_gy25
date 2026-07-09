@@ -4,6 +4,8 @@ Mappar Skolverkets centrala innehåll (TEKI nivå 1 och 2) och de fem bedömda f
 
 Kursplanens ordagranna lydelser (syfte, centralt innehåll, betygskriterier) finns i *Skolverket Kursplan Teknik GY25.md*. Tabellerna nedan förkortar vissa punkter; vid behov av exakt formulering gäller textversionen. Maskinläsbar spegling av denna matris: `scripts/kursplan-data.mjs` (uppdateras i samma steg som detta dokument).
 
+Varje punkt har ett stabilt id (n1-01…, n2-01…, s-01). Id:t används som tagg i lärandemålsfilernas `curriculum`-fält och gör täckningen maskinellt uppföljbar per punkt — id:n får aldrig återanvändas eller numreras om. Syftesmålet s-01 gäller båda nivåerna.
+
 **● = kapitlets primära ansvar** (här behandlas innehållet fullständigt)
 **○ = berörs / vävs in** (stödjande, men inte huvudansvar)
 
@@ -26,54 +28,54 @@ Kapitelnumrering (fastställd):
 
 ## Nivå 1 (TEKI1000X) – centralt innehåll mot kapitel
 
-| Centralt innehåll | Primärt kapitel | Berörs även |
-|---|---|---|
-| **Tekniska processer och system** | | |
-| Teknikutvecklingsprocessens alla delar från idé och modell, produkt/tjänst till användning och återvinning | 3 ● | 11 ○ |
-| Tekniska egenskaper och användningsområden för olika material | 5 ● | 6 ○ |
-| IT-systems uppbyggnad och funktion samt deras roll i teknikutveckling | 9 ● | 10 ○ |
-| **Problemlösning** | | |
-| Strategier för att lösa tekniska problem | 2 ● | 11 ○ |
-| Arbete i projektform med praktisk tillämpning och problemlösning inom något teknikområde | 11 ● | 2 ○ |
-| Problemlösning med hjälp av programmering | 10 ● | 2 ○ |
-| Skapande och strukturering av programkod | 10 ● | — |
-| Testning och utvärdering av lösningar och resultat utifrån flera aspekter, däribland hållbar utveckling | 2 ● | 7 ○, 8 ○, 12 ○ |
-| **Begrepp, teorier och modeller** | | |
-| Begrepp, teorier och modeller, däribland för konstruktion | 6 ● | — |
-| Beräkningar och rimlighetsbedömningar som gäller konstruktion | 6 ● | 7 ○ |
-| Metoder för modellering och simulering, t.ex. prototyper samt testning och verifiering | 8 ● | 6 ○ |
-| **Teknik, människa och samhälle** | | |
-| Teknikens och teknikerns roll i ett hållbart samhälle, möjligheter och risker med framtidens teknik | 13 ● | 1 ○ |
-| Tekniska framsteg som har haft betydelse för samhället | 1 ● | 13 ○ |
-| Hur normer, genusstrukturer och etiska värderingar påverkar teknik, dess användning och tillgänglighet | 13 ● | löpande tråd ○ |
-| **Teknisk kommunikation** | | |
-| Kommunikation, dokumentation och presentation av teknik, muntligt och skriftligt, med digitala medier | 4 ● | 11 ○ |
-| Användning av ritningar, skiss- och ritteknik samt tekniker för modeller med digitala och manuella verktyg | 4 ● | 8 ○ |
+| Id | Centralt innehåll | Primärt kapitel | Berörs även |
+|---|---|---|---|
+| | **Tekniska processer och system** | | |
+| n1-01 | Teknikutvecklingsprocessens alla delar från idé och modell, produkt/tjänst till användning och återvinning | 3 ● | 11 ○ |
+| n1-02 | Tekniska egenskaper och användningsområden för olika material | 5 ● | 6 ○ |
+| n1-03 | IT-systems uppbyggnad och funktion samt deras roll i teknikutveckling | 9 ● | 10 ○ |
+| | **Problemlösning** | | |
+| n1-04 | Strategier för att lösa tekniska problem | 2 ● | 11 ○ |
+| n1-05 | Arbete i projektform med praktisk tillämpning och problemlösning inom något teknikområde | 11 ● | 2 ○ |
+| n1-06 | Problemlösning med hjälp av programmering | 10 ● | 2 ○ |
+| n1-07 | Skapande och strukturering av programkod | 10 ● | — |
+| n1-08 | Testning och utvärdering av lösningar och resultat utifrån flera aspekter, däribland hållbar utveckling | 2 ● | 7 ○, 8 ○, 12 ○ |
+| | **Begrepp, teorier och modeller** | | |
+| n1-09 | Begrepp, teorier och modeller, däribland för konstruktion | 6 ● | — |
+| n1-10 | Beräkningar och rimlighetsbedömningar som gäller konstruktion | 6 ● | 7 ○ |
+| n1-11 | Metoder för modellering och simulering, t.ex. prototyper samt testning och verifiering | 8 ● | 6 ○ |
+| | **Teknik, människa och samhälle** | | |
+| n1-12 | Teknikens och teknikerns roll i ett hållbart samhälle, möjligheter och risker med framtidens teknik | 13 ● | 1 ○ |
+| n1-13 | Tekniska framsteg som har haft betydelse för samhället | 1 ● | 13 ○ |
+| n1-14 | Hur normer, genusstrukturer och etiska värderingar påverkar teknik, dess användning och tillgänglighet | 13 ● | löpande tråd ○ |
+| | **Teknisk kommunikation** | | |
+| n1-15 | Kommunikation, dokumentation och presentation av teknik, muntligt och skriftligt, med digitala medier | 4 ● | 11 ○ |
+| n1-16 | Användning av ritningar, skiss- och ritteknik samt tekniker för modeller med digitala och manuella verktyg | 4 ● | 8 ○ |
 
 ---
 
 ## Nivå 2 (TEKI2000X) – centralt innehåll mot kapitel
 
-| Centralt innehåll | Primärt kapitel | Berörs även |
-|---|---|---|
-| **Tekniska processer och system** | | |
-| Tillämpning av teknikutvecklingsprocessen inom något teknikområde | 11 ● | 3 ○ |
-| Entreprenörskap och entreprenörskapets villkor i en innovativ och kreativ teknikutvecklingsprocess | 11 ● | 13 ○ |
-| **Problemlösning** | | |
-| Problemlösning och praktisk tillämpning inom något teknikområde (produktion, design, informationsteknik) | 11 ● | 2 ○, 10 ○ |
-| Metodik och arbetsformer i projekt | 11 ● | — |
-| Tillämpning av programmering för problemlösning | 10 ● | 11 ○ |
-| Systematiskt kvalitetsarbete: kvalitetssäkring, miljösäkring, riskanalys, arbetsmiljö | 12 ● | — |
-| **Begrepp, teorier och modeller** | | |
-| Tillämpning av begrepp/teorier/modeller för att konstruera, dimensionera, beräkna, bedöma rimlighet inom något teknikområde | 6 ● | 7 ○, 11 ○ |
-| Modellering och simulering inom något teknikområde med relevanta metoder | 8 ● | 7 ○ |
-| **Teknik, människa och samhälle** | | |
-| Tekniska framsteg och teknikutveckling med fokus på framtidens teknik och hållbar utveckling (cirkulär ekonomi, nya affärsmodeller) | 13 ● | 1 ○ |
-| Värdering av tekniska lösningar utifrån olika aspekter, däribland genus, etik och hållbar utveckling | 13 ● | löpande tråd ○ |
-| Digitaliseringens betydelse för produktion, kommunikation och människans livsmiljö | 9 ● | 13 ○ |
-| **Teknisk kommunikation** | | |
-| Kommunikation, dokumentation och presentation inom något teknikområde | 4 ● | 11 ○ |
-| Tolkning och framställning av digitala ritningar och modeller | 4 ● | 8 ○ |
+| Id | Centralt innehåll | Primärt kapitel | Berörs även |
+|---|---|---|---|
+| | **Tekniska processer och system** | | |
+| n2-01 | Tillämpning av teknikutvecklingsprocessen inom något teknikområde | 11 ● | 3 ○ |
+| n2-02 | Entreprenörskap och entreprenörskapets villkor i en innovativ och kreativ teknikutvecklingsprocess | 11 ● | 13 ○ |
+| | **Problemlösning** | | |
+| n2-03 | Problemlösning och praktisk tillämpning inom något teknikområde (produktion, design, informationsteknik) | 11 ● | 2 ○, 10 ○ |
+| n2-04 | Metodik och arbetsformer i projekt | 11 ● | — |
+| n2-05 | Tillämpning av programmering för problemlösning | 10 ● | 11 ○ |
+| n2-06 | Systematiskt kvalitetsarbete: kvalitetssäkring, miljösäkring, riskanalys, arbetsmiljö | 12 ● | — |
+| | **Begrepp, teorier och modeller** | | |
+| n2-07 | Tillämpning av begrepp/teorier/modeller för att konstruera, dimensionera, beräkna, bedöma rimlighet inom något teknikområde | 6 ● | 7 ○, 11 ○ |
+| n2-08 | Modellering och simulering inom något teknikområde med relevanta metoder | 8 ● | 7 ○ |
+| | **Teknik, människa och samhälle** | | |
+| n2-09 | Tekniska framsteg och teknikutveckling med fokus på framtidens teknik och hållbar utveckling (cirkulär ekonomi, nya affärsmodeller) | 13 ● | 1 ○ |
+| n2-10 | Värdering av tekniska lösningar utifrån olika aspekter, däribland genus, etik och hållbar utveckling | 13 ● | löpande tråd ○ |
+| n2-11 | Digitaliseringens betydelse för produktion, kommunikation och människans livsmiljö | 9 ● | 13 ○ |
+| | **Teknisk kommunikation** | | |
+| n2-12 | Kommunikation, dokumentation och presentation inom något teknikområde | 4 ● | 11 ○ |
+| n2-13 | Tolkning och framställning av digitala ritningar och modeller | 4 ● | 8 ○ |
 
 ---
 
@@ -81,9 +83,9 @@ Kapitelnumrering (fastställd):
 
 Ämnets syfte ställer krav som inte alltid återfinns ordagrant i det centrala innehållet men ändå är obligatoriska. Bevakas separat:
 
-| Syftesmål | Primärt kapitel | Berörs även |
-|---|---|---|
-| Mätning och dataanalys ("arbeta med mätning, testning, beräkning, modellering samt risk- och rimlighetsbedömning") | 7 ● | 6 ○, 8 ○ |
+| Id | Syftesmål | Primärt kapitel | Berörs även |
+|---|---|---|---|
+| s-01 | Mätning och dataanalys ("arbeta med mätning, testning, beräkning, modellering samt risk- och rimlighetsbedömning") | 7 ● | 6 ○, 8 ○ |
 
 ---
 

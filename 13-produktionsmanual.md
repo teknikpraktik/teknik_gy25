@@ -21,19 +21,15 @@ Alla kommandon körs från projektroten.
 | `npm run skeleton` | Skapar mappar, modulfiler och tomma lärandemålsfiler ur bokstrukturen. Skriver aldrig över befintliga filer. |
 | `npm run validate` | Kör samtliga tvärgående kontroller och skriver status- och täckningsöversikt. Körs också automatiskt före varje webbygge. |
 | `npm run begrepp` | Genererar det centrala begreppsregistret till `export/begreppsregister.md`. |
-| `npm run export` | Sammanställer manus i läsordning till `export/` (Word via Pandoc). |
+| `npm run export` | Sammanställer manus i läsordning till `export/` (Word via Pandoc). Tar bara med lärandemål med status `fardig-forsta-version` eller högre; annan lägstanivå väljs med `-- --status=<status>` eller `-- --status=alla`. |
 
 ---
 
 # Källor och speglingar
 
-Tre filer måste alltid hållas i synk. Valideringen felar när de glider isär.
+**06-bokstruktur.md** är enda källan till bokens struktur. `scripts/bokstruktur-data.mjs` tolkar dokumentet direkt vid varje skriptkörning — det finns ingen datafil att hålla i synk, men 06:s kapitel-, modul- och lärandemålsrader måste följa radformatet i 06 ("Lärandemålens format") exakt. **content/** (en fil per lärandemål) genereras ur 06 av `npm run skeleton`; valideringen felar när content/ och 06 glider isär.
 
-1. **06-bokstruktur.md** — den redaktionella källan: kapitel, moduler, lärandemål med målformuleringar.
-2. **scripts/bokstruktur-data.mjs** — 06:s maskinläsbara spegling. Ändras 06 uppdateras denna i samma steg.
-3. **content/** — en fil per lärandemål, genererad av `npm run skeleton`.
-
-Motsvarande gäller kursplanen: **07-kursplanetackning.md** är den redaktionella auktoriteten och **scripts/kursplan-data.mjs** dess maskinläsbara spegling. Kursplanens ordagranna lydelser (syfte, centralt innehåll, betygskriterier) finns i **Skolverket Kursplan Teknik GY25.md** i projektroten — använd den vid formuleringsfrågor, t.ex. när uppgifter ska träna en bedömd förmåga.
+För kursplanen gäller: **07-kursplanetackning.md** är den redaktionella auktoriteten och **scripts/kursplan-data.mjs** dess maskinläsbara spegling — de två uppdateras i samma steg. Varje kursplanepunkt har ett stabilt punkt-id (n1-01…, n2-01…, s-01) som används vid taggning. Kursplanens ordagranna lydelser (syfte, centralt innehåll, betygskriterier) finns i **Skolverket Kursplan Teknik GY25.md** i projektroten — använd den vid formuleringsfrågor, t.ex. när uppgifter ska träna en bedömd förmåga.
 
 ---
 
@@ -52,7 +48,7 @@ Sätt `status: under-utveckling`. Identifiera enligt 08:
 - nödvändiga förkunskaper → fyll i `prerequisites` (id:n på tidigare lärandemål)
 - centrala begrepp → planera `concepts_introduced` (nya) och `concepts_used` (återanvända)
 - vilka figurer som behövs → registrera i `figures/registry.yml` och fyll i `figures`
-- kursplanetäckning → tagga `curriculum.niva1`/`niva2` med kategorinamn från 07
+- kursplanetäckning → tagga `curriculum.niva1`/`niva2` med punkt-id från 07 (n1-xx, n2-xx; syftesmålet s-01 är giltigt på båda nivåerna)
 - om praktiskt moment passar → `practical_component: true`
 - vanliga missuppfattningar
 
@@ -64,13 +60,13 @@ Figurer refereras med `[[figur:ID]]`, begrepp som introducerats i andra lärande
 
 ## 4. Granska
 
-Genomför egengranskningen (08) och därefter granskningen av lärandemål (09). Kör:
+Genomför egengranskningen (08) och därefter granskningen av lärandemål (09). Ta bort platshållarkommentaren och eventuella arbetsanteckningar. Sätt `status: fardig-forsta-version` och kör:
 
 ```
 npm run validate
 ```
 
-Rätta alla fel och relevanta varningar. Sätt `status: fardig-forsta-version`.
+Från denna status ställer valideringen innehållskrav: uppgiftsdelarna Förstå/Utveckla/Utmana ska finnas, `curriculum` ska vara taggat och inga HTML-kommentarer eller TODO får finnas kvar. Saknade figurer och AI-typiska formuleringar ger varningar. Rätta alla fel och relevanta varningar.
 
 ## 5. Committa
 
@@ -86,9 +82,9 @@ Formatet definieras i `schemas/larandemal.schema.mjs` (12 är styrande). Kort br
 
 - **id / chapter / module / title** — sätts av skeleton, ändras bara vid strukturändring.
 - **goal** — den mätbara målformuleringen ur 06. Inleds med observerbart verb.
-- **uppslag** — planerat antal uppslag. 1 om inget annat anges. Ändras bedömningen under produktion uppdateras 06 + bokstruktur-data.mjs i samma steg.
+- **uppslag** — planerat antal uppslag. 1 om inget annat anges. Ändras bedömningen under produktion: markera **(N uppslag)** på raden i 06 och uppdatera fältet.
 - **status** — `ej-paborjad` → `under-utveckling` → `fardig-forsta-version` → `fackgranskad` → `sprakgranskad` → `klar`.
-- **curriculum** — kategorinamn från 07:s tabeller, per nivå. Tomma listor betyder att lärandemålet ännu inte är taggat; taggning görs i steg 2.
+- **curriculum** — punkt-id:n från 07:s tabeller (n1-xx, n2-xx, s-01), per nivå. Tomma listor betyder att lärandemålet ännu inte är taggat; taggning görs i steg 2 och krävs från status `fardig-forsta-version`.
 - **concepts_introduced** — begrepp som har sitt huvudställe här. Ett begrepp får bara introduceras i en fil i hela boken.
 - **concepts_used** — begrepp som används men introducerats någon annanstans.
 - **figures** — figur-ID:n som används; varje ID måste finnas i `figures/registry.yml`.
@@ -124,11 +120,10 @@ Innan ett nytt begrepp introduceras: kör `npm run begrepp` eller sök i registr
 
 Claude Code får dela och slå ihop lärandemål (08). Arbetsgång:
 
-1. Uppdatera 06-bokstruktur.md.
-2. Uppdatera scripts/bokstruktur-data.mjs i samma steg.
-3. Kör `npm run skeleton` (skapar nya filer; borttagna lärandemål raderas manuellt, skeleton tar aldrig bort något).
-4. Flytta eventuellt redan skrivet innehåll till rätt fil.
-5. Kör `npm run validate` — synkfel visar vad som återstår.
+1. Uppdatera 06-bokstruktur.md (följ radformatet exakt — det maskinläses).
+2. Kör `npm run skeleton` (skapar nya filer; borttagna lärandemål raderas manuellt, skeleton tar aldrig bort något).
+3. Flytta eventuellt redan skrivet innehåll till rätt fil.
+4. Kör `npm run validate` — synkfel visar vad som återstår, inklusive filer som ska döpas om eller tas bort.
 
 Kapitel- och modulstruktur ändras inte utan uttryckligt beslut (08, "AI får inte"). Kursplanetäckningen i 07 ändras aldrig av produktionsarbete.
 
@@ -139,6 +134,6 @@ Kapitel- och modulstruktur ändras inte utan uttryckligt beslut (08, "AI får in
 `npm run validate` är produktionens lägesrapport:
 
 - **Statusöversikt** — antal lärandemål per status, totalt och per kapitel.
-- **Kursplanetäckning** — för varje punkt i det centrala innehållet: antal påbörjade lärandemål i punktens primärkapitel med rätt kategoritagg. Punkter markerade `·` saknar ännu påbörjat innehåll.
+- **Kursplanetäckning** — antal påbörjade lärandemål per kursplanepunkt: `●` = täckt i primärkapitlet, `◐` = hittills endast i berörda kapitel, `·` = inget påbörjat innehåll ännu.
 
 Rapporten ersätter manuell bokföring i 06 (som endast anger målskelettet).
