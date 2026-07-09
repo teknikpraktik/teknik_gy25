@@ -175,6 +175,30 @@ for (const figId of Object.keys(figureRegistry)) {
 	}
 }
 
+// Shortcodes i brödtext: [[figur:ID]] måste finnas i registret och bör stå i
+// filens figures-fält; [[begrepp:namn]] måste ha ett huvudställe någonstans
+// (webbygget felar annars — kontrollen här fångar det före bygget) och bör
+// stå i filens concepts_used/concepts_introduced. Kommentarer skannas inte.
+for (const lm of larandemal) {
+	const synligText = lm.body.replace(/<!--[\s\S]*?-->/g, '');
+	for (const m of synligText.matchAll(/\[\[figur:([a-zA-Z0-9_.-]+)\]\]/g)) {
+		const figId = m[1];
+		if (!figureRegistry[figId]) {
+			errors.push(`${lm.file}: [[figur:${figId}]] i texten men figuren saknas i figures/registry.yml.`);
+		} else if (!lm.figures.includes(figId)) {
+			warnings.push(`${lm.file}: [[figur:${figId}]] används i texten men står inte i frontmatterfältet figures.`);
+		}
+	}
+	for (const m of synligText.matchAll(/\[\[begrepp:([^\]]+)\]\]/g)) {
+		const namn = m[1].trim();
+		if (!conceptOwners.has(namn)) {
+			errors.push(`${lm.file}: [[begrepp:${namn}]] i texten men begreppet introduceras (concepts_introduced) inte i någon fil — skriv huvudstället först eller rätta namnet.`);
+		} else if (!lm.concepts_used.includes(namn) && !lm.concepts_introduced.includes(namn)) {
+			warnings.push(`${lm.file}: [[begrepp:${namn}]] används i texten men står inte i concepts_used.`);
+		}
+	}
+}
+
 // Förkunskapsordning
 const byId = new Map(larandemal.map((lm) => [lm.id, lm]));
 for (const lm of larandemal) {

@@ -15,7 +15,7 @@ Lärobok i Teknik nivå 1+2 (Gy25) som utvecklas som en modulär kunskapsdatabas
 - `npm run validate` — alla kontroller + status- och täckningsrapport. Kör efter varje ändring.
 - `npm run begrepp` — genererar begreppsregistret till `export/begreppsregister.md`.
 - `npm run export` — manus från status `fardig-forsta-version` och uppåt (`-- --status=alla` för allt).
-- Webbplats (granskning): `cd site && npm run build` (kör validate som prebuild).
+- Webbplats (granskning): `cd site && npm run build` (kör validate som prebuild). Astro cachar renderade sidor per källfil — efter ändringar i `site/src/remark-granskning.mjs` eller `figures/registry.yml`, rensa `site/.astro` och `site/node_modules/.astro` före bygget.
 
 ## Arbetsflöde för ett lärandemål (detaljer i 13-produktionsmanual.md)
 

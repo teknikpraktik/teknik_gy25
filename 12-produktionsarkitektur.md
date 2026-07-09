@@ -94,6 +94,8 @@ Projektet har en statisk dokumentationswebbplats byggd med **Astro + Starlight**
 
 **Webbplatsen är ett internt produktions- och granskningsverktyg. Den är inte en publicerad produkt eller en del av bokens leverans.** Figurer visas i webbplatsen som platshållarspecifikation (syfte/innehåll/text), aldrig som färdig grafik — den slutliga grafiska produktionen görs alltid av förlaget (se 01, 03, 08).
 
+Varje lärandemålssida inleds med en **granskningsruta** (genererad ur frontmattern av `site/src/remark-granskning.mjs`): mål, status, kursplanetaggar, begrepp, figurer, förkunskaper och uppslag. Rutan finns bara i webbvyn och hamnar aldrig i exporten, som läser källfilerna direkt. Samma plugin renderar `[[begrepp:...]]` som länk till huvudstället och `[[figur:...]]` som platshållarruta ur registret; okänt begrepp eller okänd figur ger fel i både validate och bygget.
+
 Markdown med frontmatter är källformatet. HTML genereras automatiskt av Astro vid varje bygge och committas inte till git.
 
 ---

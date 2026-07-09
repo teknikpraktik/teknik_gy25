@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { kapitel, kapitelSlug, modulSlug, larandemalFilnamn, larandemalId } from '../scripts/bokstruktur-data.mjs';
+import { remarkGranskning } from './src/remark-granskning.mjs';
 
 // Sidopanelen byggs ur 06-bokstruktur.md (via bokstruktur-data.mjs, som tolkar
 // 06 direkt) — samma enda källa som skeleton/validate/export. Starlights
@@ -41,12 +42,18 @@ const sidebar = [
 
 // https://astro.build/config
 export default defineConfig({
+	// Löser upp [[figur:...]]/[[begrepp:...]] och injicerar granskningsrutan
+	// på lärandemålssidor. Gäller bara webbvyn — exporten läser källfilerna.
+	markdown: {
+		remarkPlugins: [remarkGranskning],
+	},
 	integrations: [
 		starlight({
 			title: 'Teknik Gy25 — produktionsmiljö',
 			description:
 				'Internt produktions- och granskningsverktyg för läroboken Teknik Gy25. Inte en publicerad produkt.',
 			social: [],
+			customCss: ['./src/styles/granskning.css'],
 			sidebar,
 		}),
 	],

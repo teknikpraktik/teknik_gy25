@@ -1,0 +1,100 @@
+/* Granskningsmiljöns interna komponenter: granskningsruta och figurplatshållare.
+   Använder Starlights CSS-variabler så att både ljust och mörkt tema fungerar. */
+
+.granskningsruta {
+	border: 1px dashed var(--sl-color-gray-4);
+	border-radius: 0.5rem;
+	background: var(--sl-color-gray-6);
+	padding: 0.75rem 1rem;
+	font-size: var(--sl-text-sm);
+	margin-bottom: 1.5rem;
+}
+
+.granskningsruta .gr-rubrik {
+	margin: 0 0 0.5rem;
+	font-weight: 600;
+	font-size: var(--sl-text-xs);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--sl-color-gray-3);
+}
+
+.granskningsruta dl {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	gap: 0.15rem 1rem;
+	margin: 0;
+}
+
+.granskningsruta dt {
+	font-weight: 600;
+	color: var(--sl-color-gray-2);
+	margin: 0;
+}
+
+.granskningsruta dd {
+	margin: 0;
+}
+
+.granskningsruta .gr-dammig {
+	color: var(--sl-color-gray-3);
+}
+
+.gr-status {
+	font-family: var(--__sl-font-mono, monospace);
+	padding: 0 0.35rem;
+	border-radius: 0.25rem;
+	background: var(--sl-color-gray-5);
+}
+
+.gr-status-klar {
+	background: var(--sl-color-green-low);
+	color: var(--sl-color-green-high);
+}
+
+.gr-status-under-utveckling,
+.gr-status-fardig-forsta-version {
+	background: var(--sl-color-orange-low);
+	color: var(--sl-color-orange-high);
+}
+
+.gr-status-fackgranskad,
+.gr-status-sprakgranskad {
+	background: var(--sl-color-blue-low);
+	color: var(--sl-color-blue-high);
+}
+
+.figurplatshallare {
+	border: 2px dashed var(--sl-color-accent);
+	border-radius: 0.5rem;
+	padding: 0.75rem 1rem;
+	margin: 1rem 0;
+}
+
+.figurplatshallare .fig-etikett {
+	display: inline-block;
+	font-weight: 700;
+	font-size: var(--sl-text-xs);
+	letter-spacing: 0.05em;
+	color: var(--sl-color-accent-high);
+	background: var(--sl-color-accent-low);
+	padding: 0.1rem 0.5rem;
+	border-radius: 0.25rem;
+	margin-bottom: 0.4rem;
+}
+
+.figurplatshallare .fig-syfte {
+	margin: 0.25rem 0 0;
+	font-weight: 600;
+}
+
+.figurplatshallare .fig-innehall {
+	margin: 0.25rem 0 0;
+	color: var(--sl-color-gray-2);
+	font-size: var(--sl-text-sm);
+}
+
+.begreppslank {
+	text-decoration-style: dotted;
+	text-underline-offset: 0.2em;
+}
