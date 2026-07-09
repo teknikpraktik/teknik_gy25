@@ -33,7 +33,7 @@ Tre filer måste alltid hållas i synk. Valideringen felar när de glider isär.
 2. **scripts/bokstruktur-data.mjs** — 06:s maskinläsbara spegling. Ändras 06 uppdateras denna i samma steg.
 3. **content/** — en fil per lärandemål, genererad av `npm run skeleton`.
 
-Motsvarande gäller kursplanen: **07-kursplanetackning.md** är den redaktionella auktoriteten och **scripts/kursplan-data.mjs** dess maskinläsbara spegling.
+Motsvarande gäller kursplanen: **07-kursplanetackning.md** är den redaktionella auktoriteten och **scripts/kursplan-data.mjs** dess maskinläsbara spegling. Kursplanens ordagranna lydelser (syfte, centralt innehåll, betygskriterier) finns i **Skolverket Kursplan Teknik GY25.md** i projektroten — använd den vid formuleringsfrågor, t.ex. när uppgifter ska träna en bedömd förmåga.
 
 ---
 

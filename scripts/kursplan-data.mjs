@@ -4,6 +4,9 @@
 // skriver aldrig till 07 och avgör aldrig täckningsbeslut. Ändras 07 ska denna
 // fil uppdateras i samma steg.
 //
+// Kursplanens ordagranna lydelser finns i "Skolverket Kursplan Teknik GY25.md"
+// (projektroten). Textfälten nedan följer 07:s förkortade tabellydelser.
+//
 // Fält per punkt:
 //   text    — punktens lydelse (förkortad där 07 förkortar)
 //   kategori — kursplanens kategorirubrik (samma vokabulär som curriculum-taggar)
