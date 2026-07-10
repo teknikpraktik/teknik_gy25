@@ -85,3 +85,10 @@ fig-1.5.1-a:
   referens: "Placeras vid tidsmönstret; texten hänvisar till figuren när Amaras tumregel förklaras med mobiltelefonen som exempel"
   pedagogisk_funktion: "Ger eleven en visuell tumregel att lägga över varje ny teknik: var på kurvorna befinner vi oss, och vad säger det om vad som är över- respektive underskattat"
   anvands_i: ["1.5.1"]
+
+fig-2.1.1-a:
+  syfte: "Visa att samma behov kan ge helt olika lösningar beroende på hur problemet formuleras"
+  innehall: "Förgrenad kedja med Hövdingfallet: behovet att skydda cyklistens huvud överst, därunder två problemformuleringar sida vid sida (gör hjälmen bekvämare respektive skydda huvudet utan att cyklisten bär något på det), och under varje formulering dess lösning: en förbättrad cykelhjälm respektive airbagkragen. Kedjans tre nivåer märks behov, tekniskt problem och teknisk lösning"
+  referens: "Placeras vid avsnittet om problemformuleringens makt; texten hänvisar till figuren när Hövdingfallet beskrivs"
+  pedagogisk_funktion: "Gör uppslagets kärnidé avläsbar i en bild: problemformuleringen är en vägkorsning, inte en formalitet, och eleven ser exakt var de två vägarna skiljs åt"
+  anvands_i: ["2.1.1"]
