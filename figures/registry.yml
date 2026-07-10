@@ -113,3 +113,10 @@ fig-2.2.2-a:
   referens: "Placeras vid genomgången av robotgräsklipparens nedbrytning; texten hänvisar till figuren när delproblemen räknas upp"
   pedagogisk_funktion: "Ger eleven trädet som visuell form för egen nedbrytning och visar att nedbrytningen följer funktioner, inte fysiska bitar; kopplingslinjerna förebådar insikten att delarna måste passa ihop"
   anvands_i: ["2.2.2"]
+
+fig-2.2.3-a:
+  syfte: "Ge eleven en valkarta för problemlösningsstrategi utifrån problemets karaktär"
+  innehall: "Diagram med två axlar: kostnaden för ett misslyckat försök (låg till hög) och hur väl förstått problemet är (dåligt till väl). I fälten placeras strategierna med verkliga exempel: pröva och förbättra där försök är billiga (apptester, Edisons glödtrådar), analysera och beräkna först där försök är dyra eller farliga (broar, kärnkraft), återanvänd befintlig lösning där problemet är välkänt (standarder, kardborren) och bryt ned i delproblem där problemet är för stort för ett fält"
+  referens: "Placeras vid avsnittet om valet; texten hänvisar till figuren när de två valfrågorna införs"
+  pedagogisk_funktion: "Förvandlar strategivalet från tyckande till bedömning: eleven kan placera ett nytt problem på kartan och läsa av vilken strategi som är rimlig, och motivera valet med kartans två frågor"
+  anvands_i: ["2.2.3"]
