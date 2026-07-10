@@ -174,6 +174,22 @@ Samma exempel ska inte återkomma i flera kapitel om det inte finns ett tydligt 
 
 ---
 
+# Personnamn
+
+Om eleven inte behöver kunna personens namn för att förstå tekniken ska namnet normalt tas bort.
+
+Personer namnges när de:
+
+- har avgörande teknikhistorisk betydelse
+- är allmänt etablerade
+- tillför förståelse som inte kan förmedlas lika bra genom produkten, konstruktionen eller den tekniska lösningen
+
+Berättelsen behålls även när namnet tas bort: årtal, platser, produkter och förlopp bär konkretionen.
+
+Representation av både kvinnor och män eftersträvas genom hela boken, men perifera personer läggs aldrig in enbart för balansens skull.
+
+---
+
 # Formler
 
 Formler introduceras så snart de behövs.

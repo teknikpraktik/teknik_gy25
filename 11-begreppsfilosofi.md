@@ -164,11 +164,15 @@ Därefter används formeln.
 
 # Begrepp och uppgifter
 
-Förstå-uppgifterna ska kontrollera att eleven behärskar nya begrepp.
+Uppgiftsdelen Begrepp är begreppsträningens hem.
 
-Utveckla-uppgifterna ska använda begreppen.
+Den tränar i första hand användning: att använda begreppen korrekt, skilja närliggande begrepp åt, välja rätt begrepp i ett tekniskt sammanhang, koppla begrepp till verkliga produkter, konstruktioner eller system, och motivera användningen.
 
-Utmana-uppgifterna ska låta eleven tillämpa begreppen i nya situationer.
+Definitioner får förekomma när de är motiverade. Delen får aldrig bli en ordlista eller en samling rena definitionsfrågor.
+
+Instuderingsfrågorna kontrollerar att begreppen uppfattats ur texten.
+
+De praktiska uppgifterna låter eleven använda begreppen i tekniskt arbete.
 
 ---
 

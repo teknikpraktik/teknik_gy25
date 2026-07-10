@@ -22,7 +22,7 @@ Lärobok i Teknik nivå 1+2 (Gy25) som utvecklas som en modulär kunskapsdatabas
 
 1. Välj nästa mål i modulens ordning; kontrollera att `goal` är rätt avgränsat.
 2. Sätt `status: under-utveckling`. Fyll i `prerequisites`, planera begrepp, registrera figurer i `figures/registry.yml`, tagga `curriculum` med punkt-id från 07, sätt `practical_component`.
-3. Skriv teori, figurplatshållare och uppgifter (Förstå/Utveckla/Utmana) enligt 03 + 05. Ta bort platshållarkommentaren.
+3. Skriv teori, figurplatshållare och uppgifter (Instuderingsfrågor/Begrepp/Praktiska uppgifter) enligt 03 + 05. Ta bort platshållarkommentaren.
 4. Egengranska (08) och granska mot 09. Kör `npm run validate`. Sätt `status: fardig-forsta-version`.
 5. Committa: ett commit per lärandemål, t.ex. `Lärandemål 6.1.1 Kraftbegreppet — färdig första version`.
 

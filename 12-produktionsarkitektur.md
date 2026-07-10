@@ -22,7 +22,7 @@ Projektets minsta produktionsenhet är ett lärandemål.
 
 Varje lärandemål lagras i en egen Markdown-fil med YAML-frontmatter, under `content/<kapitel>/<modul>/`.
 
-Om ett lärandemål (enligt 03-bokens-arkitektur.md) omfattar flera uppslag hanteras dessa som sektioner inom samma fil (`## Uppslag 1`, `## Uppslag 2` osv.) — lärandemålet förblir den odelbara produktionsenheten, i linje med 04-redaktionsprinciper.md §9.
+Om ett lärandemål (enligt 03-bokens-arkitektur.md) omfattar flera uppslag skrivs uppslagen som på varandra följande teori- och uppgiftssekvenser i samma fil, utan synliga uppslagsrubriker — planeringen bärs av frontmatterfältet `uppslag` och 06. Lärandemålet förblir den odelbara produktionsenheten, i linje med 04-redaktionsprinciper.md §9. Formuleringar som "Uppslag 1" får inte förekomma i elevtexten.
 
 Claude Code får aldrig skriva ett helt kapitel i en fil.
 
@@ -147,7 +147,7 @@ Flera lärandemål kan referera till samma figur via shortcoden `[[figur:ID]]`. 
 - **Figur-ID** — varje refererad figur finns i registret; oanvända figurer flaggas.
 - **Förkunskapsordning** — en fils `prerequisites` måste ligga tidigare i läsordningen (kapitel.modul.löpnummer), i linje med 04 §10.
 - **Kursplantaggning** — `curriculum.niva1`/`niva2` innehåller punkt-id:n enligt 07 (via `kursplan-data.mjs`); tagg i ett kapitel utanför punktens matrisrad ger varning.
-- **Statusstyrda innehållskontroller** — från status `fardig-forsta-version` krävs uppgiftsdelarna Förstå/Utveckla/Utmana, icke-tom kursplantaggning och att inga HTML-kommentarer eller TODO finns kvar; saknade figurer, AI-typiska formuleringar och tankstreck i elevtexten (05) ger varning.
+- **Statusstyrda innehållskontroller** — från status `fardig-forsta-version` krävs uppgiftsdelarna Instuderingsfrågor/Begrepp/Praktiska uppgifter, icke-tom kursplantaggning och att inga HTML-kommentarer, TODO, uppslagsrubriker eller äldre uppgiftsrubriker finns kvar; saknade figurer, AI-typiska formuleringar, tankstreck i elevtexten (05), uppgiftsantal utanför normalspannen (03) och ovanligt många personnamn (05) ger varning.
 - **Statusöversikt** — sammanställer antal lärandemål per status, totalt och per kapitel, som ersättning för manuell bokföring i 06.
 - **Kursplanetäckningsöversikt** — antal påbörjade lärandemål per kursplanepunkt, uppdelat på primärkapitlet och övriga kapitel.
 

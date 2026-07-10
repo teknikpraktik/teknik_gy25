@@ -57,6 +57,10 @@ Granskning sker på fyra nivåer.
 
 □ Praktiskt moment finns när det känns naturligt.
 
+□ Samhällsperspektiv utgår från konkreta tekniska lösningar (10, "Teknik före samhälle").
+
+□ Personnamn förekommer endast där de behövs för förståelsen (05, "Personnamn").
+
 ---
 
 ## Figurer
@@ -71,11 +75,13 @@ Granskning sker på fyra nivåer.
 
 ## Uppgifter
 
-□ Förstå finns.
+□ Instuderingsfrågor finns och kan besvaras med hjälp av texten.
 
-□ Utveckla finns.
+□ Begrepp finns och tränar användning av begreppen, inte bara återgivning.
 
-□ Utmana finns.
+□ Praktiska uppgifter finns, har tydlig teknisk kärna och är genomförbara med rimliga resurser.
+
+□ Ingen uppgift kallas praktisk uppgift utan att vara det.
 
 □ Uppgifterna tränar lärandemålet.
 

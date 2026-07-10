@@ -123,50 +123,60 @@ Ett arbetat exempel används endast när det tydligt förbättrar förståelsen.
 
 ## Aktiv bearbetning
 
-Efter teorin följer uppgifter indelade i tre nivåer.
+Efter teorin följer uppgifter indelade i tre delar.
 
-### Förstå
+### Instuderingsfrågor
 
-Kontrollerar att eleven förstått teorin.
+Kontrollerar att eleven förstått uppslagets innehåll.
 
-Typiska uppgifter:
+Frågorna ska vara tydliga och kunna besvaras med hjälp av texten.
 
-- instuderingsfrågor
-- begrepp
-- enklare tillämpningar
-
-Normalt 5–8 uppgifter.
+Normalt 5–10 per uppslag.
 
 ---
 
-### Utveckla
+### Begrepp
 
-Eleven använder sina kunskaper i nya situationer.
+Tränar uppslagets centrala tekniska begrepp.
 
-Typiska uppgifter:
+Uppgifterna ska i första hand träna att eleven kan:
 
-- resonemang
-- analyser
-- beräkningar
-- jämförelser
+- använda begreppen korrekt
+- skilja närliggande begrepp åt
+- välja rätt begrepp i ett tekniskt sammanhang
+- koppla begrepp till verkliga produkter, konstruktioner eller system
+- motivera användningen av ett begrepp
 
-Normalt 3–5 uppgifter.
+Definitioner får förekomma när de är motiverade, men delen får aldrig bli en ordlista eller en samling rena definitionsfrågor.
+
+Om uppslaget inte introducerar nya begrepp tränas de bärande begrepp som återanvänds.
+
+Normalt 3–7 per uppslag.
 
 ---
 
-### Utmana
+### Praktiska uppgifter
 
-Mer öppna uppgifter där eleven använder sina kunskaper för att undersöka, konstruera eller värdera.
+Tekniska arbetsuppgifter med tydlig teknisk kärna, till exempel att:
 
-Typiska uppgifter:
+- bygga
+- mäta
+- testa
+- skissa
+- konstruera
+- göra beräkningar
+- skriva krav
+- analysera eller jämföra tekniska lösningar
+- dokumentera resultat
+- förbättra en lösning
 
-- undersökningar
-- konstruktion
-- miniprojekt
-- designuppgifter
-- AI-uppgifter när de tillför ett verkligt värde
+Omfattningen sträcker sig från korta tekniska moment på några minuter till mer omfattande laborationer eller konstruktionsuppgifter.
 
-Normalt 1–2 uppgifter.
+En diskussionsfråga utan teknisk kärna är inte en praktisk uppgift.
+
+AI-uppgifter kan förekomma här när de tillför ett verkligt värde.
+
+Normalt 2–4 per uppslag.
 
 ---
 
@@ -272,7 +282,7 @@ Ett lärandemål är färdigt först när:
 - teorin är komplett men koncentrerad
 - alla fakta är korrekta
 - minst en figur finns specificerad när den förbättrar förståelsen
-- uppgifter finns under Förstå, Utveckla och Utmana
+- uppgifter finns under Instuderingsfrågor, Begrepp och Praktiska uppgifter
 - praktiskt moment finns när det känns naturligt
 - AI används endast där det tillför verkligt värde
 - verkliga exempel används

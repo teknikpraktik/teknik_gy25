@@ -55,13 +55,13 @@ Sätt `status: under-utveckling`. Identifiera enligt 08:
 
 ## 3. Skriv
 
-Skriv teori, figurplatshållare och uppgifter (Förstå/Utveckla/Utmana) enligt 03 och 05. Omfattar lärandemålet flera uppslag används `## Uppslag 1`, `## Uppslag 2` som sektioner i samma fil (12).
+Skriv teori, figurplatshållare och uppgifter (Instuderingsfrågor/Begrepp/Praktiska uppgifter) enligt 03 och 05. Omfattar lärandemålet flera uppslag skrivs uppslagen som på varandra följande teori- och uppgiftssekvenser i samma fil, utan synliga uppslagsrubriker (12) — varje uppslag får egna uppgiftsdelar enligt 03:s uppslagsmodell.
 
-Rubrikkonvention i källfilerna: teoriavsnitt och uppgiftsdelarna `## Förstå`, `## Utveckla`, `## Utmana` skrivs på `##`-nivå (sidtiteln är h1 på webben; exporten sänker brödtextens rubriker två steg så att hierarkin i Word blir rätt). Vid fleruppslagsmål är `## Uppslag 1`, `## Uppslag 2` sektionsrubriker och teoriavsnitt och uppgiftsdelar ligger en nivå djupare (`###`), med egna uppgiftsdelar per uppslag enligt 03:s uppslagsmodell. Uppgifterna numreras 1, 2, 3 … med omstart i varje del.
+Rubrikkonvention i källfilerna: teoriavsnitt och uppgiftsdelarna `## Instuderingsfrågor`, `## Begrepp`, `## Praktiska uppgifter` skrivs på `##`-nivå (sidtiteln är h1 på webben; exporten sänker brödtextens rubriker två steg så att hierarkin i Word blir rätt). Uppgifterna numreras 1, 2, 3 … med omstart i varje del.
 
 Vid ett begrepps huvudställe (filen där det står i `concepts_introduced`) skrivs begreppet i **fetstil** i den mening där det definieras. Detta är bindande standard.
 
-Utmana-uppgifter får inledas med en arbetsformsetikett i fetstil, t.ex. **Undersökning.**, **Kartläggning.**, **Analys.** eller **Omformulering.** Etiketterna är rekommenderade när de gör arbetsformen tydligare för eleven, men de är inte obligatoriska och får inte skapa mekanisk likformighet — en Utmana-uppgift utan etikett är helt korrekt.
+Praktiska uppgifter får inledas med en arbetsformsetikett i fetstil, t.ex. **Undersökning.**, **Konstruktion.**, **Analys.** eller **Test.** Etiketterna är rekommenderade när de gör arbetsformen tydligare för eleven, men de är inte obligatoriska och får inte skapa mekanisk likformighet — en praktisk uppgift utan etikett är helt korrekt.
 
 Figurer refereras med `[[figur:ID]]`, begrepp som introducerats i andra lärandemål med `[[begrepp:namn]]`.
 
@@ -73,7 +73,7 @@ Genomför egengranskningen (08) och därefter granskningen av lärandemål (09).
 npm run validate
 ```
 
-Från denna status ställer valideringen innehållskrav: uppgiftsdelarna Förstå/Utveckla/Utmana ska finnas, `curriculum` ska vara taggat och inga HTML-kommentarer eller TODO får finnas kvar. Saknade figurer, AI-typiska formuleringar och tankstreck i elevtexten ger varningar. Rätta alla fel och relevanta varningar.
+Från denna status ställer valideringen innehållskrav: uppgiftsdelarna Instuderingsfrågor/Begrepp/Praktiska uppgifter ska finnas, `curriculum` ska vara taggat och inga HTML-kommentarer, TODO, uppslagsrubriker eller äldre uppgiftsrubriker (Förstå/Utveckla/Utmana) får finnas kvar. Saknade figurer, AI-typiska formuleringar, tankstreck i elevtexten, uppgiftsantal utanför normalspannen och ovanligt många personnamn ger varningar. Rätta alla fel och relevanta varningar.
 
 ## 5. Committa
 
