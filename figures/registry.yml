@@ -36,3 +36,10 @@ fig-1.2.1-b:
   referens: "Placeras vid avsnittet om boktryckarkonsten på uppslag 2; texten hänvisar till figuren när skillnaden i produktionstakt beskrivs"
   pedagogisk_funktion: "Konkretiserar vad betydelse för samhället innebär: eleven ser att genombrottet inte var själva pressen utan vad den gjorde med kunskapens pris och spridning"
   anvands_i: ["1.2.1"]
+
+fig-1.2.2-a:
+  syfte: "Visa de tre drivkrafterna bakom teknikutveckling och att de ofta verkar tillsammans"
+  innehall: "Tre spår som vart och ett leder från drivkraft till teknisk lösning: arméernas behov av hållbar mat leder till konserveringen, kunskapen om elektromagnetismen leder till telegrafen, städernas tillväxt leder till avloppssystemen. Nederst ett sammanflöde där alla tre spåren möts i Londons kolerabekämpning: behovet av rent vatten, kunskapen om smittvägen och den växande staden"
+  referens: "Placeras vid uppslagets inledning; texten hänvisar till figuren när de tre drivkrafterna namnges och när samspelet mellan dem beskrivs"
+  pedagogisk_funktion: "Ger eleven ett mönster att analysera med: varje historiskt exempel kan sorteras efter drivkraft, och sammanflödet visar att verkliga genombrott sällan har en ensam orsak"
+  anvands_i: ["1.2.2"]
