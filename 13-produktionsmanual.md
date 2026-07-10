@@ -68,7 +68,7 @@ Genomför egengranskningen (08) och därefter granskningen av lärandemål (09).
 npm run validate
 ```
 
-Från denna status ställer valideringen innehållskrav: uppgiftsdelarna Förstå/Utveckla/Utmana ska finnas, `curriculum` ska vara taggat och inga HTML-kommentarer eller TODO får finnas kvar. Saknade figurer och AI-typiska formuleringar ger varningar. Rätta alla fel och relevanta varningar.
+Från denna status ställer valideringen innehållskrav: uppgiftsdelarna Förstå/Utveckla/Utmana ska finnas, `curriculum` ska vara taggat och inga HTML-kommentarer eller TODO får finnas kvar. Saknade figurer, AI-typiska formuleringar och tankstreck i elevtexten ger varningar. Rätta alla fel och relevanta varningar.
 
 ## 5. Committa
 

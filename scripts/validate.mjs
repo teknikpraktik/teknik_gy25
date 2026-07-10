@@ -185,6 +185,12 @@ for (const figId of Object.keys(figureRegistry)) {
 	if (saknade.length > 0) {
 		warnings.push(`figures/registry.yml: figur "${figId}" saknar fält: ${saknade.join(', ')} — platshållaren är inte komplett (09, "Förlagsgranskning").`);
 	}
+	// Figurtext är elevtext: inga tankstreck/talstreck (05, "Tankstreck").
+	for (const f of ['syfte', 'innehall', 'referens', 'pedagogisk_funktion']) {
+		if (/—|–/.test(figureRegistry[figId]?.[f] ?? '')) {
+			warnings.push(`figures/registry.yml: figur "${figId}", fältet ${f}: tankstreck/talstreck i figurtexten (05-forfattarmanual.md, "Tankstreck").`);
+		}
+	}
 }
 
 // Shortcodes i brödtext: [[figur:ID]] måste finnas i registret och bör stå i
@@ -282,6 +288,17 @@ for (const lm of larandemal) {
 		if (bodyLower.includes(fras)) {
 			warnings.push(`${beskr}: AI-typisk formulering "${fras}" förekommer (05-forfattarmanual.md, "AI-språk som ska undvikas").`);
 		}
+	}
+	// Tankstreck/talstreck används inte i elevtexten (05, "Tankstreck").
+	// Kodblock undantas; bindestreck (-) berörs inte av regeln.
+	let inCodeBlock = false;
+	let tankstreck = 0;
+	for (const line of lm.body.split('\n')) {
+		if (/^(```|~~~)/.test(line)) inCodeBlock = !inCodeBlock;
+		if (!inCodeBlock) tankstreck += (line.match(/—|–/g) ?? []).length;
+	}
+	if (tankstreck > 0) {
+		warnings.push(`${beskr}: tankstreck/talstreck förekommer ${tankstreck} gång(er) i elevtexten (05-forfattarmanual.md, "Tankstreck").`);
 	}
 }
 

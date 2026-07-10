@@ -143,7 +143,7 @@ Flera lärandemål kan referera till samma figur via shortcoden `[[figur:ID]]`. 
 - **Figur-ID** — varje refererad figur finns i registret; oanvända figurer flaggas.
 - **Förkunskapsordning** — en fils `prerequisites` måste ligga tidigare i läsordningen (kapitel.modul.löpnummer), i linje med 04 §10.
 - **Kursplantaggning** — `curriculum.niva1`/`niva2` innehåller punkt-id:n enligt 07 (via `kursplan-data.mjs`); tagg i ett kapitel utanför punktens matrisrad ger varning.
-- **Statusstyrda innehållskontroller** — från status `fardig-forsta-version` krävs uppgiftsdelarna Förstå/Utveckla/Utmana, icke-tom kursplantaggning och att inga HTML-kommentarer eller TODO finns kvar; saknade figurer och AI-typiska formuleringar (05) ger varning.
+- **Statusstyrda innehållskontroller** — från status `fardig-forsta-version` krävs uppgiftsdelarna Förstå/Utveckla/Utmana, icke-tom kursplantaggning och att inga HTML-kommentarer eller TODO finns kvar; saknade figurer, AI-typiska formuleringar och tankstreck i elevtexten (05) ger varning.
 - **Statusöversikt** — sammanställer antal lärandemål per status, totalt och per kapitel, som ersättning för manuell bokföring i 06.
 - **Kursplanetäckningsöversikt** — antal påbörjade lärandemål per kursplanepunkt, uppdelat på primärkapitlet och övriga kapitel.
 
