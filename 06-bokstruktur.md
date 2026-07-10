@@ -65,7 +65,7 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 
 # Kapitel 1 – Teknikhistoria
 
-## Modul 1.1 Teknik – människans problemlösning
+## Modul 1.1 Teknik: människans problemlösning
 
 - **1.1.1 Vad är teknik?** — Förklara vad teknik är och ge exempel på hur tekniska lösningar svarar mot mänskliga behov och problem.
 - **1.1.2 Teknik, naturvetenskap och matematik** — Beskriva hur teknik samspelar med naturvetenskap och matematik i en verklig teknisk lösning.
