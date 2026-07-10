@@ -15,3 +15,10 @@ fig-1.1.1-a:
   referens: "Placeras i teoridelens inledning; texten hänvisar till figuren när begreppet teknisk lösning definieras och när missuppfattningen att teknik bara är föremål bemöts"
   pedagogisk_funktion: "Bär uppslagets tre motbilder visuellt: teknik är inte bara elektronik, inte bara föremål och inte bara avancerat. Eleven ska kunna peka på vilket par som motbevisar respektive missuppfattning"
   anvands_i: ["1.1.1"]
+
+fig-1.1.2-a:
+  syfte: "Visa hur naturvetenskap, matematik och teknik samverkade i en och samma verkliga tekniska lösning"
+  innehall: "Öresundsförbindelsen i översikt med bron, den konstgjorda ön Pepparholm och sänktunneln. Callouts pekar ut kunskapens hemvist: vindlaster, strömmar och kalkberggrunden (naturvetenskap), dimensionering av kablar och fundament (matematik), valet av kombinationen bro, ö och tunnel med hänsyn till flyget på Kastrup och sjöfarten (teknik)"
+  referens: "Placeras vid rollgenomgången; texten hänvisar till figuren när de tre kunskapsområdenas roller beskrivs var för sig"
+  pedagogisk_funktion: "Förankrar de tre abstrakta rollerna i ett och samma konkreta byggprojekt så att eleven ser att områdena verkar samtidigt i en verklig lösning, inte i tur och ordning"
+  anvands_i: ["1.1.2"]
