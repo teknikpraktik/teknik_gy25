@@ -1,0 +1,45 @@
+---
+// Granskningsvyns översikt: titelblad och klickbar innehållsförteckning över
+// allt färdigställt innehåll, med länkar till kapitelsidorna och ankare till
+// enskilda lärandemål. Genereras helt statiskt vid bygget.
+import ReviewLayout from './_ReviewLayout.astro';
+import { hamtaReviewKapitel } from './_data.mjs';
+import { medBase } from '../../site-base.mjs';
+
+const kapitel = await hamtaReviewKapitel();
+const antal = kapitel.reduce((s, k) => s + k.antal, 0);
+const datum = new Date().toISOString().slice(0, 10);
+---
+
+<ReviewLayout titel="Översikt">
+	<div class="review-titelblad">
+		<h1>Teknik nivå 1 och 2</h1>
+		<p>Redaktionellt granskningsmanus</p>
+		<p>Genererat {datum} · {antal} lärandemål med status färdig första version eller högre</p>
+		<p><a href={medBase('/review/hela-manuset/')}>Läs hela manuset på en sida</a></p>
+	</div>
+
+	<nav class="review-toc" aria-label="Innehållsförteckning">
+		<ul>
+			{kapitel.map((k) => (
+				<li class="toc-kapitel">
+					<a href={medBase(`/review/kapitel-${k.nr}/`)}>Kapitel {k.nr} · {k.titel}</a>
+					<ul>
+						{k.moduler.map((m) => (
+							<li class="toc-modul">
+								<a href={medBase(`/review/kapitel-${k.nr}/#${m.anchor}`)}>{m.nr} {m.titel}</a>
+								<ul>
+									{m.larandemal.map((lm) => (
+										<li class="toc-lm">
+											<a href={medBase(`/review/kapitel-${k.nr}/#${lm.anchor}`)}>{lm.titel}</a>
+										</li>
+									))}
+								</ul>
+							</li>
+						))}
+					</ul>
+				</li>
+			))}
+		</ul>
+	</nav>
+</ReviewLayout>

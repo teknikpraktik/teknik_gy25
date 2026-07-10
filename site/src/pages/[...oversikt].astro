@@ -20,6 +20,7 @@ import {
 	routeSegment,
 } from '../../../scripts/bokstruktur-data.mjs';
 import { niva1, niva2, syftesmal } from '../../../scripts/kursplan-data.mjs';
+import { medBase } from '../site-base.mjs';
 
 export async function getStaticPaths() {
 	const paths = [];
@@ -57,10 +58,10 @@ function jamforIds(a, b) {
 	return 0;
 }
 
-const kapUrl = `/${kapitelSlug(k)}/`;
-const modUrl = (i) => `/${kapitelSlug(k)}/${routeSegment(modulSlug(k, i))}/`;
+const kapUrl = medBase(`/${kapitelSlug(k)}/`);
+const modUrl = (i) => medBase(`/${kapitelSlug(k)}/${routeSegment(modulSlug(k, i))}/`);
 const lmUrl = (i, j) =>
-	`/${kapitelSlug(k)}/${routeSegment(modulSlug(k, i))}/${routeSegment(larandemalFilnamn(k, i, j).replace(/\.md$/, ''))}/`;
+	medBase(`/${kapitelSlug(k)}/${routeSegment(modulSlug(k, i))}/${routeSegment(larandemalFilnamn(k, i, j).replace(/\.md$/, ''))}/`);
 
 function modulRader(i) {
 	return k.moduler[i].larandemal.map((plan, j) => ({

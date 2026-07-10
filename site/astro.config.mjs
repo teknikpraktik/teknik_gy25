@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { kapitel, kapitelSlug, modulSlug, larandemalFilnamn, larandemalId } from '../scripts/bokstruktur-data.mjs';
 import { remarkGranskning } from './src/remark-granskning.mjs';
+import { SITE_BASE } from './src/site-base.mjs';
 
 // Sidopanelen byggs ur 06-bokstruktur.md (via bokstruktur-data.mjs, som tolkar
 // 06 direkt) — samma enda källa som skeleton/validate/export. Starlights
@@ -48,6 +49,10 @@ const sidebar = [
 
 // https://astro.build/config
 export default defineConfig({
+	// Publiceras på GitHub Pages under projektprefix — inte på domänroten.
+	// SITE_BASE delas med remark-pluginens och vyernas länkbyggen.
+	site: 'https://teknikpraktik.github.io',
+	base: SITE_BASE,
 	// Löser upp [[figur:...]]/[[begrepp:...]] och injicerar granskningsrutan
 	// på lärandemålssidor. Gäller bara webbvyn — exporten läser källfilerna.
 	markdown: {
@@ -58,6 +63,9 @@ export default defineConfig({
 			title: 'Teknik Gy25 — produktionsmiljö',
 			description:
 				'Internt produktions- och granskningsverktyg för läroboken Teknik Gy25. Inte en publicerad produkt.',
+			// Internt verktyg: hela webbplatsen undantas från indexering.
+			// Obs: detta är ingen åtkomstkontroll — Pages-sajten är publikt läsbar.
+			head: [{ tag: 'meta', attrs: { name: 'robots', content: 'noindex, nofollow' } }],
 			social: [],
 			customCss: ['./src/styles/granskning.css'],
 			sidebar,

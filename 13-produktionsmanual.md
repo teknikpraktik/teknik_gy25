@@ -148,3 +148,5 @@ Kapitel- och modulstruktur ändras inte utan uttryckligt beslut (08, "AI får in
 Rapporten ersätter manuell bokföring i 06 (som endast anger målskelettet).
 
 Samma läge finns browsbart på webbplatsen: **kapitelvyn** visar modulstatus och kapitlets kursplanansvar med taggningsläge, **modulvyn** visar lärandemålstabell och begreppsflöde. Vyerna genereras vid varje bygge och används vid modul- och kapitelgranskning enligt 09 — checklistan visas direkt på respektive sida.
+
+För sammanhängande redaktionell läsning finns **granskningsvyn** på `/review/` (12, "Webbformat"): rent läsmanus utan metadata och figurplatshållare, kapitelvis eller som helsida. Efter push till master publiceras webbplatsen automatiskt på `https://teknikpraktik.github.io/teknik_gy25/` via GitHub Actions. Lokalt serveras allt under samma prefix: `http://localhost:4321/teknik_gy25/`.

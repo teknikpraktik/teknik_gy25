@@ -26,6 +26,7 @@ import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import YAML from 'yaml';
 import { niva1, niva2, syftesmal } from '../../scripts/kursplan-data.mjs';
+import { SITE_BASE } from './site-base.mjs';
 
 const projektRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const contentDir = path.join(projektRoot, 'content');
@@ -34,8 +35,10 @@ const registryPath = path.join(projektRoot, 'figures', 'registry.yml');
 const punkter = new Map([...niva1, ...niva2, ...syftesmal].map((p) => [p.id, p]));
 
 // Astros routes slugifierar sökvägssegment genom att ta bort punkter.
+// Länkarna prefixas med webbplatsens base path (GitHub Pages-projektprefix).
 function routeFromRel(rel) {
 	return (
+		SITE_BASE +
 		'/' +
 		rel
 			.replace(/\.md$/, '')

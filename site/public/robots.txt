@@ -1,0 +1,5 @@
+# Internt produktions- och granskningsverktyg för läroboken Teknik Gy25 —
+# inte en publicerad produkt. Hela webbplatsen undantas från indexering.
+# Obs: detta är ingen åtkomstkontroll; sidorna är publikt läsbara.
+User-agent: *
+Disallow: /
