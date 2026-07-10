@@ -292,11 +292,62 @@ for (const lm of larandemal) {
 	if (statusEnum.indexOf(lm.status) < GRANSKNINGSSTATUS) continue;
 	const beskr = `${lm.file} (status ${lm.status})`;
 
-	// Obs: inte \b efter rubriken — JS \b bygger på ASCII-\w, så "å" i "Förstå"
-	// bildar ingen ordgräns och rubriken skulle aldrig matcha.
-	for (const rubrik of ['Förstå', 'Utveckla', 'Utmana']) {
+	// Obs: inte \b efter rubriken — JS \b bygger på ASCII-\w, så tecken som
+	// "å"/"ö" bildar ingen ordgräns; därför matchas radslut i stället.
+	for (const rubrik of ['Instuderingsfrågor', 'Begrepp', 'Praktiska uppgifter']) {
 		if (!new RegExp(`^#{2,4}\\s+${rubrik}\\s*$`, 'm').test(lm.body)) {
 			errors.push(`${beskr}: uppgiftsdelen "${rubrik}" saknas (03-bokens-arkitektur.md, "Aktiv bearbetning").`);
+		}
+	}
+	// Äldre uppgiftsrubriker och synliga uppslagsrubriker får inte förekomma
+	// (redaktionellt beslut; 12 "Produktionsenhet", 13 "Skriv").
+	for (const forbjuden of [/^#{2,4}\s+(Förstå|Utveckla|Utmana)\s*$/m, /^#{2,4}\s+Uppslag\b/m]) {
+		const traff = lm.body.match(forbjuden);
+		if (traff) {
+			errors.push(`${beskr}: rubriken "${traff[0].replace(/^#+\s*/, '')}" får inte förekomma i elevtexten (03/12/13).`);
+		}
+	}
+	// Uppgiftsantal per del: normalspann enligt 03 (per rubrikförekomst, dvs.
+	// per uppslag i fleruppslagsmål). Mjuk kontroll — 03 säger "normalt".
+	const normalspann = { Instuderingsfrågor: [5, 10], Begrepp: [3, 7], 'Praktiska uppgifter': [2, 4] };
+	{
+		const rader = lm.body.split('\n');
+		let aktuellDel = null;
+		let antal = 0;
+		const flush = () => {
+			if (!aktuellDel) return;
+			const [min, max] = normalspann[aktuellDel];
+			if (antal < min || antal > max) {
+				warnings.push(`${beskr}: ${antal} uppgifter under "${aktuellDel}" — normalspannet är ${min}–${max} per uppslag (03).`);
+			}
+		};
+		for (const rad of rader) {
+			const rubrik = rad.match(/^#{2,4}\s+(Instuderingsfrågor|Begrepp|Praktiska uppgifter)\s*$/);
+			if (rubrik) {
+				flush();
+				aktuellDel = rubrik[1];
+				antal = 0;
+			} else if (/^#{2,4}\s/.test(rad)) {
+				flush();
+				aktuellDel = null;
+			} else if (aktuellDel && /^\d+\.\s/.test(rad)) {
+				antal++;
+			}
+		}
+		flush();
+	}
+	// Personnamnsheuristik (05, "Personnamn"): två versalinledda ord i följd
+	// räknas som namnkandidat. Grov träffbild med falska positiva (platser,
+	// produkter) — därför bara en mjuk varning med kandidaterna listade, så
+	// att en människa avgör. Tröskel: fler än 4 distinkta kandidater.
+	{
+		const synlig = lm.body.replace(/<!--[\s\S]*?-->/g, '');
+		const kandidater = new Set();
+		for (const m of synlig.matchAll(/\b([A-ZÅÄÖ][a-zåäö]{2,})\s+([A-ZÅÄÖ][a-zåäö]{2,})\b/g)) {
+			kandidater.add(`${m[1]} ${m[2]}`);
+		}
+		if (kandidater.size > 4) {
+			warnings.push(`${beskr}: ${kandidater.size} möjliga personnamn (${[...kandidater].join(', ')}) — kontrollera mot 05, "Personnamn" (heuristiken träffar även platser och produkter).`);
 		}
 	}
 	if (lm.body.includes('<!--')) {
