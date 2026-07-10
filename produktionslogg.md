@@ -7,9 +7,16 @@ betraktas som färdig första version. "Överträffar Golden Master" ska motiver
 och eventuell ny standard lyftas för redaktionellt beslut. Loggen ingår inte i
 bokexporten (export läser endast content/).
 
+**Strukturrevision 2026-07-10 (redaktionellt beslut):** samtliga 15 färdiga
+lärandemål reviderade till ny uppgiftsstruktur (Instuderingsfrågor/Begrepp/
+Praktiska uppgifter), personnamn gallrade enligt 05 "Personnamn", tonen
+skärpt enligt 10 "Teknik före samhälle", synliga uppslagsrubriker borttagna.
+1.1.1 reviderades först, kvalitetsgranskades fullständigt mot 09 och
+fastställdes därefter på nytt som Golden Master i sin reviderade form.
+
 | Lärandemål | Status | Kvalitet mot Golden Master | Ny generell standard | Kort kommentar |
 |---|---|---|---|---|
-| 1.1.1 Vad är teknik? | fardig-forsta-version | Är Golden Master | — | Kvalitetsreferens per redaktionellt beslut 2026-07-10; ändras endast efter uttryckligt beslut |
+| 1.1.1 Vad är teknik? | fardig-forsta-version | Är Golden Master | — | Kvalitetsreferens per redaktionellt beslut 2026-07-10; på nytt fastställd i reviderad form efter strukturrevisionen; ändras endast efter uttryckligt beslut |
 | 1.1.2 Teknik, naturvetenskap och matematik | fardig-forsta-version | Likvärdig med Golden Master | — | Första målet utan nya begrepp; Öresundsförbindelsen som röd tråd |
 | 1.2.1 Tekniska genombrott före industrialiseringen | fardig-forsta-version | Likvärdig med Golden Master | — | Första fleruppslagsmålet: uppgiftsdelar per uppslag (13 preciserad); begreppet tekniskt genombrott introducerat; etiktråden (n1-14-området) invävd vid oceansjöfarten |
 | 1.2.2 Teknikutvecklingens drivkrafter | fardig-forsta-version | Likvärdig med Golden Master | — | Tre drivkrafter med tre historiska fall (konserven, telegrafen, Londons avlopp) och samspelsavslut; inga nya begrepp |

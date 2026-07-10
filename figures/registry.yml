@@ -97,7 +97,7 @@ fig-2.1.2-a:
   syfte: "Visa problemformuleringens tre delar och hur de samspelar i ett verkligt fall"
   innehall: "En komplett problemformulering för ett möbelexempel uppställd i tre fält: funktionen (vad lösningen ska göra, formulerad utan att nämna någon lösning), kraven (prövbara villkor som måste uppfyllas, t.ex. bärförmåga och montering utan verktyg) och begränsningarna (ramar som kostnad, material och fraktvolym). Pilar visar att kraven prövar funktionen och att begränsningarna ramar in båda"
   referens: "Placeras efter att de tre delarna införts; texten hänvisar till figuren när exemplet med det platta paketet formuleras"
-  pedagogisk_funktion: "Ger eleven mallen för egen problemformulering: de tre fälten är exakt vad eleven själv ska fylla i under Utveckla och Utmana"
+  pedagogisk_funktion: "Ger eleven mallen för egen problemformulering: de tre fälten är exakt vad eleven själv ska fylla i under de praktiska uppgifterna"
   anvands_i: ["2.1.2"]
 
 fig-2.2.1-a:
@@ -125,5 +125,5 @@ fig-2.3.1-a:
   syfte: "Visa en komplett testplan i ifyllt skick så att eleven ser exakt vad som ska bestämmas före ett test"
   innehall: "Testplan som tabell för en termosflaska med tre krav. Kolumner: krav, testmetod, vad som mäts, godkäntgräns bestämd i förväg, resultat, godkänd eller underkänd. Rader t.ex. håller drycken varm (temperaturmätning efter sex timmar, gräns i grader), tål att tappas (fall från bänkhöjd mot hårt golv, gräns inga läckor eller sprickor), läcker inte i väskan (liggande med vatten i en timme, gräns torrt papper under). Resultatkolumnen ifylld så att ett krav är underkänt"
   referens: "Placeras efter att testplanens delar införts; texten hänvisar till figuren som mall för elevens egen testplan"
-  pedagogisk_funktion: "Gör testplanen till något eleven kan härma direkt: tabellen är samma struktur som eleven fyller i under Utmana, och det underkända kravet visar att en ärlig testplan får visa fel"
+  pedagogisk_funktion: "Gör testplanen till något eleven kan härma direkt: tabellen är samma struktur som eleven fyller i under de praktiska uppgifterna, och det underkända kravet visar att en ärlig testplan får visa fel"
   anvands_i: ["2.3.1"]
