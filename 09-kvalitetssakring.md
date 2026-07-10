@@ -111,6 +111,8 @@ Granskning sker på fyra nivåer.
 
 □ Eleven kan rimligen uppnå lärandemålet enbart med hjälp av materialet.
 
+□ Kvaliteten motsvarar minst Golden Master 1.1.1 (projektets kvalitetsreferens) i disposition, språk, informationstäthet, konkretion, exempel, figurplatshållare och uppgifter. Golden Master ändras endast efter uttryckligt redaktionellt beslut.
+
 ---
 
 # Granskning av modul
