@@ -78,3 +78,10 @@ fig-1.4.2-a:
   referens: "Placeras efter fallbeskrivningarna; texten hänvisar till figuren när det gemensamma mönstret formuleras"
   pedagogisk_funktion: "Lyfter eleven från tre berättelser till ett återanvändbart mönster som kan tillämpas på nya branscher i uppgifterna"
   anvands_i: ["1.4.2"]
+
+fig-1.5.1-a:
+  syfte: "Visa Amaras tumregel: förväntningarna på ny teknik toppar tidigt medan den verkliga samhällspåverkan kommer senare och blir större"
+  innehall: "Två kurvor över samma tidsaxel: en förväntanskurva som stiger brant, toppar och faller, och en påverkanskurva som stiger långsamt men passerar förväntanskurvan och fortsätter växa. Tidsaxeln förankras i mobiltelefonens historia: NMT 1981, GSM på 1990-talet, smartphonen 2007 och vardagsomvandlingen under 2010-talet"
+  referens: "Placeras vid tidsmönstret; texten hänvisar till figuren när Amaras tumregel förklaras med mobiltelefonen som exempel"
+  pedagogisk_funktion: "Ger eleven en visuell tumregel att lägga över varje ny teknik: var på kurvorna befinner vi oss, och vad säger det om vad som är över- respektive underskattat"
+  anvands_i: ["1.5.1"]
