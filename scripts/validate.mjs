@@ -337,16 +337,18 @@ for (const lm of larandemal) {
 		flush();
 	}
 	// Personnamnsheuristik (05, "Personnamn"): två versalinledda ord i följd
-	// räknas som namnkandidat. Grov träffbild med falska positiva (platser,
-	// produkter) — därför bara en mjuk varning med kandidaterna listade, så
-	// att en människa avgör. Tröskel: fler än 4 distinkta kandidater.
+	// på samma rad räknas som namnkandidat. Grov träffbild med falska
+	// positiva (platser, produkter) — därför bara en mjuk varning med
+	// kandidaterna listade, så att en människa avgör. Tröskel: fler än 6
+	// distinkta kandidater räknas som ovanligt många (ungefär hälften av
+	// träffarna brukar vara platser eller produkter).
 	{
 		const synlig = lm.body.replace(/<!--[\s\S]*?-->/g, '');
 		const kandidater = new Set();
-		for (const m of synlig.matchAll(/\b([A-ZÅÄÖ][a-zåäö]{2,})\s+([A-ZÅÄÖ][a-zåäö]{2,})\b/g)) {
+		for (const m of synlig.matchAll(/\b([A-ZÅÄÖ][a-zåäö]{2,}) ([A-ZÅÄÖ][a-zåäö]{2,})\b/g)) {
 			kandidater.add(`${m[1]} ${m[2]}`);
 		}
-		if (kandidater.size > 4) {
+		if (kandidater.size > 6) {
 			warnings.push(`${beskr}: ${kandidater.size} möjliga personnamn (${[...kandidater].join(', ')}) — kontrollera mot 05, "Personnamn" (heuristiken träffar även platser och produkter).`);
 		}
 	}
