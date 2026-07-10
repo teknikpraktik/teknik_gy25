@@ -71,3 +71,10 @@ fig-1.4.1-a:
   referens: "Placeras vid uppslagets inledning; texten hänvisar till figuren när kedjan av utvecklingssteg och Moores lag beskrivs"
   pedagogisk_funktion: "Gör exponentiell tillväxt synlig: eleven ser att stegen inte är fristående uppfinningar utan bygger på varandra, och att kurvans lutning är hela förklaringen till att datorer finns överallt"
   anvands_i: ["1.4.1"]
+
+fig-1.4.2-a:
+  syfte: "Visa att digitala teknikskiften i olika branscher följer samma mönster"
+  innehall: "Tre rader som vardera går från fysisk bärare till digital tjänst: musiken (vinylskiva och cd till streamingtjänst), fotografiet (filmrulle och fotobutik till mobilkamera och molnlagring), bankärendena (bankkontor med kassa till app i mobilen). En gemensam pil under raderna markerar mönstret: informationen lämnar sin fysiska bärare och kostnaden för en kopia går mot noll"
+  referens: "Placeras efter fallbeskrivningarna; texten hänvisar till figuren när det gemensamma mönstret formuleras"
+  pedagogisk_funktion: "Lyfter eleven från tre berättelser till ett återanvändbart mönster som kan tillämpas på nya branscher i uppgifterna"
+  anvands_i: ["1.4.2"]
