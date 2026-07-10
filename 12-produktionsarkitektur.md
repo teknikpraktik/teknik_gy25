@@ -163,7 +163,12 @@ Projektet ska när som helst kunna exporteras till
 
 Källmaterialet är därför presentationsoberoende: samma `content/`-filer används av webbplatsen (granskning) och av `scripts/export-manuscript.mjs` (leverans).
 
-Exportskriptet samlar lärandemålsfilerna i kanonisk läsordning (kapitel → modul → id, med kapitel- och modulrubriker ur 06), löser upp `[[begrepp:...]]`/`[[figur:...]]`-shortcodes till löptext respektive figurplatshållartext, strippar arbetsanteckningar (HTML-kommentarer) och kör resultatet genom **Pandoc** till `.docx` (till förlaget) och valfritt PDF. Endast lärandemål med status `fardig-forsta-version` eller högre exporteras som standard; lägsta status väljs med `--status=` (se skriptets huvudkommentar). Pandoc är en extern systeminstallation, inte ett npm-paket — se README/installationssteg vid produktionsstart om det saknas.
+Sammanställningen (kanonisk läsordning kapitel → modul → id med rubriker ur 06, statusfilter, upplösning av `[[begrepp:...]]`/`[[figur:...]]`-shortcodes, rensning av arbetsanteckningar, rubriksänkning) ligger i den delade kärnan `scripts/manuscript-core.mjs` och används av två exporter:
+
+- **`npm run export`** (`scripts/export-manuscript.mjs`) — förlagsmanus: `export/manuscript.md` + `.docx` via **Pandoc**. Endast lärandemål med status `fardig-forsta-version` eller högre som standard; lägsta status väljs med `--status=` (se skriptets huvudkommentar).
+- **`npm run export:review`** (`scripts/export-review.mjs`) — redaktionellt granskningsmanus till `dist/review/granskningsmanus.docx` och `.html`, byggda ur exakt samma sammanställning i samma körning. Word-versionen har titelblad, TOC-fält (uppdateras i Word med Ctrl+A, F9), sidnummer, sidbrytning per lärandemål och figurblock i egen stil via `scripts/review-reference.docx` (referensdokumentet återskapas utan manuell Word-redigering med `node scripts/make-review-reference.mjs`). HTML-versionen är en fristående fil med inbäddad CSS, klickbar innehållsförteckning, ankarlänkar och print-stylesheet. Körningen avslutas med automatiska efterkontroller (fullständighet, ordning, format-likhet, inga shortcodes eller produktionsfält, giltig docx, komplett HTML) och felar om någon inte håller. Sidbrytnings- och figurblockstransformationen görs av Pandoc-filtret `scripts/review-filter.lua`.
+
+Pandoc är en extern systeminstallation, inte ett npm-paket — se README/installationssteg vid produktionsstart om det saknas.
 
 ---
 

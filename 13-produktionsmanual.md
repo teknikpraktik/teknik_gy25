@@ -21,7 +21,8 @@ Alla kommandon körs från projektroten.
 | `npm run skeleton` | Skapar mappar, modulfiler och tomma lärandemålsfiler ur bokstrukturen. Skriver aldrig över befintliga filer. |
 | `npm run validate` | Kör samtliga tvärgående kontroller och skriver status- och täckningsöversikt. Körs också automatiskt före varje webbygge. |
 | `npm run begrepp` | Genererar det centrala begreppsregistret till `export/begreppsregister.md`. |
-| `npm run export` | Sammanställer manus i läsordning till `export/` (Word via Pandoc). Tar bara med lärandemål med status `fardig-forsta-version` eller högre; annan lägstanivå väljs med `-- --status=<status>` eller `-- --status=alla`. |
+| `npm run export` | Sammanställer förlagsmanus i läsordning till `export/` (Word via Pandoc). Tar bara med lärandemål med status `fardig-forsta-version` eller högre; annan lägstanivå väljs med `-- --status=<status>` eller `-- --status=alla`. |
+| `npm run export:review` | Bygger det redaktionella granskningsmanuset till `dist/review/granskningsmanus.docx` och `.html` (samma innehåll och ordning, endast `fardig-forsta-version` och uppåt) och kör automatiska efterkontroller. Kräver Pandoc. Words innehållsförteckning uppdateras med Ctrl+A, F9. Referensdokumentet `scripts/review-reference.docx` återskapas vid behov med `node scripts/make-review-reference.mjs`. |
 
 ---
 
