@@ -106,3 +106,10 @@ fig-2.2.1-a:
   referens: "Placeras efter berättelsen om Apollo 13; texten hänvisar till figuren när processens steg gås igenom"
   pedagogisk_funktion: "Kopplar den abstrakta processen till ett dramatiskt verkligt förlopp så att stegen framstår som det snabbaste sättet att arbeta, inte som byråkrati; loopen visar att test som underkänner inte är misslyckanden utan del av processen"
   anvands_i: ["2.2.1"]
+
+fig-2.2.2-a:
+  syfte: "Visa hur ett sammansatt tekniskt problem bryts ned i delproblem som kan lösas och testas var för sig"
+  innehall: "Nedbrytningsträd för robotgräsklipparen: det sammansatta problemet överst, därunder delproblemen klippa gräset, hålla sig inom arbetsområdet, undvika hinder, försörja sig med energi och tåla väder. Under ett av delproblemen (hålla sig inom området) visas en ytterligare nivå med exempel på hur även det kan delas. Tunna linjer mellan grenarna markerar kopplingar där delarna måste passa ihop"
+  referens: "Placeras vid genomgången av robotgräsklipparens nedbrytning; texten hänvisar till figuren när delproblemen räknas upp"
+  pedagogisk_funktion: "Ger eleven trädet som visuell form för egen nedbrytning och visar att nedbrytningen följer funktioner, inte fysiska bitar; kopplingslinjerna förebådar insikten att delarna måste passa ihop"
+  anvands_i: ["2.2.2"]
