@@ -77,6 +77,18 @@ Undvik ett monotont skrivsätt där alla meningar har samma längd eller samma s
 
 ---
 
+# Tankstreck
+
+Tankstreck och talstreck används inte i elevtexten.
+
+Detta gäller brödtext, uppgifter och figurtext.
+
+Meningar skrivs i stället om med punkt, komma, kolon eller annan naturlig meningsbyggnad.
+
+Bindestreck i sammansatta ord och etablerade skrivsätt behålls när de språkligt behövs.
+
+---
+
 # Stycken
 
 Stycken ska vara korta men inte onaturligt korta.
