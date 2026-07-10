@@ -126,11 +126,9 @@ Det centrala begreppsregistret är härlett, aldrig handredigerat: `scripts/begr
 
 ## Figurer
 
-Figurer identifieras med unika ID och registreras centralt i `figures/registry.yml` (syfte, innehåll, vilka lärandemål som använder figuren).
+Figurer identifieras med unika ID och registreras centralt i `figures/registry.yml`. Registerposten är figurens fullständiga platshållarspecifikation (se 01, 03, 08): syfte, innehåll, referens i texten (`referens`), pedagogisk funktion (`pedagogisk_funktion`) samt vilka lärandemål som använder figuren.
 
-Flera lärandemål kan referera till samma figur via shortcoden `[[figur:ID]]`.
-
-Platshållarspecifikationen för en figur (se 01, 03, 08) ska alltid innehålla ett unikt ID, utöver syfte, innehåll, referens i texten och pedagogisk funktion.
+Flera lärandemål kan referera till samma figur via shortcoden `[[figur:ID]]`. Webbplatsens figurruta och exportens figurblock renderar samtliga fyra fält ur registret — specifikationen skrivs aldrig som lös text i lärandemålsfilen.
 
 `scripts/validate.mjs` felar om en refererad figur saknas i registret, och varnar om en registrerad figur inte används av något lärandemål.
 

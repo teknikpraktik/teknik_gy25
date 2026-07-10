@@ -52,9 +52,33 @@ function resolveShortcodes(body) {
 		.replace(/\[\[figur:([a-zA-Z0-9_.-]+)\]\]/g, (_match, figId) => {
 			const fig = figureRegistry[figId];
 			if (!fig) return `\n\n> **[FIGUR SAKNAS: ${figId}]**\n\n`;
-			return `\n\n> **[FIGUR ${figId}]** ${fig.syfte ?? ''} — ${fig.innehall ?? ''}\n\n`;
+			// Fullständig platshållarspecifikation till förlaget (08, 12):
+			// syfte, innehåll, referens i texten och pedagogisk funktion.
+			const rader = [
+				`> **[FIGUR ${figId}]**`,
+				`> **Syfte:** ${fig.syfte ?? ''}`,
+				`> **Innehåll:** ${fig.innehall ?? ''}`,
+				fig.referens ? `> **Referens i texten:** ${fig.referens}` : null,
+				fig.pedagogisk_funktion ? `> **Pedagogisk funktion:** ${fig.pedagogisk_funktion}` : null,
+			].filter(Boolean);
+			return `\n\n${rader.join('\n>\n')}\n\n`;
 		})
 		.replace(/\[\[begrepp:([^\]]+)\]\]/g, (_match, concept) => concept);
+}
+
+// Manuset lägger kapitel på #, modul på ## och lärandemålets titel på ###.
+// Källfilernas rubriker (##-nivå enligt 13-produktionsmanual.md) sänks därför
+// två steg så att hierarkin i Word blir rätt. Rader i kodblock rörs inte.
+function demoteHeadings(body) {
+	let inCodeBlock = false;
+	return body
+		.split('\n')
+		.map((line) => {
+			if (/^(```|~~~)/.test(line)) inCodeBlock = !inCodeBlock;
+			if (inCodeBlock) return line;
+			return line.replace(/^(#{2,4})(\s)/, '$1##$2');
+		})
+		.join('\n');
 }
 
 function stripArbetsanteckningar(body) {
@@ -87,7 +111,7 @@ for (const k of kapitel) {
 				utelamnade[data.status] = (utelamnade[data.status] ?? 0) + 1;
 				continue;
 			}
-			modulDel += `\n\n### ${data.title}\n\n${resolveShortcodes(stripArbetsanteckningar(content))}\n`;
+			modulDel += `\n\n### ${data.title}\n\n${resolveShortcodes(demoteHeadings(stripArbetsanteckningar(content)))}\n`;
 			exporterade++;
 		}
 		if (modulDel !== '') {

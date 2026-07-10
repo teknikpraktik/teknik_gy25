@@ -1,8 +1,17 @@
 # Centralt figurregister. Varje figur som refereras från en lärandemålsfil
 # (via [[figur:ID]]) måste finnas här. Flera lärandemål får dela samma figur
 # (se 12-produktionsarkitektur.md, "Figurer").
+#
+# Varje post är figurens fullständiga platshållarspecifikation (08, 12):
+#   syfte                — vad figuren ska åstadkomma pedagogiskt
+#   innehall             — vad figuren ska visa (förlagets underlag)
+#   referens             — var och hur texten hänvisar till figuren
+#   pedagogisk_funktion  — vilken roll figuren spelar i elevens förståelse
+#   anvands_i            — lärandemåls-id:n som refererar figuren
 
 fig-1.1.1-a:
   syfte: "Visa att vardagliga och avancerade föremål är samma sak i grunden: tekniska lösningar på mänskliga behov"
-  innehall: "Bildpar som ställer behov mot teknisk lösning, från enkel (skriva → penna) till komplex (resa → flygplan)"
+  innehall: "Bildpar som ställer behov mot teknisk lösning, ordnade från enkel till komplex: skriva → penna, hålla ihop kläder → blixtlås, se skarpt → glasögon, rent vatten i kranen → vattentorn och reningsverk, betala i affären → Swish, resa långt → flygplan. Minst ett par visar en lösning som inte är ett föremål (Swish) och ett en anläggning (vattenförsörjningen)"
+  referens: "Placeras i teoridelens inledning; texten hänvisar till figuren när begreppet teknisk lösning definieras och när missuppfattningen att teknik bara är föremål bemöts"
+  pedagogisk_funktion: "Bär uppslagets tre motbilder visuellt: teknik är inte bara elektronik, inte bara föremål och inte bara avancerat. Eleven ska kunna peka på vilket par som motbevisar respektive missuppfattning"
   anvands_i: ["1.1.1"]

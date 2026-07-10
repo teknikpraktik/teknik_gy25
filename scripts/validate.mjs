@@ -180,6 +180,11 @@ for (const figId of Object.keys(figureRegistry)) {
 	if (!usedFigures.has(figId)) {
 		warnings.push(`figures/registry.yml: figur "${figId}" är registrerad men refereras av ingen lärandemålsfil.`);
 	}
+	// Fullständig platshållarspecifikation (08, 12): fyra fält per figur.
+	const saknade = ['syfte', 'innehall', 'referens', 'pedagogisk_funktion'].filter((f) => !figureRegistry[figId]?.[f]);
+	if (saknade.length > 0) {
+		warnings.push(`figures/registry.yml: figur "${figId}" saknar fält: ${saknade.join(', ')} — platshållaren är inte komplett (09, "Förlagsgranskning").`);
+	}
 }
 
 // Shortcodes i brödtext: [[figur:ID]] måste finnas i registret och bör stå i
@@ -253,8 +258,10 @@ for (const lm of larandemal) {
 	if (statusEnum.indexOf(lm.status) < GRANSKNINGSSTATUS) continue;
 	const beskr = `${lm.file} (status ${lm.status})`;
 
+	// Obs: inte \b efter rubriken — JS \b bygger på ASCII-\w, så "å" i "Förstå"
+	// bildar ingen ordgräns och rubriken skulle aldrig matcha.
 	for (const rubrik of ['Förstå', 'Utveckla', 'Utmana']) {
-		if (!new RegExp(`^#{2,4}\\s+${rubrik}\\b`, 'm').test(lm.body)) {
+		if (!new RegExp(`^#{2,4}\\s+${rubrik}\\s*$`, 'm').test(lm.body)) {
 			errors.push(`${beskr}: uppgiftsdelen "${rubrik}" saknas (03-bokens-arkitektur.md, "Aktiv bearbetning").`);
 		}
 	}

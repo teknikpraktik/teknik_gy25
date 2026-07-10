@@ -93,6 +93,8 @@ function figurRuta(figId) {
 		`<span class="fig-etikett">FIGUR ${esc(figId)}</span>` +
 		`<p class="fig-syfte">${esc(fig.syfte ?? '')}</p>` +
 		`<p class="fig-innehall">${esc(fig.innehall ?? '')}</p>` +
+		(fig.referens ? `<p class="fig-referens"><strong>Referens:</strong> ${esc(fig.referens)}</p>` : '') +
+		(fig.pedagogisk_funktion ? `<p class="fig-funktion"><strong>Pedagogisk funktion:</strong> ${esc(fig.pedagogisk_funktion)}</p>` : '') +
 		`</aside>`
 	);
 }

@@ -56,6 +56,8 @@ Sätt `status: under-utveckling`. Identifiera enligt 08:
 
 Skriv teori, figurplatshållare och uppgifter (Förstå/Utveckla/Utmana) enligt 03 och 05. Omfattar lärandemålet flera uppslag används `## Uppslag 1`, `## Uppslag 2` som sektioner i samma fil (12).
 
+Rubrikkonvention i källfilerna: teoriavsnitt och uppgiftsdelarna `## Förstå`, `## Utveckla`, `## Utmana` skrivs på `##`-nivå (sidtiteln är h1 på webben; exporten sänker brödtextens rubriker två steg så att hierarkin i Word blir rätt). Uppgifterna numreras 1, 2, 3 … med omstart i varje del.
+
 Figurer refereras med `[[figur:ID]]`, begrepp som introducerats i andra lärandemål med `[[begrepp:namn]]`.
 
 ## 4. Granska
@@ -95,16 +97,18 @@ Formatet definieras i `schemas/larandemal.schema.mjs` (12 är styrande). Kort br
 
 # Figurer
 
-Varje figur får ett unikt ID med mönstret `fig-<lärandemåls-id>-<bokstav>`, t.ex. `fig-6.1.2-a`, och registreras i `figures/registry.yml`:
+Varje figur får ett unikt ID med mönstret `fig-<lärandemåls-id>-<bokstav>`, t.ex. `fig-6.1.2-a`, och registreras i `figures/registry.yml`. Registerposten är figurens fullständiga platshållarspecifikation enligt 08 — alla fyra fält är obligatoriska:
 
 ```yaml
 fig-6.1.2-a:
   syfte: "Visa hur två krafter adderas till en resultant"
   innehall: "Vektordiagram med två kraftpilar och deras resultant"
+  referens: "Placeras vid exemplet med draglinorna; texten hänvisar till figuren när resultanten införs"
+  pedagogisk_funktion: "Låter eleven se att två krafter kan ersättas av en enda utan att verkan ändras"
   anvands_i: ["6.1.2"]
 ```
 
-I texten placeras dessutom en fullständig platshållare enligt 08 (syfte, innehåll, referens i texten, pedagogisk funktion). Registret ger det unika ID:t och överblicken; platshållaren i texten är förlagets specifikation.
+I texten placeras endast shortcoden `[[figur:ID]]` där figuren hör hemma. Webbplatsen och exporten renderar hela specifikationen ur registret — den skrivs aldrig som lös text i lärandemålsfilen.
 
 ---
 
