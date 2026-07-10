@@ -11,3 +11,4 @@ bokexporten (export läser endast content/).
 |---|---|---|---|---|
 | 1.1.1 Vad är teknik? | fardig-forsta-version | Är Golden Master | — | Kvalitetsreferens per redaktionellt beslut 2026-07-10; ändras endast efter uttryckligt beslut |
 | 1.1.2 Teknik, naturvetenskap och matematik | fardig-forsta-version | Likvärdig med Golden Master | — | Första målet utan nya begrepp; Öresundsförbindelsen som röd tråd |
+| 1.2.1 Tekniska genombrott före industrialiseringen | fardig-forsta-version | Likvärdig med Golden Master | — | Första fleruppslagsmålet: uppgiftsdelar per uppslag (13 preciserad); begreppet tekniskt genombrott introducerat; etiktråden (n1-14-området) invävd vid oceansjöfarten |

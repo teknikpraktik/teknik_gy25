@@ -22,3 +22,17 @@ fig-1.1.2-a:
   referens: "Placeras vid rollgenomgången; texten hänvisar till figuren när de tre kunskapsområdenas roller beskrivs var för sig"
   pedagogisk_funktion: "Förankrar de tre abstrakta rollerna i ett och samma konkreta byggprojekt så att eleven ser att områdena verkar samtidigt i en verklig lösning, inte i tur och ordning"
   anvands_i: ["1.1.2"]
+
+fig-1.2.1-a:
+  syfte: "Visa att teknikutvecklingen inte är jämn: långa perioder av stillhet bryts av språng som kommer allt tätare"
+  innehall: "Tidslinje från de första stenverktygen för över två miljoner år sedan till 1700-talet, med genombrotten markerade: stenverktyg, elden, jordbruket, skriften, vattenhjulet, boktryckarkonsten, oceansjöfarten. Avstånden mellan markeringarna ska avspegla verklig tid så att det enorma gapet mellan verktyg och jordbruk syns tydligt, gärna med bruten skala eller zoompaneler"
+  referens: "Placeras vid uppslag 1:s inledning; texten hänvisar till figuren när utvecklingstakten och de allt tätare språngens mönster beskrivs"
+  pedagogisk_funktion: "Bemöter missuppfattningen att teknikutveckling alltid gått snabbt. Eleven ska kunna avläsa att nästan hela teknikhistorien är långsam och att tempot ökar mot slutet"
+  anvands_i: ["1.2.1"]
+
+fig-1.2.1-b:
+  syfte: "Göra boktryckarkonstens samhällsbetydelse mätbar genom att jämföra bokproduktion före och efter tryckpressen"
+  innehall: "Jämförelse i två delar: en skrivare som kopierar en bok för hand (månaders eller års arbete per exemplar) mot en tryckpress som ger hundratals likadana exemplar, samt spridningsbilden femtio år efter Gutenberg med tryckpressar i över tvåhundra europeiska städer"
+  referens: "Placeras vid avsnittet om boktryckarkonsten på uppslag 2; texten hänvisar till figuren när skillnaden i produktionstakt beskrivs"
+  pedagogisk_funktion: "Konkretiserar vad betydelse för samhället innebär: eleven ser att genombrottet inte var själva pressen utan vad den gjorde med kunskapens pris och spridning"
+  anvands_i: ["1.2.1"]
