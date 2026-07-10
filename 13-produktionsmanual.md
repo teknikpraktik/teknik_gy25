@@ -58,6 +58,10 @@ Skriv teori, figurplatshållare och uppgifter (Förstå/Utveckla/Utmana) enligt 
 
 Rubrikkonvention i källfilerna: teoriavsnitt och uppgiftsdelarna `## Förstå`, `## Utveckla`, `## Utmana` skrivs på `##`-nivå (sidtiteln är h1 på webben; exporten sänker brödtextens rubriker två steg så att hierarkin i Word blir rätt). Vid fleruppslagsmål är `## Uppslag 1`, `## Uppslag 2` sektionsrubriker och teoriavsnitt och uppgiftsdelar ligger en nivå djupare (`###`), med egna uppgiftsdelar per uppslag enligt 03:s uppslagsmodell. Uppgifterna numreras 1, 2, 3 … med omstart i varje del.
 
+Vid ett begrepps huvudställe (filen där det står i `concepts_introduced`) skrivs begreppet i **fetstil** i den mening där det definieras. Detta är bindande standard.
+
+Utmana-uppgifter får inledas med en arbetsformsetikett i fetstil, t.ex. **Undersökning.**, **Kartläggning.**, **Analys.** eller **Omformulering.** Etiketterna är rekommenderade när de gör arbetsformen tydligare för eleven, men de är inte obligatoriska och får inte skapa mekanisk likformighet — en Utmana-uppgift utan etikett är helt korrekt.
+
 Figurer refereras med `[[figur:ID]]`, begrepp som introducerats i andra lärandemål med `[[begrepp:namn]]`.
 
 ## 4. Granska

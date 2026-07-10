@@ -160,6 +160,34 @@ for (const lm of larandemal) {
 	}
 }
 
+// Begrepp i concepts_used ska faktiskt förekomma i brödtexten. Ett begrepp
+// räknas som använt om shortcoden [[begrepp:namn]] finns, om namnet står i
+// löptexten (skiftlägesokänsligt — fångar även böjda och sammansatta former
+// som "teknikskiften") eller, för flerordsbegrepp, om initialförkortningen
+// står som eget ord ("artificiell intelligens" → AI, jfr 11 "Förkortningar").
+// HTML-kommentarer skannas inte; frontmattern ingår inte i body.
+for (const lm of larandemal) {
+	const synligBody = lm.body.replace(/<!--[\s\S]*?-->/g, '');
+	const synligLower = synligBody.toLowerCase();
+	for (const concept of lm.concepts_used) {
+		const somShortcode = synligBody.includes(`[[begrepp:${concept}]]`);
+		const iLoptext = synligLower.includes(concept.toLowerCase());
+		const ord = concept.split(/\s+/);
+		// Böjda former ("de industriella revolutionerna", "teknikskiften"):
+		// matcha varje ords stam (allt utom de sista två tecknen, minst fyra)
+		// följt av valfri ändelse, i ordföljd.
+		const stamMonster = ord
+			.map((o) => o.toLowerCase().slice(0, Math.max(4, o.length - 2)).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '[a-zåäö]*')
+			.join('\\s+');
+		const somBojdForm = new RegExp(stamMonster).test(synligLower);
+		const somForkortning =
+			ord.length > 1 && new RegExp(`\\b${ord.map((o) => o[0].toUpperCase()).join('')}\\b`).test(synligBody);
+		if (!somShortcode && !iLoptext && !somBojdForm && !somForkortning) {
+			warnings.push(`${lm.file}: begreppet "${concept}" står i concepts_used men förekommer inte i brödtexten — ta bort ur listan eller använd begreppet.`);
+		}
+	}
+}
+
 // Figur-ID
 let figureRegistry = {};
 try {
