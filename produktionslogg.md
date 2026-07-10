@@ -13,3 +13,4 @@ bokexporten (export läser endast content/).
 | 1.1.2 Teknik, naturvetenskap och matematik | fardig-forsta-version | Likvärdig med Golden Master | — | Första målet utan nya begrepp; Öresundsförbindelsen som röd tråd |
 | 1.2.1 Tekniska genombrott före industrialiseringen | fardig-forsta-version | Likvärdig med Golden Master | — | Första fleruppslagsmålet: uppgiftsdelar per uppslag (13 preciserad); begreppet tekniskt genombrott introducerat; etiktråden (n1-14-området) invävd vid oceansjöfarten |
 | 1.2.2 Teknikutvecklingens drivkrafter | fardig-forsta-version | Likvärdig med Golden Master | — | Tre drivkrafter med tre historiska fall (konserven, telegrafen, Londons avlopp) och samspelsavslut; inga nya begrepp |
+| 1.3.1 Fyra industriella revolutioner | fardig-forsta-version | Likvärdig med Golden Master | — | Begreppen teknikskifte och industriell revolution introducerade; lager-på-lager-principen bär missuppfattningarna; ASEA IRB 6 som svensk förankring |

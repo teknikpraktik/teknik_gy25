@@ -43,3 +43,17 @@ fig-1.2.2-a:
   referens: "Placeras vid uppslagets inledning; texten hänvisar till figuren när de tre drivkrafterna namnges och när samspelet mellan dem beskrivs"
   pedagogisk_funktion: "Ger eleven ett mönster att analysera med: varje historiskt exempel kan sorteras efter drivkraft, och sammanflödet visar att verkliga genombrott sällan har en ensam orsak"
   anvands_i: ["1.2.2"]
+
+fig-1.3.1-a:
+  syfte: "Ge överblick över de fyra industriella revolutionerna och visa att de tar decennier och bygger på varandra"
+  innehall: "Tidslinje från 1700-talet till i dag med fyra överlappande fält: ånga och mekanisering (från ca 1760), elektricitet och löpande band (från ca 1870), elektronik och automation (från ca 1970), uppkoppling och AI (från ca 2010). Varje fält märks med sin kraft- eller teknikbas och ett kännetecknande teknikskifte. Fälten tonar inte ut, vilket visar att tidigare revolutioners teknik lever kvar"
+  referens: "Placeras vid uppslag 1:s inledning; texten hänvisar till figuren när de fyra revolutionerna räknas upp"
+  pedagogisk_funktion: "Bemöter missuppfattningen att revolutionerna är korta händelser som avlöser varandra: eleven ser långa, överlappande processer i stället för fyra staket"
+  anvands_i: ["1.3.1"]
+
+fig-1.3.1-b:
+  syfte: "Visa teknikskiftena som förändringar av samma verklighet och hur människans roll på fabriksgolvet flyttas"
+  innehall: "Samma fabriksgolv i fyra versioner: remdrift från en central ångmaskin med arbetare vid varje maskin, elmotorer vid varje maskin och löpande band, robotceller med styrskåp och operatör bakom skyddsstaket, uppkopplade maskiner med sensorer där tekniker övervakar via skärmar. Människans plats markeras tydligt i varje version"
+  referens: "Placeras vid uppslag 2:s avsnitt om lager på lager; texten hänvisar till figuren när revolutionernas samexistens i dagens fabrik beskrivs"
+  pedagogisk_funktion: "Konkretiserar de abstrakta epokerna till en igenkännbar miljö och låter eleven avläsa hur arbetsuppgifterna vandrar från handen till maskinen till övervakningen"
+  anvands_i: ["1.3.1"]
