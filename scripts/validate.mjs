@@ -38,6 +38,54 @@ const aiFraser = [
 	'det handlar inte om',
 ];
 
+// Formuleringar som hör hemma i Instuderingsfrågor/Praktiska uppgifter, inte i
+// Begreppsdelen (03-bokens-arkitektur.md, "Begrepp"; redaktionellt beslut).
+const analysOrd = [
+	'jämför', 'jämföra', 'jämförelse',
+	'skilj', 'skiljer', 'skilja',
+	'avgör', 'avgöra',
+	'motivera', 'motivering',
+	'välj rätt', 'väljer rätt',
+	'koppla till', 'kopplar till',
+	'analysera', 'analys av',
+];
+
+// Stammar som visar att en praktisk uppgift har ett producerande/genomförande
+// moment (03-bokens-arkitektur.md, "Praktiska uppgifter"). Mjuk heuristik —
+// varnar bara, tvingar aldrig fram en omskrivning.
+const praktiskOrd = [
+	'bygg', 'skiss', 'rita', 'ritning', 'mät', 'testa', 'test', 'konstruera',
+	'simulera', 'programmera', 'modellera', 'undersök', 'presentera', 'presentation',
+	'muntlig', 'film', 'podd', 'prototyp', 'plansch', 'kalkylblad',
+	'excel', 'flödesdiagram', 'foto', 'protokoll', 'genomför', 'mätning',
+	'demonstrera', 'tillverka',
+];
+
+// Extraherar texten under samtliga förekomster av en rubrik (##–####) fram
+// till nästa rubrik på samma nivå eller lägre, eller filens slut. Fleruppslagsmål
+// har en rubrikförekomst per uppslag (13-produktionsmanual.md, "Skriv") — därför
+// en lista, inte bara den första träffen.
+function extractSections(body, rubrik) {
+	const re = new RegExp(`^#{2,4}\\s+${rubrik}\\s*$`, 'gm');
+	const sektioner = [];
+	let m;
+	while ((m = re.exec(body)) !== null) {
+		const rest = body.slice(m.index + m[0].length);
+		const next = rest.search(/^#{2,4}\s+/m);
+		sektioner.push(next === -1 ? rest : rest.slice(0, next));
+	}
+	return sektioner;
+}
+
+// Delar upp en uppgiftsdels text i enskilda numrerade uppgifter (inklusive
+// eventuella a)/b)/c)-deluppgifter, som hör till samma numrerade uppgift).
+function numreradeUppgifter(sectionText) {
+	return sectionText
+		.split(/^(?=\d+\.\s)/m)
+		.map((s) => s.trim())
+		.filter(Boolean);
+}
+
 let errors = [];
 let warnings = [];
 
@@ -213,10 +261,15 @@ for (const figId of Object.keys(figureRegistry)) {
 	if (saknade.length > 0) {
 		warnings.push(`figures/registry.yml: figur "${figId}" saknar fält: ${saknade.join(', ')} — platshållaren är inte komplett (09, "Förlagsgranskning").`);
 	}
-	// Figurtext är elevtext: inga tankstreck/talstreck (05, "Tankstreck").
+	// Figurtext är elevtext: inga tankstreck/talstreck (05, "Tankstreck") och
+	// inget "uppslag" som självreferens (05, "Självreferenser").
 	for (const f of ['syfte', 'innehall', 'referens', 'pedagogisk_funktion']) {
-		if (/—|–/.test(figureRegistry[figId]?.[f] ?? '')) {
+		const varde = figureRegistry[figId]?.[f] ?? '';
+		if (/—|–/.test(varde)) {
 			warnings.push(`figures/registry.yml: figur "${figId}", fältet ${f}: tankstreck/talstreck i figurtexten (05-forfattarmanual.md, "Tankstreck").`);
+		}
+		if (/\buppslag(et|en|ets)?\b/i.test(varde)) {
+			warnings.push(`figures/registry.yml: figur "${figId}", fältet ${f}: ordet "uppslag" förekommer som möjlig självreferens (05-forfattarmanual.md, "Självreferenser").`);
 		}
 	}
 }
@@ -309,7 +362,7 @@ for (const lm of larandemal) {
 	}
 	// Uppgiftsantal per del: normalspann enligt 03 (per rubrikförekomst, dvs.
 	// per uppslag i fleruppslagsmål). Mjuk kontroll — 03 säger "normalt".
-	const normalspann = { Instuderingsfrågor: [5, 10], Begrepp: [3, 7], 'Praktiska uppgifter': [2, 4] };
+	const normalspann = { 'Instuderingsfrågor': [10, 15], Begrepp: [3, 6], 'Praktiska uppgifter': [2, 5] };
 	{
 		const rader = lm.body.split('\n');
 		let aktuellDel = null;
@@ -318,7 +371,11 @@ for (const lm of larandemal) {
 			if (!aktuellDel) return;
 			const [min, max] = normalspann[aktuellDel];
 			if (antal < min || antal > max) {
-				warnings.push(`${beskr}: ${antal} uppgifter under "${aktuellDel}" — normalspannet är ${min}–${max} per uppslag (03).`);
+				if (aktuellDel === 'Praktiska uppgifter' && lm.praktiska_uppgifter_undantag) {
+					// Dokumenterat redaktionellt undantag (03, "Praktiska uppgifter") — ingen varning.
+				} else {
+					warnings.push(`${beskr}: ${antal} uppgifter under "${aktuellDel}" — normalspannet är ${min}–${max} per uppslag (03).`);
+				}
 			}
 		};
 		for (const rad of rader) {
@@ -335,6 +392,79 @@ for (const lm of larandemal) {
 			}
 		}
 		flush();
+	}
+	// Begreppsdelen: standardformulering och inga analys-/jämförelsekrav
+	// (03-bokens-arkitektur.md, "Begrepp"). En sektion per uppslag.
+	{
+		const sektioner = extractSections(lm.body, 'Begrepp');
+		sektioner.forEach((text, i) => {
+			if (text.trim() === '') return;
+			const uppslagsref = sektioner.length > 1 ? ` (uppslag ${i + 1})` : '';
+			if (!/förklara följande begrepp med en mening/i.test(text)) {
+				warnings.push(`${beskr}${uppslagsref}: Begreppsdelen saknar standardformuleringen "Förklara följande begrepp med en mening:" (03-bokens-arkitektur.md, "Begrepp").`);
+			}
+			const lower = text.toLowerCase();
+			const traffade = analysOrd.filter((ord) => lower.includes(ord));
+			if (traffade.length > 0) {
+				warnings.push(`${beskr}${uppslagsref}: Begreppsdelen innehåller möjliga analys-/jämförelse-/motiveringsformuleringar (${traffade.join(', ')}) — sådana krav hör inte hemma under Begrepp (03).`);
+			}
+		});
+	}
+	// Praktiska uppgifter: varje uppgift bör ha ett tydligt producerande/
+	// genomförande moment (03-bokens-arkitektur.md, "Praktiska uppgifter").
+	// Mjuk heuristik, varnar bara — tvingar inte fram en viss formulering.
+	// En sektion per uppslag.
+	{
+		const sektioner = extractSections(lm.body, 'Praktiska uppgifter');
+		sektioner.forEach((text, i) => {
+			if (text.trim() === '') return;
+			const uppslagsref = sektioner.length > 1 ? ` (uppslag ${i + 1})` : '';
+			const utanPraktik = numreradeUppgifter(text)
+				.map((u, idx) => ({ idx: idx + 1, harPraktik: praktiskOrd.some((ord) => u.toLowerCase().includes(ord)) }))
+				.filter((u) => !u.harPraktik)
+				.map((u) => u.idx);
+			if (utanPraktik.length > 0) {
+				warnings.push(`${beskr}${uppslagsref}: praktisk uppgift ${utanPraktik.join(', ')} saknar ett tydligt producerande/genomförande moment (skiss, mätning, konstruktion, test, ...) — kontrollera mot definitionen i 03, "Praktiska uppgifter".`);
+			}
+		});
+	}
+	// "Uppslag" som självreferens i elevtexten (05-forfattarmanual.md,
+	// "Självreferenser"). Frontmatterfältet uppslag ingår inte i body.
+	{
+		const synlig = lm.body.replace(/<!--[\s\S]*?-->/g, '');
+		const traffar = synlig.match(/\buppslag(et|en|ets)?\b/gi);
+		if (traffar) {
+			warnings.push(`${beskr}: ordet "uppslag" förekommer ${traffar.length} gång(er) i elevtexten — troligen en självreferens som ska skrivas om (05-forfattarmanual.md, "Självreferenser").`);
+		}
+	}
+	// Inga markdownlänkar i elevtext, utom i ett uttryckligt käll-/resursavsnitt
+	// (12-produktionsarkitektur.md, "Länkar i elevtext").
+	{
+		const rader = lm.body.split('\n');
+		let iKallavsnitt = false;
+		let lankar = 0;
+		for (const rad of rader) {
+			const rubrik = rad.match(/^#{2,4}\s+(.+?)\s*$/);
+			if (rubrik) {
+				iKallavsnitt = /^(Källor|Resurser)\b/i.test(rubrik[1]);
+				continue;
+			}
+			if (iKallavsnitt) continue;
+			const utanKommentarer = rad.replace(/<!--[\s\S]*?-->/g, '');
+			const traffar2 = utanKommentarer.match(/\[[^\[\]]+\]\([^\s)]+\)/g);
+			if (traffar2) lankar += traffar2.length;
+		}
+		if (lankar > 0) {
+			warnings.push(`${beskr}: ${lankar} markdownlänk(ar) i elevtext utanför ett käll-/resursavsnitt (12-produktionsarkitektur.md, "Länkar i elevtext").`);
+		}
+	}
+	// Synlig rubriknumrering med fler än tre nivåer (12-produktionsarkitektur.md,
+	// "Rubriknumrering"), t.ex. "6.1.1.1" i en rubrik.
+	{
+		const traff = lm.body.match(/^#{1,6}\s+.*\b\d+\.\d+\.\d+\.\d+\b/m);
+		if (traff) {
+			errors.push(`${beskr}: fjärde rubriknivån "${traff[0].replace(/^#+\s*/, '')}" får inte förekomma (12-produktionsarkitektur.md, "Rubriknumrering").`);
+		}
 	}
 	// Personnamnsheuristik (05, "Personnamn"): två versalinledda ord i följd
 	// på samma rad räknas som namnkandidat. Grov träffbild med falska
