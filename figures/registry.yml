@@ -13,7 +13,7 @@ fig-1.1.1-a:
   syfte: "Visa att vardagliga och avancerade föremål är samma sak i grunden: tekniska lösningar på mänskliga behov"
   innehall: "Bildpar som ställer behov mot teknisk lösning, ordnade från enkel till komplex: skriva → penna, hålla ihop kläder → blixtlås, se skarpt → glasögon, rent vatten i kranen → vattentorn och reningsverk, betala i affären → Swish, resa långt → flygplan. Minst ett par visar en lösning som inte är ett föremål (Swish) och ett en anläggning (vattenförsörjningen)"
   referens: "Placeras i teoridelens inledning; texten hänvisar till figuren när begreppet teknisk lösning definieras och när missuppfattningen att teknik bara är föremål bemöts"
-  pedagogisk_funktion: "Bär uppslagets tre motbilder visuellt: teknik är inte bara elektronik, inte bara föremål och inte bara avancerat. Eleven ska kunna peka på vilket par som motbevisar respektive missuppfattning"
+  pedagogisk_funktion: "Bär textens tre motbilder visuellt: teknik är inte bara elektronik, inte bara föremål och inte bara avancerat. Eleven ska kunna peka på vilket par som motbevisar respektive missuppfattning"
   anvands_i: ["1.1.1"]
 
 fig-1.1.2-a:
@@ -26,35 +26,35 @@ fig-1.1.2-a:
 fig-1.2.1-a:
   syfte: "Visa att teknikutvecklingen inte är jämn: långa perioder av stillhet bryts av språng som kommer allt tätare"
   innehall: "Tidslinje från de första stenverktygen för över två miljoner år sedan till 1700-talet, med genombrotten markerade: stenverktyg, elden, jordbruket, skriften, vattenhjulet, boktryckarkonsten, oceansjöfarten. Avstånden mellan markeringarna ska avspegla verklig tid så att det enorma gapet mellan verktyg och jordbruk syns tydligt, gärna med bruten skala eller zoompaneler"
-  referens: "Placeras vid uppslag 1:s inledning; texten hänvisar till figuren när utvecklingstakten och de allt tätare språngens mönster beskrivs"
+  referens: "Placeras vid textens inledning; texten hänvisar till figuren när utvecklingstakten och de allt tätare språngens mönster beskrivs"
   pedagogisk_funktion: "Bemöter missuppfattningen att teknikutveckling alltid gått snabbt. Eleven ska kunna avläsa att nästan hela teknikhistorien är långsam och att tempot ökar mot slutet"
   anvands_i: ["1.2.1"]
 
 fig-1.2.1-b:
   syfte: "Göra boktryckarkonstens samhällsbetydelse mätbar genom att jämföra bokproduktion före och efter tryckpressen"
   innehall: "Jämförelse i två delar: en skrivare som kopierar en bok för hand (månaders eller års arbete per exemplar) mot en tryckpress som ger hundratals likadana exemplar, samt spridningsbilden femtio år efter Gutenberg med tryckpressar i över tvåhundra europeiska städer"
-  referens: "Placeras vid avsnittet om boktryckarkonsten på uppslag 2; texten hänvisar till figuren när skillnaden i produktionstakt beskrivs"
+  referens: "Placeras vid avsnittet om boktryckarkonsten; texten hänvisar till figuren när skillnaden i produktionstakt beskrivs"
   pedagogisk_funktion: "Konkretiserar vad betydelse för samhället innebär: eleven ser att genombrottet inte var själva pressen utan vad den gjorde med kunskapens pris och spridning"
   anvands_i: ["1.2.1"]
 
 fig-1.2.2-a:
   syfte: "Visa de tre drivkrafterna bakom teknikutveckling och att de ofta verkar tillsammans"
   innehall: "Tre spår som vart och ett leder från drivkraft till teknisk lösning: arméernas behov av hållbar mat leder till konserveringen, kunskapen om elektromagnetismen leder till telegrafen, städernas tillväxt leder till avloppssystemen. Nederst ett sammanflöde där alla tre spåren möts i Londons kolerabekämpning: behovet av rent vatten, kunskapen om smittvägen och den växande staden"
-  referens: "Placeras vid uppslagets inledning; texten hänvisar till figuren när de tre drivkrafterna namnges och när samspelet mellan dem beskrivs"
+  referens: "Placeras vid textens inledning; texten hänvisar till figuren när de tre drivkrafterna namnges och när samspelet mellan dem beskrivs"
   pedagogisk_funktion: "Ger eleven ett mönster att analysera med: varje historiskt exempel kan sorteras efter drivkraft, och sammanflödet visar att verkliga genombrott sällan har en ensam orsak"
   anvands_i: ["1.2.2"]
 
 fig-1.3.1-a:
   syfte: "Ge överblick över de fyra industriella revolutionerna och visa att de tar decennier och bygger på varandra"
   innehall: "Tidslinje från 1700-talet till i dag med fyra överlappande fält: ånga och mekanisering (från ca 1760), elektricitet och löpande band (från ca 1870), elektronik och automation (från ca 1970), uppkoppling och AI (från ca 2010). Varje fält märks med sin kraft- eller teknikbas och ett kännetecknande teknikskifte. Fälten tonar inte ut, vilket visar att tidigare revolutioners teknik lever kvar"
-  referens: "Placeras vid uppslag 1:s inledning; texten hänvisar till figuren när de fyra revolutionerna räknas upp"
+  referens: "Placeras vid textens inledning; texten hänvisar till figuren när de fyra revolutionerna räknas upp"
   pedagogisk_funktion: "Bemöter missuppfattningen att revolutionerna är korta händelser som avlöser varandra: eleven ser långa, överlappande processer i stället för fyra staket"
   anvands_i: ["1.3.1"]
 
 fig-1.3.1-b:
   syfte: "Visa teknikskiftena som förändringar av samma verklighet och hur människans roll på fabriksgolvet flyttas"
   innehall: "Samma fabriksgolv i fyra versioner: remdrift från en central ångmaskin med arbetare vid varje maskin, elmotorer vid varje maskin och löpande band, robotceller med styrskåp och operatör bakom skyddsstaket, uppkopplade maskiner med sensorer där tekniker övervakar via skärmar. Människans plats markeras tydligt i varje version"
-  referens: "Placeras vid uppslag 2:s avsnitt om lager på lager; texten hänvisar till figuren när revolutionernas samexistens i dagens fabrik beskrivs"
+  referens: "Placeras vid avsnittet om lager på lager; texten hänvisar till figuren när revolutionernas samexistens i dagens fabrik beskrivs"
   pedagogisk_funktion: "Konkretiserar de abstrakta epokerna till en igenkännbar miljö och låter eleven avläsa hur arbetsuppgifterna vandrar från handen till maskinen till övervakningen"
   anvands_i: ["1.3.1"]
 
@@ -68,7 +68,7 @@ fig-1.3.2-a:
 fig-1.4.1-a:
   syfte: "Visa digitalteknikens utvecklingssteg som en obruten kedja och den exponentiella tillväxten i transistorantal"
   innehall: "Tidslinje 1947 till i dag med stegen markerade: transistorn 1947, integrerade kretsen 1958, mikroprocessorn 1971, persondatorn kring 1980, webben 1991, smartphonen 2007, maskininlärningens genombrott 2012. Under tidslinjen en kurva med logaritmisk skala som visar antal transistorer per krets, från en enda 1947 via 2 300 i Intel 4004 till tiotals miljarder i dag"
-  referens: "Placeras vid uppslagets inledning; texten hänvisar till figuren när kedjan av utvecklingssteg och Moores lag beskrivs"
+  referens: "Placeras vid textens inledning; texten hänvisar till figuren när kedjan av utvecklingssteg och Moores lag beskrivs"
   pedagogisk_funktion: "Gör exponentiell tillväxt synlig: eleven ser att stegen inte är fristående uppfinningar utan bygger på varandra, och att kurvans lutning är hela förklaringen till att datorer finns överallt"
   anvands_i: ["1.4.1"]
 
@@ -90,7 +90,7 @@ fig-2.1.1-a:
   syfte: "Visa att samma behov kan ge helt olika lösningar beroende på hur problemet formuleras"
   innehall: "Förgrenad kedja med Hövdingfallet: behovet att skydda cyklistens huvud överst, därunder två problemformuleringar sida vid sida (gör hjälmen bekvämare respektive skydda huvudet utan att cyklisten bär något på det), och under varje formulering dess lösning: en förbättrad cykelhjälm respektive airbagkragen. Kedjans tre nivåer märks behov, tekniskt problem och teknisk lösning"
   referens: "Placeras vid avsnittet om problemformuleringens makt; texten hänvisar till figuren när Hövdingfallet beskrivs"
-  pedagogisk_funktion: "Gör uppslagets kärnidé avläsbar i en bild: problemformuleringen är en vägkorsning, inte en formalitet, och eleven ser exakt var de två vägarna skiljs åt"
+  pedagogisk_funktion: "Gör textens kärnidé avläsbar i en bild: problemformuleringen är en vägkorsning, inte en formalitet, och eleven ser exakt var de två vägarna skiljs åt"
   anvands_i: ["2.1.1"]
 
 fig-2.1.2-a:
