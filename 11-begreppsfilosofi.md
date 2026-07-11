@@ -164,13 +164,11 @@ Därefter används formeln.
 
 # Begrepp och uppgifter
 
-Uppgiftsdelen Begrepp är begreppsträningens hem.
+Uppgiftsdelen Begrepp kontrollerar endast att eleven kan formulera en kort begreppsförklaring, med standardformuleringen "Förklara följande begrepp med en mening:". Definitionen av uppgiftstypen, inklusive vad den inte får innehålla, regleras i sin helhet av *03-bokens-arkitektur.md*, "Uppslagets struktur" → "Begrepp".
 
-Den tränar i första hand användning: att använda begreppen korrekt, skilja närliggande begrepp åt, välja rätt begrepp i ett tekniskt sammanhang, koppla begrepp till verkliga produkter, konstruktioner eller system, och motivera användningen.
+Att använda begrepp i resonemang, jämföra närliggande begrepp, välja rätt begrepp i ett sammanhang eller koppla begrepp till verkliga produkter är värdefull begreppsträning, men hör hemma i Instuderingsfrågor eller Praktiska uppgifter, inte under rubriken Begrepp.
 
-Definitioner får förekomma när de är motiverade. Delen får aldrig bli en ordlista eller en samling rena definitionsfrågor.
-
-Instuderingsfrågorna kontrollerar att begreppen uppfattats ur texten.
+Instuderingsfrågorna kontrollerar att begreppen uppfattats ur texten och används i sammanhang.
 
 De praktiska uppgifterna låter eleven använda begreppen i tekniskt arbete.
 

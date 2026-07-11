@@ -75,19 +75,29 @@ Granskning sker på fyra nivåer.
 
 ## Uppgifter
 
-□ Instuderingsfrågor finns och kan besvaras med hjälp av texten.
+□ Instuderingsfrågor finns, normalt 10–15, kan besvaras med hjälp av texten och täcker hela teoridelen (03).
 
-□ Begrepp finns och tränar användning av begreppen, inte bara återgivning.
+□ Begrepp finns, normalt 3–6, inleds med "Förklara följande begrepp med en mening:" och innehåller inga jämförelse-, urvals-, koppling- eller motiveringskrav (03, "Begrepp").
 
-□ Praktiska uppgifter finns, har tydlig teknisk kärna och är genomförbara med rimliga resurser.
+□ Praktiska uppgifter finns, normalt 2–5, och eleven producerar, genomför, undersöker, mäter, konstruerar, visualiserar eller presenterar faktiskt något (03, "Praktiska uppgifter").
 
-□ Ingen uppgift kallas praktisk uppgift utan att vara det.
+□ Ingen uppgift kallas praktisk uppgift utan att vara det — en ren skriftlig analys, jämförelse eller argumentation räcker inte.
 
 □ Uppgifterna tränar lärandemålet.
 
-□ Uppgifterna varierar i karaktär.
+□ Uppgifterna varierar i arbetsform och omfattning; ingen är en kosmetisk variant av en annan.
 
 □ Uppgifterna kan genomföras inom rimlig tid.
+
+---
+
+## Länkar, självreferenser och numrering
+
+□ Inga klickbara länkar förekommer i löptext, uppgiftsinstruktioner eller figurtext (12, "Länkar i elevtext").
+
+□ Ordet "uppslag" förekommer inte som självreferens i elevtexten (05, "Självreferenser").
+
+□ Synlig rubriknumrering har högst tre nivåer: kapitel, modul, lärandemål (12, "Rubriknumrering").
 
 ---
 

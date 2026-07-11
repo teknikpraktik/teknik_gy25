@@ -28,6 +28,14 @@ Claude Code får aldrig skriva ett helt kapitel i en fil.
 
 ---
 
+## Rubriknumrering
+
+All synlig rubriknumrering i manus, webb och export har exakt tre hierarkiska nivåer: kapitel (`1`), modul (`1.1`) och lärandemål (`1.1.1`). Ingen synlig fjärde numreringsnivå (`1.1.1.1`) förekommer, varken i markdown-rubriker, genererade sidtitlar, menyer, sidopaneler, brödsmulor, innehållsförteckningar, exportformat eller ankarlänkar/etiketter.
+
+Begreppet uppslag får fortsätta användas internt i datamodell, filstruktur och produktionsmetadata (frontmatterfältet `uppslag`, se "Produktionsenhet" ovan), men det skapar aldrig en fjärde synlig rubriknivå. Omfattar ett lärandemål flera uppslag hanteras det med onumrerade underrubriker i löptexten (`##`–`####`, se 13-produktionsmanual.md, "Skriv"), inte med egen numrering.
+
+---
+
 ## Mappstruktur
 
 ```
@@ -92,9 +100,11 @@ Projektet har en statisk dokumentationswebbplats byggd med **Astro + Starlight**
 
 **Webbplatsen är ett internt produktions- och granskningsverktyg. Den är inte en publicerad produkt eller en del av bokens leverans.** Figurer visas i webbplatsen som platshållarspecifikation (syfte/innehåll/text), aldrig som färdig grafik — den slutliga grafiska produktionen görs alltid av förlaget (se 01, 03, 08).
 
-Varje lärandemålssida inleds med en **granskningsruta** (genererad ur frontmattern av `site/src/remark-granskning.mjs`): mål, status, kursplanetaggar, begrepp, figurer, förkunskaper och uppslag. Rutan finns bara i webbvyn och hamnar aldrig i exporten, som läser källfilerna direkt. Samma plugin renderar `[[begrepp:...]]` som länk till huvudstället och `[[figur:...]]` som platshållarruta ur registret; okänt begrepp eller okänd figur ger fel i både validate och bygget.
+Varje lärandemålssida inleds med en **granskningsruta** (genererad ur frontmattern av `site/src/remark-granskning.mjs`): mål, status, kursplanetaggar, begrepp, figurer, förkunskaper och uppslag. Rutan finns bara i webbvyn och hamnar aldrig i exporten, som läser källfilerna direkt. Samma plugin renderar `[[begrepp:...]]` som länk till huvudstället och `[[figur:...]]` som platshållarruta ur registret; okänt begrepp eller okänd figur ger fel i både validate och bygget. Detta administrativa produktionsläge är den ordinarie webbplatsens beteende och lämnas oförändrat — klickbara begreppslänkar hör hemma i ett internt granskningsverktyg (se "Länkar i elevtext" nedan).
 
-**Redaktionell granskningsvy** (`/review/`): ett rent läsmanus utan produktionsmetadata, genererat statiskt vid varje bygge ur samma content collection (`site/src/pages/review/`). Översikt med klickbar innehållsförteckning, en sida per kapitel med färdigt innehåll (primär läsvy) samt `/review/hela-manuset/` för sökning och sammanhängande utskrift. Endast lärandemål med status `fardig-forsta-version` eller högre ingår, i 06:s kanoniska ordning. Granskningsrutor och figurplatshållare tas bort i byggsteget (inte via CSS) — bygget felar om rensningen lämnar produktionsmarkup kvar. Vyn nås inte från webbplatsens sidopanel.
+**Redaktionell granskningsvy** (`/review/`): ett rent läsmanus utan produktionsmetadata, genererat statiskt vid varje bygge ur samma content collection (`site/src/pages/review/`). Översikt med klickbar innehållsförteckning, en sida per kapitel med färdigt innehåll (primär läsvy) samt `/review/hela-manuset/` för sökning och sammanhängande utskrift. Endast lärandemål med status `fardig-forsta-version` eller högre ingår, i 06:s kanoniska ordning. Granskningsrutor och figurplatshållare tas bort i byggsteget (inte via CSS) — bygget felar om rensningen lämnar produktionsmarkup kvar. `[[begrepp:...]]`-shortcoden löses här upp till vanlig text utan länk, i linje med "Länkar i elevtext" nedan — granskningsvyn ska läsas som eleven kommer att möta texten, inte som ett korslänkat uppslagsverk.
+
+Granskningsvyn har en permanent vänsterspalt (desktop) som visar hela manusets hierarki — kapitel, modul, lärandemål — genererad ur samma bokstruktur (06 via `bokstruktur-data.mjs`) som resten av produktionen, med aktuell sida markerad och rätt gren expanderad. Spalten är egen för `/review/` (`site/src/pages/review/_ReviewLayout.astro`) och påverkar inte den ordinarie webbplatsens Starlight-sidopanel, som är oförändrad (se "Navigering"). På smal skärm ersätts spalten av en öppningsbar meny.
 
 **Publicering:** webbplatsen byggs och publiceras automatiskt på GitHub Pages vid varje push till master (`.github/workflows/deploy.yml`) under `https://teknikpraktik.github.io/teknik_gy25/`. Base path är konfigurerad i `site/src/site-base.mjs` och delas av alla interna länkbyggen. Hela webbplatsen är märkt `noindex, nofollow` och har `robots.txt` med `Disallow: /` — detta hindrar indexering men är ingen åtkomstkontroll: Pages-sajten är publikt läsbar för den som har adressen.
 
@@ -114,13 +124,25 @@ Varje sida visar
 
 Navigeringen genereras automatiskt ur bokstrukturen och underhålls aldrig manuellt, vilket gör det säkert för Claude Code att dela eller slå ihop lärandemål (04 §17) utan att länkar bryts. Sidopanelens poster är slug-baserade: bygget felar om en sida i 06 saknas i content/, vilket fungerar som extra synkkontroll.
 
+Denna sidopanel och den ordinarie webbplatsens struktur i övrigt är produktionens administrativa läge och ändras inte av den redaktionella översynen av elevtext och länkar (se "Webbformat", "Redaktionell granskningsvy" och "Länkar i elevtext"). Endast `/review/` fick en egen permanent vänsterspalt.
+
+---
+
+## Länkar i elevtext
+
+Löpande text, uppgiftsinstruktioner och figurtext ska inte innehålla klickbara länkar. Tekniska begrepp som "teknisk lösning" visas som vanlig text, inte som länk, i alla vyer som representerar elevtext: exporten (som redan löser upp `[[begrepp:...]]` till text) och den redaktionella granskningsvyn `/review/`.
+
+Detta gäller manuella markdownlänkar i källfilerna, automatiska begreppslänkar och korsreferenser som genereras av remark/rehype-plugins eller andra komponenter. Källfilerna innehåller därför inga markdownlänkar (`[text](url)`) i brödtext eller uppgifter.
+
+Tillåtna länkar är webbplatsens fasta navigering (sidopanel, breadcrumbs, föregående/nästa), innehållsförteckningar, källor eller externa resurser i ett uttryckligt avgränsat käll- eller resursavsnitt, samt administrativa granskningsvyer (den ordinarie Starlight-webbplatsens produktionsläge, se "Webbformat"), där begreppslänkar och korsreferenser fortsätter fungera som ett internt uppslagsverktyg för redaktionen.
+
 ---
 
 ## Begrepp
 
 Alla tekniska begrepp har ett unikt huvudställe: den lärandemålsfil där begreppet står i `concepts_introduced`.
 
-Interna referenser till begreppet i andra lärandemål sker via shortcoden `[[begrepp:namn]]`, som webbplatsen länkar till huvudstället och som exportskriptet löser upp till vanlig text (ett bokmanus har inga klickbara länkar).
+Interna referenser till begreppet i andra lärandemål sker via shortcoden `[[begrepp:namn]]`. Den ordinarie webbplatsen (produktionsläget) länkar shortcoden till huvudstället; granskningsvyn (`/review/`) och exportskriptet löser i stället upp den till vanlig text utan länk ("Länkar i elevtext" ovan) — ett bokmanus har inga klickbara länkar.
 
 `scripts/validate.mjs` kontrollerar att varje begrepp finns i `concepts_introduced` i högst en fil (maskinkontroll av 11-begreppsfilosofi.md, "Begrepp introduceras en gång") och varnar när ett begrepp i `concepts_used` saknar huvudställe.
 

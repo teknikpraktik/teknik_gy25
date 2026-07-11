@@ -73,7 +73,7 @@ Genomför egengranskningen (08) och därefter granskningen av lärandemål (09).
 npm run validate
 ```
 
-Från denna status ställer valideringen innehållskrav: uppgiftsdelarna Instuderingsfrågor/Begrepp/Praktiska uppgifter ska finnas, `curriculum` ska vara taggat och inga HTML-kommentarer, TODO, uppslagsrubriker eller äldre uppgiftsrubriker (Förstå/Utveckla/Utmana) får finnas kvar. Saknade figurer, AI-typiska formuleringar, tankstreck i elevtexten, uppgiftsantal utanför normalspannen och ovanligt många personnamn ger varningar. Rätta alla fel och relevanta varningar.
+Från denna status ställer valideringen innehållskrav: uppgiftsdelarna Instuderingsfrågor/Begrepp/Praktiska uppgifter ska finnas, Begreppsdelen ska inledas med standardformuleringen "Förklara följande begrepp med en mening:", `curriculum` ska vara taggat och inga HTML-kommentarer, TODO, uppslagsrubriker, äldre uppgiftsrubriker (Förstå/Utveckla/Utmana) eller markdownlänkar i elevtext får finnas kvar. Saknade figurer, AI-typiska formuleringar, tankstreck i elevtexten, "uppslag" som självreferens, uppgiftsantal utanför normalspannen (10–15/3–6/2–5, 03), Begreppsuppgifter med analys-/jämförelse-/motiveringskrav och ovanligt många personnamn ger varningar. Rätta alla fel och relevanta varningar.
 
 ## 5. Committa
 
@@ -97,6 +97,7 @@ Formatet definieras i `schemas/larandemal.schema.mjs` (12 är styrande). Kort br
 - **figures** — figur-ID:n som används; varje ID måste finnas i `figures/registry.yml`.
 - **prerequisites** — id:n på lärandemål som måste komma tidigare i läsordningen.
 - **practical_component** — `true` när lärandemålet innehåller ett praktiskt moment.
+- **praktiska_uppgifter_undantag** — kort redaktionell motivering, endast när antalet praktiska uppgifter medvetet avviker från normalspannet 2–5 (03). Lämnas tomt annars; validate varnar annars vid avvikelse.
 
 ---
 

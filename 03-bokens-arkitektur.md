@@ -96,6 +96,8 @@ Om stoffets komplexitet kräver det får ett lärandemål omfatta flera sammanh�
 
 Antalet sidor styrs av pedagogiken, aldrig tvärtom.
 
+Uppslag är ett internt produktions- och planeringsbegrepp. Det får aldrig användas som självreferens i elevtexten, till exempel "i det här uppslaget" eller "som du läste i uppslaget" (05-forfattarmanual.md, "Självreferenser"). Synlig rubriknumrering i elevtext och webb har alltid exakt tre nivåer: kapitel, modul, lärandemål (12-produktionsarkitektur.md, "Rubriknumrering"). Ett uppslag är aldrig en fjärde numrerad nivå.
+
 ---
 
 # Uppslagets struktur
@@ -129,54 +131,43 @@ Efter teorin följer uppgifter indelade i tre delar.
 
 Kontrollerar att eleven förstått uppslagets innehåll.
 
-Frågorna ska vara tydliga och kunna besvaras med hjälp av texten.
+Frågorna ska vara tydliga och kunna besvaras med hjälp av texten. Tillsammans ska de täcka hela teoridelen: dess fakta, samband och resonemang, inte bara rubriker och definitioner.
 
-Normalt 5–10 per uppslag.
+Normalt 10–15 per uppslag.
 
 ---
 
 ### Begrepp
 
-Tränar uppslagets centrala tekniska begrepp.
+Kontrollerar att eleven kan formulera en kort begreppsförklaring.
 
-Uppgifterna ska i första hand träna att eleven kan:
+Standardformuleringen är:
 
-- använda begreppen korrekt
-- skilja närliggande begrepp åt
-- välja rätt begrepp i ett tekniskt sammanhang
-- koppla begrepp till verkliga produkter, konstruktioner eller system
-- motivera användningen av ett begrepp
+> Förklara följande begrepp med en mening:
 
-Definitioner får förekomma när de är motiverade, men delen får aldrig bli en ordlista eller en samling rena definitionsfrågor.
+Därefter listas normalt 3–6 relevanta begrepp från den aktuella texten, normalt i grundform. Endast begrepp som faktiskt behandlas i texten tas med, och synonymer eller nästan identiska begrepp undviks.
 
-Om uppslaget inte introducerar nya begrepp tränas de bärande begrepp som återanvänds.
+Begreppsdelen ska **inte** innehålla krav på att eleven ska jämföra begrepp, skilja mellan begrepp, välja rätt begrepp, koppla begrepp till produkter, använda begrepp i längre resonemang, motivera val eller analysera tillämpningar. Sådana förmågor tränas i Instuderingsfrågor eller Praktiska uppgifter, aldrig under rubriken Begrepp.
 
-Normalt 3–7 per uppslag.
+Delen får inte bli en ordlista med färdiga definitioner: eleven formulerar förklaringen själv.
+
+Normalt 3–6 per uppslag.
 
 ---
 
 ### Praktiska uppgifter
 
-Tekniska arbetsuppgifter med tydlig teknisk kärna, till exempel att:
+En praktisk uppgift innebär att eleven **producerar, genomför, undersöker, mäter, konstruerar, visualiserar eller presenterar** något. Den praktiska produktionen eller aktiviteten ska vara uppgiftens huvudsakliga arbete och tydligt framgå av instruktionen.
 
-- bygga
-- mäta
-- testa
-- skissa
-- konstruera
-- göra beräkningar
-- skriva krav
-- analysera eller jämföra tekniska lösningar
-- dokumentera resultat
-- förbättra en lösning
+Godkända former omfattar till exempel: konstruktion, skiss, teknisk ritning, flödesdiagram, kalkylblad, tillverkning av presentationsmaterial, digital presentation, plansch, programmering, simulering, modellering, fysisk undersökning, användning av datorprogram, mätning, testning, experiment, prototyp, muntlig presentation, film, podd samt fysisk eller digital modell.
+
+En skriftlig analys, jämförelse, värdering, argumentation eller reflektion räknas inte i sig som en praktisk uppgift, även om den har teknisk kärna. En praktisk uppgift får innehålla en kort skriftlig dokumentation eller analys som ett sista led, men inte som huvudsaken.
 
 Omfattningen sträcker sig från korta tekniska moment på några minuter till mer omfattande laborationer eller konstruktionsuppgifter.
 
-En diskussionsfråga utan teknisk kärna är inte en praktisk uppgift.
+AI-uppgifter kan förekomma här när de tillför ett verkligt värde och uppfyller definitionen ovan (till exempel simulering eller informationsbearbetning som mynnar ut i något producerat).
 
-AI-uppgifter kan förekomma här när de tillför ett verkligt värde.
-
-Normalt 2–4 per uppslag.
+Normalt 2–5 per uppslag, med variation i arbetsform och omfattning. Färre än 2 kräver ett tydligt redaktionellt skäl; fler än 5 ska undvikas. Flera uppgifter får inte vara kosmetiska varianter av samma aktivitet. Ett avsiktligt avsteg motiveras kort i frontmatterfältet `praktiska_uppgifter_undantag` (13-produktionsmanual.md) i stället för att en dålig eller konstlad uppgift läggs till bara för att nå spannet.
 
 ---
 

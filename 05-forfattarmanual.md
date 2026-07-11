@@ -286,6 +286,28 @@ De ska leda läsaren vidare genom ämnet.
 
 ---
 
+# Självreferenser
+
+Ordet "uppslag" är ett internt produktionsbegrepp (12-produktionsarkitektur.md) och får aldrig användas som självreferens i elevtexten, varken i löptext eller i uppgiftsinstruktioner.
+
+Förbjudna formuleringar, till exempel:
+
+- "Ge exempel ur uppslaget."
+- "I det här uppslaget får du lära dig..."
+- "Använd modellen från föregående uppslag."
+- "Som du läste i uppslaget..."
+
+Skriv i stället naturligt om vad texten faktiskt innehåller:
+
+- "Ge exempel från texten."
+- "Använd modellen som beskrivs ovan."
+- "Utgå från exemplet i avsnittet."
+- "Använd den tidigare beskrivningen av..."
+
+Samma princip gäller andra hänvisningar till bokens sidformat i stället för dess innehåll. Hänvisa till "texten", "avsnittet", "figuren" eller den konkreta sakens namn, inte till hur materialet är paginerat eller producerat.
+
+---
+
 # Disposition
 
 Claude får ändra dispositionen inom ett lärandemål när det förbättrar förståelsen.

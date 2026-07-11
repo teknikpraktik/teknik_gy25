@@ -36,6 +36,10 @@ export const larandemalFields = {
   figures: z.array(z.string()).default([]).optional(),
   prerequisites: z.array(z.string()).default([]).optional(),
   practical_component: z.boolean().optional(),
+  praktiska_uppgifter_undantag: z
+    .string()
+    .describe('Redaktionell motivering när antalet praktiska uppgifter avviker från normalspannet 2–5 (03-bokens-arkitektur.md)')
+    .optional(),
 };
 
 export const larandemalSchema = z.object(larandemalFields);
@@ -60,4 +64,5 @@ export const larandemalRequiredSchema = z.object({
   figures: z.array(z.string()).default([]),
   prerequisites: z.array(z.string()).default([]),
   practical_component: z.boolean().default(false),
+  praktiska_uppgifter_undantag: z.string().optional(),
 });
