@@ -27,6 +27,14 @@ function rensaHtml(html, id) {
 	return rensad;
 }
 
+// Elevtext ska inte innehålla klickbara begreppslänkar (12-produktionsarkitektur.md,
+// "Länkar i elevtext") — granskningsvyn är läsmanuset, inte det administrativa
+// produktionsläget. Begreppslänken (remark-granskning.mjs, begreppLank) är alltid
+// en flat <a class="begreppslank">, så länken tas bort och texten behålls.
+function taBortBegreppslankar(html) {
+	return html.replace(/<a class="begreppslank"[^>]*>([\s\S]*?)<\/a>/g, '$1');
+}
+
 // Brödtextens rubriker ligger på h2–h4 i källfilerna. I granskningsvyn är
 // h1 kapitel, h2 modul och h3 lärandemålets titel, så brödtextens rubriker
 // sänks två steg (samma hierarki som i Word-exporten).
@@ -66,9 +74,10 @@ export async function hamtaReviewKapitel() {
 					throw new Error(`Review: renderad HTML saknas för ${id} — content layer-API:t kan ha ändrats.`);
 				}
 				larandemal.push({
+					id,
 					titel: entry.data.title,
 					anchor: unikAnkare(entry.data.title),
-					html: sankRubriker(rensaHtml(html, id)),
+					html: sankRubriker(taBortBegreppslankar(rensaHtml(html, id))),
 				});
 			}
 			if (larandemal.length > 0) {

@@ -12,16 +12,17 @@ export async function getStaticPaths() {
 		params: { nr: String(k.nr) },
 		props: {
 			kapitel: k,
+			allaKapitel: kapitel,
 			foregaende: idx > 0 ? kapitel[idx - 1] : null,
 			nasta: idx < kapitel.length - 1 ? kapitel[idx + 1] : null,
 		},
 	}));
 }
 
-const { kapitel: k, foregaende, nasta } = Astro.props;
+const { kapitel: k, allaKapitel, foregaende, nasta } = Astro.props;
 ---
 
-<ReviewLayout titel={`Kapitel ${k.nr} · ${k.titel}`}>
+<ReviewLayout titel={`Kapitel ${k.nr} · ${k.titel}`} kapitel={allaKapitel} aktivKapitelNr={k.nr}>
 	<h1>Kapitel {k.nr} · {k.titel}</h1>
 
 	{k.moduler.map((m) => (
@@ -29,7 +30,7 @@ const { kapitel: k, foregaende, nasta } = Astro.props;
 			<h2 id={m.anchor}>{m.nr} {m.titel}</h2>
 			{m.larandemal.map((lm) => (
 				<article class="larandemal">
-					<h3 id={lm.anchor}>{lm.titel}</h3>
+					<h3 id={lm.anchor}>{lm.id} {lm.titel}</h3>
 					<Fragment set:html={lm.html} />
 				</article>
 			))}

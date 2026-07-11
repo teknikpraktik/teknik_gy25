@@ -11,7 +11,7 @@ const antal = kapitel.reduce((s, k) => s + k.antal, 0);
 const datum = new Date().toISOString().slice(0, 10);
 ---
 
-<ReviewLayout titel="Översikt">
+<ReviewLayout titel="Översikt" kapitel={kapitel}>
 	<div class="review-titelblad">
 		<h1>Teknik nivå 1 och 2</h1>
 		<p>Redaktionellt granskningsmanus</p>

@@ -9,7 +9,7 @@ const antal = kapitel.reduce((s, k) => s + k.antal, 0);
 const datum = new Date().toISOString().slice(0, 10);
 ---
 
-<ReviewLayout titel="Hela manuset">
+<ReviewLayout titel="Hela manuset" kapitel={kapitel} expanderaAllt>
 	<div class="review-titelblad">
 		<h1>Teknik nivå 1 och 2</h1>
 		<p>Redaktionellt granskningsmanus · hela manuset</p>
@@ -24,7 +24,7 @@ const datum = new Date().toISOString().slice(0, 10);
 					<h2 id={`hela-${m.anchor}`}>{m.nr} {m.titel}</h2>
 					{m.larandemal.map((lm) => (
 						<article class="larandemal">
-							<h3 id={`hela-${lm.anchor}`}>{lm.titel}</h3>
+							<h3 id={`hela-${lm.anchor}`}>{lm.id} {lm.titel}</h3>
 							<Fragment set:html={lm.html} />
 						</article>
 					))}
