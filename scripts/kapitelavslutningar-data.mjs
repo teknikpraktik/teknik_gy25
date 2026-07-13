@@ -15,8 +15,12 @@
 //   title — sidtitel (h1 på webben, sektionsrubrik i export)
 
 export const kapitelavslutningar = {
-  // Fylls per kapitel vid migrationen. Ordningen i listan är placeringsordningen
-  // sist i kapitlet (uppgiftsbank före begreppsövning som avslutar kapitlet).
+  // Ordningen i listan är placeringsordningen sist i kapitlet (uppgiftsbank före
+  // begreppsövning som avslutar kapitlet).
+  1: [
+    { type: 'uppgiftsbank', slug: 'uppgifter-och-projekt', title: 'Praktiska uppgifter och projekt' },
+    { type: 'begreppsovning', slug: 'begreppsovning', title: 'Begreppsövning' },
+  ],
 };
 
 // Alla deklarerade kapitelavslutningar för ett kapitelnummer, i manifestordning.
