@@ -61,7 +61,16 @@ Exempel:
 
 Varje ämne delas in i ett antal moduler.
 
-En modul behandlar ett sammanhängande delområde och består av ett valfritt antal lärandemål.
+En modul samlar **flera relaterade lärandemål** kring ett större, sammanhängande delområde och har en inre progression: lärandemålen bygger på varandra i en naturlig ordning.
+
+Modulstandard (normerande):
+
+- **H1 = kapitel, H2 = modul, H3 = lärandemål.**
+- Modulrubriken ska vara **bredare** än de enskilda lärandemålen och får aldrig i praktiken vara en dubblett av ett lärandemål.
+- En modul innehåller **normalt 2–5 lärandemål**. Detta är en redaktionell tumregel, inte ett hårt valideringskrav.
+- **Färre och tydligare moduler** prioriteras framför många tunna moduler.
+- Ett lärandemål får **aldrig delas enbart för att fylla ut en modul**. Ett lärandemål får i stället vara långt och flöda över flera sidor (se "Sidomfång").
+- En modul med bara ett lärandemål är tillåten men ska vara motiverad av delområdets natur.
 
 Antalet moduler bestäms av ämnets naturliga struktur och ska inte följa någon förutbestämd mall.
 
@@ -140,6 +149,22 @@ Frågor av typen "vem?", "när?" och "hur många?" används bara när personen, 
 Ta bort frågor som upprepar en tidigare fråga, bara kontrollerar en oviktig detalj, testar formuleringar snarare än förståelse eller ligger utanför lärandemålet.
 
 Instuderingsfrågorna är lärandemålets enda uppgiftsdel. Det finns **inget synligt Begrepp-block** efter lärandemålet, och de **praktiska uppgifterna ligger inte här** utan i kapitlets uppgiftsbank (se "Kapitelavslutningar" nedan). Begreppsundervisningen sker i teorin (11-begreppsfilosofi.md); den praktiska träningen säkras samlat per kapitel.
+
+---
+
+# Kapitlens avgränsning
+
+Varje kapitel ska ha en tydlig ämnesmässig avgränsning mot närliggande kapitel. Ett kapitel får inte duplicera ett annat kapitels huvudansvar, och ett lärandemål får aldrig överlappa ett senare kapitels huvudansvar mer än vad en kort, motiverad förberedelse kräver.
+
+Ett **syntesmål** (ett lärandemål eller en modul som knyter ihop ett kapitels innehåll) ska fungera som just en syntes eller analysmodell. Det får inte duplicera en process eller metod som är ett senare kapitels huvudansvar.
+
+De tre inledande kapitlen avgränsas så här:
+
+- **Kapitel 1 – Teknikens utveckling** besvarar *varför*: varför teknik uppstår, varför den utvecklas i en viss riktning och varför tekniska lösningar får den utformning de får. Kapitlet behandlar vad teknik är, teknikens historiska utveckling, teknikens och samhällets historiska växelverkan, vad som driver teknikutveckling och vilka förutsättningar, krav, resurser och avvägningar som formar tekniska lösningar.
+- **Kapitel 2 – Att lösa tekniska problem** besvarar *hur ett problem angrips*: hur ett tekniskt problem identifieras och formuleras, hur problem angrips systematiskt och hur en lösning testas, utvärderas och förbättras.
+- **Kapitel 3 – Teknikutvecklingsprocessen** besvarar *hur ett helt utvecklingsarbete genomförs* från behov till användning och återvinning (faser, iteration, kravspecifikation, idégenerering, konceptval, prototyper, livscykel).
+
+Kapitel 1 ska därför inte innehålla en egen problemlösningsmetod, en egen teknikutvecklingsprocess eller en fristående framtidsanalys. Kapitel 1:s syntes beskriver *att* och *varför* tekniska lösningar formas av behov, möjligheter, krav och avvägningar, inte *hur* ett utvecklingsarbete steg för steg genomförs.
 
 ---
 

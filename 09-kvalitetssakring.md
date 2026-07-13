@@ -131,11 +131,17 @@ Granskning sker på fyra nivåer.
 
 # Granskning av modul
 
-□ Alla lärandemål har naturlig progression.
+□ Modulen behandlar ett sammanhängande delområde.
+
+□ Alla lärandemål har naturlig progression och bygger på varandra.
+
+□ Modulrubriken är bredare än de enskilda lärandemålen och dubblerar inte något lärandemål.
 
 □ Begrepp introduceras i rätt ordning.
 
-□ Inga lärandemål överlappar.
+□ Inga lärandemål överlappar varandra eller ett senare kapitels huvudansvar.
+
+□ En enmålsmodul är motiverad av delområdets natur (03, "Modul").
 
 □ Inga viktiga delar saknas.
 
@@ -150,6 +156,12 @@ Granskning sker på fyra nivåer.
 □ Modulerna ligger i logisk ordning.
 
 □ Kapitlet täcker sitt ansvar enligt innehållsmatrisen.
+
+□ Kapitlet har en tydlig ämnesmässig avgränsning mot närliggande kapitel och dubblerar inte deras huvudansvar (03, "Kapitlens avgränsning").
+
+□ Ett eventuellt syntesmål fungerar som syntes eller analysmodell, inte som en process som hör till ett senare kapitel.
+
+□ Kapitelavslutningarna fungerar som syntes och övergång genom ämnesinnehållet, utan metatext om bokens disposition.
 
 □ Exempel varierar.
 
