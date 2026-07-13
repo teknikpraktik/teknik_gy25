@@ -44,40 +44,47 @@ fig-1.5.1-a:
   pedagogisk_funktion: "Ger eleven ett mönster att analysera med: varje historiskt exempel kan sorteras efter drivkraft, och sammanflödet visar att verkliga genombrott sällan har en ensam orsak"
   anvands_i: ["1.5.1"]
 
-fig-1.3.1-a:
+fig-1.2.2-a:
   syfte: "Ge överblick över de fyra industriella revolutionerna och visa att de tar decennier och bygger på varandra"
-  innehall: "Tidslinje från 1700-talet till i dag med fyra överlappande fält: ånga och mekanisering (från ca 1760), elektricitet och löpande band (från ca 1870), elektronik och automation (från ca 1970), uppkoppling och AI (från ca 2010). Varje fält märks med sin kraft- eller teknikbas och ett kännetecknande teknikskifte. Fälten tonar inte ut, vilket visar att tidigare revolutioners teknik lever kvar"
-  referens: "Placeras vid textens inledning; texten hänvisar till figuren när de fyra revolutionerna räknas upp"
-  pedagogisk_funktion: "Bemöter missuppfattningen att revolutionerna är korta händelser som avlöser varandra: eleven ser långa, överlappande processer i stället för fyra staket"
-  anvands_i: ["1.3.1"]
+  innehall: "Tidslinje från 1700-talet till i dag med fyra överlappande fält: ånga och mekanisering (från ca 1760), elektricitet och massproduktion (från ca 1870), elektronik och automation (från ca 1970), digitalisering och AI (från ca 2010). Varje fält märks med sin kraft- eller teknikbas, ett kännetecknande teknikskifte och en central samhällsförändring. Fälten tonar inte ut, vilket visar att tidigare revolutioners teknik lever kvar"
+  referens: "Placeras i inledningen av modul 1.2; texten hänvisar till figuren när de fyra industriella revolutionerna introduceras"
+  pedagogisk_funktion: "Ger eleven en gemensam karta över hela den historiska modulen och bemöter missuppfattningen att revolutionerna är korta händelser som avlöser varandra"
+  anvands_i: ["1.2.2"]
 
-fig-1.3.1-b:
-  syfte: "Visa teknikskiftena som förändringar av samma verklighet och hur människans roll på fabriksgolvet flyttas"
-  innehall: "Samma fabriksgolv i fyra versioner: remdrift från en central ångmaskin med arbetare vid varje maskin, elmotorer vid varje maskin och löpande band, robotceller med styrskåp och operatör bakom skyddsstaket, uppkopplade maskiner med sensorer där tekniker övervakar via skärmar. Människans plats markeras tydligt i varje version"
-  referens: "Placeras vid avsnittet om lager på lager; texten hänvisar till figuren när revolutionernas samexistens i dagens fabrik beskrivs"
-  pedagogisk_funktion: "Konkretiserar de abstrakta epokerna till en igenkännbar miljö och låter eleven avläsa hur arbetsuppgifterna vandrar från handen till maskinen till övervakningen"
-  anvands_i: ["1.3.1"]
-
-fig-1.3.2-a:
+fig-1.2.2-b:
   syfte: "Göra Sveriges samhällsomvandling under industrialiseringen avläsbar i siffror"
-  innehall: "Diagram över andelen sysselsatta i jordbruk respektive industri i Sverige 1850 till 1950, med markerade händelser längs tidsaxeln: ångsågarna vid Norrlandskusten från 1850-talet, Sundsvallsstrejken 1879, emigrationens toppår kring 1880, åttatimmarsdagen 1919. Kurvorna korsar varandra under periodens senare del"
-  referens: "Placeras vid avsnittet om levnadsvillkoren; texten hänvisar till figuren när flytten från land till stad och från jordbruk till industri beskrivs"
-  pedagogisk_funktion: "Låter eleven avläsa att samhällskonsekvenserna är mätbara och utdragna över generationer, och ger de enskilda händelserna i texten en gemensam tidsaxel"
-  anvands_i: ["1.3.2"]
+  innehall: "Diagram över andelen sysselsatta i jordbruk respektive industri i Sverige 1850 till 1950, med markerade händelser längs tidsaxeln: ångsågarna vid Norrlandskusten från 1850-talet, Sundsvallsstrejken 1879, emigrationens toppår kring 1880 och åttatimmarsdagen 1919. Kurvorna korsar varandra under periodens senare del"
+  referens: "Placeras vid avsnittet om att Sverige byggs om; texten hänvisar till figuren när flytten från jordbruk till industri beskrivs"
+  pedagogisk_funktion: "Låter eleven avläsa att samhällskonsekvenserna är mätbara och utdragna över generationer, och ger de enskilda händelserna en gemensam tidsaxel"
+  anvands_i: ["1.2.2"]
 
-fig-1.4.1-a:
-  syfte: "Visa digitalteknikens utvecklingssteg som en obruten kedja och den exponentiella tillväxten i transistorantal"
-  innehall: "Tidslinje 1947 till i dag med stegen markerade: transistorn 1947, integrerade kretsen 1958, mikroprocessorn 1971, persondatorn kring 1980, webben 1991, smartphonen 2007, maskininlärningens genombrott 2012. Under tidslinjen en kurva med logaritmisk skala som visar antal transistorer per krets, från en enda 1947 via 2 300 i Intel 4004 till tiotals miljarder i dag"
+fig-1.2.3-a:
+  syfte: "Visa hur elmotorn och det löpande bandet förändrade hur en fabrik organiseras"
+  innehall: "Jämförelse i två delar. Vänster: en fabrik med remdrift, där alla maskiner drivs av en central ångmaskin via remmar och axlar och måste stå nära kraftkällan. Höger: en fabrik med en elmotor vid varje maskin och ett löpande band där en produkt växer fram station för station. Callouts pekar ut standardiserade, utbytbara delar och att arbetaren gör ett enda moment"
+  referens: "Placeras vid avsnittet om elmotorn och massproduktionen; texten hänvisar till figuren när skillnaden mot remdriften beskrivs"
+  pedagogisk_funktion: "Gör abstraktionen massproduktion konkret: eleven ser varför elmotorn frigjorde fabriksplaneringen och hur det löpande bandet delar upp arbetet"
+  anvands_i: ["1.2.3"]
+
+fig-1.2.4-a:
+  syfte: "Visa elektronikens utvecklingssteg och den exponentiella tillväxten i transistorantal"
+  innehall: "Tidslinje från 1947 till i dag med stegen markerade: transistorn 1947, integrerade kretsen i slutet av 1950-talet, industriroboten IRB 6 1974, mikroprocessorn 1971 och persondatorn kring 1980. Under tidslinjen en kurva med logaritmisk skala som visar antal transistorer per krets, från en enda 1947 via 2 300 i den första mikroprocessorn till tiotals miljarder i dag"
   referens: "Placeras vid textens inledning; texten hänvisar till figuren när kedjan av utvecklingssteg och Moores lag beskrivs"
-  pedagogisk_funktion: "Gör exponentiell tillväxt synlig: eleven ser att stegen inte är fristående uppfinningar utan bygger på varandra, och att kurvans lutning är hela förklaringen till att datorer finns överallt"
-  anvands_i: ["1.4.1"]
+  pedagogisk_funktion: "Gör exponentiell tillväxt synlig: eleven ser att stegen bygger på varandra och att kurvans lutning förklarar varför datorer finns överallt"
+  anvands_i: ["1.2.4"]
 
-fig-1.4.2-a:
+fig-1.2.4-b:
+  syfte: "Visa hur människans roll på fabriksgolvet flyttas när automationen kommer"
+  innehall: "Samma fabriksgolv i tre versioner: elmotorer vid varje maskin med arbetare som utför momenten, robotceller med styrskåp och en operatör bakom skyddsstaket, samt uppkopplade maskiner med sensorer där en tekniker övervakar via skärmar. Människans plats markeras tydligt i varje version"
+  referens: "Placeras vid avsnittet om att maskiner styr maskiner; texten hänvisar till figuren när människans nya roll beskrivs"
+  pedagogisk_funktion: "Låter eleven avläsa hur arbetsuppgiften vandrar från handen till maskinen till övervakningen, och att yrkesrollen förändras snarare än bara försvinner"
+  anvands_i: ["1.2.4"]
+
+fig-1.2.5-a:
   syfte: "Visa att digitala teknikskiften i olika branscher följer samma mönster"
-  innehall: "Tre rader som vardera går från fysisk bärare till digital tjänst: musiken (vinylskiva och cd till streamingtjänst), fotografiet (filmrulle och fotobutik till mobilkamera och molnlagring), bankärendena (bankkontor med kassa till app i mobilen). En gemensam pil under raderna markerar mönstret: informationen lämnar sin fysiska bärare och kostnaden för en kopia går mot noll"
-  referens: "Placeras efter fallbeskrivningarna; texten hänvisar till figuren när det gemensamma mönstret formuleras"
-  pedagogisk_funktion: "Lyfter eleven från tre berättelser till ett återanvändbart mönster som kan tillämpas på nya branscher i uppgifterna"
-  anvands_i: ["1.4.2"]
+  innehall: "Tre rader som vardera går från fysisk bärare till digital tjänst: musiken (vinylskiva och cd till streamingtjänst), fotografiet (filmrulle och fotobutik till mobilkamera och molnlagring), bankärendet (bankkontor med kassa till app i mobilen). En gemensam pil under raderna markerar mönstret: informationen lämnar sin fysiska bärare och kostnaden för en kopia går mot noll"
+  referens: "Placeras efter branschexemplen; texten hänvisar till figuren när det gemensamma mönstret formuleras"
+  pedagogisk_funktion: "Lyfter eleven från tre berättelser till ett återanvändbart mönster som kan tillämpas på nya branscher"
+  anvands_i: ["1.2.5"]
 
 fig-1.5.2-a:
   syfte: "Visa Amaras tumregel: förväntningarna på ny teknik toppar tidigt medan den verkliga samhällspåverkan kommer senare och blir större"
