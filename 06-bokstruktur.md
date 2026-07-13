@@ -77,10 +77,10 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 - **1.2.4 Elektronik och datorer** — Beskriva den tredje industriella revolutionens teknikskiften och förklara hur elektronik och automation förändrade arbete och yrkesroller.
 - **1.2.5 Digitalisering, internet och AI** — Beskriva digitaliseringens teknikskiften och förklara hur internet, uppkopplade system och AI förändrat kommunikation, branscher och vardagsliv.
 
-## Modul 1.3 Mönster i teknikutvecklingen
+## Modul 1.3 Varför utvecklas teknik?
 
 - **1.3.1 Vad driver teknikutvecklingen?** — Identifiera och förklara hur behov, kunskap, tekniska möjligheter, ekonomiska intressen och samhällsförändringar kan samverka som drivkrafter bakom teknikutveckling.
-- **1.3.2 Hur formas tekniska lösningar?** — Förklara hur befintlig teknik, kunskap, resurser, krav, begränsningar och tekniska avvägningar påverkar vilka tekniska lösningar som utvecklas och hur de utformas.
+- **1.3.2 Varför ser tekniska lösningar olika ut?** — Förklara hur befintlig teknik, kunskap, resurser, krav, begränsningar och tekniska avvägningar påverkar vilka tekniska lösningar som utvecklas och hur de utformas.
 
 ---
 

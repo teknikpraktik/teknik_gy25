@@ -22,7 +22,7 @@ och vilket framtidsinnehåll som reserverats för kapitel 13.
 | (nytt) | 1.2.3 Elektricitet och massproduktion | Nytt |
 | (nytt) | 1.2.4 Elektronik och datorer | Nytt |
 | (nytt) | 1.2.5 Digitalisering, internet och AI | Nytt |
-| (nytt) | 1.3.2 Hur formas tekniska lösningar? | Nytt (syntes) |
+| (nytt) | 1.3.2 Varför ser tekniska lösningar olika ut? | Nytt (syntes) |
 
 Figur-id: fig-1.3.1-a/b, fig-1.3.2-a, fig-1.4.1-a, fig-1.4.2-a repurposade till
 fig-1.2.2-a/b, fig-1.2.3-a, fig-1.2.4-a/b, fig-1.2.5-a. fig-1.5.1-a → fig-1.3.1-a
