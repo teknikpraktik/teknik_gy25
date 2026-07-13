@@ -18,11 +18,13 @@ Projektets interna struktur styrs därför inte av hur en tryckt bok ser ut, uta
 
 ## Produktionsenhet
 
-Projektets minsta produktionsenhet är ett lärandemål.
+Projektets minsta produktionsenhet är ett lärandemål. Lärandemålet på H3-nivå är den fasta pedagogiska, redaktionella, navigerbara och producerbara enheten.
 
 Varje lärandemål lagras i en egen Markdown-fil med YAML-frontmatter, under `content/<kapitel>/<modul>/`.
 
-Om ett lärandemål (enligt 03-bokens-arkitektur.md) omfattar flera uppslag skrivs uppslagen som på varandra följande teori- och uppgiftssekvenser i samma fil, utan synliga uppslagsrubriker — planeringen bärs av frontmatterfältet `uppslag` och 06. Lärandemålet förblir den odelbara produktionsenheten, i linje med 04-redaktionsprinciper.md §9. Formuleringar som "Uppslag 1" får inte förekomma i elevtexten.
+Ett lärandemål har inget fast sid- eller uppslagsomfång (03-bokens-arkitektur.md). Det får flöda över så många sidor som förståelsen kräver och delas bara vid flera tydligt skilda kunskapsresultat. Uppslag och sidbrytningar är frågor för layout och tryckexport, inte en nivå i datamodellen. Formuleringar som "Uppslag 1" får inte förekomma i elevtexten.
+
+Utöver lärandemålen finns per kapitel två **kapitelavslutande innehållstyper** — en begreppsövning och en uppgiftsbank (se "Kapitelavslutningar" nedan). De är inte lärandemål och får aldrig lärandemåls-id.
 
 Claude Code får aldrig skriva ett helt kapitel i en fil.
 
@@ -32,7 +34,7 @@ Claude Code får aldrig skriva ett helt kapitel i en fil.
 
 All synlig rubriknumrering i manus, webb och export har exakt tre hierarkiska nivåer: kapitel (`1`), modul (`1.1`) och lärandemål (`1.1.1`). Ingen synlig fjärde numreringsnivå (`1.1.1.1`) förekommer, varken i markdown-rubriker, genererade sidtitlar, menyer, sidopaneler, brödsmulor, innehållsförteckningar, exportformat eller ankarlänkar/etiketter.
 
-Begreppet uppslag får fortsätta användas internt i datamodell, filstruktur och produktionsmetadata (frontmatterfältet `uppslag`, se "Produktionsenhet" ovan), men det skapar aldrig en fjärde synlig rubriknivå. Omfattar ett lärandemål flera uppslag hanteras det med onumrerade underrubriker i löptexten (`##`–`####`, se 13-produktionsmanual.md, "Skriv"), inte med egen numrering.
+Begreppet uppslag hör hemma i layout och tryckexport, inte i datamodellen, och skapar aldrig en fjärde synlig rubriknivå. Ett lärandemål som flödar över flera sidor struktureras med onumrerade underrubriker i löptexten (`##`–`####`, se 13-produktionsmanual.md, "Skriv"), inte med egen numrering.
 
 ---
 
@@ -45,6 +47,8 @@ content/
     6.01-krafter/                   # modul: <kapitel>.<modulnr>-<slug>, modulnr nollutfyllt
       6.01.01-kraftbegreppet.md     # lärandemål: <kapitel>.<modul>.<löpnr>-<slug>, nollutfyllt
       6.01.02-kraftresultanter.md
+    begreppsovning.md               # kapitelavslutning: type: begreppsovning (ej lärandemål)
+    uppgifter-och-projekt.md        # kapitelavslutning: type: uppgiftsbank (ej lärandemål)
 figures/
   registry.yml                      # centralt figur-ID-register
 schemas/
@@ -52,6 +56,7 @@ schemas/
 scripts/
   bokstruktur-data.mjs              # tolkar 06-bokstruktur.md direkt (06 är enda källan)
   kursplan-data.mjs                 # maskinläsbar spegling av 07:s innehållsmatris
+  kapitelavslutningar-data.mjs      # kapitelmanifest: begreppsövning/uppgiftsbank per kapitel
   generate-skeleton.mjs             # skapar mapp-/modul-/lärandemålsskelett (tomma filer, ingen text)
   validate.mjs                      # tvärgående kvalitetskontroller (se nedan)
   begreppsregister.mjs              # genererar centralt begreppsregister till export/
@@ -76,7 +81,6 @@ chapter: 6
 module: "6.1"
 title: "Kraftresultanter"
 goal: "Bestämma resultanten av flera krafter grafiskt och genom beräkning med komposanter."
-uppslag: 1                 # planerat antal uppslag; >1 markeras även i 06-bokstruktur.md
 status: under-utveckling   # ej-paborjad | under-utveckling | fardig-forsta-version | fackgranskad | sprakgranskad | klar
 curriculum:
   niva1: ["n1-09"]         # punkt-id från 07-kursplanetackning.md (n1-xx, n2-xx, s-01)
@@ -85,12 +89,13 @@ concepts_introduced: ["kraftresultant"]
 concepts_used: ["kraft", "vektor"]
 figures: ["fig-6.1.2-a"]
 prerequisites: ["6.1.1"]
-practical_component: true
 ```
+
+Fälten `uppslag` och `practical_component` är **pensionerade** (redaktionellt beslut). Uppslag är en layoutfråga, och praktisk täckning härleds från uppgiftsbankens kopplingar till lärandemålen, inte från en boolesk flagga.
 
 Schemat är gemensamt för webbplatsens byggtidsvalidering (Astro content collections) och `scripts/validate.mjs`. Det finns bara på ett ställe och importeras av båda — ändra bara i `schemas/larandemal.schema.mjs`.
 
-Enda strukturella sidan i content/ är startsidan (`index.md`), som bara sätter `title`. Kapitel- och modulöversikter är inte filer utan genererade vyer (se "Webbformat") och har därför ingen frontmatter alls.
+Enda rent strukturella sidan i content/ är startsidan (`index.md`), som bara sätter `title`. Kapitel- och modulöversikter är inte filer utan genererade vyer (se "Webbformat") och har därför ingen frontmatter alls. Kapitelavslutningarna (begreppsövning, uppgiftsbank) är egna filer med `type`-baserad frontmatter (se "Kapitelavslutningar").
 
 ---
 
@@ -160,6 +165,40 @@ Flera lärandemål kan referera till samma figur via shortcoden `[[figur:ID]]`. 
 
 ---
 
+## Kapitelavslutningar
+
+Varje färdigproducerat kapitel avslutas med två innehållstyper som **inte** är lärandemål och **aldrig** får lärandemåls-id (03-bokens-arkitektur.md, "Kapitelavslutningar"):
+
+- `type: begreppsovning` — kapitlets samlade begreppsövning (ifyllnadsövning med numrerade luckor).
+- `type: uppgiftsbank` — kapitlets bank av praktiska uppgifter och projekt, indelad i Kort aktivitet, Lektionsuppgift och Miniprojekt.
+
+**Struktur och ordning styrs av ett kapitelmanifest**, inte av filnamnskonvention: `scripts/kapitelavslutningar-data.mjs` deklarerar per kapitel vilka avslutningar som finns och i vilken ordning de placeras. Filnamnskonventionen (`content/<kapitelSlug>/<slug>.md`) används bara för att lokalisera filen. `scripts/validate.mjs` kontrollerar manifestet åt båda håll: varje deklarerad avslutning ska ha en fil med rätt `type`/`chapter`, och varje `type`-fil på disk ska vara deklarerad i manifestet. Manifestet stödjer hela boken; poster läggs till när ett kapitel produceras (tomma avslutningsfiler skapas inte i förväg för kapitel som inte påbörjats).
+
+Frontmatter (schemavariant i `schemas/larandemal.schema.mjs`, känns igen på `type`):
+
+```yaml
+type: uppgiftsbank          # eller: begreppsovning
+chapter: 1
+title: "Praktiska uppgifter och projekt"
+status: fardig-forsta-version
+uppgifter:                  # endast uppgiftsbank
+  - ref: k1-u3
+    omfattning: miniprojekt   # kort-aktivitet | lektionsuppgift | miniprojekt
+    larandemal: ["1.3.1", "1.3.2"]
+    tid: "3–4 lektioner"
+    arbetsform: grupp         # individuell | par | grupp
+    produkt: "plansch och kort rapport"
+    # valfria: material, digitala_verktyg, forkunskaper, extern_tillgang, alternativ
+```
+
+Obligatoriska fält per uppgift: `ref`, `omfattning`, `larandemal`, `tid`, `arbetsform`, `produkt`. Valfria: `material`, `digitala_verktyg`, `forkunskaper`, `extern_tillgang`, `alternativ`. `uppgifter[]` är den validerade datamodellen; varje `ref` motsvarar en uppgift i kroppen, och varje `larandemal`-id måste finnas i samma kapitel. Valideringen rapporterar per kapitel vilka lärandemål som tränas av minst en uppgift (praktisk täckning).
+
+**Placering:** kapitelavslutningarna slottas sist i kapitlet (efter sista modulen) i sidopanelen, kapitelöversikten, granskningsvyn `/review/` och exporten, i manifestets ordning.
+
+**Facit** stöds tekniskt men lagras aldrig i klartext i detta repo, eftersom repot är **offentligt** (GitHub Pages). Begreppsövningens facit och uppgiftsbankens bedömningsstöd ligger i en separat, privat lärarmaterialkälla. I detta repo finns bara det tekniska gränssnittet: facit ingår aldrig i elevmanuset (`npm run export`) eller på den publika elevwebben, och en framtida lärarmaterialexport läser facit ur den privata källan. Skulle repot göras privat får facit ligga i en egen lärarmaterialstruktur i samma repo.
+
+---
+
 ## Kvalitetskontroller och kursplanetäckning
 
 `scripts/validate.mjs` körs automatiskt före varje bygge av webbplatsen (`prebuild`-steg) och kan köras fristående (`npm run validate`). Det kontrollerar:
@@ -169,7 +208,8 @@ Flera lärandemål kan referera till samma figur via shortcoden `[[figur:ID]]`. 
 - **Figur-ID** — varje refererad figur finns i registret; oanvända figurer flaggas.
 - **Förkunskapsordning** — en fils `prerequisites` måste ligga tidigare i läsordningen (kapitel.modul.löpnummer), i linje med 04 §10.
 - **Kursplantaggning** — `curriculum.niva1`/`niva2` innehåller punkt-id:n enligt 07 (via `kursplan-data.mjs`); tagg i ett kapitel utanför punktens matrisrad ger varning.
-- **Statusstyrda innehållskontroller** — från status `fardig-forsta-version` krävs uppgiftsdelarna Instuderingsfrågor/Begrepp/Praktiska uppgifter, icke-tom kursplantaggning och att inga HTML-kommentarer, TODO, uppslagsrubriker eller äldre uppgiftsrubriker finns kvar; saknade figurer, AI-typiska formuleringar, tankstreck i elevtexten (05), uppgiftsantal utanför normalspannen (03) och ovanligt många personnamn (05) ger varning.
+- **Statusstyrda innehållskontroller** — från status `fardig-forsta-version` krävs en **icke-tom sektion Instuderingsfrågor** (inget bestämt antal, 03), icke-tom kursplantaggning och att inga HTML-kommentarer, TODO, uppslagsrubriker eller äldre uppgiftsrubriker (Förstå/Utveckla/Utmana) finns kvar; saknade figurer, AI-typiska formuleringar, tankstreck i elevtexten (05), markdownlänkar i elevtext, "uppslag" som självreferens och ovanligt många personnamn (05) ger varning. Inget Begrepp-block och inga praktiska uppgifter kontrolleras längre per lärandemål — de hör till kapitelavslutningarna.
+- **Kapitelavslutningar** — kapitelmanifestet (`scripts/kapitelavslutningar-data.mjs`) stäms av mot filerna åt båda håll; uppgiftsbankens `uppgifter[]` valideras (obligatoriska fält, giltiga lärandemåls-id i kapitlet) och den praktiska täckningen per lärandemål rapporteras.
 - **Statusöversikt** — sammanställer antal lärandemål per status, totalt och per kapitel, som ersättning för manuell bokföring i 06.
 - **Kursplanetäckningsöversikt** — antal påbörjade lärandemål per kursplanepunkt, uppdelat på primärkapitlet och övriga kapitel.
 

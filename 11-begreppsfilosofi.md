@@ -164,13 +164,13 @@ Därefter används formeln.
 
 # Begrepp och uppgifter
 
-Uppgiftsdelen Begrepp kontrollerar endast att eleven kan formulera en kort begreppsförklaring, med standardformuleringen "Förklara följande begrepp med en mening:". Definitionen av uppgiftstypen, inklusive vad den inte får innehålla, regleras i sin helhet av *03-bokens-arkitektur.md*, "Uppslagets struktur" → "Begrepp".
+Det finns **inget synligt Begrepp-block** efter enskilda lärandemål. Begreppen introduceras, definieras och används i teorin där de först behövs; begreppsträningen sker löpande i teorin, i figurerna och i instuderingsfrågorna.
 
-Att använda begrepp i resonemang, jämföra närliggande begrepp, välja rätt begrepp i ett sammanhang eller koppla begrepp till verkliga produkter är värdefull begreppsträning, men hör hemma i Instuderingsfrågor eller Praktiska uppgifter, inte under rubriken Begrepp.
+Instuderingsfrågorna kontrollerar att begreppen uppfattats ur texten och används i sammanhang. Kapitlets uppgiftsbank låter eleven använda begreppen i tekniskt arbete.
 
-Instuderingsfrågorna kontrollerar att begreppen uppfattats ur texten och används i sammanhang.
+Kapitlets **begreppsövning** är repetition och tillämpning: den använder kapitlets centrala begrepp i tekniskt meningsfulla sammanhang och kontrollerar användning och förståelse, inte bara ordagranna definitioner. Den får aldrig vara elevens första möte med ett begrepp (03-bokens-arkitektur.md, "Kapitelavslutningar").
 
-De praktiska uppgifterna låter eleven använda begreppen i tekniskt arbete.
+Den interna begreppsmetadatan behålls och är oförändrad: `concepts_introduced` anger var ett begrepp har sitt huvudställe och `concepts_used` var det återanvänds (12-produktionsarkitektur.md, "Begrepp"). Metadatan genererar inget synligt block.
 
 ---
 

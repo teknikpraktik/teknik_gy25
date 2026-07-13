@@ -16,13 +16,28 @@ När flera likvärdiga sätt att presentera ett område finns ska den lösning v
 
 # Teknik är problemlösning
 
-Teknik är människans sätt att identifiera, förstå och lösa problem.
+Teknik handlar om hur människor utvecklar och använder produkter, processer, anläggningar och system för att uppfylla behov och önskemål.
 
-En teknisk lösning behöver inte vara avancerad.
+En teknisk lösning är en produkt, process, anläggning eller ett system som har utformats för att uppfylla ett visst behov eller lösa ett visst problem.
 
-En penna, en bro, ett datorprogram och en vindturbin är alla tekniska lösningar på olika typer av problem.
+Dessa två formuleringar är bokens harmoniserade grunddefinitioner och ska användas konsekvent (första grundläggande introduktion i lärandemål 1.1.1). All annan text om vad teknik och en teknisk lösning är ska vara förenlig med dem.
 
-Boken ska därför utgå från problem och lösningar snarare än från produkter.
+En teknisk lösning behöver inte vara avancerad. En penna, en bro, ett datorprogram och en vindturbin är alla tekniska lösningar på olika typer av behov och problem.
+
+Boken ska därför utgå från behov, problem och lösningar snarare än från produkter.
+
+---
+
+# Teknikutvecklingens startpunkt
+
+Teknikutveckling har ingen enda given startpunkt. Boken ska genomgående framställa den så här:
+
+- Teknikutveckling kan starta i ett uttalat behov eller problem.
+- Den kan också starta i en ny teknisk eller vetenskaplig möjlighet.
+- En möjlighet får betydelse först när den kopplas till ett användningsområde, ett behov eller ett problem.
+- Flera drivkrafter verkar ofta samtidigt.
+
+Absoluta formuleringar som påstår att all teknikutveckling följer exakt samma startpunkt ska undvikas. I ett konkret problemlösningssammanhang, där behovet redan är känt, är arbetsgången behov, problem och lösning en användbar modell (lärandemål 2.1.1), men den beskriver problemlösning, inte hela teknikutvecklingen.
 
 ---
 

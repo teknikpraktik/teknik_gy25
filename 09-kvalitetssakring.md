@@ -73,21 +73,19 @@ Granskning sker på fyra nivåer.
 
 ---
 
-## Uppgifter
+## Instuderingsfrågor
 
-□ Instuderingsfrågor finns, normalt 10–15, kan besvaras med hjälp av texten och täcker hela teoridelen (03).
+□ Lärandemålet avslutas med minst en instuderingsfråga (inget fast antal, 03).
 
-□ Begrepp finns, normalt 3–6, inleds med "Förklara följande begrepp med en mening:" och innehåller inga jämförelse-, urvals-, koppling- eller motiveringskrav (03, "Begrepp").
+□ Frågorna kan besvaras med hjälp av texten och tränar lärandemålets centrala delar.
 
-□ Praktiska uppgifter finns, normalt 2–5, och eleven producerar, genomför, undersöker, mäter, konstruerar, visualiserar eller presenterar faktiskt något (03, "Praktiska uppgifter").
+□ Frågorna prövar förståelse (förklara samband, orsak och konsekvens, jämföra, skilja begrepp, tillämpa på nytt exempel), inte mekanisk sökläsning.
 
-□ Ingen uppgift kallas praktisk uppgift utan att vara det — en ren skriftlig analys, jämförelse eller argumentation räcker inte.
+□ Inga "vem/när/hur många"-frågor utom där person, tidpunkt eller antal är en del av lärandemålet.
 
-□ Uppgifterna tränar lärandemålet.
+□ Inga frågor upprepar varandra, testar en oviktig detalj eller ligger utanför lärandemålet.
 
-□ Uppgifterna varierar i arbetsform och omfattning; ingen är en kosmetisk variant av en annan.
-
-□ Uppgifterna kan genomföras inom rimlig tid.
+□ Inget synligt Begrepp-block och inga praktiska uppgifter ligger under lärandemålet — begreppen behandlas i teorin, praktiken i kapitlets uppgiftsbank (03).
 
 ---
 
@@ -153,11 +151,25 @@ Granskning sker på fyra nivåer.
 
 □ Kapitlet täcker sitt ansvar enligt innehållsmatrisen.
 
-□ Praktiska moment förekommer där de passar.
-
 □ Exempel varierar.
 
 □ Kapitlet känns jämnt i kvalitet.
+
+## Kapitelavslutningar
+
+□ Kapitlet avslutas med en begreppsövning som täcker kapitlets centrala begrepp (11).
+
+□ Begreppsövningen är repetition och tillämpning, aldrig elevens första möte med ett begrepp.
+
+□ Kapitlet har en uppgiftsbank med uppgifter på nivåerna Kort aktivitet, Lektionsuppgift och Miniprojekt.
+
+□ Bankens uppgifter tränar tillsammans kapitlets centrala innehåll och förmågor; varje lärandemål som ska tränas praktiskt tas upp av minst en uppgift.
+
+□ Varje uppgift är kopplad till ett eller flera lärandemål och fungerar fristående (inga hänvisningar till "föregående lärandemål" eller "figuren ovan").
+
+□ Ingen uppgift är en kosmetisk variant av en annan; varje uppgift innebär ett verkligt producerande eller genomförande moment.
+
+□ Facit ingår aldrig i elevmanuset eller på den publika elevwebben (12).
 
 ---
 

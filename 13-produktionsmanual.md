@@ -50,20 +50,20 @@ Sätt `status: under-utveckling`. Identifiera enligt 08:
 - centrala begrepp → planera `concepts_introduced` (nya) och `concepts_used` (återanvända)
 - vilka figurer som behövs → registrera i `figures/registry.yml` och fyll i `figures`
 - kursplanetäckning → tagga `curriculum.niva1`/`niva2` med punkt-id från 07 (n1-xx, n2-xx; syftesmålet s-01 är giltigt på båda nivåerna)
-- om praktiskt moment passar → `practical_component: true`
 - vanliga missuppfattningar
+- praktisk träning planeras för kapitlets uppgiftsbank, inte per lärandemål
 
 ## 3. Skriv
 
-Skriv teori, figurplatshållare och uppgifter (Instuderingsfrågor/Begrepp/Praktiska uppgifter) enligt 03 och 05. Omfattar lärandemålet flera uppslag skrivs uppslagen som på varandra följande teori- och uppgiftssekvenser i samma fil, utan synliga uppslagsrubriker (12) — varje uppslag får egna uppgiftsdelar enligt 03:s uppslagsmodell.
+Skriv teori, figurplatshållare och avslutande **instuderingsfrågor** enligt 03 och 05. Lärandemålet har inget fast sidomfång; flödar det över flera sidor struktureras det med onumrerade underrubriker i löptexten (12), aldrig med uppslagsrubriker. Det finns **inget Begrepp-block och inga praktiska uppgifter** i lärandemålsfilen — begreppen behandlas i teorin (11), och de praktiska uppgifterna samlas i kapitlets uppgiftsbank (se "Kapitelavslutningar" nedan).
 
-Rubrikkonvention i källfilerna: teoriavsnitt och uppgiftsdelarna `## Instuderingsfrågor`, `## Begrepp`, `## Praktiska uppgifter` skrivs på `##`-nivå (sidtiteln är h1 på webben; exporten sänker brödtextens rubriker två steg så att hierarkin i Word blir rätt). Uppgifterna numreras 1, 2, 3 … med omstart i varje del.
+Rubrikkonvention i källfilerna: teoriavsnitt och `## Instuderingsfrågor` skrivs på `##`-nivå (sidtiteln är h1 på webben; exporten sänker brödtextens rubriker två steg). Frågorna numreras 1, 2, 3 … Det finns inget fast antal frågor (03).
 
 Vid ett begrepps huvudställe (filen där det står i `concepts_introduced`) skrivs begreppet i **fetstil** i den mening där det definieras. Detta är bindande standard.
 
-Praktiska uppgifter får inledas med en arbetsformsetikett i fetstil, t.ex. **Undersökning.**, **Konstruktion.**, **Analys.** eller **Test.** Etiketterna är rekommenderade när de gör arbetsformen tydligare för eleven, men de är inte obligatoriska och får inte skapa mekanisk likformighet — en praktisk uppgift utan etikett är helt korrekt.
-
 Figurer refereras med `[[figur:ID]]`, begrepp som introducerats i andra lärandemål med `[[begrepp:namn]]`.
+
+Om ett praktiskt moment undantagsvis hör hemma inne i lärandemålet skrivs det som ett tydligt moment i teoritexten, inte som en boolesk flagga (`practical_component` är pensionerat).
 
 ## 4. Granska
 
@@ -73,7 +73,7 @@ Genomför egengranskningen (08) och därefter granskningen av lärandemål (09).
 npm run validate
 ```
 
-Från denna status ställer valideringen innehållskrav: uppgiftsdelarna Instuderingsfrågor/Begrepp/Praktiska uppgifter ska finnas, Begreppsdelen ska inledas med standardformuleringen "Förklara följande begrepp med en mening:", `curriculum` ska vara taggat och inga HTML-kommentarer, TODO, uppslagsrubriker, äldre uppgiftsrubriker (Förstå/Utveckla/Utmana) eller markdownlänkar i elevtext får finnas kvar. Saknade figurer, AI-typiska formuleringar, tankstreck i elevtexten, "uppslag" som självreferens, uppgiftsantal utanför normalspannen (10–15/3–6/2–5, 03), Begreppsuppgifter med analys-/jämförelse-/motiveringskrav och ovanligt många personnamn ger varningar. Rätta alla fel och relevanta varningar.
+Från denna status ställer valideringen innehållskrav: en **icke-tom sektion `## Instuderingsfrågor`** ska finnas (inget bestämt antal), `curriculum` ska vara taggat och inga HTML-kommentarer, TODO, uppslagsrubriker, äldre uppgiftsrubriker (Förstå/Utveckla/Utmana) eller markdownlänkar i elevtext får finnas kvar. Saknade figurer, AI-typiska formuleringar, tankstreck i elevtexten, "uppslag" som självreferens och ovanligt många personnamn ger varningar. Begrepp- och Praktiska uppgifter-block kontrolleras inte längre per lärandemål. Rätta alla fel och relevanta varningar.
 
 ## 5. Committa
 
@@ -83,21 +83,34 @@ Senare granskningssteg (fackgranskad → språkgranskad → klar) uppdaterar sta
 
 ---
 
+# Kapitelavslutningar
+
+När ett kapitels lärandemål är producerade får kapitlet sina två avslutningar (12, "Kapitelavslutningar"). De skapas inte i förväg för kapitel som inte påbörjats.
+
+**Filer och manifest.** Skapa `content/<kapitelSlug>/uppgifter-och-projekt.md` (`type: uppgiftsbank`) och `content/<kapitelSlug>/begreppsovning.md` (`type: begreppsovning`) och lägg till kapitlet i `scripts/kapitelavslutningar-data.mjs`. Manifestet styr existens och ordning; filnamnet lokaliserar bara filen.
+
+**Uppgiftsbank.** Flytta kapitlets praktiska uppgifter hit ur lärandemålen och skriv om dem så att de fungerar fristående (05, "Självreferenser"): ersätt "från föregående lärandemål" och "figuren ovan" med stabil information i uppgiften. Slå ihop eller ta bort uppgifter som tränar samma sak på nästan samma sätt. Gruppera i `## Kort aktivitet`, `## Lektionsuppgift` och `## Miniprojekt`; skriv varje uppgift under en `### `-rubrik som inleds med uppgiftens `ref`. Fyll i `uppgifter[]` i frontmattern med obligatoriska fält (`ref`, `omfattning`, `larandemal`, `tid`, `arbetsform`, `produkt`) och relevanta valfria fält. En uppgift får inledas med en arbetsformsetikett i fetstil, t.ex. **Undersökning.**, **Konstruktion.** eller **Test.**, när den gör arbetsformen tydligare; etiketten är frivillig och får inte skapa mekanisk likformighet.
+
+**Begreppsövning.** Skriv en sammanhängande ifyllnadsövning över kapitlets centrala begrepp med numrerade luckor. Begreppen ska redan ha sitt huvudställe i eller före kapitlet — övningen är repetition, aldrig första mötet. En ordlista att välja ur får finnas. Facit skrivs inte här (repot är offentligt); det tekniska gränssnittet finns, men själva facit ligger i en separat privat lärarmaterialkälla (12).
+
+**Kör** `npm run validate`: manifestet stäms av mot filerna, uppgiftsbankens metadata valideras och den praktiska täckningen per lärandemål rapporteras.
+
+---
+
 # Metadatafälten
 
 Formatet definieras i `schemas/larandemal.schema.mjs` (12 är styrande). Kort bruksanvisning:
 
 - **id / chapter / module / title** — sätts av skeleton, ändras bara vid strukturändring.
 - **goal** — den mätbara målformuleringen ur 06. Inleds med observerbart verb.
-- **uppslag** — planerat antal uppslag. 1 om inget annat anges. Ändras bedömningen under produktion: markera **(N uppslag)** på raden i 06 och uppdatera fältet.
 - **status** — `ej-paborjad` → `under-utveckling` → `fardig-forsta-version` → `fackgranskad` → `sprakgranskad` → `klar`.
 - **curriculum** — punkt-id:n från 07:s tabeller (n1-xx, n2-xx, s-01), per nivå. Tomma listor betyder att lärandemålet ännu inte är taggat; taggning görs i steg 2 och krävs från status `fardig-forsta-version`.
 - **concepts_introduced** — begrepp som har sitt huvudställe här. Ett begrepp får bara introduceras i en fil i hela boken.
 - **concepts_used** — begrepp som används men introducerats någon annanstans.
 - **figures** — figur-ID:n som används; varje ID måste finnas i `figures/registry.yml`.
 - **prerequisites** — id:n på lärandemål som måste komma tidigare i läsordningen.
-- **practical_component** — `true` när lärandemålet innehåller ett praktiskt moment.
-- **praktiska_uppgifter_undantag** — kort redaktionell motivering, endast när antalet praktiska uppgifter medvetet avviker från normalspannet 2–5 (03). Lämnas tomt annars; validate varnar annars vid avvikelse.
+
+Fälten `uppslag` och `practical_component` är pensionerade (12) och skrivs inte längre. `praktiska_uppgifter_undantag` utgår med de fasta antalskraven.
 
 ---
 

@@ -88,21 +88,19 @@ Lärandemålen är ett redaktionellt verktyg och visas normalt inte för eleven 
 
 ---
 
-## Uppslag
+## Sidomfång
 
-Ett lärandemål omfattar normalt ett uppslag.
-
-Om stoffets komplexitet kräver det får ett lärandemål omfatta flera sammanhängande uppslag.
+Ett lärandemål har **inget fast sid- eller uppslagsomfång**. Det får flöda över så många sidor som förståelsen kräver, och det delas bara när det innehåller flera tydligt skilda kunskapsresultat, aldrig enbart därför att texten blir lång.
 
 Antalet sidor styrs av pedagogiken, aldrig tvärtom.
 
-Uppslag är ett internt produktions- och planeringsbegrepp. Det får aldrig användas som självreferens i elevtexten, till exempel "i det här uppslaget" eller "som du läste i uppslaget" (05-forfattarmanual.md, "Självreferenser"). Synlig rubriknumrering i elevtext och webb har alltid exakt tre nivåer: kapitel, modul, lärandemål (12-produktionsarkitektur.md, "Rubriknumrering"). Ett uppslag är aldrig en fjärde numrerad nivå.
+Uppslag och sidbrytningar är frågor för layout och tryckexport, inte nivåer i innehållsarkitekturen. "Uppslag" får aldrig användas som självreferens i elevtexten, till exempel "i det här uppslaget" eller "som du läste i uppslaget" (05-forfattarmanual.md, "Självreferenser"). Synlig rubriknumrering i elevtext och webb har alltid exakt tre nivåer: kapitel, modul, lärandemål (12-produktionsarkitektur.md, "Rubriknumrering").
 
 ---
 
-# Uppslagets struktur
+# Lärandemålets struktur
 
-Ett normalt uppslag består av två delar.
+Ett lärandemål består av två delar.
 
 ## Teori
 
@@ -125,57 +123,55 @@ Ett arbetat exempel används endast när det tydligt förbättrar förståelsen.
 
 ## Aktiv bearbetning
 
-Efter teorin följer uppgifter indelade i tre delar.
+Efter teorin följer **instuderingsfrågor**. Varje lärandemål avslutas med relevanta instuderingsfrågor direkt efter teorin.
 
 ### Instuderingsfrågor
 
-Kontrollerar att eleven förstått uppslagets innehåll.
+Kontrollerar att eleven förstått lärandemålets innehåll.
 
-Frågorna ska vara tydliga och kunna besvaras med hjälp av texten. Tillsammans ska de täcka hela teoridelen: dess fakta, samband och resonemang, inte bara rubriker och definitioner.
+Det finns **inget fast antal frågor**. Antalet bestäms av lärandemålets innehåll och komplexitet. Ett färdigt lärandemål ska ha minst en instuderingsfråga, men inget bestämt intervall gäller.
 
-Normalt 10–15 per uppslag.
+Varje fråga ska träna en central del av lärandemålet, gå att besvara med hjälp av teorin, bidra till grundläggande förståelse, vara tydligt skild från övriga frågor och när det är möjligt kontrollera mer än mekanisk sökläsning.
 
----
+Prioritera frågor där eleven ska förklara samband, beskriva orsaker och konsekvenser, jämföra, skilja mellan närliggande begrepp, använda kunskapen på ett nytt men enkelt exempel eller återge en process eller modell med egna ord.
 
-### Begrepp
+Frågor av typen "vem?", "när?" och "hur många?" används bara när personen, tidpunkten eller antalet är en relevant del av själva lärandemålet. Namn och årtal får finnas i teorin för historisk precision utan att automatiskt bli instuderingsfrågor.
 
-Kontrollerar att eleven kan formulera en kort begreppsförklaring.
+Ta bort frågor som upprepar en tidigare fråga, bara kontrollerar en oviktig detalj, testar formuleringar snarare än förståelse eller ligger utanför lärandemålet.
 
-Standardformuleringen är:
-
-> Förklara följande begrepp med en mening:
-
-Därefter listas normalt 3–6 relevanta begrepp från den aktuella texten, normalt i grundform. Endast begrepp som faktiskt behandlas i texten tas med, och synonymer eller nästan identiska begrepp undviks.
-
-Begreppsdelen ska **inte** innehålla krav på att eleven ska jämföra begrepp, skilja mellan begrepp, välja rätt begrepp, koppla begrepp till produkter, använda begrepp i längre resonemang, motivera val eller analysera tillämpningar. Sådana förmågor tränas i Instuderingsfrågor eller Praktiska uppgifter, aldrig under rubriken Begrepp.
-
-Delen får inte bli en ordlista med färdiga definitioner: eleven formulerar förklaringen själv.
-
-Normalt 3–6 per uppslag.
+Instuderingsfrågorna är lärandemålets enda uppgiftsdel. Det finns **inget synligt Begrepp-block** efter lärandemålet, och de **praktiska uppgifterna ligger inte här** utan i kapitlets uppgiftsbank (se "Kapitelavslutningar" nedan). Begreppsundervisningen sker i teorin (11-begreppsfilosofi.md); den praktiska träningen säkras samlat per kapitel.
 
 ---
 
-### Praktiska uppgifter
+# Kapitelavslutningar
 
-En praktisk uppgift innebär att eleven **producerar, genomför, undersöker, mäter, konstruerar, visualiserar eller presenterar** något. Den praktiska produktionen eller aktiviteten ska vara uppgiftens huvudsakliga arbete och tydligt framgå av instruktionen.
+Varje färdigproducerat kapitel avslutas med två samlade delar. De är egna innehållstyper, inte lärandemål, och tränar kapitlets innehåll som helhet (12-produktionsarkitektur.md, "Kapitelavslutningar").
 
-Godkända former omfattar till exempel: konstruktion, skiss, teknisk ritning, flödesdiagram, kalkylblad, tillverkning av presentationsmaterial, digital presentation, plansch, programmering, simulering, modellering, fysisk undersökning, användning av datorprogram, mätning, testning, experiment, prototyp, muntlig presentation, film, podd samt fysisk eller digital modell.
+## Begreppsövning
 
-En skriftlig analys, jämförelse, värdering, argumentation eller reflektion räknas inte i sig som en praktisk uppgift, även om den har teknisk kärna. En praktisk uppgift får innehålla en kort skriftlig dokumentation eller analys som ett sista led, men inte som huvudsaken.
+En samlad övning över kapitlets centrala begrepp, normalt utformad som en sammanhängande ifyllnadsövning med numrerade luckor. Eleven skriver svaren i separat häfte eller digitalt dokument; boken innehåller inga skrivytor.
 
-Omfattningen sträcker sig från korta tekniska moment på några minuter till mer omfattande laborationer eller konstruktionsuppgifter.
+Övningen använder begreppen i tekniskt meningsfulla sammanhang och kontrollerar användning och förståelse, inte bara ordagranna definitioner. Den är **repetition och tillämpning** och får aldrig vara elevens första möte med ett begrepp. En ordlista att välja ur får finnas när den förbättrar uppgiften. Facit hör till lärarmaterialet och ingår aldrig i elevmanuset.
 
-AI-uppgifter kan förekomma här när de tillför ett verkligt värde och uppfyller definitionen ovan (till exempel simulering eller informationsbearbetning som mynnar ut i något producerat).
+## Praktiska uppgifter och projekt
 
-Normalt 2–5 per uppslag, med variation i arbetsform och omfattning. Färre än 2 kräver ett tydligt redaktionellt skäl; fler än 5 ska undvikas. Flera uppgifter får inte vara kosmetiska varianter av samma aktivitet. Ett avsiktligt avsteg motiveras kort i frontmatterfältet `praktiska_uppgifter_undantag` (13-produktionsmanual.md) i stället för att en dålig eller konstlad uppgift läggs till bara för att nå spannet.
+Kapitlets praktiska uppgifter och projekt samlas i en bank med tre omfattningsnivåer:
+
+- **Kort aktivitet** — ungefär 10–30 minuter.
+- **Lektionsuppgift** — ungefär en lektion.
+- **Miniprojekt** — flera lektioner eller arbete utanför lektionstid.
+
+En praktisk uppgift innebär att eleven **producerar, genomför, undersöker, mäter, konstruerar, visualiserar eller presenterar** något. Den praktiska produktionen eller aktiviteten ska vara uppgiftens huvudsakliga arbete. Godkända former omfattar till exempel konstruktion, skiss, teknisk ritning, flödesdiagram, kalkylblad, digital presentation, plansch, programmering, simulering, modellering, fysisk undersökning, mätning, testning, experiment, prototyp, muntlig presentation, film och podd. En ren skriftlig analys, jämförelse eller argumentation räknas inte i sig som en praktisk uppgift; den får vara ett sista led, inte huvudsaken. AI-uppgifter förekommer när de tillför ett verkligt värde och uppfyller definitionen.
+
+Det finns **inget fast antal uppgifter** per kapitel eller lärandemål. I stället ska kapitlets centrala innehåll och förmågor tillsammans tränas av banken: varje uppgift kopplas till ett eller flera lärandemål så att den praktiska täckningen går att följa. Uppgifter som tränar samma sak på nästan samma sätt slås ihop eller tas bort, och varje uppgift ska fungera fristående med stabil information i själva instruktionen, utan hänvisningar av typen "som i figuren ovan".
 
 ---
 
 # Praktiskt arbete
 
-Om ett lärandemål kan tränas praktiskt utan att uppgiften känns konstruerad ska boken innehålla ett praktiskt moment.
+Praktisk träning är central (10-amnesfilosofi.md, "Teknik är praktiskt"), men säkras samlat i kapitlets uppgiftsbank i stället för genom ett krav på praktiska uppgifter under varje enskilt lärandemål. Ett lärandemål behöver alltså inte ha ett eget praktiskt moment.
 
-Praktiska moment prioriteras framför motsvarande teoretiska uppgifter när båda tränar samma förmåga.
+Om ett praktiskt moment ändå hör naturligt hemma inne i ett lärandemål skrivs det som ett tydligt moment i lärandemålets text. Praktiska moment prioriteras framför motsvarande teoretiska uppgifter när båda tränar samma förmåga.
 
 ---
 
@@ -195,7 +191,7 @@ Manuset innehåller därför endast platshållare som beskriver:
 - vilket innehåll den ska visa
 - hur den används i texten
 
-Varje teoriuppslag ska normalt innehålla minst en figur.
+Varje lärandemål ska normalt innehålla minst en figur.
 
 ---
 
@@ -273,8 +269,10 @@ Ett lärandemål är färdigt först när:
 - teorin är komplett men koncentrerad
 - alla fakta är korrekta
 - minst en figur finns specificerad när den förbättrar förståelsen
-- uppgifter finns under Instuderingsfrågor, Begrepp och Praktiska uppgifter
-- praktiskt moment finns när det känns naturligt
+- lärandemålet avslutas med relevanta instuderingsfrågor som tränar målet
+- nya begrepp introduceras, definieras och används korrekt i teorin
 - AI används endast där det tillför verkligt värde
 - verkliga exempel används
 - eleven rimligen kan uppnå lärandemålet utan ytterligare teori
+
+Ett kapitel är färdigt först när det dessutom avslutas med en begreppsövning som täcker kapitlets centrala begrepp och en uppgiftsbank vars uppgifter tillsammans ger tillräcklig praktisk och producerande träning, var och en kopplad till relevanta lärandemål.

@@ -1,6 +1,6 @@
 # Teknik Gy25 — lärobok
 
-Lärobok i Teknik nivå 1+2 (Gy25) som utvecklas som en modulär kunskapsdatabas: ett lärandemål = en fil under `content/`. Utöver startsidan finns inga andra filer i content/ — kapitel- och modulsidor är genererade vyer (`site/src/pages/[...oversikt].astro`) som härleds ur 06 + frontmatter vid varje bygge. Produktionsmålet är förlagsfärdig text.
+Lärobok i Teknik nivå 1+2 (Gy25) som utvecklas som en modulär kunskapsdatabas: ett lärandemål = en fil under `content/`. Utöver startsidan och kapitelavslutningarna (per kapitel: en begreppsövning och en uppgiftsbank, egna `type`-innehållstyper, inte lärandemål) finns inga andra filer i content/ — kapitel- och modulsidor är genererade vyer (`site/src/pages/[...oversikt].astro`) som härleds ur 06 + frontmatter vid varje bygge. Produktionsmålet är förlagsfärdig text.
 
 ## Källor — vad som styr vad
 
@@ -21,8 +21,8 @@ Lärobok i Teknik nivå 1+2 (Gy25) som utvecklas som en modulär kunskapsdatabas
 ## Arbetsflöde för ett lärandemål (detaljer i 13-produktionsmanual.md)
 
 1. Välj nästa mål i modulens ordning; kontrollera att `goal` är rätt avgränsat.
-2. Sätt `status: under-utveckling`. Fyll i `prerequisites`, planera begrepp, registrera figurer i `figures/registry.yml`, tagga `curriculum` med punkt-id från 07, sätt `practical_component`.
-3. Skriv teori, figurplatshållare och uppgifter (Instuderingsfrågor/Begrepp/Praktiska uppgifter) enligt 03 + 05. Ta bort platshållarkommentaren.
+2. Sätt `status: under-utveckling`. Fyll i `prerequisites`, planera begrepp, registrera figurer i `figures/registry.yml`, tagga `curriculum` med punkt-id från 07.
+3. Skriv teori, figurplatshållare och avslutande instuderingsfrågor enligt 03 + 05 (inget Begrepp-block, inga praktiska uppgifter i lärandemålet). Ta bort platshållarkommentaren.
 4. Egengranska (08) och granska mot 09. Kör `npm run validate`. Sätt `status: fardig-forsta-version`.
 5. Committa: ett commit per lärandemål, t.ex. `Lärandemål 6.1.1 Kraftbegreppet — färdig första version`.
 
@@ -35,7 +35,9 @@ Alltid: 03 (pedagogisk modell), 05 (språk), 11 (begreppshantering). Vid taggnin
 - Skriv aldrig innehåll utanför kursplanen; hitta aldrig på fakta eller fiktiva exempel när verkliga finns.
 - Aldrig ett helt kapitel i ett steg — ett lärandemål i taget (08).
 - Ett begrepp introduceras i exakt en fil (`concepts_introduced`); återanvänd via `concepts_used`/`[[begrepp:namn]]`.
-- Statusflödet är: ej-paborjad → under-utveckling → fardig-forsta-version → fackgranskad → sprakgranskad → klar. Från fardig-forsta-version ställer validate innehållskrav (uppgiftsdelar, taggning, inga kommentarer).
+- Ett lärandemål har inget fast sid-/uppslagsomfång; uppslag är en layout-/tryckfråga, inte en nivå i datamodellen. Fälten `uppslag` och `practical_component` är pensionerade.
+- Lärandemålet avslutas med instuderingsfrågor (inget fast antal). Inget synligt Begrepp-block per lärandemål; praktiska uppgifter samlas i kapitlets uppgiftsbank. Varje kapitel avslutas med en begreppsövning och en uppgiftsbank (`type: begreppsovning`/`uppgiftsbank`, ej lärandemål, inga lärandemåls-id; deklareras i `scripts/kapitelavslutningar-data.mjs`).
+- Statusflödet är: ej-paborjad → under-utveckling → fardig-forsta-version → fackgranskad → sprakgranskad → klar. Från fardig-forsta-version ställer validate innehållskrav (icke-tom instuderingsfrågesektion, taggning, inga kommentarer).
 - Filnamn nollutfylls (`6.01.02-kraftresultanter.md`), frontmatter-id gör det inte (`6.1.2`). Skeleton skapar rätt namn.
 - Delning/sammanslagning av lärandemål: redigera 06, kör `npm run skeleton`, flytta ev. innehåll, radera överflödiga filer manuellt, kör `npm run validate`.
 - Kapitel-/modulstruktur och kursplanetäckning ändras aldrig utan uttryckligt beslut av projektägaren.

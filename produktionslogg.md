@@ -7,8 +7,18 @@ betraktas som färdig första version. "Överträffar Golden Master" ska motiver
 och eventuell ny standard lyftas för redaktionellt beslut. Loggen ingår inte i
 bokexporten (export läser endast content/).
 
+**Strukturrevision 2026-07-13 (redaktionellt beslut, lärandemålsstyrd modell):**
+övergång från uppslagsstyrd till lärandemålsstyrd modell. Uppslaget avskaffat som
+arkitekturnivå; inga fasta antalsintervall för instuderingsfrågor. Synliga
+Begrepp-block borttagna ur lärandemålen (begreppen kvar i teorin). Praktiska
+uppgifter flyttade till kapitelvisa uppgiftsbanker med tre omfattningsnivåer.
+Ny begreppsövning per kapitel. Kapitel 1 omstrukturerat (drivkrafter och framtid
+i ny modul 1.5; kapitelrubrik "Teknikens utveckling"). Äldre uppgiftsrubriker
+(Förstå/Utveckla/Utmana) och uppgiftsdelen Begrepp är därmed helt utfasade.
+Fält `uppslag` och `practical_component` pensionerade.
+
 **Strukturrevision 2026-07-10 (redaktionellt beslut):** samtliga 15 färdiga
-lärandemål reviderade till ny uppgiftsstruktur (Instuderingsfrågor/Begrepp/
+lärandemål reviderade till dåvarande uppgiftsstruktur (Instuderingsfrågor/Begrepp/
 Praktiska uppgifter), personnamn gallrade enligt 05 "Personnamn", tonen
 skärpt enligt 10 "Teknik före samhälle", synliga uppslagsrubriker borttagna.
 1.1.1 reviderades först, kvalitetsgranskades fullständigt mot 09 och
