@@ -75,7 +75,7 @@ Granskning sker på fyra nivåer.
 
 ## Instuderingsfrågor
 
-□ Lärandemålet avslutas med minst en instuderingsfråga (inget fast antal, 03).
+□ Lärandemålet avslutas med instuderingsfrågor, riktmärke 4–6 (03). Undvik långa frågebatterier.
 
 □ Frågorna kan besvaras med hjälp av texten och tränar lärandemålets centrala delar.
 
@@ -173,13 +173,13 @@ Granskning sker på fyra nivåer.
 
 □ Begreppsövningen är repetition och tillämpning, aldrig elevens första möte med ett begrepp.
 
-□ Kapitlet har en uppgiftsbank med uppgifter på nivåerna Kort aktivitet, Lektionsuppgift och Miniprojekt.
+□ Kapitlet har en uppgiftsbank som en enkel numrerad lista (löpnummer + namn), utan nivåer och utan metadata om arbetsform, tid, redovisning eller lärandemålskoppling (03).
 
-□ Bankens uppgifter tränar tillsammans kapitlets centrala innehåll och förmågor; varje lärandemål som ska tränas praktiskt tas upp av minst en uppgift.
+□ Bankens uppgifter ger tillsammans tillräcklig praktisk och producerande träning för kapitlets centrala innehåll och förmågor.
 
-□ Varje uppgift är kopplad till ett eller flera lärandemål och fungerar fristående (inga hänvisningar till "föregående lärandemål" eller "figuren ovan").
+□ Varje uppgift fungerar fristående (inga hänvisningar till "föregående lärandemål" eller "figuren ovan") och innebär ett verkligt producerande eller genomförande moment.
 
-□ Ingen uppgift är en kosmetisk variant av en annan; varje uppgift innebär ett verkligt producerande eller genomförande moment.
+□ Ingen uppgift är en kosmetisk variant av en annan.
 
 □ Facit ingår aldrig i elevmanuset eller på den publika elevwebben (12).
 

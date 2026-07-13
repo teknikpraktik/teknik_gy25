@@ -138,7 +138,7 @@ Efter teorin följer **instuderingsfrågor**. Varje lärandemål avslutas med re
 
 Kontrollerar att eleven förstått lärandemålets innehåll.
 
-Det finns **inget fast antal frågor**. Antalet bestäms av lärandemålets innehåll och komplexitet. Ett färdigt lärandemål ska ha minst en instuderingsfråga, men inget bestämt intervall gäller.
+Antalet frågor bestäms av lärandemålets innehåll och komplexitet, men **sikta på 4–6 frågor** per lärandemål. Det är ett riktmärke, inte ett hårt krav: ett färdigt lärandemål ska ha minst en instuderingsfråga, och färre eller fler än 4–6 är tillåtet när innehållet motiverar det. Undvik långa frågebatterier — välj de frågor som bäst tränar lärandemålets kärna.
 
 Varje fråga ska träna en central del av lärandemålet, gå att besvara med hjälp av teorin, bidra till grundläggande förståelse, vara tydligt skild från övriga frågor och när det är möjligt kontrollera mer än mekanisk sökläsning.
 
@@ -180,15 +180,11 @@ En samlad övning över kapitlets centrala begrepp, normalt utformad som en samm
 
 ## Praktiska uppgifter och projekt
 
-Kapitlets praktiska uppgifter och projekt samlas i en bank med tre omfattningsnivåer:
+Kapitlets praktiska uppgifter och projekt samlas i en bank som en **enkel numrerad lista**: varje uppgift har ett löpnummer från 1 och ett namn, följt av själva uppgiften. Banken delas **inte** in i omfattningsnivåer, och uppgifterna förses **inte** med metadata om arbetsform, tidsåtgång, redovisningsform eller vilket lärandemål de tränar. Utförandet överlåts till läraren och eleven.
 
-- **Kort aktivitet** — ungefär 10–30 minuter.
-- **Lektionsuppgift** — ungefär en lektion.
-- **Miniprojekt** — flera lektioner eller arbete utanför lektionstid.
+En praktisk uppgift innebär att eleven **producerar, genomför, undersöker, mäter, konstruerar, visualiserar eller presenterar** något. Godkända former omfattar till exempel konstruktion, skiss, teknisk ritning, flödesdiagram, kalkylblad, digital presentation, plansch, programmering, simulering, modellering, fysisk undersökning, mätning, testning, experiment, prototyp, muntlig presentation, film och podd. En ren skriftlig analys, jämförelse eller argumentation räknas inte i sig som en praktisk uppgift; den får vara ett sista led, inte huvudsaken. AI-uppgifter förekommer när de tillför ett verkligt värde.
 
-En praktisk uppgift innebär att eleven **producerar, genomför, undersöker, mäter, konstruerar, visualiserar eller presenterar** något. Den praktiska produktionen eller aktiviteten ska vara uppgiftens huvudsakliga arbete. Godkända former omfattar till exempel konstruktion, skiss, teknisk ritning, flödesdiagram, kalkylblad, digital presentation, plansch, programmering, simulering, modellering, fysisk undersökning, mätning, testning, experiment, prototyp, muntlig presentation, film och podd. En ren skriftlig analys, jämförelse eller argumentation räknas inte i sig som en praktisk uppgift; den får vara ett sista led, inte huvudsaken. AI-uppgifter förekommer när de tillför ett verkligt värde och uppfyller definitionen.
-
-Det finns **inget fast antal uppgifter** per kapitel eller lärandemål. I stället ska kapitlets centrala innehåll och förmågor tillsammans tränas av banken: varje uppgift kopplas till ett eller flera lärandemål så att den praktiska täckningen går att följa. Uppgifter som tränar samma sak på nästan samma sätt slås ihop eller tas bort, och varje uppgift ska fungera fristående med stabil information i själva instruktionen, utan hänvisningar av typen "som i figuren ovan".
+Det finns **inget fast antal uppgifter** per kapitel. Banken ska tillsammans ge tillräcklig praktisk och producerande träning för kapitlets centrala innehåll och förmågor. Uppgifter som tränar samma sak på nästan samma sätt slås ihop eller tas bort, och varje uppgift ska fungera fristående med stabil information i själva instruktionen, utan hänvisningar av typen "som i figuren ovan".
 
 ---
 

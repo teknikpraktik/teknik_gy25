@@ -84,7 +84,7 @@ Sätt `status: under-utveckling`. Identifiera enligt 08:
 
 Skriv teori, figurplatshållare och avslutande **instuderingsfrågor** enligt 03 och 05. Lärandemålet har inget fast sidomfång; flödar det över flera sidor struktureras det med onumrerade underrubriker i löptexten (12), aldrig med uppslagsrubriker. Det finns **inget Begrepp-block och inga praktiska uppgifter** i lärandemålsfilen — begreppen behandlas i teorin (11), och de praktiska uppgifterna samlas i kapitlets uppgiftsbank (se "Kapitelavslutningar" nedan).
 
-Rubrikkonvention i källfilerna: teoriavsnitt och `## Instuderingsfrågor` skrivs på `##`-nivå (sidtiteln är h1 på webben; exporten sänker brödtextens rubriker två steg). Frågorna numreras 1, 2, 3 … Det finns inget fast antal frågor (03).
+Rubrikkonvention i källfilerna: teoriavsnitt och `## Instuderingsfrågor` skrivs på `##`-nivå (sidtiteln är h1 på webben; exporten sänker brödtextens rubriker två steg). Frågorna numreras 1, 2, 3 … Sikta på 4–6 frågor per lärandemål (03); undvik långa frågebatterier.
 
 Vid ett begrepps huvudställe (filen där det står i `concepts_introduced`) skrivs begreppet i **fetstil** i den mening där det definieras. Detta är bindande standard.
 
@@ -116,7 +116,7 @@ När ett kapitels lärandemål är producerade får kapitlet sina två avslutnin
 
 **Filer och manifest.** Skapa `content/<kapitelSlug>/uppgifter-och-projekt.md` (`type: uppgiftsbank`) och `content/<kapitelSlug>/begreppsovning.md` (`type: begreppsovning`) och lägg till kapitlet i `scripts/kapitelavslutningar-data.mjs`. Manifestet styr existens och ordning; filnamnet lokaliserar bara filen.
 
-**Uppgiftsbank.** Flytta kapitlets praktiska uppgifter hit ur lärandemålen och skriv om dem så att de fungerar fristående (05, "Självreferenser"): ersätt "från föregående lärandemål" och "figuren ovan" med stabil information i uppgiften. Slå ihop eller ta bort uppgifter som tränar samma sak på nästan samma sätt. Gruppera i `## Kort aktivitet`, `## Lektionsuppgift` och `## Miniprojekt`; skriv varje uppgift under en `### `-rubrik som inleds med uppgiftens `ref`. Fyll i `uppgifter[]` i frontmattern med obligatoriska fält (`ref`, `omfattning`, `larandemal`, `tid`, `arbetsform`, `produkt`) och relevanta valfria fält. En uppgift får inledas med en arbetsformsetikett i fetstil, t.ex. **Undersökning.**, **Konstruktion.** eller **Test.**, när den gör arbetsformen tydligare; etiketten är frivillig och får inte skapa mekanisk likformighet.
+**Uppgiftsbank.** Skriv kapitlets praktiska uppgifter som en **enkel numrerad lista** i brödtexten: löpnummer från 1, ett namn i fetstil och därefter uppgiften, till exempel `1. **Behovet bakom föremålet.** Välj ett vardagsföremål …`. Ingen indelning i nivåer, ingen frontmatter-metadata och ingen uppgift om arbetsform, tid, redovisning eller vilket lärandemål uppgiften tränar — utförandet överlåts till läraren och eleven. Varje uppgift ska fungera fristående (05, "Självreferenser"): ersätt "från föregående lärandemål" och "figuren ovan" med stabil information i uppgiften. Slå ihop eller ta bort uppgifter som tränar samma sak på nästan samma sätt.
 
 **Begreppsövning.** Skriv en sammanhängande ifyllnadsövning över kapitlets centrala begrepp med numrerade luckor. Begreppen ska redan ha sitt huvudställe i eller före kapitlet — övningen är repetition, aldrig första mötet. En ordlista att välja ur får finnas. Facit skrivs inte här (repot är offentligt); det tekniska gränssnittet finns, men själva facit ligger i en separat privat lärarmaterialkälla (12).
 

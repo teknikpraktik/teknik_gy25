@@ -449,34 +449,6 @@ for (const ka of kapitelavslutningsFiler) {
 	}
 }
 
-// Uppgiftsbankernas kopplingar: varje uppgift ska peka på lärandemål i samma
-// kapitel, ref:erna ska vara unika, och kroppen bör innehålla varje ref.
-const praktiskTackning = new Map(); // kapNr -> Set(lärandemåls-id som tränas)
-for (const ka of kapitelavslutningsFiler) {
-	if (ka.type !== 'uppgiftsbank') continue;
-	const refar = new Set();
-	if (!praktiskTackning.has(ka.chapter)) praktiskTackning.set(ka.chapter, new Set());
-	for (const u of ka.uppgifter ?? []) {
-		if (refar.has(u.ref)) {
-			errors.push(`${ka.file}: uppgifts-ref "${u.ref}" förekommer flera gånger.`);
-		}
-		refar.add(u.ref);
-		if (!ka.body.includes(u.ref)) {
-			warnings.push(`${ka.file}: uppgiften "${u.ref}" finns i frontmattern men ref:en förekommer inte i kroppen.`);
-		}
-		for (const lmId of u.larandemal) {
-			const p = planById.get(lmId);
-			if (!p) {
-				errors.push(`${ka.file}: uppgift "${u.ref}" kopplar till lärandemål "${lmId}" som inte finns i bokstrukturen.`);
-			} else if (p.chapter !== ka.chapter) {
-				errors.push(`${ka.file}: uppgift "${u.ref}" kopplar till lärandemål "${lmId}" i kapitel ${p.chapter}, men banken hör till kapitel ${ka.chapter}.`);
-			} else {
-				praktiskTackning.get(ka.chapter).add(lmId);
-			}
-		}
-	}
-}
-
 // -------------------------------------------------------------- Statusöversikt
 const statusCount = {};
 const chapterStatus = new Map();
@@ -499,18 +471,6 @@ if (larandemal.length > 0) {
 	console.log('\nPer kapitel (påbörjade/klara av totalt):');
 	for (const [chapter, cs] of [...chapterStatus.entries()].sort((a, b) => a[0] - b[0])) {
 		console.log(`  Kapitel ${chapter}: ${cs.paborjade} påbörjade, ${cs.klara} klara av ${cs.totalt}`);
-	}
-	console.log('');
-}
-
-// Praktisk täckning per kapitel: vilka lärandemål tränas av uppgiftsbanken.
-if (Object.keys(kapitelavslutningar).length > 0) {
-	console.log('Praktisk täckning (lärandemål som tränas av kapitlets uppgiftsbank):');
-	for (const nr of [...praktiskTackning.keys()].sort((a, b) => a - b)) {
-		const kapitletsLm = plan.filter((p) => p.chapter === nr).map((p) => p.id);
-		const tackta = praktiskTackning.get(nr);
-		const otackta = kapitletsLm.filter((id) => !tackta.has(id));
-		console.log(`  Kapitel ${nr}: ${tackta.size}/${kapitletsLm.length} lärandemål tränas${otackta.length > 0 ? ` (otäckta: ${otackta.join(', ')})` : ''}`);
 	}
 	console.log('');
 }

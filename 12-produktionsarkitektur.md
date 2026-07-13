@@ -181,17 +181,9 @@ type: uppgiftsbank          # eller: begreppsovning
 chapter: 1
 title: "Praktiska uppgifter och projekt"
 status: fardig-forsta-version
-uppgifter:                  # endast uppgiftsbank
-  - ref: k1-u3
-    omfattning: miniprojekt   # kort-aktivitet | lektionsuppgift | miniprojekt
-    larandemal: ["1.3.1", "1.3.2"]
-    tid: "3–4 lektioner"
-    arbetsform: grupp         # individuell | par | grupp
-    produkt: "plansch och kort rapport"
-    # valfria: material, digitala_verktyg, forkunskaper, extern_tillgang, alternativ
 ```
 
-Obligatoriska fält per uppgift: `ref`, `omfattning`, `larandemal`, `tid`, `arbetsform`, `produkt`. Valfria: `material`, `digitala_verktyg`, `forkunskaper`, `extern_tillgang`, `alternativ`. `uppgifter[]` är den validerade datamodellen; varje `ref` motsvarar en uppgift i kroppen, och varje `larandemal`-id måste finnas i samma kapitel. Valideringen rapporterar per kapitel vilka lärandemål som tränas av minst en uppgift (praktisk täckning).
+Uppgiftsbanken har **ingen uppgiftsmetadata**. Uppgifterna skrivs som en enkel numrerad lista i brödtexten — löpnummer från 1, ett namn i fetstil och därefter uppgiften — utan nivåer (kort/lektion/miniprojekt), arbetsform, tidsåtgång, redovisningsform eller lärandemålskoppling. Utförandet överlåts till läraren och eleven (redaktionellt beslut). Begreppsövningen får ha en valfri `ordlista`.
 
 **Placering:** kapitelavslutningarna slottas sist i kapitlet (efter sista modulen) i sidopanelen, kapitelöversikten, granskningsvyn `/review/` och exporten, i manifestets ordning.
 
@@ -209,7 +201,7 @@ Obligatoriska fält per uppgift: `ref`, `omfattning`, `larandemal`, `tid`, `arbe
 - **Förkunskapsordning** — en fils `prerequisites` måste ligga tidigare i läsordningen (kapitel.modul.löpnummer), i linje med 04 §10.
 - **Kursplantaggning** — `curriculum.niva1`/`niva2` innehåller punkt-id:n enligt 07 (via `kursplan-data.mjs`); tagg i ett kapitel utanför punktens matrisrad ger varning.
 - **Statusstyrda innehållskontroller** — från status `fardig-forsta-version` krävs en **icke-tom sektion Instuderingsfrågor** (inget bestämt antal, 03), icke-tom kursplantaggning och att inga HTML-kommentarer, TODO, uppslagsrubriker eller äldre uppgiftsrubriker (Förstå/Utveckla/Utmana) finns kvar; saknade figurer, AI-typiska formuleringar, tankstreck i elevtexten (05), markdownlänkar i elevtext, "uppslag" som självreferens och ovanligt många personnamn (05) ger varning. Inget Begrepp-block och inga praktiska uppgifter kontrolleras längre per lärandemål — de hör till kapitelavslutningarna.
-- **Kapitelavslutningar** — kapitelmanifestet (`scripts/kapitelavslutningar-data.mjs`) stäms av mot filerna åt båda håll; uppgiftsbankens `uppgifter[]` valideras (obligatoriska fält, giltiga lärandemåls-id i kapitlet) och den praktiska täckningen per lärandemål rapporteras.
+- **Kapitelavslutningar** — kapitelmanifestet (`scripts/kapitelavslutningar-data.mjs`) stäms av mot filerna åt båda håll (rätt `type`/`chapter`/`title`). Uppgiftsbanken har ingen metadata att validera; uppgifterna är fri numrerad brödtext.
 - **Modulstandard (rådgivande)** — en varning (aldrig ett fel) flaggar moduler med bara ett lärandemål eller fler än fem, i linje med tumregeln 2–5 (03, "Modul"). Kontrollen gör aldrig ensam bygget rött; modulstandarden och kapitelavgränsningen är normerade i 03-bokens-arkitektur.md.
 - **Statusöversikt** — sammanställer antal lärandemål per status, totalt och per kapitel, som ersättning för manuell bokföring i 06.
 - **Kursplanetäckningsöversikt** — antal påbörjade lärandemål per kursplanepunkt, uppdelat på primärkapitlet och övriga kapitel.
