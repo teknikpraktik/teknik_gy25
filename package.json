@@ -9,7 +9,8 @@
     "validate": "node scripts/validate.mjs",
     "begrepp": "node scripts/begreppsregister.mjs",
     "export": "node scripts/export-manuscript.mjs",
-    "export:review": "node scripts/export-review.mjs"
+    "export:review": "node scripts/export-review.mjs",
+    "kapitel-klar": "npm run validate && npm run begrepp && npm --prefix site run build && npm run export && npm run export:review"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

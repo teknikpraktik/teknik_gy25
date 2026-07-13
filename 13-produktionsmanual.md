@@ -23,6 +23,33 @@ Alla kommandon körs från projektroten.
 | `npm run begrepp` | Genererar det centrala begreppsregistret till `export/begreppsregister.md`. |
 | `npm run export` | Sammanställer förlagsmanus i läsordning till `export/` (Word via Pandoc). Tar bara med lärandemål med status `fardig-forsta-version` eller högre; annan lägstanivå väljs med `-- --status=<status>` eller `-- --status=alla`. |
 | `npm run export:review` | Bygger det redaktionella granskningsmanuset till `dist/review/granskningsmanus.docx` och `.html` (samma innehåll och ordning, endast `fardig-forsta-version` och uppåt) och kör automatiska efterkontroller. Kräver Pandoc. Words innehållsförteckning uppdateras med Ctrl+A, F9. Referensdokumentet `scripts/review-reference.docx` återskapas vid behov med `node scripts/make-review-reference.mjs`. |
+| `npm run kapitel-klar` | Samlad "uppdatera allt": validering, begreppsregister, webbygge och båda exporterna i en körning. Körs vid kapitelavslut, inte vid varje redaktionell ändring. |
+
+---
+
+# Arbetslägen: snabb iteration och kapitelavslut
+
+Produktionen har två lägen. Att hålla isär dem är det som gör redaktionellt arbete snabbt.
+
+**Snabb iteration (under arbetet med ett kapitel).** Vid vanliga redaktionella ändringar — rubriktext, frågeformulering, faktarättning, brödtext, en uppgift, en figurspecifikation — räcker den snabba grinden:
+
+```
+npm run validate
+```
+
+Kör **inte** webbygge, export eller deploy för varje sådan ändring. `npm run validate` (~sekunder) fångar de faktiska struktur-, begrepps-, figur- och kopplingsfelen. Rensa aldrig Astro-cachen i detta läge.
+
+**Kapitelavslut (när ett kapitel bedöms klart).** Då körs den samlade uppdateringen en gång:
+
+```
+npm run kapitel-klar
+```
+
+Den kör validering, begreppsregister, webbygge och båda exporterna. Först här är det motiverat att rensa Astro-cachen (`site/.astro`, `site/node_modules/.astro`) om remark-pluginen eller figurregistret ändrats (se CLAUDE.md), och att pusha så att granskningssajten publiceras.
+
+**Undantag som alltid kräver fullt bygge direkt** (inte bara `validate`): ändringar i schema, remark-pluginen, figurregistret, Astro-konfigurationen eller routing/struktur (nya filer, om­döpta slugs, kapitel-/modulflytt). Där kan `validate` ensamt inte fånga renderingsfel.
+
+**Rubrik-/titeländringar** kaskaderar i dag till slug, filnamn och frontmatter-titel (06 är enda källan). Samla därför sådana ändringar och genomför dem vid kapitelavslut, inte styckvis under iterationen.
 
 ---
 
