@@ -25,7 +25,7 @@ uppgifter:
     produkt: "skalenlig tidslinje med skalkommentar"
   - ref: k1-u4
     omfattning: kort-aktivitet
-    larandemal: ["1.4.1"]
+    larandemal: ["1.2.4"]
     tid: "cirka 30 minuter"
     arbetsform: individuell
     produkt: "kalkylblad med rimlighetsbedömning"
@@ -51,27 +51,27 @@ uppgifter:
     produkt: "märkt principskiss"
   - ref: k1-u8
     omfattning: lektionsuppgift
-    larandemal: ["1.3.1"]
+    larandemal: ["1.2.3"]
     tid: "en lektion"
     arbetsform: par
     produkt: "kalkylblad och ett kort skriftligt resonemang"
     digitala_verktyg: ["kalkylprogram"]
   - ref: k1-u9
     omfattning: lektionsuppgift
-    larandemal: ["1.4.2"]
+    larandemal: ["1.2.5"]
     tid: "en lektion"
     arbetsform: par
     produkt: "diagram över mönstret och en kort analys"
   - ref: k1-u10
     omfattning: lektionsuppgift
-    larandemal: ["1.5.1"]
+    larandemal: ["1.3.1"]
     tid: "en lektion"
     arbetsform: individuell
     produkt: "drivkraftsschema med angivna källor"
-    forkunskaper: ["1.5.1"]
+    forkunskaper: ["1.3.1"]
   - ref: k1-u11
     omfattning: miniprojekt
-    larandemal: ["1.3.2", "1.3.1"]
+    larandemal: ["1.2.2"]
     tid: "flera lektioner"
     arbetsform: grupp
     produkt: "plansch om ortens produktion, arbete och levnadsvillkor med ett fotograferat spår"
@@ -79,7 +79,7 @@ uppgifter:
     alternativ: "arbeta helt med digitalt material: kommunens historik, Riksarkivets och Statistiska centralbyråns äldre uppgifter samt historiska kartor på nätet"
   - ref: k1-u12
     omfattning: miniprojekt
-    larandemal: ["1.3.1", "1.3.2"]
+    larandemal: ["1.2.4", "1.2.5"]
     tid: "flera lektioner"
     arbetsform: grupp
     produkt: "rapport eller presentation om arbetsdelning och teknikskiften på arbetsplatsen"
@@ -87,21 +87,13 @@ uppgifter:
     alternativ: "använd företagets eget material: webbplats, film från produktionen eller årsredovisning"
   - ref: k1-u13
     omfattning: miniprojekt
-    larandemal: ["1.4.1", "1.4.2"]
+    larandemal: ["1.2.4", "1.2.5"]
     tid: "flera lektioner"
     arbetsform: par
     produkt: "presentation som visar den tekniska kedjan och jämför förr och nu"
     digitala_verktyg: ["presentationsprogram"]
     extern_tillgang: "en person som är minst 30 år äldre än eleverna att intervjua"
     alternativ: "använd skriftliga källor eller filmer om hur sysslan gick till före digitaliseringen"
-  - ref: k1-u14
-    omfattning: miniprojekt
-    larandemal: ["1.5.2", "1.5.1"]
-    tid: "flera lektioner"
-    arbetsform: grupp
-    produkt: "digital presentation eller plansch med en bedömning utifrån de fyra mönstren"
-    forkunskaper: ["1.5.1", "1.5.2"]
-    digitala_verktyg: ["presentationsprogram"]
 ---
 
 Kapitlets praktiska uppgifter och projekt är samlade här. Varje uppgift anger sin
@@ -248,13 +240,3 @@ uppgift sköttes innan tjänsten fanns. Om ingen finns att intervjua använder n
 skriftliga källor eller filmer. Redovisa som en presentation som visar både den
 tekniska kedjan och vad som blev bättre respektive gick förlorat. **Lämna in:** en
 presentation.
-
-### k1-u14 · Bedöm en ny teknik
-
-**Miniprojekt · grupp · flera lektioner · tränar 1.5.2 och 1.5.1.** Välj en teknik
-som just nu beskrivs som revolutionerande, till exempel humanoida robotar,
-AI-assistenter eller självkörande fordon. Gör en bedömning av teknikens utveckling
-och samhällspåverkan utifrån alla fyra mönstren från kapitlet: tidsmönstret,
-lagermönstret, följdmönstret och drivkraftsmönstret. Ange vilka tekniska tecken som
-inom fem år skulle visa att er bedömning stämmer, och vilka som skulle få er att
-ändra den. **Lämna in:** en digital presentation eller plansch.

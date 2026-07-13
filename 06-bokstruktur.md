@@ -64,29 +64,23 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 
 # Kapitel 1 – Teknikens utveckling
 
-## Modul 1.1 Teknik: människans problemlösning
+## Modul 1.1 Teknik – människans problemlösning
 
 - **1.1.1 Vad är teknik?** — Förklara vad teknik är och ge exempel på hur tekniska lösningar svarar mot mänskliga behov och problem.
 - **1.1.2 Teknik, naturvetenskap och matematik** — Beskriva hur teknik samspelar med naturvetenskap och matematik i en verklig teknisk lösning.
 
-## Modul 1.2 Tidig teknisk utveckling
+## Modul 1.2 Teknikens historiska utveckling
 
-- **1.2.1 Tekniska genombrott före industrialiseringen** — Beskriva tekniska genombrott från de första verktygen till 1700-talet och förklara deras betydelse för samhället.
+- **1.2.1 Teknik före industrialiseringen** — Beskriva tekniska genombrott från de första verktygen till 1700-talet och förklara deras betydelse för samhället.
+- **1.2.2 Ångmaskinen och mekaniseringen** — Beskriva den första industriella revolutionens teknikskiften och förklara hur mekaniseringen förändrade arbete, städer och levnadsvillkor.
+- **1.2.3 Elektricitet och massproduktion** — Beskriva den andra industriella revolutionens teknikskiften och förklara hur elektricitet och massproduktion förändrade produktion och vardagsliv.
+- **1.2.4 Elektronik och datorer** — Beskriva den tredje industriella revolutionens teknikskiften och förklara hur elektronik och automation förändrade arbete och yrkesroller.
+- **1.2.5 Digitalisering, internet och AI** — Beskriva digitaliseringens teknikskiften och förklara hur internet, uppkopplade system och AI förändrat kommunikation, branscher och vardagsliv.
 
-## Modul 1.3 Industrialisering och industriella revolutioner
+## Modul 1.3 Mönster i teknikutvecklingen
 
-- **1.3.1 Fyra industriella revolutioner** — Beskriva de fyra industriella revolutionerna och de teknikskiften som kännetecknar dem.
-- **1.3.2 Industrialiseringens samhällskonsekvenser** — Analysera hur industrialiseringen förändrade produktion, arbete och levnadsvillkor.
-
-## Modul 1.4 Digitaliseringens framväxt
-
-- **1.4.1 Från transistor till AI** — Beskriva digitalteknikens viktigaste utvecklingssteg från transistorn till internet och AI.
-- **1.4.2 Digitala teknikskiften** — Ge exempel på hur digitala teknikskiften har förändrat branscher och vardagsliv.
-
-## Modul 1.5 Teknikutvecklingens drivkrafter och framtid
-
-- **1.5.1 Teknikutvecklingens drivkrafter** — Förklara hur behov, kunskap och samhällsförändringar driver teknikutveckling, med historiska exempel.
-- **1.5.2 Att bedöma framtidens teknik** — Använda historiska teknikskiften för att resonera om hur dagens nya teknik kan utvecklas och påverka samhället.
+- **1.3.1 Vad driver teknikutvecklingen?** — Identifiera och förklara hur behov, kunskap, tekniska möjligheter, ekonomiska intressen och samhällsförändringar kan samverka som drivkrafter bakom teknikutveckling.
+- **1.3.2 Hur formas tekniska lösningar?** — Förklara hur befintlig teknik, kunskap, resurser, krav, begränsningar och tekniska avvägningar påverkar vilka tekniska lösningar som utvecklas och hur de utformas.
 
 ---
 
