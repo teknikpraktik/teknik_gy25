@@ -37,12 +37,12 @@ fig-1.2.1-b:
   pedagogisk_funktion: "Konkretiserar vad betydelse för samhället innebär: eleven ser att genombrottet inte var själva pressen utan vad den gjorde med kunskapens pris och spridning"
   anvands_i: ["1.2.1"]
 
-fig-1.5.1-a:
-  syfte: "Visa de tre drivkrafterna bakom teknikutveckling och att de ofta verkar tillsammans"
-  innehall: "Tre spår som vart och ett leder från drivkraft till teknisk lösning: arméernas behov av hållbar mat leder till konserveringen, kunskapen om elektromagnetismen leder till telegrafen, städernas tillväxt leder till avloppssystemen. Nederst ett sammanflöde där alla tre spåren möts i Londons kolerabekämpning: behovet av rent vatten, kunskapen om smittvägen och den växande staden"
-  referens: "Placeras vid textens inledning; texten hänvisar till figuren när de tre drivkrafterna namnges och när samspelet mellan dem beskrivs"
-  pedagogisk_funktion: "Ger eleven ett mönster att analysera med: varje historiskt exempel kan sorteras efter drivkraft, och sammanflödet visar att verkliga genombrott sällan har en ensam orsak"
-  anvands_i: ["1.5.1"]
+fig-1.3.1-a:
+  syfte: "Ge eleven en modell över drivkrafterna bakom teknikutveckling och visa att flera verkar samtidigt"
+  innehall: "En teknisk lösning i mitten. Runt om de drivkrafter som kan sätta utvecklingen i rörelse, grupperade: behov och problem; kunskap och nya tekniska möjligheter; ekonomi och konkurrens; samt samhälle (politik, lagstiftning, kriser, infrastruktur och användarnas beteenden). Pilar från flera drivkrafter pekar in mot lösningen samtidigt. Tre historiska spår i kanten exemplifierar de vanligaste startpunkterna: ett behov (konserven), en möjlighet (telegrafen) och en samhällsförändring (Londons avlopp)"
+  referens: "Placeras vid textens inledning; texten hänvisar till figuren när drivkrafterna namnges och när samspelet mellan dem beskrivs"
+  pedagogisk_funktion: "Ger eleven en analysmodell: varje historiskt eller nutida exempel kan sorteras efter drivkraft, och de samtidiga pilarna visar att teknik sällan uppstår av en enda orsak"
+  anvands_i: ["1.3.1"]
 
 fig-1.2.2-a:
   syfte: "Ge överblick över de fyra industriella revolutionerna och visa att de tar decennier och bygger på varandra"
@@ -86,12 +86,12 @@ fig-1.2.5-a:
   pedagogisk_funktion: "Lyfter eleven från tre berättelser till ett återanvändbart mönster som kan tillämpas på nya branscher"
   anvands_i: ["1.2.5"]
 
-fig-1.5.2-a:
-  syfte: "Visa Amaras tumregel: förväntningarna på ny teknik toppar tidigt medan den verkliga samhällspåverkan kommer senare och blir större"
-  innehall: "Två kurvor över samma tidsaxel: en förväntanskurva som stiger brant, toppar och faller, och en påverkanskurva som stiger långsamt men passerar förväntanskurvan och fortsätter växa. Tidsaxeln förankras i mobiltelefonens historia: NMT 1981, GSM på 1990-talet, smartphonen 2007 och vardagsomvandlingen under 2010-talet"
-  referens: "Placeras vid tidsmönstret; texten hänvisar till figuren när Amaras tumregel förklaras med mobiltelefonen som exempel"
-  pedagogisk_funktion: "Ger eleven en visuell tumregel att lägga över varje ny teknik: var på kurvorna befinner vi oss, och vad säger det om vad som är över- respektive underskattat"
-  anvands_i: ["1.5.2"]
+fig-1.3.2-a:
+  syfte: "Visa att en teknisk lösning formas av många faktorer samtidigt, inte utvecklas fritt"
+  innehall: "En teknisk lösning i centrum, till exempel en mobiltelefon. Runt om, som faktorer som pekar in mot och formar lösningen: behov och användare, befintlig teknik att bygga vidare på, naturvetenskaplig och matematisk kunskap, material, energiförsörjning, digital infrastruktur, ekonomi och resurser, lagar och standarder, säkerhetskrav, underhåll samt tekniska avvägningar mellan konkurrerande krav. Figuren är medvetet en omgivningsbild, inte en pil- eller stegkedja"
+  referens: "Placeras vid genomgången av vad som formar en lösning; texten hänvisar till figuren när faktorerna räknas upp och när mobiltelefonen används som exempel"
+  pedagogisk_funktion: "Gör kärnpoängen avläsbar: lösningen i mitten omges av krav, resurser och begränsningar, och eleven ser att samma behov kan ge olika lösningar när omgivningen skiljer sig"
+  anvands_i: ["1.3.2"]
 
 fig-2.1.1-a:
   syfte: "Visa att samma behov kan ge helt olika lösningar beroende på hur problemet formuleras"
