@@ -134,3 +134,17 @@ fig-2.3.1-a:
   referens: "Placeras efter att testplanens delar införts; texten hänvisar till figuren som mall för elevens egen testplan"
   pedagogisk_funktion: "Gör testplanen till något eleven kan härma direkt: tabellen är samma struktur som eleven fyller i under de praktiska uppgifterna, och det underkända kravet visar att en ärlig testplan får visa fel"
   anvands_i: ["2.3.1"]
+
+fig-2.3.2-a:
+  syfte: "Visa att en och samma tekniska lösning kan bedömas mycket olika beroende på vilken aspekt som vägs tyngst"
+  innehall: "Fyrfältstabell med elsparkcykeln bedömd på de fyra aspekterna funktion, kostnad, säkerhet och hållbar utveckling. Varje ruta får en kort plus- eller minusmarkering och en rad text, t.ex. funktion (plus: snabb och lätt att parkera), kostnad (plus: billig per resa, minus: dyr drift för operatören), säkerhet (minus: fler skador på akutmottagningar), hållbar utveckling (minus: kort livslängd i delningstjänst)"
+  referens: "Placeras vid textens inledning; texten hänvisar till figuren när elsparkcykelexemplet vägs på de fyra vågskålarna"
+  pedagogisk_funktion: "Visar konkret att en utvärdering inte ger ett enda facit: eleven ska kunna se att lösningen är stark på en aspekt och svag på en annan, och att helhetsbedömningen kräver att aspekterna vägs mot varandra"
+  anvands_i: ["2.3.2"]
+
+fig-2.3.3-a:
+  syfte: "Visa hur upprepade varför-frågor leder från ett synligt symptom till en åtgärdbar grundorsak"
+  innehall: "Kedjediagram över Galaxy Note 7-fallet: symptom (batteriet fattar eld) → varför (kortslutning i battericellen) → varför (den negativa elektroden trycks mot den positiva) → varför (för liten marginal i battericellens hölje hos en av leverantörerna) → grundorsak (för snäva tillverkningstoleranser) → åtgärd (större säkerhetsmarginal och en ny, mer omfattande batterikontroll)"
+  referens: "Placeras vid avsnittet om att gräva med upprepade varför-frågor; texten hänvisar till figuren när metoden tillämpas på Note 7-fallet"
+  pedagogisk_funktion: "Konkretiserar skillnaden mellan symptom och grundorsak genom att visa hela kedjan i ett enda välkänt fall, så att eleven kan applicera samma frågekedja på ett eget testresultat"
+  anvands_i: ["2.3.3"]

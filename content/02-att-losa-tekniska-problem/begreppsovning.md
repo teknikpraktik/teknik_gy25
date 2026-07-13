@@ -8,6 +8,8 @@ ordlista:
   - behov
   - delproblem
   - funktion
+  - grundorsak
+  - hållbar utveckling
   - krav
   - tekniskt problem
   - testplan
@@ -17,8 +19,8 @@ Den här övningen repeterar kapitlets centrala begrepp. Läs texten och fyll i 
 begrepp som passar i varje lucka. Varje begrepp i ordlistan används en gång. Skriv
 svaren i ditt häfte eller i ett digitalt dokument; skriv inte i boken.
 
-**Ordlista:** begränsning, behov, delproblem, funktion, krav, tekniskt problem,
-testplan.
+**Ordlista:** begränsning, behov, delproblem, funktion, grundorsak, hållbar
+utveckling, krav, tekniskt problem, testplan.
 
 ## Fyll i begreppen
 
@@ -37,5 +39,11 @@ Ett problem som är för stort att angripa i ett stycke bryts ned i mindre
 ___(6)___ som kan formuleras, lösas och testas var för sig. Innan en färdig lösning
 prövas mot sina krav skriver man en ___(7)___ som i förväg anger vad som ska mätas,
 hur testet går till och var gränsen för godkänt går.
+
+En fullständig utvärdering väger fler aspekter än bara funktionen, bland annat hur
+lösningen påverkar miljö och resurser för kommande generationer, en fråga som kallas
+___(8)___. Visar testet att något går sönder räcker det inte att åtgärda det som
+syns först; felet måste spåras till sin bakomliggande brist, dess ___(9)___, annars
+kommer det tillbaka.
 
 Facit finns i lärarmaterialet.
