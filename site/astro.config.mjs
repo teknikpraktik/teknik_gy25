@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { kapitel, kapitelSlug, modulSlug, larandemalFilnamn, larandemalId } from '../scripts/bokstruktur-data.mjs';
+import { kapitelavslutningarForKapitel } from '../scripts/kapitelavslutningar-data.mjs';
 import { remarkGranskning } from './src/remark-granskning.mjs';
 import { SITE_BASE } from './src/site-base.mjs';
 
@@ -42,6 +43,11 @@ const sidebar = [
 						].join('/'),
 					})),
 				],
+			})),
+			// Kapitelavslutningar (begreppsovning, uppgiftsbank) sist i kapitlet, i manifestordning.
+			...kapitelavslutningarForKapitel(k.nr).map((post) => ({
+				label: post.title,
+				slug: [kapitelSlug(k), routeSegment(post.slug)].join("/"),
 			})),
 		],
 	})),

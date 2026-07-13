@@ -1,21 +1,26 @@
 // Tvärgående valideringar som inte kan uttryckas i ett per-fil Zod-schema:
 // synk mellan bokstruktur (06) och content/, begreppsunikhet, figur-ID,
 // förkunskapsordning, kursplantaggning (punkt-id), statusstyrda innehålls-
-// kontroller samt status- och täckningsöversikt.
+// kontroller, kapitelavslutningar (begreppsövning/uppgiftsbank mot manifest)
+// samt status- och täckningsöversikt.
 // Körs som "prebuild" innan webbplatsen byggs (se site/package.json) och kan
 // köras fristående med `npm run validate`.
 //
-// Skriptet avgör vad som är en "riktig" lärandemålsfil genom att den har ett
-// "id"-fält i sin frontmatter. Strukturella sidor (index.md, kapitelöversikter)
-// saknar "id" och hoppas över.
+// Filtyp avgörs av frontmattern: "id" → lärandemål, "type" → kapitelavslutning,
+// annars strukturell sida (bara index.md är tillåten).
 
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import YAML from 'yaml';
-import { larandemalRequiredSchema, statusEnum } from '../schemas/larandemal.schema.mjs';
+import {
+	larandemalRequiredSchema,
+	kapitelavslutningRequiredSchema,
+	statusEnum,
+} from '../schemas/larandemal.schema.mjs';
 import { allaLarandemal } from './bokstruktur-data.mjs';
+import { kapitelavslutningar, allaKapitelavslutningar } from './kapitelavslutningar-data.mjs';
 import { niva1, niva2, syftesmal, allaPunkter } from './kursplan-data.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
@@ -38,33 +43,8 @@ const aiFraser = [
 	'det handlar inte om',
 ];
 
-// Formuleringar som hör hemma i Instuderingsfrågor/Praktiska uppgifter, inte i
-// Begreppsdelen (03-bokens-arkitektur.md, "Begrepp"; redaktionellt beslut).
-const analysOrd = [
-	'jämför', 'jämföra', 'jämförelse',
-	'skilj', 'skiljer', 'skilja',
-	'avgör', 'avgöra',
-	'motivera', 'motivering',
-	'välj rätt', 'väljer rätt',
-	'koppla till', 'kopplar till',
-	'analysera', 'analys av',
-];
-
-// Stammar som visar att en praktisk uppgift har ett producerande/genomförande
-// moment (03-bokens-arkitektur.md, "Praktiska uppgifter"). Mjuk heuristik —
-// varnar bara, tvingar aldrig fram en omskrivning.
-const praktiskOrd = [
-	'bygg', 'skiss', 'rita', 'ritning', 'mät', 'testa', 'test', 'konstruera',
-	'simulera', 'programmera', 'modellera', 'undersök', 'presentera', 'presentation',
-	'muntlig', 'film', 'podd', 'prototyp', 'plansch', 'kalkylblad',
-	'excel', 'flödesdiagram', 'foto', 'protokoll', 'genomför', 'mätning',
-	'demonstrera', 'tillverka',
-];
-
 // Extraherar texten under samtliga förekomster av en rubrik (##–####) fram
-// till nästa rubrik på samma nivå eller lägre, eller filens slut. Fleruppslagsmål
-// har en rubrikförekomst per uppslag (13-produktionsmanual.md, "Skriv") — därför
-// en lista, inte bara den första träffen.
+// till nästa rubrik på samma nivå eller lägre, eller filens slut.
 function extractSections(body, rubrik) {
 	const re = new RegExp(`^#{2,4}\\s+${rubrik}\\s*$`, 'gm');
 	const sektioner = [];
@@ -75,15 +55,6 @@ function extractSections(body, rubrik) {
 		sektioner.push(next === -1 ? rest : rest.slice(0, next));
 	}
 	return sektioner;
-}
-
-// Delar upp en uppgiftsdels text i enskilda numrerade uppgifter (inklusive
-// eventuella a)/b)/c)-deluppgifter, som hör till samma numrerade uppgift).
-function numreradeUppgifter(sectionText) {
-	return sectionText
-		.split(/^(?=\d+\.\s)/m)
-		.map((s) => s.trim())
-		.filter(Boolean);
 }
 
 let errors = [];
@@ -119,32 +90,40 @@ function compareIds(a, b) {
 
 const files = await walk(contentDir);
 const larandemal = [];
+const kapitelavslutningsFiler = []; // { file, body, relPath, ...data }
 
 for (const file of files) {
 	const raw = await readFile(file, 'utf8');
 	const { data, content } = matter(raw);
 	const relPath = path.relative(contentDir, file).replaceAll(path.sep, '/');
 
-	if (data.id === undefined) {
-		// Enda tillåtna strukturella sidan är startsidan — kapitel- och
-		// modulöversikter är genererade vyer och ska inte finnas i content/.
-		if (relPath !== 'index.md') {
-			warnings.push(`${relPath}: strukturell sida utan id — kapitel-/modulöversikter genereras av webbplatsen och filen bör tas bort.`);
+	if (data.id !== undefined) {
+		const result = larandemalRequiredSchema.safeParse(data);
+		if (!result.success) {
+			errors.push(`${relPath}: ogiltig metadata — ${result.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).join('; ')}`);
+			continue;
 		}
+		larandemal.push({ file: relPath, body: content, ...result.data });
 		continue;
 	}
 
-	const result = larandemalRequiredSchema.safeParse(data);
-	if (!result.success) {
-		errors.push(`${relPath}: ogiltig metadata — ${result.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).join('; ')}`);
+	if (data.type !== undefined) {
+		const result = kapitelavslutningRequiredSchema.safeParse(data);
+		if (!result.success) {
+			errors.push(`${relPath}: ogiltig kapitelavslutning — ${result.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).join('; ')}`);
+			continue;
+		}
+		kapitelavslutningsFiler.push({ file: relPath, body: content, ...result.data });
 		continue;
 	}
-	larandemal.push({ file: relPath, body: content, ...result.data });
+
+	// Enda tillåtna rent strukturella sidan är startsidan.
+	if (relPath !== 'index.md') {
+		warnings.push(`${relPath}: sida utan "id" eller "type" — kapitel-/modulöversikter genereras av webbplatsen och filen bör tas bort.`);
+	}
 }
 
 // Synk mellan bokstruktur (06, tolkad av bokstruktur-data.mjs) och content/.
-// 06 är målskelettet och enda källan: varje planerat lärandemål ska ha en fil
-// på förväntad sökväg, och varje lärandemålsfil ska finnas i planen.
 const plan = allaLarandemal();
 const planById = new Map(plan.map((p) => [p.id, p]));
 const filesById = new Map(larandemal.map((lm) => [lm.id, lm]));
@@ -175,9 +154,6 @@ for (const p of plan) {
 	if (lm.goal !== p.mal) {
 		warnings.push(`${lm.file}: målformuleringen avviker från bokstrukturens — uppdatera 06-bokstruktur.md eller filen.`);
 	}
-	if (lm.uppslag !== p.uppslag) {
-		warnings.push(`${lm.file}: uppslag (${lm.uppslag}) avviker från bokstrukturens (${p.uppslag}).`);
-	}
 }
 
 for (const lm of larandemal) {
@@ -198,8 +174,7 @@ for (const lm of larandemal) {
 	}
 }
 
-// Begrepp som används utan att introduceras någonstans (varning: huvudstället
-// kan vara planerat men ännu inte skrivet).
+// Begrepp som används utan att introduceras någonstans.
 for (const lm of larandemal) {
 	for (const concept of lm.concepts_used) {
 		if (!conceptOwners.has(concept)) {
@@ -208,12 +183,7 @@ for (const lm of larandemal) {
 	}
 }
 
-// Begrepp i concepts_used ska faktiskt förekomma i brödtexten. Ett begrepp
-// räknas som använt om shortcoden [[begrepp:namn]] finns, om namnet står i
-// löptexten (skiftlägesokänsligt — fångar även böjda och sammansatta former
-// som "teknikskiften") eller, för flerordsbegrepp, om initialförkortningen
-// står som eget ord ("artificiell intelligens" → AI, jfr 11 "Förkortningar").
-// HTML-kommentarer skannas inte; frontmattern ingår inte i body.
+// Begrepp i concepts_used ska faktiskt förekomma i brödtexten.
 for (const lm of larandemal) {
 	const synligBody = lm.body.replace(/<!--[\s\S]*?-->/g, '');
 	const synligLower = synligBody.toLowerCase();
@@ -221,9 +191,6 @@ for (const lm of larandemal) {
 		const somShortcode = synligBody.includes(`[[begrepp:${concept}]]`);
 		const iLoptext = synligLower.includes(concept.toLowerCase());
 		const ord = concept.split(/\s+/);
-		// Böjda former ("de industriella revolutionerna", "teknikskiften"):
-		// matcha varje ords stam (allt utom de sista två tecknen, minst fyra)
-		// följt av valfri ändelse, i ordföljd.
 		const stamMonster = ord
 			.map((o) => o.toLowerCase().slice(0, Math.max(4, o.length - 2)).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '[a-zåäö]*')
 			.join('\\s+');
@@ -256,13 +223,10 @@ for (const figId of Object.keys(figureRegistry)) {
 	if (!usedFigures.has(figId)) {
 		warnings.push(`figures/registry.yml: figur "${figId}" är registrerad men refereras av ingen lärandemålsfil.`);
 	}
-	// Fullständig platshållarspecifikation (08, 12): fyra fält per figur.
 	const saknade = ['syfte', 'innehall', 'referens', 'pedagogisk_funktion'].filter((f) => !figureRegistry[figId]?.[f]);
 	if (saknade.length > 0) {
 		warnings.push(`figures/registry.yml: figur "${figId}" saknar fält: ${saknade.join(', ')} — platshållaren är inte komplett (09, "Förlagsgranskning").`);
 	}
-	// Figurtext är elevtext: inga tankstreck/talstreck (05, "Tankstreck") och
-	// inget "uppslag" som självreferens (05, "Självreferenser").
 	for (const f of ['syfte', 'innehall', 'referens', 'pedagogisk_funktion']) {
 		const varde = figureRegistry[figId]?.[f] ?? '';
 		if (/—|–/.test(varde)) {
@@ -274,26 +238,29 @@ for (const figId of Object.keys(figureRegistry)) {
 	}
 }
 
-// Shortcodes i brödtext: [[figur:ID]] måste finnas i registret och bör stå i
-// filens figures-fält; [[begrepp:namn]] måste ha ett huvudställe någonstans
-// (webbygget felar annars — kontrollen här fångar det före bygget) och bör
-// stå i filens concepts_used/concepts_introduced. Kommentarer skannas inte.
-for (const lm of larandemal) {
-	const synligText = lm.body.replace(/<!--[\s\S]*?-->/g, '');
+// Shortcodes i brödtext (lärandemål och kapitelavslutningar): [[figur:ID]] måste
+// finnas i registret; [[begrepp:namn]] måste ha ett huvudställe. För lärandemål
+// kontrolleras dessutom att shortcoden speglas i frontmatterfälten.
+const allaMedBody = [
+	...larandemal.map((lm) => ({ ...lm, arLarandemal: true })),
+	...kapitelavslutningsFiler.map((ka) => ({ ...ka, arLarandemal: false, figures: [], concepts_used: [], concepts_introduced: [] })),
+];
+for (const f of allaMedBody) {
+	const synligText = f.body.replace(/<!--[\s\S]*?-->/g, '');
 	for (const m of synligText.matchAll(/\[\[figur:([a-zA-Z0-9_.-]+)\]\]/g)) {
 		const figId = m[1];
 		if (!figureRegistry[figId]) {
-			errors.push(`${lm.file}: [[figur:${figId}]] i texten men figuren saknas i figures/registry.yml.`);
-		} else if (!lm.figures.includes(figId)) {
-			warnings.push(`${lm.file}: [[figur:${figId}]] används i texten men står inte i frontmatterfältet figures.`);
+			errors.push(`${f.file}: [[figur:${figId}]] i texten men figuren saknas i figures/registry.yml.`);
+		} else if (f.arLarandemal && !f.figures.includes(figId)) {
+			warnings.push(`${f.file}: [[figur:${figId}]] används i texten men står inte i frontmatterfältet figures.`);
 		}
 	}
 	for (const m of synligText.matchAll(/\[\[begrepp:([^\]]+)\]\]/g)) {
 		const namn = m[1].trim();
 		if (!conceptOwners.has(namn)) {
-			errors.push(`${lm.file}: [[begrepp:${namn}]] i texten men begreppet introduceras (concepts_introduced) inte i någon fil — skriv huvudstället först eller rätta namnet.`);
-		} else if (!lm.concepts_used.includes(namn) && !lm.concepts_introduced.includes(namn)) {
-			warnings.push(`${lm.file}: [[begrepp:${namn}]] används i texten men står inte i concepts_used.`);
+			errors.push(`${f.file}: [[begrepp:${namn}]] i texten men begreppet introduceras (concepts_introduced) inte i någon fil — skriv huvudstället först eller rätta namnet.`);
+		} else if (f.arLarandemal && !f.concepts_used.includes(namn) && !f.concepts_introduced.includes(namn)) {
+			warnings.push(`${f.file}: [[begrepp:${namn}]] används i texten men står inte i concepts_used.`);
 		}
 	}
 }
@@ -313,8 +280,7 @@ for (const lm of larandemal) {
 	}
 }
 
-// Kursplantaggning: taggar är punkt-id:n (n1-xx/n2-xx/s-01) enligt 07 och
-// kursplan-data.mjs. Syftesmål (s-xx) är giltiga på båda nivåerna.
+// Kursplantaggning
 const punkter = allaPunkter();
 const giltigaTaggar = {
 	niva1: new Set([...niva1.map((p) => p.id), ...syftesmal.map((p) => p.id)]),
@@ -339,97 +305,29 @@ for (const lm of larandemal) {
 	}
 }
 
-// Statusstyrda innehållskontroller: från fardig-forsta-version och uppåt ska
-// filen uppfylla de mekaniskt kontrollerbara delarna av 09-kvalitetssakring.md.
+// Statusstyrda innehållskontroller för lärandemål: från fardig-forsta-version.
 for (const lm of larandemal) {
 	if (statusEnum.indexOf(lm.status) < GRANSKNINGSSTATUS) continue;
 	const beskr = `${lm.file} (status ${lm.status})`;
 
-	// Obs: inte \b efter rubriken — JS \b bygger på ASCII-\w, så tecken som
-	// "å"/"ö" bildar ingen ordgräns; därför matchas radslut i stället.
-	for (const rubrik of ['Instuderingsfrågor', 'Begrepp', 'Praktiska uppgifter']) {
-		if (!new RegExp(`^#{2,4}\\s+${rubrik}\\s*$`, 'm').test(lm.body)) {
-			errors.push(`${beskr}: uppgiftsdelen "${rubrik}" saknas (03-bokens-arkitektur.md, "Aktiv bearbetning").`);
-		}
+	// Lärandemålet ska avslutas med en icke-tom sektion Instuderingsfrågor
+	// (inget bestämt antal, 03-bokens-arkitektur.md).
+	const isSektioner = extractSections(lm.body, 'Instuderingsfrågor');
+	if (isSektioner.length === 0) {
+		errors.push(`${beskr}: sektionen "Instuderingsfrågor" saknas (03-bokens-arkitektur.md, "Aktiv bearbetning").`);
+	} else if (!isSektioner.some((text) => /^\s*\d+\.\s+\S/m.test(text))) {
+		errors.push(`${beskr}: sektionen "Instuderingsfrågor" är tom — minst en numrerad fråga krävs (03).`);
 	}
-	// Äldre uppgiftsrubriker och synliga uppslagsrubriker får inte förekomma
-	// (redaktionellt beslut; 12 "Produktionsenhet", 13 "Skriv").
+
+	// Äldre uppgiftsrubriker och synliga uppslagsrubriker får inte förekomma.
 	for (const forbjuden of [/^#{2,4}\s+(Förstå|Utveckla|Utmana)\s*$/m, /^#{2,4}\s+Uppslag\b/m]) {
 		const traff = lm.body.match(forbjuden);
 		if (traff) {
 			errors.push(`${beskr}: rubriken "${traff[0].replace(/^#+\s*/, '')}" får inte förekomma i elevtexten (03/12/13).`);
 		}
 	}
-	// Uppgiftsantal per del: normalspann enligt 03 (per rubrikförekomst, dvs.
-	// per uppslag i fleruppslagsmål). Mjuk kontroll — 03 säger "normalt".
-	const normalspann = { 'Instuderingsfrågor': [10, 15], Begrepp: [3, 6], 'Praktiska uppgifter': [2, 5] };
-	{
-		const rader = lm.body.split('\n');
-		let aktuellDel = null;
-		let antal = 0;
-		const flush = () => {
-			if (!aktuellDel) return;
-			const [min, max] = normalspann[aktuellDel];
-			if (antal < min || antal > max) {
-				if (aktuellDel === 'Praktiska uppgifter' && lm.praktiska_uppgifter_undantag) {
-					// Dokumenterat redaktionellt undantag (03, "Praktiska uppgifter") — ingen varning.
-				} else {
-					warnings.push(`${beskr}: ${antal} uppgifter under "${aktuellDel}" — normalspannet är ${min}–${max} per uppslag (03).`);
-				}
-			}
-		};
-		for (const rad of rader) {
-			const rubrik = rad.match(/^#{2,4}\s+(Instuderingsfrågor|Begrepp|Praktiska uppgifter)\s*$/);
-			if (rubrik) {
-				flush();
-				aktuellDel = rubrik[1];
-				antal = 0;
-			} else if (/^#{2,4}\s/.test(rad)) {
-				flush();
-				aktuellDel = null;
-			} else if (aktuellDel && /^\d+\.\s/.test(rad)) {
-				antal++;
-			}
-		}
-		flush();
-	}
-	// Begreppsdelen: standardformulering och inga analys-/jämförelsekrav
-	// (03-bokens-arkitektur.md, "Begrepp"). En sektion per uppslag.
-	{
-		const sektioner = extractSections(lm.body, 'Begrepp');
-		sektioner.forEach((text, i) => {
-			if (text.trim() === '') return;
-			const uppslagsref = sektioner.length > 1 ? ` (uppslag ${i + 1})` : '';
-			if (!/förklara följande begrepp med en mening/i.test(text)) {
-				warnings.push(`${beskr}${uppslagsref}: Begreppsdelen saknar standardformuleringen "Förklara följande begrepp med en mening:" (03-bokens-arkitektur.md, "Begrepp").`);
-			}
-			const lower = text.toLowerCase();
-			const traffade = analysOrd.filter((ord) => lower.includes(ord));
-			if (traffade.length > 0) {
-				warnings.push(`${beskr}${uppslagsref}: Begreppsdelen innehåller möjliga analys-/jämförelse-/motiveringsformuleringar (${traffade.join(', ')}) — sådana krav hör inte hemma under Begrepp (03).`);
-			}
-		});
-	}
-	// Praktiska uppgifter: varje uppgift bör ha ett tydligt producerande/
-	// genomförande moment (03-bokens-arkitektur.md, "Praktiska uppgifter").
-	// Mjuk heuristik, varnar bara — tvingar inte fram en viss formulering.
-	// En sektion per uppslag.
-	{
-		const sektioner = extractSections(lm.body, 'Praktiska uppgifter');
-		sektioner.forEach((text, i) => {
-			if (text.trim() === '') return;
-			const uppslagsref = sektioner.length > 1 ? ` (uppslag ${i + 1})` : '';
-			const utanPraktik = numreradeUppgifter(text)
-				.map((u, idx) => ({ idx: idx + 1, harPraktik: praktiskOrd.some((ord) => u.toLowerCase().includes(ord)) }))
-				.filter((u) => !u.harPraktik)
-				.map((u) => u.idx);
-			if (utanPraktik.length > 0) {
-				warnings.push(`${beskr}${uppslagsref}: praktisk uppgift ${utanPraktik.join(', ')} saknar ett tydligt producerande/genomförande moment (skiss, mätning, konstruktion, test, ...) — kontrollera mot definitionen i 03, "Praktiska uppgifter".`);
-			}
-		});
-	}
-	// "Uppslag" som självreferens i elevtexten (05-forfattarmanual.md,
-	// "Självreferenser"). Frontmatterfältet uppslag ingår inte i body.
+
+	// "Uppslag" som självreferens i elevtexten (05-forfattarmanual.md).
 	{
 		const synlig = lm.body.replace(/<!--[\s\S]*?-->/g, '');
 		const traffar = synlig.match(/\buppslag(et|en|ets)?\b/gi);
@@ -437,8 +335,8 @@ for (const lm of larandemal) {
 			warnings.push(`${beskr}: ordet "uppslag" förekommer ${traffar.length} gång(er) i elevtexten — troligen en självreferens som ska skrivas om (05-forfattarmanual.md, "Självreferenser").`);
 		}
 	}
-	// Inga markdownlänkar i elevtext, utom i ett uttryckligt käll-/resursavsnitt
-	// (12-produktionsarkitektur.md, "Länkar i elevtext").
+
+	// Inga markdownlänkar i elevtext, utom i ett uttryckligt käll-/resursavsnitt.
 	{
 		const rader = lm.body.split('\n');
 		let iKallavsnitt = false;
@@ -458,20 +356,16 @@ for (const lm of larandemal) {
 			warnings.push(`${beskr}: ${lankar} markdownlänk(ar) i elevtext utanför ett käll-/resursavsnitt (12-produktionsarkitektur.md, "Länkar i elevtext").`);
 		}
 	}
-	// Synlig rubriknumrering med fler än tre nivåer (12-produktionsarkitektur.md,
-	// "Rubriknumrering"), t.ex. "6.1.1.1" i en rubrik.
+
+	// Synlig rubriknumrering med fler än tre nivåer.
 	{
 		const traff = lm.body.match(/^#{1,6}\s+.*\b\d+\.\d+\.\d+\.\d+\b/m);
 		if (traff) {
 			errors.push(`${beskr}: fjärde rubriknivån "${traff[0].replace(/^#+\s*/, '')}" får inte förekomma (12-produktionsarkitektur.md, "Rubriknumrering").`);
 		}
 	}
-	// Personnamnsheuristik (05, "Personnamn"): två versalinledda ord i följd
-	// på samma rad räknas som namnkandidat. Grov träffbild med falska
-	// positiva (platser, produkter) — därför bara en mjuk varning med
-	// kandidaterna listade, så att en människa avgör. Tröskel: fler än 6
-	// distinkta kandidater räknas som ovanligt många (ungefär hälften av
-	// träffarna brukar vara platser eller produkter).
+
+	// Personnamnsheuristik (05, "Personnamn").
 	{
 		const synlig = lm.body.replace(/<!--[\s\S]*?-->/g, '');
 		const kandidater = new Set();
@@ -482,6 +376,7 @@ for (const lm of larandemal) {
 			warnings.push(`${beskr}: ${kandidater.size} möjliga personnamn (${[...kandidater].join(', ')}) — kontrollera mot 05, "Personnamn" (heuristiken träffar även platser och produkter).`);
 		}
 	}
+
 	if (lm.body.includes('<!--')) {
 		errors.push(`${beskr}: HTML-kommentar kvar i texten — arbetsanteckningar får inte finnas i granskningsklart innehåll (09).`);
 	}
@@ -500,8 +395,7 @@ for (const lm of larandemal) {
 			warnings.push(`${beskr}: AI-typisk formulering "${fras}" förekommer (05-forfattarmanual.md, "AI-språk som ska undvikas").`);
 		}
 	}
-	// Tankstreck/talstreck används inte i elevtexten (05, "Tankstreck").
-	// Kodblock undantas; bindestreck (-) berörs inte av regeln.
+	// Tankstreck/talstreck används inte i elevtexten (05). Kodblock undantas.
 	let inCodeBlock = false;
 	let tankstreck = 0;
 	for (const line of lm.body.split('\n')) {
@@ -513,7 +407,77 @@ for (const lm of larandemal) {
 	}
 }
 
-// Statusöversikt (totalt och per kapitel)
+// -------------------------------------------------------- Kapitelavslutningar
+// Manifestet (kapitelavslutningar-data.mjs) är strukturkällan. Stäm av mot
+// filerna åt båda håll och validera uppgiftsbankens kopplingar mot lärandemålen.
+const kapitelSlugById = new Map(); // kapNr -> kapitelSlug (från planen)
+for (const p of plan) {
+	const seg = p.relPath.split('/')[0];
+	kapitelSlugById.set(p.chapter, seg);
+}
+const kaFilerByPath = new Map(kapitelavslutningsFiler.map((ka) => [ka.file, ka]));
+const deklareradePaths = new Set();
+
+for (const post of allaKapitelavslutningar()) {
+	const kapitelSlug = kapitelSlugById.get(post.chapter);
+	if (!kapitelSlug) {
+		errors.push(`kapitelavslutningar-data.mjs: kapitel ${post.chapter} finns inte i bokstrukturen.`);
+		continue;
+	}
+	const relPath = `${kapitelSlug}/${post.slug}.md`;
+	deklareradePaths.add(relPath);
+	const ka = kaFilerByPath.get(relPath);
+	if (!ka) {
+		errors.push(`Deklarerad kapitelavslutning saknar fil: ${relPath} (type ${post.type}, kapitel ${post.chapter}) — skapa filen eller ta bort posten ur manifestet.`);
+		continue;
+	}
+	if (ka.type !== post.type) {
+		errors.push(`${relPath}: type "${ka.type}" stämmer inte med manifestets "${post.type}".`);
+	}
+	if (ka.chapter !== post.chapter) {
+		errors.push(`${relPath}: chapter ${ka.chapter} stämmer inte med manifestets kapitel ${post.chapter}.`);
+	}
+	if (ka.title !== post.title) {
+		warnings.push(`${relPath}: titeln "${ka.title}" avviker från manifestets "${post.title}".`);
+	}
+}
+
+// Varje type-fil på disk ska vara deklarerad i manifestet.
+for (const ka of kapitelavslutningsFiler) {
+	if (!deklareradePaths.has(ka.file)) {
+		errors.push(`${ka.file}: kapitelavslutning (type ${ka.type}) är inte deklarerad i kapitelavslutningar-data.mjs — lägg till den i manifestet eller ta bort filen.`);
+	}
+}
+
+// Uppgiftsbankernas kopplingar: varje uppgift ska peka på lärandemål i samma
+// kapitel, ref:erna ska vara unika, och kroppen bör innehålla varje ref.
+const praktiskTackning = new Map(); // kapNr -> Set(lärandemåls-id som tränas)
+for (const ka of kapitelavslutningsFiler) {
+	if (ka.type !== 'uppgiftsbank') continue;
+	const refar = new Set();
+	if (!praktiskTackning.has(ka.chapter)) praktiskTackning.set(ka.chapter, new Set());
+	for (const u of ka.uppgifter ?? []) {
+		if (refar.has(u.ref)) {
+			errors.push(`${ka.file}: uppgifts-ref "${u.ref}" förekommer flera gånger.`);
+		}
+		refar.add(u.ref);
+		if (!ka.body.includes(u.ref)) {
+			warnings.push(`${ka.file}: uppgiften "${u.ref}" finns i frontmattern men ref:en förekommer inte i kroppen.`);
+		}
+		for (const lmId of u.larandemal) {
+			const p = planById.get(lmId);
+			if (!p) {
+				errors.push(`${ka.file}: uppgift "${u.ref}" kopplar till lärandemål "${lmId}" som inte finns i bokstrukturen.`);
+			} else if (p.chapter !== ka.chapter) {
+				errors.push(`${ka.file}: uppgift "${u.ref}" kopplar till lärandemål "${lmId}" i kapitel ${p.chapter}, men banken hör till kapitel ${ka.chapter}.`);
+			} else {
+				praktiskTackning.get(ka.chapter).add(lmId);
+			}
+		}
+	}
+}
+
+// -------------------------------------------------------------- Statusöversikt
 const statusCount = {};
 const chapterStatus = new Map();
 for (const lm of larandemal) {
@@ -525,7 +489,7 @@ for (const lm of larandemal) {
 	if (lm.status !== 'ej-paborjad') cs.paborjade++;
 }
 
-console.log(`Kontrollerade ${larandemal.length} lärandemålsfiler av ${files.length} markdown-filer totalt (${plan.length} lärandemål i bokstrukturen).\n`);
+console.log(`Kontrollerade ${larandemal.length} lärandemålsfiler och ${kapitelavslutningsFiler.length} kapitelavslutningar av ${files.length} markdown-filer totalt (${plan.length} lärandemål i bokstrukturen).\n`);
 
 if (larandemal.length > 0) {
 	console.log('Statusöversikt:');
@@ -539,9 +503,19 @@ if (larandemal.length > 0) {
 	console.log('');
 }
 
-// Kursplanetäckningsöversikt per punkt: antal påbörjade lärandemål taggade med
-// punktens id, uppdelat på primärkapitlet och övriga kapitel. Informativ
-// rapport — 07 förblir den redaktionella auktoriteten.
+// Praktisk täckning per kapitel: vilka lärandemål tränas av uppgiftsbanken.
+if (Object.keys(kapitelavslutningar).length > 0) {
+	console.log('Praktisk täckning (lärandemål som tränas av kapitlets uppgiftsbank):');
+	for (const nr of [...praktiskTackning.keys()].sort((a, b) => a - b)) {
+		const kapitletsLm = plan.filter((p) => p.chapter === nr).map((p) => p.id);
+		const tackta = praktiskTackning.get(nr);
+		const otackta = kapitletsLm.filter((id) => !tackta.has(id));
+		console.log(`  Kapitel ${nr}: ${tackta.size}/${kapitletsLm.length} lärandemål tränas${otackta.length > 0 ? ` (otäckta: ${otackta.join(', ')})` : ''}`);
+	}
+	console.log('');
+}
+
+// Kursplanetäckningsöversikt per punkt.
 function tackningsrad(punkt, nivaKey) {
 	const taggade = larandemal.filter((lm) => {
 		const taggar = nivaKey === 'bada' ? [...(lm.curriculum.niva1 ?? []), ...(lm.curriculum.niva2 ?? [])] : (lm.curriculum[nivaKey] ?? []);

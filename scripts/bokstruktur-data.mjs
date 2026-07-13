@@ -180,7 +180,6 @@ export function allaLarandemal() {
 					module: `${k.nr}.${i + 1}`,
 					titel: lm.titel,
 					mal: lm.mal,
-					uppslag: lm.uppslag ?? 1,
 					relPath: `${kapitelSlug(k)}/${modulSlug(k, i)}/${larandemalFilnamn(k, i, j)}`,
 				});
 			}

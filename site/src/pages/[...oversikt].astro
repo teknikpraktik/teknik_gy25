@@ -20,6 +20,7 @@ import {
 	routeSegment,
 } from '../../../scripts/bokstruktur-data.mjs';
 import { niva1, niva2, syftesmal } from '../../../scripts/kursplan-data.mjs';
+import { kapitelavslutningarForKapitel } from '../../../scripts/kapitelavslutningar-data.mjs';
 import { medBase } from '../site-base.mjs';
 
 export async function getStaticPaths() {
@@ -79,14 +80,12 @@ const moduler = k.moduler.map((m, i) => {
 		i,
 		titel: m.titel,
 		antal: rader.length,
-		uppslag: rader.reduce((a, r) => a + (r.plan.uppslag ?? 1), 0),
 		paborjade: rader.filter((r) => r.fm && r.fm.status !== 'ej-paborjad').length,
 		klara: rader.filter((r) => r.fm?.status === 'klar').length,
 	};
 });
 const kapitelTotal = {
 	lm: moduler.reduce((a, m) => a + m.antal, 0),
-	uppslag: moduler.reduce((a, m) => a + m.uppslag, 0),
 	paborjade: moduler.reduce((a, m) => a + m.paborjade, 0),
 	klara: moduler.reduce((a, m) => a + m.klara, 0),
 };
@@ -107,6 +106,19 @@ function tackning(p) {
 const primara = allaPunkterLista.filter((p) => p.primar === k.nr);
 const berorda = allaPunkterLista.filter((p) => Array.isArray(p.berors) && p.berors.includes(k.nr));
 const lopande = allaPunkterLista.filter((p) => p.berors.includes('löpande') && p.primar !== k.nr);
+
+// Kapitelavslutningar (kapitelvyn): manifestets poster med aktuell status.
+const kapAvslutningar = arModulvy
+	? []
+	: kapitelavslutningarForKapitel(k.nr).map((post) => {
+			const doc = docs.find((e) => e.data.type === post.type && e.data.chapter === k.nr);
+			return {
+				...post,
+				status: doc?.data?.status,
+				finns: !!doc,
+				url: medBase(`/${kapitelSlug(k)}/${routeSegment(post.slug)}/`),
+			};
+		});
 
 const m = arModulvy ? k.moduler[modIndex] : null;
 const rader = arModulvy ? modulRader(modIndex) : [];
@@ -141,7 +153,7 @@ const kapitelChecklista = [
 					<a href={kapUrl}>
 						Kapitel {k.nr} – {k.titel}
 					</a>{' '}
-					· {modulTotal.antal} lärandemål · {modulTotal.uppslag} planerade uppslag · {modulTotal.paborjade} påbörjade,{' '}
+					· {modulTotal.antal} lärandemål · {modulTotal.paborjade} påbörjade,{' '}
 					{modulTotal.klara} klara
 				</p>
 
@@ -152,7 +164,6 @@ const kapitelChecklista = [
 							<th>Id</th>
 							<th>Lärandemål</th>
 							<th>Mål</th>
-							<th>Uppslag</th>
 							<th>Praktiskt</th>
 							<th>Status</th>
 						</tr>
@@ -165,7 +176,6 @@ const kapitelChecklista = [
 									<a href={lmUrl(modIndex, r.j)}>{r.plan.titel}</a>
 								</td>
 								<td>{r.plan.mal}</td>
-								<td>{r.plan.uppslag ?? 1}</td>
 								<td>{r.fm?.practical_component ? '✓' : '—'}</td>
 								<td>
 									{r.fm ? (
@@ -221,7 +231,7 @@ const kapitelChecklista = [
 		) : (
 			<>
 				<p class="oversikt-meta">
-					{k.moduler.length} moduler · {kapitelTotal.lm} lärandemål · {kapitelTotal.uppslag} planerade uppslag ·{' '}
+					{k.moduler.length} moduler · {kapitelTotal.lm} lärandemål ·{' '}
 					{kapitelTotal.paborjade} påbörjade, {kapitelTotal.klara} klara
 				</p>
 
@@ -231,7 +241,6 @@ const kapitelChecklista = [
 						<tr>
 							<th>Modul</th>
 							<th>Lärandemål</th>
-							<th>Uppslag</th>
 							<th>Påbörjade</th>
 							<th>Klara</th>
 						</tr>
@@ -245,7 +254,6 @@ const kapitelChecklista = [
 									</a>
 								</td>
 								<td>{mod.antal}</td>
-								<td>{mod.uppslag}</td>
 								<td>{mod.paborjade}</td>
 								<td>{mod.klara}</td>
 							</tr>
@@ -319,6 +327,20 @@ const kapitelChecklista = [
 						Löpande trådar som ska synas i varje kapitel (07, svag punkt 3): {lopande.map((p) => p.id).join(', ')} —
 						normer, genus och etik vävs in där de är relevanta, inte bara i kapitel 13.
 					</p>
+				)}
+
+				{kapAvslutningar.length > 0 && (
+					<>
+						<h2>Kapitelavslutningar</h2>
+						<ul>
+							{kapAvslutningar.map((a) => (
+								<li>
+									{a.finns ? <a href={a.url}>{a.title}</a> : a.title}{' '}
+									<span class="gr-dammig">({a.type}{a.status ? `, ${a.status}` : ', fil saknas'})</span>
+								</li>
+							))}
+						</ul>
+					</>
 				)}
 
 				<h2>Kapitelgranskning (09-kvalitetssakring.md)</h2>

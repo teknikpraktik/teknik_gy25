@@ -8,6 +8,7 @@
 
 import { getCollection } from 'astro:content';
 import { kapitel, larandemalId, slugify } from '../../../../scripts/bokstruktur-data.mjs';
+import { kapitelavslutningarForKapitel } from '../../../../scripts/kapitelavslutningar-data.mjs';
 import { statusEnum } from '../../../../schemas/larandemal.schema.mjs';
 
 const MIN_STATUS_IDX = statusEnum.indexOf('fardig-forsta-version');
@@ -59,6 +60,14 @@ export async function hamtaReviewKapitel() {
 		return a;
 	}
 
+	// Kapitelavslutningar (type-filer) ur samma collection, per kapitel.
+	const avslutningarByChapter = new Map();
+	for (const e of docs) {
+		if (e.data.type === undefined) continue;
+		if (!avslutningarByChapter.has(e.data.chapter)) avslutningarByChapter.set(e.data.chapter, []);
+		avslutningarByChapter.get(e.data.chapter).push(e);
+	}
+
 	const resultat = [];
 	for (const k of kapitel) {
 		const moduler = [];
@@ -89,11 +98,30 @@ export async function hamtaReviewKapitel() {
 				});
 			}
 		}
-		if (moduler.length > 0) {
+		// Kapitelavslutningar sist i kapitlet, i manifestordning, endast de som
+		// nått status fardig-forsta-version eller högre.
+		const avslutningar = [];
+		const kapavslutDocs = avslutningarByChapter.get(k.nr) ?? [];
+		for (const post of kapitelavslutningarForKapitel(k.nr)) {
+			const entry = kapavslutDocs.find((e) => e.data.type === post.type);
+			if (!entry) continue;
+			if (statusEnum.indexOf(entry.data.status) < MIN_STATUS_IDX) continue;
+			const html = entry.rendered?.html;
+			if (!html) continue;
+			avslutningar.push({
+				type: post.type,
+				titel: entry.data.title,
+				anchor: unikAnkare(entry.data.title),
+				html: sankRubriker(taBortBegreppslankar(rensaHtml(html, `${k.nr}/${post.slug}`))),
+			});
+		}
+
+		if (moduler.length > 0 || avslutningar.length > 0) {
 			resultat.push({
 				nr: k.nr,
 				titel: k.titel,
 				moduler,
+				avslutningar,
 				antal: moduler.reduce((s, m) => s + m.larandemal.length, 0),
 			});
 		}

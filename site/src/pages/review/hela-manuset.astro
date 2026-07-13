@@ -30,6 +30,12 @@ const datum = new Date().toISOString().slice(0, 10);
 					))}
 				</section>
 			))}
+			{(k.avslutningar ?? []).map((a) => (
+				<section class="kapitelavslutning">
+					<h2 id={`hela-${a.anchor}`}>{a.titel}</h2>
+					<Fragment set:html={a.html} />
+				</section>
+			))}
 		</section>
 	))}
 </ReviewLayout>

@@ -37,6 +37,13 @@ const { kapitel: k, allaKapitel, foregaende, nasta } = Astro.props;
 		</section>
 	))}
 
+	{(k.avslutningar ?? []).map((a) => (
+		<section class="kapitelavslutning">
+			<h2 id={a.anchor}>{a.titel}</h2>
+			<Fragment set:html={a.html} />
+		</section>
+	))}
+
 	<nav class="kapitelnav" aria-label="Kapitelnavigering">
 		<span>{foregaende && <a href={medBase(`/review/kapitel-${foregaende.nr}/`)}>← Kapitel {foregaende.nr} · {foregaende.titel}</a>}</span>
 		<span>{nasta && <a href={medBase(`/review/kapitel-${nasta.nr}/`)}>Kapitel {nasta.nr} · {nasta.titel} →</a>}</span>

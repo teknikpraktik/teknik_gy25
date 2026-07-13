@@ -37,6 +37,11 @@ const datum = new Date().toISOString().slice(0, 10);
 								</ul>
 							</li>
 						))}
+						{(k.avslutningar ?? []).map((a) => (
+							<li class="toc-modul">
+								<a href={medBase(`/review/kapitel-${k.nr}/#${a.anchor}`)}>{a.titel}</a>
+							</li>
+						))}
 					</ul>
 				</li>
 			))}

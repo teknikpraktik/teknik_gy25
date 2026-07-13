@@ -235,7 +235,6 @@ function granskningsruta(fm) {
 		`<dl>` +
 		rad('Lärandemål', esc(fm.goal ?? '')) +
 		rad('Status', `<span class="gr-status gr-status-${esc(fm.status ?? '')}">${esc(fm.status ?? '')}</span>`) +
-		rad('Uppslag', esc(fm.uppslag ?? 1)) +
 		rad('Kursplan', taggar) +
 		rad('Introducerar', introducerar) +
 		rad('Använder', anvander) +

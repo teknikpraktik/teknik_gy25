@@ -68,14 +68,12 @@ for (const k of kapitel) {
 				module: `${k.nr}.${i + 1}`,
 				title: lm.titel,
 				goal: lm.mal,
-				uppslag: lm.uppslag ?? 1,
 				status: 'ej-paborjad',
 				curriculum: { niva1: [], niva2: [] },
 				concepts_introduced: [],
 				concepts_used: [],
 				figures: [],
 				prerequisites: [],
-				practical_component: false,
 			});
 			const body = `---
 ${frontmatter}---

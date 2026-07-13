@@ -19,6 +19,7 @@ import matter from 'gray-matter';
 import YAML from 'yaml';
 import { statusEnum } from '../schemas/larandemal.schema.mjs';
 import { kapitel, kapitelSlug, modulSlug, larandemalId, larandemalFilnamn } from './bokstruktur-data.mjs';
+import { kapitelavslutningarForKapitel } from './kapitelavslutningar-data.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const contentDir = path.join(root, '..', 'content');
@@ -78,6 +79,7 @@ export async function sammanstallManus({ minStatusIdx, figurBlock = defaultFigur
 
 	for (const k of kapitel) {
 		let kapitelDel = '';
+		let kapitelHarLarandemal = false;
 		for (let i = 0; i < k.moduler.length; i++) {
 			const m = k.moduler[i];
 			let modulDel = '';
@@ -104,6 +106,26 @@ export async function sammanstallManus({ minStatusIdx, figurBlock = defaultFigur
 			}
 			if (modulDel !== '') {
 				kapitelDel += `\n\n## ${k.nr}.${i + 1} ${m.titel}\n${modulDel}`;
+				kapitelHarLarandemal = true;
+			}
+		}
+		// Kapitelavslutningar (begreppsövning, uppgiftsbank) sist i kapitlet, i
+		// manifestordning. De är chapter-nivå (##) så exportens rubrikkontroller
+		// (nivå 3 = lärandemål) påverkas inte. Läggs inte till inkluderade.
+		if (kapitelHarLarandemal) {
+			for (const post of kapitelavslutningarForKapitel(k.nr)) {
+				const filePath = path.join(contentDir, kapitelSlug(k), `${post.slug}.md`);
+				let raw;
+				try {
+					raw = await readFile(filePath, 'utf8');
+				} catch {
+					saknadeFiler.push(`${k.nr}/${post.slug}`);
+					continue;
+				}
+				const { data, content } = matter(raw);
+				if (statusEnum.indexOf(data.status) < minStatusIdx) continue;
+				const brodtext = resolveShortcodes(demoteHeadings(stripArbetsanteckningar(content)), figureRegistry, figurBlock);
+				kapitelDel += `\n\n## ${data.title}\n\n${brodtext}\n`;
 			}
 		}
 		if (kapitelDel !== '') {
