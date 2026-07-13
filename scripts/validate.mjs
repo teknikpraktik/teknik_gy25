@@ -320,10 +320,10 @@ for (const lm of larandemal) {
 	}
 
 	// Äldre uppgiftsrubriker och synliga uppslagsrubriker får inte förekomma.
-	for (const forbjuden of [/^#{2,4}\s+(Förstå|Utveckla|Utmana)\s*$/m, /^#{2,4}\s+Uppslag\b/m]) {
+	for (const forbjuden of [/^#{2,4}\s+(Förstå|Utveckla|Utmana)\s*$/m, /^#{2,4}\s+Uppslag\b/m, /^#{2,4}\s+Begrepp\s*$/m, /^#{2,4}\s+Praktiska uppgifter\s*$/m]) {
 		const traff = lm.body.match(forbjuden);
 		if (traff) {
-			errors.push(`${beskr}: rubriken "${traff[0].replace(/^#+\s*/, '')}" får inte förekomma i elevtexten (03/12/13).`);
+			errors.push(`${beskr}: rubriken "${traff[0].replace(/^#+\s*/, '')}" får inte förekomma i ett lärandemål (03/11/12/13).`);
 		}
 	}
 
