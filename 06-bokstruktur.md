@@ -48,7 +48,7 @@ Varje lärandemål anges med id, kort arbetstitel och en mätbar målformulering
 
 Målformuleringen beskriver vad eleven kan göra efter genomfört arbete (03-bokens-arkitektur.md, "Lärandemål"). Den inleds därför alltid med ett observerbart verb: beskriva, förklara, beräkna, tolka, välja, upprätta, genomföra, skissa och så vidare.
 
-Ett lärandemål omfattar normalt ett uppslag. Lärandemål som bedöms kräva flera uppslag markeras med **(2 uppslag)** (eller det antal som planeras) — antalet är en planeringsuppskattning som får justeras under produktionen, i linje med 03: antalet sidor styrs av pedagogiken.
+Ett lärandemål har inget fast sid- eller uppslagsomfång (03-bokens-arkitektur.md). Det får flöda över så många sidor som förståelsen kräver och delas bara vid flera tydligt skilda kunskapsresultat. Uppslag och sidbrytningar är en layout- och tryckfråga och markeras inte här.
 
 Maskinläst radformat (exakt):
 
@@ -56,28 +56,26 @@ Maskinläst radformat (exakt):
 # Kapitel <nr> – <titel>
 ## Modul <nr>.<nr> <titel>
 - **<k>.<m>.<l> <Titel>** — <Målformulering.>
-- **<k>.<m>.<l> <Titel>** — <Målformulering.> **(<N> uppslag)**
 ```
 
 Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–" och skiljetecknet mellan titel och mål är "—".
 
 ---
 
-# Kapitel 1 – Teknikhistoria
+# Kapitel 1 – Teknikens utveckling
 
 ## Modul 1.1 Teknik: människans problemlösning
 
 - **1.1.1 Vad är teknik?** — Förklara vad teknik är och ge exempel på hur tekniska lösningar svarar mot mänskliga behov och problem.
 - **1.1.2 Teknik, naturvetenskap och matematik** — Beskriva hur teknik samspelar med naturvetenskap och matematik i en verklig teknisk lösning.
 
-## Modul 1.2 Teknikens utveckling genom historien
+## Modul 1.2 Tidig teknisk utveckling
 
-- **1.2.1 Tekniska genombrott före industrialiseringen** — Beskriva tekniska genombrott från de första verktygen till 1700-talet och förklara deras betydelse för samhället. **(2 uppslag)**
-- **1.2.2 Teknikutvecklingens drivkrafter** — Förklara hur behov, kunskap och samhällsförändringar driver teknikutveckling, med historiska exempel.
+- **1.2.1 Tekniska genombrott före industrialiseringen** — Beskriva tekniska genombrott från de första verktygen till 1700-talet och förklara deras betydelse för samhället.
 
-## Modul 1.3 Industriella revolutionerna
+## Modul 1.3 Industrialisering och industriella revolutioner
 
-- **1.3.1 Fyra industriella revolutioner** — Beskriva de fyra industriella revolutionerna och de teknikskiften som kännetecknar dem. **(2 uppslag)**
+- **1.3.1 Fyra industriella revolutioner** — Beskriva de fyra industriella revolutionerna och de teknikskiften som kännetecknar dem.
 - **1.3.2 Industrialiseringens samhällskonsekvenser** — Analysera hur industrialiseringen förändrade produktion, arbete och levnadsvillkor.
 
 ## Modul 1.4 Digitaliseringens framväxt
@@ -85,9 +83,10 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 - **1.4.1 Från transistor till AI** — Beskriva digitalteknikens viktigaste utvecklingssteg från transistorn till internet och AI.
 - **1.4.2 Digitala teknikskiften** — Ge exempel på hur digitala teknikskiften har förändrat branscher och vardagsliv.
 
-## Modul 1.5 Framtidens teknik
+## Modul 1.5 Teknikutvecklingens drivkrafter och framtid
 
-- **1.5.1 Att bedöma framtidens teknik** — Använda historiska teknikskiften för att resonera om hur dagens nya teknik kan utvecklas och påverka samhället.
+- **1.5.1 Teknikutvecklingens drivkrafter** — Förklara hur behov, kunskap och samhällsförändringar driver teknikutveckling, med historiska exempel.
+- **1.5.2 Att bedöma framtidens teknik** — Använda historiska teknikskiften för att resonera om hur dagens nya teknik kan utvecklas och påverka samhället.
 
 ---
 
@@ -116,7 +115,7 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 
 ## Modul 3.1 Teknikutvecklingsprocessen
 
-- **3.1.1 Processens faser** — Beskriva teknikutvecklingsprocessens delar från idé till återvinning och förklara hur de hänger samman. **(2 uppslag)**
+- **3.1.1 Processens faser** — Beskriva teknikutvecklingsprocessens delar från idé till återvinning och förklara hur de hänger samman.
 - **3.1.2 Iteration** — Förklara varför teknikutveckling är iterativ och ge exempel på hur testresultat leder tillbaka till tidigare faser.
 
 ## Modul 3.2 Kravspecifikation
@@ -165,7 +164,7 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 ## Modul 4.4 CAD
 
 - **4.4.1 CAD och parametrisk modellering** — Förklara vad CAD är och hur parametrisk modellering bygger på skisser, mått och villkor.
-- **4.4.2 Modellera en detalj** — Skapa en 3D-modell av en enkel detalj i ett CAD-program. **(2 uppslag)**
+- **4.4.2 Modellera en detalj** — Skapa en 3D-modell av en enkel detalj i ett CAD-program.
 - **4.4.3 Sammanställningar** — Sätta samman flera detaljer till en sammanställning i CAD och förklara hur delarna förhåller sig till varandra.
 
 ## Modul 4.5 Ritningar och modeller
@@ -179,7 +178,7 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 
 ## Modul 5.1 Materialgrupper
 
-- **5.1.1 Materialens huvudgrupper** — Klassificera material i huvudgrupperna metaller, polymerer, keramer, kompositer och träbaserade material samt ge exempel på användningsområden. **(2 uppslag)**
+- **5.1.1 Materialens huvudgrupper** — Klassificera material i huvudgrupperna metaller, polymerer, keramer, kompositer och träbaserade material samt ge exempel på användningsområden.
 
 ## Modul 5.2 Materialegenskaper
 
@@ -193,7 +192,7 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 
 ## Modul 5.4 Tillverkning och material
 
-- **5.4.1 Tillverkningsmetoder** — Beskriva vanliga tillverkningsmetoder och koppla dem till lämpliga materialgrupper. **(2 uppslag)**
+- **5.4.1 Tillverkningsmetoder** — Beskriva vanliga tillverkningsmetoder och koppla dem till lämpliga materialgrupper.
 - **5.4.2 Tillverkningsanpassning** — Förklara hur valet av material och tillverkningsmetod påverkar en detaljs utformning och kostnad.
 
 ## Modul 5.5 Material i ett livscykelperspektiv
@@ -234,7 +233,7 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 
 ## Modul 6.6 Dimensionering
 
-- **6.6.1 Säkerhetsfaktor och dimensionering** — Dimensionera en enkel konstruktionsdetalj mot en given belastning med hjälp av tillåten spänning och säkerhetsfaktor. **(2 uppslag)**
+- **6.6.1 Säkerhetsfaktor och dimensionering** — Dimensionera en enkel konstruktionsdetalj mot en given belastning med hjälp av tillåten spänning och säkerhetsfaktor.
 - **6.6.2 Rimlighetsbedömning** — Bedöma beräkningsresultats rimlighet med överslagsräkning och enhetskontroll.
 
 ---
@@ -247,7 +246,7 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 
 ## Modul 7.2 Mätinstrument
 
-- **7.2.1 Mäta med rätt instrument** — Välja lämpligt mätinstrument för en given mätuppgift och använda det korrekt. **(2 uppslag)**
+- **7.2.1 Mäta med rätt instrument** — Välja lämpligt mätinstrument för en given mätuppgift och använda det korrekt.
 
 ## Modul 7.3 Mätfel
 
@@ -273,7 +272,7 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 
 ## Modul 8.2 Digital modellering
 
-- **8.2.1 Bygga en digital modell** — Bygga en enkel digital modell av ett tekniskt förlopp i kalkylprogram eller Python. **(2 uppslag)**
+- **8.2.1 Bygga en digital modell** — Bygga en enkel digital modell av ett tekniskt förlopp i kalkylprogram eller Python.
 
 ## Modul 8.3 Simulering
 
@@ -337,7 +336,7 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 
 ## Modul 10.6 Problemlösning
 
-- **10.6.1 Från problem till program** — Bryta ned ett tekniskt problem i delsteg och implementera lösningen som ett strukturerat Python-program. **(2 uppslag)**
+- **10.6.1 Från problem till program** — Bryta ned ett tekniskt problem i delsteg och implementera lösningen som ett strukturerat Python-program.
 - **10.6.2 Testa och felsöka** — Testa ett program systematiskt samt lokalisera och rätta fel i programkod.
 
 ---
@@ -360,7 +359,7 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 
 ## Modul 11.4 Genomförande
 
-- **11.4.1 Arbeta i projekt** — Genomföra ett tekniskt projekt enligt plan med möten, dokumentation och uppföljning av tid och resultat. **(2 uppslag)**
+- **11.4.1 Arbeta i projekt** — Genomföra ett tekniskt projekt enligt plan med möten, dokumentation och uppföljning av tid och resultat.
 
 ## Modul 11.5 Projektutvärdering
 
