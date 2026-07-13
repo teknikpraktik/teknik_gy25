@@ -70,6 +70,13 @@ uppgifter:
     produkt: "drivkraftsschema med angivna källor"
     forkunskaper: ["1.3.1"]
   - ref: k1-u11
+    omfattning: lektionsuppgift
+    larandemal: ["1.3.2"]
+    tid: "en lektion"
+    arbetsform: par
+    produkt: "jämförelsetabell med en kort motivering"
+    forkunskaper: ["1.3.2"]
+  - ref: k1-u12
     omfattning: miniprojekt
     larandemal: ["1.2.2"]
     tid: "flera lektioner"
@@ -77,7 +84,7 @@ uppgifter:
     produkt: "plansch om ortens produktion, arbete och levnadsvillkor med ett fotograferat spår"
     extern_tillgang: "lokala källor som hembygdsförening, kommunarkiv eller äldre kartor"
     alternativ: "arbeta helt med digitalt material: kommunens historik, Riksarkivets och Statistiska centralbyråns äldre uppgifter samt historiska kartor på nätet"
-  - ref: k1-u12
+  - ref: k1-u13
     omfattning: miniprojekt
     larandemal: ["1.2.4", "1.2.5"]
     tid: "flera lektioner"
@@ -85,7 +92,7 @@ uppgifter:
     produkt: "rapport eller presentation om arbetsdelning och teknikskiften på arbetsplatsen"
     extern_tillgang: "studiebesök på eller intervju med ett företag i närheten"
     alternativ: "använd företagets eget material: webbplats, film från produktionen eller årsredovisning"
-  - ref: k1-u13
+  - ref: k1-u14
     omfattning: miniprojekt
     larandemal: ["1.2.4", "1.2.5"]
     tid: "flera lektioner"
@@ -129,7 +136,7 @@ skala och längd. Skriv en kort kommentar om varför skalan var svår att välja
 
 ### k1-u4 · Moores lag i ett kalkylblad
 
-**Kort aktivitet · individuell · cirka 30 minuter · tränar 1.4.1.** Den första
+**Kort aktivitet · individuell · cirka 30 minuter · tränar 1.2.4.** Den första
 mikroprocessorn från 1971 rymde 2 300 transistorer. Bygg ett kalkylblad som utgår
 från en fördubbling vartannat år och räknar ut transistorantalet för varje
 fördubbling fram till i dag. Jämför slutresultatet med att dagens kretsar rymmer
@@ -166,7 +173,7 @@ märkt principskiss.
 
 ### k1-u8 · T-Ford: produktionstakt och pris
 
-**Lektionsuppgift · par · en lektion · tränar 1.3.1.** Innan det löpande bandet
+**Lektionsuppgift · par · en lektion · tränar 1.2.3.** Innan det löpande bandet
 infördes tog monteringen av ett T-Ford-chassi drygt tolv timmar; efteråt ungefär
 en och en halv timme. Priset på en T-Ford var omkring 850 dollar 1908 och under
 300 dollar på 1920-talet. Bygg ett kalkylblad och arbeta i fem steg:
@@ -185,7 +192,7 @@ och 5.
 
 ### k1-u9 · Digitaliseringens vinnare och förlorare
 
-**Lektionsuppgift · par · en lektion · tränar 1.4.2.** Välj en bransch som har
+**Lektionsuppgift · par · en lektion · tränar 1.2.5.** Välj en bransch som har
 förändrats av digitaliseringen, till exempel musik, foto, bank, tidningar,
 resebyråer eller taxi. Rita ett diagram som visar hur informationen lämnade sin
 fysiska bärare, och ange vilka tekniska komponenter som gjorde skiftet möjligt.
@@ -194,23 +201,37 @@ skiftet. **Lämna in:** diagram och kort analys.
 
 ### k1-u10 · Drivkrafter bakom ett genombrott
 
-**Lektionsuppgift · individuell · en lektion · tränar 1.5.1.** Välj ett tekniskt
+**Lektionsuppgift · individuell · en lektion · tränar 1.3.1.** Välj ett tekniskt
 genombrott som inte behandlas i boken, till exempel glödlampan, cykeln eller
 kylskåpet. Ta reda på när och var det skedde och hur lösningen fungerar tekniskt.
-Kartlägg vilka behov, vilken kunskap och vilka samhällsförändringar som drev fram
-det, och redovisa i ett drivkraftsschema med tre spår: behov, kunskap och
-samhällsförändring. Ange vilka källor du använt. **Lämna in:** ett drivkraftsschema
-med källor.
+Kartlägg vilka drivkrafter som låg bakom: behov och problem, kunskap och tekniska
+möjligheter, ekonomi och konkurrens samt samhällsförändringar. Redovisa i ett
+drivkraftsschema och ange vilka källor du använt. Markera vilken drivkraft som
+var startpunkten och vilka som samverkade. **Lämna in:** ett drivkraftsschema med
+källor.
+
+### k1-u11 · Samma behov, olika lösningar genom tiden
+
+**Lektionsuppgift · par · en lektion · tränar 1.3.2.** Välj två tekniska lösningar
+på samma eller närliggande behov från olika tider, till exempel brev och digitala
+meddelanden, vattenkvarn och elmotor, hästtransport och bil, analog kamera och
+mobilkamera, eller fast telefon och mobiltelefon. Ställ upp dem i en tabell och
+ange för var och en vilket behov den svarar mot, vilken kunskap och teknik den
+byggde på, vilka begränsningar som fanns och vilka avvägningar som gjordes.
+Förklara till sist varför de två lösningarna fick olika utformning trots att de
+svarar mot samma behov. Gör inte om detta till en fullständig teknikutvecklings-
+process; håll fokus på vad som formade lösningarna. **Lämna in:** en
+jämförelsetabell med en kort motivering.
 
 ## Miniprojekt
 
-### k1-u11 · Orten och industrialiseringen
+### k1-u12 · Orten och industrialiseringen
 
-**Miniprojekt · grupp · flera lektioner · tränar 1.3.2 och 1.3.1.** Din hemort
-eller närmaste stad bär spår av industrialiseringen. Ta reda på vilken industri
-som fanns eller finns på orten och när järnvägen kom. Undersök hur ortens
-befolkning förändrades under industrialiseringen. Fotografera eller kartlägg minst
-ett fysiskt spår, till exempel en gammal fabriksbyggnad, ett stationshus eller ett
+**Miniprojekt · grupp · flera lektioner · tränar 1.2.2.** Din hemort eller
+närmaste stad bär spår av industrialiseringen. Ta reda på vilken industri som
+fanns eller finns på orten och när järnvägen kom. Undersök hur ortens befolkning
+förändrades under industrialiseringen. Fotografera eller kartlägg minst ett
+fysiskt spår, till exempel en gammal fabriksbyggnad, ett stationshus eller ett
 arbetarbostadsområde. Sätt samman en plansch som visar produktionen, arbetet och
 levnadsvillkoren på orten. Använd lokala källor som hembygdsförening, kommunarkiv
 eller äldre kartor. Om sådana är svåra att nå går det lika bra att arbeta med
@@ -218,9 +239,9 @@ digitalt material: kommunens historik, Riksarkivets och Statistiska centralbyrå
 äldre uppgifter samt historiska kartor på nätet. **Lämna in:** en plansch med minst
 ett dokumenterat fysiskt spår.
 
-### k1-u12 · Teknikskiftena på en arbetsplats
+### k1-u13 · Teknikskiftena på en arbetsplats
 
-**Miniprojekt · grupp · flera lektioner · tränar 1.3.1 och 1.3.2.** Undersök hur
+**Miniprojekt · grupp · flera lektioner · tränar 1.2.4 och 1.2.5.** Undersök hur
 automatiserad och uppkopplad tillverkningen är på ett företag i din närhet.
 Beskriv vilka moment maskiner utför och vilka människor utför. Leta efter spår av
 uppkoppling: sensorer, datainsamling eller fjärrövervakning. Bedöm vilka av de fyra
@@ -229,9 +250,9 @@ komma från ett studiebesök eller en intervju; om det inte går att ordna anvä
 ni företagets eget material, till exempel webbplats, film från produktionen eller
 årsredovisning. **Lämna in:** en kort rapport eller presentation.
 
-### k1-u13 · Kedjan bakom en digital tjänst
+### k1-u14 · Kedjan bakom en digital tjänst
 
-**Miniprojekt · par · flera lektioner · tränar 1.4.1 och 1.4.2.** Välj en digital
+**Miniprojekt · par · flera lektioner · tränar 1.2.4 och 1.2.5.** Välj en digital
 tjänst ni använder dagligen. Spåra vilka av digitalteknikens utvecklingssteg
 tjänsten är beroende av för att fungera: transistorn, den integrerade kretsen,
 internet, mobilnätet och AI. Rita kedjan från transistorn till tjänsten med en kort
