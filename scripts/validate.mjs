@@ -19,7 +19,7 @@ import {
 	kapitelavslutningRequiredSchema,
 	statusEnum,
 } from '../schemas/larandemal.schema.mjs';
-import { allaLarandemal } from './bokstruktur-data.mjs';
+import { allaLarandemal, kapitel } from './bokstruktur-data.mjs';
 import { kapitelavslutningar, allaKapitelavslutningar } from './kapitelavslutningar-data.mjs';
 import { niva1, niva2, syftesmal, allaPunkter } from './kursplan-data.mjs';
 
@@ -534,6 +534,33 @@ for (const punkt of niva2) console.log(tackningsrad(punkt, 'niva2'));
 console.log(' Syftesmål:');
 for (const punkt of syftesmal) console.log(tackningsrad(punkt, 'bada'));
 console.log('');
+
+// Rådgivande modulstandard (03-bokens-arkitektur.md, "Modul"): flaggar moduler
+// utanför tumregeln 2–5 lärandemål och modulrubriker som dubblerar ett
+// lärandemål. Egen informationsrapport — påverkar aldrig varningar, fel eller
+// exitkod (spec: kontrollen får inte ensam göra bygget rött).
+const modulRad = [];
+for (const k of kapitel) {
+	k.moduler.forEach((m, i) => {
+		const modId = `${k.nr}.${i + 1}`;
+		const antal = m.larandemal.length;
+		if (antal === 1) {
+			modulRad.push(`  · Modul ${modId} "${m.titel}": 1 lärandemål — kontrollera att enmålsmodulen är motiverad.`);
+		} else if (antal > 5) {
+			modulRad.push(`  · Modul ${modId} "${m.titel}": ${antal} lärandemål — tumregeln är 2–5, överväg att dela modulen.`);
+		}
+		for (const lm of m.larandemal) {
+			if (lm.titel.trim().toLowerCase() === m.titel.trim().toLowerCase()) {
+				modulRad.push(`  · Modul ${modId}: modulrubriken dubblerar lärandemålet "${lm.titel}" — modulrubriken ska vara bredare.`);
+			}
+		}
+	});
+}
+if (modulRad.length > 0) {
+	console.log(`Modulstandard (rådgivande, 03 "Modul" — påverkar inte bygget):`);
+	for (const r of modulRad) console.log(r);
+	console.log('');
+}
 
 if (warnings.length > 0) {
 	console.log(`Varningar (${warnings.length}):`);
