@@ -21,6 +21,10 @@ export const kapitelavslutningar = {
     { type: 'uppgiftsbank', slug: 'uppgifter-och-projekt', title: 'Praktiska uppgifter och projekt' },
     { type: 'begreppsovning', slug: 'begreppsovning', title: 'Begreppsövning' },
   ],
+  2: [
+    { type: 'uppgiftsbank', slug: 'uppgifter-och-projekt', title: 'Praktiska uppgifter och projekt' },
+    { type: 'begreppsovning', slug: 'begreppsovning', title: 'Begreppsövning' },
+  ],
 };
 
 // Alla deklarerade kapitelavslutningar för ett kapitelnummer, i manifestordning.
