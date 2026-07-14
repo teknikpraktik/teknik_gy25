@@ -7,6 +7,24 @@ betraktas som färdig första version. "Överträffar Golden Master" ska motiver
 och eventuell ny standard lyftas för redaktionellt beslut. Loggen ingår inte i
 bokexporten (export läser endast content/).
 
+**Redaktionellt beslut 2026-07-14 (övergång kapitel 2 → kapitel 3):**
+teknikutvecklingsprocessen är underordnad problemlösning, inte tvärtom —
+processen är en formaliserad, industriellt strukturerad tillämpning av
+problemlösning, byggd ovanpå de fyra strategierna i avsnitt 2.2. Brygga
+tillagd sist i 2.3.3 (efter kapitlets sista sakinnehåll, före
+Instuderingsfrågor) eftersom kapitel 3 saknar en egen ingresstext att skriva
+bryggan i — kapitel-/modulsidor är genererade vyer utan fritt brödtextfält
+(CLAUDE.md). När 3.1.1 (Processens faser) produceras ska den peka tillbaka på
+avsnitt 2.2 explicit; kravet är noterat i 3.1.1:s platshållarkommentar.
+Gränsen mellan 2.3 (Testning och utvärdering) och 3.5 (Prototyper) låst: 2.3
+äger testning som princip (varför man testar, hur man värderar en lösning mot
+krav — oförändrat, gäller oavsett testobjekt), 3.5 äger prototypen som
+konkret verktyg (fysisk eller digital bärare av testet) och ska hänvisa
+tillbaka till 2.3 i stället för att upprepa testprinciperna. 2.3.1 kompletterad
+med en mening om att en prototyp kan vara testobjektet. Kraven är noterade i
+3.5.1:s och 3.5.2:s platshållarkommentarer och gäller tills de lärandemålen
+produceras.
+
 **Strukturrevision 2026-07-13 (redaktionellt beslut, lärandemålsstyrd modell):**
 övergång från uppslagsstyrd till lärandemålsstyrd modell. Uppslaget avskaffat som
 arkitekturnivå; inga fasta antalsintervall för instuderingsfrågor. Synliga
@@ -41,3 +59,5 @@ fastställdes därefter på nytt som Golden Master i sin reviderade form.
 | 2.2.2 Nedbrytning i delproblem | fardig-forsta-version | Likvärdig med Golden Master | — | Begreppet delproblem introducerat; Husqvarnas robotgräsklippare 1995 som nedbrytningsfall; Mars Climate Orbiter bär skarvarnas risk; nedbrytningsträd som visuell redovisningsform |
 | 2.2.3 Val av strategi | fardig-forsta-version | Likvärdig med Golden Master | — | Modul 2.2 komplett. Fyra strategier med valkarta (kostnad per försök × kunskapsläge); Edison, de Mestral och SpaceX som fall; muntligt försvar som redovisningsform |
 | 2.3.1 Att testa mot krav | fardig-forsta-version | Likvärdig med Golden Master | — | Begreppet testplan introducerat; n1-08 första gången; Euro NCAP och IP67 som standardiserade testexempel; praktiskt moment (eget test med protokoll); godkäntgräns före testet som bärande princip |
+| 2.3.2 Utvärdering ur flera aspekter | fardig-forsta-version | Likvärdig med Golden Master | — | Begreppet hållbar utveckling introducerat (Brundtlanddefinitionen); elsparkcykeln vägd på fyra vågskålar (funktion, kostnad, säkerhet, hållbar utveckling); ingen coverage-krav kvar sedan uppgiftsbanken förenklades |
+| 2.3.3 Från testresultat till förbättring | fardig-forsta-version | Likvärdig med Golden Master | — | Modul 2.3 och kapitel 2 komplett (8/8). Begreppet grundorsak introducerat; Galaxy Note 7-fallet (två separata tillverkningsfel hos två leverantörer); avslutas med brygga till kapitel 3, se redaktionellt beslut 2026-07-14 nedan |
