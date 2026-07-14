@@ -94,10 +94,10 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 ## Modul 2.2 Att välja problemlösningsstrategi
 
 - **2.2.1 Bedöma problemets karaktär** — Bedöma ett tekniskt problems karaktär utifrån om det går att överblicka, hur väl förstått det är och vad ett misslyckat försök kostar, för att välja och motivera en problemlösningsstrategi.
-- **2.2.2 Återanvänd befintlig lösning** — Identifiera och tillämpa en befintlig, beprövad lösning på ett tekniskt problem.
-- **2.2.3 Pröva och förbättra** — Använda pröva-och-förbättra som strategi för att lösa ett tekniskt problem genom upprepade, dokumenterade försök.
-- **2.2.4 Analysera innan du bygger** — Använda analys, beräkning, simulering och kontrollerade tester för att lösa ett tekniskt problem innan en dyr eller riskfylld fullskalig lösning genomförs.
-- **2.2.5 Dela upp problemet** — Bryta ned ett sammansatt tekniskt problem i delproblem och lösa dem var för sig.
+- **2.2.2 Dela upp problemet** — Bryta ned ett sammansatt tekniskt problem i delproblem och lösa dem var för sig.
+- **2.2.3 Återanvänd befintlig lösning** — Identifiera och tillämpa en befintlig, beprövad lösning på ett tekniskt problem.
+- **2.2.4 Pröva och förbättra** — Använda pröva-och-förbättra som strategi för att lösa ett tekniskt problem genom upprepade, dokumenterade försök.
+- **2.2.5 Analysera innan du bygger** — Använda analys, beräkning, simulering och kontrollerade tester för att lösa ett tekniskt problem innan en dyr eller riskfylld fullskalig lösning genomförs.
 
 ---
 

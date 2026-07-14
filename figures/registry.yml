@@ -109,37 +109,37 @@ fig-2.1.2-a:
 
 fig-2.2.1-a:
   syfte: "Visa hur ett tekniskt problems karaktär, hur väl förstått det är och vad ett misslyckat försök kostar, pekar ut en lämplig problemlösningsstrategi"
-  innehall: "Diagram med två axlar, utan eget namn på diagrammet: hur väl förstått problemet är (dåligt till väl) och vad ett misslyckat försök kostar (lågt till högt). Hela det välförstådda området märks återanvänd befintlig lösning (standarder, kardborren), eftersom kostnaden inte spelar roll när svaret redan är känt. I det dåligt förstådda området delas fälten efter kostnad: låg kostnad ger pröva och förbättra (apptester, Edisons glödtrådar), hög kostnad ger analysera innan du bygger (broar, Apollo 13). Diagrammet gäller bara problem som redan går att överblicka; en kort bildtext hänvisar till avsnittet om nedbrytning för problem som inte gör det"
+  innehall: "Diagram med två axlar, utan eget namn på diagrammet: hur väl förstått problemet är (dåligt till väl) och vad ett misslyckat försök kostar (lågt till högt). Hela det välförstådda området märks återanvänd befintlig lösning (standarder, kardborren), eftersom kostnaden inte spelar roll när svaret redan är känt. I det dåligt förstådda området delas fälten efter kostnad: låg kostnad ger pröva och förbättra (apptester, Edisons glödtrådar), hög kostnad ger analysera innan du bygger (broar, Apollo 13). Diagrammet gäller bara problem som redan går att överblicka; en kort bildtext hänvisar till nästa avsnitt om nedbrytning för problem som inte gör det"
   referens: "Placeras vid avsnittet om de två frågorna; texten hänvisar till figuren utan att ge diagrammet ett eget namn"
   pedagogisk_funktion: "Förvandlar strategivalet från tyckande till bedömning: eleven kan placera ett nytt problem i diagrammet och läsa av vilken strategi som är rimlig. Att återanvänd-fältet spänner över hela det välförstådda området visar konkret att förståelse väger tyngre än kostnad, inte bara påstås i text"
   anvands_i: ["2.2.1"]
 
 fig-2.2.2-a:
-  syfte: "Visa hur kardborrens naturliga krokar blev förebild för kardborrebandets konstruktion"
-  innehall: "Två bilder sida vid sida: kardborrens krokformade taggar i mikroskopförstoring, och kardborrebandets konstgjorda krokar och öglor i motsvarande förstoring, med pilar som visar den formmässiga likheten"
-  referens: "Placeras direkt efter berättelsen om kardborrebandets uppkomst; texten hänvisar till figuren när naturen som källa till en beprövad lösning beskrivs"
-  pedagogisk_funktion: "Gör återanvändningen konkret och synlig: eleven ser att lösningen bokstavligen kopierades från naturen, i stället för att bara läsa påståendet"
-  anvands_i: ["2.2.2"]
-
-fig-2.2.3-a:
-  syfte: "Visa hur upprepade, dokumenterade försök gradvis närmar sig en fungerande lösning"
-  innehall: "Enkel iterationscykel med fyra steg i en ring: pröva, mät resultatet, dokumentera, justera. Vid ringen en kort logg i Edisons stil, tre rader med material, resultat och slutsats, som visar hur varje varv bygger på det förra i stället för att upprepa det"
-  referens: "Placeras vid avsnittet om dokumentationens roll; texten hänvisar till figuren när skillnaden mellan metod och gissning förklaras"
-  pedagogisk_funktion: "Gör det abstrakta 'pröva och förbättra' till en konkret, upprepningsbar cykel med ett tydligt fjärde steg (dokumentera) som är det eleven annars lätt hoppar över"
-  anvands_i: ["2.2.3"]
-
-fig-2.2.4-a:
-  syfte: "Visa skillnaden mellan att lita på en lösning i skarpt läge och att först kontrollera den i en verifierad kopia"
-  innehall: "Bildpar från Apollo 13: till vänster adaptern byggd och testad på marken i Houston (kontrollerad miljö, möjligt att öppna och göra om), till höger samma adapter byggd av besättningen ombord efter radioinstruktionerna (skarpt läge, ett enda försök). En pil mellan bilderna markerar att bygginstruktionen skickades först sedan marktestet godkänts"
-  referens: "Placeras direkt efter beskrivningen av marktestet; texten hänvisar till figuren när det kontrollerade testets roll förklaras"
-  pedagogisk_funktion: "Gör skillnaden mellan ett kontrollerat test och ett fullskaligt försök konkret och synlig: eleven ser att marktestet inte var ett extra steg utan det som gjorde att besättningen kunde lita på lösningen"
-  anvands_i: ["2.2.4"]
-
-fig-2.2.5-a:
   syfte: "Visa hur ett sammansatt tekniskt problem bryts ned i delproblem som kan lösas och testas var för sig"
   innehall: "Nedbrytningsträd för robotgräsklipparen: det sammansatta problemet överst, därunder delproblemen klippa gräset, hålla sig inom arbetsområdet, undvika hinder, försörja sig med energi och tåla väder. Under ett av delproblemen (hålla sig inom området) visas en ytterligare nivå med exempel på hur även det kan delas. Tunna linjer mellan grenarna markerar kopplingar där delarna måste passa ihop"
   referens: "Placeras vid genomgången av robotgräsklipparens nedbrytning; texten hänvisar till figuren när delproblemen räknas upp"
   pedagogisk_funktion: "Ger eleven trädet som visuell form för egen nedbrytning och visar att nedbrytningen följer funktioner, inte fysiska bitar; kopplingslinjerna förebådar insikten att delarna måste passa ihop"
+  anvands_i: ["2.2.2"]
+
+fig-2.2.3-a:
+  syfte: "Visa hur kardborrens naturliga krokar blev förebild för kardborrebandets konstruktion"
+  innehall: "Två bilder sida vid sida: kardborrens krokformade taggar i mikroskopförstoring, och kardborrebandets konstgjorda krokar och öglor i motsvarande förstoring, med pilar som visar den formmässiga likheten"
+  referens: "Placeras direkt efter berättelsen om kardborrebandets uppkomst; texten hänvisar till figuren när naturen som källa till en beprövad lösning beskrivs"
+  pedagogisk_funktion: "Gör återanvändningen konkret och synlig: eleven ser att lösningen bokstavligen kopierades från naturen, i stället för att bara läsa påståendet"
+  anvands_i: ["2.2.3"]
+
+fig-2.2.4-a:
+  syfte: "Visa hur upprepade, dokumenterade försök gradvis närmar sig en fungerande lösning"
+  innehall: "Enkel iterationscykel med fyra steg i en ring: pröva, mät resultatet, dokumentera, justera. Vid ringen en kort logg i Edisons stil, tre rader med material, resultat och slutsats, som visar hur varje varv bygger på det förra i stället för att upprepa det"
+  referens: "Placeras vid avsnittet om dokumentationens roll; texten hänvisar till figuren när skillnaden mellan metod och gissning förklaras"
+  pedagogisk_funktion: "Gör det abstrakta 'pröva och förbättra' till en konkret, upprepningsbar cykel med ett tydligt fjärde steg (dokumentera) som är det eleven annars lätt hoppar över"
+  anvands_i: ["2.2.4"]
+
+fig-2.2.5-a:
+  syfte: "Visa skillnaden mellan att lita på en lösning i skarpt läge och att först kontrollera den i en verifierad kopia"
+  innehall: "Bildpar från Apollo 13: till vänster adaptern byggd och testad på marken i Houston (kontrollerad miljö, möjligt att öppna och göra om), till höger samma adapter byggd av besättningen ombord efter radioinstruktionerna (skarpt läge, ett enda försök). En pil mellan bilderna markerar att bygginstruktionen skickades först sedan marktestet godkänts"
+  referens: "Placeras direkt efter beskrivningen av marktestet; texten hänvisar till figuren när det kontrollerade testets roll förklaras"
+  pedagogisk_funktion: "Gör skillnaden mellan ett kontrollerat test och ett fullskaligt försök konkret och synlig: eleven ser att marktestet inte var ett extra steg utan det som gjorde att besättningen kunde lita på lösningen"
   anvands_i: ["2.2.5"]
 
 fig-2.3.1-a:

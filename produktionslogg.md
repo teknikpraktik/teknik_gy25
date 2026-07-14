@@ -7,6 +7,39 @@ betraktas som färdig första version. "Överträffar Golden Master" ska motiver
 och eventuell ny standard lyftas för redaktionellt beslut. Loggen ingår inte i
 bokexporten (export läser endast content/).
 
+**Strukturrevision 2026-07-14 (modul 2.2 ombytt ordning, speglar ingenjörens
+beslutslogik):** "Dela upp problemet" flyttad från sista till andra plats i
+modulen, så att disponeringen följer den faktiska beslutsordningen: (1)
+bedöm om problemet går att överblicka, (2) om inte, dela upp det, (3) välj
+sedan en av de tre strategierna (återanvänd/pröva-förbättra/analysera) för
+det överblickbara problemet. Ny ordning: 2.2.1 Bedöma problemets karaktär →
+2.2.2 Dela upp problemet → 2.2.3 Återanvänd befintlig lösning → 2.2.4 Pröva
+och förbättra → 2.2.5 Analysera innan du bygger. Filerna döpta om i tur och
+ordning (via temporära namn för att undvika kollisioner), figurregistrets
+fig-2.2.x roterat i samma ordning, `prerequisites` uppdaterade så de tre
+strategi-lärandemålen nu även bygger på 2.2.2 (dela upp), inte bara 2.2.1.
+
+Övergångar justerade: "ett eget avsnitt längre fram" i 2.2.1 bytt mot en
+direkt hänvisning ("nästa avsnitt"), eftersom nedbrytningen nu faktiskt är
+nästa avsnitt. Kapitlets övergång till kapitel 3 ("Nästa steg: från strategi
+till lösning") flyttad från slutet av "Dela upp problemet" till slutet av
+"Analysera innan du bygger", som nu är modulens sista lärandemål. En kort
+ny inledningsmening i "Återanvänd befintlig lösning" ("Ett problem som går
+att överblicka... kan angripas med tre strategier") gör explicit att de tre
+strategierna är alternativ för ett redan hanterbart problem, inte
+konkurrenter till nedbrytningen. Passade också på att ta bort en oavsiktlig
+meningsdubblering i samma lärandemål (kvarleva från begreppsbytet
+strategimatris → namnlös metod tidigare samma dag).
+
+Kapitlets sammanfattning följde redan den begärda ordningen (förstå →
+formulera → avgöra delning → välja strategi → övergång) och lämnades
+oförändrad. Begreppsövning och uppgiftsbank innehöll inga ordningsberoende
+hänvisningar och lämnades oförändrade.
+
+Verifierat med fullt sitebygge (rensad cache), export och export:review;
+16 lärandemål, samtliga efterkontroller passerade, exporterad rubrikordning
+kontrollerad manuellt mot den nya dispositionen.
+
 **Redaktionellt beslut 2026-07-14 (kursplanetäckning, uttryckligt beslut av
 projektägaren):** n1-08 (Testning och utvärdering av lösningar och resultat
 utifrån flera aspekter, däribland hållbar utveckling) bytte primärkapitel
