@@ -77,7 +77,7 @@ export const niva1 = [
 		id: "n1-08",
 		text: 'Testning och utvärdering av lösningar och resultat utifrån flera aspekter, däribland hållbar utveckling',
 		kategori: 'Problemlösning',
-		primar: 2,
+		primar: 3,
 		berors: [7, 8, 12],
 	},
 	{

@@ -161,8 +161,8 @@ Ett **syntesmål** (ett lärandemål eller en modul som knyter ihop ett kapitels
 De tre inledande kapitlen avgränsas så här:
 
 - **Kapitel 1 – Teknikens utveckling** besvarar *varför*: varför teknik uppstår, varför den utvecklas i en viss riktning och varför tekniska lösningar får den utformning de får. Kapitlet behandlar vad teknik är, teknikens historiska utveckling, teknikens och samhällets historiska växelverkan, vad som driver teknikutveckling och vilka förutsättningar, krav, resurser och avvägningar som formar tekniska lösningar.
-- **Kapitel 2 – Att lösa tekniska problem** besvarar *hur ett problem angrips*: hur ett tekniskt problem identifieras och formuleras, hur problem angrips systematiskt och hur en lösning testas, utvärderas och förbättras.
-- **Kapitel 3 – Teknikutvecklingsprocessen** besvarar *hur ett helt utvecklingsarbete genomförs* från behov till användning och återvinning (faser, iteration, kravspecifikation, idégenerering, konceptval, prototyper, livscykel).
+- **Kapitel 2 – Att lösa tekniska problem** besvarar *hur ett problem angrips*: hur ett tekniskt problem identifieras och formuleras, och hur en problemlösningsstrategi väljs och motiveras utifrån problemets karaktär. Kapitlet stannar vid det valet; att ta fram, testa, utvärdera och förbättra en lösning är kapitel 3:s ansvar.
+- **Kapitel 3 – Teknikutvecklingsprocessen** besvarar *hur ett helt utvecklingsarbete genomförs* från behov till användning och återvinning (faser, iteration, kravspecifikation, idégenerering, konceptval, prototyper, testning, utvärdering, livscykel).
 
 Kapitel 1 ska därför inte innehålla en egen problemlösningsmetod, en egen teknikutvecklingsprocess eller en fristående framtidsanalys. Kapitel 1:s syntes beskriver *att* och *varför* tekniska lösningar formas av behov, möjligheter, krav och avvägningar, inte *hur* ett utvecklingsarbete steg för steg genomförs.
 

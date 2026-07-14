@@ -7,6 +7,20 @@ betraktas som färdig första version. "Överträffar Golden Master" ska motiver
 och eventuell ny standard lyftas för redaktionellt beslut. Loggen ingår inte i
 bokexporten (export läser endast content/).
 
+**Redaktionellt beslut 2026-07-14 (kursplanetäckning, uttryckligt beslut av
+projektägaren):** n1-08 (Testning och utvärdering av lösningar och resultat
+utifrån flera aspekter, däribland hållbar utveckling) bytte primärkapitel
+från 2 till 3, som uppföljning av att motsvarande innehåll togs bort ur
+kapitel 2 samma dag (se revisionen nedan) och ska in i kapitel 3 när det
+produceras. Uppdaterat i 07-kursplanetackning.md (tabellraden och
+observation 2) och den maskinläsbara speglingen scripts/kursplan-data.mjs.
+`berors`-listan (7, 8, 12) oförändrad. 03-bokens-arkitektur.md:s
+kapitelavgränsning för kapitel 2/3 justerad i linje med detta: kapitel 2
+stannar vid att välja och motivera en strategi, kapitel 3 äger att ta fram,
+testa, utvärdera och förbättra en lösning. Verifierat med `npm run
+validate`: n1-08 visar nu kapitel 3 som primärkapitel, konsekvent med övriga
+oproducerade kapitel.
+
 **Strukturrevision 2026-07-14 (kapitel 2 renodlat till två huvudfrågor,
 ändrar 06):** kapitlet skars ned till "Vad är ett tekniskt problem?" (2.1,
 oförändrad i sak) och "Att välja problemlösningsstrategi" (2.2, omdöpt från
