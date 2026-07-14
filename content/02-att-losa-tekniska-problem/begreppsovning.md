@@ -8,12 +8,8 @@ ordlista:
   - behov
   - delproblem
   - funktion
-  - grundorsak
-  - hållbar utveckling
   - krav
-  - strategimatris
   - tekniskt problem
-  - testplan
 ---
 
 Förklara varje begrepp nedan med en egen mening. Skriv i ditt häfte eller i ett
@@ -23,9 +19,5 @@ digitalt dokument; skriv inte i boken.
 - behov
 - delproblem
 - funktion
-- grundorsak
-- hållbar utveckling
 - krav
-- strategimatris
 - tekniskt problem
-- testplan

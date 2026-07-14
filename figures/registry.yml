@@ -108,10 +108,10 @@ fig-2.1.2-a:
   anvands_i: ["2.1.2"]
 
 fig-2.2.1-a:
-  syfte: "Ge eleven en strategimatris för problemlösningsstrategi utifrån problemets karaktär"
-  innehall: "Fyrfältig matris med kolumnerna 'väl förstått' och 'dåligt förstått' och raderna 'låg kostnad' och 'hög kostnad' för ett misslyckat försök. Hela kolumnen 'väl förstått' (båda raderna) märks återanvänd befintlig lösning (standarder, kardborren), eftersom kostnaden inte spelar roll när svaret redan är känt. I kolumnen 'dåligt förstått' delas raderna: låg kostnad ger pröva och förbättra (apptester, Edisons glödtrådar), hög kostnad ger systematisk problemlösning (broar, Apollo 13). En kort bildtext förklarar att den fjärde strategin, att bryta ned problemet, ligger helt utanför matrisen"
-  referens: "Placeras vid avsnittet om de två frågorna; texten hänvisar till figuren när strategimatrisen införs"
-  pedagogisk_funktion: "Förvandlar strategivalet från tyckande till bedömning: eleven kan placera ett nytt problem i matrisen och läsa av vilken strategi som är rimlig. Att återanvänd-fältet spänner över hela kolumnen visar konkret att förståelse väger tyngre än kostnad, inte bara påstås i text"
+  syfte: "Visa hur ett tekniskt problems karaktär, hur väl förstått det är och vad ett misslyckat försök kostar, pekar ut en lämplig problemlösningsstrategi"
+  innehall: "Diagram med två axlar, utan eget namn på diagrammet: hur väl förstått problemet är (dåligt till väl) och vad ett misslyckat försök kostar (lågt till högt). Hela det välförstådda området märks återanvänd befintlig lösning (standarder, kardborren), eftersom kostnaden inte spelar roll när svaret redan är känt. I det dåligt förstådda området delas fälten efter kostnad: låg kostnad ger pröva och förbättra (apptester, Edisons glödtrådar), hög kostnad ger analysera innan du bygger (broar, Apollo 13). Diagrammet gäller bara problem som redan går att överblicka; en kort bildtext hänvisar till avsnittet om nedbrytning för problem som inte gör det"
+  referens: "Placeras vid avsnittet om de två frågorna; texten hänvisar till figuren utan att ge diagrammet ett eget namn"
+  pedagogisk_funktion: "Förvandlar strategivalet från tyckande till bedömning: eleven kan placera ett nytt problem i diagrammet och läsa av vilken strategi som är rimlig. Att återanvänd-fältet spänner över hela det välförstådda området visar konkret att förståelse väger tyngre än kostnad, inte bara påstås i text"
   anvands_i: ["2.2.1"]
 
 fig-2.2.2-a:
@@ -129,10 +129,10 @@ fig-2.2.3-a:
   anvands_i: ["2.2.3"]
 
 fig-2.2.4-a:
-  syfte: "Visa den systematiska problemlösningsprocessen som en loop och förankra varje steg i ett verkligt fall"
-  innehall: "Processens sex steg som cirkel: förstå och formulera problemet, ta fram flera idéer, välj mot krav och begränsningar, genomför, testa mot kraven, förbättra. En pil från testa tillbaka till tidigare steg. Vid varje steg en kort notis om vad Houston-teamet gjorde i Apollo 13:s filterproblem, från problemformuleringen till det godkända CO2-värdet"
-  referens: "Placeras efter berättelsen om Apollo 13; texten hänvisar till figuren när processens steg gås igenom"
-  pedagogisk_funktion: "Kopplar den abstrakta processen till ett dramatiskt verkligt förlopp så att stegen framstår som det snabbaste sättet att arbeta, inte som byråkrati; loopen visar att test som underkänner inte är misslyckanden utan del av processen"
+  syfte: "Visa skillnaden mellan att lita på en lösning i skarpt läge och att först kontrollera den i en verifierad kopia"
+  innehall: "Bildpar från Apollo 13: till vänster adaptern byggd och testad på marken i Houston (kontrollerad miljö, möjligt att öppna och göra om), till höger samma adapter byggd av besättningen ombord efter radioinstruktionerna (skarpt läge, ett enda försök). En pil mellan bilderna markerar att bygginstruktionen skickades först sedan marktestet godkänts"
+  referens: "Placeras direkt efter beskrivningen av marktestet; texten hänvisar till figuren när det kontrollerade testets roll förklaras"
+  pedagogisk_funktion: "Gör skillnaden mellan ett kontrollerat test och ett fullskaligt försök konkret och synlig: eleven ser att marktestet inte var ett extra steg utan det som gjorde att besättningen kunde lita på lösningen"
   anvands_i: ["2.2.4"]
 
 fig-2.2.5-a:

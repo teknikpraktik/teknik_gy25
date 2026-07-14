@@ -7,6 +7,53 @@ betraktas som färdig första version. "Överträffar Golden Master" ska motiver
 och eventuell ny standard lyftas för redaktionellt beslut. Loggen ingår inte i
 bokexporten (export läser endast content/).
 
+**Strukturrevision 2026-07-14 (kapitel 2 renodlat till två huvudfrågor,
+ändrar 06):** kapitlet skars ned till "Vad är ett tekniskt problem?" (2.1,
+oförändrad i sak) och "Att välja problemlösningsstrategi" (2.2, omdöpt från
+"Problemlösningsstrategier"). Modul 2.3 Testning och utvärdering (2.3.1 Att
+testa mot krav, 2.3.2 Utvärdering ur flera aspekter, 2.3.3 Från testresultat
+till förbättring — begreppen testplan, hållbar utveckling, grundorsak) togs
+bort ur kapitlet och flyttades **inte** in någon annanstans i detta arbete.
+
+**INNEHÅLL SOM BÖR FLYTTAS TILL KAPITEL 3** (teknikutvecklingsprocessen,
+prototyper, testning, utvärdering, iteration) **när kapitel 3:s struktur
+analyseras**: de tre borttagna lärandemålens fulla text finns kvar i git-
+historiken (commit före denna revision) — Euro NCAP/termosexemplet och
+begreppet testplan (2.3.1), elsparkcykelexemplet och de fyra utvärderings-
+aspekterna funktion/kostnad/säkerhet/hållbar utveckling (2.3.2), Galaxy Note
+7-exemplet och grundorsaksanalys med "fem varför" (2.3.3). Även tre
+uppgiftsbanksuppgifter (Testa mot krav, Väg lösningen på fyra vågskålar,
+Gräv fram grundorsaken) och kapitlets tidigare kapstensuppgift (Äggfallet
+från idé till testad lösning, som gick igenom hela bygg-testa-förbättra-
+loopen) togs bort ur kapitel 2:s uppgiftsbank av samma skäl och bör
+återinföras i kapitel 3:s uppgiftsbank. Figurregistrets fig-2.3.1-a,
+fig-2.3.2-a och fig-2.3.3-a lämnades kvar oanvända (varning, inte fel) i
+väntan på detta.
+
+07-kursplanetackning.md rör INTE denna revision (kursplanetäckning ändras
+aldrig utan uttryckligt beslut, CLAUDE.md): n1-08 anger fortfarande kapitel 2
+som primärkapitel trots att inget innehåll i kapitel 2 längre taggar n1-08.
+Kräver ett separat beslut när kapitel 3 tar över testning/utvärdering.
+
+Modul 2.2 disponerad om till exakt kapitlets två huvudfrågor: 2.2.1 Bedöma
+problemets karaktär (namnlös metod, ingen "strategimatris"/"valkarta";
+frågan om nedbrytning kommer uttryckligen först, inte "en fjärde strategi
+som kommer sist") → 2.2.2 Återanvänd befintlig lösning → 2.2.3 Pröva och
+förbättra → 2.2.4 Analysera innan du bygger (omdöpt från "Systematisk
+problemlösning"; byggresultat-testa-förbättra-loopen i Apollo 13-exemplet
+kortad till det kontrollerade marktestet, eftersom kapitlet inte längre ska
+täcka hela ta fram/testa/förbättra-processen; ny mening tillagd om att andra
+strategier också kan användas systematiskt) → 2.2.5 Dela upp problemet
+(omdöpt från "Dela upp i minsta beståndsdelar"; avslutas nu med en kort
+övergång till kapitel 3, eftersom modul 2.3 inte längre finns). Modulmappen
+bytt namn (`2.02-problemlosningsstrategier` → `2.02-att-valja-problemlosningsstrategi`).
+Kapitlets sammanfattning, begreppsövning (testplan/hållbar utveckling/
+grundorsak/strategimatris borttagna ur ordlistan) och uppgiftsbank omskrivna
+i linje med det ovanstående.
+
+Verifierat med fullt sitebygge (rensad cache), export och export:review; 16
+lärandemål (var 19), samtliga efterkontroller passerade.
+
 **Redaktionellt beslut 2026-07-14 (begreppsbyte, modul 2.2):** "valkarta" var
 en egen konstruktion utan etablerad förlaga. Bytt till **strategimatris**
 ("beslutsträd" övervägdes och är i sak träffsäkrare, se resonemang i

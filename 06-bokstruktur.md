@@ -91,19 +91,13 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 - **2.1.1 Tekniska problem** — Förklara vad som kännetecknar ett tekniskt problem och skilja mellan behov, problem och lösning.
 - **2.1.2 Problemformulering** — Formulera ett tekniskt problem med funktion, krav och begränsningar.
 
-## Modul 2.2 Problemlösningsstrategier
+## Modul 2.2 Att välja problemlösningsstrategi
 
-- **2.2.1 Strategimatrisen** — Använda strategimatrisen, kostnaden för ett misslyckat försök och hur väl förstått problemet är, för att välja och motivera en problemlösningsstrategi.
+- **2.2.1 Bedöma problemets karaktär** — Bedöma ett tekniskt problems karaktär utifrån om det går att överblicka, hur väl förstått det är och vad ett misslyckat försök kostar, för att välja och motivera en problemlösningsstrategi.
 - **2.2.2 Återanvänd befintlig lösning** — Identifiera och tillämpa en befintlig, beprövad lösning på ett tekniskt problem.
 - **2.2.3 Pröva och förbättra** — Använda pröva-och-förbättra som strategi för att lösa ett tekniskt problem genom upprepade, dokumenterade försök.
-- **2.2.4 Systematisk problemlösning** — Beskriva och tillämpa en systematisk problemlösningsprocess från problem till testad lösning.
-- **2.2.5 Dela upp i minsta beståndsdelar** — Bryta ned ett sammansatt tekniskt problem i delproblem och lösa dem var för sig.
-
-## Modul 2.3 Testning och utvärdering
-
-- **2.3.1 Att testa mot krav** — Planera och genomföra ett test av en teknisk lösning mot uppställda krav.
-- **2.3.2 Utvärdering ur flera aspekter** — Utvärdera en teknisk lösning utifrån funktion, kostnad, säkerhet och hållbar utveckling.
-- **2.3.3 Från testresultat till förbättring** — Dra slutsatser av testresultat och föreslå konkreta förbättringar av lösningen.
+- **2.2.4 Analysera innan du bygger** — Använda analys, beräkning, simulering och kontrollerade tester för att lösa ett tekniskt problem innan en dyr eller riskfylld fullskalig lösning genomförs.
+- **2.2.5 Dela upp problemet** — Bryta ned ett sammansatt tekniskt problem i delproblem och lösa dem var för sig.
 
 ---
 
