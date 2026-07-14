@@ -14,7 +14,7 @@ arbetsform och redovisning.
 
 3. **Bryt ned ett sammansatt problem.** En odlingslåda ska vattna sig själv under sommarlovet. Formulera det sammansatta problemet med funktion, krav och begränsningar, bryt ned det i delproblem och rita nedbrytningen som ett träd, och bryt ned minst ett delproblem i ytterligare en nivå. Markera skarvarna: vilka delar måste passa ihop, och vad måste de komma överens om?
 
-4. **Placera problemet på valkartan.** Här är tre problem: ett mopedbatteri laddas ur på natten av okänd orsak, en skolgård behöver cykelparkering under tak, och en app kraschar för vissa användare men inte andra. Placera varje problem på valkartans två axlar, kostnaden för ett misslyckat försök och hur väl förstått problemet är, välj strategi med motivering och ange vad som skulle få dig att byta strategi.
+4. **Placera problemet i strategimatrisen.** Här är tre problem: ett mopedbatteri laddas ur på natten av okänd orsak, en skolgård behöver cykelparkering under tak, och en app kraschar för vissa användare men inte andra. Placera varje problem i strategimatrisens två axlar, kostnaden för ett misslyckat försök och hur väl förstått problemet är, välj strategi med motivering och ange vad som skulle få dig att byta strategi.
 
 5. **Testa mot krav.** Välj en vardagsprodukt du har tillgång till, till exempel en matlåda, en vattenflaska eller ett mobilskal. Ställ minst tre prövbara krav på produkten och skriv en testplan med metod, mätning och godkäntgräns för varje krav innan något testas. Genomför testerna en sak i taget, för protokoll och notera vad i testplanen du skulle skärpa till nästa gång.
 

@@ -11,9 +11,9 @@ ordlista:
   - grundorsak
   - hållbar utveckling
   - krav
+  - strategimatris
   - tekniskt problem
   - testplan
-  - valkarta
 ---
 
 Förklara varje begrepp nedan med en egen mening. Skriv i ditt häfte eller i ett
@@ -26,6 +26,6 @@ digitalt dokument; skriv inte i boken.
 - grundorsak
 - hållbar utveckling
 - krav
+- strategimatris
 - tekniskt problem
 - testplan
-- valkarta

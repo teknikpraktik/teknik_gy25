@@ -93,7 +93,7 @@ Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–"
 
 ## Modul 2.2 Problemlösningsstrategier
 
-- **2.2.1 Valkartan** — Använda valkartan, kostnaden för ett misslyckat försök och hur väl förstått problemet är, för att välja och motivera en problemlösningsstrategi.
+- **2.2.1 Strategimatrisen** — Använda strategimatrisen, kostnaden för ett misslyckat försök och hur väl förstått problemet är, för att välja och motivera en problemlösningsstrategi.
 - **2.2.2 Återanvänd befintlig lösning** — Identifiera och tillämpa en befintlig, beprövad lösning på ett tekniskt problem.
 - **2.2.3 Pröva och förbättra** — Använda pröva-och-förbättra som strategi för att lösa ett tekniskt problem genom upprepade, dokumenterade försök.
 - **2.2.4 Systematisk problemlösning** — Beskriva och tillämpa en systematisk problemlösningsprocess från problem till testad lösning.

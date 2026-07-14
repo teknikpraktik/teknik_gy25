@@ -108,10 +108,10 @@ fig-2.1.2-a:
   anvands_i: ["2.1.2"]
 
 fig-2.2.1-a:
-  syfte: "Ge eleven en valkarta, en fyrfältare, för problemlösningsstrategi utifrån problemets karaktär"
-  innehall: "Fyrfältare med kolumnerna 'väl förstått' och 'dåligt förstått' och raderna 'låg kostnad' och 'hög kostnad' för ett misslyckat försök. Hela kolumnen 'väl förstått' (båda raderna) märks återanvänd befintlig lösning (standarder, kardborren), eftersom kostnaden inte spelar roll när svaret redan är känt. I kolumnen 'dåligt förstått' delas raderna: låg kostnad ger pröva och förbättra (apptester, Edisons glödtrådar), hög kostnad ger systematisk problemlösning (broar, Apollo 13). En kort bildtext förklarar att den fjärde strategin, att bryta ned problemet, ligger helt utanför fyrfältaren"
-  referens: "Placeras vid avsnittet om de två frågorna; texten hänvisar till figuren när valkartan införs"
-  pedagogisk_funktion: "Förvandlar strategivalet från tyckande till bedömning: eleven kan placera ett nytt problem på kartan och läsa av vilken strategi som är rimlig. Att återanvänd-fältet spänner över hela kolumnen visar konkret att förståelse väger tyngre än kostnad, inte bara påstås i text"
+  syfte: "Ge eleven en strategimatris för problemlösningsstrategi utifrån problemets karaktär"
+  innehall: "Fyrfältig matris med kolumnerna 'väl förstått' och 'dåligt förstått' och raderna 'låg kostnad' och 'hög kostnad' för ett misslyckat försök. Hela kolumnen 'väl förstått' (båda raderna) märks återanvänd befintlig lösning (standarder, kardborren), eftersom kostnaden inte spelar roll när svaret redan är känt. I kolumnen 'dåligt förstått' delas raderna: låg kostnad ger pröva och förbättra (apptester, Edisons glödtrådar), hög kostnad ger systematisk problemlösning (broar, Apollo 13). En kort bildtext förklarar att den fjärde strategin, att bryta ned problemet, ligger helt utanför matrisen"
+  referens: "Placeras vid avsnittet om de två frågorna; texten hänvisar till figuren när strategimatrisen införs"
+  pedagogisk_funktion: "Förvandlar strategivalet från tyckande till bedömning: eleven kan placera ett nytt problem i matrisen och läsa av vilken strategi som är rimlig. Att återanvänd-fältet spänner över hela kolumnen visar konkret att förståelse väger tyngre än kostnad, inte bara påstås i text"
   anvands_i: ["2.2.1"]
 
 fig-2.2.2-a:

@@ -7,6 +7,17 @@ betraktas som färdig första version. "Överträffar Golden Master" ska motiver
 och eventuell ny standard lyftas för redaktionellt beslut. Loggen ingår inte i
 bokexporten (export läser endast content/).
 
+**Redaktionellt beslut 2026-07-14 (begreppsbyte, modul 2.2):** "valkarta" var
+en egen konstruktion utan etablerad förlaga. Bytt till **strategimatris**
+("beslutsträd" övervägdes och är i sak träffsäkrare, se resonemang i
+konversationen, men "beslutsmatris" var redan upptaget av 3.4.2 Konceptval;
+projektägaren valde ändå matris-formen). 2.2.1 döpt om från "Valkartan" till
+"Strategimatrisen" (fil och 06 uppdaterade), begreppet och alla hänvisningar
+i modul 2.2, kapitlets begreppsövning, sammanfattning och uppgiftsbank
+uppdaterade. Modellen i sak oförändrad: strategimatrisen är fortfarande inte
+symmetrisk (återanvänd-fältet spänner hela den välkända kolumnen), och
+nedbrytning ligger fortfarande uttryckligen utanför den.
+
 **Strukturrevision 2026-07-14 (modul 2.2, redaktionellt beslut, ändrar 06):**
 modul 2.2 Problemlösningsstrategier omstrukturerad från tre till fem
 lärandemål, ett per strategi, i en ny presentationsordning: 2.2.1 Valkartan
