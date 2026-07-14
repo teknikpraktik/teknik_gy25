@@ -7,6 +7,29 @@ betraktas som färdig första version. "Överträffar Golden Master" ska motiver
 och eventuell ny standard lyftas för redaktionellt beslut. Loggen ingår inte i
 bokexporten (export läser endast content/).
 
+**Redaktionell revision 2026-07-14 (kapitel 2, läsarfeedback):** kapitlet
+bedömdes monotont (nästan alla lärandemål följde mönstret historiskt exempel →
+teori → fördjupning → slutsats → instuderingsfrågor) och åtgärdades utan att
+ändra sakinnehållet. Öppningarna varierade: 2.2.3 inleds nu direkt med teori
+(ingen anekdot), 2.3.1 inleds med figuren (ifylld testplan) före löptexten,
+övriga behöll sin redan spridda mix av vardagsexempel, historiska exempel och
+misslyckanden. Apollo 13 i 2.2.1 kortades cirka 10-15 % utan sakförlust.
+Instuderingsfrågornas antal varierat 3-7 (tidigare enhetligt 5) och kompletterat
+med val-/motiveringsfrågor i alla åtta lärandemål (jämför två formuleringar,
+bedöm ett scenario, motivera ett val) i stället för enbart återgivning.
+Modul 2.2 disponerad om med explicita rubriker "Strategi 1 av 4" till "Strategi
+4 av 4" och en tydlig fyra-strategier-utfästelse redan i 2.2.1:s öppning, så att
+eleven vet tidigt att modulen har fyra strategier; strategierna 3 och 4 (pröva
+och förbättra, återanvänd befintlig lösning) fick egna rubriker i 2.2.3 i
+stället för att ligga ostrukturerade i ett stycke. Begreppet valkarta infört
+och definierat i 2.2.3 (fanns tidigare odefinierat i uppgiftsbanken). Kapitlets
+uppgiftsbank skuren från 13 till 8 uppgifter: kvarvarande uppgifter täcker vart
+och ett av kapitlets åtta lärandemål (2.2.1 via äggfallets fulla process),
+borttagna uppgifter var antingen redundanta med en kvarvarande uppgift (samma
+förmåga övad två gånger) eller en sammanslagning av två andra kvarvarande
+uppgifter. Raden "Facit finns i lärarmaterialet." borttagen ur begreppsövningarna
+i kapitel 1 och 2 (facit ska inte omnämnas i elevmanuset alls, 03/12/13).
+
 **Redaktionellt beslut 2026-07-14 (övergång kapitel 2 → kapitel 3):**
 teknikutvecklingsprocessen är underordnad problemlösning, inte tvärtom —
 processen är en formaliserad, industriellt strukturerad tillämpning av

@@ -50,5 +50,3 @@ Bakom varje sådan förändring finns en ___(12)___ som satte utvecklingen i rö
 ibland ett behov, ibland en ny ___(13)___ som en upptäckt öppnade. Och hur en
 lösning till slut utformas beror på många krav samtidigt, så att konstruktören
 ständigt måste göra en ___(14)___ mellan krav som drar åt olika håll.
-
-Facit finns i lärarmaterialet.

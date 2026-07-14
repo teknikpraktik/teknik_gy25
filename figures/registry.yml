@@ -131,7 +131,7 @@ fig-2.2.3-a:
 fig-2.3.1-a:
   syfte: "Visa en komplett testplan i ifyllt skick så att eleven ser exakt vad som ska bestämmas före ett test"
   innehall: "Testplan som tabell för en termosflaska med tre krav. Kolumner: krav, testmetod, vad som mäts, godkäntgräns bestämd i förväg, resultat, godkänd eller underkänd. Rader t.ex. håller drycken varm (temperaturmätning efter sex timmar, gräns i grader), tål att tappas (fall från bänkhöjd mot hårt golv, gräns inga läckor eller sprickor), läcker inte i väskan (liggande med vatten i en timme, gräns torrt papper under). Resultatkolumnen ifylld så att ett krav är underkänt"
-  referens: "Placeras efter att testplanens delar införts; texten hänvisar till figuren som mall för elevens egen testplan"
+  referens: "Placeras allra först i texten, före löptexten; texten hänvisar till figuren direkt i öppningsstycket som exempel innan begreppet testplan definieras i ord"
   pedagogisk_funktion: "Gör testplanen till något eleven kan härma direkt: tabellen är samma struktur som eleven fyller i under de praktiska uppgifterna, och det underkända kravet visar att en ärlig testplan får visa fel"
   anvands_i: ["2.3.1"]
 

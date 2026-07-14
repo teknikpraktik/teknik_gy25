@@ -45,5 +45,3 @@ lösningen påverkar miljö och resurser för kommande generationer, en fråga s
 ___(8)___. Visar testet att något går sönder räcker det inte att åtgärda det som
 syns först; felet måste spåras till sin bakomliggande brist, dess ___(9)___, annars
 kommer det tillbaka.
-
-Facit finns i lärarmaterialet.
