@@ -169,6 +169,8 @@ Granskning sker på fyra nivåer.
 
 ## Kapitelavslutningar
 
+□ Kapitlet har en sammanfattning på cirka 300 ord som binder ihop modulerna, utan nya fakta, begrepp eller instuderingsfrågor (03).
+
 □ Kapitlet avslutas med en begreppsövning som täcker kapitlets centrala begrepp (11).
 
 □ Begreppsövningen är repetition och tillämpning, aldrig elevens första möte med ett begrepp.

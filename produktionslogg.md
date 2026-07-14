@@ -7,6 +7,27 @@ betraktas som färdig första version. "Överträffar Golden Master" ska motiver
 och eventuell ny standard lyftas för redaktionellt beslut. Loggen ingår inte i
 bokexporten (export läser endast content/).
 
+**Redaktionellt beslut 2026-07-14 (kapitelavslutningar, gäller alla kapitel):**
+tre förändringar av standardmallen, tillämpade på kapitel 1 och 2 och
+normerande för alla framtida kapitel (03/12/13 uppdaterade). (1) Ny tredje
+kapitelavslutningstyp `kapitelsammanfattning`: en löptext på cirka 300 ord som
+binder ihop kapitlets moduler, ingen `ordlista`, inga nya fakta eller begrepp.
+Ny fil `sammanfattning.md` skapad för kapitel 1 och 2. Placering beslutad
+efter fråga till projektägaren: sist i kapitlet som en tredje
+kapitelavslutning (inte som en kapitelingress), eftersom kapitelöversikts-
+sidan är en genererad vy utan eget textfält och kapitelavslutningsmekaniken
+redan fanns att återanvända. (2) Ordningen sist i kapitlet omvänd: sammanfattning,
+begreppsövning, uppgiftsbank (var uppgiftsbank, begreppsövning) —
+`scripts/kapitelavslutningar-data.mjs` och alla styrdokument uppdaterade. (3)
+Begreppsövningens format ändrat från sammanhängande ifyllnadsövning med
+numrerade luckor till en **punktlista**: ett begrepp per punkt, eleven
+förklarar med en egen mening. Kapitel 1 och 2:s begreppsövningar omskrivna;
+kapitel 2:s lista kompletterad med begreppet valkarta (infört i 2.2.3 men
+tidigare inte med i övningen). Schema (`schemas/larandemal.schema.mjs`)
+utökat med den nya typen; ingen kodändring behövdes i validate.mjs, Astro-
+sidorna eller exportskripten eftersom hela kedjan redan är manifest-/typdriven.
+Verifierat med fullt sitebygge.
+
 **Redaktionell revision 2026-07-14 (kapitel 2, läsarfeedback):** kapitlet
 bedömdes monotont (nästan alla lärandemål följde mönstret historiskt exempel →
 teori → fördjupning → slutsats → instuderingsfrågor) och åtgärdades utan att

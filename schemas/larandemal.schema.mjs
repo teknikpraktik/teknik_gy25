@@ -15,13 +15,17 @@ export const statusEnum = [
 ];
 
 // Kapitelavslutningarnas innehållstyper (12-produktionsarkitektur.md,
-// "Kapitelavslutningar"). Egna innehållstyper, aldrig lärandemål.
+// "Kapitelavslutningar"). Egna innehållstyper, aldrig lärandemål. Ordningen
+// sist i kapitlet är kapitelsammanfattning, begreppsövning, uppgiftsbank
+// (scripts/kapitelavslutningar-data.mjs styr faktisk ordning).
 //
+// Kapitelsammanfattningen är löpande brödtext, cirka 300 ord, utan ordlista.
 // Uppgiftsbanken har ingen uppgiftsmetadata: uppgifterna skrivs som en enkel
 // numrerad lista i brödtexten (löpnummer + namn), utan nivåer, arbetsform,
 // tidsåtgång eller lärandemålskoppling — utförandet överlåts till läraren och
-// eleven (redaktionellt beslut). Begreppsövningen får ha en `ordlista`.
-export const kapitelavslutningTyper = ['begreppsovning', 'uppgiftsbank'];
+// eleven (redaktionellt beslut). Begreppsövningen är en punktlista (`ordlista`)
+// där eleven förklarar varje begrepp med en egen mening.
+export const kapitelavslutningTyper = ['kapitelsammanfattning', 'begreppsovning', 'uppgiftsbank'];
 
 // Fält som gäller för content-filer i den delade collectionen. Allt är valfritt
 // så att lärandemål, kapitelavslutningar (type-filer) och startsidan (index.md)

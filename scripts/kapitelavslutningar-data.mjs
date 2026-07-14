@@ -9,21 +9,24 @@
 // disk ska vara deklarerad här. Manifestet stödjer hela boken; poster läggs
 // till när ett kapitel produceras (inga tomma filer skapas i förväg).
 //
-// Post: { type: 'uppgiftsbank' | 'begreppsovning', slug, title }
+// Post: { type: 'kapitelsammanfattning' | 'begreppsovning' | 'uppgiftsbank', slug, title }
 //   type  — innehållstypen (schemats kapitelavslutningTyper)
 //   slug  — filnamn utan .md, under kapitlets mapp; även URL-segment på webben
 //   title — sidtitel (h1 på webben, sektionsrubrik i export)
 
 export const kapitelavslutningar = {
-  // Ordningen i listan är placeringsordningen sist i kapitlet (uppgiftsbank före
-  // begreppsövning som avslutar kapitlet).
+  // Ordningen i listan är placeringsordningen sist i kapitlet (kapitel-
+  // sammanfattning, sedan begreppsövning, sedan uppgiftsbank som avslutar
+  // kapitlet — redaktionellt beslut 2026-07-14, produktionslogg.md).
   1: [
-    { type: 'uppgiftsbank', slug: 'uppgifter-och-projekt', title: 'Praktiska uppgifter och projekt' },
+    { type: 'kapitelsammanfattning', slug: 'sammanfattning', title: 'Sammanfattning' },
     { type: 'begreppsovning', slug: 'begreppsovning', title: 'Begreppsövning' },
+    { type: 'uppgiftsbank', slug: 'uppgifter-och-projekt', title: 'Praktiska uppgifter och projekt' },
   ],
   2: [
-    { type: 'uppgiftsbank', slug: 'uppgifter-och-projekt', title: 'Praktiska uppgifter och projekt' },
+    { type: 'kapitelsammanfattning', slug: 'sammanfattning', title: 'Sammanfattning' },
     { type: 'begreppsovning', slug: 'begreppsovning', title: 'Begreppsövning' },
+    { type: 'uppgiftsbank', slug: 'uppgifter-och-projekt', title: 'Praktiska uppgifter och projekt' },
   ],
 };
 

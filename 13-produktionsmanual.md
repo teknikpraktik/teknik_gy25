@@ -112,15 +112,17 @@ Senare granskningssteg (fackgranskad → språkgranskad → klar) uppdaterar sta
 
 # Kapitelavslutningar
 
-När ett kapitels lärandemål är producerade får kapitlet sina två avslutningar (12, "Kapitelavslutningar"). De skapas inte i förväg för kapitel som inte påbörjats.
+När ett kapitels lärandemål är producerade får kapitlet sina tre avslutningar (12, "Kapitelavslutningar"). De skapas inte i förväg för kapitel som inte påbörjats.
 
-**Filer och manifest.** Skapa `content/<kapitelSlug>/uppgifter-och-projekt.md` (`type: uppgiftsbank`) och `content/<kapitelSlug>/begreppsovning.md` (`type: begreppsovning`) och lägg till kapitlet i `scripts/kapitelavslutningar-data.mjs`. Manifestet styr existens och ordning; filnamnet lokaliserar bara filen.
+**Filer och manifest.** Skapa `content/<kapitelSlug>/sammanfattning.md` (`type: kapitelsammanfattning`), `content/<kapitelSlug>/begreppsovning.md` (`type: begreppsovning`) och `content/<kapitelSlug>/uppgifter-och-projekt.md` (`type: uppgiftsbank`) och lägg till kapitlet i `scripts/kapitelavslutningar-data.mjs` i den ordningen. Manifestet styr existens och ordning; filnamnet lokaliserar bara filen.
+
+**Sammanfattning.** Skriv sist av de tre, när begreppsövningen och uppgiftsbanken redan finns. En sammanhängande löptext på cirka 300 ord som binder ihop kapitlets moduler till en helhet — repetition, inga nya fakta eller begrepp, inga instuderingsfrågor.
+
+**Begreppsövning.** Skriv en **punktlista** över kapitlets centrala begrepp (frontmatterfältet `ordlista`), ett begrepp per punkt, med en instruktion om att eleven ska förklara varje begrepp med en egen mening i häfte eller digitalt dokument. Begreppen ska redan ha sitt huvudställe i eller före kapitlet — övningen är repetition, aldrig första mötet. Facit skrivs inte här (repot är offentligt); det tekniska gränssnittet finns, men själva facit ligger i en separat privat lärarmaterialkälla (12).
 
 **Uppgiftsbank.** Skriv kapitlets praktiska uppgifter som en **enkel numrerad lista** i brödtexten: löpnummer från 1, ett namn i fetstil och därefter uppgiften, till exempel `1. **Behovet bakom föremålet.** Välj ett vardagsföremål …`. Ingen indelning i nivåer, ingen frontmatter-metadata och ingen uppgift om arbetsform, tid, redovisning eller vilket lärandemål uppgiften tränar — utförandet överlåts till läraren och eleven. Varje uppgift ska fungera fristående (05, "Självreferenser"): ersätt "från föregående lärandemål" och "figuren ovan" med stabil information i uppgiften. Slå ihop eller ta bort uppgifter som tränar samma sak på nästan samma sätt.
 
-**Begreppsövning.** Skriv en sammanhängande ifyllnadsövning över kapitlets centrala begrepp med numrerade luckor. Begreppen ska redan ha sitt huvudställe i eller före kapitlet — övningen är repetition, aldrig första mötet. En ordlista att välja ur får finnas. Facit skrivs inte här (repot är offentligt); det tekniska gränssnittet finns, men själva facit ligger i en separat privat lärarmaterialkälla (12).
-
-**Kör** `npm run validate`: manifestet stäms av mot filerna, uppgiftsbankens metadata valideras och den praktiska täckningen per lärandemål rapporteras.
+**Kör** `npm run validate`: manifestet stäms av mot filerna åt båda håll.
 
 ---
 

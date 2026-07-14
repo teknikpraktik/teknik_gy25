@@ -170,13 +170,17 @@ Kapitel 1 ska därför inte innehålla en egen problemlösningsmetod, en egen te
 
 # Kapitelavslutningar
 
-Varje färdigproducerat kapitel avslutas med två samlade delar. De är egna innehållstyper, inte lärandemål, och tränar kapitlets innehåll som helhet (12-produktionsarkitektur.md, "Kapitelavslutningar").
+Varje färdigproducerat kapitel avslutas med tre samlade delar, i denna ordning: sammanfattning, begreppsövning, uppgiftsbank. De är egna innehållstyper, inte lärandemål, och tränar kapitlets innehåll som helhet (12-produktionsarkitektur.md, "Kapitelavslutningar").
+
+## Sammanfattning
+
+En sammanhängande löptext på cirka 300 ord som binder ihop kapitlets moduler till en helhet. Sammanfattningen är **repetition**, inte en ny genomgång: den upprepar inga instuderingsfrågor och inför inga nya fakta eller begrepp. Den skrivs sist, när kapitlets lärandemål är färdiga, så att den kan spegla den faktiska texten.
 
 ## Begreppsövning
 
-En samlad övning över kapitlets centrala begrepp, normalt utformad som en sammanhängande ifyllnadsövning med numrerade luckor. Eleven skriver svaren i separat häfte eller digitalt dokument; boken innehåller inga skrivytor.
+En samlad övning över kapitlets centrala begrepp, utformad som en **punktlista**: varje begrepp står som en egen punkt, och eleven förklarar begreppet med en egen mening. Eleven skriver svaren i separat häfte eller digitalt dokument; boken innehåller inga skrivytor.
 
-Övningen använder begreppen i tekniskt meningsfulla sammanhang och kontrollerar användning och förståelse, inte bara ordagranna definitioner. Den är **repetition och tillämpning** och får aldrig vara elevens första möte med ett begrepp. En ordlista att välja ur får finnas när den förbättrar uppgiften. Facit hör till lärarmaterialet och ingår aldrig i elevmanuset.
+Övningen är **repetition och tillämpning** och får aldrig vara elevens första möte med ett begrepp; begreppet ska redan ha sitt huvudställe i eller före kapitlet. Listan bygger på frontmatterfältet `ordlista`. Facit hör till lärarmaterialet och ingår aldrig i elevmanuset.
 
 ## Praktiska uppgifter och projekt
 

@@ -24,7 +24,7 @@ Varje lärandemål lagras i en egen Markdown-fil med YAML-frontmatter, under `co
 
 Ett lärandemål har inget fast sid- eller uppslagsomfång (03-bokens-arkitektur.md). Det får flöda över så många sidor som förståelsen kräver och delas bara vid flera tydligt skilda kunskapsresultat. Uppslag och sidbrytningar är frågor för layout och tryckexport, inte en nivå i datamodellen. Formuleringar som "Uppslag 1" får inte förekomma i elevtexten.
 
-Utöver lärandemålen finns per kapitel två **kapitelavslutande innehållstyper** — en begreppsövning och en uppgiftsbank (se "Kapitelavslutningar" nedan). De är inte lärandemål och får aldrig lärandemåls-id.
+Utöver lärandemålen finns per kapitel tre **kapitelavslutande innehållstyper** — en sammanfattning, en begreppsövning och en uppgiftsbank (se "Kapitelavslutningar" nedan). De är inte lärandemål och får aldrig lärandemåls-id.
 
 Claude Code får aldrig skriva ett helt kapitel i en fil.
 
@@ -47,6 +47,7 @@ content/
     6.01-krafter/                   # modul: <kapitel>.<modulnr>-<slug>, modulnr nollutfyllt
       6.01.01-kraftbegreppet.md     # lärandemål: <kapitel>.<modul>.<löpnr>-<slug>, nollutfyllt
       6.01.02-kraftresultanter.md
+    sammanfattning.md               # kapitelavslutning: type: kapitelsammanfattning (ej lärandemål)
     begreppsovning.md               # kapitelavslutning: type: begreppsovning (ej lärandemål)
     uppgifter-och-projekt.md        # kapitelavslutning: type: uppgiftsbank (ej lärandemål)
 figures/
@@ -167,23 +168,26 @@ Flera lärandemål kan referera till samma figur via shortcoden `[[figur:ID]]`. 
 
 ## Kapitelavslutningar
 
-Varje färdigproducerat kapitel avslutas med två innehållstyper som **inte** är lärandemål och **aldrig** får lärandemåls-id (03-bokens-arkitektur.md, "Kapitelavslutningar"):
+Varje färdigproducerat kapitel avslutas med tre innehållstyper som **inte** är lärandemål och **aldrig** får lärandemåls-id (03-bokens-arkitektur.md, "Kapitelavslutningar"):
 
-- `type: begreppsovning` — kapitlets samlade begreppsövning (ifyllnadsövning med numrerade luckor).
-- `type: uppgiftsbank` — kapitlets bank av praktiska uppgifter och projekt, indelad i Kort aktivitet, Lektionsuppgift och Miniprojekt.
+- `type: kapitelsammanfattning` — en sammanhängande löptext, cirka 300 ord, som binder ihop kapitlets moduler. Ingen `ordlista`.
+- `type: begreppsovning` — kapitlets samlade begreppsövning: en punktlista över kapitlets centrala begrepp där eleven förklarar varje begrepp med en egen mening.
+- `type: uppgiftsbank` — kapitlets bank av praktiska uppgifter och projekt, en enkel numrerad lista utan omfattningsnivåer eller uppgiftsmetadata.
+
+Ordningen sist i kapitlet är sammanfattning, begreppsövning, uppgiftsbank (redaktionellt beslut 2026-07-14, produktionslogg.md).
 
 **Struktur och ordning styrs av ett kapitelmanifest**, inte av filnamnskonvention: `scripts/kapitelavslutningar-data.mjs` deklarerar per kapitel vilka avslutningar som finns och i vilken ordning de placeras. Filnamnskonventionen (`content/<kapitelSlug>/<slug>.md`) används bara för att lokalisera filen. `scripts/validate.mjs` kontrollerar manifestet åt båda håll: varje deklarerad avslutning ska ha en fil med rätt `type`/`chapter`, och varje `type`-fil på disk ska vara deklarerad i manifestet. Manifestet stödjer hela boken; poster läggs till när ett kapitel produceras (tomma avslutningsfiler skapas inte i förväg för kapitel som inte påbörjats).
 
 Frontmatter (schemavariant i `schemas/larandemal.schema.mjs`, känns igen på `type`):
 
 ```yaml
-type: uppgiftsbank          # eller: begreppsovning
+type: uppgiftsbank          # eller: begreppsovning, kapitelsammanfattning
 chapter: 1
 title: "Praktiska uppgifter och projekt"
 status: fardig-forsta-version
 ```
 
-Uppgiftsbanken har **ingen uppgiftsmetadata**. Uppgifterna skrivs som en enkel numrerad lista i brödtexten — löpnummer från 1, ett namn i fetstil och därefter uppgiften — utan nivåer (kort/lektion/miniprojekt), arbetsform, tidsåtgång, redovisningsform eller lärandemålskoppling. Utförandet överlåts till läraren och eleven (redaktionellt beslut). Begreppsövningen får ha en valfri `ordlista`.
+Uppgiftsbanken har **ingen uppgiftsmetadata**. Uppgifterna skrivs som en enkel numrerad lista i brödtexten — löpnummer från 1, ett namn i fetstil och därefter uppgiften — utan nivåer (kort/lektion/miniprojekt), arbetsform, tidsåtgång, redovisningsform eller lärandemålskoppling. Utförandet överlåts till läraren och eleven (redaktionellt beslut). Begreppsövningen får ha en valfri `ordlista`. Kapitelsammanfattningen har varken `ordlista` eller annan metadata, bara löptext.
 
 **Placering:** kapitelavslutningarna slottas sist i kapitlet (efter sista modulen) i sidopanelen, kapitelöversikten, granskningsvyn `/review/` och exporten, i manifestets ordning.
 
