@@ -7,6 +7,30 @@ betraktas som färdig första version. "Överträffar Golden Master" ska motiver
 och eventuell ny standard lyftas för redaktionellt beslut. Loggen ingår inte i
 bokexporten (export läser endast content/).
 
+**Strukturrevision 2026-07-14 (modul 2.2, redaktionellt beslut, ändrar 06):**
+modul 2.2 Problemlösningsstrategier omstrukturerad från tre till fem
+lärandemål, ett per strategi, i en ny presentationsordning: 2.2.1 Valkartan
+(ramverket, tidigare "Val av strategi") → 2.2.2 Återanvänd befintlig lösning
+→ 2.2.3 Pröva och förbättra → 2.2.4 Systematisk problemlösning (tidigare
+2.2.1) → 2.2.5 Dela upp i minsta beståndsdelar (tidigare 2.2.2, "Nedbrytning
+i delproblem"). Bakgrund: valkartan visade sig vid närmare analys inte vara
+en symmetrisk fyrfältare — "väl förstått" dominerar över kostnadsfrågan
+(återanvänd gäller oavsett kostnad så fort problemet är välkänt), och
+nedbrytning svarar på en helt annan fråga (är problemet för stort att
+greppa) än de tre kostnads-/kunskapsstyrda strategierna. Fyrfältaren i ny
+fig-2.2.1-a gör detta synligt: återanvänd-fältet spänner hela den välkända
+kolumnen, och nedbrytning presenteras uttryckligen sist, som liggande
+utanför kartan, även om den i praktiken ofta prövas först. Alla fem filer
+skrivna om i sin helhet (inte bara flyttade); sakinnehållet i Apollo 13-
+och Husqvarna-exemplen oförändrat, Edison/SpaceX/kardborre-exemplen
+omfördelade till egna lärandemål med utökat innehåll. Figurregistret
+omnumrerat i sin helhet för modulen (fig-2.2.1-a t.o.m. fig-2.2.5-a), två
+nya figurer tillkom (kardborre-jämförelse, iterationscykel). 2.3.3:s
+prerequisite till gamla 2.2.2 uppdaterad till nya 2.2.5. Kapitlets
+sammanfattning omskriven för att följa den nya presentationsordningen.
+Verifierat med fullt sitebygge (rensad cache) och export; 19 lärandemål
+(tidigare 17), samtliga efterkontroller passerade.
+
 **Redaktionellt beslut 2026-07-14 (kapitelavslutningar, gäller alla kapitel):**
 tre förändringar av standardmallen, tillämpade på kapitel 1 och 2 och
 normerande för alla framtida kapitel (03/12/13 uppdaterade). (1) Ny tredje
