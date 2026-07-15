@@ -1,5 +1,5 @@
-# Centralt figurregister. Varje figur som refereras från en lärandemålsfil
-# (via [[figur:ID]]) måste finnas här. Flera lärandemål får dela samma figur
+# Centralt figurregister. Varje figur som refereras från en avsnittsfil
+# (via [[figur:ID]]) måste finnas här. Flera avsnitt får dela samma figur
 # (se 12-produktionsarkitektur.md, "Figurer").
 #
 # Varje post är figurens fullständiga platshållarspecifikation (08, 12):
@@ -7,140 +7,140 @@
 #   innehall             — vad figuren ska visa (förlagets underlag)
 #   referens             — var och hur texten hänvisar till figuren
 #   pedagogisk_funktion  — vilken roll figuren spelar i elevens förståelse
-#   anvands_i            — lärandemåls-id:n som refererar figuren
+#   anvands_i            — avsnitts-id:n som refererar figuren
 
 fig-1.1.1-a:
   syfte: "Visa att vardagliga och avancerade föremål är samma sak i grunden: tekniska lösningar på mänskliga behov"
   innehall: "Bildpar som ställer behov mot teknisk lösning, ordnade från enkel till komplex: skriva → penna, hålla ihop kläder → blixtlås, se skarpt → glasögon, rent vatten i kranen → vattentorn och reningsverk, betala i affären → Swish, resa långt → flygplan. Minst ett par visar en lösning som inte är ett föremål (Swish) och ett en anläggning (vattenförsörjningen)"
   referens: "Placeras i teoridelens inledning; texten hänvisar till figuren när begreppet teknisk lösning definieras och när missuppfattningen att teknik bara är föremål bemöts"
   pedagogisk_funktion: "Bär textens tre motbilder visuellt: teknik är inte bara elektronik, inte bara föremål och inte bara avancerat. Eleven ska kunna peka på vilket par som motbevisar respektive missuppfattning"
-  anvands_i: ["1.1.1"]
+  anvands_i: ["1.1"]
 
 fig-1.1.2-a:
   syfte: "Visa hur naturvetenskap, matematik och teknik samverkade i en och samma verkliga tekniska lösning"
   innehall: "Öresundsförbindelsen i översikt med bron, den konstgjorda ön Pepparholm och sänktunneln. Callouts pekar ut kunskapens hemvist: vindlaster, strömmar och kalkberggrunden (naturvetenskap), dimensionering av kablar och fundament (matematik), valet av kombinationen bro, ö och tunnel med hänsyn till flyget på Kastrup och sjöfarten (teknik)"
   referens: "Placeras vid rollgenomgången; texten hänvisar till figuren när de tre kunskapsområdenas roller beskrivs var för sig"
   pedagogisk_funktion: "Förankrar de tre abstrakta rollerna i ett och samma konkreta byggprojekt så att eleven ser att områdena verkar samtidigt i en verklig lösning, inte i tur och ordning"
-  anvands_i: ["1.1.2"]
+  anvands_i: ["1.1"]
 
 fig-1.2.1-a:
   syfte: "Visa att teknikutvecklingen inte är jämn: långa perioder av stillhet bryts av språng som kommer allt tätare"
   innehall: "Tidslinje från de första stenverktygen för över två miljoner år sedan till 1700-talet, med genombrotten markerade: stenverktyg, elden, jordbruket, skriften, vattenhjulet, boktryckarkonsten, oceansjöfarten. Avstånden mellan markeringarna ska avspegla verklig tid så att det enorma gapet mellan verktyg och jordbruk syns tydligt, gärna med bruten skala eller zoompaneler"
   referens: "Placeras vid textens inledning; texten hänvisar till figuren när utvecklingstakten och de allt tätare språngens mönster beskrivs"
   pedagogisk_funktion: "Bemöter missuppfattningen att teknikutveckling alltid gått snabbt. Eleven ska kunna avläsa att nästan hela teknikhistorien är långsam och att tempot ökar mot slutet"
-  anvands_i: ["1.2.1"]
+  anvands_i: ["1.2"]
 
 fig-1.2.1-b:
   syfte: "Göra boktryckarkonstens samhällsbetydelse mätbar genom att jämföra bokproduktion före och efter tryckpressen"
   innehall: "Jämförelse i två delar: en skrivare som kopierar en bok för hand (månaders eller års arbete per exemplar) mot en tryckpress som ger hundratals likadana exemplar, samt spridningsbilden femtio år efter Gutenberg med tryckpressar i över tvåhundra europeiska städer"
   referens: "Placeras vid avsnittet om boktryckarkonsten; texten hänvisar till figuren när skillnaden i produktionstakt beskrivs"
   pedagogisk_funktion: "Konkretiserar vad betydelse för samhället innebär: eleven ser att genombrottet inte var själva pressen utan vad den gjorde med kunskapens pris och spridning"
-  anvands_i: ["1.2.1"]
+  anvands_i: ["1.2"]
 
 fig-1.3.1-a:
   syfte: "Ge eleven en modell över drivkrafterna bakom teknikutveckling och visa att flera verkar samtidigt"
   innehall: "En teknisk lösning i mitten. Runt om de drivkrafter som kan sätta utvecklingen i rörelse, grupperade: behov och problem; kunskap och nya tekniska möjligheter; ekonomi och konkurrens; samt samhälle (politik, lagstiftning, kriser, infrastruktur och användarnas beteenden). Pilar från flera drivkrafter pekar in mot lösningen samtidigt. Tre historiska spår i kanten exemplifierar de vanligaste startpunkterna: ett behov (konserven), en möjlighet (telegrafen) och en samhällsförändring (Londons avlopp)"
   referens: "Placeras vid textens inledning; texten hänvisar till figuren när drivkrafterna namnges och när samspelet mellan dem beskrivs"
   pedagogisk_funktion: "Ger eleven en analysmodell: varje historiskt eller nutida exempel kan sorteras efter drivkraft, och de samtidiga pilarna visar att teknik sällan uppstår av en enda orsak"
-  anvands_i: ["1.3.1"]
+  anvands_i: ["1.3"]
 
 fig-1.2.2-a:
   syfte: "Ge överblick över de fyra industriella revolutionerna och visa att de tar decennier och bygger på varandra"
   innehall: "Tidslinje från 1700-talet till i dag med fyra överlappande fält: ånga och mekanisering (från ca 1760), elektricitet och massproduktion (från ca 1870), elektronik och automation (från ca 1970), digitalisering och AI (från ca 2010). Varje fält märks med sin kraft- eller teknikbas, ett kännetecknande teknikskifte och en central samhällsförändring. Fälten tonar inte ut, vilket visar att tidigare revolutioners teknik lever kvar"
-  referens: "Placeras i inledningen av modul 1.2; texten hänvisar till figuren när de fyra industriella revolutionerna introduceras"
-  pedagogisk_funktion: "Ger eleven en gemensam karta över hela den historiska modulen och bemöter missuppfattningen att revolutionerna är korta händelser som avlöser varandra"
-  anvands_i: ["1.2.2"]
+  referens: "Placeras i inledningen av avsnitt 1.2; texten hänvisar till figuren när de fyra industriella revolutionerna introduceras"
+  pedagogisk_funktion: "Ger eleven en gemensam karta över hela det historiska avsnittet och bemöter missuppfattningen att revolutionerna är korta händelser som avlöser varandra"
+  anvands_i: ["1.2"]
 
 fig-1.2.2-b:
   syfte: "Göra Sveriges samhällsomvandling under industrialiseringen avläsbar i siffror"
   innehall: "Diagram över andelen sysselsatta i jordbruk respektive industri i Sverige 1850 till 1950, med markerade händelser längs tidsaxeln: ångsågarna vid Norrlandskusten från 1850-talet, Sundsvallsstrejken 1879, emigrationens toppår kring 1880 och åttatimmarsdagen 1919. Kurvorna korsar varandra under periodens senare del"
   referens: "Placeras vid avsnittet om att Sverige byggs om; texten hänvisar till figuren när flytten från jordbruk till industri beskrivs"
   pedagogisk_funktion: "Låter eleven avläsa att samhällskonsekvenserna är mätbara och utdragna över generationer, och ger de enskilda händelserna en gemensam tidsaxel"
-  anvands_i: ["1.2.2"]
+  anvands_i: ["1.2"]
 
 fig-1.2.3-a:
   syfte: "Visa hur elmotorn och det löpande bandet förändrade hur en fabrik organiseras"
   innehall: "Jämförelse i två delar. Vänster: en fabrik med remdrift, där alla maskiner drivs av en central ångmaskin via remmar och axlar och måste stå nära kraftkällan. Höger: en fabrik med en elmotor vid varje maskin och ett löpande band där en produkt växer fram station för station. Callouts pekar ut standardiserade, utbytbara delar och att arbetaren gör ett enda moment"
   referens: "Placeras vid avsnittet om elmotorn och massproduktionen; texten hänvisar till figuren när skillnaden mot remdriften beskrivs"
   pedagogisk_funktion: "Gör abstraktionen massproduktion konkret: eleven ser varför elmotorn frigjorde fabriksplaneringen och hur det löpande bandet delar upp arbetet"
-  anvands_i: ["1.2.3"]
+  anvands_i: ["1.2"]
 
 fig-1.2.4-a:
   syfte: "Visa elektronikens utvecklingssteg och den exponentiella tillväxten i transistorantal"
   innehall: "Tidslinje från 1947 till i dag med stegen markerade: transistorn 1947, integrerade kretsen i slutet av 1950-talet, industriroboten IRB 6 1974, mikroprocessorn 1971 och persondatorn kring 1980. Under tidslinjen en kurva med logaritmisk skala som visar antal transistorer per krets, från en enda 1947 via 2 300 i den första mikroprocessorn till tiotals miljarder i dag"
   referens: "Placeras vid textens inledning; texten hänvisar till figuren när kedjan av utvecklingssteg och Moores lag beskrivs"
   pedagogisk_funktion: "Gör exponentiell tillväxt synlig: eleven ser att stegen bygger på varandra och att kurvans lutning förklarar varför datorer finns överallt"
-  anvands_i: ["1.2.4"]
+  anvands_i: ["1.2"]
 
 fig-1.2.4-b:
   syfte: "Visa hur människans roll på fabriksgolvet flyttas när automationen kommer"
   innehall: "Samma fabriksgolv i tre versioner: elmotorer vid varje maskin med arbetare som utför momenten, robotceller med styrskåp och en operatör bakom skyddsstaket, samt uppkopplade maskiner med sensorer där en tekniker övervakar via skärmar. Människans plats markeras tydligt i varje version"
   referens: "Placeras vid avsnittet om att maskiner styr maskiner; texten hänvisar till figuren när människans nya roll beskrivs"
   pedagogisk_funktion: "Låter eleven avläsa hur arbetsuppgiften vandrar från handen till maskinen till övervakningen, och att yrkesrollen förändras snarare än bara försvinner"
-  anvands_i: ["1.2.4"]
+  anvands_i: ["1.2"]
 
 fig-1.2.5-a:
   syfte: "Visa att digitala teknikskiften i olika branscher följer samma mönster"
   innehall: "Tre rader som vardera går från fysisk bärare till digital tjänst: musiken (vinylskiva och cd till streamingtjänst), fotografiet (filmrulle och fotobutik till mobilkamera och molnlagring), bankärendet (bankkontor med kassa till app i mobilen). En gemensam pil under raderna markerar mönstret: informationen lämnar sin fysiska bärare och kostnaden för en kopia går mot noll"
   referens: "Placeras efter branschexemplen; texten hänvisar till figuren när det gemensamma mönstret formuleras"
   pedagogisk_funktion: "Lyfter eleven från tre berättelser till ett återanvändbart mönster som kan tillämpas på nya branscher"
-  anvands_i: ["1.2.5"]
+  anvands_i: ["1.2"]
 
 fig-1.3.2-a:
   syfte: "Visa att en teknisk lösning formas av många faktorer samtidigt, inte utvecklas fritt"
   innehall: "En teknisk lösning i centrum, till exempel en mobiltelefon. Runt om, som faktorer som pekar in mot och formar lösningen: behov och användare, befintlig teknik att bygga vidare på, naturvetenskaplig och matematisk kunskap, material, energiförsörjning, digital infrastruktur, ekonomi och resurser, lagar och standarder, säkerhetskrav, underhåll samt tekniska avvägningar mellan konkurrerande krav. Figuren är medvetet en omgivningsbild, inte en pil- eller stegkedja"
   referens: "Placeras vid genomgången av vad som formar en lösning; texten hänvisar till figuren när faktorerna räknas upp och när mobiltelefonen används som exempel"
   pedagogisk_funktion: "Gör kärnpoängen avläsbar: lösningen i mitten omges av krav, resurser och begränsningar, och eleven ser att samma behov kan ge olika lösningar när omgivningen skiljer sig"
-  anvands_i: ["1.3.2"]
+  anvands_i: ["1.3"]
 
 fig-2.1.1-a:
   syfte: "Visa att samma behov kan ge helt olika lösningar beroende på hur problemet formuleras"
   innehall: "Förgrenad kedja med Hövdingfallet: behovet att skydda cyklistens huvud överst, därunder två problemformuleringar sida vid sida (gör hjälmen bekvämare respektive skydda huvudet utan att cyklisten bär något på det), och under varje formulering dess lösning: en förbättrad cykelhjälm respektive airbagkragen. Kedjans tre nivåer märks behov, tekniskt problem och teknisk lösning"
   referens: "Placeras vid avsnittet om problemformuleringens makt; texten hänvisar till figuren när Hövdingfallet beskrivs"
   pedagogisk_funktion: "Gör textens kärnidé avläsbar i en bild: problemformuleringen är en vägkorsning, inte en formalitet, och eleven ser exakt var de två vägarna skiljs åt"
-  anvands_i: ["2.1.1"]
+  anvands_i: ["2.1"]
 
 fig-2.1.2-a:
   syfte: "Visa problemformuleringens tre delar och hur de samspelar i ett verkligt fall"
   innehall: "En komplett problemformulering för ett möbelexempel uppställd i tre fält: funktionen (vad lösningen ska göra, formulerad utan att nämna någon lösning), kraven (prövbara villkor som måste uppfyllas, t.ex. bärförmåga och montering utan verktyg) och begränsningarna (ramar som kostnad, material och fraktvolym). Pilar visar att kraven prövar funktionen och att begränsningarna ramar in båda"
   referens: "Placeras efter att de tre delarna införts; texten hänvisar till figuren när exemplet med det platta paketet formuleras"
   pedagogisk_funktion: "Ger eleven mallen för egen problemformulering: de tre fälten är exakt vad eleven själv ska fylla i under de praktiska uppgifterna"
-  anvands_i: ["2.1.2"]
+  anvands_i: ["2.1"]
 
 fig-2.2.1-a:
   syfte: "Visa hur ett tekniskt problems karaktär, hur väl förstått det är och vad ett misslyckat försök kostar, pekar ut en lämplig problemlösningsstrategi"
   innehall: "Diagram med två axlar, utan eget namn på diagrammet: hur väl förstått problemet är (dåligt till väl) och vad ett misslyckat försök kostar (lågt till högt). Hela det välförstådda området märks återanvänd befintlig lösning (standarder, kardborren), eftersom kostnaden inte spelar roll när svaret redan är känt. I det dåligt förstådda området delas fälten efter kostnad: låg kostnad ger pröva och förbättra (apptester, Edisons glödtrådar), hög kostnad ger analysera innan du bygger (broar, Apollo 13). Diagrammet gäller bara problem som redan går att överblicka; en kort bildtext hänvisar till nästa avsnitt om nedbrytning för problem som inte gör det"
   referens: "Placeras vid avsnittet om de två frågorna; texten hänvisar till figuren utan att ge diagrammet ett eget namn"
   pedagogisk_funktion: "Förvandlar strategivalet från tyckande till bedömning: eleven kan placera ett nytt problem i diagrammet och läsa av vilken strategi som är rimlig. Att återanvänd-fältet spänner över hela det välförstådda området visar konkret att förståelse väger tyngre än kostnad, inte bara påstås i text"
-  anvands_i: ["2.2.1"]
+  anvands_i: ["2.2"]
 
 fig-2.2.2-a:
   syfte: "Visa hur ett sammansatt tekniskt problem bryts ned i delproblem som kan lösas och testas var för sig"
   innehall: "Nedbrytningsträd för robotgräsklipparen: det sammansatta problemet överst, därunder delproblemen klippa gräset, hålla sig inom arbetsområdet, undvika hinder, försörja sig med energi och tåla väder. Under ett av delproblemen (hålla sig inom området) visas en ytterligare nivå med exempel på hur även det kan delas. Tunna linjer mellan grenarna markerar kopplingar där delarna måste passa ihop"
   referens: "Placeras vid genomgången av robotgräsklipparens nedbrytning; texten hänvisar till figuren när delproblemen räknas upp"
   pedagogisk_funktion: "Ger eleven trädet som visuell form för egen nedbrytning och visar att nedbrytningen följer funktioner, inte fysiska bitar; kopplingslinjerna förebådar insikten att delarna måste passa ihop"
-  anvands_i: ["2.2.2"]
+  anvands_i: ["2.2"]
 
 fig-2.2.3-a:
   syfte: "Visa hur kardborrens naturliga krokar blev förebild för kardborrebandets konstruktion"
   innehall: "Två bilder sida vid sida: kardborrens krokformade taggar i mikroskopförstoring, och kardborrebandets konstgjorda krokar och öglor i motsvarande förstoring, med pilar som visar den formmässiga likheten"
   referens: "Placeras direkt efter berättelsen om kardborrebandets uppkomst; texten hänvisar till figuren när naturen som källa till en beprövad lösning beskrivs"
   pedagogisk_funktion: "Gör återanvändningen konkret och synlig: eleven ser att lösningen bokstavligen kopierades från naturen, i stället för att bara läsa påståendet"
-  anvands_i: ["2.2.3"]
+  anvands_i: ["2.2"]
 
 fig-2.2.4-a:
   syfte: "Visa hur upprepade, dokumenterade försök gradvis närmar sig en fungerande lösning"
   innehall: "Enkel iterationscykel med fyra steg i en ring: pröva, mät resultatet, dokumentera, justera. Vid ringen en kort logg i Edisons stil, tre rader med material, resultat och slutsats, som visar hur varje varv bygger på det förra i stället för att upprepa det"
   referens: "Placeras vid avsnittet om dokumentationens roll; texten hänvisar till figuren när skillnaden mellan metod och gissning förklaras"
   pedagogisk_funktion: "Gör det abstrakta 'pröva och förbättra' till en konkret, upprepningsbar cykel med ett tydligt fjärde steg (dokumentera) som är det eleven annars lätt hoppar över"
-  anvands_i: ["2.2.4"]
+  anvands_i: ["2.2"]
 
 fig-2.2.5-a:
   syfte: "Visa skillnaden mellan att lita på en lösning i skarpt läge och att först kontrollera den i en verifierad kopia"
   innehall: "Bildpar från Apollo 13: till vänster adaptern byggd och testad på marken i Houston (kontrollerad miljö, möjligt att öppna och göra om), till höger samma adapter byggd av besättningen ombord efter radioinstruktionerna (skarpt läge, ett enda försök). En pil mellan bilderna markerar att bygginstruktionen skickades först sedan marktestet godkänts"
   referens: "Placeras direkt efter beskrivningen av marktestet; texten hänvisar till figuren när det kontrollerade testets roll förklaras"
   pedagogisk_funktion: "Gör skillnaden mellan ett kontrollerat test och ett fullskaligt försök konkret och synlig: eleven ser att marktestet inte var ett extra steg utan det som gjorde att besättningen kunde lita på lösningen"
-  anvands_i: ["2.2.5"]
+  anvands_i: ["2.2"]
 
 fig-2.3.1-a:
   syfte: "Visa en komplett testplan i ifyllt skick så att eleven ser exakt vad som ska bestämmas före ett test"
