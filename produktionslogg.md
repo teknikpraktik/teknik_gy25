@@ -7,6 +7,44 @@ betraktas som färdig första version. "Överträffar Golden Master" ska motiver
 och eventuell ny standard lyftas för redaktionellt beslut. Loggen ingår inte i
 bokexporten (export läser endast content/).
 
+**Arkitekturrevision 2026-07-15 (Kapitel → Modul → Lärandemål avvecklad,
+uttryckligt beslut av projektägaren):** Hela produktions- och publiceringsstrukturen
+migrerad till Kapitel (H1) → Avsnitt (H2) → Delavsnitt (H3, vid behov). Avsnittet
+är nu bokens minsta produktionsenhet och publicerade enhet; modulnivån är helt
+avvecklad. Lärandemål är sedan revisionen metadata på avsnittet
+(frontmatterfältet `learningGoals`, flera per avsnitt tillåtna), inte en egen
+rubriknivå, fil eller sida.
+
+Ändrade system: `06-bokstruktur.md` skrivet om för hela boken (87 avsnitt över
+13 kapitel, alla med lärandemålslistor ur den tidigare bokstrukturen); schemat
+(`schemas/larandemal.schema.mjs`) fick nya fält `sectionNumber`, `learningGoals`,
+`curriculumReferences`, `abilities`, `levels`, och pensionerade `module`/`goal`;
+`scripts/bokstruktur-data.mjs` omskriven för den nya radformaten och avsnittsbaserade
+filstigar (`content/<kapitel>/<NN>-slug.md`, ingen modulundermapp); `validate.mjs`,
+`generate-skeleton.mjs` och `manuscript-core.mjs` (export) uppdaterade i linje
+med detta; `scripts/kapitelavslutningar-data.mjs` borttagen — kapitelavslutningarna
+styrs numera direkt av 06, som vilket annat avsnitt. Webbplatsens modulvy
+(`site/src/pages/[...oversikt].astro`) togs bort och slogs samman med
+kapitelvyn; sidopanelen (`astro.config.mjs`) och granskningsvyn (`/review/`)
+förenklade till en nivå (kapitel → avsnitt).
+
+Kapitel 1 och 2 (de enda med producerat innehåll, 22 filer) migrerades med full
+textbevarande sammanslagning: tidigare lärandemålsfiler blev H3-delavsnitt i
+respektive avsnittsfil, med tidigare separata "Instuderingsfrågor"-sektioner
+slagna ihop till en samlad sektion per avsnitt (10 respektive 23 frågor).
+Kapitel 1 döptes om från "Teknikens utveckling" till "Teknik och
+teknikutveckling" för att bättre täcka både teknikbegreppet och den historiska
+tillbakablicken. Kapitel 3–13 (uteslutande tomma skelettfiler, status
+`ej-paborjad`) skelettgenererades om mekaniskt ur den nya 06 utan
+innehållsförlust, med redaktionellt sammanslagna avsnitt där gamla moduler var
+mycket små eller tydligt överlappande (se rapporttext i konversationen/PR:en
+för fullständig lista över sammanslagningar per kapitel).
+
+`npm run validate`, fullt webbygge (rensad cache), `npm run export` och
+`npm run export:review` kördes samtliga grönt efter migreringen; export:review
+uppdaterad att läsa nivå 2 (inte tidigare nivå 3) som avsnittsrubrik och matcha
+mot numrerade rubriker för att skilja avsnitt från kapitelavslutningar.
+
 **Strukturrevision 2026-07-14 (modul 2.2 ombytt ordning, speglar ingenjörens
 beslutslogik):** "Dela upp problemet" flyttad från sista till andra plats i
 modulen, så att disponeringen följer den faktiska beslutsordningen: (1)
