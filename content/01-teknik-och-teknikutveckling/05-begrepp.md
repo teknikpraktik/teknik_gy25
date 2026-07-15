@@ -1,7 +1,8 @@
 ---
 type: begreppsovning
 chapter: 1
-title: Begreppsövning
+sectionNumber: 5
+title: Begrepp
 status: fardig-forsta-version
 ordlista:
   - artificiell intelligens

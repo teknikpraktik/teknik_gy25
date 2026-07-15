@@ -65,15 +65,20 @@ text och ligger inte i content/.
 
 | Reserverat innehåll | Föreslaget hem | Form |
 |---|---|---|
-| Amaras tumregel (över-/underskattning på kort/lång sikt) | 13.5.1 Möjligheter och risker | analysmodell + figur |
-| Figurunderlag: förväntans- vs påverkanskurva (f.d. fig-1.5.2-a) | 13.5.1 | figurunderlag |
-| Självkörande fordon som exempel på överskattning på kort sikt | 13.5.1 | planerat exempel |
-| Lagermönstret (ny teknik läggs ovanpå gammal) | 13.1.1 Teknikens växelverkan med samhället | planerat resonemang |
-| Oväntade följder (bilen → städer kring vägar) | 13.1.1 | planerat exempel |
-| Möjligheter och risker med framtidens teknik | 13.5.1 | huvudansvar |
-| Klimatomställning som drivkraft (behov + kunskap + politik) | 13.4.1 Hållbarhet som konstruktionskrav | planerat exempel |
-| Solcellers prisutveckling (~90 % fall under 2010-talet) | 13.4.2 Cirkulär ekonomi / 13.4.1 | planerad datapunkt (kontrolleras mot IRENA) |
-| Framtidsbedömning som förmåga (n1-12) | 13.5.1 | huvudansvar |
+| Amaras tumregel (över-/underskattning på kort/lång sikt) | 13.4 Framtidens teknik | analysmodell + figur |
+| Figurunderlag: förväntans- vs påverkanskurva (f.d. fig-1.5.2-a) | 13.4 | figurunderlag |
+| Självkörande fordon som exempel på överskattning på kort sikt | 13.4 | planerat exempel |
+| Lagermönstret (ny teknik läggs ovanpå gammal) | 13.1 Teknik och samhälle (delavsnitt "Teknikens växelverkan med samhället") | planerat resonemang |
+| Oväntade följder (bilen → städer kring vägar) | 13.1 (samma delavsnitt) | planerat exempel |
+| Möjligheter och risker med framtidens teknik | 13.4 Framtidens teknik | huvudansvar |
+| Klimatomställning som drivkraft (behov + kunskap + politik) | 13.3 Hållbar utveckling (delavsnitt "Hållbarhet som konstruktionskrav") | planerat exempel |
+| Solcellers prisutveckling (~90 % fall under 2010-talet) | 13.3 (delavsnitt "Cirkulär ekonomi" eller "Hållbarhet som konstruktionskrav") | planerad datapunkt (kontrolleras mot IRENA) |
+| Framtidsbedömning som förmåga (n1-12) | 13.4 | huvudansvar |
+
+(Sektionsnumren ovan avser den avsnittsbaserade strukturen efter arkitekturrevisionen
+2026-07-15, se produktionslogg.md. Kapitel 13:s "Etik" och "Genus och normer"
+slogs samman till avsnitt 13.2, vilket sköt "Hållbar utveckling" till 13.3 och
+"Framtidens teknik" till 13.4, ett steg tidigare än den gamla modul 13.5.)
 
 Kursplanepunkten n1-12 (teknikens och teknikerns roll i ett hållbart samhälle,
 möjligheter och risker med framtidens teknik) har primärt hem i kapitel 13 och

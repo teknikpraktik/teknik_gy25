@@ -1,6 +1,7 @@
 ---
 type: kapitelsammanfattning
 chapter: 1
+sectionNumber: 4
 title: Sammanfattning
 status: fardig-forsta-version
 ---

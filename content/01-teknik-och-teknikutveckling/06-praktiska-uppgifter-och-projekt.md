@@ -1,6 +1,7 @@
 ---
 type: uppgiftsbank
 chapter: 1
+sectionNumber: 6
 title: Praktiska uppgifter och projekt
 status: fardig-forsta-version
 ---
