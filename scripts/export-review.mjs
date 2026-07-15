@@ -2,13 +2,13 @@
 // läsdokument i två format ur exakt samma sammanställning i samma körning:
 //
 //   dist/review/granskningsmanus.docx   (Word: titelblad, TOC-fält, sidnummer,
-//                                        sidbrytning per lärandemål, Figurblock-stil)
+//                                        sidbrytning per avsnitt, Figurblock-stil)
 //   dist/review/granskningsmanus.html   (fristående fil, inbäddad CSS, klickbar
 //                                        TOC, print-stylesheet)
 //
 //   npm run export:review
 //
-// Endast lärandemål med status fardig-forsta-version eller högre ingår, i
+// Endast avsnitt med status fardig-forsta-version eller högre ingår, i
 // kanonisk ordning ur 06 (via manuscript-core.mjs — samma kärna som
 // npm run export). Körningen avslutas med automatiska efterkontroller och
 // felar om någon av dem inte håller. Obs: Words innehållsförteckning är ett
@@ -21,7 +21,7 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import matter from 'gray-matter';
 import { statusEnum } from '../schemas/larandemal.schema.mjs';
-import { allaLarandemal } from './bokstruktur-data.mjs';
+import { allaAvsnitt } from './bokstruktur-data.mjs';
 import { sammanstallManus } from './manuscript-core.mjs';
 
 const execFileAsync = promisify(execFile);
@@ -53,22 +53,22 @@ function reviewFigurBlock(figId, fig) {
 const { manuscript, exporterade, inkluderade, saknadeFiler } = await sammanstallManus({
 	minStatusIdx,
 	figurBlock: reviewFigurBlock,
-	larandemalPrefix: '::: {.page-break}\n:::\n\n',
+	avsnittPrefix: '::: {.page-break}\n:::\n\n',
 });
 
 if (saknadeFiler.length > 0) {
-	console.error(`✗ ${saknadeFiler.length} planerade lärandemål saknar fil: ${saknadeFiler.join(', ')} — kör npm run validate.`);
+	console.error(`✗ ${saknadeFiler.length} planerade avsnitt saknar fil: ${saknadeFiler.join(', ')} — kör npm run validate.`);
 	process.exit(1);
 }
 if (exporterade === 0) {
-	console.log(`Inget lärandemål har nått status ${MIN_STATUS} ännu — inget granskningsmanus att bygga.`);
+	console.log(`Inget avsnitt har nått status ${MIN_STATUS} ännu — inget granskningsmanus att bygga.`);
 	process.exit(0);
 }
 
 const datum = new Date().toISOString().slice(0, 10);
 const titel = 'Teknik nivå 1 och 2';
 const undertitel = 'Redaktionellt granskningsmanus (arbetsmaterial)';
-const datumrad = `Genererat ${datum} · ${exporterade} lärandemål med status färdig första version eller högre`;
+const datumrad = `Genererat ${datum} · ${exporterade} avsnitt med status färdig första version eller högre`;
 
 await mkdir(reviewDir, { recursive: true });
 const mdPath = path.join(reviewDir, 'granskningsmanus.md');
@@ -129,7 +129,7 @@ await execFileAsync('pandoc', [mdPath, '-o', docxPath, '--reference-doc', refere
 const htmlPath = path.join(reviewDir, 'granskningsmanus.html');
 await execFileAsync('pandoc', [mdPath, '-o', htmlPath, '--standalone', '--include-in-header', htmlCssPath, ...gemensamt]);
 
-console.log(`Granskningsmanus byggt (${exporterade} lärandemål) →`);
+console.log(`Granskningsmanus byggt (${exporterade} avsnitt) →`);
 console.log(`  ${path.relative(process.cwd(), docxPath)}`);
 console.log(`  ${path.relative(process.cwd(), htmlPath)}`);
 console.log('Obs: uppdatera Words innehållsförteckning med Ctrl+A och därefter F9.');
@@ -145,22 +145,25 @@ function kontroll(namn, villkor, detalj = '') {
 }
 
 // Förväntad mängd, oberoende av kärnan: planen (06) filtrerad på status
-// direkt ur källfilerna.
+// direkt ur källfilerna. Kapitelavslutningar (type) räknas inte som avsnitt
+// här — sammanstallManus() lägger bara riktiga avsnitt i "inkluderade".
 const forvantade = [];
-for (const p of allaLarandemal()) {
+for (const p of allaAvsnitt()) {
+	if (p.type) continue;
 	const raw = await readFile(path.join(projektRoot, 'content', p.relPath), 'utf8');
 	const { data } = matter(raw);
 	if (statusEnum.indexOf(data.status) >= minStatusIdx) forvantade.push({ id: p.id, titel: p.titel });
 }
 
 kontroll(
-	'Alla kvalificerade lärandemål ingår, inga andra, i bokstrukturens ordning (källnivå)',
+	'Alla kvalificerade avsnitt ingår, inga andra, i bokstrukturens ordning (källnivå)',
 	JSON.stringify(inkluderade.map((l) => l.id)) === JSON.stringify(forvantade.map((f) => f.id)),
 	`väntade [${forvantade.map((f) => f.id).join(', ')}], fick [${inkluderade.map((l) => l.id).join(', ')}]`,
 );
 
-// Läs tillbaka båda utfilerna med Pandoc och extrahera lärandemålsrubrikerna
-// (nivå 3) ur dokumentens AST — HTML analyseras som HTML, Word som Word.
+// Läs tillbaka båda utfilerna med Pandoc och extrahera avsnittsrubrikerna
+// (nivå 2 — kapitel(#) → avsnitt(##) → delavsnitt(###)) ur dokumentens AST —
+// HTML analyseras som HTML, Word som Word.
 function inlinesTillText(inlines) {
 	let s = '';
 	for (const il of inlines) {
@@ -171,22 +174,29 @@ function inlinesTillText(inlines) {
 	return s;
 }
 
-async function rubrikerNiva3(fil, format) {
+// Nivå 2 = avsnitt OCH kapitelavslutningar (båda infogas som ## av
+// manuscript-core.mjs). Avsnitt har alltid en numrerad rubrik ("1.1 Titel");
+// kapitelavslutningarna (Sammanfattning/Begrepp/Praktiska uppgifter och
+// projekt) har det aldrig — det skiljer dem åt utan att läsa frontmatter.
+async function rubrikerAvsnitt(fil, format) {
 	const { stdout } = await execFileAsync('pandoc', [fil, '--from', format, '--to', 'json'], { maxBuffer: 64 * 1024 * 1024 });
 	const ast = JSON.parse(stdout);
-	return ast.blocks.filter((b) => b.t === 'Header' && b.c[0] === 3).map((b) => inlinesTillText(b.c[2]).trim());
+	return ast.blocks
+		.filter((b) => b.t === 'Header' && b.c[0] === 2)
+		.map((b) => inlinesTillText(b.c[2]).trim())
+		.filter((titel) => /^\d+\.\d+\s/.test(titel));
 }
 
-const docxRubriker = await rubrikerNiva3(docxPath, 'docx');
-const htmlRubriker = await rubrikerNiva3(htmlPath, 'html');
-const forvantadeTitlar = forvantade.map((f) => f.titel);
+const docxRubriker = await rubrikerAvsnitt(docxPath, 'docx');
+const htmlRubriker = await rubrikerAvsnitt(htmlPath, 'html');
+const forvantadeTitlar = forvantade.map((f) => `${f.id} ${f.titel}`);
 
-kontroll('Word innehåller alla lärandemål i rätt ordning', JSON.stringify(docxRubriker) === JSON.stringify(forvantadeTitlar),
+kontroll('Word innehåller alla avsnitt i rätt ordning', JSON.stringify(docxRubriker) === JSON.stringify(forvantadeTitlar),
 	`väntade ${forvantadeTitlar.length} rubriker, fick ${docxRubriker.length}`);
-kontroll('HTML innehåller alla lärandemål i rätt ordning', JSON.stringify(htmlRubriker) === JSON.stringify(forvantadeTitlar),
+kontroll('HTML innehåller alla avsnitt i rätt ordning', JSON.stringify(htmlRubriker) === JSON.stringify(forvantadeTitlar),
 	`väntade ${forvantadeTitlar.length} rubriker, fick ${htmlRubriker.length}`);
-kontroll('Word och HTML innehåller samma lärandemål', JSON.stringify(docxRubriker) === JSON.stringify(htmlRubriker));
-kontroll(`Antal lärandemål i utfilerna är ${forvantade.length}`, docxRubriker.length === forvantade.length && htmlRubriker.length === forvantade.length);
+kontroll('Word och HTML innehåller samma avsnitt', JSON.stringify(docxRubriker) === JSON.stringify(htmlRubriker));
+kontroll(`Antal avsnitt i utfilerna är ${forvantade.length}`, docxRubriker.length === forvantade.length && htmlRubriker.length === forvantade.length);
 
 // Råtext ur båda formaten för shortcode- och fältkontrollerna.
 const { stdout: docxPlain } = await execFileAsync('pandoc', [docxPath, '--from', 'docx', '--to', 'plain'], { maxBuffer: 64 * 1024 * 1024 });
@@ -199,8 +209,9 @@ for (const [namn, text] of [['Word', docxPlain], ['HTML', htmlPlain]]) {
 	// statusvärden — inte breda mönster som kan träffa brödtext.
 	const lackor = [
 		/^---\s*$/m,
-		/\bconcepts_introduced\b/, /\bconcepts_used\b/, /\bpractical_component\b/,
-		/\bprerequisites\b/, /\bcurriculum\b/, /\bniva1\b/, /\bniva2\b/,
+		/\bconcepts_introduced\b/, /\bconcepts_used\b/,
+		/\bprerequisites\b/, /\bcurriculumReferences\b/, /\bniva1\b/, /\bniva2\b/,
+		/\blearningGoals\b/, /\babilities\b/, /\bsectionNumber\b/,
 		/\bfardig-forsta-version\b/, /\bunder-utveckling\b/, /\bej-paborjad\b/,
 		/\bfackgranskad\b/, /\bsprakgranskad\b/,
 	].filter((re) => re.test(text));

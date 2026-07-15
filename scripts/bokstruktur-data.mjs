@@ -1,21 +1,33 @@
-// Läser bokens struktur (kapitel, moduler, lärandemål) direkt ur
+// Läser bokens struktur (kapitel, avsnitt, delavsnitt, lärandemål) direkt ur
 // 06-bokstruktur.md, som är den enda källan — det finns ingen separat datafil
 // att hålla i synk. Radformatet som tolkas är dokumenterat i 06 under
-// "Lärandemålens format". Vid formatfel kastas ett fel med radnummer, vilket
-// får `npm run validate` (och alla andra skript) att stanna.
+// "Avsnittens och delavsnittens format". Vid formatfel kastas ett fel med
+// radnummer, vilket får `npm run validate` (och alla andra skript) att stanna.
 //
-// Filnamn i content/ nollutfylls (6.01-krafter/6.01.02-kraftresultanter.md)
-// så att lexikografisk sortering i webbplatsens sidopanel och navigering
-// stämmer även vid tvåsiffriga modul- och löpnummer. Id:t i frontmattern
-// förblir opaddat ("6.1.2").
+// Avsnittet (H2) är produktionens och publiceringens minsta enhet — en fil per
+// avsnitt, direkt under kapitlets mapp (ingen egen undermapp längre). Delavsnitt
+// (H3) och lärandemål är inte filer eller mappar, bara innehåll i avsnittsfilen
+// respektive metadata i dess frontmatter.
+//
+// Filnamn i content/ nollutfylls (6.02-att-losa-tekniska-problem/02-...) så att
+// lexikografisk sortering i webbplatsens sidopanel och navigering stämmer även
+// vid tvåsiffriga sektionsnummer. Id:t i frontmattern förblir opaddat ("6.2").
 
 import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+// Kapitelavslutningarnas fasta titlar → type, i den ordning de alltid avslutar
+// ett kapitel (06-bokstruktur.md, "Kapitelavslutningar").
+const KAPITELAVSLUTNING_TYP_AV_TITEL = {
+	Sammanfattning: 'kapitelsammanfattning',
+	Begrepp: 'begreppsovning',
+	'Praktiska uppgifter och projekt': 'uppgiftsbank',
+};
+
 // Filen importeras både direkt av Node (skripten, astro.config) och bundlad av
-// Vite (webbplatsens genererade kapitel-/modulvyer). I det senare fallet pekar
-// import.meta.url på byggartefakten — därför söks projektroten uppåt från
+// Vite (webbplatsens genererade kapitel-/avsnittsvyer). I det senare fallet
+// pekar import.meta.url på byggartefakten — därför söks projektroten uppåt från
 // både filens plats och processens arbetskatalog.
 function hittaProjektRoot() {
 	const kandidater = [path.dirname(fileURLToPath(import.meta.url)), process.cwd()];
@@ -38,7 +50,8 @@ function parseBokstruktur(text) {
 	const kapitelLista = [];
 	const fel = [];
 	let k = null; // aktuellt kapitel
-	let m = null; // aktuell modul
+	let a = null; // aktuellt avsnitt
+	let avsnittFas = null; // 'mal' medan lärandemålslistan fortfarande kan fortsätta, annars null
 	let inCodeBlock = false;
 
 	lines.forEach((line, idx) => {
@@ -50,69 +63,93 @@ function parseBokstruktur(text) {
 		}
 		if (inCodeBlock) return;
 
-		const kap = line.match(/^# Kapitel (\d+) – (.+)$/);
+		const kap = line.match(/^# Kapitel (\d+) · (.+)$/);
 		if (kap) {
-			k = { nr: Number(kap[1]), titel: kap[2].trim(), moduler: [] };
+			k = { nr: Number(kap[1]), titel: kap[2].trim(), avsnitt: [] };
 			if (k.nr !== kapitelLista.length + 1) {
 				fel.push(`rad ${rad}: kapitel ${k.nr} följer inte löpande på föregående (${kapitelLista.length}).`);
 			}
 			kapitelLista.push(k);
-			m = null;
+			a = null;
+			avsnittFas = null;
 			return;
 		}
 		if (/^# /.test(line)) {
 			// Annan huvudrubrik (Dokumentnamn, Struktur, Produktionsstatus …)
 			// avslutar kapitelkontexten.
 			k = null;
-			m = null;
+			a = null;
+			avsnittFas = null;
 			return;
 		}
 
-		const mod = line.match(/^## Modul (\d+)\.(\d+) (.+)$/);
-		if (mod) {
+		const avs = line.match(/^## (\d+)\.(\d+) (.+)$/);
+		if (avs) {
 			if (!k) {
-				fel.push(`rad ${rad}: modulrubrik utanför ett kapitel.`);
+				fel.push(`rad ${rad}: avsnittsrubrik utanför ett kapitel.`);
 				return;
 			}
-			if (Number(mod[1]) !== k.nr) {
-				fel.push(`rad ${rad}: modulens kapitelnummer ${mod[1]} matchar inte kapitel ${k.nr}.`);
+			if (Number(avs[1]) !== k.nr) {
+				fel.push(`rad ${rad}: avsnittets kapitelnummer ${avs[1]} matchar inte kapitel ${k.nr}.`);
 			}
-			if (Number(mod[2]) !== k.moduler.length + 1) {
-				fel.push(`rad ${rad}: modulnummer ${mod[1]}.${mod[2]} följer inte löpande (väntade ${k.nr}.${k.moduler.length + 1}).`);
+			if (Number(avs[2]) !== k.avsnitt.length + 1) {
+				fel.push(`rad ${rad}: sektionsnummer ${avs[1]}.${avs[2]} följer inte löpande (väntade ${k.nr}.${k.avsnitt.length + 1}).`);
 			}
-			m = { titel: mod[3].trim(), larandemal: [] };
-			k.moduler.push(m);
+			const titel = avs[3].trim();
+			a = { titel, larandemal: [], delavsnitt: [], type: KAPITELAVSLUTNING_TYP_AV_TITEL[titel] };
+			k.avsnitt.push(a);
+			avsnittFas = 'mal';
 			return;
 		}
 		if (/^## /.test(line)) {
-			m = null;
+			fel.push(`rad ${rad}: avsnittsrubrik följer inte formatet "## <kapitel>.<sektionsnr> <Titel>". Se 06, "Avsnittens och delavsnittens format".`);
+			a = null;
+			avsnittFas = null;
 			return;
 		}
 
-		if (m && /^- /.test(line)) {
-			const lm = line.match(/^- \*\*(\d+)\.(\d+)\.(\d+) (.+?)\*\* — (.+?)(?:\s*\*\*\((\d+) uppslag\)\*\*)?$/);
-			if (!lm) {
-				fel.push(`rad ${rad}: lärandemålsrad följer inte formatet "- **K.M.L Titel** — Mål." (ev. följt av "**(N uppslag)**"). Se 06, "Lärandemålens format".`);
+		const delavs = line.match(/^### (.+)$/);
+		if (delavs) {
+			if (!a) {
+				fel.push(`rad ${rad}: delavsnittsrubrik utanför ett avsnitt.`);
 				return;
 			}
-			const [, kNr, mNr, lNr, titel, mal, uppslag] = lm;
-			const vantatId = `${k.nr}.${k.moduler.length}.${m.larandemal.length + 1}`;
-			const radId = `${kNr}.${mNr}.${lNr}`;
-			if (radId !== vantatId) {
-				fel.push(`rad ${rad}: lärandemåls-id ${radId} följer inte löpande (väntade ${vantatId}).`);
-			}
-			m.larandemal.push({
-				titel: titel.trim(),
-				mal: mal.trim(),
-				...(uppslag ? { uppslag: Number(uppslag) } : {}),
-			});
+			a.delavsnitt.push(delavs[1].trim());
+			avsnittFas = null; // lärandemålslistan är avslutad så fort ett delavsnitt eller annat innehåll setts
+			return;
+		}
+
+		if (a && avsnittFas === 'mal' && /^- /.test(line)) {
+			a.larandemal.push(line.replace(/^- /, '').trim());
+			return;
+		}
+
+		// Tom rad avslutar inte lärandemålslistan (tillåter blankrad mellan
+		// avsnittsraden och punktlistan, eller mellan punktlistan och första
+		// delavsnittet); allt annat innehåll gör det.
+		if (line.trim() !== '') {
+			avsnittFas = null;
 		}
 	});
 
 	for (const kap of kapitelLista) {
-		if (kap.moduler.length === 0) fel.push(`kapitel ${kap.nr} saknar moduler.`);
-		kap.moduler.forEach((mod, i) => {
-			if (mod.larandemal.length === 0) fel.push(`modul ${kap.nr}.${i + 1} saknar lärandemål.`);
+		if (kap.avsnitt.length === 0) {
+			fel.push(`kapitel ${kap.nr} saknar avsnitt.`);
+			continue;
+		}
+		const sistaTre = kap.avsnitt.slice(-3).map((a) => a.titel);
+		const vantadeTre = ['Sammanfattning', 'Begrepp', 'Praktiska uppgifter och projekt'];
+		if (JSON.stringify(sistaTre) !== JSON.stringify(vantadeTre)) {
+			fel.push(`kapitel ${kap.nr}: de tre sista avsnitten ska vara ${vantadeTre.join(' → ')} (hittade: ${sistaTre.join(' → ') || '—'}).`);
+		}
+		kap.avsnitt.forEach((avs, i) => {
+			const arKapitelavslutning = i >= kap.avsnitt.length - 3;
+			if (!arKapitelavslutning && avs.larandemal.length === 0) {
+				fel.push(`avsnitt ${kap.nr}.${i + 1} "${avs.titel}" saknar lärandemål.`);
+			}
+			if (arKapitelavslutning && avs.larandemal.length > 0) {
+				fel.push(`avsnitt ${kap.nr}.${i + 1} "${avs.titel}" är en kapitelavslutning och ska inte ha lärandemål.`);
+			}
 		});
 	}
 	if (kapitelLista.length === 0) fel.push('inga kapitel hittades.');
@@ -142,8 +179,8 @@ function pad2(n) {
 }
 
 // Astros routes slugifierar sökvägssegment genom att ta bort punkter:
-// "6.01-krafter" → "601-krafter". Används av webbplatsens sidopanel och
-// genererade vyer för att bygga URL:er som matchar content-sidornas routes.
+// "6.02-..." → "602-...". Används av webbplatsens sidopanel och genererade
+// vyer för att bygga URL:er som matchar content-sidornas routes.
 export function routeSegment(segment) {
 	return segment.replaceAll('.', '');
 }
@@ -152,37 +189,32 @@ export function kapitelSlug(k) {
 	return `${pad2(k.nr)}-${slugify(k.titel)}`;
 }
 
-export function modulSlug(k, moduleIndex) {
-	return `${k.nr}.${pad2(moduleIndex + 1)}-${slugify(k.moduler[moduleIndex].titel)}`;
+export function avsnittId(k, avsnittIndex) {
+	return `${k.nr}.${avsnittIndex + 1}`;
 }
 
-export function larandemalId(k, moduleIndex, lmIndex) {
-	return `${k.nr}.${moduleIndex + 1}.${lmIndex + 1}`;
+export function avsnittFilnamn(k, avsnittIndex) {
+	const avs = k.avsnitt[avsnittIndex];
+	return `${pad2(avsnittIndex + 1)}-${slugify(avs.titel)}.md`;
 }
 
-export function larandemalFilnamn(k, moduleIndex, lmIndex) {
-	const lm = k.moduler[moduleIndex].larandemal[lmIndex];
-	return `${k.nr}.${pad2(moduleIndex + 1)}.${pad2(lmIndex + 1)}-${slugify(lm.titel)}.md`;
-}
-
-// Platt lista över alla planerade lärandemål — används av validate.mjs för
+// Platt lista över alla planerade avsnitt — används av validate.mjs för
 // synkkontrollen mellan bokstrukturen och content/-mapparna samt av exporten.
-export function allaLarandemal() {
+export function allaAvsnitt() {
 	const result = [];
 	for (const k of kapitel) {
-		for (let i = 0; i < k.moduler.length; i++) {
-			const m = k.moduler[i];
-			for (let j = 0; j < m.larandemal.length; j++) {
-				const lm = m.larandemal[j];
-				result.push({
-					id: larandemalId(k, i, j),
-					chapter: k.nr,
-					module: `${k.nr}.${i + 1}`,
-					titel: lm.titel,
-					mal: lm.mal,
-					relPath: `${kapitelSlug(k)}/${modulSlug(k, i)}/${larandemalFilnamn(k, i, j)}`,
-				});
-			}
+		for (let i = 0; i < k.avsnitt.length; i++) {
+			const a = k.avsnitt[i];
+			result.push({
+				id: avsnittId(k, i),
+				chapter: k.nr,
+				sectionNumber: i + 1,
+				titel: a.titel,
+				larandemal: a.larandemal,
+				delavsnitt: a.delavsnitt,
+				type: a.type,
+				relPath: `${kapitelSlug(k)}/${avsnittFilnamn(k, i)}`,
+			});
 		}
 	}
 	return result;

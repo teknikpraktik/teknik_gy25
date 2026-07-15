@@ -25,23 +25,11 @@ const { kapitel: k, allaKapitel, foregaende, nasta } = Astro.props;
 <ReviewLayout titel={`Kapitel ${k.nr} · ${k.titel}`} kapitel={allaKapitel} aktivKapitelNr={k.nr}>
 	<h1>Kapitel {k.nr} · {k.titel}</h1>
 
-	{k.moduler.map((m) => (
-		<section>
-			<h2 id={m.anchor}>{m.nr} {m.titel}</h2>
-			{m.larandemal.map((lm) => (
-				<article class="larandemal">
-					<h3 id={lm.anchor}>{lm.id} {lm.titel}</h3>
-					<Fragment set:html={lm.html} />
-				</article>
-			))}
-		</section>
-	))}
-
-	{(k.avslutningar ?? []).map((a) => (
-		<section class="kapitelavslutning">
-			<h2 id={a.anchor}>{a.titel}</h2>
-			<Fragment set:html={a.html} />
-		</section>
+	{k.avsnitt.map((avs) => (
+		<article class="larandemal">
+			<h2 id={avs.anchor}>{avs.type ? avs.titel : `${avs.nr} ${avs.titel}`}</h2>
+			<Fragment set:html={avs.html} />
+		</article>
 	))}
 
 	<nav class="kapitelnav" aria-label="Kapitelnavigering">

@@ -52,38 +52,14 @@ const { titel, kapitel = [], aktivKapitelNr = null, aktivAnkare = null, expander
 									</a>
 								</summary>
 								<ul>
-									{k.moduler.map((m) => (
+									{k.avsnitt.map((avs) => (
 										<li>
 											<a
-												href={medBase(`/review/kapitel-${k.nr}/#${m.anchor}`)}
-												class={aktivAnkare === m.anchor ? 'active' : ''}
-												aria-current={aktivAnkare === m.anchor ? 'page' : undefined}
+												href={medBase(`/review/kapitel-${k.nr}/#${avs.anchor}`)}
+												class={aktivAnkare === avs.anchor ? 'active' : ''}
+												aria-current={aktivAnkare === avs.anchor ? 'page' : undefined}
 											>
-												{m.nr} {m.titel}
-											</a>
-											<ul>
-												{m.larandemal.map((lm) => (
-													<li>
-														<a
-															href={medBase(`/review/kapitel-${k.nr}/#${lm.anchor}`)}
-															class={aktivAnkare === lm.anchor ? 'active' : ''}
-															aria-current={aktivAnkare === lm.anchor ? 'page' : undefined}
-														>
-															{lm.id} {lm.titel}
-														</a>
-													</li>
-												))}
-											</ul>
-										</li>
-									))}
-									{(k.avslutningar ?? []).map((a) => (
-										<li>
-											<a
-												href={medBase(`/review/kapitel-${k.nr}/#${a.anchor}`)}
-												class={aktivAnkare === a.anchor ? 'active' : ''}
-												aria-current={aktivAnkare === a.anchor ? 'page' : undefined}
-											>
-												{a.titel}
+												{avs.type ? avs.titel : `${avs.nr} ${avs.titel}`}
 											</a>
 										</li>
 									))}
@@ -220,7 +196,7 @@ const { titel, kapitel = [], aktivKapitelNr = null, aktivAnkare = null, expander
 	.review-toc a { text-decoration: none; }
 	.review-toc a:hover { text-decoration: underline; }
 	.review-toc .toc-kapitel { margin-top: 0.9rem; font-weight: 600; }
-	.review-toc .toc-modul { margin-top: 0.4rem; font-weight: 600; font-size: 0.9rem; color: #444; }
+	.review-toc .toc-avsnitt { margin-top: 0.4rem; font-weight: 600; font-size: 0.9rem; color: #444; }
 	.review-toc .toc-lm { font-weight: 400; }
 	.review-titelblad { text-align: center; margin: 3.5rem 0 4rem; }
 	.review-titelblad h1 { margin-bottom: 0.4rem; }

@@ -2,7 +2,7 @@
 -- (scripts/export-review.mjs). Två uppgifter:
 --
 -- 1. Sidbrytningsmarkörer: en tom Div med klassen "page-break" (en per
---    lärandemål, insatt av manuskärnan) blir en riktig sidbrytning i Word.
+--    avsnitt, insatt av manuskärnan) blir en riktig sidbrytning i Word.
 --    I HTML behålls diven och print-CSS:en ger break-before: page.
 --
 -- 2. Figurblock: Diven bär både klassen "figurblock" (stylas av HTML-CSS:en)

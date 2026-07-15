@@ -25,21 +25,11 @@ const datum = new Date().toISOString().slice(0, 10);
 				<li class="toc-kapitel">
 					<a href={medBase(`/review/kapitel-${k.nr}/`)}>Kapitel {k.nr} · {k.titel}</a>
 					<ul>
-						{k.moduler.map((m) => (
-							<li class="toc-modul">
-								<a href={medBase(`/review/kapitel-${k.nr}/#${m.anchor}`)}>{m.nr} {m.titel}</a>
-								<ul>
-									{m.larandemal.map((lm) => (
-										<li class="toc-lm">
-											<a href={medBase(`/review/kapitel-${k.nr}/#${lm.anchor}`)}>{lm.titel}</a>
-										</li>
-									))}
-								</ul>
-							</li>
-						))}
-						{(k.avslutningar ?? []).map((a) => (
-							<li class="toc-modul">
-								<a href={medBase(`/review/kapitel-${k.nr}/#${a.anchor}`)}>{a.titel}</a>
+						{k.avsnitt.map((avs) => (
+							<li class="toc-avsnitt">
+								<a href={medBase(`/review/kapitel-${k.nr}/#${avs.anchor}`)}>
+									{avs.type ? avs.titel : `${avs.nr} ${avs.titel}`}
+								</a>
 							</li>
 						))}
 					</ul>

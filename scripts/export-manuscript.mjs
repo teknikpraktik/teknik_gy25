@@ -1,6 +1,6 @@
-// Sammanställer lärandemålsfilerna till ett bokmanus i kanonisk läsordning
-// (kapitel → modul → lärandemål, ordningen ur 06 via bokstruktur-data.mjs) och
-// kör resultatet genom Pandoc till .docx (till förlaget). Körs fristående
+// Sammanställer avsnittsfilerna till ett bokmanus i kanonisk läsordning
+// (kapitel → avsnitt → delavsnitt, ordningen ur 06 via bokstruktur-data.mjs)
+// och kör resultatet genom Pandoc till .docx (till förlaget). Körs fristående
 // (`npm run export`), frikopplat från webbplatsens build — samma källfiler
 // används av båda, i linje med 12-produktionsarkitektur.md.
 //
@@ -8,7 +8,7 @@
 // rubriksänkning) ligger i scripts/manuscript-core.mjs och delas med den
 // redaktionella granskningsexporten (npm run export:review).
 //
-// Endast lärandemål som nått en viss status exporteras (arbetsmaterial ska
+// Endast avsnitt som nått en viss status exporteras (arbetsmaterial ska
 // aldrig hamna i en leverans, se 09 "Förlagsgranskning"):
 //
 //   npm run export                                  → fardig-forsta-version och uppåt
@@ -49,24 +49,24 @@ const { manuscript, exporterade, utelamnade, saknadeFiler } = await sammanstallM
 
 const antalUtelamnade = Object.values(utelamnade).reduce((a, b) => a + b, 0);
 if (saknadeFiler.length > 0) {
-	console.log(`⚠ ${saknadeFiler.length} planerade lärandemål saknar fil (kör npm run skeleton / npm run validate): ${saknadeFiler.join(', ')}`);
+	console.log(`⚠ ${saknadeFiler.length} planerade avsnitt saknar fil (kör npm run skeleton / npm run validate): ${saknadeFiler.join(', ')}`);
 }
 if (antalUtelamnade > 0) {
-	console.log(`Utelämnade (status under ${statusArg === 'alla' ? '—' : statusArg}): ${antalUtelamnade} lärandemål`);
+	console.log(`Utelämnade (status under ${statusArg === 'alla' ? '—' : statusArg}): ${antalUtelamnade} avsnitt`);
 	for (const [status, antal] of Object.entries(utelamnade)) {
 		console.log(`  ${status}: ${antal}`);
 	}
 }
 
 if (exporterade === 0) {
-	console.log(`\nInget lärandemål har nått status ${statusArg} ännu — inget manus att exportera.`);
+	console.log(`\nInget avsnitt har nått status ${statusArg} ännu — inget manus att exportera.`);
 	process.exit(0);
 }
 
 await mkdir(exportDir, { recursive: true });
 const manuscriptPath = path.join(exportDir, 'manuscript.md');
 await writeFile(manuscriptPath, manuscript.trim() + '\n', 'utf8');
-console.log(`\nManus sammanställt (${exporterade} lärandemål, lägsta status ${statusArg}) → ${path.relative(process.cwd(), manuscriptPath)}`);
+console.log(`\nManus sammanställt (${exporterade} avsnitt, lägsta status ${statusArg}) → ${path.relative(process.cwd(), manuscriptPath)}`);
 
 try {
 	await execFileAsync('pandoc', ['--version']);

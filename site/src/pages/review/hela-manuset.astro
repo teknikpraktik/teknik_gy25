@@ -19,22 +19,11 @@ const datum = new Date().toISOString().slice(0, 10);
 	{kapitel.map((k) => (
 		<section>
 			<h1 id={`kapitel-${k.nr}`}>Kapitel {k.nr} · {k.titel}</h1>
-			{k.moduler.map((m) => (
-				<section>
-					<h2 id={`hela-${m.anchor}`}>{m.nr} {m.titel}</h2>
-					{m.larandemal.map((lm) => (
-						<article class="larandemal">
-							<h3 id={`hela-${lm.anchor}`}>{lm.id} {lm.titel}</h3>
-							<Fragment set:html={lm.html} />
-						</article>
-					))}
-				</section>
-			))}
-			{(k.avslutningar ?? []).map((a) => (
-				<section class="kapitelavslutning">
-					<h2 id={`hela-${a.anchor}`}>{a.titel}</h2>
-					<Fragment set:html={a.html} />
-				</section>
+			{k.avsnitt.map((avs) => (
+				<article class="larandemal">
+					<h2 id={`hela-${avs.anchor}`}>{avs.type ? avs.titel : `${avs.nr} ${avs.titel}`}</h2>
+					<Fragment set:html={avs.html} />
+				</article>
 			))}
 		</section>
 	))}

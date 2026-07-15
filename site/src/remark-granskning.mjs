@@ -1,4 +1,4 @@
-// Remark-plugin för granskningsmiljön. Gör två saker med lärandemålssidorna:
+// Remark-plugin för granskningsmiljön. Gör två saker med avsnittssidorna:
 //
 // 1. Löser upp shortcodes vid rendering:
 //    [[begrepp:namn]] → länk till begreppets huvudställe (filen där det står
@@ -6,9 +6,9 @@
 //    figures/registry.yml. Okänt begrepp eller okänd figur ger byggfel med
 //    filnamn — validate.mjs fångar samma fel före bygget.
 //
-// 2. Injicerar en granskningsruta överst på varje lärandemålssida (frontmatter
-//    med "id") med mål, status, kursplanetaggar, begrepp, figurer, förkunskaper
-//    och uppslag. Rutan finns bara i webbvyn — exporten läser källfilerna
+// 2. Injicerar en granskningsruta överst på varje avsnittssida (frontmatter
+//    med "id") med lärandemål, status, kursplanetaggar, begrepp, figurer och
+//    förkunskaper. Rutan finns bara i webbvyn — exporten läser källfilerna
 //    direkt och påverkas inte (12-produktionsarkitektur.md, "Webbformat").
 //
 // Innehållsindexet (begrepp → sida, id → sida) byggs vid första anropet och
@@ -201,8 +201,8 @@ function granskningsruta(fm) {
 	const { larandemalInfo } = getIndex();
 
 	const taggar = [
-		...(fm.curriculum?.niva1 ?? []).map((t) => ({ t, niva: 'nivå 1' })),
-		...(fm.curriculum?.niva2 ?? []).map((t) => ({ t, niva: 'nivå 2' })),
+		...(fm.curriculumReferences?.niva1 ?? []).map((t) => ({ t, niva: 'nivå 1' })),
+		...(fm.curriculumReferences?.niva2 ?? []).map((t) => ({ t, niva: 'nivå 2' })),
 	]
 		.map(({ t, niva }) => {
 			const p = punkter.get(t);
@@ -233,7 +233,7 @@ function granskningsruta(fm) {
 		`<aside class="granskningsruta" aria-label="Granskningsinformation">` +
 		`<p class="gr-rubrik">Granskningsinfo — visas inte i boken</p>` +
 		`<dl>` +
-		rad('Lärandemål', esc(fm.goal ?? '')) +
+		rad('Lärandemål', (fm.learningGoals ?? []).map(esc).join('<br>')) +
 		rad('Status', `<span class="gr-status gr-status-${esc(fm.status ?? '')}">${esc(fm.status ?? '')}</span>`) +
 		rad('Kursplan', taggar) +
 		rad('Introducerar', introducerar) +

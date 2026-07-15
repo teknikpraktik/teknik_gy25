@@ -8,9 +8,9 @@
 // Kärnan är parametriserbar på två punkter som skiljer exporterna åt:
 //   figurBlock(figId, fig)  — hur en figurplatshållare återges i markdown.
 //                             Standard är förlagsexportens blockquote-format.
-//   larandemalPrefix        — markdown som skjuts in före varje lärandemåls-
-//                             rubrik (granskningsexporten lägger en
-//                             sidbrytningsmarkör här). Standard: tom sträng.
+//   avsnittPrefix           — markdown som skjuts in före varje avsnittsrubrik
+//                             (granskningsexporten lägger en sidbrytnings-
+//                             markör här). Standard: tom sträng.
 
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -18,8 +18,7 @@ import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import YAML from 'yaml';
 import { statusEnum } from '../schemas/larandemal.schema.mjs';
-import { kapitel, kapitelSlug, modulSlug, larandemalId, larandemalFilnamn } from './bokstruktur-data.mjs';
-import { kapitelavslutningarForKapitel } from './kapitelavslutningar-data.mjs';
+import { kapitel, kapitelSlug, avsnittFilnamn } from './bokstruktur-data.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const contentDir = path.join(root, '..', 'content');
@@ -49,9 +48,11 @@ function stripArbetsanteckningar(body) {
 	return body.replace(/<!--[\s\S]*?-->/g, '').replace(/\n{3,}/g, '\n\n').trim();
 }
 
-// Manuset lägger kapitel på #, modul på ## och lärandemålets titel på ###.
-// Källfilernas rubriker (##-nivå enligt 13-produktionsmanual.md) sänks därför
-// två steg så att hierarkin i Word blir rätt. Rader i kodblock rörs inte.
+// Manuset lägger kapitel på #, avsnitt på ## och delavsnitt/Instuderingsfrågor
+// på ###. Källfilernas rubriker (##-nivå enligt 13-produktionsmanual.md, eftersom
+// frontmatterns "title" är sidans egen h1) sänks därför ett steg så att
+// hierarkin i Word blir rätt: kapitel(#) → avsnitt(##, infogas av assemblern)
+// → delavsnitt(###) → undantagsvis ####. Rader i kodblock rörs inte.
 function demoteHeadings(body) {
 	let inCodeBlock = false;
 	return body
@@ -59,7 +60,7 @@ function demoteHeadings(body) {
 		.map((line) => {
 			if (/^(```|~~~)/.test(line)) inCodeBlock = !inCodeBlock;
 			if (inCodeBlock) return line;
-			return line.replace(/^(#{2,4})(\s)/, '$1##$2');
+			return line.replace(/^(#{2,3})(\s)/, '$1#$2');
 		})
 		.join('\n');
 }
@@ -68,7 +69,7 @@ function demoteHeadings(body) {
 // manussträngen (otrimmad, som tidigare) tillsammans med uppgifter om vad
 // som togs med och vad som utelämnades, så att anropande skript kan logga
 // och efterkontrollera.
-export async function sammanstallManus({ minStatusIdx, figurBlock = defaultFigurBlock, larandemalPrefix = '' } = {}) {
+export async function sammanstallManus({ minStatusIdx, figurBlock = defaultFigurBlock, avsnittPrefix = '' } = {}) {
 	const figureRegistry = YAML.parse(await readFile(figuresRegistryPath, 'utf8')) || {};
 
 	let manuscript = '';
@@ -79,57 +80,33 @@ export async function sammanstallManus({ minStatusIdx, figurBlock = defaultFigur
 
 	for (const k of kapitel) {
 		let kapitelDel = '';
-		let kapitelHarLarandemal = false;
-		for (let i = 0; i < k.moduler.length; i++) {
-			const m = k.moduler[i];
-			let modulDel = '';
-			for (let j = 0; j < m.larandemal.length; j++) {
-				const id = larandemalId(k, i, j);
-				const filePath = path.join(contentDir, kapitelSlug(k), modulSlug(k, i), larandemalFilnamn(k, i, j));
-				let raw;
-				try {
-					raw = await readFile(filePath, 'utf8');
-				} catch {
-					saknadeFiler.push(id);
-					continue;
-				}
-				const { data, content } = matter(raw);
-				const statusIdx = statusEnum.indexOf(data.status);
-				if (statusIdx < minStatusIdx) {
-					utelamnade[data.status] = (utelamnade[data.status] ?? 0) + 1;
-					continue;
-				}
-				const brodtext = resolveShortcodes(demoteHeadings(stripArbetsanteckningar(content)), figureRegistry, figurBlock);
-				modulDel += `\n\n${larandemalPrefix}### ${data.title}\n\n${brodtext}\n`;
-				inkluderade.push({ id, titel: data.title });
-				exporterade++;
+		for (let i = 0; i < k.avsnitt.length; i++) {
+			const avs = k.avsnitt[i];
+			const id = `${k.nr}.${i + 1}`;
+			const filePath = path.join(contentDir, kapitelSlug(k), avsnittFilnamn(k, i));
+			let raw;
+			try {
+				raw = await readFile(filePath, 'utf8');
+			} catch {
+				saknadeFiler.push(avs.type ? `${id} (${avs.type})` : id);
+				continue;
 			}
-			if (modulDel !== '') {
-				kapitelDel += `\n\n## ${k.nr}.${i + 1} ${m.titel}\n${modulDel}`;
-				kapitelHarLarandemal = true;
+			const { data, content } = matter(raw);
+			const statusIdx = statusEnum.indexOf(data.status);
+			if (statusIdx < minStatusIdx) {
+				utelamnade[data.status] = (utelamnade[data.status] ?? 0) + 1;
+				continue;
 			}
-		}
-		// Kapitelavslutningar (begreppsövning, uppgiftsbank) sist i kapitlet, i
-		// manifestordning. De är chapter-nivå (##) så exportens rubrikkontroller
-		// (nivå 3 = lärandemål) påverkas inte. Läggs inte till inkluderade.
-		if (kapitelHarLarandemal) {
-			for (const post of kapitelavslutningarForKapitel(k.nr)) {
-				const filePath = path.join(contentDir, kapitelSlug(k), `${post.slug}.md`);
-				let raw;
-				try {
-					raw = await readFile(filePath, 'utf8');
-				} catch {
-					saknadeFiler.push(`${k.nr}/${post.slug}`);
-					continue;
-				}
-				const { data, content } = matter(raw);
-				if (statusEnum.indexOf(data.status) < minStatusIdx) continue;
-				const brodtext = resolveShortcodes(demoteHeadings(stripArbetsanteckningar(content)), figureRegistry, figurBlock);
-				kapitelDel += `\n\n## ${data.title}\n\n${brodtext}\n`;
-			}
+			const brodtext = resolveShortcodes(demoteHeadings(stripArbetsanteckningar(content)), figureRegistry, figurBlock);
+			// Kapitelavslutningar har ingen synlig sektionsnumrering i den
+			// publicerade rubriken (06-bokstruktur.md, "Kapitelavslutningar").
+			const rubrik = avs.type ? data.title : `${id} ${data.title}`;
+			kapitelDel += `\n\n${avsnittPrefix}## ${rubrik}\n\n${brodtext}\n`;
+			if (!avs.type) inkluderade.push({ id, titel: data.title });
+			exporterade++;
 		}
 		if (kapitelDel !== '') {
-			manuscript += `\n\n# Kapitel ${k.nr} – ${k.titel}\n${kapitelDel}`;
+			manuscript += `\n\n# Kapitel ${k.nr} · ${k.titel}\n${kapitelDel}`;
 		}
 	}
 

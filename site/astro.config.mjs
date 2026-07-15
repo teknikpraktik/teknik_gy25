@@ -1,8 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import { kapitel, kapitelSlug, modulSlug, larandemalFilnamn, larandemalId } from '../scripts/bokstruktur-data.mjs';
-import { kapitelavslutningarForKapitel } from '../scripts/kapitelavslutningar-data.mjs';
+import { kapitel, kapitelSlug, avsnittFilnamn, routeSegment } from '../scripts/bokstruktur-data.mjs';
 import { remarkGranskning } from './src/remark-granskning.mjs';
 import { SITE_BASE } from './src/site-base.mjs';
 
@@ -13,14 +12,8 @@ import { SITE_BASE } from './src/site-base.mjs';
 // Explicit slug-baserade poster ger dessutom byggfel om en sida saknas,
 // vilket fungerar som extra synkkontroll.
 
-// Astros routes slugifierar sökvägssegment genom att ta bort punkter:
-// "1.01-krafter" → "101-krafter". Våra slugs är redan ASCII/gemener.
-function routeSegment(segment) {
-	return segment.replaceAll('.', '');
-}
-
-// Kapitel- och modulöversikterna är genererade vyer (src/pages/[...oversikt].astro),
-// inte content-poster — de länkas därför med `link`. Lärandemålen är content-poster
+// Kapitelöversikten är en genererad vy (src/pages/[...oversikt].astro), inte
+// en content-post — den länkas därför med `link`. Avsnitten är content-poster
 // och länkas med `slug`, vilket ger byggfel om en sida i 06 saknas i content/.
 const sidebar = [
 	{ label: 'Start', link: '/' },
@@ -29,25 +22,9 @@ const sidebar = [
 		collapsed: true,
 		items: [
 			{ label: 'Kapitelöversikt', link: `/${kapitelSlug(k)}/` },
-			...k.moduler.map((m, i) => ({
-				label: `${k.nr}.${i + 1} ${m.titel}`,
-				collapsed: true,
-				items: [
-					{ label: 'Modulöversikt', link: `/${kapitelSlug(k)}/${routeSegment(modulSlug(k, i))}/` },
-					...m.larandemal.map((lm, j) => ({
-						label: `${larandemalId(k, i, j)} ${lm.titel}`,
-						slug: [
-							kapitelSlug(k),
-							routeSegment(modulSlug(k, i)),
-							routeSegment(larandemalFilnamn(k, i, j).replace(/\.md$/, '')),
-						].join('/'),
-					})),
-				],
-			})),
-			// Kapitelavslutningar (begreppsovning, uppgiftsbank) sist i kapitlet, i manifestordning.
-			...kapitelavslutningarForKapitel(k.nr).map((post) => ({
-				label: post.title,
-				slug: [kapitelSlug(k), routeSegment(post.slug)].join("/"),
+			...k.avsnitt.map((avs, i) => ({
+				label: `${k.nr}.${i + 1} ${avs.titel}`,
+				slug: [kapitelSlug(k), routeSegment(avsnittFilnamn(k, i).replace(/\.md$/, ''))].join('/'),
 			})),
 		],
 	})),
@@ -60,7 +37,7 @@ export default defineConfig({
 	site: 'https://teknikpraktik.github.io',
 	base: SITE_BASE,
 	// Löser upp [[figur:...]]/[[begrepp:...]] och injicerar granskningsrutan
-	// på lärandemålssidor. Gäller bara webbvyn — exporten läser källfilerna.
+	// på avsnittssidor. Gäller bara webbvyn — exporten läser källfilerna.
 	markdown: {
 		remarkPlugins: [remarkGranskning],
 	},

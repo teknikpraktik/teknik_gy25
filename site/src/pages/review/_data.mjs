@@ -7,8 +7,7 @@
 // språk, flyt, progression och helhet.
 
 import { getCollection } from 'astro:content';
-import { kapitel, larandemalId, slugify } from '../../../../scripts/bokstruktur-data.mjs';
-import { kapitelavslutningarForKapitel } from '../../../../scripts/kapitelavslutningar-data.mjs';
+import { kapitel, avsnittId, slugify } from '../../../../scripts/bokstruktur-data.mjs';
 import { statusEnum } from '../../../../schemas/larandemal.schema.mjs';
 
 const MIN_STATUS_IDX = statusEnum.indexOf('fardig-forsta-version');
@@ -36,19 +35,24 @@ function taBortBegreppslankar(html) {
 	return html.replace(/<a class="begreppslank"[^>]*>([\s\S]*?)<\/a>/g, '$1');
 }
 
-// Brödtextens rubriker ligger på h2–h4 i källfilerna. I granskningsvyn är
-// h1 kapitel, h2 modul och h3 lärandemålets titel, så brödtextens rubriker
-// sänks två steg (samma hierarki som i Word-exporten).
+// Brödtextens delavsnitt ligger på h2–h3 i källfilerna (06-bokstruktur.md,
+// "Avsnittens och delavsnittens format"). I granskningsvyn är h1 kapitel och
+// h2 avsnittets titel (infogas av sidan, inte av källfilen), så brödtextens
+// egna rubriker sänks ett steg för att bli h3 (delavsnitt) / h4.
 function sankRubriker(html) {
 	return html
-		.replace(/<(\/?)h4([ >])/g, '<$1h6$2')
-		.replace(/<(\/?)h3([ >])/g, '<$1h5$2')
-		.replace(/<(\/?)h2([ >])/g, '<$1h4$2');
+		.replace(/<(\/?)h3([ >])/g, '<$1h4$2')
+		.replace(/<(\/?)h2([ >])/g, '<$1h3$2');
 }
 
 export async function hamtaReviewKapitel() {
 	const docs = await getCollection('docs');
 	const byId = new Map(docs.filter((e) => e.data.id !== undefined).map((e) => [e.data.id, e]));
+	const byTypeChapter = new Map(); // "<kapitel>:<type>" -> entry
+	for (const e of docs) {
+		if (e.data.type === undefined) continue;
+		byTypeChapter.set(`${e.data.chapter}:${e.data.type}`, e);
+	}
 
 	const upptagna = new Set();
 	function unikAnkare(text) {
@@ -60,69 +64,34 @@ export async function hamtaReviewKapitel() {
 		return a;
 	}
 
-	// Kapitelavslutningar (type-filer) ur samma collection, per kapitel.
-	const avslutningarByChapter = new Map();
-	for (const e of docs) {
-		if (e.data.type === undefined) continue;
-		if (!avslutningarByChapter.has(e.data.chapter)) avslutningarByChapter.set(e.data.chapter, []);
-		avslutningarByChapter.get(e.data.chapter).push(e);
-	}
-
 	const resultat = [];
 	for (const k of kapitel) {
-		const moduler = [];
-		for (let i = 0; i < k.moduler.length; i++) {
-			const larandemal = [];
-			for (let j = 0; j < k.moduler[i].larandemal.length; j++) {
-				const id = larandemalId(k, i, j);
-				const entry = byId.get(id);
-				if (!entry) continue;
-				if (statusEnum.indexOf(entry.data.status) < MIN_STATUS_IDX) continue;
-				const html = entry.rendered?.html;
-				if (!html) {
-					throw new Error(`Review: renderad HTML saknas för ${id} — content layer-API:t kan ha ändrats.`);
-				}
-				larandemal.push({
-					id,
-					titel: entry.data.title,
-					anchor: unikAnkare(entry.data.title),
-					html: sankRubriker(taBortBegreppslankar(rensaHtml(html, id))),
-				});
-			}
-			if (larandemal.length > 0) {
-				moduler.push({
-					nr: `${k.nr}.${i + 1}`,
-					titel: k.moduler[i].titel,
-					anchor: unikAnkare(`modul-${k.nr}-${i + 1}`),
-					larandemal,
-				});
-			}
-		}
-		// Kapitelavslutningar sist i kapitlet, i manifestordning, endast de som
-		// nått status fardig-forsta-version eller högre.
-		const avslutningar = [];
-		const kapavslutDocs = avslutningarByChapter.get(k.nr) ?? [];
-		for (const post of kapitelavslutningarForKapitel(k.nr)) {
-			const entry = kapavslutDocs.find((e) => e.data.type === post.type);
+		const avsnitt = [];
+		for (let i = 0; i < k.avsnitt.length; i++) {
+			const plan = k.avsnitt[i];
+			const id = plan.type ? undefined : avsnittId(k, i);
+			const entry = plan.type ? byTypeChapter.get(`${k.nr}:${plan.type}`) : byId.get(id);
 			if (!entry) continue;
 			if (statusEnum.indexOf(entry.data.status) < MIN_STATUS_IDX) continue;
 			const html = entry.rendered?.html;
-			if (!html) continue;
-			avslutningar.push({
-				type: post.type,
+			if (!html) {
+				throw new Error(`Review: renderad HTML saknas för ${id ?? `${k.nr}/${plan.type}`} — content layer-API:t kan ha ändrats.`);
+			}
+			avsnitt.push({
+				id,
+				nr: `${k.nr}.${i + 1}`,
 				titel: entry.data.title,
+				type: plan.type,
 				anchor: unikAnkare(entry.data.title),
-				html: sankRubriker(taBortBegreppslankar(rensaHtml(html, `${k.nr}/${post.slug}`))),
+				html: sankRubriker(taBortBegreppslankar(rensaHtml(html, id ?? `${k.nr}/${plan.type}`))),
 			});
 		}
-
-		if (moduler.length > 0 || avslutningar.length > 0) {
+		if (avsnitt.length > 0) {
 			resultat.push({
 				nr: k.nr,
 				titel: k.titel,
-				moduler,
-				avslutningar,
-				antal: moduler.reduce((s, m) => s + m.larandemal.length, 0),
+				avsnitt,
+				antal: avsnitt.filter((a) => !a.type).length,
 			});
 		}
 	}
