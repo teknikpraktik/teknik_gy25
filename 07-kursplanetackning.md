@@ -4,7 +4,7 @@ Mappar Skolverkets centrala innehåll (TEKI nivå 1 och 2) och de fem bedömda f
 
 Kursplanens ordagranna lydelser (syfte, centralt innehåll, betygskriterier) finns i *Skolverket Kursplan Teknik GY25.md*. Tabellerna nedan förkortar vissa punkter; vid behov av exakt formulering gäller textversionen. Maskinläsbar spegling av denna matris: `scripts/kursplan-data.mjs` (uppdateras i samma steg som detta dokument).
 
-Varje punkt har ett stabilt id (n1-01…, n2-01…, s-01). Id:t används som tagg i lärandemålsfilernas `curriculum`-fält och gör täckningen maskinellt uppföljbar per punkt — id:n får aldrig återanvändas eller numreras om. Syftesmålet s-01 gäller båda nivåerna.
+Varje punkt har ett stabilt id (n1-01…, n2-01…, s-01). Id:t används som tagg i avsnittsfilernas `curriculumReferences`-fält och gör täckningen maskinellt uppföljbar per punkt — id:n får aldrig återanvändas eller numreras om. Syftesmålet s-01 gäller båda nivåerna.
 
 **● = kapitlets primära ansvar** (här behandlas innehållet fullständigt)
 **○ = berörs / vävs in** (stödjande, men inte huvudansvar)

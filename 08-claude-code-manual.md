@@ -69,8 +69,8 @@ AI ska kontinuerligt förbättra manus.
 AI får:
 
 - föreslå bättre disposition
-- dela upp lärandemål
-- slå ihop lärandemål
+- dela upp avsnitt
+- slå ihop avsnitt
 - skapa exempel
 - skapa undersökningar
 - skapa laborationer
@@ -105,7 +105,7 @@ Claude ska alltid motivera större avvikelser från den planerade strukturen.
 
 När ett nytt avsnitt skrivs ska AI först identifiera:
 
-- lärandemålet
+- avsnittets lärandemål
 - nödvändiga förkunskaper
 - centrala begrepp
 - vilka figurer som behövs
@@ -119,7 +119,7 @@ Först därefter skrivs texten.
 
 # Faktagranskning
 
-AI ansvarar löpande för att tekniska fakta, formler, enheter, begrepp och exempel är korrekta, enligt kriterierna i *09-kvalitetssakring.md*, avsnitt "Innehåll" under "Granskning av lärandemål".
+AI ansvarar löpande för att tekniska fakta, formler, enheter, begrepp och exempel är korrekta, enligt kriterierna i *09-kvalitetssakring.md*, avsnitt "Innehåll" under "Granskning av avsnitt".
 
 Vid osäkerhet ska AI välja den lösning som:
 
@@ -134,7 +134,7 @@ AI ska inte spekulera.
 
 # Pedagogisk och språklig granskning
 
-Efter varje lärandemål ska AI genomföra granskningen enligt *09-kvalitetssakring.md*, avsnitten "Pedagogik" och "Språk" under "Granskning av lärandemål".
+Efter varje avsnitt ska AI genomföra granskningen enligt *09-kvalitetssakring.md*, avsnitten "Pedagogik" och "Språk" under "Granskning av avsnitt".
 
 ---
 
@@ -155,7 +155,7 @@ Varje platshållare ska beskriva:
 
 # Praktiska moment
 
-När ett lärandemål lämpar sig för praktiskt arbete ska AI aktivt försöka skapa:
+När ett avsnitt lämpar sig för praktiskt arbete ska AI aktivt försöka skapa:
 
 - laboration
 - undersökning
@@ -189,12 +189,13 @@ AI ska aldrig skriva ett helt kapitel i ett steg.
 
 Arbetet sker i följande ordning.
 
-1. Modul
-2. Lärandemål
-3. Teori
-4. Figurer
-5. Uppgifter
-6. Kvalitetskontroll
+1. Avsnitt (H2), med dess delavsnitt (H3) vid behov
+2. Teori
+3. Figurer
+4. Uppgifter
+5. Kvalitetskontroll
+
+Lärandemålen är inte ett eget steg i denna ordning: de identifieras och registreras i avsnittets frontmatter (`learningGoals`) som en del av förberedelsen, innan teorin skrivs (se "AI:s arbetsmetod").
 
 ---
 
@@ -203,7 +204,7 @@ Arbetet sker i följande ordning.
 Om AI upptäcker:
 
 - bättre kapitelordning
-- bättre modulindelning
+- bättre avsnittsindelning
 - bättre exempel
 - bättre figurer
 - bättre laborationer
@@ -216,7 +217,7 @@ Projektet ska förbättras kontinuerligt.
 
 # Egengranskning
 
-Innan ett lärandemål betraktas som färdigt ska AI fråga sig:
+Innan ett avsnitt betraktas som färdigt ska AI fråga sig:
 
 - Är detta den bästa förklaringen jag kan skriva?
 - Kan eleven förstå detta utan lärare?

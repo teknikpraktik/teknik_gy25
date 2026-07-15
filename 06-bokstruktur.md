@@ -20,9 +20,9 @@ Ingen kursplanetäckning.
 
 Syftet är att utgöra projektets innehållsförteckning och produktionsplan.
 
-Listan över lärandemål under varje modul är preliminär. När Claude Code delar upp eller slår ihop lärandemål under produktionen (se 04-redaktionsprinciper.md och 08-claude-code-manual.md) ska listan uppdateras i motsvarande grad.
+Listan över delavsnitt och lärandemål under varje avsnitt är preliminär. När Claude Code delar eller slår ihop avsnitt eller delavsnitt under produktionen (se 04-redaktionsprinciper.md och 08-claude-code-manual.md) ska listan uppdateras i motsvarande grad.
 
-Detta dokument är den enda källan till bokens struktur, även maskinellt: `scripts/bokstruktur-data.mjs` tolkar dokumentet direkt vid varje körning av skeleton-, validerings- och exportskripten. Det finns ingen separat datafil att hålla i synk — men kapitel-, modul- och lärandemålsraderna måste därför följa radformatet nedan exakt. Vid formatfel stannar `npm run validate` med ett radnummer.
+Detta dokument är den enda källan till bokens struktur, även maskinellt: `scripts/bokstruktur-data.mjs` tolkar dokumentet direkt vid varje körning av skeleton-, validerings- och exportskripten. Det finns ingen separat datafil att hålla i synk — men kapitel-, avsnitts- och delavsnittsraderna måste därför följa radformatet nedan exakt. Vid formatfel stannar `npm run validate` med ett radnummer.
 
 ---
 
@@ -30,384 +30,542 @@ Detta dokument är den enda källan till bokens struktur, även maskinellt: `scr
 
 Boken är uppbyggd enligt följande nivåer.
 
-Ämne
+Kapitel (H1)
 
 ↓
 
-Modul
+Avsnitt (H2)
 
 ↓
 
-Lärandemål
+Delavsnitt (H3, används vid behov)
+
+**Avsnittet (H2) är bokens minsta producerade och publicerade enhet.** Det är den fasta pedagogiska, redaktionella, navigerbara och producerbara enheten — produktionsstrukturen och publiceringsstrukturen är identiska. Delavsnitt (H3) ger ett avsnitt naturliga underrubriker när innehållet har flera tydligt skilda delar, men är aldrig en egen fil, sida eller navigeringsnivå.
+
+**Lärandemål är metadata, inte en rubriknivå.** Ett lärandemål är inte längre en egen fil eller synlig rubrik. Varje avsnitt har ett eller flera lärandemål registrerade i frontmatterfältet `learningGoals` (se 12-produktionsarkitektur.md). Lärandemålen styr fortfarande vad som ska skrivas och är kvalitetskriteriet för när avsnittet är klart, men de syns normalt inte för eleven.
+
+Antalet avsnitt per kapitel och delavsnitt per avsnitt bestäms av ämnets naturliga struktur, inte av någon förutbestämd mall. Ett avsnitt kan omfatta ett eller flera lärandemål och ett eller flera uppslag; antalet sidor styrs av innehållet (03-bokens-arkitektur.md, "Sidomfång").
 
 ---
 
-# Lärandemålens format
+# Avsnittens och delavsnittens format
 
-Varje lärandemål anges med id, kort arbetstitel och en mätbar målformulering.
+Varje avsnitt anges med numrerad H2-rubrik, följd av en punktlista med avsnittets lärandemål (mätbara målformuleringar, se nedan) och därefter eventuella H3-delavsnitt.
 
 Målformuleringen beskriver vad eleven kan göra efter genomfört arbete (03-bokens-arkitektur.md, "Lärandemål"). Den inleds därför alltid med ett observerbart verb: beskriva, förklara, beräkna, tolka, välja, upprätta, genomföra, skissa och så vidare.
 
-Ett lärandemål har inget fast sid- eller uppslagsomfång (03-bokens-arkitektur.md). Det får flöda över så många sidor som förståelsen kräver och delas bara vid flera tydligt skilda kunskapsresultat. Uppslag och sidbrytningar är en layout- och tryckfråga och markeras inte här.
+Ett avsnitt har inget fast sid- eller uppslagsomfång (03-bokens-arkitektur.md). Det får flöda över så många sidor som förståelsen kräver. Uppslag och sidbrytningar är en layout- och tryckfråga och markeras inte här.
 
 Maskinläst radformat (exakt):
 
 ```
-# Kapitel <nr> – <titel>
-## Modul <nr>.<nr> <titel>
-- **<k>.<m>.<l> <Titel>** — <Målformulering.>
+# Kapitel <nr> · <titel>
+
+## <nr>.<sektionsnr> <Avsnittstitel>
+- <Målformulering 1.>
+- <Målformulering 2.>
+
+### <Delavsnittstitel>
+### <Delavsnittstitel>
 ```
 
-Numreringen ska vara löpande utan luckor. Tankstrecket i kapitelraden är "–" och skiljetecknet mellan titel och mål är "—".
+Regler:
+
+- Kapitelraden inleder ett kapitel. Mellanslagstecknet är "·".
+- Avsnittsraden (`## <kapitel>.<sektionsnr> <titel>`) numreras löpande utan luckor inom kapitlet.
+- Punktlistan direkt under en avsnittsrad (rader som inleds med `- ` innan nästa `##`/`###`) är avsnittets lärandemål. Ett teoriavsnitt har minst ett lärandemål. De tre kapitelavslutande avsnitten (Sammanfattning, Begrepp, Praktiska uppgifter och projekt, se nedan) saknar lärandemål och har därför ingen punktlista.
+- `### <delavsnittstitel>`-rader är valfria och används bara när avsnittet naturligt delas i flera delar. De är inte lärandemål och har ingen egen punktlista eller numrering — de är rena underrubriker i avsnittets löptext.
+- H4 används undantagsvis, bara när ett H3-delavsnitt verkligen behöver delas upp ytterligare, och skrivs direkt i innehållsfilen (inte i detta dokument, som bara disponerar ner till H3).
 
 ---
 
-# Kapitel 1 – Teknikens utveckling
+# Kapitelavslutningar
 
-## Modul 1.1 Teknik – människans problemlösning
-
-- **1.1.1 Vad är teknik?** — Förklara vad teknik är och ge exempel på hur tekniska lösningar svarar mot mänskliga behov och problem.
-- **1.1.2 Teknik, naturvetenskap och matematik** — Beskriva hur teknik samspelar med naturvetenskap och matematik i en verklig teknisk lösning.
-
-## Modul 1.2 Teknikens historiska utveckling
-
-- **1.2.1 Teknik före industrialiseringen** — Beskriva tekniska genombrott från de första verktygen till 1700-talet och förklara deras betydelse för samhället.
-- **1.2.2 Ångmaskinen och mekaniseringen** — Beskriva den första industriella revolutionens teknikskiften och förklara hur mekaniseringen förändrade arbete, städer och levnadsvillkor.
-- **1.2.3 Elektricitet och massproduktion** — Beskriva den andra industriella revolutionens teknikskiften och förklara hur elektricitet och massproduktion förändrade produktion och vardagsliv.
-- **1.2.4 Elektronik och datorer** — Beskriva den tredje industriella revolutionens teknikskiften och förklara hur elektronik och automation förändrade arbete och yrkesroller.
-- **1.2.5 Digitalisering, internet och AI** — Beskriva digitaliseringens teknikskiften och förklara hur internet, uppkopplade system och AI förändrat kommunikation, branscher och vardagsliv.
-
-## Modul 1.3 Varför utvecklas teknik?
-
-- **1.3.1 Vad driver teknikutvecklingen?** — Identifiera och förklara hur behov, kunskap, tekniska möjligheter, ekonomiska intressen och samhällsförändringar kan samverka som drivkrafter bakom teknikutveckling.
-- **1.3.2 Varför ser tekniska lösningar olika ut?** — Förklara hur befintlig teknik, kunskap, resurser, krav, begränsningar och tekniska avvägningar påverkar vilka tekniska lösningar som utvecklas och hur de utformas.
+Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt dessa titlar: **Sammanfattning**, **Begrepp**, **Praktiska uppgifter och projekt**. De är egna innehållstyper (`type: kapitelsammanfattning` / `begreppsovning` / `uppgiftsbank`), inte lärandemål, saknar `learningGoals` och tränar kapitlets innehåll som helhet (12-produktionsarkitektur.md, "Kapitelavslutningar"). De listas i detta dokument som vilket avsnitt som helst, sist i varje kapitel.
 
 ---
 
-# Kapitel 2 – Att lösa tekniska problem
+# Kapitel 1 · Teknik och teknikutveckling
 
-## Modul 2.1 Vad är ett tekniskt problem?
+## 1.1 Vad är teknik?
+- Förklara vad teknik är och ge exempel på hur tekniska lösningar svarar mot mänskliga behov och problem.
+- Beskriva hur teknik samspelar med naturvetenskap och matematik i en verklig teknisk lösning.
 
-- **2.1.1 Tekniska problem** — Förklara vad som kännetecknar ett tekniskt problem och skilja mellan behov, problem och lösning.
-- **2.1.2 Problemformulering** — Formulera ett tekniskt problem med funktion, krav och begränsningar.
+### Teknik löser problem
+### Teknik, naturvetenskap och matematik
 
-## Modul 2.2 Att välja problemlösningsstrategi
+## 1.2 Teknik genom historien
+- Beskriva tekniska genombrott från de första verktygen till 1700-talet och förklara deras betydelse för samhället.
+- Beskriva den första industriella revolutionens teknikskiften och förklara hur mekaniseringen förändrade arbete, städer och levnadsvillkor.
+- Beskriva den andra industriella revolutionens teknikskiften och förklara hur elektricitet och massproduktion förändrade produktion och vardagsliv.
+- Beskriva den tredje industriella revolutionens teknikskiften och förklara hur elektronik och automation förändrade arbete och yrkesroller.
+- Beskriva digitaliseringens teknikskiften och förklara hur internet, uppkopplade system och AI förändrat kommunikation, branscher och vardagsliv.
 
-- **2.2.1 Bedöma problemets karaktär** — Bedöma ett tekniskt problems karaktär utifrån om det går att överblicka, hur väl förstått det är och vad ett misslyckat försök kostar, för att välja och motivera en problemlösningsstrategi.
-- **2.2.2 Dela upp problemet** — Bryta ned ett sammansatt tekniskt problem i delproblem och lösa dem var för sig.
-- **2.2.3 Återanvänd befintlig lösning** — Identifiera och tillämpa en befintlig, beprövad lösning på ett tekniskt problem.
-- **2.2.4 Pröva och förbättra** — Använda pröva-och-förbättra som strategi för att lösa ett tekniskt problem genom upprepade, dokumenterade försök.
-- **2.2.5 Analysera innan du bygger** — Använda analys, beräkning, simulering och kontrollerade tester för att lösa ett tekniskt problem innan en dyr eller riskfylld fullskalig lösning genomförs.
+### Teknik före industrialiseringen
+### Ångmaskinen och mekaniseringen
+### Elektricitet och massproduktion
+### Elektronik och datorer
+### Digitalisering, internet och AI
 
----
+## 1.3 Drivkrafter bakom teknikutveckling
+- Identifiera och förklara hur behov, kunskap, tekniska möjligheter, ekonomiska intressen och samhällsförändringar kan samverka som drivkrafter bakom teknikutveckling.
+- Förklara hur befintlig teknik, kunskap, resurser, krav, begränsningar och tekniska avvägningar påverkar vilka tekniska lösningar som utvecklas och hur de utformas.
 
-# Kapitel 3 – Teknikutvecklingsprocessen
+### Vad driver teknikutvecklingen?
+### Varför ser tekniska lösningar olika ut?
 
-## Modul 3.1 Teknikutvecklingsprocessen
+## 1.4 Sammanfattning
 
-- **3.1.1 Processens faser** — Beskriva teknikutvecklingsprocessens delar från idé till återvinning och förklara hur de hänger samman.
-- **3.1.2 Iteration** — Förklara varför teknikutveckling är iterativ och ge exempel på hur testresultat leder tillbaka till tidigare faser.
+## 1.5 Begrepp
 
-## Modul 3.2 Kravspecifikation
-
-- **3.2.1 Behov, krav och önskemål** — Skilja mellan behov, krav och önskemål och förklara varför mätbara krav behövs.
-- **3.2.2 Upprätta kravspecifikation** — Upprätta en kravspecifikation med mätbara krav för en produkt eller tjänst.
-
-## Modul 3.3 Idégenerering
-
-- **3.3.1 Idégenereringsmetoder** — Använda metoder för idégenerering för att ta fram flera olika lösningsförslag på ett tekniskt problem.
-
-## Modul 3.4 Konceptutveckling
-
-- **3.4.1 Från idé till koncept** — Utveckla en idé till ett koncept som beskriver funktion, utformning och tänkt användning.
-- **3.4.2 Konceptval** — Jämföra koncept med en viktad beslutsmatris och välja koncept med motivering.
-
-## Modul 3.5 Prototyper
-
-- **3.5.1 Prototypers roll** — Förklara vad prototyper används till och skilja mellan olika typer av prototyper.
-- **3.5.2 Bygga och testa prototyp** — Bygga en enkel prototyp och använda den för att testa och förbättra ett koncept.
-
-## Modul 3.6 Produktens livscykel
-
-- **3.6.1 Livscykelns faser** — Beskriva en produkts livscykel från råvara till återvinning och koppla miljöpåverkan till livscykelns faser.
-- **3.6.2 Design för livscykeln** — Förklara hur konstruktionsval påverkar produktens livslängd, underhåll och återvinning.
+## 1.6 Praktiska uppgifter och projekt
 
 ---
 
-# Kapitel 4 – Skiss, ritteknik och CAD
+# Kapitel 2 · Att lösa tekniska problem
 
-## Modul 4.1 Skisser
+## 2.1 Vad är ett tekniskt problem?
+- Förklara vad som kännetecknar ett tekniskt problem och skilja mellan behov, problem och lösning.
+- Formulera ett tekniskt problem med funktion, krav och begränsningar.
 
-- **4.1.1 Idéskisser** — Skissa tekniska idéer frihand så att form och funktion framgår.
-- **4.1.2 Volymskisser** — Skissa föremål i isometrisk vy så att proportioner och tredimensionell form framgår.
+### Tekniska problem
+### Problemformulering
 
-## Modul 4.2 Ritningar
+## 2.2 Att välja problemlösningsstrategi
+- Bedöma ett tekniskt problems karaktär utifrån om det går att överblicka, hur väl förstått det är och vad ett misslyckat försök kostar, för att välja och motivera en problemlösningsstrategi.
+- Bryta ned ett sammansatt tekniskt problem i delproblem och lösa dem var för sig.
+- Identifiera och tillämpa en befintlig, beprövad lösning på ett tekniskt problem.
+- Använda pröva-och-förbättra som strategi för att lösa ett tekniskt problem genom upprepade, dokumenterade försök.
+- Använda analys, beräkning, simulering och kontrollerade tester för att lösa ett tekniskt problem innan en dyr eller riskfylld fullskalig lösning genomförs.
 
-- **4.2.1 Vyer och projektion** — Rita ett föremål i tre vyer och förklara hur vyerna placeras.
-- **4.2.2 Ritningens språk** — Tolka linjetyper, skala och ritningshuvud på en teknisk ritning.
+### Bedöma problemets karaktär
+### Dela upp problemet
+### Återanvänd befintlig lösning
+### Pröva och förbättra
+### Analysera innan du bygger
 
-## Modul 4.3 Måttsättning
+## 2.3 Sammanfattning
 
-- **4.3.1 Måttsätta ritningar** — Måttsätta en enkel ritning enligt gällande standard.
-- **4.3.2 Toleranser** — Förklara varför toleranser behövs och tolka toleransangivelser på en ritning.
+## 2.4 Begrepp
 
-## Modul 4.4 CAD
-
-- **4.4.1 CAD och parametrisk modellering** — Förklara vad CAD är och hur parametrisk modellering bygger på skisser, mått och villkor.
-- **4.4.2 Modellera en detalj** — Skapa en 3D-modell av en enkel detalj i ett CAD-program.
-- **4.4.3 Sammanställningar** — Sätta samman flera detaljer till en sammanställning i CAD och förklara hur delarna förhåller sig till varandra.
-
-## Modul 4.5 Ritningar och modeller
-
-- **4.5.1 Ritning ur modell** — Ta fram en måttsatt ritning ur en 3D-modell.
-- **4.5.2 Presentera teknik** — Välja lämplig form för att dokumentera och presentera en teknisk lösning för en given mottagare, muntligt och skriftligt med digitala medier.
-
----
-
-# Kapitel 5 – Material och deras egenskaper
-
-## Modul 5.1 Materialgrupper
-
-- **5.1.1 Materialens huvudgrupper** — Klassificera material i huvudgrupperna metaller, polymerer, keramer, kompositer och träbaserade material samt ge exempel på användningsområden.
-
-## Modul 5.2 Materialegenskaper
-
-- **5.2.1 Mekaniska egenskaper** — Förklara centrala mekaniska egenskaper som hållfasthet, styvhet, hårdhet och seghet samt ge exempel på när de är avgörande.
-- **5.2.2 Fysikaliska och kemiska egenskaper** — Förklara egenskaper som densitet, ledningsförmåga och korrosionsbeständighet samt ge exempel på när de är avgörande.
-- **5.2.3 Materialdata** — Tolka materialdata ur tabeller och datablad och jämföra material utifrån givna egenskaper.
-
-## Modul 5.3 Materialval
-
-- **5.3.1 Välja material** — Välja material till en given konstruktion utifrån krav och motivera valet som en avvägning mellan egenskaper, kostnad och hållbarhet.
-
-## Modul 5.4 Tillverkning och material
-
-- **5.4.1 Tillverkningsmetoder** — Beskriva vanliga tillverkningsmetoder och koppla dem till lämpliga materialgrupper.
-- **5.4.2 Tillverkningsanpassning** — Förklara hur valet av material och tillverkningsmetod påverkar en detaljs utformning och kostnad.
-
-## Modul 5.5 Material i ett livscykelperspektiv
-
-- **5.5.1 Materialets livscykel** — Bedöma ett materials miljöpåverkan genom livscykeln från utvinning till återvinning.
-- **5.5.2 Återvinning och materialval** — Förklara skillnaden mellan återanvändning, materialåtervinning och energiåtervinning samt hur materialvalet påverkar återvinningsbarheten.
+## 2.5 Praktiska uppgifter och projekt
 
 ---
 
-# Kapitel 6 – Mekanik och konstruktion
+# Kapitel 3 · Teknikutvecklingsprocessen
 
-## Modul 6.1 Krafter
+## 3.1 Teknikutvecklingsprocessen
+- Beskriva teknikutvecklingsprocessens delar från idé till återvinning och förklara hur de hänger samman.
+- Förklara varför teknikutveckling är iterativ och ge exempel på hur testresultat leder tillbaka till tidigare faser.
 
-- **6.1.1 Kraftbegreppet** — Beskriva en kraft med storlek, riktning och angreppspunkt samt rita krafter som vektorer.
-- **6.1.2 Kraftresultanter** — Bestämma resultanten av flera krafter grafiskt och genom beräkning med komposanter.
-- **6.1.3 Friläggning** — Frilägga en enkel konstruktion och identifiera de krafter som verkar på den.
+### Processens faser
+### Iteration
 
-## Modul 6.2 Moment
+## 3.2 Kravspecifikation
+- Skilja mellan behov, krav och önskemål och förklara varför mätbara krav behövs.
+- Upprätta en kravspecifikation med mätbara krav för en produkt eller tjänst.
 
-- **6.2.1 Momentbegreppet** — Förklara vad ett moment är och beräkna moment kring en punkt.
-- **6.2.2 Hävarmsprincipen** — Använda hävarmsprincipen för att förklara och beräkna utväxling i enkla maskiner och verktyg.
+### Behov, krav och önskemål
+### Upprätta kravspecifikation
 
-## Modul 6.3 Jämvikt
+## 3.3 Idégenerering
+- Använda metoder för idégenerering för att ta fram flera olika lösningsförslag på ett tekniskt problem.
 
-- **6.3.1 Jämviktsvillkoren** — Formulera jämviktsvillkoren och använda dem för att beräkna okända krafter i enkla fall.
-- **6.3.2 Stödreaktioner** — Beräkna stödreaktioner för en enkelt belastad balk.
+## 3.4 Konceptutveckling
+- Utveckla en idé till ett koncept som beskriver funktion, utformning och tänkt användning.
+- Jämföra koncept med en viktad beslutsmatris och välja koncept med motivering.
 
-## Modul 6.4 Hållfasthet
+### Från idé till koncept
+### Konceptval
 
-- **6.4.1 Belastningstyper** — Identifiera drag, tryck, böjning, skjuvning, vridning och knäckning i verkliga konstruktioner.
-- **6.4.2 Spänning och töjning** — Förklara begreppen spänning och töjning samt beräkna normalspänning i en belastad detalj.
-- **6.4.3 Dragprovet** — Tolka en dragprovkurva och avläsa elasticitetsmodul, sträckgräns och brottgräns.
+## 3.5 Prototyper
+- Förklara vad prototyper används till och skilja mellan olika typer av prototyper.
+- Bygga en enkel prototyp och använda den för att testa och förbättra ett koncept.
 
-## Modul 6.5 Konstruktion
+### Prototypers roll
+### Bygga och testa prototyp
 
-- **6.5.1 Geometri och styvhet** — Förklara hur tvärsnitt och geometri påverkar en konstruktions styvhet och bärförmåga.
-- **6.5.2 Fackverk och kraftvägar** — Identifiera drag- och tryckbelastade delar i ett fackverk och förklara hur laster förs ned till stöden.
+## 3.6 Produktens livscykel
+- Beskriva en produkts livscykel från råvara till återvinning och koppla miljöpåverkan till livscykelns faser.
+- Förklara hur konstruktionsval påverkar produktens livslängd, underhåll och återvinning.
 
-## Modul 6.6 Dimensionering
+### Livscykelns faser
+### Design för livscykeln
 
-- **6.6.1 Säkerhetsfaktor och dimensionering** — Dimensionera en enkel konstruktionsdetalj mot en given belastning med hjälp av tillåten spänning och säkerhetsfaktor.
-- **6.6.2 Rimlighetsbedömning** — Bedöma beräkningsresultats rimlighet med överslagsräkning och enhetskontroll.
+## 3.7 Sammanfattning
 
----
+## 3.8 Begrepp
 
-# Kapitel 7 – Mätteknik och dataanalys
-
-## Modul 7.1 Storheter och enheter
-
-- **7.1.1 SI-systemet** — Använda SI-systemets storheter, enheter och prefix samt genomföra enhetsomvandlingar.
-
-## Modul 7.2 Mätinstrument
-
-- **7.2.1 Mäta med rätt instrument** — Välja lämpligt mätinstrument för en given mätuppgift och använda det korrekt.
-
-## Modul 7.3 Mätfel
-
-- **7.3.1 Mätosäkerhet** — Skilja mellan systematiska och slumpmässiga mätfel samt ange mätvärden med rimligt antal värdesiffror.
-
-## Modul 7.4 Datainsamling
-
-- **7.4.1 Planera och genomföra mätningar** — Planera och genomföra en mätserie med strukturerad dokumentation, manuellt eller med digital datainsamling.
-
-## Modul 7.5 Dataanalys
-
-- **7.5.1 Sammanställa mätdata** — Sammanställa mätdata i tabeller och diagram samt beräkna medelvärde och spridning.
-- **7.5.2 Tolka mätdata** — Tolka samband i mätdata, anpassa en enkel modell till data och dra slutsatser med hänsyn till mätosäkerheten.
+## 3.9 Praktiska uppgifter och projekt
 
 ---
 
-# Kapitel 8 – Modellering och simulering
+# Kapitel 4 · Skiss, ritteknik och CAD
 
-## Modul 8.1 Modeller
+## 4.1 Skisser
+- Skissa tekniska idéer frihand så att form och funktion framgår.
+- Skissa föremål i isometrisk vy så att proportioner och tredimensionell form framgår.
 
-- **8.1.1 Modellbegreppet** — Förklara vad en modell är, varför modeller används och vilka begränsningar de har.
-- **8.1.2 Välja modelltyp** — Skilja mellan fysiska, matematiska och digitala modeller och välja modelltyp för ett givet syfte.
+### Idéskisser
+### Volymskisser
 
-## Modul 8.2 Digital modellering
+## 4.2 Ritningar
+- Rita ett föremål i tre vyer och förklara hur vyerna placeras.
+- Tolka linjetyper, skala och ritningshuvud på en teknisk ritning.
 
-- **8.2.1 Bygga en digital modell** — Bygga en enkel digital modell av ett tekniskt förlopp i kalkylprogram eller Python.
+### Vyer och projektion
+### Ritningens språk
 
-## Modul 8.3 Simulering
+## 4.3 Måttsättning
+- Måttsätta en enkel ritning enligt gällande standard.
+- Förklara varför toleranser behövs och tolka toleransangivelser på en ritning.
 
-- **8.3.1 Simuleringens princip** — Förklara vad simulering är och när simulering är att föredra framför fysisk provning.
-- **8.3.2 Genomföra en simulering** — Genomföra en enkel simulering, variera parametrar och tolka resultatet.
+### Måttsätta ritningar
+### Toleranser
 
-## Modul 8.4 Verifiering
+## 4.4 CAD
+- Förklara vad CAD är och hur parametrisk modellering bygger på skisser, mått och villkor.
+- Skapa en 3D-modell av en enkel detalj i ett CAD-program.
+- Sätta samman flera detaljer till en sammanställning i CAD och förklara hur delarna förhåller sig till varandra.
 
-- **8.4.1 Verifiering och validering** — Förklara skillnaden mellan verifiering och validering samt jämföra modellresultat med mätningar.
+### CAD och parametrisk modellering
+### Modellera en detalj
+### Sammanställningar
 
----
+## 4.5 Ritningar och modeller
+- Ta fram en måttsatt ritning ur en 3D-modell.
+- Välja lämplig form för att dokumentera och presentera en teknisk lösning för en given mottagare, muntligt och skriftligt med digitala medier.
 
-# Kapitel 9 – IT-system
+### Ritning ur modell
+### Presentera teknik
 
-## Modul 9.1 IT-system
+## 4.6 Sammanfattning
 
-- **9.1.1 IT-systemets delar** — Beskriva ett IT-systems uppbyggnad med hårdvara, mjukvara, data, nätverk och användare samt ge exempel på IT-systems roll i teknikutveckling.
+## 4.7 Begrepp
 
-## Modul 9.2 Datorer
-
-- **9.2.1 Datorns uppbyggnad** — Beskriva datorns huvuddelar och förklara hur de samverkar när ett program körs.
-- **9.2.2 Digital representation** — Förklara hur tal, text och bilder representeras binärt.
-
-## Modul 9.3 Nätverk
-
-- **9.3.1 Nätverkets delar** — Beskriva hur lokala nätverk är uppbyggda och hur data tar sig mellan enheter.
-
-## Modul 9.4 Internet
-
-- **9.4.1 Så fungerar internet** — Förklara hur internet fungerar med IP-adresser, DNS och paketförmedling.
-
-## Modul 9.5 Digitalisering
-
-- **9.5.1 Digitaliseringens betydelse** — Förklara digitaliseringens betydelse för produktion, kommunikation och människans livsmiljö.
-- **9.5.2 Uppkopplade system** — Beskriva hur uppkopplade enheter och molntjänster används i tekniska system och produktion.
-
----
-
-# Kapitel 10 – Programmering
-
-## Modul 10.1 Python
-
-- **10.1.1 Första programmet** — Skriva, köra och felsöka ett enkelt Python-program med utskrift och inmatning.
-
-## Modul 10.2 Variabler
-
-- **10.2.1 Variabler och datatyper** — Använda variabler och grundläggande datatyper för att utföra beräkningar i program.
-
-## Modul 10.3 Villkor
-
-- **10.3.1 Villkorssatser** — Skriva program som fattar beslut med villkorssatser och logiska uttryck.
-
-## Modul 10.4 Loopar
-
-- **10.4.1 for och while** — Använda for- och while-loopar för att upprepa beräkningar i program.
-- **10.4.2 Listor** — Använda listor för att lagra och bearbeta data i program.
-
-## Modul 10.5 Funktioner
-
-- **10.5.1 Funktioner** — Skriva och använda funktioner med parametrar och returvärden för att strukturera programkod.
-
-## Modul 10.6 Problemlösning
-
-- **10.6.1 Från problem till program** — Bryta ned ett tekniskt problem i delsteg och implementera lösningen som ett strukturerat Python-program.
-- **10.6.2 Testa och felsöka** — Testa ett program systematiskt samt lokalisera och rätta fel i programkod.
+## 4.8 Praktiska uppgifter och projekt
 
 ---
 
-# Kapitel 11 – Projekt och entreprenörskap
+# Kapitel 5 · Material och deras egenskaper
 
-## Modul 11.1 Projektarbete
+## 5.1 Materialgrupper
+- Klassificera material i huvudgrupperna metaller, polymerer, keramer, kompositer och träbaserade material samt ge exempel på användningsområden.
 
-- **11.1.1 Projektformen** — Förklara vad som kännetecknar ett projekt samt beskriva vanliga faser och roller i tekniska projekt.
+## 5.2 Materialegenskaper
+- Förklara centrala mekaniska egenskaper som hållfasthet, styvhet, hårdhet och seghet samt ge exempel på när de är avgörande.
+- Förklara egenskaper som densitet, ledningsförmåga och korrosionsbeständighet samt ge exempel på när de är avgörande.
+- Tolka materialdata ur tabeller och datablad och jämföra material utifrån givna egenskaper.
 
-## Modul 11.2 Projektplanering
+### Mekaniska egenskaper
+### Fysikaliska och kemiska egenskaper
+### Materialdata
 
-- **11.2.1 Projektplan** — Upprätta en projektplan med mål, aktiviteter, tidsplan och ansvarsfördelning.
-- **11.2.2 Projektrisker** — Identifiera risker i ett projekt och planera förebyggande åtgärder.
+## 5.3 Materialval
+- Välja material till en given konstruktion utifrån krav och motivera valet som en avvägning mellan egenskaper, kostnad och hållbarhet.
 
-## Modul 11.3 Entreprenörskap
+## 5.4 Tillverkning och material
+- Beskriva vanliga tillverkningsmetoder och koppla dem till lämpliga materialgrupper.
+- Förklara hur valet av material och tillverkningsmetod påverkar en detaljs utformning och kostnad.
 
-- **11.3.1 Entreprenörskapets villkor** — Förklara entreprenörskapets roll i teknikutveckling och vilka villkor som påverkar vägen från idé till produkt på en marknad.
-- **11.3.2 Affärsmodell** — Beskriva en affärsmodell för en teknisk produkt eller tjänst med kundnytta, kostnader och intäkter.
+### Tillverkningsmetoder
+### Tillverkningsanpassning
 
-## Modul 11.4 Genomförande
+## 5.5 Material i ett livscykelperspektiv
+- Bedöma ett materials miljöpåverkan genom livscykeln från utvinning till återvinning.
+- Förklara skillnaden mellan återanvändning, materialåtervinning och energiåtervinning samt hur materialvalet påverkar återvinningsbarheten.
 
-- **11.4.1 Arbeta i projekt** — Genomföra ett tekniskt projekt enligt plan med möten, dokumentation och uppföljning av tid och resultat.
+### Materialets livscykel
+### Återvinning och materialval
 
-## Modul 11.5 Projektutvärdering
+## 5.6 Sammanfattning
 
-- **11.5.1 Utvärdera och presentera** — Utvärdera ett projekts resultat och arbetsprocess samt presentera projektet för en mottagare.
+## 5.7 Begrepp
 
----
-
-# Kapitel 12 – Kvalitet, risk och arbetsmiljö
-
-## Modul 12.1 Kvalitet
-
-- **12.1.1 Kvalitet och kvalitetsarbete** — Förklara begreppet kvalitet och beskriva hur systematiskt kvalitetsarbete med ständiga förbättringar bedrivs.
-- **12.1.2 Kvalitetskontroll** — Kontrollmäta en detalj mot ställda krav och avgöra om den ska godkännas.
-
-## Modul 12.2 Riskanalys
-
-- **12.2.1 Genomföra riskanalys** — Genomföra en riskanalys med bedömning av sannolikhet och konsekvens samt föreslå riskreducerande åtgärder.
-
-## Modul 12.3 Arbetsmiljö
-
-- **12.3.1 Systematiskt arbetsmiljöarbete** — Beskriva hur systematiskt arbetsmiljöarbete bedrivs och identifiera arbetsmiljörisker i en teknisk miljö.
-
-## Modul 12.4 Miljösäkring
-
-- **12.4.1 Miljösäkring** — Förklara hur miljösäkring bedrivs och hur miljökrav påverkar tekniskt utvecklings- och produktionsarbete.
+## 5.8 Praktiska uppgifter och projekt
 
 ---
 
-# Kapitel 13 – Teknik, människa och samhälle
+# Kapitel 6 · Mekanik och konstruktion
 
-## Modul 13.1 Teknik och samhälle
+## 6.1 Krafter
+- Beskriva en kraft med storlek, riktning och angreppspunkt samt rita krafter som vektorer.
+- Bestämma resultanten av flera krafter grafiskt och genom beräkning med komposanter.
+- Frilägga en enkel konstruktion och identifiera de krafter som verkar på den.
 
-- **13.1.1 Teknikens växelverkan med samhället** — Analysera hur teknik förändrar samhället och hur samhällets behov och värderingar styr teknikutvecklingen.
-- **13.1.2 Teknikerns roll** — Beskriva teknikerns roll och ansvar i utvecklingen av ett hållbart samhälle.
+### Kraftbegreppet
+### Kraftresultanter
+### Friläggning
 
-## Modul 13.2 Etik
+## 6.2 Moment
+- Förklara vad ett moment är och beräkna moment kring en punkt.
+- Använda hävarmsprincipen för att förklara och beräkna utväxling i enkla maskiner och verktyg.
 
-- **13.2.1 Etik i teknikutveckling** — Identifiera etiska frågor i teknikutveckling och värdera tekniska lösningar utifrån etiska aspekter.
+### Momentbegreppet
+### Hävarmsprincipen
 
-## Modul 13.3 Genus och normer
+## 6.3 Jämvikt
+- Formulera jämviktsvillkoren och använda dem för att beräkna okända krafter i enkla fall.
+- Beräkna stödreaktioner för en enkelt belastad balk.
 
-- **13.3.1 Normer i tekniken** — Förklara hur normer och genusstrukturer påverkar teknikens utformning, användning och tillgänglighet.
-- **13.3.2 Normkritisk granskning** — Granska en teknisk lösning ur ett norm- och tillgänglighetsperspektiv och föreslå förbättringar.
+### Jämviktsvillkoren
+### Stödreaktioner
 
-## Modul 13.4 Hållbar utveckling
+## 6.4 Hållfasthet
+- Identifiera drag, tryck, böjning, skjuvning, vridning och knäckning i verkliga konstruktioner.
+- Förklara begreppen spänning och töjning samt beräkna normalspänning i en belastad detalj.
+- Tolka en dragprovkurva och avläsa elasticitetsmodul, sträckgräns och brottgräns.
 
-- **13.4.1 Hållbarhet som konstruktionskrav** — Förklara hållbar utveckling ur miljömässigt, ekonomiskt och socialt perspektiv och använda perspektiven vid värdering av tekniska lösningar.
-- **13.4.2 Cirkulär ekonomi** — Förklara cirkulär ekonomi och nya affärsmodeller samt hur de förändrar teknikutveckling och produktion.
+### Belastningstyper
+### Spänning och töjning
+### Dragprovet
 
-## Modul 13.5 Framtidens teknik
+## 6.5 Konstruktion
+- Förklara hur tvärsnitt och geometri påverkar en konstruktions styvhet och bärförmåga.
+- Identifiera drag- och tryckbelastade delar i ett fackverk och förklara hur laster förs ned till stöden.
 
-- **13.5.1 Möjligheter och risker** — Beskriva möjligheter och risker med framtidens teknik och värdera teknikens roll i att möta samhällsutmaningar.
+### Geometri och styvhet
+### Fackverk och kraftvägar
+
+## 6.6 Dimensionering
+- Dimensionera en enkel konstruktionsdetalj mot en given belastning med hjälp av tillåten spänning och säkerhetsfaktor.
+- Bedöma beräkningsresultats rimlighet med överslagsräkning och enhetskontroll.
+
+### Säkerhetsfaktor och dimensionering
+### Rimlighetsbedömning
+
+## 6.7 Sammanfattning
+
+## 6.8 Begrepp
+
+## 6.9 Praktiska uppgifter och projekt
+
+---
+
+# Kapitel 7 · Mätteknik och dataanalys
+
+## 7.1 Mätning och mätinstrument
+- Använda SI-systemets storheter, enheter och prefix samt genomföra enhetsomvandlingar.
+- Välja lämpligt mätinstrument för en given mätuppgift och använda det korrekt.
+- Skilja mellan systematiska och slumpmässiga mätfel samt ange mätvärden med rimligt antal värdesiffror.
+
+### SI-systemet
+### Mäta med rätt instrument
+### Mätosäkerhet
+
+## 7.2 Datainsamling och dataanalys
+- Planera och genomföra en mätserie med strukturerad dokumentation, manuellt eller med digital datainsamling.
+- Sammanställa mätdata i tabeller och diagram samt beräkna medelvärde och spridning.
+- Tolka samband i mätdata, anpassa en enkel modell till data och dra slutsatser med hänsyn till mätosäkerheten.
+
+### Planera och genomföra mätningar
+### Sammanställa mätdata
+### Tolka mätdata
+
+## 7.3 Sammanfattning
+
+## 7.4 Begrepp
+
+## 7.5 Praktiska uppgifter och projekt
+
+---
+
+# Kapitel 8 · Modellering och simulering
+
+## 8.1 Modeller och digital modellering
+- Förklara vad en modell är, varför modeller används och vilka begränsningar de har.
+- Skilja mellan fysiska, matematiska och digitala modeller och välja modelltyp för ett givet syfte.
+- Bygga en enkel digital modell av ett tekniskt förlopp i kalkylprogram eller Python.
+
+### Modellbegreppet
+### Välja modelltyp
+### Bygga en digital modell
+
+## 8.2 Simulering och verifiering
+- Förklara vad simulering är och när simulering är att föredra framför fysisk provning.
+- Genomföra en enkel simulering, variera parametrar och tolka resultatet.
+- Förklara skillnaden mellan verifiering och validering samt jämföra modellresultat med mätningar.
+
+### Simuleringens princip
+### Genomföra en simulering
+### Verifiering och validering
+
+## 8.3 Sammanfattning
+
+## 8.4 Begrepp
+
+## 8.5 Praktiska uppgifter och projekt
+
+---
+
+# Kapitel 9 · IT-system
+
+## 9.1 IT-systemets delar
+- Beskriva ett IT-systems uppbyggnad med hårdvara, mjukvara, data, nätverk och användare samt ge exempel på IT-systems roll i teknikutveckling.
+
+## 9.2 Datorer
+- Beskriva datorns huvuddelar och förklara hur de samverkar när ett program körs.
+- Förklara hur tal, text och bilder representeras binärt.
+
+### Datorns uppbyggnad
+### Digital representation
+
+## 9.3 Nätverk och internet
+- Beskriva hur lokala nätverk är uppbyggda och hur data tar sig mellan enheter.
+- Förklara hur internet fungerar med IP-adresser, DNS och paketförmedling.
+
+### Nätverkets delar
+### Så fungerar internet
+
+## 9.4 Digitalisering
+- Förklara digitaliseringens betydelse för produktion, kommunikation och människans livsmiljö.
+- Beskriva hur uppkopplade enheter och molntjänster används i tekniska system och produktion.
+
+### Digitaliseringens betydelse
+### Uppkopplade system
+
+## 9.5 Sammanfattning
+
+## 9.6 Begrepp
+
+## 9.7 Praktiska uppgifter och projekt
+
+---
+
+# Kapitel 10 · Programmering
+
+## 10.1 Grunderna i Python
+- Skriva, köra och felsöka ett enkelt Python-program med utskrift och inmatning.
+- Använda variabler och grundläggande datatyper för att utföra beräkningar i program.
+
+### Första programmet
+### Variabler och datatyper
+
+## 10.2 Styra programflödet
+- Skriva program som fattar beslut med villkorssatser och logiska uttryck.
+- Använda for- och while-loopar för att upprepa beräkningar i program.
+- Använda listor för att lagra och bearbeta data i program.
+
+### Villkorssatser
+### For- och while-loopar
+### Listor
+
+## 10.3 Funktioner och problemlösning
+- Skriva och använda funktioner med parametrar och returvärden för att strukturera programkod.
+- Bryta ned ett tekniskt problem i delsteg och implementera lösningen som ett strukturerat Python-program.
+- Testa ett program systematiskt samt lokalisera och rätta fel i programkod.
+
+### Funktioner
+### Från problem till program
+### Testa och felsöka
+
+## 10.4 Sammanfattning
+
+## 10.5 Begrepp
+
+## 10.6 Praktiska uppgifter och projekt
+
+---
+
+# Kapitel 11 · Projekt och entreprenörskap
+
+## 11.1 Projektarbete
+- Förklara vad som kännetecknar ett projekt samt beskriva vanliga faser och roller i tekniska projekt.
+
+## 11.2 Projektplanering
+- Upprätta en projektplan med mål, aktiviteter, tidsplan och ansvarsfördelning.
+- Identifiera risker i ett projekt och planera förebyggande åtgärder.
+
+### Projektplan
+### Projektrisker
+
+## 11.3 Entreprenörskap
+- Förklara entreprenörskapets roll i teknikutveckling och vilka villkor som påverkar vägen från idé till produkt på en marknad.
+- Beskriva en affärsmodell för en teknisk produkt eller tjänst med kundnytta, kostnader och intäkter.
+
+### Entreprenörskapets villkor
+### Affärsmodell
+
+## 11.4 Genomförande och utvärdering
+- Genomföra ett tekniskt projekt enligt plan med möten, dokumentation och uppföljning av tid och resultat.
+- Utvärdera ett projekts resultat och arbetsprocess samt presentera projektet för en mottagare.
+
+### Arbeta i projekt
+### Utvärdera och presentera
+
+## 11.5 Sammanfattning
+
+## 11.6 Begrepp
+
+## 11.7 Praktiska uppgifter och projekt
+
+---
+
+# Kapitel 12 · Kvalitet, risk och arbetsmiljö
+
+## 12.1 Kvalitet
+- Förklara begreppet kvalitet och beskriva hur systematiskt kvalitetsarbete med ständiga förbättringar bedrivs.
+- Kontrollmäta en detalj mot ställda krav och avgöra om den ska godkännas.
+
+### Kvalitet och kvalitetsarbete
+### Kvalitetskontroll
+
+## 12.2 Risk, arbetsmiljö och miljösäkring
+- Genomföra en riskanalys med bedömning av sannolikhet och konsekvens samt föreslå riskreducerande åtgärder.
+- Beskriva hur systematiskt arbetsmiljöarbete bedrivs och identifiera arbetsmiljörisker i en teknisk miljö.
+- Förklara hur miljösäkring bedrivs och hur miljökrav påverkar tekniskt utvecklings- och produktionsarbete.
+
+### Genomföra riskanalys
+### Systematiskt arbetsmiljöarbete
+### Miljösäkring
+
+## 12.3 Sammanfattning
+
+## 12.4 Begrepp
+
+## 12.5 Praktiska uppgifter och projekt
+
+---
+
+# Kapitel 13 · Teknik, människa och samhälle
+
+## 13.1 Teknik och samhälle
+- Analysera hur teknik förändrar samhället och hur samhällets behov och värderingar styr teknikutvecklingen.
+- Beskriva teknikerns roll och ansvar i utvecklingen av ett hållbart samhälle.
+
+### Teknikens växelverkan med samhället
+### Teknikerns roll
+
+## 13.2 Etik, normer och genus
+- Identifiera etiska frågor i teknikutveckling och värdera tekniska lösningar utifrån etiska aspekter.
+- Förklara hur normer och genusstrukturer påverkar teknikens utformning, användning och tillgänglighet.
+- Granska en teknisk lösning ur ett norm- och tillgänglighetsperspektiv och föreslå förbättringar.
+
+### Etik i teknikutveckling
+### Normer i tekniken
+### Normkritisk granskning
+
+## 13.3 Hållbar utveckling
+- Förklara hållbar utveckling ur miljömässigt, ekonomiskt och socialt perspektiv och använda perspektiven vid värdering av tekniska lösningar.
+- Förklara cirkulär ekonomi och nya affärsmodeller samt hur de förändrar teknikutveckling och produktion.
+
+### Hållbarhet som konstruktionskrav
+### Cirkulär ekonomi
+
+## 13.4 Framtidens teknik
+- Beskriva möjligheter och risker med framtidens teknik och värdera teknikens roll i att möta samhällsutmaningar.
+
+## 13.5 Sammanfattning
+
+## 13.6 Begrepp
+
+## 13.7 Praktiska uppgifter och projekt
 
 ---
 
 # Produktionsstatus
 
-För varje lärandemål registreras status i respektive fils frontmatter:
+För varje avsnitt registreras status i respektive fils frontmatter:
 
 - Ej påbörjad
 - Under utveckling
@@ -416,4 +574,4 @@ För varje lärandemål registreras status i respektive fils frontmatter:
 - Språkgranskad
 - Klar
 
-Detta dokument anger **målskelettet** — vilka kapitel, moduler och lärandemål som ska finnas. Det faktiska produktionsläget genereras automatiskt av valideringsskriptet i produktionsarkitekturen (se 12-produktionsarkitektur.md, "Kvalitetskontroller och kursplanetäckning") utifrån statusfältet i varje lärandemålsfil. De två ska alltid stämma överens i innehåll (samma kapitel/moduler/lärandemål); det är bara *var det faktiska läget avläses* som skiljer sig.
+Detta dokument anger **målskelettet** — vilka kapitel och avsnitt, med vilka delavsnitt och lärandemål, som ska finnas. Det faktiska produktionsläget genereras automatiskt av valideringsskriptet i produktionsarkitekturen (se 12-produktionsarkitektur.md, "Kvalitetskontroller och kursplanetäckning") utifrån statusfältet i varje avsnittsfil. De två ska alltid stämma överens i innehåll (samma kapitel/avsnitt/delavsnitt/lärandemål); det är bara *var det faktiska läget avläses* som skiljer sig.

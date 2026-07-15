@@ -30,7 +30,7 @@ Den skrivs för att eleven ska förstå teknik.
 
 # 2. Pedagogik går före symmetri
 
-Alla moduler behöver inte vara lika långa.
+Alla avsnitt behöver inte vara lika långa.
 
 Alla lärandemål behöver inte innehålla samma antal figurer.
 

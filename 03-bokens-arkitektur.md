@@ -43,11 +43,11 @@ Eleven ska känna att ett lärandemål är uppnått innan nästa påbörjas.
 
 # Bokens struktur
 
-Boken är uppbyggd enligt fyra nivåer.
+Boken är uppbyggd enligt tre nivåer.
 
-## Ämne
+## Kapitel
 
-Bokens huvudkapitel.
+Bokens högsta innehållsnivå (H1).
 
 Exempel:
 
@@ -57,28 +57,27 @@ Exempel:
 
 ---
 
-## Modul
+## Avsnitt
 
-Varje ämne delas in i ett antal moduler.
+Varje kapitel delas in i ett antal avsnitt (H2). **Avsnittet är bokens minsta producerade och publicerade enhet** — produktionsstrukturen och publiceringsstrukturen är identiska (12-produktionsarkitektur.md, "Produktionsenhet"). Rubrikhierarkin speglar aldrig intern administration: det finns ingen synlig eller teknisk nivå för "modul".
 
-En modul samlar **flera relaterade lärandemål** kring ett större, sammanhängande delområde och har en inre progression: lärandemålen bygger på varandra i en naturlig ordning.
+Ett avsnitt samlar **ett eller flera lärandemål** kring ett större, sammanhängande delområde och har en inre progression när det innehåller flera delar.
 
-Modulstandard (normerande):
+Avsnittsstandard (normerande):
 
-- **H1 = kapitel, H2 = modul, H3 = lärandemål.**
-- Modulrubriken ska vara **bredare** än de enskilda lärandemålen och får aldrig i praktiken vara en dubblett av ett lärandemål.
-- En modul innehåller **normalt 2–5 lärandemål**. Detta är en redaktionell tumregel, inte ett hårt valideringskrav.
-- **Färre och tydligare moduler** prioriteras framför många tunna moduler.
-- Ett lärandemål får **aldrig delas enbart för att fylla ut en modul**. Ett lärandemål får i stället vara långt och flöda över flera sidor (se "Sidomfång").
-- En modul med bara ett lärandemål är tillåten men ska vara motiverad av delområdets natur.
+- **H1 = kapitel, H2 = avsnitt, H3 = delavsnitt** (naturliga underrubriker inom avsnittet, används vid behov). **H4** används undantagsvis, bara när ett H3-delavsnitt verkligen behöver delas upp ytterligare.
+- Ett avsnitt kan omfatta ett eller flera lärandemål och ett eller flera uppslag; antalet sidor styrs av innehållet, inte tvärtom.
+- **Färre och tydligare avsnitt** prioriteras framför många tunna avsnitt eller delavsnitt.
+- Ett lärandemål får **aldrig delas enbart för att fylla ut ett avsnitt**. Ett avsnitt får i stället vara långt och flöda över flera sidor (se "Sidomfång").
+- Ett avsnitt med bara ett lärandemål och inga delavsnitt är tillåtet och normalt när delområdet inte har flera tydligt skilda delar.
 
-Antalet moduler bestäms av ämnets naturliga struktur och ska inte följa någon förutbestämd mall.
+Antalet avsnitt bestäms av kapitlets naturliga struktur och ska inte följa någon förutbestämd mall.
 
 ---
 
 ## Lärandemål
 
-Lärandemålet är bokens minsta pedagogiska byggsten.
+Lärandemålet är bokens minsta **pedagogiska** byggsten, men är metadata knutet till ett avsnitt, inte en egen rubriknivå, fil eller sida.
 
 All planering utgår från lärandemålet.
 
@@ -93,23 +92,23 @@ Exempel:
 
 Lärandemål ska vara observerbara och mätbara.
 
-Lärandemålen är ett redaktionellt verktyg och visas normalt inte för eleven i boken.
+Lärandemålen är ett redaktionellt verktyg (registrerade i avsnittets frontmatterfält `learningGoals`) och visas normalt inte för eleven i boken. Ett avsnitt kan ha flera lärandemål; de listas i den ordning de tränas i avsnittet.
 
 ---
 
 ## Sidomfång
 
-Ett lärandemål har **inget fast sid- eller uppslagsomfång**. Det får flöda över så många sidor som förståelsen kräver, och det delas bara när det innehåller flera tydligt skilda kunskapsresultat, aldrig enbart därför att texten blir lång.
+Ett avsnitt har **inget fast sid- eller uppslagsomfång**. Det får flöda över så många sidor som förståelsen kräver, och det delas bara när det innehåller flera tydligt skilda delområden, aldrig enbart därför att texten blir lång.
 
 Antalet sidor styrs av pedagogiken, aldrig tvärtom.
 
-Uppslag och sidbrytningar är frågor för layout och tryckexport, inte nivåer i innehållsarkitekturen. "Uppslag" får aldrig användas som självreferens i elevtexten, till exempel "i det här uppslaget" eller "som du läste i uppslaget" (05-forfattarmanual.md, "Självreferenser"). Synlig rubriknumrering i elevtext och webb har alltid exakt tre nivåer: kapitel, modul, lärandemål (12-produktionsarkitektur.md, "Rubriknumrering").
+Uppslag och sidbrytningar är frågor för layout och tryckexport, inte nivåer i innehållsarkitekturen. "Uppslag" får aldrig användas som självreferens i elevtexten, till exempel "i det här uppslaget" eller "som du läste i uppslaget" (05-forfattarmanual.md, "Självreferenser"). Synlig rubriknumrering i elevtext och webb har alltid exakt två nivåer: kapitel, avsnitt (12-produktionsarkitektur.md, "Rubriknumrering"). Delavsnitt (H3) är onumrerade underrubriker.
 
 ---
 
-# Lärandemålets struktur
+# Avsnittets struktur
 
-Ett lärandemål består av två delar.
+Ett avsnitt består av två delar.
 
 ## Teori
 
@@ -132,37 +131,37 @@ Ett arbetat exempel används endast när det tydligt förbättrar förståelsen.
 
 ## Aktiv bearbetning
 
-Efter teorin följer **instuderingsfrågor**. Varje lärandemål avslutas med relevanta instuderingsfrågor direkt efter teorin.
+Efter teorin följer **instuderingsfrågor**. Varje avsnitt avslutas med EN samlad sektion instuderingsfrågor direkt efter teorin, oavsett hur många lärandemål eller delavsnitt avsnittet har.
 
 ### Instuderingsfrågor
 
-Kontrollerar att eleven förstått lärandemålets innehåll.
+Kontrollerar att eleven förstått avsnittets innehåll.
 
-Antalet frågor bestäms av lärandemålets innehåll och komplexitet, men **sikta på 4–6 frågor** per lärandemål. Det är ett riktmärke, inte ett hårt krav: ett färdigt lärandemål ska ha minst en instuderingsfråga, och färre eller fler än 4–6 är tillåtet när innehållet motiverar det. Undvik långa frågebatterier — välj de frågor som bäst tränar lärandemålets kärna.
+Antalet frågor bestäms av avsnittets innehåll och komplexitet, men **sikta på 4–6 frågor per lärandemål** som avsnittet tränar. Det är ett riktmärke, inte ett hårt krav: ett färdigt avsnitt ska ha minst en instuderingsfråga, och färre eller fler är tillåtet när innehållet motiverar det. Undvik långa frågebatterier — välj de frågor som bäst tränar avsnittets kärna, och slå ihop eller ta bort frågor som blir för lika när flera lärandemål eller delavsnitt samlas i en gemensam frågelista.
 
-Varje fråga ska träna en central del av lärandemålet, gå att besvara med hjälp av teorin, bidra till grundläggande förståelse, vara tydligt skild från övriga frågor och när det är möjligt kontrollera mer än mekanisk sökläsning.
+Varje fråga ska träna en central del av avsnittet, gå att besvara med hjälp av teorin, bidra till grundläggande förståelse, vara tydligt skild från övriga frågor och när det är möjligt kontrollera mer än mekanisk sökläsning.
 
 Prioritera frågor där eleven ska förklara samband, beskriva orsaker och konsekvenser, jämföra, skilja mellan närliggande begrepp, använda kunskapen på ett nytt men enkelt exempel eller återge en process eller modell med egna ord.
 
-Frågor av typen "vem?", "när?" och "hur många?" används bara när personen, tidpunkten eller antalet är en relevant del av själva lärandemålet. Namn och årtal får finnas i teorin för historisk precision utan att automatiskt bli instuderingsfrågor.
+Frågor av typen "vem?", "när?" och "hur många?" används bara när personen, tidpunkten eller antalet är en relevant del av ett lärandemål. Namn och årtal får finnas i teorin för historisk precision utan att automatiskt bli instuderingsfrågor.
 
-Ta bort frågor som upprepar en tidigare fråga, bara kontrollerar en oviktig detalj, testar formuleringar snarare än förståelse eller ligger utanför lärandemålet.
+Ta bort frågor som upprepar en tidigare fråga, bara kontrollerar en oviktig detalj, testar formuleringar snarare än förståelse eller ligger utanför avsnittets lärandemål.
 
-Instuderingsfrågorna är lärandemålets enda uppgiftsdel. Det finns **inget synligt Begrepp-block** efter lärandemålet, och de **praktiska uppgifterna ligger inte här** utan i kapitlets uppgiftsbank (se "Kapitelavslutningar" nedan). Begreppsundervisningen sker i teorin (11-begreppsfilosofi.md); den praktiska träningen säkras samlat per kapitel.
+Instuderingsfrågorna är avsnittets enda uppgiftsdel. Det finns **inget synligt Begrepp-block** efter avsnittet, och de **praktiska uppgifterna ligger inte här** utan i kapitlets uppgiftsbank (se "Kapitelavslutningar" nedan). Begreppsundervisningen sker i teorin (11-begreppsfilosofi.md); den praktiska träningen säkras samlat per kapitel.
 
 ---
 
 # Kapitlens avgränsning
 
-Varje kapitel ska ha en tydlig ämnesmässig avgränsning mot närliggande kapitel. Ett kapitel får inte duplicera ett annat kapitels huvudansvar, och ett lärandemål får aldrig överlappa ett senare kapitels huvudansvar mer än vad en kort, motiverad förberedelse kräver.
+Varje kapitel ska ha en tydlig ämnesmässig avgränsning mot närliggande kapitel. Ett kapitel får inte duplicera ett annat kapitels huvudansvar, och ett avsnitt får aldrig överlappa ett senare kapitels huvudansvar mer än vad en kort, motiverad förberedelse kräver.
 
-Ett **syntesmål** (ett lärandemål eller en modul som knyter ihop ett kapitels innehåll) ska fungera som just en syntes eller analysmodell. Det får inte duplicera en process eller metod som är ett senare kapitels huvudansvar.
+Ett **syntesavsnitt** (ett avsnitt som knyter ihop ett kapitels innehåll) ska fungera som just en syntes eller analysmodell. Det får inte duplicera en process eller metod som är ett senare kapitels huvudansvar.
 
 De tre inledande kapitlen avgränsas så här:
 
-- **Kapitel 1 – Teknikens utveckling** besvarar *varför*: varför teknik uppstår, varför den utvecklas i en viss riktning och varför tekniska lösningar får den utformning de får. Kapitlet behandlar vad teknik är, teknikens historiska utveckling, teknikens och samhällets historiska växelverkan, vad som driver teknikutveckling och vilka förutsättningar, krav, resurser och avvägningar som formar tekniska lösningar.
-- **Kapitel 2 – Att lösa tekniska problem** besvarar *hur ett problem angrips*: hur ett tekniskt problem identifieras och formuleras, och hur en problemlösningsstrategi väljs och motiveras utifrån problemets karaktär. Kapitlet stannar vid det valet; att ta fram, testa, utvärdera och förbättra en lösning är kapitel 3:s ansvar.
-- **Kapitel 3 – Teknikutvecklingsprocessen** besvarar *hur ett helt utvecklingsarbete genomförs* från behov till användning och återvinning (faser, iteration, kravspecifikation, idégenerering, konceptval, prototyper, testning, utvärdering, livscykel).
+- **Kapitel 1 · Teknik och teknikutveckling** besvarar *varför*: varför teknik uppstår, varför den utvecklas i en viss riktning och varför tekniska lösningar får den utformning de får. Kapitlet behandlar vad teknik är, teknikens historiska utveckling, teknikens och samhällets historiska växelverkan, vad som driver teknikutveckling och vilka förutsättningar, krav, resurser och avvägningar som formar tekniska lösningar.
+- **Kapitel 2 · Att lösa tekniska problem** besvarar *hur ett problem angrips*: hur ett tekniskt problem identifieras och formuleras, och hur en problemlösningsstrategi väljs och motiveras utifrån problemets karaktär. Kapitlet stannar vid det valet; att ta fram, testa, utvärdera och förbättra en lösning är kapitel 3:s ansvar.
+- **Kapitel 3 · Teknikutvecklingsprocessen** besvarar *hur ett helt utvecklingsarbete genomförs* från behov till användning och återvinning (faser, iteration, kravspecifikation, idégenerering, konceptval, prototyper, testning, utvärdering, livscykel).
 
 Kapitel 1 ska därför inte innehålla en egen problemlösningsmetod, en egen teknikutvecklingsprocess eller en fristående framtidsanalys. Kapitel 1:s syntes beskriver *att* och *varför* tekniska lösningar formas av behov, möjligheter, krav och avvägningar, inte *hur* ett utvecklingsarbete steg för steg genomförs.
 
@@ -174,7 +173,7 @@ Varje färdigproducerat kapitel avslutas med tre samlade delar, i denna ordning:
 
 ## Sammanfattning
 
-En sammanhängande löptext på cirka 300 ord som binder ihop kapitlets moduler till en helhet. Sammanfattningen är **repetition**, inte en ny genomgång: den upprepar inga instuderingsfrågor och inför inga nya fakta eller begrepp. Den skrivs sist, när kapitlets lärandemål är färdiga, så att den kan spegla den faktiska texten.
+En sammanhängande löptext på cirka 300 ord som binder ihop kapitlets avsnitt till en helhet. Sammanfattningen är **repetition**, inte en ny genomgång: den upprepar inga instuderingsfrågor och inför inga nya fakta eller begrepp. Den skrivs sist, när kapitlets lärandemål är färdiga, så att den kan spegla den faktiska texten.
 
 ## Begreppsövning
 
@@ -216,7 +215,7 @@ Manuset innehåller därför endast platshållare som beskriver:
 - vilket innehåll den ska visa
 - hur den används i texten
 
-Varje lärandemål ska normalt innehålla minst en figur.
+Varje avsnitt ska normalt innehålla minst en figur.
 
 ---
 
@@ -275,7 +274,7 @@ Samarbetsuppgifter används endast när de ger ett tydligt pedagogiskt mervärde
 
 Boken innehåller inte:
 
-- sammanfattningar efter varje lärandemål
+- sammanfattningar efter varje avsnitt
 - repetitionskapitel
 - motiverande texter
 - onödiga introduktioner
@@ -289,15 +288,15 @@ Allt innehåll ska motiveras av ett tydligt lärandemål.
 
 # Kvalitetskriterier
 
-Ett lärandemål är färdigt först när:
+Ett avsnitt är färdigt först när:
 
 - teorin är komplett men koncentrerad
 - alla fakta är korrekta
 - minst en figur finns specificerad när den förbättrar förståelsen
-- lärandemålet avslutas med relevanta instuderingsfrågor som tränar målet
+- avsnittet avslutas med en samlad sektion relevanta instuderingsfrågor som tränar avsnittets lärandemål
 - nya begrepp introduceras, definieras och används korrekt i teorin
 - AI används endast där det tillför verkligt värde
 - verkliga exempel används
-- eleven rimligen kan uppnå lärandemålet utan ytterligare teori
+- eleven rimligen kan uppnå avsnittets lärandemål utan ytterligare teori
 
 Ett kapitel är färdigt först när det dessutom avslutas med en begreppsövning som täcker kapitlets centrala begrepp och en uppgiftsbank vars uppgifter tillsammans ger tillräcklig praktisk och producerande träning, var och en kopplad till relevanta lärandemål.

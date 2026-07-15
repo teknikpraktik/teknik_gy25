@@ -304,9 +304,9 @@ Skriv i stället naturligt om vad texten faktiskt innehåller:
 - "Utgå från exemplet i avsnittet."
 - "Använd den tidigare beskrivningen av..."
 
-Ordet "lärandemål" är också ett internt produktions- och planeringsbegrepp och får inte användas som självreferens i elevtexten. Formuleringar som "i förra lärandemålet", "från föregående lärandemål" eller "figuren i lärandemål 1.2.2" skrivs om till en stabil hänvisning till innehållet: den konkreta sakens namn, "avsnittet om ...", eller vid behov modul- eller kapitelnumret ("avsnitt 1.5.1"), aldrig produktionsenheten.
+Orden "lärandemål" och "modul" är interna produktions- och planeringsbegrepp och får inte användas som självreferens i elevtexten. Formuleringar som "i förra lärandemålet", "från föregående lärandemål" eller "figuren i lärandemål 1.2" skrivs om till en stabil hänvisning till innehållet: den konkreta sakens namn, "avsnittet om ...", eller vid behov avsnitts- eller kapitelnumret ("avsnitt 1.3"), aldrig produktionsenheten.
 
-Uppgifter i kapitlets uppgiftsbank ska dessutom fungera **fristående**. En uppgift som flyttats från ett lärandemål får inte hänvisa till "föregående lärandemål" eller "figuren ovan", utan ska innehålla den information eleven behöver, eller en stabil hänvisning till kapitlets text.
+Uppgifter i kapitlets uppgiftsbank ska dessutom fungera **fristående**. En uppgift som flyttats från ett avsnitt får inte hänvisa till "föregående avsnitt" eller "figuren ovan", utan ska innehålla den information eleven behöver, eller en stabil hänvisning till kapitlets text.
 
 Samma princip gäller andra hänvisningar till bokens sidformat i stället för dess innehåll. Hänvisa till "texten", "avsnittet", "figuren" eller den konkreta sakens namn, inte till hur materialet är paginerat eller producerat.
 
@@ -314,7 +314,7 @@ Samma princip gäller andra hänvisningar till bokens sidformat i stället för 
 
 # Disposition
 
-Claude får ändra dispositionen inom ett lärandemål när det förbättrar förståelsen.
+Claude får ändra dispositionen inom ett avsnitt när det förbättrar förståelsen.
 
 Exempel kan komma före teori.
 

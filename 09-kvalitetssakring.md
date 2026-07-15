@@ -8,7 +8,7 @@
 
 Detta dokument beskriver hur kvaliteten på läroboken ska säkerställas under utvecklingen.
 
-Varje lärandemål, modul och kapitel ska granskas mot kriterierna i detta dokument innan de betraktas som färdiga.
+Varje avsnitt och kapitel ska granskas mot kriterierna i detta dokument innan de betraktas som färdiga.
 
 Kvalitetssäkring är en kontinuerlig process och genomförs efter varje större förändring.
 
@@ -16,20 +16,21 @@ Kvalitetssäkring är en kontinuerlig process och genomförs efter varje större
 
 # Kvalitetsnivåer
 
-Granskning sker på fyra nivåer.
+Granskning sker på tre nivåer.
 
-1. Lärandemål
-2. Modul
-3. Kapitel
-4. Hela boken
+1. Avsnitt
+2. Kapitel
+3. Hela boken
 
 ---
 
-# Granskning av lärandemål
+# Granskning av avsnitt
 
 ## Innehåll
 
-□ Lärandemålet är tydligt och mätbart.
+□ Avsnittets lärandemål (`learningGoals`) är tydliga och mätbara.
+
+□ Avsnittet behandlar ett sammanhängande delområde; ett avsnitt med flera delavsnitt (H3) har naturlig progression mellan dem.
 
 □ All nödvändig teori finns.
 
@@ -75,17 +76,17 @@ Granskning sker på fyra nivåer.
 
 ## Instuderingsfrågor
 
-□ Lärandemålet avslutas med instuderingsfrågor, riktmärke 4–6 (03). Undvik långa frågebatterier.
+□ Avsnittet avslutas med EN samlad sektion instuderingsfrågor, inget bestämt antal (03). Undvik långa frågebatterier.
 
-□ Frågorna kan besvaras med hjälp av texten och tränar lärandemålets centrala delar.
+□ Frågorna kan besvaras med hjälp av texten och tränar avsnittets centrala delar, över samtliga delavsnitt.
 
 □ Frågorna prövar förståelse (förklara samband, orsak och konsekvens, jämföra, skilja begrepp, tillämpa på nytt exempel), inte mekanisk sökläsning.
 
-□ Inga "vem/när/hur många"-frågor utom där person, tidpunkt eller antal är en del av lärandemålet.
+□ Inga "vem/när/hur många"-frågor utom där person, tidpunkt eller antal är en del av ett lärandemål.
 
-□ Inga frågor upprepar varandra, testar en oviktig detalj eller ligger utanför lärandemålet.
+□ Inga frågor upprepar varandra, testar en oviktig detalj eller ligger utanför avsnittets lärandemål.
 
-□ Inget synligt Begrepp-block och inga praktiska uppgifter ligger under lärandemålet — begreppen behandlas i teorin, praktiken i kapitlets uppgiftsbank (03).
+□ Inget synligt Begrepp-block och inga praktiska uppgifter ligger under avsnittet — begreppen behandlas i teorin, praktiken i kapitlets uppgiftsbank (03).
 
 ---
 
@@ -95,7 +96,7 @@ Granskning sker på fyra nivåer.
 
 □ Ordet "uppslag" förekommer inte som självreferens i elevtexten (05, "Självreferenser").
 
-□ Synlig rubriknumrering har högst tre nivåer: kapitel, modul, lärandemål (12, "Rubriknumrering").
+□ Synlig rubriknumrering har högst två nivåer: kapitel, avsnitt (12, "Rubriknumrering"). Delavsnitt (H3) är onumrerade.
 
 ---
 
@@ -127,25 +128,7 @@ Granskning sker på fyra nivåer.
 
 □ Kvaliteten motsvarar minst Golden Master 1.1.1 (projektets kvalitetsreferens) i disposition, språk, informationstäthet, konkretion, exempel, figurplatshållare och uppgifter. Golden Master ändras endast efter uttryckligt redaktionellt beslut.
 
----
-
-# Granskning av modul
-
-□ Modulen behandlar ett sammanhängande delområde.
-
-□ Alla lärandemål har naturlig progression och bygger på varandra.
-
-□ Modulrubriken är bredare än de enskilda lärandemålen och dubblerar inte något lärandemål.
-
-□ Begrepp introduceras i rätt ordning.
-
-□ Inga lärandemål överlappar varandra eller ett senare kapitels huvudansvar.
-
-□ En enmålsmodul är motiverad av delområdets natur (03, "Modul").
-
-□ Inga viktiga delar saknas.
-
-□ Modulen känns sammanhängande.
+□ Om avsnittet har flera delavsnitt (H3): varje delavsnittstitel är tydligt skild från de andra och dubblerar inte avsnittets egen rubrik. Begrepp introduceras i rätt ordning över delavsnitten. Inga delavsnitt överlappar varandra eller ett senare kapitels huvudansvar. Ett avsnitt utan delavsnitt (en enda flödande text) är tillåtet och motiverat när delområdet inte har flera tydligt skilda delar.
 
 ---
 
@@ -153,7 +136,7 @@ Granskning sker på fyra nivåer.
 
 □ Kapitlets syfte uppfylls.
 
-□ Modulerna ligger i logisk ordning.
+□ Avsnitten ligger i logisk ordning.
 
 □ Kapitlet täcker sitt ansvar enligt innehållsmatrisen.
 
@@ -169,7 +152,7 @@ Granskning sker på fyra nivåer.
 
 ## Kapitelavslutningar
 
-□ Kapitlet har en sammanfattning på cirka 300 ord som binder ihop modulerna, utan nya fakta, begrepp eller instuderingsfrågor (03).
+□ Kapitlet har en sammanfattning på cirka 300 ord som binder ihop avsnitten, utan nya fakta, begrepp eller instuderingsfrågor (03).
 
 □ Kapitlet avslutas med en begreppsövning som täcker kapitlets centrala begrepp (11).
 
