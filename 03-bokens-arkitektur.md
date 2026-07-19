@@ -183,7 +183,7 @@ En samlad övning över kapitlets centrala begrepp, utformad som en **punktlista
 
 ## Praktiska uppgifter och projekt
 
-Kapitlets praktiska uppgifter och projekt samlas i en bank som en **enkel numrerad lista**: varje uppgift har ett löpnummer från 1 och ett namn, följt av själva uppgiften. Banken delas **inte** in i omfattningsnivåer, och uppgifterna förses **inte** med metadata om arbetsform, tidsåtgång, redovisningsform eller vilket lärandemål de tränar. Utförandet överlåts till läraren och eleven.
+Kapitlets praktiska uppgifter och projekt samlas i en bank som en **numrerad lista**: varje uppgift har ett löpnummer från 1 och ett namn, följt av själva uppgiften. Banken får delas in i tre omfattningskategorier (Kortare uppgifter, Fördjupningsuppgifter, Projekt) med bibehållen löpande numrering, när kapitlets uppgifter spänner över tydligt olika omfattning (redaktionellt beslut 2026-07-19). Utöver kategorirubrikerna förses uppgifterna **inte** med metadata om arbetsform, tidsåtgång, redovisningsform eller vilket lärandemål de tränar. Utförandet överlåts till läraren och eleven.
 
 En praktisk uppgift innebär att eleven **producerar, genomför, undersöker, mäter, konstruerar, visualiserar eller presenterar** något. Godkända former omfattar till exempel konstruktion, skiss, teknisk ritning, flödesdiagram, kalkylblad, digital presentation, plansch, programmering, simulering, modellering, fysisk undersökning, mätning, testning, experiment, prototyp, muntlig presentation, film och podd. En ren skriftlig analys, jämförelse eller argumentation räknas inte i sig som en praktisk uppgift; den får vara ett sista led, inte huvudsaken. AI-uppgifter förekommer när de tillför ett verkligt värde.
 

@@ -178,7 +178,7 @@ Varje färdigproducerat kapitel avslutas med tre avsnitt som saknar `learningGoa
 
 - `type: kapitelsammanfattning` — en sammanhängande löptext, cirka 300 ord, som binder ihop kapitlets avsnitt. Ingen `ordlista`.
 - `type: begreppsovning` — kapitlets samlade begreppsövning: en punktlista över kapitlets centrala begrepp där eleven förklarar varje begrepp med en egen mening.
-- `type: uppgiftsbank` — kapitlets bank av praktiska uppgifter och projekt, en enkel numrerad lista utan omfattningsnivåer eller uppgiftsmetadata.
+- `type: uppgiftsbank` — kapitlets bank av praktiska uppgifter och projekt, en numrerad lista, vid behov delad i tre omfattningskategorier (Kortare uppgifter, Fördjupningsuppgifter, Projekt), utan övrig uppgiftsmetadata.
 
 Ordningen sist i kapitlet är sammanfattning, begreppsövning, uppgiftsbank (redaktionellt beslut 2026-07-14, produktionslogg.md).
 
@@ -194,7 +194,7 @@ title: "Praktiska uppgifter och projekt"
 status: fardig-forsta-version
 ```
 
-Uppgiftsbanken har **ingen uppgiftsmetadata**. Uppgifterna skrivs som en enkel numrerad lista i brödtexten — löpnummer från 1, ett namn i fetstil och därefter uppgiften — utan nivåer (kort/lektion/miniprojekt), arbetsform, tidsåtgång, redovisningsform eller lärandemålskoppling. Utförandet överlåts till läraren och eleven (redaktionellt beslut). Begreppsövningen får ha en valfri `ordlista`. Kapitelsammanfattningen har varken `ordlista` eller annan metadata, bara löptext.
+Uppgiftsbanken har **ingen uppgiftsmetadata**. Uppgifterna skrivs som en numrerad lista i brödtexten — löpnummer från 1, ett namn i fetstil och därefter uppgiften. Banken får delas in i tre omfattningskategorier som rubriker (Kortare uppgifter, Fördjupningsuppgifter, Projekt) med bibehållen löpande numrering (redaktionellt beslut 2026-07-19); därutöver anges ingen arbetsform, tidsåtgång, redovisningsform eller lärandemålskoppling. Utförandet överlåts till läraren och eleven (redaktionellt beslut). Begreppsövningen får ha en valfri `ordlista`. Kapitelsammanfattningen har varken `ordlista` eller annan metadata, bara löptext.
 
 **Placering:** kapitelavslutningarna slottas sist i kapitlet (efter sista teoriavsnittet) i sidopanelen, kapitelöversikten, granskningsvyn `/review/` och exporten, i 06:s ordning.
 
