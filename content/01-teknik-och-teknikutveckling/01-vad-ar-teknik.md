@@ -22,29 +22,27 @@ prerequisites: []
 
 ## Teknik löser problem
 
-### Ett problem och dess lösning
+En vanlig skolmorgon hinner du använda mer teknik än de flesta människor mötte under en hel livstid för tvåhundra år sedan. Mobilen som väcker dig, kranen som ger vatten med jämnt tryck, kylskåpet som hållit mjölken kall under natten, dragkedjan i jackan och cykeln eller bussen som tar dig till skolan. Det mesta märks inte ens, för väl fungerande teknik smälter in i vardagen.
 
-På 1880-talet bar en montör med sig en hel uppsättning fasta skruvnycklar, en för varje mutterstorlek. Verktygslådan blev tung, och den nyckel som behövdes var ofta den som saknades. Johan Petter Johansson, som drev en mekanisk verkstad i Enköping, löste problemet genom att göra nyckelns gap ställbart. Skiftnyckeln, som han fick patent på 1892, ersatte ett helt nyckelset med ett enda verktyg. Den har sedan dess tillverkats i över hundra miljoner exemplar och ser i allt väsentligt likadan ut än i dag.
+Ingenting av detta har uppstått av sig självt. Bakom varje sak finns människor som såg ett problem, undersökte vad som var möjligt, valde en lösning bland flera tänkbara, provade och förbättrade. Det arbetet pågår fortfarande, runt varje sak du använde i morse, och det är kärnan i vad ingenjörer och tekniker gör: förstår problem, ser möjligheter och utvecklar lösningar.
+
+Ett exempel visar hur det kan gå till. På 1880-talet bar en montör med sig en hel uppsättning fasta skruvnycklar, en för varje mutterstorlek. Verktygslådan blev tung, och den nyckel som behövdes var ofta den som saknades. Johan Petter Johansson, som drev en mekanisk verkstad i Enköping, löste problemet genom att göra nyckelns gap ställbart. Skiftnyckeln, som han fick patent på 1892, ersatte ett helt nyckelset med ett enda verktyg. Den har sedan dess tillverkats i över hundra miljoner exemplar och ser i allt väsentligt likadan ut än i dag.
 
 Skiftnyckeln visar var teknik börjar. Först finns ett mänskligt behov eller problem, sedan skapar någon en lösning. Ett **behov** är något en människa vill uppnå eller bli av med, till exempel att se skarpt, komma torr till skolan eller få rent vatten i kranen. **Teknik** handlar om hur människor utvecklar och använder produkter, processer, anläggningar och system för att uppfylla behov och önskemål. En enskild sådan lösning kallas en **teknisk lösning**: en produkt, process, anläggning eller ett system som har utformats för att uppfylla ett visst behov eller lösa ett visst problem.
 
 [[figur:fig-1.1.1-a]]
 
-### Teknik är mer än föremål
+### Teknik är mer än nya föremål
 
 Ordet teknik leder ofta tanken till elektronik, men definitionen är bredare än så. Betaltjänsten Swish, som sex banker på den svenska marknaden lanserade gemensamt 2012, svarar mot behovet att föra över pengar direkt mellan människor, och ändå går den inte att hålla i handen. Lösningen består av program, servrar och avtal mellan banker. Vattnet i kranen är på samma sätt slutpunkten i en teknisk lösning av ett annat slag: reningsverk, pumpstationer och vattentorn som tillsammans ger rent vatten med jämnt tryck, dygnet runt. Tekniska lösningar kan alltså vara system och anläggningar lika väl som saker.
 
-### Teknik är inte alltid ny och avancerad
-
-En teknisk lösning behöver inte vara modern. Glasögonen uppfanns i norra Italien i slutet av 1200-talet och svarar fortfarande mot samma behov: att se skarpt. Den behöver inte heller vara avancerad. Pennan löser problemet att fästa tankar på papper med några få delar, och gör det så bra att den överlevt skrivmaskinen.
+En teknisk lösning behöver inte heller vara modern eller avancerad. Glasögonen uppfanns i norra Italien i slutet av 1200-talet och svarar fortfarande mot samma behov: att se skarpt. Pennan löser problemet att fästa tankar på papper med några få delar, och gör det så bra att den överlevt skrivmaskinen.
 
 Behoven väger däremot olika tungt. Blixtlåset, konstruerat 1913, gör det snabbare att klä sig. Pacemakern, som opererades in i en patient första gången 1958, håller ett hjärta i rätt rytm. Båda är tekniska lösningar på mänskliga behov; skillnaden ligger i vad som står på spel när de slutar fungera.
 
 Väl fungerande teknik blir med tiden nästan osynlig. Få tänker på kranvattnet, dragkedjan eller vägen till skolan som teknik förrän något går sönder. Ett säkert sätt att känna igen en teknisk lösning är därför att leta efter behovet eller problemet bakom den.
 
 ## Teknik, naturvetenskap och matematik
-
-### Från behov till kunskap
 
 En [[begrepp:teknisk lösning]] börjar med ett behov eller ett problem, men behovet räcker inte långt utan kunskap. När Sverige och Danmark 1991 kom överens om att bygga en fast förbindelse över Öresund var behovet tydligt: människor och gods skulle kunna ta sig mellan Malmö och Köpenhamn utan färja. Innan bygget kunde börja behövde ingenjörerna veta hur hårt vinden pressar mot en bro över öppet vatten, hur berggrunden under sundet ser ut och hur stora laster konstruktionen skulle bära. Svaren fanns inte inom tekniken själv. De hämtades från naturvetenskapen och matematiken.
 
@@ -64,15 +62,16 @@ Teknik beskrivs ibland som tillämpad naturvetenskap: först forskar någon fram
 
 Samtidigt vore dagens teknik otänkbar utan naturvetenskapen och matematiken. Ingen dimensionerar en sänktunnel med tumregler, och ju mer avancerad tekniken blir, desto tätare blir samarbetet. Naturvetenskapen och matematiken gör det möjligt att förutsäga hur en lösning beter sig innan den byggs, och tekniken förser i sin tur forskningen med instrument, material och datorkraft. Områdena har olika roller, men i ett verkligt projekt som Öresundsbron arbetar de hela tiden ihop.
 
+Teknik är alltså människans sätt att möta behov och problem med lösningar, byggda på naturvetenskapens och matematikens kunskap. Men lösningarna har inte alltid sett ut som i dag. Hur de har förändrats genom historien, och vad förändringarna gjort med samhället, är nästa fråga.
+
 ## Instuderingsfrågor
 
-1. Vad är skillnaden mellan teknik och en teknisk lösning, enligt texten?
-2. Ge två exempel från texten på tekniska lösningar som inte är föremål.
-3. Varför räknas glasögonen fortfarande som teknik trots att de uppfanns på 1200-talet?
-4. Varför är pennan ett exempel på att en teknisk lösning inte behöver vara avancerad?
-5. Vilket sätt föreslår texten för att känna igen en teknisk lösning?
-6. Vad beskriver naturvetenskapen, enligt texten?
-7. Vad beskriver matematiken, och vad kunde ingenjörerna avgöra med hjälp av beräkningar innan bygget startade?
-8. Vilken roll spelar tekniken i förhållande till naturvetenskapen och matematiken?
-9. Varför säger texten att beräkningen är förutsägelsen som ersätter provet?
-10. Varför är bilden av teknik som "tillämpad naturvetenskap" för enkel, enligt texten?
+1. Vad är skillnaden mellan teknik och en teknisk lösning?
+2. Ge två exempel från texten på tekniska lösningar som inte är fysiska föremål, och ange vilket behov var och en svarar mot.
+3. Glasögonen är över sjuhundra år gamla och pennan består av några få delar. Varför räknas båda ändå som tekniska lösningar?
+4. Varför blir väl fungerande teknik ofta osynlig, och vilket sätt föreslår texten för att ändå känna igen en teknisk lösning?
+5. Vilka olika roller hade naturvetenskapen respektive matematiken när Öresundsförbindelsen skulle byggas?
+6. Varför säger texten att beräkningen är förutsägelsen som ersätter provet?
+7. Öresundsförbindelsen blev en kombination av bro, konstgjord ö och tunnel. Varför avgjorde ingen naturlag den utformningen, och vad avgjorde i stället?
+8. Varför är bilden av teknik som "tillämpad naturvetenskap" för enkel?
+9. Ge ett exempel på att tekniken har påverkat naturvetenskapen, inte bara tvärtom.
