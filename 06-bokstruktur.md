@@ -107,12 +107,12 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ### Elektronik och datorer
 ### Digitalisering, internet och AI
 
-## 1.3 Drivkrafter bakom teknikutveckling
+## 1.3 Drivkrafter och ingenjörsmässiga val
 - Identifiera och förklara hur behov, kunskap, tekniska möjligheter, ekonomiska intressen och samhällsförändringar kan samverka som drivkrafter bakom teknikutveckling.
 - Förklara hur befintlig teknik, kunskap, resurser, krav, begränsningar och tekniska avvägningar påverkar vilka tekniska lösningar som utvecklas och hur de utformas.
 
-### Vad driver teknikutvecklingen?
-### Varför ser tekniska lösningar olika ut?
+### Vad sätter teknikutvecklingen i rörelse?
+### Vad formar den färdiga lösningen?
 
 ## 1.4 Sammanfattning
 
