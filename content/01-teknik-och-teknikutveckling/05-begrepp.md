@@ -8,17 +8,20 @@ ordlista:
   - artificiell intelligens
   - automation
   - avvägning
+  - behov
   - digitalisering
   - drivkraft
+  - industrialisering
   - industriell revolution
+  - infrastruktur
   - massproduktion
   - mekanisering
+  - standard
   - teknik
   - teknikskifte
   - teknisk lösning
   - teknisk möjlighet
   - tekniskt genombrott
-  - transistor
 ---
 
 Förklara varje begrepp nedan med en egen mening. Skriv i ditt häfte eller i ett
@@ -27,14 +30,17 @@ digitalt dokument; skriv inte i boken.
 - artificiell intelligens
 - automation
 - avvägning
+- behov
 - digitalisering
 - drivkraft
+- industrialisering
 - industriell revolution
+- infrastruktur
 - massproduktion
 - mekanisering
+- standard
 - teknik
 - teknikskifte
 - teknisk lösning
 - teknisk möjlighet
 - tekniskt genombrott
-- transistor
