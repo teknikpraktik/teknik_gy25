@@ -307,9 +307,11 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ## 6.3 Jämvikt
 - Formulera jämviktsvillkoren och använda dem för att beräkna okända krafter i enkla fall.
 - Beräkna stödreaktioner för en enkelt belastad balk.
+- Bedöma en konstruktions stabilitet utifrån tyngdpunktens läge och stödytans storlek, och förklara när den välter.
 
 ### Jämviktsvillkoren
 ### Stödreaktioner
+### Tyngdpunkt och stabilitet
 
 ## 6.4 Hållfasthet
 - Identifiera drag, tryck, böjning, skjuvning, vridning och knäckning i verkliga konstruktioner.
@@ -320,18 +322,22 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ### Spänning och töjning
 ### Dragprovet
 
-## 6.5 Konstruktion
-- Förklara hur tvärsnitt och geometri påverkar en konstruktions styvhet och bärförmåga.
-- Identifiera drag- och tryckbelastade delar i ett fackverk och förklara hur laster förs ned till stöden.
+## 6.5 Konstruktioner
+- Förklara hur tvärsnitt och geometri påverkar en konstruktions styvhet och bärförmåga, med I-balken som exempel på materialeffektiv geometri.
+- Identifiera drag- och tryckbelastade delar i ett fackverk och förklara hur laster förs ned till stöden genom balkar, pelare, bågar och ramar.
+- Jämföra olika konstruktionsprinciper utifrån hållfasthet, vikt, materialåtgång, tillverkning och kostnad, och motivera ett val för ett givet ändamål.
 
-### Geometri och styvhet
-### Fackverk och kraftvägar
+### Balkar, pelare och tvärsnittets form
+### Fackverk, bågar, ramar och stagning
+### Att välja konstruktionsprincip
 
 ## 6.6 Dimensionering
+- Identifiera vilka laster en konstruktion kan utsättas för, däribland egentyngd, nyttig last, vind- och snölast, och skilja mellan statisk och dynamisk belastning.
 - Dimensionera en enkel konstruktionsdetalj mot en given belastning med hjälp av tillåten spänning och säkerhetsfaktor.
 - Bedöma beräkningsresultats rimlighet med överslagsräkning och enhetskontroll.
 
-### Säkerhetsfaktor och dimensionering
+### Laster och belastningsfall
+### Säkerhetsfaktor och dimensioneringsprocessen
 ### Rimlighetsbedömning
 
 ## 6.7 Sammanfattning
