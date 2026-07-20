@@ -162,3 +162,122 @@ fig-2.3.3-a:
   referens: "Placeras vid avsnittet om att gräva med upprepade varför-frågor; texten hänvisar till figuren när metoden tillämpas på Note 7-fallet"
   pedagogisk_funktion: "Konkretiserar skillnaden mellan symptom och grundorsak genom att visa hela kedjan i ett enda välkänt fall, så att eleven kan applicera samma frågekedja på ett eget testresultat"
   anvands_i: ["2.3.3"]
+
+fig-6.1.1-a:
+  syfte: "Visa de namngivna krafttyperna som kraftpilar på konkreta, igenkännbara föremål"
+  innehall: "Tre delbilder med kraftdiagram: en gångtrafikant på en gångbro (tyngdkraft nedåt, normalkraft uppåt från brodäcket, friktionskraft längs däcket), en lyftkättings dragkraft på en upphängd container, och en pelares tryckkraft under en husgrund. Varje kraft märks med namn och pilriktning"
+  referens: "Placeras i slutet av delavsnittet om kraftbegreppet; texten hänvisar till figuren när tyngdkraft, normalkraft, friktionskraft, dragkraft och tryckkraft har införts"
+  pedagogisk_funktion: "Ger eleven en samlad bild av de fem namngivna krafttyperna på verkliga tekniska objekt, så att namnen kan kopplas till både utseende och verkan snarare än memoreras var för sig"
+  anvands_i: ["6.1"]
+
+fig-6.1.2-a:
+  syfte: "Visa hur två krafter läggs samman till en resultant och hur en kraft delas upp i komposanter"
+  innehall: "Två delbilder. Vänster: de två bogserbåtarnas krafter (3000 N norrut, 4000 N österut) ritade som pilar i skala, med resultanten 5000 N inritad som diagonalen i den räta vinkeln, Pythagoras samband synligt. Höger: kälken som dras i ett 30-gradigt rep, med kraften F och dess horisontella och vertikala komposant inritade som en rätvinklig triangel"
+  referens: "Placeras efter uträkningarna av resultant och komposanter; texten hänvisar till figuren för båda räkneexemplen"
+  pedagogisk_funktion: "Låter eleven se sambandet mellan den räta triangeln i uträkningen och de faktiska kraftpilarna, så att formeln inte blir lösryckt från sin geometriska grund"
+  anvands_i: ["6.1"]
+
+fig-6.1.3-a:
+  syfte: "Visa metoden friläggning i två steg, från en verklig situation till en frilagd bild med enbart kraftpilar"
+  innehall: "Två delbilder sida vid sida. Vänster: en låda på ett sluttande plan i sitt sammanhang. Höger: samma låda frilagd, ritad som en enkel form med tyngdkraft, normalkraft och friktionskraft inritade som pilar och planet borttaget. En tredje, mindre delbild visar gångbron frilagd som en balk med två stödreaktioner uppåt och brons samt trafiklastens tyngd nedåt"
+  referens: "Placeras vid exemplet med lådan på det sluttande planet och återknyts när gångbron friläggs; texten hänvisar till figuren i båda styckena"
+  pedagogisk_funktion: "Gör själva friläggningssteget synligt, från föremål i sin miljö till en ren kraftbild, vilket är den svåraste delen av metoden för eleven att ta till sig på egen hand"
+  anvands_i: ["6.1"]
+
+fig-6.2.1-a:
+  syfte: "Visa varför momentarmens längd är avgörande genom att jämföra samma kraft på olika avstånd från vridpunkten"
+  innehall: "En dörr sedd uppifrån med gångjärnet till vänster. Två pilar av samma längd (samma kraft) ritas: en vid handtaget långt från gångjärnet, en nära gångjärnet. Momentarmen r markeras med ett mått i båda fallen, och den resulterande vridningen illustreras med en böjd pil vars tjocklek skiljer sig mellan de två fallen"
+  referens: "Placeras efter uträkningen av kraften vid handtaget jämfört med nära gångjärnen; texten hänvisar till figuren när skillnaden mellan 20 N och 160 N förklaras"
+  pedagogisk_funktion: "Gör den abstrakta momentformeln konkret genom att visa att det är avståndet till vridpunkten, inte bara kraften, som avgör hur lätt dörren går att öppna"
+  anvands_i: ["6.2"]
+
+fig-6.2.2-a:
+  syfte: "Visa hävarmsprincipen i två tekniska tillämpningar: en skiftnyckel och en gungbräda i balans"
+  innehall: "Två delbilder. Vänster: en skiftnyckel som drar åt en mutter, med och utan pårör, där den längre momentarmen och den mindre kraften som krävs märks ut. Höger: en gungbräda med barnet och den vuxna på sina respektive avstånd från mittpunkten, med momenten 450 Nm markerade åt varsitt håll och pilar som visar att de tar ut varandra"
+  referens: "Placeras vid exemplen med skiftnyckeln och gungbrädan; texten hänvisar till figuren för båda uträkningarna"
+  pedagogisk_funktion: "Visar att samma princip, lång arm ger hög utväxling, förklarar både ett handverktyg och en balanserande konstruktion, så att eleven ser hävarmsprincipen som ett generellt mönster snarare än ett enskilt exempel"
+  anvands_i: ["6.2"]
+
+fig-6.3.1-a:
+  syfte: "Visa att jämvikt kräver att både kraftsumman och momentsumman är noll, inte bara den ena"
+  innehall: "Två delbilder. Vänster: ett föremål med två motriktade, lika stora krafter som griper an i samma punkt (kraftsumma noll, momentsumma noll, verklig jämvikt). Höger: samma föremål med samma två krafter men förskjutna till olika angreppspunkter (kraftsumma fortfarande noll, men ett moment kvarstår och föremålet roterar)"
+  referens: "Placeras vid stycket om att kraftsumma noll inte räcker; texten hänvisar till figuren när skillnaden mellan de två fallen förklaras"
+  pedagogisk_funktion: "Motverkar missuppfattningen att jämvikt bara handlar om kraftsumman, genom att visa ett fall där kraftsumman är noll men föremålet ändå roterar"
+  anvands_i: ["6.3"]
+
+fig-6.3.2-a:
+  syfte: "Visa uppställningen och lösningen av stödreaktionerna för gångbron med cyklisten"
+  innehall: "Frilagd balk, 6 m lång, med cyklistens tyngd 900 N markerad 2 m från stöd A och stödreaktionerna R_A och R_B inritade som pilar uppåt vid respektive stöd. Måtten 2 m och 4 m samt de beräknade värdena 600 N och 300 N visas i figuren"
+  referens: "Placeras vid uträkningen av R_A och R_B; texten hänvisar till figuren genom hela räkneexemplet"
+  pedagogisk_funktion: "Låter eleven följa vilka mått och krafter som hör ihop i ekvationerna, så att momentekvationen kring A går att koppla direkt till bilden"
+  anvands_i: ["6.3"]
+
+fig-6.3.3-a:
+  syfte: "Visa sambandet mellan tyngdpunkt, stödyta och stabilitet, samt när en konstruktion välter"
+  innehall: "Tre delbilder. Först en lyftkran med tyngdpunkt och stödyta markerade, med det stabiliserande och det vältande momentet inritade som pilar kring stödpunkten. Sedan samma kran med en tyngre last, där den lodräta linjen genom den samlade tyngdpunkten faller utanför stödytan. Sist en hög bokhylla jämförd med en låg och bred, med tyngdpunktens höjd och stödytans bredd markerade i båda"
+  referens: "Placeras vid stycket om lyftkranens stabilitet; texten hänvisar till figuren när det stabiliserande och det vältande momentet räknas ut samt vid jämförelsen med bokhyllan"
+  pedagogisk_funktion: "Gör den abstrakta regeln 'linjen genom tyngdpunkten måste falla innanför stödytan' konkret och visuellt verifierbar i tre olika fall"
+  anvands_i: ["6.3"]
+
+fig-6.4.1-a:
+  syfte: "Visa de sex belastningstyperna sida vid sida på igenkännbara konstruktionsdelar"
+  innehall: "Sex smårutor i ett rutnät, en per belastningstyp: drag (spänd lyftkätting), tryck (belastad pelare), böjning (balk som böjer sig med drag- och tryckzon markerad), skjuvning (en nit som håller ihop två plåtar), vridning (en skruvmejsel som vrider en skruv) och knäckning (en tunn pelare som viker ut åt sidan under tryck, jämförd med en tjock pelare som inte gör det). Varje ruta har en pil som visar kraftens eller momentets riktning"
+  referens: "Placeras efter genomgången av de sex belastningstyperna; texten hänvisar till figuren som en samlad översikt"
+  pedagogisk_funktion: "Ger eleven en direkt jämförelsebild mellan de sex belastningstyperna, så att de kan skiljas åt visuellt och inte bara genom sina namn"
+  anvands_i: ["6.4"]
+
+fig-6.4.2-a:
+  syfte: "Visa hur samma kraft ger olika spänning beroende på tvärsnittsarea, och hur en stång töjs ut under belastning"
+  innehall: "Två delbilder. Vänster: två lika långa stänger med samma dragkraft men olika tvärsnittsarea, 100 mm² och 200 mm², med respektive spänning 200 MPa och 100 MPa angiven. Höger: en stång före och efter belastning, med ursprungslängden 2000 mm och förlängningen 1 mm tydligt uppmätta och markerade"
+  referens: "Placeras vid uträkningarna av spänning respektive töjning; texten hänvisar till figuren för båda räkneexemplen"
+  pedagogisk_funktion: "Gör skillnaden mellan kraft och spänning konkret genom att visa att samma kraft ger olika resultat beroende på tvärsnittet, samt visualiserar vad en töjning på 0,05 procent faktiskt innebär"
+  anvands_i: ["6.4"]
+
+fig-6.4.3-a:
+  syfte: "Visa en dragprovkurvas förlopp och var elasticitetsmodul, sträckgräns och brottgräns avläses"
+  innehall: "Ett spänning-töjning-diagram för en stålprovstav. Den räta, elastiska delen av kurvan markeras med sin lutning (elasticitetsmodulen), punkten där kurvan böjer av markeras som sträckgränsen, kurvans högsta punkt markeras som brottgränsen, och kurvans slutpunkt markerar brottet. En liten skiss av provstaven i dragprovningsmaskinen placeras bredvid diagrammet"
+  referens: "Placeras vid genomgången av dragprovkurvan; texten hänvisar till figuren när elasticitetsmodul, sträckgräns och brottgräns förklaras"
+  pedagogisk_funktion: "Låter eleven koppla varje avläst storhet till en bestämd punkt eller lutning på kurvan, i stället för att bara memorera definitionerna som lösryckt text"
+  anvands_i: ["6.4"]
+
+fig-6.5.1-a:
+  syfte: "Visa varför I-balkens tvärsnittsform är materialeffektiv jämfört med en massiv balk"
+  innehall: "Tre tvärsnitt jämförs sida vid sida vid samma böjbelastning: en massiv rektangulär balk, en I-balk med samma vikt/materialmängd, och ett rör. Spänningsfördelningen över tvärsnittet markeras med färgskala, hög spänning i flänsarna/ytterkanterna, låg spänning nära mittlinjen, för att visa varifrån böjstyvheten kommer"
+  referens: "Placeras vid genomgången av I-balken; texten hänvisar till figuren när materialets placering i tvärsnittet förklaras"
+  pedagogisk_funktion: "Gör den abstrakta principen 'material långt från mittlinjen bidrar mest' visuellt begriplig genom en direkt jämförelse mellan tre tvärsnitt av samma materialmängd"
+  anvands_i: ["6.5"]
+
+fig-6.5.2-a:
+  syfte: "Visa hur en takstol och en fackverksbro leder krafter genom triangulerade stavar till sina stöd"
+  innehall: "Två delbilder. Vänster: en takstol med sneda ben i tryck och en vågrät dragstång i drag, markerade med olika färg eller mönster, och taklasten och stödreaktionerna vid väggarna inritade. Höger: en fackverksbro i genomskärning med diagonalstavar markerade som drag respektive tryck beroende på position, och lastvägen från körbanan till stöden markerad med pilar genom konstruktionen"
+  referens: "Placeras vid stycket om lastväg och triangulering; texten hänvisar till figuren för både takstolen och fackverksbron"
+  pedagogisk_funktion: "Låter eleven följa en last visuellt genom en verklig triangulerad konstruktion, från angreppspunkt till stöd, och se att drag och tryck växlar mellan olika stavar"
+  anvands_i: ["6.5"]
+
+fig-6.5.3-a:
+  syfte: "Jämföra en balkbro och en fackverksbro för samma spännvidd utifrån materialåtgång och komplexitet"
+  innehall: "En balkbro och en fackverksbro ritade sida vid sida över samma spännvidd, med ungefärlig materialmängd och antal förband angivet för respektive lösning. En liten tabell eller ikonrad under bilderna sammanfattar hållfasthet, vikt, materialåtgång, tillverkning och kostnad för de två alternativen"
+  referens: "Placeras vid jämförelsen mellan balkbro och fackverksbro; texten hänvisar till figuren när valet av konstruktionsprincip diskuteras"
+  pedagogisk_funktion: "Konkretiserar att valet av konstruktionsprincip är en avvägning mellan flera egenskaper snarare än ett enda rätt svar"
+  anvands_i: ["6.5"]
+
+fig-6.6.1-a:
+  syfte: "Visa de fyra lasttyperna på en gångbro och skilja statisk från dynamisk belastning"
+  innehall: "En gångbro med egentyngd, nyttig last, vindlast och snölast markerade med separata pilar och etiketter på respektive del av konstruktionen. En mindre delbild visar Millennium Bridge-exemplet: fotgängare som går i takt och bron som svänger i sidled, med en pil som visar den dynamiska belastningens riktning"
+  referens: "Placeras efter genomgången av lasttyperna; texten hänvisar till figuren som en samlad översikt och vid exemplet med Millennium Bridge"
+  pedagogisk_funktion: "Ger eleven en samlad, rumslig bild av var på en konstruktion olika lasttyper angriper, och visar konkret hur en dynamisk belastning skiljer sig från en statisk"
+  anvands_i: ["6.6"]
+
+fig-6.6.2-a:
+  syfte: "Visa dimensioneringsprocessens steg och koppla dem till beräkningsexemplet med gångbrons hängstång"
+  innehall: "En processrad med de tio stegen i dimensioneringsprocessen, från krav och funktion till test och förbättring, med det aktuella beräkningsexemplet (kontrollera hållfasthet, lägg till säkerhetsmarginal) markerat i mitten av raden. Under processraden visas hängstången med dragkraften 47 000 N, den beräknade tvärsnittsarean 400 mm² och diametern 23 mm"
+  referens: "Placeras vid övergången från det konkreta räkneexemplet till den generella dimensioneringsprocessen; texten hänvisar till figuren när stegen räknas upp"
+  pedagogisk_funktion: "Visar att det utförda räkneexemplet bara är ett par steg av en längre process, och förankrar den annars abstrakta stegordningen i ett konkret, redan genomfört exempel"
+  anvands_i: ["6.6"]
+
+fig-6.6.3-a:
+  syfte: "Visa hur en enhetskontroll avslöjar ett fel som annars är lätt att missa"
+  innehall: "Två parallella uträkningar av hängstångens tvärsnittsarea sida vid sida: en korrekt, med kraften i newton, som ger 400 mm², och en felaktig, där kraften av misstag lämnats i kilonewton (47 i stället för 47 000), som ger en area och en diameter som är uppenbart för små. Den felaktiga diametern jämförs visuellt med den korrekta för att göra orimligheten tydlig"
+  referens: "Placeras vid stycket om enhetskontroll; texten hänvisar till figuren när exemplet med den förväxlade enheten förklaras"
+  pedagogisk_funktion: "Gör risken med enhetsfel konkret och synlig genom att visa den felaktiga och den korrekta uträkningen sida vid sida i stället för att bara beskriva risken i text"
+  anvands_i: ["6.6"]
