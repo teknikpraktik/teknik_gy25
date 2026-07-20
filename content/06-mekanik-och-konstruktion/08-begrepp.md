@@ -6,28 +6,34 @@ title: Begrepp
 status: fardig-forsta-version
 ordlista:
   - balk
-  - belastning
   - böjning
-  - deformation
   - dimensionering
   - dragkraft
+  - elasticitetsmodul
+  - elastisk deformation
   - fackverk
   - friktionskraft
+  - friläggning
   - jämvikt
   - knäckning
+  - komposant
   - kraft
   - lastväg
   - moment
   - momentarm
   - normalkraft
-  - pelare
+  - plastisk deformation
   - resultant
   - skjuvning
+  - spänning
   - stabilitet
+  - sträckgräns
+  - stödreaktion
   - säkerhetsfaktor
   - tryckkraft
   - tyngdkraft
   - tyngdpunkt
+  - töjning
   - vridning
 ---
 
@@ -35,26 +41,32 @@ Förklara varje begrepp nedan med en egen mening. Skriv i ditt häfte eller i et
 digitalt dokument; skriv inte i boken.
 
 - balk
-- belastning
 - böjning
-- deformation
 - dimensionering
 - dragkraft
+- elasticitetsmodul
+- elastisk deformation
 - fackverk
 - friktionskraft
+- friläggning
 - jämvikt
 - knäckning
+- komposant
 - kraft
 - lastväg
 - moment
 - momentarm
 - normalkraft
-- pelare
+- plastisk deformation
 - resultant
 - skjuvning
+- spänning
 - stabilitet
+- sträckgräns
+- stödreaktion
 - säkerhetsfaktor
 - tryckkraft
 - tyngdkraft
 - tyngdpunkt
+- töjning
 - vridning

@@ -18,85 +18,94 @@ learningGoals:
 abilities: [f3]
 concepts_introduced: ["belastning", "deformation", "elastisk deformation", "plastisk deformation", "brott", "böjning", "skjuvning", "vridning", "knäckning", "spänning", "töjning", "dragprov", "elasticitetsmodul", "sträckgräns", "brottgräns"]
 concepts_used: ["kraft", "dragkraft", "tryckkraft", "moment"]
-figures: ["fig-6.4.1-a", "fig-6.4.2-a", "fig-6.4.3-a"]
+figures: ["fig-6.4.1-a", "fig-6.4.1-b", "fig-6.4.2-a", "fig-6.4.3-a"]
 prerequisites: ["6.1", "6.2"]
 ---
 
 ## Belastningstyper
 
-Gångbrons balk bär inte bara en tyngd, den bär den på ett bestämt sätt. En [[begrepp:dragkraft]] i en lyftkrans kätting sträcker materialet, en [[begrepp:tryckkraft]] i en pelare pressar samman det, och en trafikant som går över bron böjer balken något nedåt. Den samlade benämningen för de krafter och moment en konstruktion eller detalj utsätts för under användning är **belastning**. Hur en detalj klarar en given belastning avgör i sin tur dess hållfasthet, och det första steget mot att förstå hållfasthet är att skilja på hur en belastning kan verka.
+Gångbrons balk bär inte bara en tyngd, den bär den på ett bestämt sätt. En [[begrepp:dragkraft]] i en lyftkrans kätting sträcker materialet, en [[begrepp:tryckkraft]] i en pelare pressar samman det, och en trafikant som går över bron böjer balken något nedåt. Den samlade benämningen för de krafter och moment en konstruktion utsätts för under användning är **belastning**. Hur en detalj klarar en given belastning avgör dess hållfasthet, och första steget är att skilja på hur en belastning kan verka.
 
-All belastning ger upphov till någon grad av **deformation**, en förändring av föremålets form eller storlek. Är deformationen liten och materialet återgår helt till sin ursprungsform när belastningen tas bort kallas den **elastisk deformation**, som en gummiband som sträcks och sedan släpps. Blir belastningen tillräckligt stor kvarstår i stället en del av deformationen permanent även efter att belastningen tagits bort, vilket kallas **plastisk deformation**, som en böjd metallklädhängare som inte rätar ut sig igen. Fortsätter belastningen att öka bortom vad materialet tål till slut inträffar **brott**: materialet spricker eller separeras helt.
+All belastning ger upphov till någon grad av **deformation**, en förändring av föremålets form eller storlek. Är deformationen liten och materialet återgår helt till sin ursprungsform när belastningen tas bort kallas den **elastisk deformation**, som ett gummiband som sträcks och sedan släpps. Blir belastningen tillräckligt stor kvarstår en del av deformationen permanent även efter avlastning, vilket kallas **plastisk deformation**, som en böjd metallklädhängare som inte rätar ut sig igen. Fortsätter belastningen bortom vad materialet tål inträffar till slut **brott**: materialet spricker eller separeras.
 
-Utöver drag och tryck, som redan är bekanta som krafttyper, finns fyra ytterligare belastningssätt som är särskilt viktiga i tekniska konstruktioner:
+Fem grundläggande belastningssätt räcker för att beskriva det mesta som händer i en konstruktion. Drag och tryck är redan bekanta: kraften verkar längs detaljens längdriktning och sträcker respektive pressar samman materialet. De tre övriga verkar på andra sätt.
 
-**Böjning** uppstår när en konstruktionsdel, typiskt en balk, belastas vinkelrätt mot sin längdriktning så att den kröker sig. Balken dras isär på den ena sidan och trycks samman på den andra samtidigt: en gångbros balk som böjer sig under en cyklist är dragbelastad på undersidan och tryckbelastad på ovansidan. En linjal som läggs platt böjer sig lätt under en liten tyngd, men ställd på högkant, med samma tvärsnittsarea men annan form, klarar den en betydligt större tyngd innan den böjer lika mycket. Formen på tvärsnittet påverkar alltså böjmotståndet lika mycket som materialet gör, ett samband som nästa avsnitt utvecklar vidare.
+**Böjning** uppstår när en konstruktionsdel, typiskt en balk, belastas vinkelrätt mot sin längdriktning så att den kröker sig. Balken dras isär på den ena sidan och trycks samman på den andra samtidigt: gångbrons balk är dragbelastad på undersidan och tryckbelastad på ovansidan när en cyklist passerar. Mellan dragzonen och tryckzonen finns ett område där spänningen är liten. En linjal som läggs platt böjer sig lätt under en liten tyngd, men ställd på högkant, med exakt samma tvärsnittsarea, klarar den betydligt mer innan den böjer lika mycket. Formen på tvärsnittet påverkar alltså böjstyvheten lika mycket som materialet gör.
 
-**Skjuvning** uppstår när två motriktade krafter verkar parallellt med varandra men förskjutna i förhållande till varandra, som en sax som klipper genom papper eller en nit som håller ihop två plåtar. Materialet tvingas glida i skikt mot varandra längs ett snitt, i stället för att sträckas eller pressas samman rakt igenom.
+**Skjuvning** uppstår när två motriktade krafter verkar parallellt med varandra men förskjutna i sidled, som en sax som klipper genom plåt eller en nit som håller ihop två plåtar som dras åt var sitt håll. Materialet tvingas glida i skikt längs ett snitt, i stället för att sträckas eller pressas samman.
 
-**Vridning**, eller torsion, uppstår när ett moment vrider en detalj kring dess egen längdaxel, som en skruvmejsel som drar åt en skruv eller en drivaxel som överför kraft från en motor till ett hjul. Vridning är alltså samma sak som [[begrepp:moment]] från ett tidigare avsnitt, men verkande längs en axel i stället för kring en punkt i ett plan.
+**Vridning**, med den tekniska termen torsion, är det tillstånd som uppstår i en detalj när ett moment vrider den kring dess egen längdaxel. Här är det värt att hålla isär två saker som lätt blandas ihop. Det moment som verkar är belastningen, och det kallas ett vridmoment. Vridningen är den verkan belastningen får: materialet vrids, och tvärsnitten förskjuts något i förhållande till varandra längs axeln. Ett vridmoment är alltså orsaken och vridningen är följden, precis som en dragkraft är orsaken och töjningen följden. En skruvmejsel som drar åt en skruv och en drivaxel som överför kraft från en motor till ett hjul är båda belastade av vridmoment och befinner sig båda i vridning.
 
-**Knäckning** är en plötslig sidoböjning hos en slank, tryckbelastad detalj, som en pelare eller en stång, som inträffar långt innan materialets rena tryckhållfasthet egentligen är nådd. En tunn, lång pelare knäcks lättare än en kort och tjock pelare av exakt samma material, eftersom knäckning beror på pelarens geometri och längd minst lika mycket som på materialet. Det är därför slanka stödben förstärks eller görs kortare i konstruktioner som ska bära tunga tryckkrafter.
-
-Sprickor, hål och skarpa hörn är särskilt kritiska i alla dessa belastningsfall, eftersom belastningen då koncentreras kring den lokala formförändringen i stället för att fördelas jämnt över tvärsnittet. Det är därför hål i en konstruktionsdel ofta förses med rundade kanter och varför en liten spricka kan växa och till slut orsaka brott vid en belastning som materialet i övrigt klarar utan problem.
+Sprickor, hål och skarpa hörn är kritiska i samtliga dessa fall, eftersom belastningen koncentreras kring den lokala formförändringen i stället för att fördelas jämnt över tvärsnittet. Det är därför hål i en konstruktionsdel förses med rundade kanter, och därför en liten spricka kan växa och till slut orsaka brott vid en belastning som materialet i övrigt klarar utan problem.
 
 [[figur:fig-6.4.1-a]]
 
+Tryckbelastning har dessutom en egen risk som inte har någon motsvarighet vid drag. En lång, slank detalj som trycks i längdriktningen kan plötsligt vika ut åt sidan långt innan materialet nått sin tryckhållfasthet. Fenomenet heter **knäckning**, och det är inte ett sjätte sätt att belasta en detalj utan ett sätt för en tryckbelastad detalj att gå sönder. Knäckning är en instabilitet: så länge lasten är liten står detaljen rak, men vid en viss last blir det raka läget instabilt och den minsta skevhet som redan finns i detaljen växer okontrollerat.
+
+Två saker avgör om knäckning blir dimensionerande. Den ena är slankheten, alltså förhållandet mellan detaljens längd och tvärsnittets utbredning: en lång, tunn pelare knäcks vid mycket lägre last än en kort och tjock av exakt samma material. Den andra är hur detaljens ändar är fastsatta, eftersom en pelare som är fast inspänd i båda ändar knäcks vid högre last än en som bara vilar ledat mot sina stöd. Det är därför slanka tryckstänger görs kortare, grövre eller stagas på mitten. En lika slank detalj i drag har inte problemet alls: en spänd vajer kan vara hur lång och tunn som helst utan att bli instabil.
+
+[[figur:fig-6.4.1-b]]
+
 ## Spänning och töjning
 
-Två detaljer av samma material kan tåla helt olika stor kraft, om de har olika tjocklek. För att jämföra hur hårt belastat ett material faktiskt är, oavsett detaljens storlek, används **spänning**: kraften delad med den tvärsnittsarea kraften verkar över.
+Två detaljer av samma material kan tåla helt olika stor kraft om de har olika tjocklek. För att jämföra hur hårt belastat ett material faktiskt är, oavsett detaljens storlek, används **spänning**: kraften delad med den tvärsnittsarea kraften verkar över.
 
 σ = F / A
 
-där σ (den grekiska bokstaven sigma) är spänningen i pascal (Pa) eller, vanligare för konstruktionsmaterial, i newton per kvadratmillimeter (N/mm², vilket är samma sak som megapascal, MPa), F är kraften i newton och A är tvärsnittsarean i motsvarande enhet.
+där σ (den grekiska bokstaven sigma) är spänningen i pascal (Pa) eller, vanligare för konstruktionsmaterial, i newton per kvadratmillimeter (N/mm², vilket är samma sak som megapascal, MPa), F är kraften i newton och A är tvärsnittsarean i kvadratmillimeter.
 
-En stång med tvärsnittsarean 100 mm² belastas med dragkraften 20 000 N. Spänningen i stången blir
+Formeln gäller inte i alla lägen, och det är värt att veta var gränsen går. σ = F / A ger den genomsnittliga normalspänningen i ett tvärsnitt när kraften drar eller trycker rakt längs detaljens längdaxel och angriper mitt i tvärsnittet. Belastningen kallas då centrisk, och spänningen är då någorlunda jämnt fördelad över hela tvärsnittet. Vid böjning gäller inte det: där varierar spänningen över tvärsnittet, från dragspänning på ena sidan till tryckspänning på den andra, och en enda medelspänning beskriver inte belastningen. Vid skjuvning verkar spänningen dessutom längs snittet i stället för vinkelrätt mot det, och kallas därför skjuvspänning. Kapitlet räknar bara på det centriska fallet, och σ = F / A är den enda spänningsformel som används här.
+
+En stång med tvärsnittsarean 100 mm² belastas centriskt med dragkraften 20 000 N. Spänningen i stången blir
 
 σ = F / A = 20 000 / 100 = 200 N/mm² = 200 MPa
 
-Samma dragkraft på en stång med dubbelt så stor tvärsnittsarea, 200 mm², ger bara hälften så stor spänning, 100 MPa. Det är spänningen, inte kraften i sig, som avgör om materialet klarar belastningen eller inte, vilket är själva anledningen till att tvärsnittets storlek är en av de viktigaste sakerna en ingenjör bestämmer.
+Samma dragkraft på en stång med dubbelt så stor tvärsnittsarea, 200 mm², ger hälften så stor spänning, 100 MPa. Det är spänningen, inte kraften i sig, som avgör om materialet klarar belastningen, vilket är själva anledningen till att tvärsnittets storlek är en av de viktigaste sakerna en konstruktör bestämmer.
 
-Spänningen i en detalj hänger nära ihop med hur mycket den töjs ut. **Töjning** är den relativa längdändringen hos en belastad detalj:
+Spänningen i en detalj hänger nära ihop med hur mycket den töjs. **Töjning** är den relativa längdändringen hos en belastad detalj:
 
 ε = ΔL / L₀
 
-där ε (epsilon) är töjningen, ΔL är längdändringen och L₀ är ursprungslängden, båda i samma enhet så att töjningen blir ett rent tal, ofta angivet i procent. Stången ovan, ursprungligen 2000 mm lång, förlängs 1 mm under belastningen. Töjningen blir då
+där ε (epsilon) är töjningen, ΔL är längdändringen och L₀ är ursprungslängden. Eftersom en längd delas med en längd tar enheterna ut varandra: töjning är dimensionslös och saknar enhet, förutsatt att ΔL och L₀ anges i samma enhet. Värdet blir litet för konstruktionsmaterial och anges därför ofta i procent.
+
+Stången ovan, ursprungligen 2000 mm lång, förlängs 1 mm under belastningen. Töjningen blir
 
 ε = ΔL / L₀ = 1 / 2000 = 0,0005 = 0,05 %
 
-Spänning beskriver alltså hur hårt belastat materialet är, medan töjning beskriver hur mycket det faktiskt töjs ut till följd av den belastningen. Sambandet mellan de två är kärnan i nästa avsnitts dragprov.
+Spänning beskriver alltså hur hårt belastat materialet är, medan töjning beskriver hur mycket det faktiskt ger efter.
 
 [[figur:fig-6.4.2-a]]
 
 ## Dragprovet
 
-För att ta reda på hur ett material faktiskt beter sig under belastning, i stället för att gissa, utsätts en standardiserad provstav för ett **dragprov**: provstaven spänns fast i en dragprovningsmaskin som drar isär den med långsamt ökande kraft, samtidigt som både kraften och förlängningen mäts kontinuerligt. Resultatet omvandlas till spänning och töjning enligt formlerna i föregående avsnitt och ritas upp som en dragprovkurva, ett diagram med töjning på den vågräta axeln och spänning på den lodräta.
+För att ta reda på hur ett material faktiskt beter sig under belastning utsätts en standardiserad provstav för ett **dragprov**: staven spänns fast i en provningsmaskin som drar isär den med långsamt ökande kraft, samtidigt som både kraften och förlängningen mäts kontinuerligt. Resultatet räknas om till spänning och töjning och ritas upp som en dragprovkurva, med töjning på den vågräta axeln och spänning på den lodräta.
 
-Kurvan har en tydlig, återkommande form. I det första skedet är kurvan rak: spänningen ökar proportionellt mot töjningen, och provstaven återgår helt till sin ursprungslängd om belastningen tas bort. Detta är det elastiska området, och lutningen på den räta delen av kurvan kallas **elasticitetsmodulen**:
+Kurvan har en tydlig, återkommande form. I det första skedet är den rak: spänningen ökar proportionellt mot töjningen, och provstaven återgår helt till sin ursprungslängd om belastningen tas bort. Det är det elastiska området. Lutningen på den räta delen kallas **elasticitetsmodulen**:
 
 E = σ / ε
 
-Elasticitetsmodulen, mätt i pascal, beskriver hur styvt materialet är: ett material med hög elasticitetsmodul, som stål, töjs mycket lite för en given spänning, medan ett material med låg elasticitetsmodul, som gummi, töjs desto mer för samma spänning. Stål har en elasticitetsmodul på ungefär 200 GPa, vilket är en av anledningarna till att det används där små deformationer under last är viktiga, som i broar och maskinramar.
+Elasticitetsmodulen beskriver hur styvt materialet är. Ett material med hög elasticitetsmodul, som stål, töjs mycket lite för en given spänning, medan ett material med låg elasticitetsmodul, som gummi, töjs desto mer. Stål har en elasticitetsmodul på ungefär 200 GPa, alltså 200 000 N/mm², vilket är en av anledningarna till att det används där små deformationer under last är viktiga. Sambandet E = σ / ε gäller bara inom det elastiska området, där kurvan är rak, och får inte användas ovanför sträckgränsen.
 
-Vid en viss spänning slutar kurvan att vara rak och böjer av: materialet har nått sin **sträckgräns**, den spänning där deformationen övergår från elastisk till plastisk. Belastas provstaven bortom sträckgränsen återgår den inte längre helt till sin ursprungslängd när kraften tas bort, utan behåller en bestående, plastisk deformation. Fortsätter belastningen att öka stiger kurvan vidare, ofta långsammare, fram till dess högsta punkt, provstavens **brottgräns**: den högsta spänning materialet klarar innan det brister. Strax därefter faller kurvan och provstaven går av.
+Vid en viss spänning slutar kurvan att vara rak och böjer av. Materialet har nått sin **sträckgräns**, den spänning där deformationen övergår från elastisk till plastisk. Belastas provstaven bortom sträckgränsen återgår den inte längre helt till sin ursprungslängd när kraften tas bort, utan behåller en bestående deformation. För en konstruktion som ska behålla sin form är sträckgränsen därför den gräns som betyder mest i praktiken, och det är den kapitlets dimensionering utgår från.
 
-De tre värdena, elasticitetsmodul, sträckgräns och brottgräns, tillsammans med det avlästa förloppet i övrigt, är precis den information en ingenjör behöver för att avgöra hur mycket ett material tål innan det först börjar deformeras permanent och sedan går sönder. Den informationen är utgångspunkten för kapitlets sista steg: att dimensionera en konstruktion så att den håller sig väl innanför de gränserna.
+Fortsätter belastningen att öka stiger kurvan vidare, men långsammare, fram till sin högsta punkt. Den högsta spänning kurvan når kallas materialets **brottgräns**, eller draghållfasthet, som är den term materialstandarder normalt använder. Namnet är lätt att missförstå: brottgränsen är inte den spänning där staven går av. Den är den största nominella spänningen under hela provet, alltså den största kraften delad med provstavens ursprungliga tvärsnittsarea.
+
+Vad som händer efter den punkten förklarar skillnaden. Många sega material, som konstruktionsstål, börjar då dra ihop sig lokalt på ett ställe. Provstaven blir märkbart smalare där, ett förlopp som kallas halsning. Den verkliga arean minskar snabbt, och därför sjunker den nominella spänningen i diagrammet trots att materialet i det förtunnade partiet fortfarande belastas hårt. Kurvan faller alltså, och först en bit senare går staven av. Brottet sker med andra ord vid en lägre nominell spänning än brottgränsen.
+
+Elasticitetsmodul, sträckgräns och brottgräns är tillsammans den information som behövs för att avgöra hur styvt ett material är, när det börjar deformeras permanent och när det närmar sig sin gräns.
 
 [[figur:fig-6.4.3-a]]
 
 ## Instuderingsfrågor
 
-1. Förklara med egna ord skillnaden mellan elastisk och plastisk deformation, och ge ett eget exempel på vardera.
-2. Vad är belastning, och hur skiljer sig begreppet från en enskild kraft?
-3. Beskriv med egna ord vad som händer i en balk som böjs: vilken sida dras och vilken sida trycks?
-4. Förklara skillnaden mellan skjuvning och vridning. Ge ett eget exempel på vardera.
-5. Varför knäcks en tunn, lång pelare lättare än en kort och tjock pelare av samma material?
-6. Varför är hål och skarpa hörn särskilt kritiska punkter i en belastad konstruktion?
-7. Vad är spänning, och varför är det spänningen snarare än kraften som avgör om ett material håller?
-8. En stång med tvärsnittsarean 50 mm² belastas med en dragkraft på 15 000 N. Beräkna spänningen i stången.
-9. Förklara vad töjning beskriver, och varför den anges som ett förhållande utan enhet.
-10. En balk som ursprungligen är 3000 mm lång töjs ut 1,5 mm under belastning. Beräkna töjningen, i procent.
-11. Beskriv hur ett dragprov går till, och vad en dragprovkurva visar.
-12. Vad avläses ur den räta, elastiska delen av dragprovkurvan, och vad säger ett högt värde på det om materialet?
-13. Förklara med egna ord skillnaden mellan sträckgräns och brottgräns.
-14. En provstav belastas till en spänning strax över sträckgränsen och avlastas därefter helt. Kommer provstaven att återgå till sin ursprungslängd? Motivera.
+1. Förklara skillnaden mellan elastisk och plastisk deformation, och ge ett exempel på vardera från en verklig konstruktion eller produkt.
+2. Ett vridmoment och en vridning är inte samma sak. Förklara skillnaden, och ge ett exempel på en maskindel där båda förekommer.
+3. Varför räknas knäckning inte som en sjätte belastningstyp vid sidan av drag, tryck, böjning, skjuvning och vridning? Vad är det i stället?
+4. Två stag av samma material och samma slanka dimension sitter i en byggställning. Det ena belastas i drag, det andra i tryck. Förklara varför det ena riskerar att knäckas men inte det andra.
+5. Varför beskriver σ = F / A inte spänningen i en balk som böjs? Vad är det som skiljer böjningsfallet från det centriska dragfallet?
+6. Brottgränsen är inte den spänning där provstaven går av. Förklara vad brottgränsen faktiskt är, och varför dragprovkurvan faller efter den punkten.
+7. En stång med tvärsnittsarean 50 mm² belastas centriskt med dragkraften 15 000 N. Beräkna spänningen.
+8. Ett dragstag ska klara dragkraften 25 000 N utan att spänningen överstiger 125 N/mm². Beräkna den tvärsnittsarea staget minst måste ha.
+9. En balk som ursprungligen är 3000 mm lång töjs 1,5 mm under belastning. Beräkna töjningen i procent.
+10. En stålstång är 2500 mm lång och belastas till spänningen 120 N/mm². Stålets elasticitetsmodul är 200 000 N/mm². Beräkna töjningen och därefter stångens förlängning i millimeter. Bedöm om svaret är rimligt för en stålstång.
+11. Ett dragstag av stålet S235 har tvärsnittsarean 300 mm² och belastas med dragkraften 54 000 N. Stålets sträckgräns är 235 N/mm², brottgränsen 360 N/mm² och elasticitetsmodulen 200 000 N/mm². Beräkna spänningen och avgör om staget befinner sig i det elastiska eller det plastiska området. Beräkna därefter töjningen, och förklara varför beräkningen av töjningen hade varit ogiltig om spänningen i stället legat på 300 N/mm². Vad skulle hända med staget om lasten ökades så att spänningen nådde 250 N/mm² och sedan togs bort helt?
