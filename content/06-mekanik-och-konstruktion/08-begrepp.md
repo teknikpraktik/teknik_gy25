@@ -3,13 +3,58 @@ type: begreppsovning
 chapter: 6
 sectionNumber: 8
 title: Begrepp
-status: ej-paborjad
-ordlista: []
+status: fardig-forsta-version
+ordlista:
+  - balk
+  - belastning
+  - böjning
+  - deformation
+  - dimensionering
+  - dragkraft
+  - fackverk
+  - friktionskraft
+  - jämvikt
+  - knäckning
+  - kraft
+  - lastväg
+  - moment
+  - momentarm
+  - normalkraft
+  - pelare
+  - resultant
+  - skjuvning
+  - stabilitet
+  - säkerhetsfaktor
+  - tryckkraft
+  - tyngdkraft
+  - tyngdpunkt
+  - vridning
 ---
 
-<!--
-Kapitelavslutning — skapas inte i förväg för kapitel som inte är påbörjade,
-men skelettfilen finns här som utgångspunkt (12-produktionsarkitektur.md,
-"Kapitelavslutningar"; 13-produktionsmanual.md). Skriv ingen text här förrän
-kapitlets avsnitt är producerade och status sätts till under-utveckling.
--->
+Förklara varje begrepp nedan med en egen mening. Skriv i ditt häfte eller i ett
+digitalt dokument; skriv inte i boken.
+
+- balk
+- belastning
+- böjning
+- deformation
+- dimensionering
+- dragkraft
+- fackverk
+- friktionskraft
+- jämvikt
+- knäckning
+- kraft
+- lastväg
+- moment
+- momentarm
+- normalkraft
+- pelare
+- resultant
+- skjuvning
+- stabilitet
+- säkerhetsfaktor
+- tryckkraft
+- tyngdkraft
+- tyngdpunkt
+- vridning
