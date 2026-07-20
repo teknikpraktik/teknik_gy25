@@ -99,8 +99,11 @@ En tredje kontroll är att fråga sig vad svaret betyder fysiskt. En stång på 
 3. Beskriv vad som hände med Londons Millennium Bridge. Varför är förklaringen "fotgängarna råkade gå i takt" otillräcklig?
 4. Varför sätts den tillåtna spänningen lägre än sträckgränsen, och vad är det säkerhetsfaktorn ska täcka in?
 5. En elev skriver i en labbrapport att "säkerhetsfaktorn 2 är ett rimligt värde för konstruktioner". Vad är fel med påståendet, och hur bestäms säkerhetsfaktorn i verkligheten?
-6. Ett konstruktionsstål har sträckgränsen 275 N/mm². Beräkna den tillåtna spänningen med säkerhetsfaktorn 2,5.
-7. En dragstång ska klara dragkraften 30 000 N med den tillåtna spänningen 150 N/mm². Beräkna den tvärsnittsarea stången minst måste ha.
-8. Beräkna diametern på en rund stång med tvärsnittsarean 300 mm².
-9. En beräkning av ett dragstags tvärsnittsarea ger svaret 0,02 mm² för ett stag som ska bära flera ton. Förklara varför svaret bör ifrågasättas, och vad som troligen har gått fel. Gör en överslagsräkning som visar ungefär vilken area som borde ha kommit ut, om lasten är 40 000 N och den tillåtna spänningen 120 N/mm².
-10. En lyftögla i en verkstadstravers ska bära dragkraften 18 000 N. Materialet har sträckgränsen 355 N/mm², och säkerhetsfaktorn 3 ska användas. Beräkna den tillåtna spänningen, den minsta tvärsnittsarean och den teoretiska minsta diametern. Välj därefter närmast större standarddimension bland 12, 16, 20 och 25 mm, och kontrollera vilken spänning den valda dimensionen faktiskt ger. Kontrollera enheterna genom hela beräkningen, bedöm om den valda dimensionen verkar rimlig för uppgiften, och ange slutligen tre förhållanden som den här förenklade beräkningen inte tar hänsyn till men som skulle påverka en verklig lyftögla.
+
+## Beräkningsuppgifter
+
+1. Ett konstruktionsstål har sträckgränsen 275 N/mm². Beräkna den tillåtna spänningen med säkerhetsfaktorn 2,5.
+2. En dragstång ska klara dragkraften 30 000 N med den tillåtna spänningen 150 N/mm². Beräkna den tvärsnittsarea stången minst måste ha.
+3. Beräkna diametern på en rund stång med tvärsnittsarean 300 mm².
+4. En beräkning av ett dragstags tvärsnittsarea ger svaret 0,02 mm² för ett stag som ska bära flera ton. Förklara varför svaret bör ifrågasättas, och vad som troligen har gått fel. Gör en överslagsräkning som visar ungefär vilken area som borde ha kommit ut, om lasten är 40 000 N och den tillåtna spänningen 120 N/mm².
+5. En lyftögla i en verkstadstravers ska bära dragkraften 18 000 N. Materialet har sträckgränsen 355 N/mm², och säkerhetsfaktorn 3 ska användas. Beräkna den tillåtna spänningen, den minsta tvärsnittsarean och den teoretiska minsta diametern. Välj därefter närmast större standarddimension bland 12, 16, 20 och 25 mm, och kontrollera vilken spänning den valda dimensionen faktiskt ger. Kontrollera enheterna genom hela beräkningen, bedöm om den valda dimensionen verkar rimlig för uppgiften, och ange slutligen tre förhållanden som den här förenklade beräkningen inte tar hänsyn till men som skulle påverka en verklig lyftögla.

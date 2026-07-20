@@ -22,7 +22,7 @@ import { fileURLToPath } from 'node:url';
 const KAPITELAVSLUTNING_TYP_AV_TITEL = {
 	Sammanfattning: 'kapitelsammanfattning',
 	Begrepp: 'begreppsovning',
-	'Praktiska uppgifter och projekt': 'uppgiftsbank',
+	'Projektuppgifter': 'uppgiftsbank',
 };
 
 // Filen importeras både direkt av Node (skripten, astro.config) och bundlad av
@@ -138,7 +138,7 @@ function parseBokstruktur(text) {
 			continue;
 		}
 		const sistaTre = kap.avsnitt.slice(-3).map((a) => a.titel);
-		const vantadeTre = ['Sammanfattning', 'Begrepp', 'Praktiska uppgifter och projekt'];
+		const vantadeTre = ['Sammanfattning', 'Begrepp', 'Projektuppgifter'];
 		if (JSON.stringify(sistaTre) !== JSON.stringify(vantadeTre)) {
 			fel.push(`kapitel ${kap.nr}: de tre sista avsnitten ska vara ${vantadeTre.join(' → ')} (hittade: ${sistaTre.join(' → ') || '—'}).`);
 		}

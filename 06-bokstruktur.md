@@ -73,7 +73,7 @@ Regler:
 
 - Kapitelraden inleder ett kapitel. Mellanslagstecknet är "·".
 - Avsnittsraden (`## <kapitel>.<sektionsnr> <titel>`) numreras löpande utan luckor inom kapitlet.
-- Punktlistan direkt under en avsnittsrad (rader som inleds med `- ` innan nästa `##`/`###`) är avsnittets lärandemål. Ett teoriavsnitt har minst ett lärandemål. De tre kapitelavslutande avsnitten (Sammanfattning, Begrepp, Praktiska uppgifter och projekt, se nedan) saknar lärandemål och har därför ingen punktlista.
+- Punktlistan direkt under en avsnittsrad (rader som inleds med `- ` innan nästa `##`/`###`) är avsnittets lärandemål. Ett teoriavsnitt har minst ett lärandemål. De tre kapitelavslutande avsnitten (Sammanfattning, Begrepp, Projektuppgifter, se nedan) saknar lärandemål och har därför ingen punktlista.
 - `### <delavsnittstitel>`-rader är valfria och används bara när avsnittet naturligt delas i flera delar. De är inte lärandemål och har ingen egen punktlista eller numrering — de är rena underrubriker i avsnittets löptext.
 - H4 används undantagsvis, bara när ett H3-delavsnitt verkligen behöver delas upp ytterligare, och skrivs direkt i innehållsfilen (inte i detta dokument, som bara disponerar ner till H3).
 
@@ -81,7 +81,7 @@ Regler:
 
 # Kapitelavslutningar
 
-Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt dessa titlar: **Sammanfattning**, **Begrepp**, **Praktiska uppgifter och projekt**. De är egna innehållstyper (`type: kapitelsammanfattning` / `begreppsovning` / `uppgiftsbank`), inte lärandemål, saknar `learningGoals` och tränar kapitlets innehåll som helhet (12-produktionsarkitektur.md, "Kapitelavslutningar"). De listas i detta dokument som vilket avsnitt som helst, sist i varje kapitel.
+Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt dessa titlar: **Sammanfattning**, **Begrepp**, **Projektuppgifter**. De är egna innehållstyper (`type: kapitelsammanfattning` / `begreppsovning` / `uppgiftsbank`), inte lärandemål, saknar `learningGoals` och tränar kapitlets innehåll som helhet (12-produktionsarkitektur.md, "Kapitelavslutningar"). De listas i detta dokument som vilket avsnitt som helst, sist i varje kapitel.
 
 ---
 
@@ -118,7 +118,7 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 
 ## 1.5 Begrepp
 
-## 1.6 Praktiska uppgifter och projekt
+## 1.6 Projektuppgifter
 
 ---
 
@@ -148,7 +148,7 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 
 ## 2.4 Begrepp
 
-## 2.5 Praktiska uppgifter och projekt
+## 2.5 Projektuppgifter
 
 ---
 
@@ -196,7 +196,7 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 
 ## 3.8 Begrepp
 
-## 3.9 Praktiska uppgifter och projekt
+## 3.9 Projektuppgifter
 
 ---
 
@@ -243,7 +243,7 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 
 ## 4.7 Begrepp
 
-## 4.8 Praktiska uppgifter och projekt
+## 4.8 Projektuppgifter
 
 ---
 
@@ -282,7 +282,7 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 
 ## 5.7 Begrepp
 
-## 5.8 Praktiska uppgifter och projekt
+## 5.8 Projektuppgifter
 
 ---
 
@@ -344,7 +344,7 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 
 ## 6.8 Begrepp
 
-## 6.9 Praktiska uppgifter och projekt
+## 6.9 Projektuppgifter
 
 ---
 
@@ -372,7 +372,7 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 
 ## 7.4 Begrepp
 
-## 7.5 Praktiska uppgifter och projekt
+## 7.5 Projektuppgifter
 
 ---
 
@@ -400,7 +400,7 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 
 ## 8.4 Begrepp
 
-## 8.5 Praktiska uppgifter och projekt
+## 8.5 Projektuppgifter
 
 ---
 
@@ -434,7 +434,7 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 
 ## 9.6 Begrepp
 
-## 9.7 Praktiska uppgifter och projekt
+## 9.7 Projektuppgifter
 
 ---
 
@@ -469,7 +469,7 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 
 ## 10.5 Begrepp
 
-## 10.6 Praktiska uppgifter och projekt
+## 10.6 Projektuppgifter
 
 ---
 
@@ -503,7 +503,7 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 
 ## 11.6 Begrepp
 
-## 11.7 Praktiska uppgifter och projekt
+## 11.7 Projektuppgifter
 
 ---
 
@@ -529,7 +529,7 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 
 ## 12.4 Begrepp
 
-## 12.5 Praktiska uppgifter och projekt
+## 12.5 Projektuppgifter
 
 ---
 
@@ -565,7 +565,7 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 
 ## 13.6 Begrepp
 
-## 13.7 Praktiska uppgifter och projekt
+## 13.7 Projektuppgifter
 
 ---
 

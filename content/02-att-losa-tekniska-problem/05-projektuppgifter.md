@@ -2,7 +2,7 @@
 type: uppgiftsbank
 chapter: 2
 sectionNumber: 5
-title: Praktiska uppgifter och projekt
+title: Projektuppgifter
 status: fardig-forsta-version
 ---
 

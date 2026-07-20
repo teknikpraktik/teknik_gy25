@@ -104,8 +104,11 @@ Elasticitetsmodul, sträckgräns och brottgräns är tillsammans den information
 4. Två stag av samma material och samma slanka dimension sitter i en byggställning. Det ena belastas i drag, det andra i tryck. Förklara varför det ena riskerar att knäckas men inte det andra.
 5. Varför beskriver σ = F / A inte spänningen i en balk som böjs? Vad är det som skiljer böjningsfallet från det centriska dragfallet?
 6. Brottgränsen är inte den spänning där provstaven går av. Förklara vad brottgränsen faktiskt är, och varför dragprovkurvan faller efter den punkten.
-7. En stång med tvärsnittsarean 50 mm² belastas centriskt med dragkraften 15 000 N. Beräkna spänningen.
-8. Ett dragstag ska klara dragkraften 25 000 N utan att spänningen överstiger 125 N/mm². Beräkna den tvärsnittsarea staget minst måste ha.
-9. En balk som ursprungligen är 3000 mm lång töjs 1,5 mm under belastning. Beräkna töjningen i procent.
-10. En stålstång är 2500 mm lång och belastas till spänningen 120 N/mm². Stålets elasticitetsmodul är 200 000 N/mm². Beräkna töjningen och därefter stångens förlängning i millimeter. Bedöm om svaret är rimligt för en stålstång.
-11. Ett dragstag av stålet S235 har tvärsnittsarean 300 mm² och belastas med dragkraften 54 000 N. Stålets sträckgräns är 235 N/mm², brottgränsen 360 N/mm² och elasticitetsmodulen 200 000 N/mm². Beräkna spänningen och avgör om staget befinner sig i det elastiska eller det plastiska området. Beräkna därefter töjningen, och förklara varför beräkningen av töjningen hade varit ogiltig om spänningen i stället legat på 300 N/mm². Vad skulle hända med staget om lasten ökades så att spänningen nådde 250 N/mm² och sedan togs bort helt?
+
+## Beräkningsuppgifter
+
+1. En stång med tvärsnittsarean 50 mm² belastas centriskt med dragkraften 15 000 N. Beräkna spänningen.
+2. Ett dragstag ska klara dragkraften 25 000 N utan att spänningen överstiger 125 N/mm². Beräkna den tvärsnittsarea staget minst måste ha.
+3. En balk som ursprungligen är 3000 mm lång töjs 1,5 mm under belastning. Beräkna töjningen i procent.
+4. En stålstång är 2500 mm lång och belastas till spänningen 120 N/mm². Stålets elasticitetsmodul är 200 000 N/mm². Beräkna töjningen och därefter stångens förlängning i millimeter. Bedöm om svaret är rimligt för en stålstång.
+5. Ett dragstag av stålet S235 har tvärsnittsarean 300 mm² och belastas med dragkraften 54 000 N. Stålets sträckgräns är 235 N/mm², brottgränsen 360 N/mm² och elasticitetsmodulen 200 000 N/mm². Beräkna spänningen och avgör om staget befinner sig i det elastiska eller det plastiska området. Beräkna därefter töjningen, och förklara varför beräkningen av töjningen hade varit ogiltig om spänningen i stället legat på 300 N/mm². Vad skulle hända med staget om lasten ökades så att spänningen nådde 250 N/mm² och sedan togs bort helt?

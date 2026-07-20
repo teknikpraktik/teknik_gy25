@@ -52,7 +52,7 @@ content/
     ...
     07-sammanfattning.md            # kapitelavslutning: type: kapitelsammanfattning (inga learningGoals)
     08-begrepp.md                   # kapitelavslutning: type: begreppsovning
-    09-praktiska-uppgifter-och-projekt.md  # kapitelavslutning: type: uppgiftsbank
+    09-projektuppgifter.md                 # kapitelavslutning: type: uppgiftsbank
 figures/
   registry.yml                      # centralt figur-ID-register
 schemas/
@@ -178,11 +178,11 @@ Varje färdigproducerat kapitel avslutas med tre avsnitt som saknar `learningGoa
 
 - `type: kapitelsammanfattning` — en sammanhängande löptext, cirka 300 ord, som binder ihop kapitlets avsnitt. Ingen `ordlista`.
 - `type: begreppsovning` — kapitlets samlade begreppsövning: en punktlista över kapitlets centrala begrepp där eleven förklarar varje begrepp med en egen mening.
-- `type: uppgiftsbank` — kapitlets bank av praktiska uppgifter och projekt, en numrerad lista, vid behov delad i tre omfattningskategorier (Kortare uppgifter, Fördjupningsuppgifter, Projekt), utan övrig uppgiftsmetadata.
+- `type: uppgiftsbank` — kapitlets samlade bank av praktiska uppgifter, laborationer, konstruktionsuppgifter och projekt, en enda numrerad lista utan underkategorier och utan övrig uppgiftsmetadata.
 
 Ordningen sist i kapitlet är sammanfattning, begreppsövning, uppgiftsbank (redaktionellt beslut 2026-07-14, produktionslogg.md).
 
-**Struktur och ordning styrs av 06-bokstruktur.md**, precis som för alla andra avsnitt — det finns inget separat kapitelmanifest. De tre kapitelavslutande avsnitten är alltid de tre sista H2-raderna i ett kapitels avsnitt i 06, med exakt titlarna Sammanfattning, Begrepp och Praktiska uppgifter och projekt. `scripts/validate.mjs` känner igen dem på titeln och stämmer av mot filerna åt båda håll (rätt `type`/`chapter`/`sectionNumber`).
+**Struktur och ordning styrs av 06-bokstruktur.md**, precis som för alla andra avsnitt — det finns inget separat kapitelmanifest. De tre kapitelavslutande avsnitten är alltid de tre sista H2-raderna i ett kapitels avsnitt i 06, med exakt titlarna Sammanfattning, Begrepp och Projektuppgifter. `scripts/validate.mjs` känner igen dem på titeln och stämmer av mot filerna åt båda håll (rätt `type`/`chapter`/`sectionNumber`).
 
 Frontmatter (schemavariant i `schemas/larandemal.schema.mjs`, känns igen på `type`):
 
@@ -190,11 +190,11 @@ Frontmatter (schemavariant i `schemas/larandemal.schema.mjs`, känns igen på `t
 type: uppgiftsbank          # eller: begreppsovning, kapitelsammanfattning
 chapter: 1
 sectionNumber: 6
-title: "Praktiska uppgifter och projekt"
+title: "Projektuppgifter"
 status: fardig-forsta-version
 ```
 
-Uppgiftsbanken har **ingen uppgiftsmetadata**. Uppgifterna skrivs som en numrerad lista i brödtexten — löpnummer från 1, ett namn i fetstil och därefter uppgiften. Banken får delas in i tre omfattningskategorier som rubriker (Kortare uppgifter, Fördjupningsuppgifter, Projekt) med bibehållen löpande numrering (redaktionellt beslut 2026-07-19); därutöver anges ingen arbetsform, tidsåtgång, redovisningsform eller lärandemålskoppling. Utförandet överlåts till läraren och eleven (redaktionellt beslut). Begreppsövningen får ha en valfri `ordlista`. Kapitelsammanfattningen har varken `ordlista` eller annan metadata, bara löptext.
+Uppgiftsbanken har **ingen uppgiftsmetadata**. Uppgifterna skrivs som en numrerad lista i brödtexten — löpnummer från 1, ett namn i fetstil och därefter uppgiften. Banken delas inte in i underkategorier, utan uppgifterna ordnas i stigande omfattning i en enda lista (redaktionellt beslut 2026-07-20); därutöver anges ingen arbetsform, tidsåtgång, redovisningsform eller lärandemålskoppling. Utförandet överlåts till läraren och eleven (redaktionellt beslut). Begreppsövningen får ha en valfri `ordlista`. Kapitelsammanfattningen har varken `ordlista` eller annan metadata, bara löptext.
 
 **Placering:** kapitelavslutningarna slottas sist i kapitlet (efter sista teoriavsnittet) i sidopanelen, kapitelöversikten, granskningsvyn `/review/` och exporten, i 06:s ordning.
 

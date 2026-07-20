@@ -422,7 +422,7 @@ for (const avs of avsnittFiler) {
 
 // -------------------------------------------------------- Kapitelavslutningar
 // Strukturkällan är 06-bokstruktur.md självt (via bokstruktur-data.mjs) — varje
-// kapitel har alltid Sammanfattning, Begrepp, Praktiska uppgifter och projekt
+// kapitel har alltid Sammanfattning, Begrepp, Projektuppgifter
 // som sina tre sista avsnitt. Stäm av mot filerna åt båda håll.
 for (const p of plan) {
 	if (!p.type) continue;

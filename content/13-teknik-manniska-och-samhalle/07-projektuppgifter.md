@@ -1,8 +1,8 @@
 ---
 type: uppgiftsbank
-chapter: 4
-sectionNumber: 8
-title: Praktiska uppgifter och projekt
+chapter: 13
+sectionNumber: 7
+title: Projektuppgifter
 status: ej-paborjad
 ---
 

@@ -94,9 +94,12 @@ Samma princip förklarar varför en lyftkrans bom är kraftigast byggd närmast 
 3. En kraft dras rakt längs en skiftnyckels handtag, i riktning bort från muttern. Vilket moment ger den kring muttern? Förklara med hjälp av verkningslinjen.
 4. Vad menas med att ett moment är medurs eller moturs, och varför måste riktningen hållas reda på när flera moment verkar samtidigt?
 5. Förklara vad utväxling innebär, och vad man betalar för en hög utväxling hos ett handverktyg.
-6. En skruv dras åt med en kraft på 40 N vinkelrätt mot en skruvmejsels handtag, vars radie är 0,02 m. Beräkna momentet.
-7. En dörr har handtaget 0,9 m från gångjärnen. Vilken vinkelrät kraft krävs för att ge momentet 27 Nm?
-8. En mutter kräver 90 Nm för att lossna. Beräkna kraften som krävs med en nyckel vars handtag är 0,25 m, och beräkna sedan kraften om handtaget förlängs till 0,5 m med ett pårör. Kraften antas verka vinkelrätt i båda fallen.
-9. En hand drar med 300 N i en nyckel vars handtag är 0,20 m långt, men i vinkeln 50 grader mot handtaget. Beräkna momentet kring muttern. Jämför med det moment samma kraft hade gett om den verkat vinkelrätt, och förklara skillnaden.
-10. Ett barn med tyngden 250 N sitter 2,0 m från en gungbrädas vridpunkt. Hur långt från vridpunkten måste en vuxen med tyngden 800 N sitta för att gungbrädan ska balansera?
-11. En hjullastares skopa lyfts av en hydraulcylinder som griper an 0,35 m från lyftarmens ledpunkt, medan lastens tyngd verkar 2,1 m från samma punkt. Lasten i skopan väger 1200 kg. Beräkna först lastens tyngdkraft, sedan det moment lasten ger kring ledpunkten, och slutligen den kraft cylindern minst måste ge. Kontrollera att förhållandet mellan cylinderkraften och lastens tyngdkraft stämmer med förhållandet mellan de båda momentarmarna, och bedöm om storleksordningen på cylinderkraften är rimlig för en verklig maskin.
+
+## Beräkningsuppgifter
+
+1. En skruv dras åt med en kraft på 40 N vinkelrätt mot en skruvmejsels handtag, vars radie är 0,02 m. Beräkna momentet.
+2. En dörr har handtaget 0,9 m från gångjärnen. Vilken vinkelrät kraft krävs för att ge momentet 27 Nm?
+3. En mutter kräver 90 Nm för att lossna. Beräkna kraften som krävs med en nyckel vars handtag är 0,25 m, och beräkna sedan kraften om handtaget förlängs till 0,5 m med ett pårör. Kraften antas verka vinkelrätt i båda fallen.
+4. Ett barn med tyngden 250 N sitter 2,0 m från en gungbrädas vridpunkt. Hur långt från vridpunkten måste en vuxen med tyngden 800 N sitta för att gungbrädan ska balansera?
+5. En hand drar med 300 N i en nyckel vars handtag är 0,20 m långt, men i vinkeln 50 grader mot handtaget. Beräkna momentet kring muttern. Jämför med det moment samma kraft hade gett om den verkat vinkelrätt, och förklara skillnaden.
+6. En hjullastares skopa lyfts av en hydraulcylinder som griper an 0,35 m från lyftarmens ledpunkt, medan lastens tyngd verkar 2,1 m från samma punkt. Lasten i skopan väger 1200 kg. Beräkna först lastens tyngdkraft, sedan det moment lasten ger kring ledpunkten, och slutligen den kraft cylindern minst måste ge. Kontrollera att förhållandet mellan cylinderkraften och lastens tyngdkraft stämmer med förhållandet mellan de båda momentarmarna, och bedöm om storleksordningen på cylinderkraften är rimlig för en verklig maskin.

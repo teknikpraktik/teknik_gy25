@@ -100,10 +100,13 @@ Friläggningen ger på så vis en fullständig lista över de krafter som hålle
 3. En bil accelererar framåt. Förklara i vilken riktning friktionskraften från vägbanan verkar på drivhjulen, och varför beskrivningen "friktion motverkar rörelse" är missvisande här.
 4. Varför kan en kätting bara bära dragkraft, medan ett diagonalstag i en byggställning kan bära både drag och tryck?
 5. Kapitlets gångbro beskrivs som en modell med bestämd spännvidd, egentyngd och stödplacering, där räcken och skruvförband inte finns med. Varför förenklas en verklig konstruktion på det sättet innan den beräknas, och vilken risk finns med förenklingen?
-6. En rugbyspelare med massan 90 kg står stilla på planen. Beräkna tyngdkraften som verkar på spelaren.
-7. En travers lyfter en last rakt uppåt. Lyftkroken drar med 4,5 kN uppåt och lastens tyngdkraft är 3,2 kN nedåt. Bestäm resultantens storlek och riktning.
-8. Två krafter på 6000 N respektive 8000 N verkar vinkelrätt mot varandra i samma punkt. Bestäm resultantens storlek. Avgör innan du räknar om svaret bör bli större eller mindre än 8000 N, och motivera.
-9. En kraft på 200 N drar i ett rep som lutar 40 grader över marken. Beräkna repets horisontella och vertikala komposant.
-10. Ett diagonalstag i en byggställning är spänt med 2,5 kN och lutar 55 grader mot vågplanet. Beräkna hur stor del av stagets kraft som verkar vågrätt respektive lodrätt. Vilken av komposanterna är störst, och stämmer det med vad du kan vänta dig av vinkeln?
-11. En lampa hänger stilla i en enda lina från taket. Frilägg lampan, rita in samtliga yttre krafter och ange vad som måste gälla mellan dem för att lampan ska hänga stilla. Vad blir linans dragkraft om lampans massa är 3,0 kg?
-12. En arbetare drar en släde med ett rep som lutar 25 grader över marken. Repet är spänt med 400 N. Frilägg släden och rita in samtliga yttre krafter. Beräkna repets båda komposanter, och förklara sedan vilken av dem som minskar normalkraften mot marken och varför det gör släden lättare att dra. Vad skulle hända med de båda komposanterna om arbetaren i stället höll repet nästan vågrätt?
+
+## Beräkningsuppgifter
+
+1. En rugbyspelare med massan 90 kg står stilla på planen. Beräkna tyngdkraften som verkar på spelaren.
+2. En travers lyfter en last rakt uppåt. Lyftkroken drar med 4,5 kN uppåt och lastens tyngdkraft är 3,2 kN nedåt. Bestäm resultantens storlek och riktning.
+3. En kraft på 200 N drar i ett rep som lutar 40 grader över marken. Beräkna repets horisontella och vertikala komposant.
+4. Två krafter på 6000 N respektive 8000 N verkar vinkelrätt mot varandra i samma punkt. Bestäm resultantens storlek. Avgör innan du räknar om svaret bör bli större eller mindre än 8000 N, och motivera.
+5. Ett diagonalstag i en byggställning är spänt med 2,5 kN och lutar 55 grader mot vågplanet. Beräkna hur stor del av stagets kraft som verkar vågrätt respektive lodrätt. Vilken av komposanterna är störst, och stämmer det med vad du kan vänta dig av vinkeln?
+6. En lampa hänger stilla i en enda lina från taket. Frilägg lampan, rita in samtliga yttre krafter och ange vad som måste gälla mellan dem för att lampan ska hänga stilla. Vad blir linans dragkraft om lampans massa är 3,0 kg?
+7. En arbetare drar en släde med ett rep som lutar 25 grader över marken. Repet är spänt med 400 N. Frilägg släden och rita in samtliga yttre krafter. Beräkna repets båda komposanter, och förklara sedan vilken av dem som minskar normalkraften mot marken och varför det gör släden lättare att dra. Vad skulle hända med de båda komposanterna om arbetaren i stället höll repet nästan vågrätt?

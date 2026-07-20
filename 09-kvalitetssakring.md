@@ -74,9 +74,15 @@ Granskning sker på tre nivåer.
 
 ---
 
-## Instuderingsfrågor
+## Instuderingsfrågor och beräkningsuppgifter
 
-□ Avsnittet avslutas med EN samlad sektion instuderingsfrågor, inget bestämt antal (03). Undvik långa frågebatterier.
+□ Avsnittet har EN samlad sektion instuderingsfrågor, inget bestämt antal (03). Undvik långa frågebatterier.
+
+□ Avsnitt där beräkning är central har därefter en egen sektion Beräkningsuppgifter (03). Inga räkneuppgifter ligger kvar bland instuderingsfrågorna, och inga rena resonemangsfrågor bland beräkningsuppgifterna.
+
+□ Beräkningsuppgifterna stiger i svårighetsgrad: direkt tillämpning, därefter flerstegsuppgifter, sist en verklighetsnära uppgift med metodval och rimlighetsbedömning.
+
+□ Varje beräkningsuppgift går att lösa med samband som redan införts i eller före avsnittet, och har tillräckliga data.
 
 □ Frågorna kan besvaras med hjälp av texten och tränar avsnittets centrala delar, över samtliga delavsnitt.
 
@@ -159,6 +165,10 @@ Granskning sker på tre nivåer.
 □ Begreppsövningen är repetition och tillämpning, aldrig elevens första möte med ett begrepp.
 
 □ Kapitlet har en uppgiftsbank som en enkel numrerad lista (löpnummer + namn), utan nivåer och utan metadata om arbetsform, tid, redovisning eller lärandemålskoppling (03).
+
+□ Kapitlet har 4–6 projektuppgifter, normalt 5 (03).
+
+□ Uppgifterna varierar i form: laboration och mätning, konstruktion, undersökning samt beräknande eller dimensionerande arbete, i den mån ämnesinnehållet medger det (03).
 
 □ Bankens uppgifter ger tillsammans tillräcklig praktisk och producerande träning för kapitlets centrala innehåll och förmågor.
 
