@@ -74,15 +74,25 @@ Granskning sker på tre nivåer.
 
 ---
 
-## Instuderingsfrågor och beräkningsuppgifter
+## Instuderingsfrågor och praktiska uppgifter
 
 □ Avsnittet har EN samlad sektion instuderingsfrågor, inget bestämt antal (03). Undvik långa frågebatterier.
 
-□ Avsnitt där beräkning är central har därefter en egen sektion Beräkningsuppgifter (03). Inga räkneuppgifter ligger kvar bland instuderingsfrågorna, och inga rena resonemangsfrågor bland beräkningsuppgifterna.
+□ Ordningen är teori, instuderingsfrågor, praktiska uppgifter (03, redaktionellt beslut 2026-07-20).
 
-□ Beräkningsuppgifterna stiger i svårighetsgrad: direkt tillämpning, därefter flerstegsuppgifter, sist en verklighetsnära uppgift med metodval och rimlighetsbedömning.
+□ Instuderingsfrågorna och de praktiska uppgifterna är korrekt åtskilda: inga uppgifter som kräver att eleven räknar, ritar, programmerar, bygger, mäter eller testar ligger bland instuderingsfrågorna, och inga rena resonemangsfrågor bland de praktiska uppgifterna.
 
-□ Varje beräkningsuppgift går att lösa med samband som redan införts i eller före avsnittet, och har tillräckliga data.
+□ De praktiska uppgifterna kräver faktisk elevaktivitet och är inte omformulerade instuderingsfrågor.
+
+□ De praktiska uppgifterna tillämpar det aktuella avsnittets innehåll, inte ett annat avsnitts.
+
+□ De praktiska uppgifterna stiger i svårighetsgrad: direkt tillämpning, därefter flerstegsuppgifter, sedan en verklighetsnära uppgift, och där det är relevant tolkning eller rimlighetsbedömning.
+
+□ Varje praktisk uppgift går att lösa med samband, metoder och begrepp som redan införts i eller före avsnittet, och har tillräckliga data.
+
+□ Inga föråldrade eller uppdelade uppgiftsrubriker används (Beräkningsuppgifter, Rituppgifter, CAD-uppgifter, Programmeringsuppgifter, Laborationer, Konstruktionsuppgifter, Tillämpningsuppgifter, Analysuppgifter, Tillämpningsproblem, Fördjupningsuppgifter, Kortare uppgifter, Projekt, Förstå/Utveckla/Utmana).
+
+□ Rubriken Projektuppgifter förekommer inte inne i ett avsnitt.
 
 □ Frågorna kan besvaras med hjälp av texten och tränar avsnittets centrala delar, över samtliga delavsnitt.
 
@@ -92,7 +102,7 @@ Granskning sker på tre nivåer.
 
 □ Inga frågor upprepar varandra, testar en oviktig detalj eller ligger utanför avsnittets lärandemål.
 
-□ Inget synligt Begrepp-block och inga praktiska uppgifter ligger under avsnittet — begreppen behandlas i teorin, praktiken i kapitlets uppgiftsbank (03).
+□ Inget synligt Begrepp-block ligger under avsnittet — begreppen behandlas i teorin (03).
 
 ---
 
@@ -164,11 +174,17 @@ Granskning sker på tre nivåer.
 
 □ Begreppsövningen är repetition och tillämpning, aldrig elevens första möte med ett begrepp.
 
-□ Kapitlet har en uppgiftsbank som en enkel numrerad lista (löpnummer + namn), utan nivåer och utan metadata om arbetsform, tid, redovisning eller lärandemålskoppling (03).
+□ Kapitlet avslutas i ordningen Sammanfattning, Begrepp, Projektuppgifter (03).
+
+□ Kapitlet har en projektbank som en enkel numrerad lista (löpnummer + namn), utan underrubriker och utan metadata om arbetsform, tid, redovisning eller lärandemålskoppling (03).
 
 □ Kapitlet har 4–6 projektuppgifter, normalt 5 (03).
 
-□ Uppgifterna varierar i form: laboration och mätning, konstruktion, undersökning samt beräknande eller dimensionerande arbete, i den mån ämnesinnehållet medger det (03).
+□ Varje projektuppgift integrerar flera av kapitlets avsnitt och är inte en lokal praktisk uppgift med fler ord. Minst en fungerar som egentlig syntesuppgift.
+
+□ Inga små, lokala aktiviteter ligger kvar i projektbanken; de hör hemma under Praktiska uppgifter i det avsnitt de tillämpar.
+
+□ Uppgifterna varierar i form på ett sätt som är relevant för kapitlets ämnesinnehåll (laboration och mätning, undersökning, konstruktion, CAD, programmering, dimensionering, analys, teknikutvecklingsarbete, utvärdering, dokumentation, jämförelse). Variationen är inte artificiellt konstruerad.
 
 □ Bankens uppgifter ger tillsammans tillräcklig praktisk och producerande träning för kapitlets centrala innehåll och förmågor.
 

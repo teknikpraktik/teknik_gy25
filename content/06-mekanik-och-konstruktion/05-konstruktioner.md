@@ -85,7 +85,7 @@ Underhåll väger också in. Ett fackverk med många förband kräver mer regelb
 8. Följ lastvägen för en snöhög som ligger mitt på ett tak: beskriv vilka delar lasten passerar, i vilken ordning, och om varje del belastas av drag, tryck eller böjning, tills lasten når marken.
 9. En gångbro ska byggas över en 30 m bred ravin. Jämför en fackverksbro och en bågbro för uppdraget. Redogör för hur lasten förs till marken i respektive lösning, vilka krafter markens fästen måste klara i de två fallen, och vilken av lösningarna som ställer högst krav på berggrunden vid ravinens kanter. Ange vilken du skulle välja om berget är fast, och vilken du skulle välja om marken är lös lera, och motivera båda valen.
 
-## Beräkningsuppgifter
+## Praktiska uppgifter
 
 1. En massiv rundstång har diametern 40 mm. Ett rör har samma ytterdiameter, 40 mm, och väggtjockleken 4,0 mm. Beräkna båda tvärsnittsareorna och avgör hur många procent av den massiva stångens material röret använder.
 2. En takstol spänner 10,0 m mellan två upplag. Egentyngden 4000 N verkar i mitten, och en snölast på 6000 N ligger samlad 3,0 m från upplag A. Beräkna upplagskrafterna, och kontrollera svaret genom att räkna momentsumman kring det andra upplaget.

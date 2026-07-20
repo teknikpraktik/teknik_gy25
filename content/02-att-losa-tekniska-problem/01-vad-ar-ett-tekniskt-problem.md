@@ -61,10 +61,16 @@ Begränsningar känns som hinder men fungerar ofta tvärtom. Utan bilens bagageu
 
 1. Beskriv kedjan mellan behov, problem och lösning med egna ord, och ge ett eget exempel.
 2. Varför har ett tekniskt problem nästan aldrig bara ett rätt svar, till skillnad från en matematikuppgift?
-3. En elev skriver "skolan behöver fler papperskorgar" som sitt tekniska problem. Vad är fel med formuleringen, och hur skulle du skriva om den så att den inte bakar in en lösning?
-4. Vilka tre delar ska en problemformulering innehålla, och vad beskriver varje del?
-5. Vad beskriver funktionen, och vad ska den aldrig göra?
-6. Vad krävs för att ett krav ska göra nytta, enligt texten?
-7. Vad är en begränsning, och varför fungerar begränsningar ofta som hjälp snarare än hinder?
-8. När är ett tekniskt problem färdigformulerat, enligt texten?
-9. Här är två formuleringar av samma problem: (a) "Bordet ska ha fyra avskruvbara ben." (b) "Bordet ska kunna transporteras platt och monteras av kunden." Vilken är den bättre problemformuleringen, och varför?
+3. Vilka tre delar ska en problemformulering innehålla, vad beskriver var och en, och när är ett tekniskt problem färdigformulerat?
+4. Vad beskriver funktionen, och vad ska den aldrig göra?
+5. Vad krävs för att ett krav ska göra nytta, enligt texten?
+6. Vad är en begränsning, och varför fungerar begränsningar ofta som hjälp snarare än hinder?
+7. Här är två formuleringar av samma problem: (a) "Bordet ska ha fyra avskruvbara ben." (b) "Bordet ska kunna transporteras platt och monteras av kunden." Vilken är den bättre problemformuleringen, och varför?
+
+## Praktiska uppgifter
+
+1. **Behov, problem eller lösning?** Här är sex påståenden: (a) eleverna blir blöta på väg till cykelstället, (b) skolan behöver ett tak över cykelstället, (c) cyklarna välter i blåst, (d) skolan behöver fler mobilladdare, (e) matsalen är för högljudd vid lunch, (f) matsalen behöver ljudabsorbenter i taket. Sortera varje påstående som behov, tekniskt problem eller inbakad lösning. Skriv därefter om de påståenden som bakar in en lösning så att de blir tekniska problem som lämnar vägarna öppna.
+
+2. **Gör kraven prövbara.** En grupp har skrivit dessa krav på en ny skolbänk: bänken ska vara stabil, den ska tåla hård användning, den ska vara lätt att flytta, den ska hålla länge och den ska se bra ut. Skriv om vart och ett så att det går att avgöra när kravet är uppfyllt, och ange för varje omskrivet krav hur du skulle pröva det i praktiken. Avgör sist vilket av de fem krav som inte går att göra prövbart, och förklara varför.
+
+3. **Begränsningarna bakom en produkt.** Välj en vardagsprodukt du har tillgång till, till exempel en hopfällbar sittdyna, en termos eller ett pennfodral. Undersök produkten och skriv ned vilka begränsningar som rimligen har styrt utformningen: mått, material, tillverkningskostnad, vikt eller regler. Ändra därefter en av begränsningarna kraftigt, till exempel att produkten ska rymmas i en jackficka eller kosta hälften, och skissa hur lösningen då skulle behöva se ut. Förklara vilket krav som blev svårast att hålla efter ändringen.

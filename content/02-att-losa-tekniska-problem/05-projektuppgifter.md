@@ -6,8 +6,8 @@ title: Projektuppgifter
 status: fardig-forsta-version
 ---
 
-Kapitlets praktiska uppgifter och projekt. Läraren och eleven avgör omfattning,
-arbetsform och redovisning.
+Kapitlets projektuppgifter, ordnade i stigande omfattning. Läraren och eleven avgör
+omfattning, arbetsform och redovisning.
 
 1. **Airbag eller skal.** Två tekniska lösningar skyddar cyklistens huvud på helt olika sätt: den vanliga cykelhjälmen med hårt skal, och en uppblåsbar krage som vecklar ut en airbag runt huvudet i olycksögonblicket. Jämför de två skyddsprinciperna i en tabell utifrån skyddsprincip, energibehov och behov av laddning, återanvändning efter en utlösning, underhåll, vad som händer i och efter en olycka, användningsbegränsningar och teknisk komplexitet, och rita en enkel principskiss av respektive lösning. Den uppblåsbara kragen såldes under namnet Hövding men drogs tillbaka från marknaden efter att säkerhetsbrister uppdagats; uppgiften handlar om att förstå skillnaden i skyddsprincip, inte om att rekommendera en produkt.
 

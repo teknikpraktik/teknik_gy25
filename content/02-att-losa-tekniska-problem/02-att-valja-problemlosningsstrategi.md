@@ -122,26 +122,21 @@ När problemet är formulerat och en strategi vald börjar arbetet med att ta fr
 
 ## Instuderingsfrågor
 
-1. Vilka tre frågor avgör vilken problemlösningsstrategi som passar ett tekniskt problem?
-2. Varför måste frågan om problemet går att överblicka besvaras före de andra två?
-3. Varför gäller strategin återanvänd befintlig lösning oavsett kostnad, så fort problemet är välkänt?
-4. En skola vill sätta upp en offentlig konstinstallation som ska tåla vind, snö och klotter i tjugo år. Hur bedömer du problemet utifrån de tre frågorna, och vilken strategi är rimlig? Motivera.
-5. Vad är det, enligt texten, som skiljer ingenjören från gissaren?
-6. Förklara med egna ord vad ett delproblem är.
-7. Varför måste ett problem gå att överblicka innan frågorna om kunskapsläge och kostnad kan besvaras?
-8. En robotdammsugare ska både hitta hem till laddstationen och undvika att köra i trappan. Bör de två funktionerna brytas ned som ett delproblem tillsammans eller som två separata delproblem? Motivera ditt val.
-9. Vad menas med att nedbrytningens risk sitter i skarvarna?
-10. Vad måste den som bryter ned ett problem bestämma om delarnas gränssnitt, enligt texten?
-11. Vad var den schweiziske ingenjörens egna insats i kardborrebandets fall, om naturen redan hade löst fästproblemet?
-12. Vilka tre källor till en beprövad lösning tar texten upp?
-13. En elev ska konstruera en enkel hylla och funderar på vilket vinkeljärn som ska hålla ihop den. Vilken av de tre källorna till en beprövad lösning passar bäst här, och varför?
-14. Beskriv strategin pröva och förbättra med Edisons glödtråd som exempel.
-15. Varför passar strategin särskilt bra när ett misslyckat försök är billigt?
-16. Vad är det som gör SpaceX sätt att testa raketer till pröva och förbättra, och inte bara gissande?
-17. Vad skiljer ett dokumenterat försök från en isolerad slump, enligt texten?
-18. En cykeltillverkare funderar på att testa en ny däckblandning genom att låta hundra kunder cykla på den i sex månader, i stället för att beräkna slitaget i förväg. Passar pröva och förbättra här? Motivera utifrån hur väl förstått problemet är och vad ett misslyckande skulle kosta.
-19. Varför krävde Apollo 13-problemet analys och kontrollerade tester snarare än att pröva sig fram i skarpt läge?
-20. Vad gjorde Houston-teamet på marken innan bygginstruktionen skickades till besättningen, och varför?
-21. Varför är en lösning som aldrig prövats i något kontrollerat sammanhang "en gissning i finare kläder", enligt texten?
-22. Vad är det, enligt texten, som avgör om analysera-innan-du-bygger är rätt strategi, om det inte är att den är mest seriös?
-23. Ge ett eget exempel på ett tekniskt problem där ett misslyckat försök i verkligheten vore för dyrt eller farligt, och förklara vad som skulle kunna testas i kontrollerad form i stället.
+1. Vilka tre frågor avgör vilken problemlösningsstrategi som passar ett tekniskt problem, och varför måste frågan om problemet går att överblicka besvaras före de andra två?
+2. Varför gäller strategin återanvänd befintlig lösning oavsett kostnad, så fort problemet är välkänt?
+3. Vad är det, enligt texten, som skiljer ingenjören från gissaren?
+4. Förklara med egna ord vad ett delproblem är, och varför en nedbrytning ska följa vad lösningen ska göra i stället för hur den ser ut.
+5. En robotdammsugare ska både hitta hem till laddstationen och undvika att köra i trappan. Bör de två funktionerna brytas ned som ett delproblem tillsammans eller som två separata delproblem? Motivera ditt val.
+6. Vad menas med att nedbrytningens risk sitter i skarvarna, och vad måste den som bryter ned ett problem därför bestämma om delarnas gränssnitt? Använd Mars Climate Orbiter som exempel.
+7. Vilka tre källor till en beprövad lösning tar texten upp? Förklara utifrån kardborrebandet vad den schweiziske ingenjörens egen insats bestod i, om naturen redan hade löst fästproblemet.
+8. Beskriv strategin pröva och förbättra med Edisons glödtråd som exempel, och förklara varför den passar särskilt bra när ett misslyckat försök är billigt.
+9. Vad skiljer ett dokumenterat försök från en isolerad slump, och vad är det som gör SpaceX sätt att testa raketer till pröva och förbättra snarare än gissande?
+10. Varför krävde Apollo 13-problemet analys och kontrollerade tester snarare än att pröva sig fram i skarpt läge? Beskriv vad Houston-teamet gjorde på marken innan bygginstruktionen skickades upp, och förklara utifrån det vad som avgör när analysera-innan-du-bygger är rätt strategi.
+
+## Praktiska uppgifter
+
+1. **Leta upp den beprövade lösningen.** Här är tre små tekniska problem: en hylla ska fästas i väggen och bära tunga böcker, två plaströr ska skarvas så att skarven blir tät, och en affisch ska sitta uppe ett halvår utan att skada väggen. Ta för vart och ett reda på en befintlig, beprövad lösning och ange vilken av källorna standard, handbok eller naturen den kommer från. Redovisa vad du sökte på eller slog upp i, och skissa hur lösningen sitter fast eller tätar. Ange sist vilket av de tre problemen som var svårast att hitta ett färdigt svar på, och varför.
+
+2. **Fem försök och en slutsats.** Genomför ett eget pröva-och-förbättra-arbete på ett litet konstruktionsproblem som läraren anger eller som du väljer själv, till exempel en pappersremsa som ska bära en mynthög, ett pappersflygplan som ska flyga så långt som möjligt eller en förpackning som ska skydda ett rått ägg vid ett fall. Genomför minst fem försök och för protokoll: vad du ändrade från förra försöket, vad som hände och vilken slutsats du drog. Redovisa protokollet som en tabell, och visa i en avslutande kommentar hur varje försök byggde på det föregående i stället för att upprepa det.
+
+3. **Testa i det lilla först.** En cykeltillverkare vill veta hur en ny däckblandning slits, och överväger att låta hundra kunder cykla på däcken i sex månader. Bedöm problemet utifrån de tre frågorna och avgör om det är rimligt att pröva sig fram i skarpt läge. Utforma därefter ett kontrollerat test som kan göras innan däcken går ut till kunder: beskriv vad som ska mätas, på vilken modell eller uppställning, hur länge, och vilket resultat som skulle få tillverkaren att gå vidare respektive avbryta. Skissa uppställningen.

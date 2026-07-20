@@ -105,7 +105,7 @@ Elasticitetsmodul, sträckgräns och brottgräns är tillsammans den information
 5. Varför beskriver σ = F / A inte spänningen i en balk som böjs? Vad är det som skiljer böjningsfallet från det centriska dragfallet?
 6. Brottgränsen är inte den spänning där provstaven går av. Förklara vad brottgränsen faktiskt är, och varför dragprovkurvan faller efter den punkten.
 
-## Beräkningsuppgifter
+## Praktiska uppgifter
 
 1. En stång med tvärsnittsarean 50 mm² belastas centriskt med dragkraften 15 000 N. Beräkna spänningen.
 2. Ett dragstag ska klara dragkraften 25 000 N utan att spänningen överstiger 125 N/mm². Beräkna den tvärsnittsarea staget minst måste ha.

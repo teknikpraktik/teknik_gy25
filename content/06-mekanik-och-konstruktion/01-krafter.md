@@ -101,7 +101,7 @@ Friläggningen ger på så vis en fullständig lista över de krafter som hålle
 4. Varför kan en kätting bara bära dragkraft, medan ett diagonalstag i en byggställning kan bära både drag och tryck?
 5. Kapitlets gångbro beskrivs som en modell med bestämd spännvidd, egentyngd och stödplacering, där räcken och skruvförband inte finns med. Varför förenklas en verklig konstruktion på det sättet innan den beräknas, och vilken risk finns med förenklingen?
 
-## Beräkningsuppgifter
+## Praktiska uppgifter
 
 1. En rugbyspelare med massan 90 kg står stilla på planen. Beräkna tyngdkraften som verkar på spelaren.
 2. En travers lyfter en last rakt uppåt. Lyftkroken drar med 4,5 kN uppåt och lastens tyngdkraft är 3,2 kN nedåt. Bestäm resultantens storlek och riktning.

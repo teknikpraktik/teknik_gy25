@@ -131,9 +131,17 @@ Ett arbetat exempel används endast när det tydligt förbättrar förståelsen.
 
 ## Aktiv bearbetning
 
-Efter teorin följer **instuderingsfrågor**. Varje avsnitt avslutas med EN samlad sektion instuderingsfrågor direkt efter teorin, oavsett hur många lärandemål eller delavsnitt avsnittet har.
+**Redaktionellt beslut 2026-07-20 (normerande för hela läromedlet).** Boken har tre uppgiftsdelar och inga andra:
 
-I avsnitt där beräkning är en central del av lärandemålen följs instuderingsfrågorna av en egen sektion **Beräkningsuppgifter** (redaktionellt beslut 2026-07-20). Den samlar de uppgifter som kräver formler, numerisk räkning eller matematisk problemlösning, medan instuderingsfrågorna behåller kunskaps-, begrepps-, analys- och resonemangsfrågorna. Beräkningsuppgifterna ordnas i stigande svårighetsgrad: först direkt tillämpning av ett samband, därefter uppgifter i två eller flera steg, och sist en verklighetsnära uppgift som kräver metodval och rimlighetsbedömning. Sektionen används bara där den fyller en funktion; ett avsnitt utan beräkningsinnehåll har enbart instuderingsfrågor.
+- **Instuderingsfrågor** ligger direkt efter ett avsnitts teori och prövar förståelse.
+- **Praktiska uppgifter** ligger därefter och är lokala tillämpningsuppgifter knutna till samma avsnitt. Rubriken är alltid "Praktiska uppgifter", oavsett vad uppgifterna innehåller: beräkning, ritning, CAD, programmering, mätning, laboration, analys, konstruktion, digitalt arbete eller dokumentation är olika *typer* av praktisk tillämpning, inte egna rubriker.
+- **Projektuppgifter** ligger samlade sist i kapitlet och är större, integrerande uppgifter. Varje kapitel har normalt 4–6 projektuppgifter, normalt 5.
+
+Kapitlet avslutas alltid i ordningen **Sammanfattning, Begrepp, Projektuppgifter**.
+
+Tidigare separata lokala uppgiftskategorier används inte längre som fasta rubriker. Det gäller bland annat Beräkningsuppgifter, Rituppgifter, CAD-uppgifter, Programmeringsuppgifter, Laborationer, Konstruktionsuppgifter, Tillämpningsuppgifter, Analysuppgifter, Tillämpningsproblem, Fördjupningsuppgifter, Kortare uppgifter och Projekt. Beslutet ersätter de tidigare besluten av 2026-07-19 och det tidigare beslutet av 2026-07-20 om en egen rubrik för beräkningsuppgifter.
+
+Ordningen i ett avsnitt är därmed: teori, instuderingsfrågor, praktiska uppgifter, nästa avsnitt.
 
 ### Instuderingsfrågor
 
@@ -149,7 +157,19 @@ Frågor av typen "vem?", "när?" och "hur många?" används bara när personen, 
 
 Ta bort frågor som upprepar en tidigare fråga, bara kontrollerar en oviktig detalj, testar formuleringar snarare än förståelse eller ligger utanför avsnittets lärandemål.
 
-Instuderingsfrågor och beräkningsuppgifter är avsnittets enda uppgiftsdelar. Det finns **inget synligt Begrepp-block** efter avsnittet, och de **praktiska uppgifterna ligger inte här** utan i kapitlets uppgiftsbank (se "Kapitelavslutningar" nedan). Begreppsundervisningen sker i teorin (11-begreppsfilosofi.md); den praktiska träningen säkras samlat per kapitel.
+Instuderingsfrågorna prövar faktakunskaper, begreppsförståelse, samband, förklaringar, jämförelser, analys, motivering och reflektion, och ska normalt kunna besvaras med text, skiss eller ett kort resonemang. En uppgift som i huvudsak går ut på att eleven **utför** något, räknar, ritar, programmerar, bygger, mäter, undersöker eller testar, hör inte hemma här utan under Praktiska uppgifter.
+
+### Praktiska uppgifter
+
+Lokala tillämpningsuppgifter knutna till avsnittets innehåll, samlade under EN sektion direkt efter instuderingsfrågorna. Sektionen är **frivillig**: alla avsnitt har inte en meningsfull praktisk tillämpning, och uppgifter skapas aldrig för att fylla en kvot.
+
+En praktisk uppgift innebär att eleven aktivt tillämpar avsnittets innehåll. Formen följer ämnet: mekanik ger kraft-, moment- och dimensioneringsberäkningar, friläggning och rimlighetsbedömning; ritteknik ger frihandsskiss, vyritning, måttsättning och CAD-modellering; programmering ger koduppgifter, felsökning och testning; materialteknik ger jämförelser, laborationer och materialval; teknikhistoria och samhällsfrågor ger käll-, produkt- och konsekvensanalys samt strukturerade undersökningar. Uppgiften behöver alltså inte vara fysisk eller laborativ. Rubriken är densamma i hela boken, men uppgifternas form ska följa kapitlets ämnesinnehåll och får aldrig göras mekaniskt likformig mellan kapitel.
+
+Uppgifterna ordnas inom sektionen från enklare till mer krävande: direkt tillämpning, därefter uppgifter i flera steg, sedan en verklighetsnära uppgift, och där det är relevant en avslutande uppgift som kräver tolkning eller rimlighetsbedömning. Alla avsnitt behöver inte ha lika många.
+
+Det finns **inget riktvärde för antalet** instuderingsfrågor eller praktiska uppgifter utöver riktmärket ovan för frågor per lärandemål. Antalet styrs av att centrala begrepp och färdigheter täcks, att inga tydliga dubbletter finns, och att arbetsmängden är rimlig för elev och lärare i förhållande till avsnittets längd och komplexitet.
+
+Instuderingsfrågor och praktiska uppgifter är avsnittets enda uppgiftsdelar. Det finns **inget synligt Begrepp-block** efter avsnittet, och de större, integrerande uppgifterna ligger inte här utan i kapitlets projektbank (se "Kapitelavslutningar" nedan). Begreppsundervisningen sker i teorin (11-begreppsfilosofi.md).
 
 ---
 
@@ -185,13 +205,17 @@ En samlad övning över kapitlets centrala begrepp, utformad som en **punktlista
 
 ## Projektuppgifter
 
-Kapitlets praktiska uppgifter, laborationer, undersökningar, konstruktionsuppgifter och projekt samlas i en enda bank som en **numrerad lista**: varje uppgift har ett löpnummer från 1 och ett namn, följt av själva uppgiften. Banken delas **inte** in i underkategorier efter omfattning eller uppgiftstyp; det är samma sorts pedagogiska aktivitet i olika skala (redaktionellt beslut 2026-07-20, ersätter den tidigare indelningen i Kortare uppgifter, Fördjupningsuppgifter och Projekt). Uppgifterna ordnas i stället i stigande omfattning, med de enklare först och de mest omfattande sist. Uppgifterna förses **inte** med metadata om arbetsform, tidsåtgång, redovisningsform eller vilket lärandemål de tränar. Utförandet överlåts till läraren och eleven.
+Kapitlets större, integrerande uppgifter samlas i en enda bank som en **numrerad lista**: varje uppgift har ett löpnummer från 1 och ett namn, följt av själva uppgiften. Banken delas **inte** in i underkategorier efter omfattning eller uppgiftstyp; uppgifterna ordnas i stället i stigande omfattning, med de enklare först och de mest omfattande sist. Uppgifterna förses **inte** med metadata om arbetsform, tidsåtgång, redovisningsform eller vilket lärandemål de tränar. Utförandet överlåts till läraren och eleven.
 
-En praktisk uppgift innebär att eleven **producerar, genomför, undersöker, mäter, konstruerar, visualiserar eller presenterar** något. Godkända former omfattar till exempel konstruktion, skiss, teknisk ritning, flödesdiagram, kalkylblad, digital presentation, plansch, programmering, simulering, modellering, fysisk undersökning, mätning, testning, experiment, prototyp, muntlig presentation, film och podd. En ren skriftlig analys, jämförelse eller argumentation räknas inte i sig som en praktisk uppgift; den får vara ett sista led, inte huvudsaken. AI-uppgifter förekommer när de tillför ett verkligt värde.
+En projektuppgift ska vara större och mer integrerande än en lokal praktisk uppgift. Den omfattar normalt flera av kapitlets avsnitt, kräver planering och flera arbetssteg, innebär att eleven producerar, undersöker, konstruerar, programmerar, utvärderar eller dokumenterar något, kan genomföras individuellt eller i grupp, och har en tydlig teknisk kärna. Den ska leda fram till en produkt, rapport, modell, konstruktion, kod, analys eller dokumentation. Godkända former omfattar till exempel konstruktion, teknisk ritning, kalkylblad, digital presentation, plansch, programmering, simulering, modellering, fältstudie, mätning, testning, experiment, prototyp, muntlig presentation, film och podd. AI-uppgifter förekommer när de tillför ett verkligt värde.
+
+En projektuppgift får aldrig vara en lokal praktisk uppgift med fler ord. Skiljelinjen är funktion och komplexitet, inte tidsåtgång: den praktiska uppgiften ger avgränsad färdighetsträning på ett avsnitt, projektuppgiften låter flera kunskaper användas tillsammans. Minst en projektuppgift per kapitel bör fungera som en egentlig syntesuppgift som använder betydande delar av kapitlet.
 
 Ett kapitel har **4–6 projektuppgifter**, normalt 5 (redaktionellt beslut 2026-07-20). Riktvärdet är satt så att uppgifterna hinner genomföras på riktigt i stället för att väljas bort: en bank med tio eller femton uppgifter blir i praktiken en meny där merparten aldrig används, och då är det bättre att lägga arbetet på färre och mer genomarbetade uppgifter. Färre än fyra räcker sällan för att täcka ett kapitels centrala innehåll, fler än sex innebär nästan alltid att två uppgifter tränar samma sak.
 
-Banken ska tillsammans ge tillräcklig praktisk och producerande träning för kapitlets centrala innehåll och förmågor, och uppgifterna ska variera i form. Eftersträva en blandning av laboration och mätning, konstruktion och byggande, undersökning samt beräknande eller dimensionerande arbete, i den mån kapitlets ämnesinnehåll medger det. En enskild uppgift får gärna kombinera flera av formerna, till exempel ett experiment som följs av en beräkning på samma princip.
+Överstiger banken sex uppgifter ska likartade uppgifter slås ihop, renodlas, integreras eller tas bort, och små lokala aktiviteter flyttas till Praktiska uppgifter under det avsnitt de hör hemma. Understiger den fyra skapas nya projekt bara när det behövs för variation eller täckning; bokens totala omfattning ska inte öka i onödan.
+
+Banken ska tillsammans ge tillräcklig praktisk och producerande träning för kapitlets centrala innehåll och förmågor, och uppgifterna ska variera i form. Möjliga former är laboration och mätning, undersökning, konstruktion, CAD, programmering, dimensionering, analys, teknikutvecklingsarbete, utvärdering, dokumentation och jämförelse av tekniska lösningar. Alla former behöver inte finnas i varje kapitel: variationen anpassas till kapitlets ämnesinnehåll och konstrueras aldrig artificiellt. En enskild uppgift får gärna kombinera flera av formerna, till exempel ett experiment som följs av en beräkning på samma princip.
 
 Uppgifter som tränar samma sak på nästan samma sätt slås ihop eller tas bort. Varje uppgift ska fungera fristående med stabil information i själva instruktionen, utan hänvisningar av typen "som i figuren ovan".
 
@@ -199,9 +223,9 @@ Uppgifter som tränar samma sak på nästan samma sätt slås ihop eller tas bor
 
 # Praktiskt arbete
 
-Praktisk träning är central (10-amnesfilosofi.md, "Teknik är praktiskt"), men säkras samlat i kapitlets uppgiftsbank i stället för genom ett krav på praktiska uppgifter under varje enskilt lärandemål. Ett lärandemål behöver alltså inte ha ett eget praktiskt moment.
+Praktisk träning är central (10-amnesfilosofi.md, "Teknik är praktiskt") och säkras på två nivåer: lokalt genom avsnittets Praktiska uppgifter, och samlat genom kapitlets projektbank. Ingen av nivåerna är obligatorisk per avsnitt. Ett avsnitt utan meningsfull praktisk tillämpning har enbart instuderingsfrågor, och uppgifter skapas aldrig enbart för symmetrins skull.
 
-Om ett praktiskt moment ändå hör naturligt hemma inne i ett lärandemål skrivs det som ett tydligt moment i lärandemålets text. Praktiska moment prioriteras framför motsvarande teoretiska uppgifter när båda tränar samma förmåga.
+Hör ett praktiskt moment naturligt hemma i ett enskilt avsnitt läggs det under avsnittets Praktiska uppgifter, inte i projektbanken. Är det stort nog att integrera flera avsnitt hör det hemma i banken. Praktiska uppgifter prioriteras framför motsvarande teoretiska uppgifter när båda tränar samma förmåga.
 
 ---
 

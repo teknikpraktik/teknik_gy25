@@ -75,3 +75,7 @@ Teknik är alltså människans sätt att möta behov och problem med lösningar,
 7. Öresundsförbindelsen blev en kombination av bro, konstgjord ö och tunnel. Varför avgjorde ingen naturlag den utformningen, och vad avgjorde i stället?
 8. Varför är bilden av teknik som "tillämpad naturvetenskap" för enkel?
 9. Ge ett exempel på att tekniken har påverkat naturvetenskapen, inte bara tvärtom.
+
+## Praktiska uppgifter
+
+1. **Behovet bakom föremålet.** Välj ett vardagsföremål, till exempel en pennvässare, ett paraply eller en cykelpump. Skissa föremålet med dess viktigaste delar, skriv ut vilket behov eller problem det svarar mot och skriv vid varje del vad den bidrar med till lösningen. Ange sist om föremålet bygger på någon naturvetenskaplig kunskap du känner igen.

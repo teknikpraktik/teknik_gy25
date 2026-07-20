@@ -95,7 +95,7 @@ Samma princip förklarar varför en lyftkrans bom är kraftigast byggd närmast 
 4. Vad menas med att ett moment är medurs eller moturs, och varför måste riktningen hållas reda på när flera moment verkar samtidigt?
 5. Förklara vad utväxling innebär, och vad man betalar för en hög utväxling hos ett handverktyg.
 
-## Beräkningsuppgifter
+## Praktiska uppgifter
 
 1. En skruv dras åt med en kraft på 40 N vinkelrätt mot en skruvmejsels handtag, vars radie är 0,02 m. Beräkna momentet.
 2. En dörr har handtaget 0,9 m från gångjärnen. Vilken vinkelrät kraft krävs för att ge momentet 27 Nm?

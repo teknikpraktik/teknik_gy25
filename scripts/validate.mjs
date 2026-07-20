@@ -325,11 +325,37 @@ for (const avs of avsnittFiler) {
 		errors.push(`${beskr}: flera "Instuderingsfrågor"-sektioner — avsnittet ska avslutas med EN samlad sektion, inte en per delavsnitt.`);
 	}
 
-	// Äldre uppgiftsrubriker och synliga uppslagsrubriker får inte förekomma.
-	for (const forbjuden of [/^#{2,4}\s+(Förstå|Utveckla|Utmana)\s*$/m, /^#{2,4}\s+Uppslag\b/m, /^#{2,4}\s+Begrepp\s*$/m, /^#{2,4}\s+Praktiska uppgifter\s*$/m]) {
+	// Lokala tillämpningsuppgifter samlas under EN rubrik, "Praktiska uppgifter"
+	// (03-bokens-arkitektur.md, redaktionellt beslut 2026-07-20). Sektionen är
+	// frivillig: alla delavsnitt har inte en meningsfull praktisk tillämpning.
+	const puSektioner = extractSections(avs.body, 'Praktiska uppgifter');
+	if (puSektioner.length > 1) {
+		errors.push(`${beskr}: flera "Praktiska uppgifter"-sektioner — avsnittet ska ha EN samlad sektion.`);
+	} else if (puSektioner.length === 1) {
+		if (!/^\s*\d+\.\s+\S/m.test(puSektioner[0])) {
+			errors.push(`${beskr}: sektionen "Praktiska uppgifter" är tom — minst en numrerad uppgift krävs (03).`);
+		}
+		const iIndex = avs.body.search(/^#{2,4}\s+Instuderingsfrågor\s*$/m);
+		const pIndex = avs.body.search(/^#{2,4}\s+Praktiska uppgifter\s*$/m);
+		if (iIndex >= 0 && pIndex >= 0 && pIndex < iIndex) {
+			errors.push(`${beskr}: "Praktiska uppgifter" ligger före "Instuderingsfrågor" — ordningen ska vara teori, instuderingsfrågor, praktiska uppgifter (03).`);
+		}
+	}
+
+	// Äldre eller uppdelade uppgiftsrubriker och synliga uppslagsrubriker får inte
+	// förekomma. Uppgiftstypen styrs av uppgiften själv, inte av en egen rubrik
+	// (03-bokens-arkitektur.md, "Praktiska uppgifter").
+	const forbjudnaRubriker = [
+		/^#{2,4}\s+(Förstå|Utveckla|Utmana)\s*$/m,
+		/^#{2,4}\s+Uppslag\b/m,
+		/^#{2,4}\s+Begrepp\s*$/m,
+		/^#{2,4}\s+Projektuppgifter\s*$/m,
+		/^#{2,4}\s+(Beräkningsuppgifter|Rituppgifter|CAD-uppgifter|Programmeringsuppgifter|Laborationer|Konstruktionsuppgifter|Tillämpningsuppgifter|Tillämpningsproblem|Analysuppgifter|Fördjupningsuppgifter|Projekt|Kortare uppgifter)\s*$/m,
+	];
+	for (const forbjuden of forbjudnaRubriker) {
 		const traff = avs.body.match(forbjuden);
 		if (traff) {
-			errors.push(`${beskr}: rubriken "${traff[0].replace(/^#+\s*/, '')}" får inte förekomma i ett avsnitt (03/11/12/13).`);
+			errors.push(`${beskr}: rubriken "${traff[0].replace(/^#+\s*/, '')}" får inte förekomma i ett avsnitt — lokala tillämpningsuppgifter ligger under "Praktiska uppgifter", större under kapitlets "Projektuppgifter" (03, redaktionellt beslut 2026-07-20).`);
 		}
 	}
 
@@ -441,6 +467,24 @@ for (const p of plan) {
 		warnings.push(`${ka.file}: titeln "${ka.title}" avviker från bokstrukturens "${p.titel}".`);
 	}
 }
+// Projektbanken: 4–6 uppgifter, normalt 5 (03-bokens-arkitektur.md,
+// "Projektuppgifter", redaktionellt beslut 2026-07-20). Kontrolleras först när
+// banken nått granskningsstatus, så att tomma skelett inte varnar.
+for (const ka of kapitelavslutningsFiler) {
+	if (ka.type !== 'uppgiftsbank') continue;
+	if (statusEnum.indexOf(ka.status) < GRANSKNINGSSTATUS) continue;
+	const antal = (ka.body.match(/^\s*\d+\.\s+\S/gm) ?? []).length;
+	if (antal < 4 || antal > 6) {
+		warnings.push(`${ka.file} (status ${ka.status}): ${antal} projektuppgifter — riktvärdet är 4–6, normalt 5 (03-bokens-arkitektur.md). Slå ihop, renodla eller komplettera.`);
+	}
+	// Underrubriker i banken: uppgifterna ordnas i en enda lista i stigande
+	// omfattning, utan kategoriindelning.
+	const underrubrik = ka.body.match(/^#{2,4}\s+.+$/m);
+	if (underrubrik) {
+		errors.push(`${ka.file}: rubriken "${underrubrik[0].replace(/^#+\s*/, '')}" får inte förekomma — projektbanken är en enda numrerad lista utan underkategorier (03).`);
+	}
+}
+
 const planKapitelavslutningPaths = new Set(plan.filter((p) => p.type).map((p) => p.relPath));
 for (const ka of kapitelavslutningsFiler) {
 	if (!planKapitelavslutningPaths.has(ka.file)) {

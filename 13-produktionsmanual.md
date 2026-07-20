@@ -79,11 +79,11 @@ Sätt `status: under-utveckling`. Identifiera enligt 08:
 - kursplanetäckning → tagga `curriculumReferences.niva1`/`niva2` med punkt-id från 07 (n1-xx, n2-xx; syftesmålet s-01 är giltigt på båda nivåerna)
 - bedömda förmågor → tagga `abilities` med de av de fem förmågorna (07, "Förmågekontroll") avsnittet primärt tränar
 - vanliga missuppfattningar
-- praktisk träning planeras för kapitlets uppgiftsbank, inte per avsnitt
+- praktisk träning planeras på två nivåer: avsnittets frivilliga Praktiska uppgifter och kapitlets projektbank
 
 ## 3. Skriv
 
-Skriv teori, figurplatshållare och en avslutande **samlad sektion instuderingsfrågor** enligt 03 och 05. Avsnittet har inget fast sidomfång; flödar det över flera delar struktureras det med H3-delavsnitt (rena underrubriker, se 06 "Avsnittens och delavsnittens format"), inte med egen numrering. Det finns **inget Begrepp-block och inga praktiska uppgifter** i avsnittsfilen — begreppen behandlas i teorin (11), och de praktiska uppgifterna samlas i kapitlets uppgiftsbank (se "Kapitelavslutningar" nedan).
+Skriv teori, figurplatshållare och en avslutande **samlad sektion instuderingsfrågor** enligt 03 och 05. Avsnittet har inget fast sidomfång; flödar det över flera delar struktureras det med H3-delavsnitt (rena underrubriker, se 06 "Avsnittens och delavsnittens format"), inte med egen numrering. Följ därefter, när avsnittet har en meningsfull lokal tillämpning, med EN sektion **Praktiska uppgifter** (03, redaktionellt beslut 2026-07-20): lokala tillämpningsuppgifter ordnade från enklare till mer krävande. Rubriken är alltid "Praktiska uppgifter", aldrig Beräkningsuppgifter, Rituppgifter, Laborationer eller liknande, oavsett uppgifternas innehåll. Sektionen är frivillig. Det finns **inget Begrepp-block** i avsnittsfilen — begreppen behandlas i teorin (11) — och de större, integrerande uppgifterna samlas i kapitlets projektbank (se "Kapitelavslutningar" nedan).
 
 Rubrikkonvention i källfilerna: eftersom sidtiteln (frontmatterns `title`) är avsnittets h1 på webben, skrivs delavsnitt på `##`-nivå i källfilen och en eventuell ytterligare nedbrytning på `###` (undantagsvis). `## Instuderingsfrågor` skrivs på samma nivå som delavsnitten, sist i filen, som EN samlad sektion även när avsnittet har flera delavsnitt eller lärandemål. Exporten sänker brödtextens rubriker ett steg (kapitel H1 → avsnitt H2 → delavsnitt H3). Frågorna numreras 1, 2, 3 … Sikta på 4–6 frågor per lärandemål avsnittet tränar (03); undvik långa frågebatterier och slå ihop frågor som blir för lika när flera lärandemål delar en gemensam lista.
 
@@ -91,7 +91,7 @@ Vid ett begrepps huvudställe (filen där det står i `concepts_introduced`) skr
 
 Figurer refereras med `[[figur:ID]]`, begrepp som introducerats i andra avsnitt med `[[begrepp:namn]]`.
 
-Om ett praktiskt moment undantagsvis hör hemma inne i avsnittet skrivs det som ett tydligt moment i teoritexten, inte som en boolesk flagga (`practical_component` är pensionerat).
+Ett praktiskt moment som hör hemma i avsnittet skrivs som en numrerad uppgift under `## Praktiska uppgifter`, inte som en boolesk flagga (`practical_component` är pensionerat) och inte som löptext i teorin.
 
 ## 4. Granska
 
@@ -121,7 +121,7 @@ När ett kapitels avsnitt är producerade får kapitlet sina tre avslutningar (1
 
 **Begreppsövning.** Skriv en **punktlista** över kapitlets centrala begrepp (frontmatterfältet `ordlista`), ett begrepp per punkt, med en instruktion om att eleven ska förklara varje begrepp med en egen mening i häfte eller digitalt dokument. Begreppen ska redan ha sitt huvudställe i eller före kapitlet — övningen är repetition, aldrig första mötet. Facit skrivs inte här (repot är offentligt); det tekniska gränssnittet finns, men själva facit ligger i en separat privat lärarmaterialkälla (12).
 
-**Uppgiftsbank.** Skriv kapitlets praktiska uppgifter som en **enkel numrerad lista** i brödtexten: löpnummer från 1, ett namn i fetstil och därefter uppgiften, till exempel `1. **Behovet bakom föremålet.** Välj ett vardagsföremål …`. Ingen indelning i nivåer, ingen frontmatter-metadata och ingen uppgift om arbetsform, tid, redovisning eller vilket lärandemål uppgiften tränar — utförandet överlåts till läraren och eleven. Varje uppgift ska fungera fristående (05, "Självreferenser"): ersätt "från föregående avsnitt" och "figuren ovan" med stabil information i uppgiften. Slå ihop eller ta bort uppgifter som tränar samma sak på nästan samma sätt. Sikta på **4–6 uppgifter, normalt 5** (03-bokens-arkitektur.md, "Projektuppgifter"), ordnade i stigande omfattning och varierade mellan laboration, konstruktion, undersökning och beräknande arbete.
+**Projektbank.** Skriv kapitlets projektuppgifter som en **enkel numrerad lista** i brödtexten: löpnummer från 1, ett namn i fetstil och därefter uppgiften, till exempel `1. **Behovet bakom föremålet.** Välj ett vardagsföremål …`. Ingen indelning i nivåer, ingen frontmatter-metadata och ingen uppgift om arbetsform, tid, redovisning eller vilket lärandemål uppgiften tränar — utförandet överlåts till läraren och eleven. Varje uppgift ska fungera fristående (05, "Självreferenser"): ersätt "från föregående avsnitt" och "figuren ovan" med stabil information i uppgiften. Slå ihop eller ta bort uppgifter som tränar samma sak på nästan samma sätt. Sikta på **4–6 uppgifter, normalt 5** (03-bokens-arkitektur.md, "Projektuppgifter"), ordnade i stigande omfattning och varierade mellan laboration, konstruktion, undersökning och beräknande arbete.
 
 **Kör** `npm run validate`: 06-bokstruktur.md stäms av mot filerna åt båda håll.
 

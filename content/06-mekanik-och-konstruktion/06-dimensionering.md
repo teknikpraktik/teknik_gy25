@@ -100,7 +100,7 @@ En tredje kontroll är att fråga sig vad svaret betyder fysiskt. En stång på 
 4. Varför sätts den tillåtna spänningen lägre än sträckgränsen, och vad är det säkerhetsfaktorn ska täcka in?
 5. En elev skriver i en labbrapport att "säkerhetsfaktorn 2 är ett rimligt värde för konstruktioner". Vad är fel med påståendet, och hur bestäms säkerhetsfaktorn i verkligheten?
 
-## Beräkningsuppgifter
+## Praktiska uppgifter
 
 1. Ett konstruktionsstål har sträckgränsen 275 N/mm². Beräkna den tillåtna spänningen med säkerhetsfaktorn 2,5.
 2. En dragstång ska klara dragkraften 30 000 N med den tillåtna spänningen 150 N/mm². Beräkna den tvärsnittsarea stången minst måste ha.

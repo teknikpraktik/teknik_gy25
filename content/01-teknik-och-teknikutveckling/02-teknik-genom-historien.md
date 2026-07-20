@@ -168,19 +168,17 @@ Historien visar därmed vad som förändrades, från stenverktygen till AI. Men 
 
 1. Förklara med egna ord vad ett tekniskt genombrott är.
 2. Vad menas med att jordbruket vände på människans hela tillvaro, och vilka följder fick matöverskottet?
-3. Varför säger texten att skriften är anledningen till att vi över huvud taget känner till de andra genombrotten?
-4. Vad var det historiskt nya med vattenhjulet jämfört med alla tidigare kraftkällor?
-5. Förklara vad som menas med att boktryckarkonstens genombrott inte var pressen i sig utan vad den gjorde med kunskapens pris.
-6. Vad menas med att ett genombrotts betydelse sällan är enbart god och beror på vem som kontrollerar tekniken? Ge ett exempel från texten.
-7. Förklara skillnaden mellan ett teknikskifte och en industriell revolution.
-8. Vad menas med mekanisering, och varför är den den första industriella revolutionens kärna?
-9. Varför låg de tidiga fabrikerna vid forsarna, och varför kunde de flytta in till städerna när ångmaskinen kom?
-10. Beskriv tre sätt som fabriksarbetet skilde sig från arbetet hemma eller hos hantverkaren.
-11. Varför behöver den som analyserar ett teknikskiftes samhällskonsekvenser fråga både vad som förändrades och för vem? Använd industrialiseringens Sverige som exempel.
-12. Vilka två nya grunder vilade den andra industriella revolutionen på, och vad gjorde de möjligt?
-13. Förklara vad massproduktion är och varför den förutsätter standardiserade delar.
-14. Hur hängde det löpande bandet, priset på en T-Ford och bilens spridning till vanliga löntagare ihop?
-15. Vad är en transistor, och varför beskrivs den som grunden för allt digitalt?
-16. Förklara vad automation är och hur den förändrade människans arbetsuppgifter på fabriksgolvet.
-17. Förklara vad digitalisering är, och beskriv det gemensamma mönstret när musiken, fotografiet och bankärendet lämnade sina fysiska bärare.
-18. Digitaliseringen har både en framsida och en baksida. Beskriv en tydlig vinst, en sårbarhet för samhället och vilka som riskerar att hamna i digitalt utanförskap.
+3. Vattenhjulet och boktryckarkonsten var båda genombrott, men förändrade olika saker. Förklara vad som var historiskt nytt med vattenhjulet jämfört med tidigare kraftkällor, och vad boktryckarkonsten gjorde med kunskapens pris.
+4. Vad menas med att ett genombrotts betydelse sällan är enbart god och beror på vem som kontrollerar tekniken? Ge ett exempel från texten.
+5. Förklara skillnaden mellan ett teknikskifte och en industriell revolution.
+6. Vad menas med mekanisering, och varför är den den första industriella revolutionens kärna? Förklara i samma svar varför de tidiga fabrikerna låg vid forsarna och varför de kunde flytta in till städerna när ångmaskinen kom.
+7. Beskriv tre sätt som fabriksarbetet skilde sig från arbetet hemma eller hos hantverkaren. Förklara därefter varför den som analyserar ett teknikskiftes samhällskonsekvenser behöver fråga både vad som förändrades och för vem, med industrialiseringens Sverige som exempel.
+8. Vilka två nya grunder vilade den andra industriella revolutionen på? Förklara vad massproduktion är, varför den förutsätter standardiserade delar och hur det löpande bandet hängde ihop med priset på en T-Ford och bilens spridning.
+9. Vad är en transistor, och varför beskrivs den som grunden för allt digitalt? Förklara också vad automation är och hur den förändrade människans arbetsuppgifter på fabriksgolvet.
+10. Förklara vad digitalisering är och beskriv det gemensamma mönstret när musiken, fotografiet och bankärendet lämnade sina fysiska bärare. Ange sedan en tydlig vinst, en sårbarhet för samhället och vilka som riskerar att hamna i digitalt utanförskap.
+
+## Praktiska uppgifter
+
+1. **Tidslinjen i skala.** Rita en tidslinje över de tekniska genombrotten från de första stenverktygen till 1700-talet, där avstånden mellan händelserna motsvarar verklig tid. Välj själv skala och längd, och förklara kort varför skalan var svår att välja och vad tidslinjen visar om takten i teknikutvecklingen.
+
+2. **Moores lag i ett kalkylblad.** Den första mikroprocessorn från 1971 rymde 2 300 transistorer. Bygg ett kalkylblad som utgår från en fördubbling vartannat år och räknar ut transistorantalet för varje fördubbling fram till i dag. Rita ett diagram över utvecklingen, jämför slutresultatet med att dagens kretsar rymmer tiotals miljarder transistorer och bedöm rimligheten i den beräknade siffran.

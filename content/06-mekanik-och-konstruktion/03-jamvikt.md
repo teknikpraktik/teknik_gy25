@@ -115,7 +115,7 @@ Samma princip avgör varför en hög, fylld bokhylla lättare välter framåt ä
 6. Förklara sambandet mellan tyngdpunkt, stödyta och stabilitet, och beskriv vad som händer i det ögonblick ett föremål börjar välta.
 7. En hyllkonsol är fastskruvad i en vägg och bär en last ytterst på hyllplanet. Frilägg konsolen och avgör vilken idealiserad stödtyp infästningen mot väggen motsvarar. Förklara därefter varför den övre skruven i infästningen belastas i drag medan den nedre pressas mot väggen, och vad som händer med den dragkraften om hyllplanet görs dubbelt så djupt utan att lasten ändras. Bedöm slutligen vilket av de tre jämviktsvillkoren som är avgörande för att den här konstruktionen ska hålla.
 
-## Beräkningsuppgifter
+## Praktiska uppgifter
 
 1. En balk är 4,0 m lång och vilar på stöd i båda ändarna, A och B. En last på 600 N placeras 1,0 m från stöd A. Beräkna R_A och R_B. Avgör innan du räknar vilket stöd som bör bära mest.
 2. En byggnadsställnings bärbalk är 8,0 m lång och vilar på stöd i ändarna. Två laster verkar nedåt: 2000 N på 2,0 m från stöd A och 3000 N på 6,0 m från stöd A. Beräkna stödreaktionerna.
