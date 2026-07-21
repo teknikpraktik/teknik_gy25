@@ -17,23 +17,17 @@ learningGoals:
 abilities: [f3]
 concepts_introduced: ["kraft", "tyngdkraft", "normalkraft", "friktionskraft", "dragkraft", "tryckkraft", "resultant", "komposant", "friläggning"]
 concepts_used: ["teknisk lösning"]
-figures: ["fig-6.1.1-b", "fig-6.1.1-a", "fig-6.1.2-a", "fig-6.1.3-a"]
+figures: ["fig-6.1.1-b", "fig-6.1.1-a", "fig-6.1.2-a", "fig-6.1.3-a", "fig-6.1.4-a"]
 prerequisites: []
 ---
 
 ## Kraftbegreppet
 
-En gångbro över en bäck är en enkel [[begrepp:teknisk lösning]] som bär upp cyklister, barnvagnar och enstaka joggare utan att märkbart röra sig. Ändå vilar hela dess tyngd, och allt som passerar över den, på två smala stöd vid strandkanten. Ingenting i bron syns arbeta. Men om balkarna gavs för liten tvärsnittsarea skulle det märkas genast: bron skulle svikta kännbart under en enda cyklist, och vid tillräckligt stor last skulle materialet ge vika. Det bron faktiskt gör, hela tiden, är att ta emot krafter från körbanan och leda dem vidare till stöden och ner i marken.
+En gångbro över en bäck är en enkel [[begrepp:teknisk lösning]] som ser ut att stå fullständigt stilla. Ändå belastas den hela tiden: av sin egen tyngd, av var och en som passerar, och av krafterna från de två stöden som håller den uppe. Det bron gör, osynligt men oavbrutet, är att ta emot dessa krafter och leda dem vidare ner i marken. Att reda ut vilka krafter som verkar, och hur de samverkar, är utgångspunkten för hela kapitlet.
 
-Samma gångbro återkommer genom hela kapitlet, och för att den ska gå att räkna på behöver den beskrivas som en bestämd, förenklad modell:
+En **kraft** är en påverkan som kan förändra ett föremåls rörelse eller form. En kraft har tre egenskaper som tillsammans bestämmer dess verkan: en **storlek**, mätt i enheten newton (N); en **riktning**, det håll kraften verkar i; och en **angreppspunkt**, den plats på föremålet där kraften griper an. En newton motsvarar ungefär tyngdkraften på ett äpple. Eftersom en kraft har både storlek och riktning räknas den som en vektor, och den ritas därför som en pil: pilens längd visar storleken, pilens riktning visar kraftens riktning, och pilens startpunkt markerar angreppspunkten. En bild där de krafter som verkar i en situation ritas ut som pilar kallas ett **kraftdiagram**.
 
-Bron är en **balkbro** med fri spännvidd 6,0 m och gångbanebredd 1,5 m. Bärverket är två stålbalkar under ett trädäck. Den vilar på ett stöd i vardera änden, kallade A och B. Brons egentyngd är 3600 N. Den nyttiga lasten är gångtrafik, enstaka cyklister och barnvagnar.
-
-En sådan beskrivning kallas en konstruktionsmodell. Den är avsiktligt fattigare än den verkliga bron: räcken, skruvförband, lutning och rörelser i marken finns inte med. Modellen behåller bara det som behövs för att svara på frågan man ställt, och varje gång kapitlet räknar på bron kommer de antaganden som gjorts att skrivas ut. En verklig konstruktör arbetar likadant, och en modell som inte redovisar sina antaganden går inte att lita på.
-
-En **kraft** är en påverkan som får ett föremål att ändra rörelse, det vill säga accelerera eller bromsa in, eller att deformeras. En kraft har tre egenskaper som tillsammans bestämmer dess verkan: en **storlek**, mätt i enheten newton (N); en **riktning**, det håll kraften verkar i; och en **angreppspunkt**, den plats på föremålet där kraften griper an. En newton motsvarar ungefär den tyngdkraft som verkar på ett äpple. Eftersom en kraft har både storlek och riktning räknas den som en vektor, och den ritas därför som en pil: pilens längd visar storleken, pilens riktning visar kraftens riktning, och pilens startpunkt markerar angreppspunkten. Ett sådant diagram, där de krafter som verkar på ett föremål ritas ut som pilar, kallas ett kraftdiagram.
-
-Angreppspunkten är lätt att förbise men avgör ofta utgången. Samma kraft mot en dörr ger vitt skilda resultat beroende på om den griper an vid handtaget eller intill gångjärnet, och samma last på gångbron belastar stöden olika beroende på var på bron den står. Båda dessa samband utvecklas längre fram i kapitlet.
+Angreppspunkten är lätt att förbise men avgör ofta utgången. Samma kraft mot en dörr ger vitt skilda resultat beroende på om den griper an vid handtaget eller intill gångjärnet, och samma last på gångbron belastar stöden olika beroende på var på bron den står. Båda sambanden utvecklas längre fram i kapitlet.
 
 [[figur:fig-6.1.1-b]]
 
@@ -41,72 +35,95 @@ Vissa krafter går igen så ofta i tekniska sammanhang att de har egna namn. **T
 
 *F_g = m · g*
 
-där F_g är tyngdkraften i newton (N), m är föremålets massa i kilogram (kg) och g är tyngdaccelerationen, ungefär 9,8 m/s² nära jordytan. En människa på 70 kg belastar därför det den står på med ungefär 70 · 9,8 ≈ 686 N, eller drygt 0,7 kN. Massa och tyngdkraft är alltså inte samma sak: massan är densamma överallt, medan tyngdkraften beror på var föremålet befinner sig.
+där F_g är tyngdkraften i newton (N), m är föremålets massa i kilogram (kg) och g är tyngdaccelerationen, ungefär 9,8 m/s² nära jordytan. En människa på 70 kg belastar därför det den står på med ungefär 70 · 9,8 ≈ 686 N, drygt 0,7 kN. Massa och tyngdkraft är alltså inte samma sak: massan är densamma överallt, medan tyngdkraften beror på var föremålet befinner sig.
 
 När ett föremål vilar mot ett underlag trycker underlaget tillbaka med en **normalkraft**, riktad rakt ut från kontaktytan. Det är normalkraften från marken som håller en gångtrafikant uppe, och normalkraften från brodäcket som håller uppe cykeln som rullar över det. Namnet syftar på att kraften alltid är vinkelrät, "normal", mot ytan den verkar från, oavsett om ytan är vågrät, lutande eller lodrät.
 
-Mellan två ytor som ligger an mot varandra uppstår dessutom en **friktionskraft**, riktad längs kontaktytan. Friktionskraften motverkar den relativa rörelsen mellan ytorna, eller tendensen till glidning när ytorna ännu inte rör sig i förhållande till varandra. Formuleringen är viktig, eftersom friktion ofta beskrivs slarvigt som något som bromsar föremål. Det stämmer när en låda skjuts över ett golv: lådan glider mot golvet, och friktionen verkar bakåt. Men ett drivhjul på en bil trycker bakåt mot vägbanan, och friktionen från vägbanan verkar då framåt på hjulet. Det är alltså friktion som driver bilen framåt. Utan friktion skulle inte bara bromsar utan också däck, skosulor och skruvförband sluta fungera.
+Mellan två ytor som ligger an mot varandra uppstår dessutom en **friktionskraft**, riktad längs kontaktytan. Friktionskraften motverkar den relativa rörelsen mellan ytorna, eller tendensen till glidning när ytorna ännu inte rör sig i förhållande till varandra. Formuleringen är viktig, eftersom friktion ofta beskrivs slarvigt som något som bara bromsar. Det stämmer när en låda skjuts över ett golv: lådan glider mot golvet, och friktionen verkar bakåt. Men ett drivhjul på en bil trycker bakåt mot vägbanan, och friktionen från vägbanan verkar då framåt på hjulet. Det är alltså friktion som driver bilen framåt. Utan friktion skulle inte bara bromsar utan också däck, skosulor och skruvförband sluta fungera.
 
-I linor, vajrar och kättingar verkar **dragkraft**, en kraft som sträcker och drar isär materialet i den riktning linan är spänd. En böjlig del kan i praktiken bara bära drag: en kätting går inte att trycka på, den slaknar bara. I stänger, stag och pelare kan belastningen däremot gå åt båda hållen. En rak stång kan bära dragkraft i ena lastfallet och **tryckkraft**, en kraft som pressar samman materialet, i ett annat. Ett diagonalstag i en byggställning är ett vanligt exempel: det dras när ställningen pressas åt ena hållet och trycks när den pressas åt det andra. Drag och tryck är alltså inte egenskaper hos en viss sorts detalj, utan hos den belastning detaljen bär för tillfället.
+I linor, vajrar och kättingar verkar **dragkraft**, en kraft som sträcker materialet i linans riktning. En böjlig del kan bara bära drag: en kätting går inte att trycka på, den slaknar bara. I stänger och stag kan belastningen däremot gå åt båda hållen. Samma raka stång kan bära dragkraft i ett lastfall och **tryckkraft**, en kraft som pressar samman materialet, i ett annat. Ett diagonalstag i en byggställning dras när ställningen pressas åt ena hållet och trycks när den pressas åt det andra. Drag och tryck är alltså inte egenskaper hos en viss sorts detalj, utan hos den belastning detaljen bär för tillfället.
 
-Skillnaden mellan drag och tryck återkommer genom hela kapitlet, och den är inte symmetrisk. En lång, smal detalj som belastas i drag håller så länge materialet håller. Samma detalj belastad i tryck kan i stället vika ut åt sidan långt innan materialet är i närheten av sin gräns. Det fenomenet behandlas i avsnittet om hållfasthet.
+Skillnaden är inte symmetrisk. Vid dragbelastning bestäms bärförmågan i första hand av materialets och förbandens hållfasthet. Vid tryck tillkommer att en lång, smal detalj kan förlora stabiliteten och vika ut åt sidan långt innan materialet är i närheten av sin gräns. Det fenomenet, knäckning, behandlas i avsnittet om hållfasthet.
 
 [[figur:fig-6.1.1-a]]
 
 ## Kraftresultanter
 
-Ett föremål utsätts sällan för bara en kraft. Gångbron belastas samtidigt av sin egen tyngd, av trafikanternas tyngd och av stödens krafter. En container som lyfts av en kran hålls samtidigt av flera lyftkättingar. För att förstå hur föremålet till slut beter sig behöver de enskilda krafterna läggas samman till en enda kraft med samma sammantagna verkan: **resultanten**.
+Ett föremål utsätts sällan för bara en kraft. Gångbron belastas samtidigt av sin egen tyngd, av trafikanternas tyngd och av stödens krafter. En container som lyfts av en kran hålls samtidigt av flera lyftkättingar. För att förstå hur föremålet till slut beter sig behöver de enskilda krafterna läggas samman till en enda kraft med samma sammantagna verkan: **resultanten**, F_R.
 
-Verkar två krafter längs samma linje adderas eller subtraheras de bara: två krafter åt samma håll läggs ihop, två krafter åt motsatta håll dras ifrån varandra, och resultanten får den riktning den största kraften pekar i. Verkar krafterna i olika riktningar krävs en geometrisk konstruktion eller en beräkning. För två krafter som är vinkelräta mot varandra, en vanlig situation i tekniska sammanhang, går resultantens storlek att beräkna med Pythagoras sats.
+Verkar två krafter längs samma linje adderas eller subtraheras de bara: två krafter åt samma håll läggs ihop, två krafter åt motsatta håll dras ifrån varandra, och resultanten pekar åt det håll den största kraften drar. Verkar krafterna i olika riktningar måste de läggas samman geometriskt. Två krafter läggs samman spets mot svans: den andra pilen ritas med sin startpunkt i den förstas spets, och resultanten går från den första pilens startpunkt till den andra pilens spets. Ritar man pilarna i skala kan resultanten mätas direkt med linjal och gradskiva. När de två krafterna är vinkelräta mot varandra bildar de tillsammans en rätvinklig triangel, och då kan resultantens storlek räknas ut exakt med Pythagoras sats i stället för att mätas.
 
-Två bogserbåtar drar en pråm med raka linor. Den ena båten drar med kraften F_1 = 3000 N rakt norrut, den andra med kraften F_2 = 4000 N rakt österut. Krafterna är vinkelräta mot varandra, så resultantens storlek blir
+Två bogserbåtar drar en pråm med raka linor. Den ena båten drar med kraften F_1 = 3000 N rakt norrut, den andra med F_2 = 4000 N rakt österut. Krafterna är vinkelräta, så resultantens storlek blir
 
 *F_R = √(F_1² + F_2²)*
 
 F_R = √(3000² + 4000²) = √(9 000 000 + 16 000 000) = √25 000 000 = 5000 N
 
-Pråmen påverkas alltså sammantaget av en kraft på 5000 N. Riktningen ligger mellan nord och öst, närmare öst eftersom den östliga kraften är störst. Två saker är värda att lägga märke till, eftersom de ofta blandas ihop. Resultantens **riktning** ligger mellan de två krafternas riktningar. Resultantens **storlek** är däremot större än var och en av dem: 5000 N är mer än både 3000 N och 4000 N. Att lägga ihop två krafter som drar åt olika håll ger alltid en resultant som är minst lika stor som den största av dem, och det är en användbar kontroll av ett räknat svar. Ett svar på 3500 N i exemplet ovan hade varit fel utan att man behöver kontrollera själva räkningen.
+Riktningen får man ur samma räta triangel. Den geometriska bilden visar direkt att resultanten pekar mellan nord och öst, närmare öst eftersom den östliga kraften är störst. Vill man ha en exakt vinkel mäter man den i skalritningen, eller räknar ut den. Mätt från den östliga riktningen lutar resultanten mot norr med vinkeln α, där tan α = 3000 / 4000 = 0,75, vilket ger α = arctan(0,75) ≈ 36,9°. Resultanten är alltså riktad ungefär 37° norr om öster.
 
-Ibland är förhållandet det omvända: en enda känd kraft behöver delas upp i två **komposanter**, delkrafter som tillsammans ger samma verkan som originalkraften, för att kunna analyseras i en viss riktning. Ett vanligt fall är en kraft som verkar snett mot den riktning som är intressant. Dras en kälke framåt med ett rep som lutar 30 grader över marken, och repet är spänt med kraften F = 100 N, verkar bara en del av kraften i kälkens färdriktning. Komposanterna är
+Svaret går att rimlighetsbedöma utan att lita på räkningen. När två krafter drar åt olika håll utan att motverka varandra blir resultanten större än var och en av dem men mindre än deras summa. Här ska alltså 4000 N < F_R < 7000 N, och 5000 N ligger mitt emellan. Sambandet gäller just när krafterna inte motverkar varandra. Drar de delvis mot varandra kan resultanten i stället bli mindre än den största enskilda kraften, och drar de rakt mot varandra blir den så liten som skillnaden mellan dem.
 
-*F_x = F · cos(v)* och *F_y = F · sin(v)*
+Ibland är förhållandet det omvända: en enda känd kraft behöver delas upp i två **komposanter**, delkrafter som tillsammans har exakt samma verkan som den ursprungliga kraften. Uppdelningen görs geometriskt som en spegelbild av additionen. Rita kraften skalenligt som en pil. Rita från pilens startpunkt de två riktningar man vill dela upp kraften i, till exempel vågrätt och lodrätt. Komplettera till en rektangel där kraftpilen är diagonalen. Rektangelns två sidor är då komposanterna, och de kan mätas med samma skala. Samma uppdelning kan räknas ut med trigonometri:
 
-där v är vinkeln mellan kraften och den vågräta riktningen. Insatt:
+*F_x = F · cos α* och *F_y = F · sin α*
+
+där α är vinkeln mellan kraften och den vågräta riktningen. Den geometriska och den trigonometriska metoden beskriver samma uppdelning: den ena mäts, den andra räknas.
+
+Dras en kälke framåt med ett rep som lutar α = 30° över marken, och repet är spänt med kraften F = 100 N, blir komposanterna
 
 F_x = 100 · cos(30°) = 100 · 0,866 ≈ 86,6 N
 
 F_y = 100 · sin(30°) = 100 · 0,5 = 50 N
 
-F_x, den horisontella komposanten, är den del av dragkraften som faktiskt drar kälken framåt. F_y, den vertikala komposanten, lyfter kälken något och minskar därmed normalkraften mot marken. En och samma kraft kan alltså både driva kälken framåt och samtidigt göra den lättare att dra, beroende på hur den delas upp. Svaren är rimliga: båda komposanterna är mindre än de 100 N repet dras med, vilket de alltid måste vara, och den vågräta är störst eftersom repet lutar mindre än 45 grader.
+F_x, den vågräta komposanten, är den del av dragkraften som drar kälken framåt. F_y, den lodräta komposanten, lyfter kälken något och minskar därmed normalkraften mot marken, vilket i sin tur minskar friktionen och gör kälken lättare att dra. En och samma kraft kan alltså både driva kälken framåt och göra den lättare att dra. De två komposanterna är inte nya krafter utöver dragkraften, utan just den kraften uttryckt i två riktningar. Svaren är rimliga: båda är mindre än de 100 N repet dras med, och den vågräta är störst eftersom repet lutar mindre än 45°.
 
 [[figur:fig-6.1.2-a]]
 
-## Friläggning
+## Krafter på ett lutande plan
 
-För att analysera krafterna på ett föremål utan att blanda ihop dem med krafterna på allt runt omkring används en metod som kallas **friläggning**. Föremålet tänks lösgjort, "frilagt", från sin omgivning, och varje kontakt med omgivningen ersätts med den kraft kontakten ger upphov till: en vägg ersätts med sin normalkraft, ett rep med sin dragkraft, marken med sin normalkraft och eventuella friktionskraft. Kvar blir en ren bild av föremålet med samtliga yttre krafter inritade som pilar.
+Det lutande planet knyter ihop krafttyperna med uppdelningen i komposanter, och det visar samtidigt varför det ibland lönar sig att välja andra riktningar än vågrätt och lodrätt. En låda ligger stilla på ett plan som lutar vinkeln α mot vågrätt. Tre krafter verkar på lådan: tyngdkraften F_g rakt nedåt, normalkraften F_N vinkelrätt ut från planet, och friktionskraften F_f längs planet.
 
-En låda som vilar stilla på ett sluttande plan friläggs genom att ersätta planet med de krafter det utövar: en normalkraft vinkelrät mot planets yta, och en friktionskraft längs ytan som hindrar lådan från att glida. Dessutom verkar lådans egen tyngdkraft, rakt nedåt, oavsett hur planet lutar. Friläggningen visar direkt varför lådan inte rör sig: de tre krafterna balanserar varandra.
+Tyngdkraften är den enda som inte redan följer planet. Den delas därför upp i två komposanter längs planets egna riktningar: en komposant längs planet, F_g,∥, som vill dra lådan nedför, och en komposant vinkelrätt mot planet, F_g,⊥, som pressar lådan mot ytan. Med vinkeln α blir
 
-Samma metod gäller för större konstruktioner. Friläggs gångbron som helhet ersätts marken vid de två stöden med varsin kraft riktad uppåt, medan brons egentyngd och trafiklastens tyngd verkar nedåt. Här görs ett antagande som är värt att skriva ut: stöden behandlas som om de bara kunde ge lodräta krafter. Verkliga stöd kan också ta upp krafter i sidled, och vilka krafter ett stöd faktiskt kan bära beror på hur det är utformat. Avsnittet om jämvikt går igenom de vanligaste stödtyperna och när förenklingen håller.
+*F_g,∥ = m · g · sin α* och *F_g,⊥ = m · g · cos α*
 
-Friläggningen ger på så vis en fullständig lista över de krafter som håller bron uppe och de krafter den måste bära. Utan en korrekt friläggning saknas underlaget för allt annat: en glömd kraft i friläggningen ger ett fel som ingen senare beräkning kan upptäcka.
+Eftersom lådan ligger stilla måste krafterna ta ut varandra i båda riktningarna var för sig. Längs planet balanserar friktionen tyngdkraftens komposant nedför, och vinkelrätt mot planet balanserar normalkraften den komposant som pressar lådan mot ytan:
+
+F_f = F_g,∥   och   F_N = F_g,⊥
+
+Lutas planet mer växer sin α och avtar cos α. Komposanten längs planet ökar därför, medan komposanten vinkelrätt mot planet minskar. Det betyder två saker samtidigt: den kraft som vill dra lådan nedför blir större, och normalkraften, som friktionen har att arbeta med, blir mindre. Friktionen räcker allt sämre till, och vid en viss lutning börjar lådan glida.
 
 [[figur:fig-6.1.3-a]]
+
+Exakt när glidningen börjar beror på ytorna. Den största friktionskraft som två ytor kan ge innan de glider är proportionell mot normalkraften, F_f,max = μ_s · F_N, där **friktionskoefficienten** μ_s är ett tal som beror på materialen i de två ytorna, till exempel omkring 0,4 för trä mot trä. Vid glidgränsen är friktionen maximalt utnyttjad, alltså F_g,∥ = F_f,max, vilket ger m · g · sin α = μ_s · m · g · cos α. Massan och tyngdaccelerationen förkortas bort, och kvar står det enkla villkoret μ_s = tan α. Glidvinkeln avslöjar alltså friktionskoefficienten direkt, oberoende av hur tung lådan är, vilket är grunden för en av de praktiska uppgifterna.
+
+## Friläggning
+
+De tre krafterna på lådan ritades ut var för sig, lösgjorda från planet och omgivningen. Den metoden har ett namn. Att **frilägga** ett föremål är att tänka det lösgjort från allt runt omkring och ersätta varje kontakt med den kraft kontakten ger upphov till: en vägg ersätts med sin normalkraft, ett rep med sin dragkraft, marken med sin normalkraft och eventuella friktionskraft. Resultatet ritas som ett **friläggningsdiagram**. Till skillnad från ett allmänt kraftdiagram visar det ett enda, isolerat föremål med enbart de yttre krafter som verkar på just det föremålet.
+
+Lådan på det lutande planet är ett fullständigt exempel: planet ersätts av normalkraften och friktionskraften, och lådans egen tyngdkraft verkar rakt nedåt oavsett hur planet lutar. Här är en sak värd att hålla reda på. Tyngdkraftens komposanter F_g,∥ och F_g,⊥ är inte nya krafter vid sidan av tyngdkraften, utan tyngdkraften uppdelad. I ett friläggningsdiagram ritar man därför antingen den hela tyngdkraften eller dess två komposanter, aldrig alla tre samtidigt, eftersom det vore att räkna samma kraft två gånger.
+
+Samma metod skalar upp till en hel konstruktion, men först måste konstruktionen ersättas av en modell. Kapitlets gångbro beskrivs därför som en **balkbro** med fri spännvidd 6,0 m och gångbanebredd 1,5 m, med bärverket i två stålbalkar under ett trädäck och ett stöd i vardera änden, kallade A och B. Egentyngden är 3600 N och den nyttiga lasten är gångtrafik, enstaka cyklister och barnvagnar. Modellen utelämnar med flit sådant som inte behövs för frågan: räcken, skruvförband, lutning och rörelser i marken finns inte med. En modell som inte redovisar vad den utelämnar går inte att lita på, och kapitlet skriver därför ut sina antaganden varje gång bron beräknas.
+
+Friläggs bron ersätts marken vid de två stöden med varsin stödkraft riktad uppåt, medan egentyngden och trafiklasten verkar nedåt. Ett antagande är värt att skriva ut: stöden behandlas som om de bara kunde ge lodräta krafter. Verkliga stöd kan också ta upp krafter i sidled, och vad ett stöd faktiskt kan bära beror på hur det är utformat. Avsnittet om jämvikt går igenom de vanligaste stödtyperna och när förenklingen håller. Friläggningen ger på så vis en fullständig lista över de krafter som håller bron uppe och de krafter den måste bära, och blir därmed den bild som avsnittet om jämvikt räknar vidare på. Utan en korrekt friläggning saknas underlaget för allt annat: en glömd kraft ger ett fel som ingen senare beräkning kan upptäcka.
+
+[[figur:fig-6.1.4-a]]
 
 ## Instuderingsfrågor
 
 1. Vilka tre egenskaper beskriver en kraft fullständigt, och varför räcker det inte att bara ange kraftens storlek?
 2. Förklara skillnaden mellan tyngdkraft och normalkraft. Kan de vara lika stora? Motivera.
 3. En bil accelererar framåt. Förklara i vilken riktning friktionskraften från vägbanan verkar på drivhjulen, och varför beskrivningen "friktion motverkar rörelse" är missvisande här.
-4. Varför kan en kätting bara bära dragkraft, medan ett diagonalstag i en byggställning kan bära både drag och tryck?
-5. Kapitlets gångbro beskrivs som en modell med bestämd spännvidd, egentyngd och stödplacering, där räcken och skruvförband inte finns med. Varför förenklas en verklig konstruktion på det sättet innan den beräknas, och vilken risk finns med förenklingen?
+4. Varför kan en kätting bara bära dragkraft, medan ett diagonalstag i en byggställning kan bära både drag och tryck? Förklara också varför en lång, smal detalj beter sig olika vid drag och vid tryck.
+5. En resultant kan bestämmas geometriskt eller med Pythagoras sats och trigonometri. Förklara kort vad var och en av de två metoderna går ut på, och varför de ger samma svar.
+6. En låda ligger stilla på ett lutande plan. Namnge de tre krafter som verkar på lådan och ange riktningen för var och en. Förklara sedan varför tyngdkraftens två komposanter inte ska ritas som egna krafter vid sidan av tyngdkraften, och varför gångbron ersätts av en förenklad modell innan den friläggs.
 
 ## Praktiska uppgifter
 
 1. En rugbyspelare med massan 90 kg står stilla på planen. Beräkna tyngdkraften som verkar på spelaren.
 2. En travers lyfter en last rakt uppåt. Lyftkroken drar med 4,5 kN uppåt och lastens tyngdkraft är 3,2 kN nedåt. Bestäm resultantens storlek och riktning.
-3. En kraft på 200 N drar i ett rep som lutar 40 grader över marken. Beräkna repets horisontella och vertikala komposant.
-4. Två krafter på 6000 N respektive 8000 N verkar vinkelrätt mot varandra i samma punkt. Bestäm resultantens storlek. Avgör innan du räknar om svaret bör bli större eller mindre än 8000 N, och motivera.
-5. Ett diagonalstag i en byggställning är spänt med 2,5 kN och lutar 55 grader mot vågplanet. Beräkna hur stor del av stagets kraft som verkar vågrätt respektive lodrätt. Vilken av komposanterna är störst, och stämmer det med vad du kan vänta dig av vinkeln?
-6. En lampa hänger stilla i en enda lina från taket. Frilägg lampan, rita in samtliga yttre krafter och ange vad som måste gälla mellan dem för att lampan ska hänga stilla. Vad blir linans dragkraft om lampans massa är 3,0 kg?
-7. En arbetare drar en släde med ett rep som lutar 25 grader över marken. Repet är spänt med 400 N. Frilägg släden och rita in samtliga yttre krafter. Beräkna repets båda komposanter, och förklara sedan vilken av dem som minskar normalkraften mot marken och varför det gör släden lättare att dra. Vad skulle hända med de båda komposanterna om arbetaren i stället höll repet nästan vågrätt?
+3. Två krafter på 6000 N respektive 8000 N verkar vinkelrätt mot varandra i samma punkt. Avgör först, utan att räkna, om resultanten bör bli större eller mindre än 8000 N, och motivera. Bestäm sedan resultantens storlek.
+4. Ett diagonalstag i en byggställning är spänt med 2,5 kN och lutar 55° mot vågplanet. Beräkna hur stor del av stagets kraft som verkar vågrätt respektive lodrätt. Vilken av komposanterna är störst, och stämmer det med vad du kan vänta dig av vinkeln?
+5. En lampa hänger stilla i en enda lina från taket. Frilägg lampan, rita in samtliga yttre krafter och ange vad som måste gälla mellan dem för att lampan ska hänga stilla. Vad blir linans dragkraft om lampans massa är 3,0 kg?
+6. En låda med massan 25 kg står stilla på ett plan som lutar 20°. Frilägg lådan och rita in de tre krafter som verkar på den. Beräkna tyngdkraftens komposant längs planet och komposanten vinkelrätt mot planet. Hur stor måste friktionskraften minst vara för att lådan ska ligga stilla, och hur stor blir normalkraften?
+7. En låda börjar glida när planet lutas till 22°. Bestäm friktionskoefficienten μ_s mellan lådan och planet. Förklara varför du inte behöver känna till lådans massa för att lösa uppgiften, och bedöm om svaret är rimligt för till exempel trä mot trä.
