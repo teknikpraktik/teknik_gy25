@@ -133,7 +133,9 @@ När ett kapitels avsnitt är producerade får kapitlet sina två avslutningar (
 
 **Sammanfattning.** Skriv sist, när begreppslistan och helkapitelövningarna redan finns. Kort löpande text, inte punktlista, som låter eleven repetera hela kapitlet på några minuter (riktmärke cirka 300 ord) — repetition, inga nya fakta eller begrepp, inga instuderingsfrågor.
 
-**Begreppslista.** Skriv kapitlets begrepp (frontmatterfältet `ordlista`) med **färdiga definitioner**, max ungefär en mening per begrepp. En uppslagsfunktion: eleven fyller inte i något här. Begreppen ska redan ha sitt huvudställe i eller före kapitlet — listan är repetition och uppslag, aldrig första mötet. Facit-liknande innehåll (definitionerna själva) är tillåtet här eftersom listan är den avsedda uppslagsdelen, till skillnad från bedömningsfacit, som fortfarande ligger i en separat privat lärarmaterialkälla (12).
+**Begreppslista.** Skriv kapitlets begrepp (frontmatterfältet `ordlista`) med **färdiga definitioner**, max ungefär en mening per begrepp. En uppslagsfunktion: eleven fyller inte i något här. Begreppen ska redan ha sitt huvudställe i eller före kapitlet; listan är repetition och uppslag, aldrig första mötet. Facit-liknande innehåll (definitionerna själva) är tillåtet här eftersom listan är den avsedda uppslagsdelen, till skillnad från bedömningsfacit, som fortfarande ligger i en separat privat lärarmaterialkälla (12).
+
+Format (obligatoriskt, se 03-bokens-arkitektur.md, "Begrepp"): en kompakt ordlista utan punktmarkering, en post per rad på formen `**Begrepp:** Definition.` — begreppet i fetstil med kolon inom fetstilen, versal på både begrepp och definition, definitionen en fullständig mening som slutar med punkt, inga tankstreck som avskiljare, hård radbrytning (avslutande `\`) på varje rad utom den sista. `npm run validate` felar på punktlista, tankstreck, ofetstilat begrepp eller saknad avslutande punkt.
 
 **Kör** `npm run validate`: 06-bokstruktur.md stäms av mot filerna åt båda håll.
 

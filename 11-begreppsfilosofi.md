@@ -170,7 +170,7 @@ Det finns **inget synligt Begrepp-block** efter enskilda avsnitt. Begreppen intr
 
 Instuderingsfrågorna tränar begreppsförståelsen: minst en fråga per avsnitt testar avsnittets begrepp ("Förklara med egna ord vad som menas med ...", 03). Avsnittets övningar låter eleven använda begreppen i tekniskt arbete.
 
-Kapitlets **begreppslista** (kapitelavslutningen Begrepp) är en uppslagsfunktion: kapitlets begrepp med färdiga definitioner, max ungefär en mening per begrepp. Eleven fyller inte i något i listan — begreppsförståelse tränas i instuderingsfrågorna, inte i listan. Listan får aldrig vara elevens första möte med ett begrepp (03-bokens-arkitektur.md, "Kapitelavslutningar").
+Kapitlets **begreppslista** (kapitelavslutningen Begrepp) är en uppslagsfunktion: kapitlets begrepp med färdiga definitioner, max ungefär en mening per begrepp, i det obligatoriska ordlisteformatet `**Begrepp:** Definition.` (03-bokens-arkitektur.md, "Begrepp"). Eleven fyller inte i något i listan; begreppsförståelse tränas i instuderingsfrågorna, inte i listan. Listan får aldrig vara elevens första möte med ett begrepp (03-bokens-arkitektur.md, "Kapitelavslutningar").
 
 Den interna begreppsmetadatan behålls och är oförändrad: `concepts_introduced` anger var ett begrepp har sitt huvudställe och `concepts_used` var det återanvänds (12-produktionsarkitektur.md, "Begrepp"). Metadatan genererar inget synligt block.
 

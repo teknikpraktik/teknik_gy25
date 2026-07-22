@@ -186,6 +186,8 @@ Granskning sker på tre nivåer.
 
 □ Begreppslistan innehåller kapitlets centrala begrepp med färdiga definitioner, max ungefär en mening per begrepp (03).
 
+□ Begreppslistan följer ordlisteformatet `**Begrepp:** Definition.` (03, "Begrepp"): ingen punktmarkering, begreppet fetstilt med kolon inom fetstilen, inga tankstreck som avskiljare, varje definition en fullständig mening som slutar med punkt. `npm run validate` kontrollerar detta.
+
 □ Begreppslistan är en uppslagsfunktion: eleven fyller inte i något, och inget begrepp möter eleven här för första gången (11).
 
 □ Kapitlet har inga projektuppgiftsavsnitt och ingen projektbank.

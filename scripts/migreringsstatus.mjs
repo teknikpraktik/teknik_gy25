@@ -33,6 +33,7 @@ export const migreradeKapitel = new Set();
 export const strukturskuldKategorier = {
 	PROJEKTUPPGIFTER: 'Utfasade projektuppgiftsfiler kvar i content/ (NN-projektuppgifter.md saknas i 06)',
 	OVNINGSRUBRIK: 'Utfasad övningsrubrik "Praktiska uppgifter" i ej migrerat kapitel (migreras till "Övningar")',
+	BEGREPP_FORMAT: 'Gammalt begreppslisteformat (ifyllnadslista) i ej migrerat kapitel (migreras till ordlisteformatet)',
 };
 
 // Explicit register över avsnittsfiler i ej migrerade kapitel som ännu bär den
@@ -54,6 +55,19 @@ export const legacyOvningsrubrikFiler = new Set([
 	'06-mekanik-och-konstruktion/04-hallfasthet.md',
 	'06-mekanik-och-konstruktion/05-konstruktioner.md',
 	'06-mekanik-och-konstruktion/06-dimensionering.md',
+]);
+
+// Begreppsövningsfiler (kapitelavslutningar) som ännu använder det gamla
+// ifyllnadsformatet (punktlista med bara begrepp, utan definitioner) i stället
+// för ordlisteformatet `**Begrepp:** Definition.` (03-bokens-arkitektur.md,
+// "Begrepp"). Begreppslistans formatkontroll i validate hoppar över dessa och
+// redovisar dem som förväntad migreringsskuld i stället för aktivt fel, eftersom
+// de kräver nyskrivna definitioner som hör till kapitlets revidering. Ta bort
+// posten när kapitlet fått definitioner i det nya formatet. Endast kapitel 6 har
+// producerat innehåll som ännu inte reviderats; övriga ej producerade kapitels
+// begreppsfiler är tomma skelett (status ej-paborjad) och kontrolleras inte.
+export const legacyBegreppFiler = new Set([
+	'06-mekanik-och-konstruktion/08-begrepp.md',
 ]);
 
 // Klassificerar ett redan genererat valideringsfel som känd strukturell

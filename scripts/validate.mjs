@@ -25,6 +25,7 @@ import {
 	migreradeKapitel,
 	strukturskuldKategorier,
 	legacyOvningsrubrikFiler,
+	legacyBegreppFiler,
 	klassificeraStrukturskuld,
 } from './migreringsstatus.mjs';
 
@@ -525,6 +526,42 @@ for (const ka of kapitelavslutningsFiler) {
 		// Utfasade uppgiftsbanksfiler (NN-projektuppgifter.md) fångas här och
 		// klassas som migreringsskuld nedan. De valideras inte längre som banker.
 		errors.push(`${ka.file}: kapitelavslutning (type ${ka.type}) finns inte i 06-bokstruktur.md.`);
+	}
+}
+
+// Begreppslistans format (03-bokens-arkitektur.md, "Begrepp", redaktionellt beslut
+// 2026-07-22): en kompakt ordlista utan punktmarkering, en post per rad på formen
+// "**Begrepp:** Definition." — fetstilt begrepp med kolon inom fetstilen, inga
+// tankstreck, definition som fullständig mening med avslutande punkt. Kontrolleras
+// från granskningsstatus. Filer i legacyBegreppFiler har ännu det gamla
+// ifyllnadsformatet och redovisas som migreringsskuld i stället för aktivt fel.
+for (const ka of kapitelavslutningsFiler) {
+	if (ka.type !== 'begreppsovning') continue;
+	if (statusEnum.indexOf(ka.status) < GRANSKNINGSSTATUS) continue;
+	if (legacyBegreppFiler.has(ka.file)) {
+		skuld.push({
+			kategori: strukturskuldKategorier.BEGREPP_FORMAT,
+			msg: `${ka.file}: gammalt ifyllnadsformat i begreppslistan — migreras till ordlisteformatet "**Begrepp:** Definition." när kapitlet revideras.`,
+		});
+		continue;
+	}
+	const rader = ka.body.split('\n').map((r) => r.replace(/\r$/, '')).filter((r) => r.trim() !== '');
+	if (rader.length === 0) {
+		errors.push(`${ka.file}: begreppslistan är tom (03-bokens-arkitektur.md, "Begrepp").`);
+		continue;
+	}
+	for (const rad of rader) {
+		const kärna = rad.replace(/\\\s*$/, '').trimEnd(); // ta bort hård radbrytning (\)
+		const utdrag = kärna.length > 45 ? `${kärna.slice(0, 45)}…` : kärna;
+		if (/^\s*[-*+]\s/.test(kärna)) {
+			errors.push(`${ka.file}: punktmarkering i begreppslistan ("${utdrag}") — ordlistan skrivs utan punkter, en post per rad "**Begrepp:** Definition." (03-bokens-arkitektur.md, "Begrepp").`);
+		} else if (/[—–]/.test(kärna)) {
+			errors.push(`${ka.file}: tankstreck i begreppslistan ("${utdrag}") — använd formen "**Begrepp:** Definition." utan tankstreck (03-bokens-arkitektur.md, "Begrepp").`);
+		} else if (!/^\*\*[^*]+:\*\*\s/.test(kärna)) {
+			errors.push(`${ka.file}: begreppet är inte fetstilt med kolon inom fetstilen ("${utdrag}") — formen är "**Begrepp:** Definition." (03-bokens-arkitektur.md, "Begrepp").`);
+		} else if (!/\.$/.test(kärna)) {
+			errors.push(`${ka.file}: definitionen saknar avslutande punkt ("${utdrag}") — definitionen ska vara en fullständig mening (03-bokens-arkitektur.md, "Begrepp").`);
+		}
 	}
 }
 

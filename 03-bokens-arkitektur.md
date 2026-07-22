@@ -206,7 +206,16 @@ Kort löpande text, inte punktlista, som låter eleven repetera hela kapitlet p�
 
 ## Begrepp
 
-Kapitlets begrepp med färdiga definitioner, max ungefär en mening per begrepp. Listan är en **uppslagsfunktion**: eleven fyller inte i något här, och begreppsförståelse tränas i instuderingsfrågorna, inte i listan. Precisionen i definitionerna bor här — i löptexten växer definitionerna ur exemplen och står i prosa.
+Kapitlets begrepp med färdiga definitioner, max ungefär en mening per begrepp. Listan är en **uppslagsfunktion**: eleven fyller inte i något här, och begreppsförståelse tränas i instuderingsfrågorna, inte i listan. Precisionen i definitionerna bor här; i löptexten växer definitionerna ur exemplen och står i prosa.
+
+**Format (obligatoriskt, redaktionellt beslut 2026-07-22).** Begreppslistan skrivs som en kompakt ordlista, ett begrepp per rad, **utan punktmarkering**. Varje post har formen `**Begrepp:** Definition.`: begreppet i fetstil med kolon direkt efter (kolonet inom fetstilen), sedan ett mellanslag och definitionen. Begreppet inleds med versal. Definitionen är en fullständig mening som inleds med versal och avslutas med punkt. **Inga tankstreck eller bindestreck** som avskiljare mellan begrepp och definition. Posterna hålls samman utan blankrad emellan, med hård radbrytning (avslutande `\` på varje rad utom den sista), så att listan får en kompakt vertikal rytm och inte renderas som en punktlista. Källformat:
+
+```
+**Automation:** Att låta maskiner utföra och styra ett arbete med liten mänsklig inblandning.\
+**Avvägning:** Ett val mellan krav där mer av det ena innebär mindre av det andra.
+```
+
+Begrepp som kursiveras vid sitt huvudställe i löptexten (05, "Begreppsmarkering") är **fetstilta** i begreppslistan. `scripts/validate.mjs` felar på punktlista, tankstreck, ofetstilat begrepp eller definition utan avslutande punkt i en begreppslista.
 
 Varje begrepp i listan ska ha sitt huvudställe i eller före kapitlet (`concepts_introduced`, 12-produktionsarkitektur.md). Listan inför aldrig nya begrepp.
 

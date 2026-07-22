@@ -176,7 +176,7 @@ Det centrala figurregistret (`figures/registry.yml`) och shortcoden `[[figur:ID]
 Varje färdigproducerat kapitel avslutas med två avsnitt som saknar `learningGoals` och identifieras av `type` i stället för `id` (03-bokens-arkitektur.md, "Kapitelavslutningar"):
 
 - `type: kapitelsammanfattning` — kort löpande text, inte punktlista, som låter eleven repetera hela kapitlet på några minuter (riktmärke cirka 300 ord). Ingen `ordlista`.
-- `type: begreppsovning` — kapitlets **begreppslista**: kapitlets centrala begrepp med färdiga definitioner, max ungefär en mening per begrepp. Uppslagsfunktion, inget som eleven fyller i. Type-värdet `begreppsovning` behålls som tekniskt id tills schema och skript migreras; innehållsmodellen är begreppslistan.
+- `type: begreppsovning` — kapitlets **begreppslista**: kapitlets centrala begrepp med färdiga definitioner, max ungefär en mening per begrepp, i det obligatoriska ordlisteformatet `**Begrepp:** Definition.` (03-bokens-arkitektur.md, "Begrepp"). Uppslagsfunktion, inget som eleven fyller i. Type-värdet `begreppsovning` behålls som tekniskt id tills schema och skript migreras; innehållsmodellen är begreppslistan.
 
 Det finns ingen `type: uppgiftsbank` längre (redaktionellt beslut 2026-07-22): kapitlets större, integrerande uppgifter skrivs som helkapitelövningar i Övningar i kapitlets senare teoriavsnitt (03). Befintliga projektuppgiftsfiler avvecklas kapitel för kapitel i innehållsmigreringen — deras användbara uppgifter arbetas in som helkapitelövningar.
 

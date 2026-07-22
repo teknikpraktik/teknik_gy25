@@ -45,6 +45,18 @@ Den gamla `05-projektuppgifter.md` ligger kvar som migreringsskuld (raderas vid 
 
 ---
 
+# Begreppslistans format — ordlista (2026-07-22)
+
+Redaktionellt beslut: begreppslistorna (kapitelavslutningen Begrepp) skrivs som en kompakt ordlista i stället för punktlista med tankstreck. Obligatoriskt format, en post per rad utan punktmarkering:
+
+`**Begrepp:** Definition.`
+
+Begreppet i fetstil med kolon inom fetstilen, versal på både begrepp och definition, definitionen en fullständig mening som slutar med punkt, inga tankstreck som avskiljare, hård radbrytning (avslutande `\`) på varje rad utom den sista för kompakt vertikal rytm. Verifierat i webb (Astro/Starlight, `<br>`), granskningsvy och Pandoc-export (`<br />` i Word/HTML).
+
+Genomfört: begreppslistorna i kapitel 1 (17 begrepp) och kapitel 2 (6 begrepp) konverterade från `- **begrepp** — definition.` till det nya formatet. Standarden inskriven i 03 ("Begrepp"), 11, 12, 13, 09 och CLAUDE.md. Ny kontrollregel i `scripts/validate.mjs` felar på punktlista, tankstreck, ofetstilat begrepp eller definition utan avslutande punkt i en begreppslista (testad mot fixturer). Kapitel 6:s begreppslista har ännu det gamla ifyllnadsformatet (bara begrepp, inga definitioner) och redovisas som förväntad migreringsskuld (`legacyBegreppFiler`) tills kapitel 6 revideras — den kräver nyskrivna definitioner. Övriga kapitels begreppsfiler är tomma skelett och berörs inte.
+
+---
+
 **Redaktionell revision 2026-07-22 (produktionsstandard, uttryckligt beslut av
 projektägaren; kvalitetsreferensen bytt namn från Golden Master till
 referensimplementation):** Avsnitt 1.1 "Vad är teknik?" ersattes i sin helhet av
