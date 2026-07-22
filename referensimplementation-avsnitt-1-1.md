@@ -1,6 +1,6 @@
 # Referensimplementation — avsnitt 1.1 Vad är teknik?
 
-Detta dokument är projektets redaktionella guldstandard, fastställd av projektägaren 2026-07-22. Den är referens för hela boken i fråga om ton, kompressionsgrad, exempelanvändning, bildplaceholders, instuderingsfrågor och övningar. Texten nedan återges ordagrant och får inte redigeras utan projektägarens beslut. Den skarpa manusversionen ligger i `content/01-teknik-och-teknikutveckling/01-vad-ar-teknik.md`.
+Detta dokument är projektets redaktionella guldstandard, fastställd av projektägaren 2026-07-22. Den är referens för hela boken i fråga om ton, kompressionsgrad, exempelanvändning, bildplaceholders, instuderingsfrågor och övningar. Texten nedan återges ordagrant och får inte redigeras utan projektägarens beslut. Den skarpa manusversionen ligger i `content/01-teknikens-grunder/01-vad-ar-teknik.md`.
 
 ---
 

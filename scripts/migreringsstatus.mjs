@@ -27,8 +27,10 @@
 export const migreradeKapitel = new Set();
 
 // Kategorietiketter för grupperingen i validate-utdata.
+// KAP1_MAPP (kapitel 1-mappen ej omdöpt) är borttagen 2026-07-22: mappen
+// content/01-teknik-och-teknikutveckling har döpts om till 01-teknikens-grunder,
+// så den skulden är åtgärdad.
 export const strukturskuldKategorier = {
-	KAP1_MAPP: 'Kapitel 1-mappen ej omdöpt (01-teknik-och-teknikutveckling → 01-teknikens-grunder)',
 	PROJEKTUPPGIFTER: 'Utfasade projektuppgiftsfiler kvar i content/ (NN-projektuppgifter.md saknas i 06)',
 	OVNINGSRUBRIK: 'Utfasad övningsrubrik "Praktiska uppgifter" i ej migrerat kapitel (migreras till "Övningar")',
 };
@@ -57,22 +59,11 @@ export const legacyOvningsrubrikFiler = new Set([
 ]);
 
 // Klassificerar ett redan genererat valideringsfel som känd strukturell
-// migreringsskuld och returnerar kategorietiketten, annars null. Signaturerna är
-// medvetet smala och förankrade i de konkreta skuldposterna (kapitel 1-mappen
-// samt de 13 NN-projektuppgifter.md-filerna) så att ett nytt, äkta fel — även i
-// ett ej migrerat kapitel — inte råkar sväljas som skuld.
+// migreringsskuld och returnerar kategorietiketten, annars null. Signaturen är
+// medvetet smal och förankrad i den konkreta skuldposten (de 13
+// NN-projektuppgifter.md-filerna) så att ett nytt, äkta fel — även i ett ej
+// migrerat kapitel — inte råkar sväljas som skuld.
 export function klassificeraStrukturskuld(msg) {
-	// Kapitel 1: content-mappen heter ännu 01-teknik-och-teknikutveckling, men 06
-	// har bytt kapitelrubrik till "Teknikens grunder" (slug 01-teknikens-grunder).
-	if (/: fel sökväg för 1\.\d+ — ska vara 01-teknikens-grunder\//.test(msg)) {
-		return strukturskuldKategorier.KAP1_MAPP;
-	}
-	if (/^Planerad kapitelavslutning saknar fil: 01-teknikens-grunder\/0[0-9]-(sammanfattning|begrepp)\.md\b/.test(msg)) {
-		return strukturskuldKategorier.KAP1_MAPP;
-	}
-	if (/^01-teknik-och-teknikutveckling\/0[0-9]-(sammanfattning|begrepp)\.md: kapitelavslutning .*finns inte i 06/.test(msg)) {
-		return strukturskuldKategorier.KAP1_MAPP;
-	}
 	// De 13 NN-projektuppgifter.md-filerna finns kvar i content/ men saknas i 06.
 	if (/\/\d{2}-projektuppgifter\.md: kapitelavslutning \(type uppgiftsbank\) finns inte i 06-bokstruktur\.md\.$/.test(msg)) {
 		return strukturskuldKategorier.PROJEKTUPPGIFTER;
