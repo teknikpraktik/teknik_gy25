@@ -53,6 +53,16 @@ Den kör validering, begreppsregister, webbygge och båda exporterna. Först hä
 
 ---
 
+# Migreringsläge (2026-07-22)
+
+Avsnitts- och kapitelmodellen nedan (löptext → Instuderingsfrågor → Övningar; kapitelavslutningar Sammanfattning + Begrepp; `[BILD]`-platshållare) är fastställd av projektägaren och normerande för allt nytt och reviderat innehåll (03, 06). Referensimplementationen är `referensimplementation-avsnitt-1-1.md` (projektroten) — läs den innan ett avsnitt skrivs eller revideras.
+
+Skript och befintligt content/ migreras **kapitel för kapitel**, inte i ett svep. Fram till att ett kapitel tas om hand gäller därför i praktiken den äldre modellen (Praktiska uppgifter, uppgiftsbank/Projektuppgifter, `[[figur:ID]]`) för dess filer, och `npm run validate` visar kända fel för icke-migrerat innehåll (fel mappnamn för kapitel 1 vars titel bytts till "Teknikens grunder", kvarvarande `NN-projektuppgifter.md`-filer i samtliga kapitel). Det är väntad migreringsskuld, inte nya fel att jaga för varje ändring.
+
+När ett kapitel produceras eller revideras enligt den nya modellen: byt filens uppgiftsrubriker till Instuderingsfrågor/Övningar, skriv bilder som `[BILD X.Y-N]` i stället för `[[figur:ID]]`, och arbeta in kapitlets projektuppgifter som en eller två helkapitelövningar i de senare avsnittens Övningar innan `NN-projektuppgifter.md` tas bort och 06/skeleton stäms av.
+
+---
+
 # Källor och speglingar
 
 **06-bokstruktur.md** är enda källan till bokens struktur. `scripts/bokstruktur-data.mjs` tolkar dokumentet direkt vid varje skriptkörning — det finns ingen datafil att hålla i synk, men 06:s kapitel-, avsnitts- och delavsnittsrader måste följa radformatet i 06 ("Avsnittens och delavsnittens format") exakt. **content/** (en fil per avsnitt) genereras ur 06 av `npm run skeleton`; valideringen felar när content/ och 06 glider isär.
@@ -83,15 +93,15 @@ Sätt `status: under-utveckling`. Identifiera enligt 08:
 
 ## 3. Skriv
 
-Skriv teori, figurplatshållare och en avslutande **samlad sektion instuderingsfrågor** enligt 03 och 05. Avsnittet har inget fast sidomfång; flödar det över flera delar struktureras det med H3-delavsnitt (rena underrubriker, se 06 "Avsnittens och delavsnittens format"), inte med egen numrering. Följ därefter, när avsnittet har en meningsfull lokal tillämpning, med EN sektion **Praktiska uppgifter** (03, redaktionellt beslut 2026-07-20): lokala tillämpningsuppgifter ordnade från enklare till mer krävande. Rubriken är alltid "Praktiska uppgifter", aldrig Beräkningsuppgifter, Rituppgifter, Laborationer eller liknande, oavsett uppgifternas innehåll. Sektionen är frivillig. Det finns **inget Begrepp-block** i avsnittsfilen — begreppen behandlas i teorin (11) — och de större, integrerande uppgifterna samlas i kapitlets projektbank (se "Kapitelavslutningar" nedan).
+Skriv löptext (med bildplatshållare), delavsnitt (H3) vid behov, en avslutande **samlad sektion Instuderingsfrågor** (5–10) och därefter en **samlad sektion Övningar** (2–10), enligt 03 och 05. Avsnittet har inget fast sidomfång; flödar det över flera delar struktureras det med H3-delavsnitt (rena underrubriker, se 06 "Avsnittens och delavsnittens format"), inte med egen numrering. Rubrikerna är alltid "Instuderingsfrågor" och "Övningar", aldrig Praktiska uppgifter, Projektuppgifter eller äldre uppdelade kategorier (Beräkningsuppgifter, Rituppgifter, Laborationer med flera). Det finns **inget Begrepp-block** i avsnittsfilen — begreppen behandlas i löptexten (11) — och kapitlets större, integrerande uppgifter skrivs i stället som en eller två helkapitelövningar i de senare avsnittens Övningar (se "Kapitelavslutningar" nedan), inte i en egen projektbank.
 
-Rubrikkonvention i källfilerna: eftersom sidtiteln (frontmatterns `title`) är avsnittets h1 på webben, skrivs delavsnitt på `##`-nivå i källfilen och en eventuell ytterligare nedbrytning på `###` (undantagsvis). `## Instuderingsfrågor` skrivs på samma nivå som delavsnitten, sist i filen, som EN samlad sektion även när avsnittet har flera delavsnitt eller lärandemål. Exporten sänker brödtextens rubriker ett steg (kapitel H1 → avsnitt H2 → delavsnitt H3). Frågorna numreras 1, 2, 3 … Sikta på 4–6 frågor per lärandemål avsnittet tränar (03); undvik långa frågebatterier och slå ihop frågor som blir för lika när flera lärandemål delar en gemensam lista.
+Rubrikkonvention i källfilerna: eftersom sidtiteln (frontmatterns `title`) är avsnittets h1 på webben, skrivs delavsnitt på `##`-nivå i källfilen och en eventuell ytterligare nedbrytning på `###` (undantagsvis). `## Instuderingsfrågor` och `## Övningar` skrivs på samma nivå som delavsnitten, i den ordningen sist i filen, som EN samlad sektion vardera även när avsnittet har flera delavsnitt eller lärandemål. Exporten sänker brödtextens rubriker ett steg (kapitel H1 → avsnitt H2 → delavsnitt H3). Frågorna och övningarna numreras var för sig 1, 2, 3 … Instuderingsfrågorna testar teknisk förståelse (aldrig "enligt texten" eller "vad visar figuren"), minst en tränar avsnittets begrepp. Övningarna är autentiska uppgifter i tydlig progression (identifiera, analysera, jämföra, konstruera, förbättra, eget arbete) och formuleras som "låter eleven visa", aldrig att boken mäter, testar eller examinerar (03).
 
-Vid ett begrepps huvudställe (filen där det står i `concepts_introduced`) skrivs begreppet i **fetstil** i den mening där det definieras. Detta är bindande standard.
+Vid ett begrepps huvudställe (filen där det står i `concepts_introduced`) skrivs begreppet **kursiverat** i den mening där det definieras, aldrig i fetstil. Detta är bindande standard (05, "Begreppsmarkering").
 
-Figurer refereras med `[[figur:ID]]`, begrepp som introducerats i andra avsnitt med `[[begrepp:namn]]`.
+Bilder skrivs som platshållare direkt i löptexten: `[BILD X.Y-N]` följt av Innehåll och färdigformulerad Bildtext (03, "Bilder"), numrerat löpande inom avsnittet. (I ännu icke migrerade kapitel kan `[[figur:ID]]` mot `figures/registry.yml` fortsätta användas tills kapitlet migreras, se "Migreringsläge".) Begrepp som introducerats i andra avsnitt refereras med `[[begrepp:namn]]`.
 
-Ett praktiskt moment som hör hemma i avsnittet skrivs som en numrerad uppgift under `## Praktiska uppgifter`, inte som en boolesk flagga (`practical_component` är pensionerat) och inte som löptext i teorin.
+En övning som hör hemma i avsnittet skrivs som en numrerad post under `## Övningar` med namn i fetstil, inte som en boolesk flagga (`practical_component` är pensionerat) och inte som löptext i teorin.
 
 ## 4. Granska
 
@@ -101,7 +111,7 @@ Genomför egengranskningen (08) och därefter granskningen av avsnitt (09). Ta b
 npm run validate
 ```
 
-Från denna status ställer valideringen innehållskrav: en **icke-tom sektion `## Instuderingsfrågor`** ska finnas (inget bestämt antal, exakt en sektion), `learningGoals` och `curriculumReferences` ska vara ifyllda och inga HTML-kommentarer, TODO, uppslagsrubriker, äldre uppgiftsrubriker (Förstå/Utveckla/Utmana) eller numrerade rubriker (kvarleva av den gamla lärandemålsnumreringen) får finnas kvar. Saknade figurer, tom `abilities`, AI-typiska formuleringar, tankstreck i elevtexten, "uppslag" som självreferens och ovanligt många personnamn ger varningar. Begrepp- och Praktiska uppgifter-block kontrolleras inte per avsnitt. Rätta alla fel och relevanta varningar.
+Från denna status ska valideringen (målmodell, se "Migreringsläge") ställa innehållskrav: en **icke-tom sektion `## Instuderingsfrågor`** (5–10, exakt en sektion) följd av en **icke-tom sektion `## Övningar`** (2–10, exakt en sektion), `learningGoals` och `curriculumReferences` ska vara ifyllda och inga HTML-kommentarer, TODO, uppslagsrubriker eller äldre uppgiftsrubriker (Praktiska uppgifter, Projektuppgifter, Förstå/Utveckla/Utmana) får finnas kvar. Tom `abilities`, AI-typiska formuleringar, tankstreck i elevtexten, fetstilade begrepp, förbjudna frågeformuleringar, "uppslag" som självreferens och ovanligt många personnamn ger varningar eller fel. Rätta alla fel och relevanta varningar. Jämför alltid mot referensimplementationen 1.1 innan status höjs.
 
 ## 5. Committa
 
@@ -111,17 +121,17 @@ Senare granskningssteg (fackgranskad → språkgranskad → klar) uppdaterar sta
 
 ---
 
-# Kapitelavslutningar
+# Kapitelavslutningar och helkapitelövningar
 
-När ett kapitels avsnitt är producerade får kapitlet sina tre avslutningar (12, "Kapitelavslutningar"). De skapas inte i förväg för kapitel som inte är påbörjade.
+När ett kapitels avsnitt är producerade får kapitlet sina två avslutningar (12, "Kapitelavslutningar"). De skapas inte i förväg för kapitel som inte är påbörjade.
 
-**Filer.** Skapa avsnittsfilerna för de tre sista posterna i kapitlets del av 06-bokstruktur.md: `<NN>-sammanfattning.md` (`type: kapitelsammanfattning`), `<NN>-begrepp.md` (`type: begreppsovning`) och `<NN>-projektuppgifter.md` (`type: uppgiftsbank`), i den ordningen. 06 styr existens och ordning — det finns inget separat manifest.
+**Filer.** Skapa avsnittsfilerna för de två sista posterna i kapitlets del av 06-bokstruktur.md: `<NN>-sammanfattning.md` (`type: kapitelsammanfattning`) och `<NN>-begrepp.md` (`type: begreppsovning`), i den ordningen. 06 styr existens och ordning — det finns inget separat manifest. Det finns ingen tredje kapitelavslutande fil för projektuppgifter.
 
-**Sammanfattning.** Skriv sist av de tre, när begreppsövningen och uppgiftsbanken redan finns. En sammanhängande löptext på cirka 300 ord som binder ihop kapitlets avsnitt till en helhet — repetition, inga nya fakta eller begrepp, inga instuderingsfrågor.
+**Helkapitelövningar.** Innan sammanfattningen skrivs: säkerställ att en eller två av kapitlets senare avsnitt har en helkapitelövning i sin `## Övningar`-sektion (03, "Helkapitelövningar"). En helkapitelövning kräver stoff från flera avsnitt, resulterar i något dokumenterat (skiss, ritning, modell, kod, rapport, värdering) och har utskrivna utbyggnadssteg i formatet grunduppgift plus "Bygg ut: ..." så att eleven kan visa arbete på E-, C- och A-nivå. Den fungerar fristående (05, "Självreferenser"): ersätt "från föregående avsnitt" och "figuren ovan" med stabil information i uppgiften. Den kommer utöver, aldrig i stället för, avsnittets egna grundövningar.
 
-**Begreppsövning.** Skriv en **punktlista** över kapitlets centrala begrepp (frontmatterfältet `ordlista`), ett begrepp per punkt, med en instruktion om att eleven ska förklara varje begrepp med en egen mening i häfte eller digitalt dokument. Begreppen ska redan ha sitt huvudställe i eller före kapitlet — övningen är repetition, aldrig första mötet. Facit skrivs inte här (repot är offentligt); det tekniska gränssnittet finns, men själva facit ligger i en separat privat lärarmaterialkälla (12).
+**Sammanfattning.** Skriv sist, när begreppslistan och helkapitelövningarna redan finns. Kort löpande text, inte punktlista, som låter eleven repetera hela kapitlet på några minuter (riktmärke cirka 300 ord) — repetition, inga nya fakta eller begrepp, inga instuderingsfrågor.
 
-**Projektbank.** Skriv kapitlets projektuppgifter som en **enkel numrerad lista** i brödtexten: löpnummer från 1, ett namn i fetstil och därefter uppgiften, till exempel `1. **Behovet bakom föremålet.** Välj ett vardagsföremål …`. Ingen indelning i nivåer, ingen frontmatter-metadata och ingen uppgift om arbetsform, tid, redovisning eller vilket lärandemål uppgiften tränar — utförandet överlåts till läraren och eleven. Varje uppgift ska fungera fristående (05, "Självreferenser"): ersätt "från föregående avsnitt" och "figuren ovan" med stabil information i uppgiften. Slå ihop eller ta bort uppgifter som tränar samma sak på nästan samma sätt. Sikta på **4–6 uppgifter, normalt 5** (03-bokens-arkitektur.md, "Projektuppgifter"), ordnade i stigande omfattning och varierade mellan laboration, konstruktion, undersökning och beräknande arbete.
+**Begreppslista.** Skriv kapitlets begrepp (frontmatterfältet `ordlista`) med **färdiga definitioner**, max ungefär en mening per begrepp. En uppslagsfunktion: eleven fyller inte i något här. Begreppen ska redan ha sitt huvudställe i eller före kapitlet — listan är repetition och uppslag, aldrig första mötet. Facit-liknande innehåll (definitionerna själva) är tillåtet här eftersom listan är den avsedda uppslagsdelen, till skillnad från bedömningsfacit, som fortfarande ligger i en separat privat lärarmaterialkälla (12).
 
 **Kör** `npm run validate`: 06-bokstruktur.md stäms av mot filerna åt båda håll.
 
@@ -139,16 +149,24 @@ Formatet definieras i `schemas/larandemal.schema.mjs` (12 är styrande). Kort br
 - **abilities** — vilka av de fem bedömda förmågorna (07, "Förmågekontroll") avsnittet primärt tränar.
 - **concepts_introduced** — begrepp som har sitt huvudställe här. Ett begrepp får bara introduceras i en fil i hela boken.
 - **concepts_used** — begrepp som används men introducerats någon annanstans.
-- **figures** — figur-ID:n som används; varje ID måste finnas i `figures/registry.yml`.
+- **figures** — figur-ID:n som används i ännu icke migrerade kapitel; varje ID måste finnas i `figures/registry.yml`. Nya och migrerade avsnitt använder `[BILD X.Y-N]`-platshållare i löptexten i stället och lämnar fältet tomt (se "Bilder").
 - **prerequisites** — id:n på avsnitt som måste komma tidigare i läsordningen.
 
 Fälten `module`, `uppslag` och `practical_component` är pensionerade (12) och skrivs inte längre. `praktiska_uppgifter_undantag` utgår med de fasta antalskraven.
 
 ---
 
-# Figurer
+# Bilder
 
-Varje figur får ett unikt ID med mönstret `fig-<avsnitts-id>-<bokstav>`, t.ex. `fig-6.1-a`, `fig-6.1-b` för en andra figur i samma avsnitt, och registreras i `figures/registry.yml`. Registerposten är figurens fullständiga platshållarspecifikation enligt 08 — alla fyra fält är obligatoriska:
+**Målmodell.** Skriv platshållaren direkt i löptexten där bilden hör hemma, i formatet från referensimplementationen 1.1:
+
+```
+[BILD 6.1-1] Innehåll: vektordiagram med två kraftpilar och deras resultant, placerat vid exemplet med draglinorna. Bildtext: "Två krafter kan ersättas av en enda resultant utan att verkan ändras."
+```
+
+Numrera löpande inom avsnittet (`[BILD 6.1-1]`, `[BILD 6.1-2]` …). Innehåll beskriver vad bilden ska visa och varför; Bildtext är färdigformulerad. Bild och text använder samma exempel (03, "Bilder").
+
+**Legacy (icke migrerade kapitel).** Det centrala figurregistret `figures/registry.yml` och shortcoden `[[figur:ID]]` fortsätter fungera för kapitel som ännu inte migrerats. Varje figur har ett unikt ID med mönstret `fig-<avsnitts-id>-<bokstav>`, t.ex. `fig-6.1-a`, och registreras med alla fyra fält:
 
 ```yaml
 fig-6.1-a:
@@ -159,7 +177,7 @@ fig-6.1-a:
   anvands_i: ["6.1"]
 ```
 
-I texten placeras endast shortcoden `[[figur:ID]]` där figuren hör hemma. Webbplatsen och exporten renderar hela specifikationen ur registret — den skrivs aldrig som lös text i avsnittsfilen.
+I texten placeras endast shortcoden `[[figur:ID]]` där figuren hör hemma. Webbplatsen och exporten renderar hela specifikationen ur registret — den skrivs aldrig som lös text i avsnittsfilen. Nya avsnitt använder inte detta mönster.
 
 ---
 

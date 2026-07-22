@@ -1,26 +1,14 @@
----
-id: "1.1"
-chapter: 1
-sectionNumber: 1
-title: Vad är teknik?
-status: fardig-forsta-version
-levels: [niva1]
-curriculumReferences:
-  niva1: ["n1-13"]
-  niva2: []
-learningGoals:
-  - Förklara vad teknik är och ge exempel på hur tekniska lösningar svarar mot
-    mänskliga behov och problem.
-  - Beskriva hur teknik samspelar med naturvetenskap och matematik i en verklig
-    teknisk lösning.
-abilities: [f4]
-concepts_introduced: ["teknik", "teknisk lösning", "behov"]
-concepts_used: []
-figures: ["fig-1.1.1-a", "fig-1.1.2-a"]
-prerequisites: []
+# Referensimplementation — avsnitt 1.1 Vad är teknik?
+
+Detta dokument är projektets redaktionella guldstandard, fastställd av projektägaren 2026-07-22. Den är referens för hela boken i fråga om ton, kompressionsgrad, exempelanvändning, bildplaceholders, instuderingsfrågor och övningar. Texten nedan återges ordagrant och får inte redigeras utan projektägarens beslut. Den skarpa manusversionen ligger i `content/01-teknik-och-teknikutveckling/01-vad-ar-teknik.md`.
+
 ---
 
-## Teknik löser problem
+# Kapitel 1 · Teknikens grunder
+
+## 1.1 Vad är teknik?
+
+### Teknik löser problem
 
 En vanlig skolmorgon hinner du använda mer teknik än de flesta människor mötte under en hel livstid för tvåhundra år sedan. Mobilen som väcker dig, kranen som ger vatten med jämnt tryck, kylskåpet som hållit mjölken kall under natten, dragkedjan i jackan och cykeln eller bussen som tar dig till skolan.
 
@@ -32,7 +20,7 @@ Ett exempel visar hur det kan gå till. På 1880-talet bar en montör med sig en
 
 Skiftnyckeln visar var teknik börjar. Först finns ett mänskligt behov eller problem, sedan skapar någon en lösning. Behovet kan vara något man vill uppnå, som att se skarpt eller få rent vatten i kranen, eller något man vill slippa, som att bära en tung verktygslåda. Teknik är hur människor utvecklar och använder produkter, processer, anläggningar och system för att uppfylla behov och önskemål. En enskild sådan lösning, utformad för ett visst behov eller problem, kallas en teknisk lösning.
 
-## Teknik är mer än bara föremål
+### Teknik är mer än bara föremål
 
 Ordet teknik leder ofta tanken till fysiska föremål, men tekniska lösningar kan också bestå av program, system och anläggningar. Betaltjänsten Swish, som sex banker på den svenska marknaden lanserade gemensamt 2012, svarar mot behovet att föra över pengar direkt mellan människor, och ändå går den inte att hålla i handen. Lösningen består av program, servrar och avtal mellan banker. Vattnet i kranen är på samma sätt slutpunkten i en teknisk lösning av ett annat slag: reningsverk, pumpstationer och vattentorn som tillsammans ger rent vatten med jämnt tryck, dygnet runt. Tekniska lösningar kan alltså vara system och anläggningar lika väl som saker.
 
@@ -44,7 +32,7 @@ Behoven väger däremot olika tungt. Dragkedjan, konstruerad 1913, gör det snab
 
 Väl fungerande teknik blir med tiden nästan osynlig. Få tänker på kranvattnet eller dragkedjan som teknik förrän de slutar fungera. Ett säkert sätt att känna igen en teknisk lösning är därför att leta efter behovet eller problemet bakom den.
 
-## Teknik, naturvetenskap och matematik
+### Teknik, naturvetenskap och matematik
 
 Ett behov visar vad som behöver lösas, men naturvetenskap och matematik behövs för att hitta en fungerande lösning. När Sverige och Danmark 1991 kom överens om att bygga en fast förbindelse över Öresund var behovet tydligt: människor och gods skulle kunna ta sig mellan Malmö och Köpenhamn utan färja. För att kunna utforma förbindelsen behövde ingenjörerna använda kunskap från naturvetenskapen och matematiken.
 
@@ -60,7 +48,7 @@ Samspelet går också åt andra hållet: tekniska lösningar gör nya vetenskapl
 
 Teknik är alltså människans sätt att möta behov och problem med lösningar, byggda på naturvetenskapens och matematikens kunskap. Naturvetenskapen sätter gränser för vad tekniken kan göra, och tekniken ger vetenskapen nya verktyg.
 
-## Instuderingsfrågor
+### Instuderingsfrågor
 
 1. Vilket problem löste Johan Petter Johanssons skiftnyckel?
 2. Nämn två tekniska lösningar som inte är fysiska föremål och förklara vilket behov var och en uppfyller.
@@ -72,7 +60,7 @@ Teknik är alltså människans sätt att möta behov och problem med lösningar,
 8. Ge ett exempel på hur tekniken har bidragit till naturvetenskapens utveckling.
 9. Förklara med egna ord vad som menas med begreppen behov, teknik och teknisk lösning.
 
-## Övningar
+### Övningar
 
 1. **Behovet bakom föremålet.** Välj ett vardagsföremål, till exempel en pennvässare, ett paraply eller en cykelpump. Skissa föremålet med dess viktigaste delar. Ange vilket behov eller problem det löser och skriv vid varje del vilken funktion den har. Beskriv avslutningsvis vilken naturvetenskaplig kunskap som du tror ligger bakom någon del av konstruktionen.
 2. **Två lösningar på samma behov.** Välj ett behov, till exempel att transportera människor, hålla mat kall eller ge ljus i mörker. Hitta två olika tekniska lösningar som uppfyller samma behov. Beskriv hur de fungerar och jämför deras fördelar och nackdelar utifrån funktion, användning och andra viktiga egenskaper.

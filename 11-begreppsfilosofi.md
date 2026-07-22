@@ -55,6 +55,8 @@ Förklaringen ska beskriva hur eleven ska förstå begreppet.
 
 Definition och förklaring är inte samma sak.
 
+I löptexten växer definitionen ur exemplet och står i löpande prosa, inte i rutor (03, "Löptext"). Begreppet **kursiveras** första gången det introduceras, aldrig fetstil (05, "Begreppsmarkering"). Den exakta, uppslagsbara definitionen samlas i kapitlets begreppslista.
+
 ---
 
 # Konkreta exempel
@@ -164,11 +166,11 @@ Därefter används formeln.
 
 # Begrepp och uppgifter
 
-Det finns **inget synligt Begrepp-block** efter enskilda lärandemål. Begreppen introduceras, definieras och används i teorin där de först behövs; begreppsträningen sker löpande i teorin, i figurerna och i instuderingsfrågorna.
+Det finns **inget synligt Begrepp-block** efter enskilda avsnitt. Begreppen introduceras, definieras och används i löptexten där de först behövs; begreppsträningen sker löpande i löptexten, i bilderna och i instuderingsfrågorna.
 
-Instuderingsfrågorna kontrollerar att begreppen uppfattats ur texten och används i sammanhang. Kapitlets uppgiftsbank låter eleven använda begreppen i tekniskt arbete.
+Instuderingsfrågorna tränar begreppsförståelsen: minst en fråga per avsnitt testar avsnittets begrepp ("Förklara med egna ord vad som menas med ...", 03). Avsnittets övningar låter eleven använda begreppen i tekniskt arbete.
 
-Kapitlets **begreppsövning** är repetition och tillämpning: den använder kapitlets centrala begrepp i tekniskt meningsfulla sammanhang och kontrollerar användning och förståelse, inte bara ordagranna definitioner. Den får aldrig vara elevens första möte med ett begrepp (03-bokens-arkitektur.md, "Kapitelavslutningar").
+Kapitlets **begreppslista** (kapitelavslutningen Begrepp) är en uppslagsfunktion: kapitlets begrepp med färdiga definitioner, max ungefär en mening per begrepp. Eleven fyller inte i något i listan — begreppsförståelse tränas i instuderingsfrågorna, inte i listan. Listan får aldrig vara elevens första möte med ett begrepp (03-bokens-arkitektur.md, "Kapitelavslutningar").
 
 Den interna begreppsmetadatan behålls och är oförändrad: `concepts_introduced` anger var ett begrepp har sitt huvudställe och `concepts_used` var det återanvänds (12-produktionsarkitektur.md, "Begrepp"). Metadatan genererar inget synligt block.
 

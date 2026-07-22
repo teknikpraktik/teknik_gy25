@@ -1,11 +1,50 @@
 # Produktionslogg
 
 Löpande logg över färdigställda lärandemål (första version och uppåt).
-Kvalitetsbedömningen görs mot Golden Master 1.1.1 (09-kvalitetssakring.md,
-"Helhetsbedömning"). Ett lärandemål som bedöms "Under Golden Master" får inte
-betraktas som färdig första version. "Överträffar Golden Master" ska motiveras
-och eventuell ny standard lyftas för redaktionellt beslut. Loggen ingår inte i
-bokexporten (export läser endast content/).
+Kvalitetsbedömningen görs mot referensimplementationen 1.1 (09-kvalitetssakring.md,
+"Helhetsbedömning"; tidigare kallad Golden Master 1.1.1, se revisionen 2026-07-22
+nedan). Ett avsnitt som bedöms "Under referensimplementationen" får inte
+betraktas som färdig första version. "Överträffar referensimplementationen" ska
+motiveras och eventuell ny standard lyftas för redaktionellt beslut. Loggen
+ingår inte i bokexporten (export läser endast content/).
+
+**Redaktionell revision 2026-07-22 (produktionsstandard, uttryckligt beslut av
+projektägaren; kvalitetsreferensen bytt namn från Golden Master till
+referensimplementation):** Avsnitt 1.1 "Vad är teknik?" ersattes i sin helhet av
+en slutredigerad version och fastställdes samtidigt som ny, namnbytt
+kvalitetsreferens (`referensimplementation-avsnitt-1-1.md`, projektroten,
+verbatim och oredigerbar utom efter uttryckligt beslut). Samma prompt fastställde
+en ny generell produktionsstandard, normerande för hela boken framåt:
+
+- **Överordnat kriterium** infört i 03: självstudiebar mot kondenserad, prövat åt
+  båda hållen för varje redaktionellt val.
+- **Avsnittsmönstret** ändrat till löptext (med `[BILD X.Y-N]`-bildplatshållare,
+  ersätter `[[figur:ID]]`/`figures/registry.yml` för nytt och migrerat innehåll)
+  → Instuderingsfrågor (5–10) → Övningar (2–10, ersätter Praktiska uppgifter).
+  Formuleringsregel: boken "låter eleven visa", mäter/testar/examinerar inget.
+- **Kapitelavslutningarna** minskade från tre till två: Sammanfattning (kort
+  löptext, ej punktlista) och Begrepp (färdiga definitioner, uppslagsfunktion).
+  Ingen egen projektuppgiftsdel längre — kapitlets större uppgifter blir i
+  stället en eller två **helkapitelövningar** i de senare avsnittens Övningar,
+  med krav på flerdelsstoff, ett dokumenterat resultat och utskrivna
+  utbyggnadssteg (grunduppgift + "Bygg ut: ...") för E/C/A.
+- **Begreppsmarkering** ändrad från fetstil till kursiv vid huvudställe (05).
+  **Terminologikonsekvens** infört med löpande `termlista.md` (dragkedja före
+  blixtlås, bild före figur, m.fl.).
+- **Kapitel 1** bytte titel till "Teknikens grunder" (från "Teknik och
+  teknikutveckling"); 06-bokstruktur.md skrivet om för hela boken med denna
+  modell (alla 13 kapitel), 07-kursplanetackning.md fick nya rader s-02/s-03 för
+  syftesstoff (teknikbegreppet; samspelet teknik/naturvetenskap/matematik) med
+  huvudhem i 1.1.
+- **Migreringsläge:** styrdokumenten (03, 05, 06, 07, 09, 11, 12, 13, CLAUDE.md)
+  är omskrivna för hela boken enligt den nya modellen. `scripts/bokstruktur-data.mjs`
+  uppdaterades i samma steg (annars hade 06:s nya, onumrerade kapitelavslutningar
+  gjort att parsern kraschade och hela toolchain slutat fungera) — detta var en
+  nödvändig mekanisk fix, inte innehållsmigrering. Content/ och övriga skript
+  (validate.mjs, generate-skeleton.mjs, exportskripten, schemat) migreras
+  **kapitel för kapitel** när respektive kapitel produceras eller revideras;
+  fram till dess visar `npm run validate` känd, väntad migreringsskuld (fel
+  mappnamn för kapitel 1, kvarvarande `NN-projektuppgifter.md` i alla kapitel).
 
 **Arkitekturrevision 2026-07-15 (Kapitel → Modul → Lärandemål avvecklad,
 uttryckligt beslut av projektägaren):** Hela produktions- och publiceringsstrukturen

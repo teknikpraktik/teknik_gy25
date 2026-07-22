@@ -26,7 +26,9 @@ Ett avsnitt kan omfatta ett eller flera lärandemål och ett eller flera H3-dela
 
 Ett avsnitt har inget fast sid- eller uppslagsomfång (03-bokens-arkitektur.md). Det får flöda över så många sidor som förståelsen kräver och delas bara vid flera tydligt skilda delområden. Uppslag och sidbrytningar är frågor för layout och tryckexport, inte en nivå i datamodellen. Formuleringar som "Uppslag 1" får inte förekomma i elevtexten.
 
-Utöver de vanliga avsnitten finns per kapitel tre **kapitelavslutande avsnitt** — en sammanfattning, en begreppsövning och en uppgiftsbank (se "Kapitelavslutningar" nedan). De listas i 06-bokstruktur.md precis som andra avsnitt, alltid sist i kapitlet, men saknar `learningGoals` och identifieras i stället av frontmatterfältet `type`.
+Utöver de vanliga avsnitten finns per kapitel två **kapitelavslutande avsnitt** — en sammanfattning och en begreppslista (se "Kapitelavslutningar" nedan). De listas i 06-bokstruktur.md som onumrerade H2-rader sist i kapitlet, saknar `learningGoals` och identifieras i stället av frontmatterfältet `type`.
+
+**Migreringsläge (2026-07-22):** kapitelmodellen med två onumrerade kapitelavslutningar, avsnittsmönstret löptext/instuderingsfrågor/övningar och `[BILD]`-platshållare är fastställd (03, 06), men skripten (`bokstruktur-data.mjs`, `validate.mjs`, `generate-skeleton.mjs`, exporter, webbvyer) och delar av content/ följer ännu den tidigare modellen. Migreringen görs kapitel för kapitel; beskrivningarna i detta dokument anger målmodellen och markerar där skriptsidan släpar. Se produktionslogg.md, posten 2026-07-22.
 
 Claude Code får aldrig skriva ett helt kapitel i en fil.
 
@@ -51,8 +53,7 @@ content/
     03-jamvikt.md
     ...
     07-sammanfattning.md            # kapitelavslutning: type: kapitelsammanfattning (inga learningGoals)
-    08-begrepp.md                   # kapitelavslutning: type: begreppsovning
-    09-projektuppgifter.md                 # kapitelavslutning: type: uppgiftsbank
+    08-begrepp.md                   # kapitelavslutning: type: begreppsovning (begreppslista, se "Kapitelavslutningar")
 figures/
   registry.yml                      # centralt figur-ID-register
 schemas/
@@ -162,39 +163,38 @@ Det centrala begreppsregistret är härlett, aldrig handredigerat: `scripts/begr
 
 ---
 
-## Figurer
+## Bilder
 
-Figurer identifieras med unika ID och registreras centralt i `figures/registry.yml`. Registerposten är figurens fullständiga platshållarspecifikation (se 01, 03, 08): syfte, innehåll, referens i texten (`referens`), pedagogisk funktion (`pedagogisk_funktion`) samt vilka avsnitt som använder figuren (`anvands_i`).
+**Målmodell (2026-07-22):** bildplatshållare skrivs direkt i avsnittsfilen i formatet `[BILD X.Y-N]` följt av Innehåll (vad bilden ska visa och varför) och färdigformulerad Bildtext (03, "Bilder"; referensimplementationen 1.1). Platshållaren står där bilden hör hemma i löptexten och numreras löpande inom avsnittet (`[BILD 1.1-1]`, `[BILD 1.1-2]` …).
 
-Flera avsnitt kan referera till samma figur via shortcoden `[[figur:ID]]`. Webbplatsens figurruta och exportens figurblock renderar samtliga fyra fält ur registret — specifikationen skrivs aldrig som lös text i avsnittsfilen.
-
-`scripts/validate.mjs` felar om en refererad figur saknas i registret, och varnar om en registrerad figur inte används av något avsnitt.
+Det centrala figurregistret (`figures/registry.yml`) och shortcoden `[[figur:ID]]` är **under avveckling**: de behålls för ännu inte migrerade kapitel, och webbplatsens figurruta, exportens figurblock och validate-kontrollerna av figur-ID fortsätter fungera för dem tills skript- och innehållsmigreringen är klar. Nya och reviderade avsnitt skrivs med `[BILD]`-formatet; frontmatterfältet `figures` fylls inte i för dem.
 
 ---
 
 ## Kapitelavslutningar
 
-Varje färdigproducerat kapitel avslutas med tre avsnitt som saknar `learningGoals` och identifieras av `type` i stället för `id` (03-bokens-arkitektur.md, "Kapitelavslutningar"):
+Varje färdigproducerat kapitel avslutas med två avsnitt som saknar `learningGoals` och identifieras av `type` i stället för `id` (03-bokens-arkitektur.md, "Kapitelavslutningar"):
 
-- `type: kapitelsammanfattning` — en sammanhängande löptext, cirka 300 ord, som binder ihop kapitlets avsnitt. Ingen `ordlista`.
-- `type: begreppsovning` — kapitlets samlade begreppsövning: en punktlista över kapitlets centrala begrepp där eleven förklarar varje begrepp med en egen mening.
-- `type: uppgiftsbank` — kapitlets projektbank: större, integrerande uppgifter som en enda numrerad lista utan underkategorier och utan övrig uppgiftsmetadata, 4–6 stycken, normalt 5 (03). Lokala tillämpningsuppgifter ligger inte här utan under avsnittets rubrik Praktiska uppgifter.
+- `type: kapitelsammanfattning` — kort löpande text, inte punktlista, som låter eleven repetera hela kapitlet på några minuter (riktmärke cirka 300 ord). Ingen `ordlista`.
+- `type: begreppsovning` — kapitlets **begreppslista**: kapitlets centrala begrepp med färdiga definitioner, max ungefär en mening per begrepp. Uppslagsfunktion, inget som eleven fyller i. Type-värdet `begreppsovning` behålls som tekniskt id tills schema och skript migreras; innehållsmodellen är begreppslistan.
 
-Ordningen sist i kapitlet är sammanfattning, begreppsövning, uppgiftsbank (redaktionellt beslut 2026-07-14, produktionslogg.md).
+Det finns ingen `type: uppgiftsbank` längre (redaktionellt beslut 2026-07-22): kapitlets större, integrerande uppgifter skrivs som helkapitelövningar i Övningar i kapitlets senare teoriavsnitt (03). Befintliga projektuppgiftsfiler avvecklas kapitel för kapitel i innehållsmigreringen — deras användbara uppgifter arbetas in som helkapitelövningar.
 
-**Struktur och ordning styrs av 06-bokstruktur.md**, precis som för alla andra avsnitt — det finns inget separat kapitelmanifest. De tre kapitelavslutande avsnitten är alltid de tre sista H2-raderna i ett kapitels avsnitt i 06, med exakt titlarna Sammanfattning, Begrepp och Projektuppgifter. `scripts/validate.mjs` känner igen dem på titeln och stämmer av mot filerna åt båda håll (rätt `type`/`chapter`/`sectionNumber`).
+Ordningen sist i kapitlet är sammanfattning, begreppslista (redaktionellt beslut 2026-07-22, produktionslogg.md).
+
+**Struktur och ordning styrs av 06-bokstruktur.md**, precis som för alla andra avsnitt — det finns inget separat kapitelmanifest. De två kapitelavslutande avsnitten är alltid de två sista, onumrerade H2-raderna i ett kapitels del av 06, med exakt titlarna Sammanfattning och Begrepp. `scripts/validate.mjs` känner igen dem på titeln och stämmer av mot filerna åt båda håll (rätt `type`/`chapter`/`sectionNumber`).
 
 Frontmatter (schemavariant i `schemas/larandemal.schema.mjs`, känns igen på `type`):
 
 ```yaml
-type: uppgiftsbank          # eller: begreppsovning, kapitelsammanfattning
+type: begreppsovning        # eller: kapitelsammanfattning
 chapter: 1
-sectionNumber: 6
-title: "Projektuppgifter"
+sectionNumber: 5
+title: "Begrepp"
 status: fardig-forsta-version
 ```
 
-Uppgiftsbanken har **ingen uppgiftsmetadata**. Uppgifterna skrivs som en numrerad lista i brödtexten — löpnummer från 1, ett namn i fetstil och därefter uppgiften. Banken delas inte in i underkategorier, utan uppgifterna ordnas i stigande omfattning i en enda lista (redaktionellt beslut 2026-07-20); därutöver anges ingen arbetsform, tidsåtgång, redovisningsform eller lärandemålskoppling. Utförandet överlåts till läraren och eleven (redaktionellt beslut). Begreppsövningen får ha en valfri `ordlista`. Kapitelsammanfattningen har varken `ordlista` eller annan metadata, bara löptext.
+Kapitelavslutningarna är onumrerade i all synlig rubriknumrering; `sectionNumber` finns kvar internt enbart för filordning och synk mot 06. Begreppslistan får ha en valfri `ordlista`. Kapitelsammanfattningen har varken `ordlista` eller annan metadata, bara löptext.
 
 **Placering:** kapitelavslutningarna slottas sist i kapitlet (efter sista teoriavsnittet) i sidopanelen, kapitelöversikten, granskningsvyn `/review/` och exporten, i 06:s ordning.
 
@@ -211,8 +211,8 @@ Uppgiftsbanken har **ingen uppgiftsmetadata**. Uppgifterna skrivs som en numrera
 - **Figur-ID** — varje refererad figur finns i registret; oanvända figurer flaggas.
 - **Förkunskapsordning** — en fils `prerequisites` (avsnitts-id:n) måste ligga tidigare i läsordningen (kapitel.sektionsnummer), i linje med 04 §10.
 - **Kursplantaggning** — `curriculumReferences.niva1`/`niva2` innehåller punkt-id:n enligt 07 (via `kursplan-data.mjs`); tagg i ett kapitel utanför punktens matrisrad ger varning.
-- **Statusstyrda innehållskontroller** — från status `fardig-forsta-version` krävs en **icke-tom sektion Instuderingsfrågor** (inget bestämt antal, exakt en sektion, 03), icke-tomma `learningGoals` och `curriculumReferences`, och att inga HTML-kommentarer, TODO, uppslagsrubriker, äldre uppgiftsrubriker (Förstå/Utveckla/Utmana) eller numrerade rubriker (kvarleva av den gamla lärandemålsnumreringen) finns kvar; saknade figurer, tom `abilities`, AI-typiska formuleringar, tankstreck i elevtexten (05), markdownlänkar i elevtext, "uppslag" som självreferens och ovanligt många personnamn (05) ger varning. Ett avsnitt får ha EN frivillig sektion Praktiska uppgifter efter instuderingsfrågorna; den kontrolleras på ordning och icke-tomhet men krävs aldrig. Äldre uppdelade uppgiftsrubriker (Beräkningsuppgifter, Rituppgifter, Laborationer, Projekt med flera) och rubriken Projektuppgifter ger fel i ett avsnitt. Projektbankens storlek (4–6) och frånvaro av underrubriker kontrolleras per kapitel.
-- **Kapitelavslutningar** — stäms av mot 06-bokstruktur.md åt båda håll (rätt `type`/`chapter`/`sectionNumber`/`title`). Uppgiftsbanken har ingen metadata att validera; uppgifterna är fri numrerad brödtext.
+- **Statusstyrda innehållskontroller** (målmodell; skriptmigrering pågår, se "Migreringsläge") — från status `fardig-forsta-version` krävs en **icke-tom sektion Instuderingsfrågor** (5–10 frågor, exakt en sektion) följd av en **icke-tom sektion Övningar** (2–10 övningar, exakt en sektion) enligt 03, icke-tomma `learningGoals` och `curriculumReferences`, och att inga HTML-kommentarer, TODO, uppslagsrubriker, äldre uppgiftsrubriker (Praktiska uppgifter, Projektuppgifter, Förstå/Utveckla/Utmana med flera) eller numrerade rubriker finns kvar; tom `abilities`, AI-typiska formuleringar, tankstreck i elevtexten (05), fetstilade begrepp, förbjudna frågeformuleringar ("enligt texten", "i texten", "vad visar figuren"), markdownlänkar i elevtext, "uppslag" som självreferens och ovanligt många personnamn (05) ger varning eller fel.
+- **Kapitelavslutningar** — stäms av mot 06-bokstruktur.md åt båda håll (rätt `type`/`chapter`/`sectionNumber`/`title`): sammanfattning och begreppslista, inga uppgiftsbanker.
 - **Statusöversikt** — sammanställer antal avsnitt per status, totalt och per kapitel, som ersättning för manuell bokföring i 06.
 - **Kursplanetäckningsöversikt** — antal påbörjade avsnitt per kursplanepunkt, uppdelat på primärkapitlet och övriga kapitel.
 

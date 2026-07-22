@@ -64,45 +64,53 @@ Granskning sker på tre nivåer.
 
 ---
 
-## Figurer
+## Bilder
 
-□ Minst en figur finns när den förbättrar förståelsen.
+□ Bilder som undervisar (förklarar samband, visualiserar system, visar processer eller jämför lösningar) finns i varje större avsnitt. Inga dekorationsbilder.
 
-□ Figuren har en tydlig pedagogisk funktion.
+□ Varje bild är specificerad som platshållare i formatet `[BILD X.Y-N]` med Innehåll (vad bilden ska visa och varför) och färdigformulerad Bildtext (03, "Bilder").
 
-□ Figuren är specificerad med platshållare.
+□ Bild och text använder samma exempel.
+
+□ Där en bild övertagit informationsbärande har motsvarande prosa kortats — ingen bild dubblerar texten.
 
 ---
 
-## Instuderingsfrågor och praktiska uppgifter
+## Instuderingsfrågor och övningar
 
-□ Avsnittet har EN samlad sektion instuderingsfrågor, inget bestämt antal (03). Undvik långa frågebatterier.
+□ Avsnittet följer mönstret löptext, instuderingsfrågor, övningar (03, redaktionellt beslut 2026-07-22).
 
-□ Ordningen är teori, instuderingsfrågor, praktiska uppgifter (03, redaktionellt beslut 2026-07-20).
+□ Avsnittet har EN samlad sektion Instuderingsfrågor med 5–10 frågor.
 
-□ Instuderingsfrågorna och de praktiska uppgifterna är korrekt åtskilda: inga uppgifter som kräver att eleven räknar, ritar, programmerar, bygger, mäter eller testar ligger bland instuderingsfrågorna, och inga rena resonemangsfrågor bland de praktiska uppgifterna.
+□ Frågorna testar teknisk förståelse, inte läsförståelse: funktion, samband, begrepp, resonemang.
 
-□ De praktiska uppgifterna kräver faktisk elevaktivitet och är inte omformulerade instuderingsfrågor.
+□ Inga formuleringar av typen "enligt texten", "i texten" eller "vad visar figuren".
 
-□ De praktiska uppgifterna tillämpar det aktuella avsnittets innehåll, inte ett annat avsnitts.
+□ Minst en fråga testar avsnittets begrepp ("Förklara med egna ord vad som menas med ...").
 
-□ De praktiska uppgifterna stiger i svårighetsgrad: direkt tillämpning, därefter flerstegsuppgifter, sedan en verklighetsnära uppgift, och där det är relevant tolkning eller rimlighetsbedömning.
-
-□ Varje praktisk uppgift går att lösa med samband, metoder och begrepp som redan införts i eller före avsnittet, och har tillräckliga data.
-
-□ Inga föråldrade eller uppdelade uppgiftsrubriker används (Beräkningsuppgifter, Rituppgifter, CAD-uppgifter, Programmeringsuppgifter, Laborationer, Konstruktionsuppgifter, Tillämpningsuppgifter, Analysuppgifter, Tillämpningsproblem, Fördjupningsuppgifter, Kortare uppgifter, Projekt, Förstå/Utveckla/Utmana).
-
-□ Rubriken Projektuppgifter förekommer inte inne i ett avsnitt.
-
-□ Frågorna kan besvaras med hjälp av texten och tränar avsnittets centrala delar, över samtliga delavsnitt.
-
-□ Frågorna prövar förståelse (förklara samband, orsak och konsekvens, jämföra, skilja begrepp, tillämpa på nytt exempel), inte mekanisk sökläsning.
+□ Frågorna kan besvaras med avsnittets innehåll men prövar förståelse av tekniken, inte minne av formuleringar.
 
 □ Inga "vem/när/hur många"-frågor utom där person, tidpunkt eller antal är en del av ett lärandemål.
 
 □ Inga frågor upprepar varandra, testar en oviktig detalj eller ligger utanför avsnittets lärandemål.
 
-□ Inget synligt Begrepp-block ligger under avsnittet — begreppen behandlas i teorin (03).
+□ Avsnittet har EN samlad sektion Övningar med 2–10 övningar i tydlig progression: identifiera, analysera, jämföra, konstruera, förbättra, eget arbete.
+
+□ Övningarna är autentiska och knutna till sådant eleven känner igen, inte instängda läroboksuppgifter.
+
+□ Instuderingsfrågor och övningar är korrekt åtskilda: inga uppgifter som kräver att eleven räknar, ritar, programmerar, bygger, mäter eller testar ligger bland instuderingsfrågorna, och inga rena resonemangsfrågor bland övningarna.
+
+□ Varje övning går att lösa med samband, metoder och begrepp som redan införts i eller före avsnittet, och har tillräckliga data.
+
+□ Ingen formulering säger att boken mäter, testar eller examinerar något — uppgifter "låter eleven visa" (03, "Formuleringsregel").
+
+□ Inga föråldrade uppgiftsrubriker används (Praktiska uppgifter, Projektuppgifter, Beräkningsuppgifter, Rituppgifter, CAD-uppgifter, Programmeringsuppgifter, Laborationer, Konstruktionsuppgifter, Tillämpningsuppgifter, Analysuppgifter, Tillämpningsproblem, Fördjupningsuppgifter, Kortare uppgifter, Projekt, Förstå/Utveckla/Utmana).
+
+□ Inget synligt Begrepp-block ligger under avsnittet — begreppen behandlas i löptexten (03), definitionerna samlas i kapitlets begreppslista.
+
+□ Begrepp är kursiverade första gången de introduceras, aldrig i fetstil, och definieras i prosa, inte i rutor (05, "Begreppsmarkering").
+
+□ Terminologin följer `termlista.md` — ett ord per sak, vardagsord före fackmetafor.
 
 ---
 
@@ -142,7 +150,9 @@ Granskning sker på tre nivåer.
 
 □ Eleven kan rimligen uppnå lärandemålet enbart med hjälp av materialet.
 
-□ Kvaliteten motsvarar minst Golden Master 1.1.1 (projektets kvalitetsreferens) i disposition, språk, informationstäthet, konkretion, exempel, figurplatshållare och uppgifter. Golden Master ändras endast efter uttryckligt redaktionellt beslut.
+□ Avsnittet klarar det överordnade kriteriet åt båda hållen: självstudiebart utan lärare och kondenserat utan babbel (03, "Överordnat kriterium").
+
+□ Kvaliteten motsvarar minst referensimplementationen 1.1 (`referensimplementation-avsnitt-1-1.md`, projektets kvalitetsreferens, fastställd 2026-07-22) i ton, kompressionsgrad, exempelanvändning, bildplatshållare, instuderingsfrågor och övningar. Referensimplementationen ändras endast efter uttryckligt redaktionellt beslut.
 
 □ Om avsnittet har flera delavsnitt (H3): varje delavsnittstitel är tydligt skild från de andra och dubblerar inte avsnittets egen rubrik. Begrepp introduceras i rätt ordning över delavsnitten. Inga delavsnitt överlappar varandra eller ett senare kapitels huvudansvar. Ett avsnitt utan delavsnitt (en enda flödande text) är tillåtet och motiverat när delområdet inte har flera tydligt skilda delar.
 
@@ -166,31 +176,29 @@ Granskning sker på tre nivåer.
 
 □ Kapitlet känns jämnt i kvalitet.
 
-## Kapitelavslutningar
+## Kapitelavslutningar och helkapitelövningar
 
-□ Kapitlet har en sammanfattning på cirka 300 ord som binder ihop avsnitten, utan nya fakta, begrepp eller instuderingsfrågor (03).
+□ Kapitlet avslutas i ordningen Sammanfattning, Begrepp — två onumrerade avsnitt utan lärandemål (03).
 
-□ Kapitlet avslutas med en begreppsövning som täcker kapitlets centrala begrepp (11).
+□ Sammanfattningen är kort löpande text, inte punktlista, och låter eleven repetera hela kapitlet på några minuter (riktmärke cirka 300 ord), utan nya fakta, begrepp eller instuderingsfrågor (03).
 
-□ Begreppsövningen är repetition och tillämpning, aldrig elevens första möte med ett begrepp.
+□ Begreppslistan innehåller kapitlets centrala begrepp med färdiga definitioner, max ungefär en mening per begrepp (03).
 
-□ Kapitlet avslutas i ordningen Sammanfattning, Begrepp, Projektuppgifter (03).
+□ Begreppslistan är en uppslagsfunktion: eleven fyller inte i något, och inget begrepp möter eleven här för första gången (11).
 
-□ Kapitlet har en projektbank som en enkel numrerad lista (löpnummer + namn), utan underrubriker och utan metadata om arbetsform, tid, redovisning eller lärandemålskoppling (03).
+□ Kapitlet har inga projektuppgiftsavsnitt och ingen projektbank.
 
-□ Kapitlet har 4–6 projektuppgifter, normalt 5 (03).
+□ Kapitlet har en eller två helkapitelövningar i de senare avsnittens övningar (03).
 
-□ Varje projektuppgift integrerar flera av kapitlets avsnitt och är inte en lokal praktisk uppgift med fler ord. Minst en fungerar som egentlig syntesuppgift.
+□ Varje helkapitelövning uppfyller de tre kraven: kräver stoff från flera avsnitt, resulterar i något dokumenterat, och har utskrivna utbyggnadssteg i formatet grunduppgift plus "Bygg ut: ..." så att eleven kan visa arbete på E-, C- och A-nivå.
 
-□ Inga små, lokala aktiviteter ligger kvar i projektbanken; de hör hemma under Praktiska uppgifter i det avsnitt de tillämpar.
+□ Helkapitelövningarna har inte trängt ut sista avsnittens egna grundövningar.
 
-□ Uppgifterna varierar i form på ett sätt som är relevant för kapitlets ämnesinnehåll (laboration och mätning, undersökning, konstruktion, CAD, programmering, dimensionering, analys, teknikutvecklingsarbete, utvärdering, dokumentation, jämförelse). Variationen är inte artificiellt konstruerad.
+□ Minst en helkapitelövning fungerar som egentlig syntesuppgift.
 
-□ Bankens uppgifter ger tillsammans tillräcklig praktisk och producerande träning för kapitlets centrala innehåll och förmågor.
+□ Varje helkapitelövning fungerar fristående (inga hänvisningar till "föregående avsnitt" eller "figuren ovan") och innebär ett verkligt producerande eller genomförande moment.
 
-□ Varje uppgift fungerar fristående (inga hänvisningar till "föregående lärandemål" eller "figuren ovan") och innebär ett verkligt producerande eller genomförande moment.
-
-□ Ingen uppgift är en kosmetisk variant av en annan.
+□ Övningarna över kapitlet varierar i form på ett sätt som är relevant för kapitlets ämnesinnehåll. Variationen är inte artificiellt konstruerad.
 
 □ Facit ingår aldrig i elevmanuset eller på den publika elevwebben (12).
 

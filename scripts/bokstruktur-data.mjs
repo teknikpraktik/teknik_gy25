@@ -18,12 +18,16 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 // Kapitelavslutningarnas fasta titlar → type, i den ordning de alltid avslutar
-// ett kapitel (06-bokstruktur.md, "Kapitelavslutningar").
+// ett kapitel (06-bokstruktur.md, "Kapitelavslutningar"). Redaktionellt beslut
+// 2026-07-22: Projektuppgifter avvecklat som egen kapitelavslutning (uppgifter
+// flyttar in i avsnittens Övningar som helkapitelövningar). Kapitelavslutningarna
+// är nu två och skrivs onumrerade i 06 ("## Sammanfattning", "## Begrepp").
 const KAPITELAVSLUTNING_TYP_AV_TITEL = {
 	Sammanfattning: 'kapitelsammanfattning',
 	Begrepp: 'begreppsovning',
-	'Projektuppgifter': 'uppgiftsbank',
 };
+const KAPITELAVSLUTNING_TITLAR = Object.keys(KAPITELAVSLUTNING_TYP_AV_TITEL);
+const ANTAL_KAPITELAVSLUTNINGAR = KAPITELAVSLUTNING_TITLAR.length;
 
 // Filen importeras både direkt av Node (skripten, astro.config) och bundlad av
 // Vite (webbplatsens genererade kapitel-/avsnittsvyer). I det senare fallet
@@ -101,8 +105,24 @@ function parseBokstruktur(text) {
 			avsnittFas = 'mal';
 			return;
 		}
+		const kapitelavslutningTitel = KAPITELAVSLUTNING_TITLAR.find((t) => line === `## ${t}`);
+		if (kapitelavslutningTitel) {
+			if (!k) {
+				fel.push(`rad ${rad}: kapitelavslutning utanför ett kapitel.`);
+				return;
+			}
+			a = {
+				titel: kapitelavslutningTitel,
+				larandemal: [],
+				delavsnitt: [],
+				type: KAPITELAVSLUTNING_TYP_AV_TITEL[kapitelavslutningTitel],
+			};
+			k.avsnitt.push(a);
+			avsnittFas = null; // kapitelavslutningar är onumrerade och har ingen lärandemålslista
+			return;
+		}
 		if (/^## /.test(line)) {
-			fel.push(`rad ${rad}: avsnittsrubrik följer inte formatet "## <kapitel>.<sektionsnr> <Titel>". Se 06, "Avsnittens och delavsnittens format".`);
+			fel.push(`rad ${rad}: avsnittsrubrik följer inte formatet "## <kapitel>.<sektionsnr> <Titel>" eller en kapitelavslutning ("## ${KAPITELAVSLUTNING_TITLAR.join('" / "## ')}"). Se 06, "Avsnittens och delavsnittens format".`);
 			a = null;
 			avsnittFas = null;
 			return;
@@ -137,13 +157,12 @@ function parseBokstruktur(text) {
 			fel.push(`kapitel ${kap.nr} saknar avsnitt.`);
 			continue;
 		}
-		const sistaTre = kap.avsnitt.slice(-3).map((a) => a.titel);
-		const vantadeTre = ['Sammanfattning', 'Begrepp', 'Projektuppgifter'];
-		if (JSON.stringify(sistaTre) !== JSON.stringify(vantadeTre)) {
-			fel.push(`kapitel ${kap.nr}: de tre sista avsnitten ska vara ${vantadeTre.join(' → ')} (hittade: ${sistaTre.join(' → ') || '—'}).`);
+		const sistaN = kap.avsnitt.slice(-ANTAL_KAPITELAVSLUTNINGAR).map((a) => a.titel);
+		if (JSON.stringify(sistaN) !== JSON.stringify(KAPITELAVSLUTNING_TITLAR)) {
+			fel.push(`kapitel ${kap.nr}: de sista ${ANTAL_KAPITELAVSLUTNINGAR} avsnitten ska vara ${KAPITELAVSLUTNING_TITLAR.join(' → ')} (hittade: ${sistaN.join(' → ') || '—'}).`);
 		}
 		kap.avsnitt.forEach((avs, i) => {
-			const arKapitelavslutning = i >= kap.avsnitt.length - 3;
+			const arKapitelavslutning = i >= kap.avsnitt.length - ANTAL_KAPITELAVSLUTNINGAR;
 			if (!arKapitelavslutning && avs.larandemal.length === 0) {
 				fel.push(`avsnitt ${kap.nr}.${i + 1} "${avs.titel}" saknar lärandemål.`);
 			}

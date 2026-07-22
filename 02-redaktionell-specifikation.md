@@ -59,7 +59,7 @@ Varje kapitel behandlar ett sammanhängande teknikområde.
 
 Boken består av följande huvudkapitel.
 
-1. Teknikhistoria
+1. Teknikens grunder
 
 2. Att lösa tekniska problem
 

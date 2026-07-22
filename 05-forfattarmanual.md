@@ -93,7 +93,7 @@ Bindestreck i sammansatta ord och etablerade skrivsätt behålls när de språkl
 
 Stycken ska vara korta men inte onaturligt korta.
 
-Ett stycke ska behandla en sammanhängande idé.
+**En idé per stycke.** Ett stycke behandlar en sammanhängande idé och inget mer.
 
 Nytt stycke används när läsaren behöver ett naturligt mentalt avbrott.
 
@@ -115,13 +115,37 @@ Undvik vardagsslang.
 
 ---
 
+# Begreppsmarkering
+
+Begrepp **kursiveras** första gången de introduceras, i den mening där de definieras.
+
+Aldrig fetstil för begrepp. Inga definitionsrutor: definitionen växer ur exemplet och står i löpande prosa (03, "Löptext"). Den exakta definitionen samlas i kapitlets begreppslista.
+
+---
+
+# Terminologikonsekvens
+
+Ett ord per sak genom hela boken. Vardagsord före fackmetafor: dragkedja, inte blixtlås.
+
+En löpande termlista förs i `termlista.md` (projektroten) så att kapitel inte väljer olika ord för samma sak. Nya termval med tänkbara synonymer förs in i listan när de görs.
+
+---
+
+# Hyperboler
+
+Obevisbara hyperboler undviks. Undantaget är en ren krok i en avsnittsöppning, och även där sparsamt. Alla kvantitativa påståenden ska kunna verifieras (se "Fakta").
+
+---
+
 # Informationstäthet
 
 Varje mening ska bidra med ny information.
 
-Om en mening kan tas bort utan att elevens förståelse försämras ska den tas bort.
+Skär omsvep, inte information: bort med uppvärmningar, upprepningar och metakommentarer. Kan en mening strykas utan att ett faktum försvinner, stryk den.
 
 Information får aldrig upprepas enbart för att skapa flyt.
+
+Kondenseringen prövas alltid mot självstudiebarheten (03, "Överordnat kriterium"): kort och obegripligt är värre än långt. Procedur- och beräkningsstoff tål mindre komprimering — stryk aldrig steg.
 
 ---
 
@@ -221,6 +245,16 @@ Rubriker ska vara korta.
 Rubriker ska beskriva innehållet.
 
 Undvik rubriker som försöker vara fyndiga.
+
+---
+
+# Uppgiftsrubrik
+
+Avsnittets uppgiftssektion har alltid rubriken **Övningar**. Det är den enda tillåtna rubriken för avsnittets uppgifter (03-bokens-arkitektur.md, "Avsnittets struktur"; termlista.md).
+
+Den tidigare rubriken "Praktiska uppgifter" är utfasad (redaktionellt beslut 2026-07-22) och skrivs aldrig i nytt innehåll. Rubriken "Projektuppgifter" används inte heller: kapitlets större, integrerande uppgifter skrivs som helkapitelövningar i de senare avsnittens Övningar, inte i en egen bank.
+
+`npm run validate` flaggar en kvarvarande "Praktiska uppgifter"-rubrik i content-filer. I nyskrivna eller redan migrerade avsnitt är det ett aktivt fel; i den kända legacy-uppsättningen (avsnitt som ännu inte migrerats) redovisas den som förväntad migreringsskuld och rättas när respektive kapitel migreras.
 
 ---
 

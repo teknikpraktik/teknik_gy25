@@ -24,6 +24,20 @@ Boken ska präglas av hög informationstäthet, tydlig struktur och ett aktivt a
 
 ---
 
+# Överordnat kriterium
+
+Bokens bärande spänning är **självstudiebar** mot **kondenserad**.
+
+Självstudiebar: teorin är fullständig och självförklarande. En elev utan lärare ska kunna läsa sig till allt.
+
+Kondenserad: låg ordmängd, hög informationstäthet, inget babbel.
+
+Varje redaktionellt val prövas mot båda hållen. Svällande text och överkomprimerad text är samma misslyckande från olika håll. Kort och obegripligt är värre än långt.
+
+Hur kriteriet ser ut i praktiken visas av projektets referensimplementation, avsnitt 1.1 (`referensimplementation-avsnitt-1-1.md`, fastställd 2026-07-22): ton, kompressionsgrad, exempelanvändning, bildplatshållare, instuderingsfrågor och övningar. Samtliga avsnitt produceras enligt samma modell.
+
+---
+
 # Pedagogisk filosofi
 
 Boken bygger på följande principer.
@@ -108,68 +122,61 @@ Uppslag och sidbrytningar är frågor för layout och tryckexport, inte nivåer 
 
 # Avsnittets struktur
 
-Ett avsnitt består av två delar.
+**Redaktionellt beslut 2026-07-22 (normerande för hela läromedlet, ersätter beslutet 2026-07-20).** Varje teoriavsnitt följer exakt samma mönster:
 
-## Teori
+- **Löptext** (med bildplatshållare)
+- **Instuderingsfrågor**
+- **Övningar**
 
-Teoridelen innehåller den information eleven behöver för att kunna arbeta vidare.
+Kapitlet avslutas med två avsnitt utan lärandemål, **Sammanfattning** och **Begrepp** (se "Kapitelavslutningar"). Det finns inga separata projektuppgiftsavsnitt: kapitlets större, integrerande uppgifter skrivs som helkapitelövningar i Övningar i kapitlets senare avsnitt.
 
-Den kan innehålla:
+Tidigare uppgiftsdelar används inte längre: rubrikerna Praktiska uppgifter och Projektuppgifter samt de äldre uppdelade kategorierna (Beräkningsuppgifter, Rituppgifter, CAD-uppgifter, Programmeringsuppgifter, Laborationer, Konstruktionsuppgifter, Tillämpningsuppgifter, Analysuppgifter, Tillämpningsproblem, Fördjupningsuppgifter, Kortare uppgifter, Projekt, Förstå/Utveckla/Utmana).
 
-- löpande teori
-- begrepp
-- formler
-- figurer
-- tabeller
-- arbetade exempel när de tillför förståelse
+## Löptext
 
-Alla delar är inte obligatoriska.
+Löptexten innehåller den teori eleven behöver: löpande text, begrepp, formler, bilder, tabeller och arbetade exempel när de tillför förståelse. Alla delar är inte obligatoriska.
 
-Ett arbetat exempel används endast när det tydligt förbättrar förståelsen.
+Konkret exempel före definition. Definitioner växer ur exemplen och står i löpande prosa, inte i rutor. Precisionen bor i kapitlets begreppslista (se "Kapitelavslutningar").
 
----
+Beskrivande stoff följer bågen vardag, problem, lösning, förklaring, generalisering. Procedur- och beräkningsstoff följer i stället förklara, visa uppställt exempel, öva, och tål mindre komprimering: stryk aldrig steg.
 
-## Aktiv bearbetning
+Ett huvudexempel per avsnitt där det är möjligt, valt ur verkliga exempelområden (02-redaktionell-specifikation.md, "Exempel"), återkommande genom resonemang, bilder, frågor och övningar.
 
-**Redaktionellt beslut 2026-07-20 (normerande för hela läromedlet).** Boken har tre uppgiftsdelar och inga andra:
+## Instuderingsfrågor
 
-- **Instuderingsfrågor** ligger direkt efter ett avsnitts teori och prövar förståelse.
-- **Praktiska uppgifter** ligger därefter och är lokala tillämpningsuppgifter knutna till samma avsnitt. Rubriken är alltid "Praktiska uppgifter", oavsett vad uppgifterna innehåller: beräkning, ritning, CAD, programmering, mätning, laboration, analys, konstruktion, digitalt arbete eller dokumentation är olika *typer* av praktisk tillämpning, inte egna rubriker.
-- **Projektuppgifter** ligger samlade sist i kapitlet och är större, integrerande uppgifter. Varje kapitel har normalt 4–6 projektuppgifter, normalt 5.
+5–10 per avsnitt, samlade i EN sektion direkt efter löptexten.
 
-Kapitlet avslutas alltid i ordningen **Sammanfattning, Begrepp, Projektuppgifter**.
+Frågorna testar teknisk förståelse, inte läsförståelse: funktion, samband, begrepp, resonemang. Formuleringar som "enligt texten", "i texten" eller "vad visar figuren" är förbjudna. Frågorna ska kunna besvaras med avsnittets innehåll men prövar förståelse av tekniken, inte minne av formuleringar.
 
-Tidigare separata lokala uppgiftskategorier används inte längre som fasta rubriker. Det gäller bland annat Beräkningsuppgifter, Rituppgifter, CAD-uppgifter, Programmeringsuppgifter, Laborationer, Konstruktionsuppgifter, Tillämpningsuppgifter, Analysuppgifter, Tillämpningsproblem, Fördjupningsuppgifter, Kortare uppgifter och Projekt. Beslutet ersätter de tidigare besluten av 2026-07-19 och det tidigare beslutet av 2026-07-20 om en egen rubrik för beräkningsuppgifter.
+Minst en fråga per avsnitt testar avsnittets begrepp ("Förklara med egna ord vad som menas med ...").
 
-Ordningen i ett avsnitt är därmed: teori, instuderingsfrågor, praktiska uppgifter, nästa avsnitt.
+Prioritera frågor där eleven förklarar samband, beskriver orsaker och konsekvenser, jämför, skiljer mellan närliggande begrepp eller använder kunskapen på ett nytt men enkelt exempel. Frågor av typen "vem?", "när?" och "hur många?" används bara när personen, tidpunkten eller antalet är en relevant del av ett lärandemål. Ta bort frågor som upprepar en tidigare fråga, kontrollerar en oviktig detalj eller ligger utanför avsnittets lärandemål.
 
-### Instuderingsfrågor
+En uppgift som i huvudsak går ut på att eleven **utför** något, räknar, ritar, programmerar, bygger, mäter, undersöker eller testar, hör inte hemma här utan under Övningar.
 
-Kontrollerar att eleven förstått avsnittets innehåll.
+## Övningar
 
-Antalet frågor bestäms av avsnittets innehåll och komplexitet, men **sikta på 4–6 frågor per lärandemål** som avsnittet tränar. Det är ett riktmärke, inte ett hårt krav: ett färdigt avsnitt ska ha minst en instuderingsfråga, och färre eller fler är tillåtet när innehållet motiverar det. Undvik långa frågebatterier — välj de frågor som bäst tränar avsnittets kärna, och slå ihop eller ta bort frågor som blir för lika när flera lärandemål eller delavsnitt samlas i en gemensam frågelista.
+2–10 per avsnitt, samlade i EN sektion efter instuderingsfrågorna, i tydlig progression: identifiera, analysera, jämföra, konstruera, förbättra, eget arbete.
 
-Varje fråga ska träna en central del av avsnittet, gå att besvara med hjälp av teorin, bidra till grundläggande förståelse, vara tydligt skild från övriga frågor och när det är möjligt kontrollera mer än mekanisk sökläsning.
+Övningarna är autentiska uppgifter knutna till sådant eleven känner igen, inte instängda läroboksuppgifter. En övning innebär att eleven aktivt tillämpar avsnittets innehåll; formen följer ämnet: beräkning, skiss, ritning, CAD, programmering, mätning, laboration, analys, konstruktion, digitalt arbete eller dokumentation. Formen får aldrig göras mekaniskt likformig mellan kapitel.
 
-Prioritera frågor där eleven ska förklara samband, beskriva orsaker och konsekvenser, jämföra, skilja mellan närliggande begrepp, använda kunskapen på ett nytt men enkelt exempel eller återge en process eller modell med egna ord.
+Varje övning har ett namn i fetstil följt av uppgiften, och numreras 1, 2, 3 …
 
-Frågor av typen "vem?", "när?" och "hur många?" används bara när personen, tidpunkten eller antalet är en relevant del av ett lärandemål. Namn och årtal får finnas i teorin för historisk precision utan att automatiskt bli instuderingsfrågor.
+**Formuleringsregel:** boken mäter, testar eller examinerar ingenting. Skriv "låter eleven visa". Kopplingen till betygskriterierna görs i lärarhandledningen, inte i elevtexten.
 
-Ta bort frågor som upprepar en tidigare fråga, bara kontrollerar en oviktig detalj, testar formuleringar snarare än förståelse eller ligger utanför avsnittets lärandemål.
+## Helkapitelövningar
 
-Instuderingsfrågorna prövar faktakunskaper, begreppsförståelse, samband, förklaringar, jämförelser, analys, motivering och reflektion, och ska normalt kunna besvaras med text, skiss eller ett kort resonemang. En uppgift som i huvudsak går ut på att eleven **utför** något, räknar, ritar, programmerar, bygger, mäter, undersöker eller testar, hör inte hemma här utan under Praktiska uppgifter.
+I kapitlets senare avsnitt växer övningarna mot helkapitelövningar. En helkapitelövning uppfyller tre krav:
 
-### Praktiska uppgifter
+- Den kräver stoff från flera avsnitt.
+- Den resulterar i något dokumenterat: skiss, ritning, modell, kod, rapport, värdering.
+- Den har utskrivna utbyggnadssteg i formatet grunduppgift plus "Bygg ut: ...", så att samma uppgift låter eleven visa arbete på E-, C- och A-nivå.
 
-Lokala tillämpningsuppgifter knutna till avsnittets innehåll, samlade under EN sektion direkt efter instuderingsfrågorna. Sektionen är **frivillig**: alla avsnitt har inte en meningsfull praktisk tillämpning, och uppgifter skapas aldrig för att fylla en kvot.
+En eller två helkapitelövningar per kapitel räcker. Minst en bör fungera som egentlig syntesuppgift som använder betydande delar av kapitlet.
 
-En praktisk uppgift innebär att eleven aktivt tillämpar avsnittets innehåll. Formen följer ämnet: mekanik ger kraft-, moment- och dimensioneringsberäkningar, friläggning och rimlighetsbedömning; ritteknik ger frihandsskiss, vyritning, måttsättning och CAD-modellering; programmering ger koduppgifter, felsökning och testning; materialteknik ger jämförelser, laborationer och materialval; teknikhistoria och samhällsfrågor ger käll-, produkt- och konsekvensanalys samt strukturerade undersökningar. Uppgiften behöver alltså inte vara fysisk eller laborativ. Rubriken är densamma i hela boken, men uppgifternas form ska följa kapitlets ämnesinnehåll och får aldrig göras mekaniskt likformig mellan kapitel.
+Sista avsnittets egna grundövningar behålls alltid. Helkapitelövningarna kommer därutöver och får inte tränga ut avsnittsnära träning. Varje helkapitelövning ska fungera fristående med stabil information i själva instruktionen, utan hänvisningar av typen "som i figuren ovan".
 
-Uppgifterna ordnas inom sektionen från enklare till mer krävande: direkt tillämpning, därefter uppgifter i flera steg, sedan en verklighetsnära uppgift, och där det är relevant en avslutande uppgift som kräver tolkning eller rimlighetsbedömning. Alla avsnitt behöver inte ha lika många.
-
-Det finns **inget riktvärde för antalet** instuderingsfrågor eller praktiska uppgifter utöver riktmärket ovan för frågor per lärandemål. Antalet styrs av att centrala begrepp och färdigheter täcks, att inga tydliga dubbletter finns, och att arbetsmängden är rimlig för elev och lärare i förhållande till avsnittets längd och komplexitet.
-
-Instuderingsfrågor och praktiska uppgifter är avsnittets enda uppgiftsdelar. Det finns **inget synligt Begrepp-block** efter avsnittet, och de större, integrerande uppgifterna ligger inte här utan i kapitlets projektbank (se "Kapitelavslutningar" nedan). Begreppsundervisningen sker i teorin (11-begreppsfilosofi.md).
+Det finns **inget synligt Begrepp-block** efter avsnittet. Begreppsundervisningen sker i löptexten (11-begreppsfilosofi.md); kapitlets begreppslista är en uppslagsdel.
 
 ---
 
@@ -181,7 +188,7 @@ Ett **syntesavsnitt** (ett avsnitt som knyter ihop ett kapitels innehåll) ska f
 
 De tre inledande kapitlen avgränsas så här:
 
-- **Kapitel 1 · Teknik och teknikutveckling** besvarar *varför*: varför teknik uppstår, varför den utvecklas i en viss riktning och varför tekniska lösningar får den utformning de får. Kapitlet behandlar vad teknik är, teknikens historiska utveckling, teknikens och samhällets historiska växelverkan, vad som driver teknikutveckling och vilka förutsättningar, krav, resurser och avvägningar som formar tekniska lösningar.
+- **Kapitel 1 · Teknikens grunder** besvarar *varför*: varför teknik uppstår, varför den utvecklas i en viss riktning och varför tekniska lösningar får den utformning de får. Kapitlet behandlar vad teknik är, teknikens historiska utveckling, teknikens och samhällets historiska växelverkan, vad som driver teknikutveckling och vilka förutsättningar, krav, resurser och avvägningar som formar tekniska lösningar.
 - **Kapitel 2 · Att lösa tekniska problem** besvarar *hur ett problem angrips*: hur ett tekniskt problem identifieras och formuleras, och hur en problemlösningsstrategi väljs och motiveras utifrån problemets karaktär. Kapitlet stannar vid det valet; att ta fram, testa, utvärdera och förbättra en lösning är kapitel 3:s ansvar.
 - **Kapitel 3 · Teknikutvecklingsprocessen** besvarar *hur ett helt utvecklingsarbete genomförs* från behov till användning och återvinning (faser, iteration, kravspecifikation, idégenerering, konceptval, prototyper, testning, utvärdering, livscykel).
 
@@ -191,61 +198,45 @@ Kapitel 1 ska därför inte innehålla en egen problemlösningsmetod, en egen te
 
 # Kapitelavslutningar
 
-Varje färdigproducerat kapitel avslutas med tre samlade delar, i denna ordning: sammanfattning, begreppsövning, uppgiftsbank. De är egna innehållstyper, inte lärandemål, och tränar kapitlets innehåll som helhet (12-produktionsarkitektur.md, "Kapitelavslutningar").
+Varje färdigproducerat kapitel avslutas med två onumrerade avsnitt, i denna ordning: **Sammanfattning**, **Begrepp**. De är egna innehållstyper, inte lärandemål (12-produktionsarkitektur.md, "Kapitelavslutningar").
 
 ## Sammanfattning
 
-En sammanhängande löptext på cirka 300 ord som binder ihop kapitlets avsnitt till en helhet. Sammanfattningen är **repetition**, inte en ny genomgång: den upprepar inga instuderingsfrågor och inför inga nya fakta eller begrepp. Den skrivs sist, när kapitlets lärandemål är färdiga, så att den kan spegla den faktiska texten.
+Kort löpande text, inte punktlista, som låter eleven repetera hela kapitlet på några minuter (riktmärke cirka 300 ord). Sammanfattningen är **repetition**, inte en ny genomgång: den upprepar inga instuderingsfrågor och inför inga nya fakta eller begrepp. Den skrivs sist, när kapitlets avsnitt är färdiga, så att den kan spegla den faktiska texten.
 
-## Begreppsövning
+## Begrepp
 
-En samlad övning över kapitlets centrala begrepp, utformad som en **punktlista**: varje begrepp står som en egen punkt, och eleven förklarar begreppet med en egen mening. Eleven skriver svaren i separat häfte eller digitalt dokument; boken innehåller inga skrivytor.
+Kapitlets begrepp med färdiga definitioner, max ungefär en mening per begrepp. Listan är en **uppslagsfunktion**: eleven fyller inte i något här, och begreppsförståelse tränas i instuderingsfrågorna, inte i listan. Precisionen i definitionerna bor här — i löptexten växer definitionerna ur exemplen och står i prosa.
 
-Övningen är **repetition och tillämpning** och får aldrig vara elevens första möte med ett begrepp; begreppet ska redan ha sitt huvudställe i eller före kapitlet. Listan bygger på frontmatterfältet `ordlista`. Facit hör till lärarmaterialet och ingår aldrig i elevmanuset.
+Varje begrepp i listan ska ha sitt huvudställe i eller före kapitlet (`concepts_introduced`, 12-produktionsarkitektur.md). Listan inför aldrig nya begrepp.
 
-## Projektuppgifter
-
-Kapitlets större, integrerande uppgifter samlas i en enda bank som en **numrerad lista**: varje uppgift har ett löpnummer från 1 och ett namn, följt av själva uppgiften. Banken delas **inte** in i underkategorier efter omfattning eller uppgiftstyp; uppgifterna ordnas i stället i stigande omfattning, med de enklare först och de mest omfattande sist. Uppgifterna förses **inte** med metadata om arbetsform, tidsåtgång, redovisningsform eller vilket lärandemål de tränar. Utförandet överlåts till läraren och eleven.
-
-En projektuppgift ska vara större och mer integrerande än en lokal praktisk uppgift. Den omfattar normalt flera av kapitlets avsnitt, kräver planering och flera arbetssteg, innebär att eleven producerar, undersöker, konstruerar, programmerar, utvärderar eller dokumenterar något, kan genomföras individuellt eller i grupp, och har en tydlig teknisk kärna. Den ska leda fram till en produkt, rapport, modell, konstruktion, kod, analys eller dokumentation. Godkända former omfattar till exempel konstruktion, teknisk ritning, kalkylblad, digital presentation, plansch, programmering, simulering, modellering, fältstudie, mätning, testning, experiment, prototyp, muntlig presentation, film och podd. AI-uppgifter förekommer när de tillför ett verkligt värde.
-
-En projektuppgift får aldrig vara en lokal praktisk uppgift med fler ord. Skiljelinjen är funktion och komplexitet, inte tidsåtgång: den praktiska uppgiften ger avgränsad färdighetsträning på ett avsnitt, projektuppgiften låter flera kunskaper användas tillsammans. Minst en projektuppgift per kapitel bör fungera som en egentlig syntesuppgift som använder betydande delar av kapitlet.
-
-Ett kapitel har **4–6 projektuppgifter**, normalt 5 (redaktionellt beslut 2026-07-20). Riktvärdet är satt så att uppgifterna hinner genomföras på riktigt i stället för att väljas bort: en bank med tio eller femton uppgifter blir i praktiken en meny där merparten aldrig används, och då är det bättre att lägga arbetet på färre och mer genomarbetade uppgifter. Färre än fyra räcker sällan för att täcka ett kapitels centrala innehåll, fler än sex innebär nästan alltid att två uppgifter tränar samma sak.
-
-Överstiger banken sex uppgifter ska likartade uppgifter slås ihop, renodlas, integreras eller tas bort, och små lokala aktiviteter flyttas till Praktiska uppgifter under det avsnitt de hör hemma. Understiger den fyra skapas nya projekt bara när det behövs för variation eller täckning; bokens totala omfattning ska inte öka i onödan.
-
-Banken ska tillsammans ge tillräcklig praktisk och producerande träning för kapitlets centrala innehåll och förmågor, och uppgifterna ska variera i form. Möjliga former är laboration och mätning, undersökning, konstruktion, CAD, programmering, dimensionering, analys, teknikutvecklingsarbete, utvärdering, dokumentation och jämförelse av tekniska lösningar. Alla former behöver inte finnas i varje kapitel: variationen anpassas till kapitlets ämnesinnehåll och konstrueras aldrig artificiellt. En enskild uppgift får gärna kombinera flera av formerna, till exempel ett experiment som följs av en beräkning på samma princip.
-
-Uppgifter som tränar samma sak på nästan samma sätt slås ihop eller tas bort. Varje uppgift ska fungera fristående med stabil information i själva instruktionen, utan hänvisningar av typen "som i figuren ovan".
+Det finns inga projektuppgiftsavsnitt: kapitlets större, integrerande uppgifter ligger som helkapitelövningar i Övningar i kapitlets senare avsnitt (se "Avsnittets struktur").
 
 ---
 
 # Praktiskt arbete
 
-Praktisk träning är central (10-amnesfilosofi.md, "Teknik är praktiskt") och säkras på två nivåer: lokalt genom avsnittets Praktiska uppgifter, och samlat genom kapitlets projektbank. Ingen av nivåerna är obligatorisk per avsnitt. Ett avsnitt utan meningsfull praktisk tillämpning har enbart instuderingsfrågor, och uppgifter skapas aldrig enbart för symmetrins skull.
+Praktisk träning är central (10-amnesfilosofi.md, "Teknik är praktiskt") och säkras på två nivåer: lokalt genom avsnittets Övningar, och samlat genom kapitlets helkapitelövningar. Ett avsnitt utan meningsfull praktisk tillämpning får ha få och enkla övningar; övningar skapas aldrig enbart för symmetrins skull, men varje avsnitt har minst två.
 
-Hör ett praktiskt moment naturligt hemma i ett enskilt avsnitt läggs det under avsnittets Praktiska uppgifter, inte i projektbanken. Är det stort nog att integrera flera avsnitt hör det hemma i banken. Praktiska uppgifter prioriteras framför motsvarande teoretiska uppgifter när båda tränar samma förmåga.
+Hör ett praktiskt moment naturligt hemma i ett enskilt avsnitt läggs det bland avsnittets övningar. Är det stort nog att integrera flera avsnitt skrivs det som helkapitelövning i ett av kapitlets senare avsnitt. Praktiska övningar prioriteras framför motsvarande teoretiska uppgifter när båda tränar samma förmåga.
 
 ---
 
-# Illustrationer
+# Bilder
 
-Illustrationer används när de förbättrar förståelsen.
+Bilder ska undervisa: förklara samband, visualisera system, visa processer eller jämföra lösningar. Varje större avsnitt innehåller sådana bilder. Inga dekorationsbilder; kapitelöppnarbilder är förlagets formgivningsbeslut, inte manusets.
 
 Grundregeln är:
 
-> Om något kan förklaras bättre med en figur än med text ska en figur användas.
+> Om något kan förklaras bättre med en bild än med text ska en bild användas.
 
-Förlaget ansvarar för den slutliga grafiska utformningen.
+Platshållarformat i manus: `[BILD X.Y-N]` följt av **Innehåll** (vad bilden ska visa och varför) och **Bildtext** (färdigformulerad), som i referensimplementationen 1.1.
 
-Manuset innehåller därför endast platshållare som beskriver:
+Bild och text använder samma exempel. Handlar texten om Öresundsförbindelsen visar bilden Öresundsförbindelsen.
 
-- figurens syfte
-- vilket innehåll den ska visa
-- hur den används i texten
+När en bild övertar informationsbärande kortas motsvarande prosa. En bild som dubblerar texten har inte avlastat den.
 
-Varje avsnitt ska normalt innehålla minst en figur.
+Förlaget ansvarar för den slutliga grafiska utformningen; manuset innehåller endast platshållare.
 
 ---
 
@@ -256,6 +247,8 @@ Exempel ska hämtas från verkligheten.
 Fiktiva företag, produkter eller scenarier används inte om ett verkligt exempel fungerar lika bra.
 
 Exempel varieras genom boken.
+
+Alla exempel är **utbytbara**: ett exempel ska kunna ersättas av ett likvärdigt verkligt exempel utan att avsnittets struktur, resonemang eller uppgifter behöver göras om (02-redaktionell-specifikation.md, "Exempel").
 
 Boken bygger inte på ett genomgående projekt eller en återkommande huvudprodukt.
 
@@ -320,13 +313,14 @@ Allt innehåll ska motiveras av ett tydligt lärandemål.
 
 Ett avsnitt är färdigt först när:
 
-- teorin är komplett men koncentrerad
+- löptexten är självstudiebar och kondenserad (se "Överordnat kriterium")
 - alla fakta är korrekta
-- minst en figur finns specificerad när den förbättrar förståelsen
-- avsnittet avslutas med en samlad sektion relevanta instuderingsfrågor som tränar avsnittets lärandemål
-- nya begrepp introduceras, definieras och används korrekt i teorin
+- undervisande bilder finns specificerade i `[BILD]`-format där de förbättrar förståelsen
+- avsnittet avslutas med en samlad sektion instuderingsfrågor (5–10) och en samlad sektion övningar (2–10) som tillsammans tränar avsnittets lärandemål
+- nya begrepp introduceras i kursiv, definieras i prosa och används korrekt i löptexten
 - AI används endast där det tillför verkligt värde
 - verkliga exempel används
 - eleven rimligen kan uppnå avsnittets lärandemål utan ytterligare teori
+- kvaliteten motsvarar referensimplementationen 1.1
 
-Ett kapitel är färdigt först när det dessutom avslutas med en begreppsövning som täcker kapitlets centrala begrepp och en uppgiftsbank vars uppgifter tillsammans ger tillräcklig praktisk och producerande träning, var och en kopplad till relevanta lärandemål.
+Ett kapitel är färdigt först när det dessutom har en eller två helkapitelövningar i de senare avsnittens övningar och avslutas med en sammanfattning i löpande text och en begreppslista med färdiga definitioner som täcker kapitlets centrala begrepp.

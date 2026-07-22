@@ -21,6 +21,12 @@ import {
 } from '../schemas/larandemal.schema.mjs';
 import { allaAvsnitt, kapitel } from './bokstruktur-data.mjs';
 import { niva1, niva2, syftesmal, allaPunkter } from './kursplan-data.mjs';
+import {
+	migreradeKapitel,
+	strukturskuldKategorier,
+	legacyOvningsrubrikFiler,
+	klassificeraStrukturskuld,
+} from './migreringsstatus.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const contentDir = path.join(root, '..', 'content');
@@ -58,6 +64,11 @@ function extractSections(body, rubrik) {
 
 let errors = [];
 let warnings = [];
+// Förväntad, känd migreringsskuld (produktionslogg.md 2026-07-22). Poster här
+// grupperas separat i utdata och räknas aldrig som aktiva fel. Varje post är
+// { kategori, msg }. Fylls dels direkt (utfasad övningsrubrik i legacy-filer),
+// dels genom omklassning av redan genererade strukturfel i slutet.
+let skuld = [];
 
 async function walk(dir) {
 	const entries = await readdir(dir, { withFileTypes: true });
@@ -325,26 +336,45 @@ for (const avs of avsnittFiler) {
 		errors.push(`${beskr}: flera "Instuderingsfrågor"-sektioner — avsnittet ska avslutas med EN samlad sektion, inte en per delavsnitt.`);
 	}
 
-	// Lokala tillämpningsuppgifter samlas under EN rubrik, "Praktiska uppgifter"
-	// (03-bokens-arkitektur.md, redaktionellt beslut 2026-07-20). Sektionen är
-	// frivillig: alla delavsnitt har inte en meningsfull praktisk tillämpning.
-	const puSektioner = extractSections(avs.body, 'Praktiska uppgifter');
-	if (puSektioner.length > 1) {
-		errors.push(`${beskr}: flera "Praktiska uppgifter"-sektioner — avsnittet ska ha EN samlad sektion.`);
-	} else if (puSektioner.length === 1) {
-		if (!/^\s*\d+\.\s+\S/m.test(puSektioner[0])) {
-			errors.push(`${beskr}: sektionen "Praktiska uppgifter" är tom — minst en numrerad uppgift krävs (03).`);
+	// Övningssektionen. Nya modellen (03, redaktionellt beslut 2026-07-22):
+	// avsnittets uppgifter samlas under EN rubrik "Övningar". Rubriken "Praktiska
+	// uppgifter" är utfasad (task 3, 2026-07-22). En kvarvarande "Praktiska
+	// uppgifter"-rubrik flaggas — grupperad migreringsskuld om filen är en känd
+	// legacy-fil i ett ej migrerat kapitel, annars aktivt fel (nyskrivet eller
+	// migrerat innehåll ska använda "Övningar"; 05-forfattarmanual.md, termlista.md).
+	if (/^#{2,4}\s+Praktiska uppgifter\s*$/m.test(avs.body)) {
+		const msg = `${beskr}: utfasad rubrik "Praktiska uppgifter" — enda tillåtna övningsrubrik är "Övningar" (05-forfattarmanual.md, termlista.md).`;
+		// Klassificering styrs av kapitlets migreringsstatus, samma mekanism för
+		// alla kapitel: i ett migrerat kapitel måste innehållet följa nya standarden
+		// (aktivt fel), i ett ej migrerat kapitel är den gamla rubriken förväntad
+		// skuld. Ingen fil får ett handlagt undantag (migreringsstatus.mjs).
+		if (migreradeKapitel.has(avs.chapter)) {
+			errors.push(msg);
+		} else {
+			skuld.push({ kategori: strukturskuldKategorier.OVNINGSRUBRIK, msg });
 		}
-		const iIndex = avs.body.search(/^#{2,4}\s+Instuderingsfrågor\s*$/m);
-		const pIndex = avs.body.search(/^#{2,4}\s+Praktiska uppgifter\s*$/m);
-		if (iIndex >= 0 && pIndex >= 0 && pIndex < iIndex) {
-			errors.push(`${beskr}: "Praktiska uppgifter" ligger före "Instuderingsfrågor" — ordningen ska vara teori, instuderingsfrågor, praktiska uppgifter (03).`);
+	}
+	// Tomhets- och ordningskontroll för den övningssektion som faktiskt finns
+	// (nya "Övningar" eller utfasade "Praktiska uppgifter"). Sektionen är frivillig.
+	for (const rubrik of ['Övningar', 'Praktiska uppgifter']) {
+		const sektioner = extractSections(avs.body, rubrik);
+		if (sektioner.length > 1) {
+			errors.push(`${beskr}: flera "${rubrik}"-sektioner — avsnittet ska ha EN samlad sektion.`);
+		} else if (sektioner.length === 1) {
+			if (!/^\s*\d+\.\s+\S/m.test(sektioner[0])) {
+				errors.push(`${beskr}: sektionen "${rubrik}" är tom — minst en numrerad uppgift krävs (03).`);
+			}
+			const iIndex = avs.body.search(/^#{2,4}\s+Instuderingsfrågor\s*$/m);
+			const oIndex = avs.body.search(new RegExp(`^#{2,4}\\s+${rubrik}\\s*$`, 'm'));
+			if (iIndex >= 0 && oIndex >= 0 && oIndex < iIndex) {
+				errors.push(`${beskr}: "${rubrik}" ligger före "Instuderingsfrågor" — ordningen ska vara löptext, instuderingsfrågor, övningar (03).`);
+			}
 		}
 	}
 
 	// Äldre eller uppdelade uppgiftsrubriker och synliga uppslagsrubriker får inte
 	// förekomma. Uppgiftstypen styrs av uppgiften själv, inte av en egen rubrik
-	// (03-bokens-arkitektur.md, "Praktiska uppgifter").
+	// (03-bokens-arkitektur.md, "Avsnittets struktur").
 	const forbjudnaRubriker = [
 		/^#{2,4}\s+(Förstå|Utveckla|Utmana)\s*$/m,
 		/^#{2,4}\s+Uppslag\b/m,
@@ -355,7 +385,7 @@ for (const avs of avsnittFiler) {
 	for (const forbjuden of forbjudnaRubriker) {
 		const traff = avs.body.match(forbjuden);
 		if (traff) {
-			errors.push(`${beskr}: rubriken "${traff[0].replace(/^#+\s*/, '')}" får inte förekomma i ett avsnitt — lokala tillämpningsuppgifter ligger under "Praktiska uppgifter", större under kapitlets "Projektuppgifter" (03, redaktionellt beslut 2026-07-20).`);
+			errors.push(`${beskr}: rubriken "${traff[0].replace(/^#+\s*/, '')}" får inte förekomma i ett avsnitt — avsnittets uppgifter ligger under "Övningar", kapitlets större uppgifter som helkapitelövningar i senare avsnitts "Övningar" (03, redaktionellt beslut 2026-07-22).`);
 		}
 	}
 
@@ -446,10 +476,24 @@ for (const avs of avsnittFiler) {
 	}
 }
 
+// Hygien för legacyOvningsrubrikFiler: registret ska bara innehålla filer som
+// FAKTISKT ännu bär den utfasade rubriken "Praktiska uppgifter". Har en post
+// migrerats (fått "Övningar") utan att avregistreras, eller saknas filen, flaggas
+// den så registret inte ruttnar (migreringsstatus.mjs).
+for (const relPath of legacyOvningsrubrikFiler) {
+	const avs = avsnittFiler.find((a) => a.file === relPath);
+	if (!avs) {
+		warnings.push(`legacyOvningsrubrikFiler: posten ${relPath} saknar avsnittsfil — ta bort den ur scripts/migreringsstatus.mjs.`);
+	} else if (!/^#{2,4}\s+Praktiska uppgifter\s*$/m.test(avs.body)) {
+		warnings.push(`legacyOvningsrubrikFiler: ${relPath} bär inte längre rubriken "Praktiska uppgifter" — ta bort den ur scripts/migreringsstatus.mjs.`);
+	}
+}
+
 // -------------------------------------------------------- Kapitelavslutningar
 // Strukturkällan är 06-bokstruktur.md självt (via bokstruktur-data.mjs) — varje
-// kapitel har alltid Sammanfattning, Begrepp, Projektuppgifter
-// som sina tre sista avsnitt. Stäm av mot filerna åt båda håll.
+// kapitel har (nya modellen, 2026-07-22) Sammanfattning och Begrepp som sina två
+// sista avsnitt. Stäm av mot filerna åt båda håll.
+const planKapitelavslutningPaths = new Set(plan.filter((p) => p.type).map((p) => p.relPath));
 for (const p of plan) {
 	if (!p.type) continue;
 	const ka = kapitelavslutningsFiler.find((f) => f.file === p.relPath);
@@ -467,27 +511,11 @@ for (const p of plan) {
 		warnings.push(`${ka.file}: titeln "${ka.title}" avviker från bokstrukturens "${p.titel}".`);
 	}
 }
-// Projektbanken: 4–6 uppgifter, normalt 5 (03-bokens-arkitektur.md,
-// "Projektuppgifter", redaktionellt beslut 2026-07-20). Kontrolleras först när
-// banken nått granskningsstatus, så att tomma skelett inte varnar.
-for (const ka of kapitelavslutningsFiler) {
-	if (ka.type !== 'uppgiftsbank') continue;
-	if (statusEnum.indexOf(ka.status) < GRANSKNINGSSTATUS) continue;
-	const antal = (ka.body.match(/^\s*\d+\.\s+\S/gm) ?? []).length;
-	if (antal < 4 || antal > 6) {
-		warnings.push(`${ka.file} (status ${ka.status}): ${antal} projektuppgifter — riktvärdet är 4–6, normalt 5 (03-bokens-arkitektur.md). Slå ihop, renodla eller komplettera.`);
-	}
-	// Underrubriker i banken: uppgifterna ordnas i en enda lista i stigande
-	// omfattning, utan kategoriindelning.
-	const underrubrik = ka.body.match(/^#{2,4}\s+.+$/m);
-	if (underrubrik) {
-		errors.push(`${ka.file}: rubriken "${underrubrik[0].replace(/^#+\s*/, '')}" får inte förekomma — projektbanken är en enda numrerad lista utan underkategorier (03).`);
-	}
-}
 
-const planKapitelavslutningPaths = new Set(plan.filter((p) => p.type).map((p) => p.relPath));
 for (const ka of kapitelavslutningsFiler) {
 	if (!planKapitelavslutningPaths.has(ka.file)) {
+		// Utfasade uppgiftsbanksfiler (NN-projektuppgifter.md) fångas här och
+		// klassas som migreringsskuld nedan. De valideras inte längre som banker.
 		errors.push(`${ka.file}: kapitelavslutning (type ${ka.type}) finns inte i 06-bokstruktur.md.`);
 	}
 }
@@ -512,9 +540,10 @@ if (avsnittFiler.length > 0) {
 	for (const [status, count] of Object.entries(statusCount)) {
 		console.log(`  ${status}: ${count}`);
 	}
-	console.log('\nPer kapitel (påbörjade/klara av totalt):');
+	console.log('\nPer kapitel (påbörjade/klara av totalt; migreringsläge):');
 	for (const [chapter, cs] of [...chapterStatus.entries()].sort((a, b) => a[0] - b[0])) {
-		console.log(`  Kapitel ${chapter}: ${cs.paborjade} påbörjade, ${cs.klara} klara av ${cs.totalt}`);
+		const mig = migreradeKapitel.has(chapter) ? 'migrerad' : 'ej migrerad';
+		console.log(`  Kapitel ${chapter}: ${cs.paborjade} påbörjade, ${cs.klara} klara av ${cs.totalt} — ${mig}`);
 	}
 	console.log('');
 }
@@ -539,18 +568,48 @@ console.log(' Syftesmål:');
 for (const punkt of syftesmal) console.log(tackningsrad(punkt, 'bada'));
 console.log('');
 
+// Skilj känd, förväntad migreringsskuld från aktiva fel. Strukturskulden
+// (kapitel 1-mappen + de utfasade projektuppgiftsfilerna) genereras som vanliga
+// fel ovan och flyttas hit genom omklassning; övningsrubriksskulden lades redan
+// direkt i `skuld`. Allt som inte matchar en känd skuldsignatur förblir aktivt
+// fel — så ett nytt, äkta fel kan aldrig gömma sig i skuldlistan
+// (migreringsstatus.mjs; produktionslogg.md 2026-07-22).
+{
+	const kvarErrors = [];
+	for (const e of errors) {
+		const kategori = klassificeraStrukturskuld(e);
+		if (kategori) skuld.push({ kategori, msg: e });
+		else kvarErrors.push(e);
+	}
+	errors = kvarErrors;
+}
+
 if (warnings.length > 0) {
 	console.log(`Varningar (${warnings.length}):`);
 	for (const w of warnings) console.log(`  ⚠ ${w}`);
 	console.log('');
 }
 
+if (skuld.length > 0) {
+	const grupper = new Map();
+	for (const s of skuld) {
+		if (!grupper.has(s.kategori)) grupper.set(s.kategori, []);
+		grupper.get(s.kategori).push(s.msg);
+	}
+	console.log(`Förväntad migreringsskuld (${skuld.length}) — känd och väntad tills berörda kapitel migreras, räknas inte som fel (produktionslogg.md 2026-07-22):`);
+	for (const [kategori, msgs] of grupper) {
+		console.log(`  ${kategori} (${msgs.length}):`);
+		for (const m of msgs) console.log(`    · ${m}`);
+	}
+	console.log('');
+}
+
 if (errors.length > 0) {
-	console.log(`Fel (${errors.length}):`);
+	console.log(`Aktiva fel (${errors.length}):`);
 	for (const e of errors) console.log(`  ✗ ${e}`);
 	console.log('');
-	console.error('Validering misslyckades.');
+	console.error(`Validering misslyckades: ${errors.length} aktiva fel (förväntad migreringsskuld: ${skuld.length}, räknas inte som fel).`);
 	process.exit(1);
 }
 
-console.log('Validering OK.');
+console.log(`Validering OK — 0 aktiva fel. Förväntad migreringsskuld: ${skuld.length} (se lista ovan; känd, väntad tills kapitlen migreras).`);

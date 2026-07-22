@@ -232,9 +232,9 @@ export const niva2 = [
 	},
 ];
 
-// Syftesmål utan explicit hem i centralt innehåll (07, egen tabell).
-// Syftesmål gäller båda nivåerna: taggen s-01 är giltig i såväl
-// curriculum.niva1 som curriculum.niva2.
+// Syftesmål och syftesstoff utan explicit hem i centralt innehåll (07, egen tabell).
+// Syftesmål/syftesstoff gäller båda nivåerna: taggarna s-01, s-02, s-03 är
+// giltiga i såväl curriculum.niva1 som curriculum.niva2.
 export const syftesmal = [
 	{
 		id: "s-01",
@@ -242,6 +242,20 @@ export const syftesmal = [
 		kategori: null, // ingår inte i centralt innehålls kategorier
 		primar: 7,
 		berors: [6, 8],
+	},
+	{
+		id: "s-02",
+		text: 'Teknikbegreppet (ämnets ingress: teknik uppfyller "människors behov och önskemål" genom "produkter, processer, anläggningar och system"; behandlas i 1.1)',
+		kategori: null,
+		primar: 1,
+		berors: [13],
+	},
+	{
+		id: "s-03",
+		text: 'Samspelet mellan teknik, naturvetenskap och matematik (ämnets tvärvetenskapliga karaktär, ingressen; behandlas i 1.1)',
+		kategori: null,
+		primar: 1,
+		berors: [6, 7, 8],
 	},
 ];
 

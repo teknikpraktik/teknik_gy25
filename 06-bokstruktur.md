@@ -24,6 +24,8 @@ Listan över delavsnitt och lärandemål under varje avsnitt är preliminär. N�
 
 Detta dokument är den enda källan till bokens struktur, även maskinellt: `scripts/bokstruktur-data.mjs` tolkar dokumentet direkt vid varje körning av skeleton-, validerings- och exportskripten. Det finns ingen separat datafil att hålla i synk — men kapitel-, avsnitts- och delavsnittsraderna måste därför följa radformatet nedan exakt. Vid formatfel stannar `npm run validate` med ett radnummer.
 
+**Migreringsläge (2026-07-22):** kapitelmodellen nedan (onumrerade kapitelavslutningar Sammanfattning och Begrepp, inga projektuppgiftsavsnitt) är fastställd av projektägaren, men skripten och delar av content/ följer ännu den tidigare modellen. Skript- och innehållsmigreringen görs kapitel för kapitel; till dess kan `npm run validate` fela på den nya strukturen. Se produktionslogg.md, posten 2026-07-22.
+
 ---
 
 # Struktur
@@ -41,6 +43,8 @@ Avsnitt (H2)
 Delavsnitt (H3, används vid behov)
 
 **Avsnittet (H2) är bokens minsta producerade och publicerade enhet.** Det är den fasta pedagogiska, redaktionella, navigerbara och producerbara enheten — produktionsstrukturen och publiceringsstrukturen är identiska. Delavsnitt (H3) ger ett avsnitt naturliga underrubriker när innehållet har flera tydligt skilda delar, men är aldrig en egen fil, sida eller navigeringsnivå.
+
+**Varje teoriavsnitt följer samma mönster:** löptext (med bildplatshållare), därefter en samlad sektion Instuderingsfrågor och en samlad sektion Övningar (03-bokens-arkitektur.md, "Avsnittets struktur"). Mönstret listas inte här — detta dokument disponerar bara rubriker, delavsnitt och lärandemål.
 
 **Lärandemål är metadata, inte en rubriknivå.** Ett lärandemål är inte längre en egen fil eller synlig rubrik. Varje avsnitt har ett eller flera lärandemål registrerade i frontmatterfältet `learningGoals` (se 12-produktionsarkitektur.md). Lärandemålen styr fortfarande vad som ska skrivas och är kvalitetskriteriet för när avsnittet är klart, men de syns normalt inte för eleven.
 
@@ -67,13 +71,18 @@ Maskinläst radformat (exakt):
 
 ### <Delavsnittstitel>
 ### <Delavsnittstitel>
+
+## Sammanfattning
+
+## Begrepp
 ```
 
 Regler:
 
 - Kapitelraden inleder ett kapitel. Mellanslagstecknet är "·".
-- Avsnittsraden (`## <kapitel>.<sektionsnr> <titel>`) numreras löpande utan luckor inom kapitlet.
-- Punktlistan direkt under en avsnittsrad (rader som inleds med `- ` innan nästa `##`/`###`) är avsnittets lärandemål. Ett teoriavsnitt har minst ett lärandemål. De tre kapitelavslutande avsnitten (Sammanfattning, Begrepp, Projektuppgifter, se nedan) saknar lärandemål och har därför ingen punktlista.
+- Avsnittsraden (`## <kapitel>.<sektionsnr> <titel>`) numreras löpande utan luckor inom kapitlet. Endast teoriavsnitt numreras.
+- Punktlistan direkt under en avsnittsrad (rader som inleds med `- ` innan nästa `##`/`###`) är avsnittets lärandemål. Ett teoriavsnitt har minst ett lärandemål.
+- De två kapitelavslutande avsnitten (se nedan) skrivs som onumrerade H2-rader, alltid sist i kapitlet, alltid i ordningen `## Sammanfattning`, `## Begrepp`, med exakt dessa titlar. De saknar lärandemål och har därför ingen punktlista.
 - `### <delavsnittstitel>`-rader är valfria och används bara när avsnittet naturligt delas i flera delar. De är inte lärandemål och har ingen egen punktlista eller numrering — de är rena underrubriker i avsnittets löptext.
 - H4 används undantagsvis, bara när ett H3-delavsnitt verkligen behöver delas upp ytterligare, och skrivs direkt i innehållsfilen (inte i detta dokument, som bara disponerar ner till H3).
 
@@ -81,17 +90,20 @@ Regler:
 
 # Kapitelavslutningar
 
-Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt dessa titlar: **Sammanfattning**, **Begrepp**, **Projektuppgifter**. De är egna innehållstyper (`type: kapitelsammanfattning` / `begreppsovning` / `uppgiftsbank`), inte lärandemål, saknar `learningGoals` och tränar kapitlets innehåll som helhet (12-produktionsarkitektur.md, "Kapitelavslutningar"). De listas i detta dokument som vilket avsnitt som helst, sist i varje kapitel.
+Varje kapitel avslutas med två onumrerade H2-avsnitt, alltid i denna ordning och med exakt dessa titlar: **Sammanfattning**, **Begrepp**. De är egna innehållstyper (`type: kapitelsammanfattning` / `begreppsovning`), inte lärandemål, saknar `learningGoals` och sammanfattar respektive definierar kapitlets innehåll som helhet (03-bokens-arkitektur.md, "Kapitelavslutningar"; 12-produktionsarkitektur.md).
+
+Det finns inga separata projektuppgiftsavsnitt. Kapitlets större, integrerande uppgifter skrivs som helkapitelövningar i Övningar-sektionen i kapitlets senare avsnitt (03-bokens-arkitektur.md, "Övningar").
 
 ---
 
-# Kapitel 1 · Teknik och teknikutveckling
+# Kapitel 1 · Teknikens grunder
 
 ## 1.1 Vad är teknik?
 - Förklara vad teknik är och ge exempel på hur tekniska lösningar svarar mot mänskliga behov och problem.
 - Beskriva hur teknik samspelar med naturvetenskap och matematik i en verklig teknisk lösning.
 
 ### Teknik löser problem
+### Teknik är mer än bara föremål
 ### Teknik, naturvetenskap och matematik
 
 ## 1.2 Teknik genom historien
@@ -114,11 +126,9 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ### Vad sätter teknikutvecklingen i rörelse?
 ### Vad formar den färdiga lösningen?
 
-## 1.4 Sammanfattning
+## Sammanfattning
 
-## 1.5 Begrepp
-
-## 1.6 Projektuppgifter
+## Begrepp
 
 ---
 
@@ -144,11 +154,9 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ### Pröva och förbättra
 ### Analysera innan du bygger
 
-## 2.3 Sammanfattning
+## Sammanfattning
 
-## 2.4 Begrepp
-
-## 2.5 Projektuppgifter
+## Begrepp
 
 ---
 
@@ -192,11 +200,9 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ### Livscykelns faser
 ### Design för livscykeln
 
-## 3.7 Sammanfattning
+## Sammanfattning
 
-## 3.8 Begrepp
-
-## 3.9 Projektuppgifter
+## Begrepp
 
 ---
 
@@ -239,11 +245,9 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ### Ritning ur modell
 ### Presentera teknik
 
-## 4.6 Sammanfattning
+## Sammanfattning
 
-## 4.7 Begrepp
-
-## 4.8 Projektuppgifter
+## Begrepp
 
 ---
 
@@ -278,11 +282,9 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ### Materialets livscykel
 ### Återvinning och materialval
 
-## 5.6 Sammanfattning
+## Sammanfattning
 
-## 5.7 Begrepp
-
-## 5.8 Projektuppgifter
+## Begrepp
 
 ---
 
@@ -340,11 +342,9 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ### Säkerhetsfaktor och dimensioneringsprocessen
 ### Rimlighetsbedömning
 
-## 6.7 Sammanfattning
+## Sammanfattning
 
-## 6.8 Begrepp
-
-## 6.9 Projektuppgifter
+## Begrepp
 
 ---
 
@@ -368,11 +368,9 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ### Sammanställa mätdata
 ### Tolka mätdata
 
-## 7.3 Sammanfattning
+## Sammanfattning
 
-## 7.4 Begrepp
-
-## 7.5 Projektuppgifter
+## Begrepp
 
 ---
 
@@ -396,11 +394,9 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ### Genomföra en simulering
 ### Verifiering och validering
 
-## 8.3 Sammanfattning
+## Sammanfattning
 
-## 8.4 Begrepp
-
-## 8.5 Projektuppgifter
+## Begrepp
 
 ---
 
@@ -430,11 +426,9 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ### Digitaliseringens betydelse
 ### Uppkopplade system
 
-## 9.5 Sammanfattning
+## Sammanfattning
 
-## 9.6 Begrepp
-
-## 9.7 Projektuppgifter
+## Begrepp
 
 ---
 
@@ -465,11 +459,9 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ### Från problem till program
 ### Testa och felsöka
 
-## 10.4 Sammanfattning
+## Sammanfattning
 
-## 10.5 Begrepp
-
-## 10.6 Projektuppgifter
+## Begrepp
 
 ---
 
@@ -499,11 +491,9 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ### Arbeta i projekt
 ### Utvärdera och presentera
 
-## 11.5 Sammanfattning
+## Sammanfattning
 
-## 11.6 Begrepp
-
-## 11.7 Projektuppgifter
+## Begrepp
 
 ---
 
@@ -525,11 +515,9 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ### Systematiskt arbetsmiljöarbete
 ### Miljösäkring
 
-## 12.3 Sammanfattning
+## Sammanfattning
 
-## 12.4 Begrepp
-
-## 12.5 Projektuppgifter
+## Begrepp
 
 ---
 
@@ -561,11 +549,9 @@ Varje kapitel avslutas med tre H2-avsnitt, alltid i denna ordning och med exakt 
 ## 13.4 Framtidens teknik
 - Beskriva möjligheter och risker med framtidens teknik och värdera teknikens roll i att möta samhällsutmaningar.
 
-## 13.5 Sammanfattning
+## Sammanfattning
 
-## 13.6 Begrepp
-
-## 13.7 Projektuppgifter
+## Begrepp
 
 ---
 
