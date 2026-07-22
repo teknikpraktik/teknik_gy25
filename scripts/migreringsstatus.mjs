@@ -48,14 +48,10 @@ export const strukturskuldKategorier = {
 // Kapitel 1 hanteras numera via sin migreringsstatus, inte via detta register: 1.2
 // har därför lyfts ut (rättat 2026-07-22). Att bara 1.1 är omskrivet är exakt varför
 // kapitel 1 inte längre är migrerat (se migreradeKapitel).
-export const legacyOvningsrubrikFiler = new Set([
-	'06-mekanik-och-konstruktion/01-krafter.md',
-	'06-mekanik-och-konstruktion/02-moment.md',
-	'06-mekanik-och-konstruktion/03-jamvikt.md',
-	'06-mekanik-och-konstruktion/04-hallfasthet.md',
-	'06-mekanik-och-konstruktion/05-konstruktioner.md',
-	'06-mekanik-och-konstruktion/06-dimensionering.md',
-]);
+// Tomt: alla avsnitt som hade den utfasade rubriken "Praktiska uppgifter" har
+// migrerats till "Övningar" (kapitel 1, 2 och 6). Registret behålls för framtida
+// bruk om ett ännu ej migrerat kapitel skulle visa sig ha den gamla rubriken.
+export const legacyOvningsrubrikFiler = new Set([]);
 
 // Begreppsövningsfiler (kapitelavslutningar) som ännu använder det gamla
 // ifyllnadsformatet (punktlista med bara begrepp, utan definitioner) i stället

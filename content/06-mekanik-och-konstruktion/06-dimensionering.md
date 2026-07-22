@@ -38,7 +38,7 @@ Lasterna skiljer sig också åt i hur de varierar över tid. En **statisk belast
 
 Londons Millennium Bridge, en gångbro invigd år 2000, visar hur det kan gå till. På invigningsdagen började bron röra sig något i sidled när den fylldes av folk. Rörelsen i sig var liten, men den räckte för att fotgängarna skulle behöva anpassa sina steg för att hålla balansen, och en människa som balanserar på ett underlag som rör sig i sidled börjar automatiskt gå i takt med underlaget. Ju fler som anpassade sig, desto mer samtidiga blev sidokrafterna från stegen, och desto kraftigare blev rörelsen, som i sin tur fick ännu fler att anpassa sig. Bron och de gående kopplades alltså ihop i en återkoppling som byggde upp sig själv. Det var inte fråga om att tusentals människor råkade gå i takt av en slump. Bron stängdes efter två dagar och öppnades igen först efter att ha försetts med dämpare.
 
-[[figur:fig-6.6.1-a]]
+[BILD 6.6-1] Innehåll: Två delbilder. Vänster: kapitlets gångbro med egentyngd, nyttig last, vindlast och snölast markerade med separata pilar och etiketter på respektive del av konstruktionen. Bredvid bron ställs två belastningsfall mot varandra i samma skala: en enskild cyklist på några hundra newton, och full gångtrafik på 4 kN per kvadratmeter över hela den 9,0 m² stora gångbanan, alltså 36 000 N, så att storleksskillnaden syns direkt. Höger: Millennium Bridge-förloppet ritat som en återkopplingsslinga i fyra steg med pilar i en cirkel: bron rör sig något i sidled, de gående anpassar stegen för att hålla balansen, stegens sidokrafter blir mer samtidiga, rörelsen förstärks, tillbaka till steg ett. Under slingan en kort text som markerar att förloppet inte är en slump utan en koppling mellan bron och de gående. Bildtext: "En konstruktion räknas mot flera belastningsfall, och det vardagliga är sällan det dimensionerande. Millennium Bridge svängde för att bron och de gående kopplades ihop."
 
 ## Säkerhetsfaktor och dimensioneringsprocessen
 
@@ -78,7 +78,7 @@ vilket ligger under de tillåtna 117,5 N/mm². Staget håller alltså med den va
 
 Beräkningen ovan är alltså ett steg i en betydligt längre process. En verklig dimensionering omfattar normalt kombinationer av flera samtidiga laster, gällande standarder och föreskrifter, variation i materialets egenskaper, geometrins inverkan, stabilitet mot knäckning och buckling, krav på hur mycket konstruktionen får deformeras, utmattning, förbandens hållfasthet, beständighet mot korrosion och nötning, vad som faktiskt går att tillverka, och slutligen kontroll och provning av det som byggts. Kapitlet behandlar en liten men central del av den kedjan: sambandet mellan last, tvärsnitt, material och marginal.
 
-[[figur:fig-6.6.2-a]]
+[BILD 6.6-2] Innehåll: Överst lyftstaget i en verkstadstravers, ritat som en rak, lodrätt hängande rundstång med dragkraften 47 000 N inritad. Under det en kedja i fem rutor med pil mellan varje: tillåten spänning 235 / 2 = 117,5 N/mm², minsta area 47 000 / 117,5 = 400 mm², teoretisk minsta diameter 22,6 mm, vald standarddimension 25 mm, kontrollräknad verklig spänning 96 N/mm². Den sista rutan märks tydligt som ett obligatoriskt steg. Under kedjan en bredare stapel eller ram som visar den verkliga dimensioneringsprocessens omfattning, med lastkombinationer, standarder, materialvariation, geometri, stabilitet, deformationskrav, utmattning, förband, beständighet, tillverkning samt kontroll och provning, där bara det smala fält som motsvarar beräkningskedjan ovan är ifyllt och resten är tomt. Bildtext: "Hela kedjan från last till vald dimension, med kontrollräkningen som obligatoriskt sista steg. Kapitlets modell är en liten del av en verklig dimensionering."
 
 ## Rimlighetsbedömning
 
@@ -90,7 +90,7 @@ En enhetskontroll innebär att kontrollera att enheterna går ihop. I exemplet m
 
 En tredje kontroll är att fråga sig vad svaret betyder fysiskt. En stång på 25 mm som bär fem ton går att jämföra med något man sett: ungefär en tumme i tjocklek, och fem ton är ungefär tre personbilar. Den jämförelsen känns rimlig. Ett svar på 2 mm för samma last hade inte gjort det. Att ha en känsla för storleksordningar är en av de mest användbara egenskaperna hos en tekniker, och den byggs upp genom att göra jämförelsen varje gång, inte bara när svaret ser konstigt ut.
 
-[[figur:fig-6.6.3-a]]
+[BILD 6.6-3] Innehåll: Två parallella uträkningar av lyftstagets tvärsnittsarea sida vid sida: en korrekt, med kraften i newton, som ger 400 mm², och en felaktig, där kraften av misstag lämnats i kilonewton (47 i stället för 47 000), som ger en area på 0,4 mm² och en diameter under en millimeter. De två diametrarna ritas ut i verklig storlek intill varandra, den korrekta som en stång ungefär lika grov som en tumme och den felaktiga som en tunn tråd, med lasten på nästan fem ton, motsvarande ungefär tre personbilar, angiven ovanför båda. Bildtext: "En enhetskontroll avslöjar det fel som annars är lätt att missa: en förväxlad enhet ger en tråd i stället för en stång."
 
 ## Instuderingsfrågor
 
@@ -100,7 +100,7 @@ En tredje kontroll är att fråga sig vad svaret betyder fysiskt. En stång på 
 4. Varför sätts den tillåtna spänningen lägre än sträckgränsen, och vad är det säkerhetsfaktorn ska täcka in?
 5. En elev skriver i en labbrapport att "säkerhetsfaktorn 2 är ett rimligt värde för konstruktioner". Vad är fel med påståendet, och hur bestäms säkerhetsfaktorn i verkligheten?
 
-## Praktiska uppgifter
+## Övningar
 
 1. Ett konstruktionsstål har sträckgränsen 275 N/mm². Beräkna den tillåtna spänningen med säkerhetsfaktorn 2,5.
 2. En dragstång ska klara dragkraften 30 000 N med den tillåtna spänningen 150 N/mm². Beräkna den tvärsnittsarea stången minst måste ha.

@@ -29,7 +29,7 @@ En **kraft** är en påverkan som kan förändra ett föremåls rörelse eller f
 
 Angreppspunkten är lätt att förbise men avgör ofta utgången. Samma kraft mot en dörr ger vitt skilda resultat beroende på om den griper an vid handtaget eller intill gångjärnet, och samma last på gångbron belastar stöden olika beroende på var på bron den står. Båda sambanden utvecklas längre fram i kapitlet.
 
-[[figur:fig-6.1.1-b]]
+[BILD 6.1-1] Innehåll: En enda kraftpil mot ett föremål, där pilens längd är måttsatt och märkt "storlek (N)", pilens riktning är markerad med en vinkel mot vågplanet och märkt "riktning", och pilens startpunkt är ringad och märkt "angreppspunkt". Bredvid visas samma föremål i tre varianter där en egenskap i taget har ändrats: en med dubbelt så lång pil (större storlek), en med pilen vriden (annan riktning) och en med pilen flyttad till en annan punkt på föremålet (annan angreppspunkt), så att det framgår att de tre egenskaperna kan varieras oberoende av varandra. Bildtext: "En kraft bestäms av tre egenskaper: storlek, riktning och angreppspunkt. De kan varieras var för sig."
 
 Vissa krafter går igen så ofta i tekniska sammanhang att de har egna namn. **Tyngdkraften** är den kraft med vilken jorden drar varje föremål mot sitt centrum, det vill säga rakt nedåt. Den beräknas som
 
@@ -45,7 +45,7 @@ I linor, vajrar och kättingar verkar **dragkraft**, en kraft som sträcker mate
 
 Skillnaden är inte symmetrisk. Vid dragbelastning bestäms bärförmågan i första hand av materialets och förbandens hållfasthet. Vid tryck tillkommer att en lång, smal detalj kan förlora stabiliteten och vika ut åt sidan långt innan materialet är i närheten av sin gräns. Det fenomenet, knäckning, behandlas i avsnittet om hållfasthet.
 
-[[figur:fig-6.1.1-a]]
+[BILD 6.1-2] Innehåll: Fyra delbilder med kraftdiagram. Först en gångtrafikant på gångbron: tyngdkraft nedåt, normalkraft uppåt från brodäcket. Sedan två delbilder som visar friktionskraftens riktning i motsatta fall: en låda som skjuts åt höger över ett golv, med friktionskraften ritad åt vänster, och ett drivhjul på en bil, där hjulet trycker bakåt mot vägbanan och friktionskraften på hjulet ritas framåt, med en text som markerar att det är friktionen som driver bilen. Sist drag och tryck: en lyftkättings dragkraft på en upphängd container, med en not om att kättingen bara kan bära drag, bredvid ett diagonalstag i en byggställning ritat i två lastfall, ett där staget dras och ett där det trycks. Varje kraft märks med namn och pilriktning. Bildtext: "De namngivna krafttyperna på verkliga föremål. Friktionen kan verka framåt: det är den som driver bilen."
 
 ## Kraftresultanter
 
@@ -77,7 +77,7 @@ F_y = 100 · sin(30°) = 100 · 0,5 = 50 N
 
 F_x, den vågräta komposanten, är den del av dragkraften som drar kälken framåt. F_y, den lodräta komposanten, lyfter kälken något och minskar därmed normalkraften mot marken, vilket i sin tur minskar friktionen och gör kälken lättare att dra. En och samma kraft kan alltså både driva kälken framåt och göra den lättare att dra. De två komposanterna är inte nya krafter utöver dragkraften, utan just den kraften uttryckt i två riktningar. Svaren är rimliga: båda är mindre än de 100 N repet dras med, och den vågräta är störst eftersom repet lutar mindre än 45°.
 
-[[figur:fig-6.1.2-a]]
+[BILD 6.1-3] Innehåll: Två delbilder. Vänster, addition: de två bogserbåtarnas krafter (F_1 = 3000 N norrut, F_2 = 4000 N österut) ritade som pilar i skala och lagda samman spets mot svans, med resultanten F_R = 5000 N inritad som hypotenusan i den rätvinkliga triangeln. Pythagoras samband skrivs ut, och resultantens riktning markeras med vinkeln α ≈ 37° mätt från den östliga riktningen mot norr. Höger, uppdelning: kälken som dras i ett rep som lutar α = 30° över marken, där kraften F = 100 N ritas som diagonalen i en rektangel vars sidor är den vågräta komposanten F_x ≈ 86,6 N och den lodräta F_y = 50 N. En liten hjälpbild visar konstruktionsstegen: rita kraften i skala, rita de två riktningarna, komplettera till rektangel, mät sidorna. Bildtext: "Att lägga samman krafter och att dela upp en kraft i komposanter är samma geometriska konstruktion åt två håll."
 
 ## Krafter på ett lutande plan
 
@@ -93,9 +93,9 @@ F_f = F_g,∥   och   F_N = F_g,⊥
 
 Lutas planet mer växer sin α och avtar cos α. Komposanten längs planet ökar därför, medan komposanten vinkelrätt mot planet minskar. Det betyder två saker samtidigt: den kraft som vill dra lådan nedför blir större, och normalkraften, som friktionen har att arbeta med, blir mindre. Friktionen räcker allt sämre till, och vid en viss lutning börjar lådan glida.
 
-[[figur:fig-6.1.3-a]]
+[BILD 6.1-4] Innehåll: En låda på ett plan som lutar vinkeln α mot vågrätt. Tre krafter ritas ut: tyngdkraften F_g rakt nedåt, normalkraften F_N vinkelrätt ut från planet och friktionskraften F_f längs planet, riktad uppför. Tyngdkraften ritas som en streckad pil, och dess två komposanter ritas som heldragna pilar längs planets riktningar: F_g,∥ = m·g·sin α längs planet (nedför) och F_g,⊥ = m·g·cos α vinkelrätt mot planet. Att F_g är streckad och komposanterna heldragna markerar att komposanterna ersätter tyngdkraften och inte är extra krafter. Vinkeln α är utsatt både vid planets fot och i den lilla rätvinkliga triangeln mellan tyngdkraften och dess komposanter. Bredvid balanserna markeras F_f = F_g,∥ längs planet och F_N = F_g,⊥ vinkelrätt mot planet. Bildtext: "På det lutande planet delas tyngdkraften upp längs och vinkelrätt mot planet. Komposanterna ersätter tyngdkraften, de är inga nya krafter."
 
-Exakt när glidningen börjar beror på ytorna. Den största friktionskraft som två ytor kan ge innan de glider är proportionell mot normalkraften, F_f,max = μ_s · F_N, där **friktionskoefficienten** μ_s är ett tal som beror på materialen i de två ytorna, till exempel omkring 0,4 för trä mot trä. Vid glidgränsen är friktionen maximalt utnyttjad, alltså F_g,∥ = F_f,max, vilket ger m · g · sin α = μ_s · m · g · cos α. Massan och tyngdaccelerationen förkortas bort, och kvar står det enkla villkoret μ_s = tan α. Glidvinkeln avslöjar alltså friktionskoefficienten direkt, oberoende av hur tung lådan är, vilket är grunden för en av de praktiska uppgifterna.
+Exakt när glidningen börjar beror på ytorna. Den största friktionskraft som två ytor kan ge innan de glider är proportionell mot normalkraften, F_f,max = μ_s · F_N, där **friktionskoefficienten** μ_s är ett tal som beror på materialen i de två ytorna, till exempel omkring 0,4 för trä mot trä. Vid glidgränsen är friktionen maximalt utnyttjad, alltså F_g,∥ = F_f,max, vilket ger m · g · sin α = μ_s · m · g · cos α. Massan och tyngdaccelerationen förkortas bort, och kvar står det enkla villkoret μ_s = tan α. Glidvinkeln avslöjar alltså friktionskoefficienten direkt, oberoende av hur tung lådan är, vilket är grunden för en av övningarna.
 
 ## Friläggning
 
@@ -107,7 +107,7 @@ Samma metod skalar upp till en hel konstruktion, men först måste konstruktione
 
 Friläggs bron ersätts marken vid de två stöden med varsin stödkraft riktad uppåt, medan egentyngden och trafiklasten verkar nedåt. Ett antagande är värt att skriva ut: stöden behandlas som om de bara kunde ge lodräta krafter. Verkliga stöd kan också ta upp krafter i sidled, och vad ett stöd faktiskt kan bära beror på hur det är utformat. Avsnittet om jämvikt går igenom de vanligaste stödtyperna och när förenklingen håller. Friläggningen ger på så vis en fullständig lista över de krafter som håller bron uppe och de krafter den måste bära, och blir därmed den bild som avsnittet om jämvikt räknar vidare på. Utan en korrekt friläggning saknas underlaget för allt annat: en glömd kraft ger ett fel som ingen senare beräkning kan upptäcka.
 
-[[figur:fig-6.1.4-a]]
+[BILD 6.1-5] Innehåll: Två steg sida vid sida. Vänster: kapitlets gångbro i genomskärning, ritad som konstruktionsmodell med fri spännvidd 6,0 m och gångbanebredd 1,5 m måttsatta, stöden märkta A och B och bärverket som två stålbalkar under ett trädäck. En liten ruta listar modellens antaganden: balkbro, stöden ger endast lodräta krafter, räcken och förband ingår inte. Höger: samma bro frilagd som en enkel balk på två stöd, där egentyngden 3600 N och trafiklasten ritas som pilar nedåt och de två stödkrafterna vid A och B som pilar uppåt. En pil visar övergången från den vänstra bilden till den högra, märkt "friläggning". Bildtext: "Gångbron ersätts av en modell och friläggs som en balk: laster nedåt, stödkrafter uppåt."
 
 ## Instuderingsfrågor
 
@@ -118,7 +118,7 @@ Friläggs bron ersätts marken vid de två stöden med varsin stödkraft riktad 
 5. En resultant kan bestämmas geometriskt eller med Pythagoras sats och trigonometri. Förklara kort vad var och en av de två metoderna går ut på, och varför de ger samma svar.
 6. En låda ligger stilla på ett lutande plan. Namnge de tre krafter som verkar på lådan och ange riktningen för var och en. Förklara sedan varför tyngdkraftens två komposanter inte ska ritas som egna krafter vid sidan av tyngdkraften, och varför gångbron ersätts av en förenklad modell innan den friläggs.
 
-## Praktiska uppgifter
+## Övningar
 
 1. En rugbyspelare med massan 90 kg står stilla på planen. Beräkna tyngdkraften som verkar på spelaren.
 2. En travers lyfter en last rakt uppåt. Lyftkroken drar med 4,5 kN uppåt och lastens tyngdkraft är 3,2 kN nedåt. Bestäm resultantens storlek och riktning.

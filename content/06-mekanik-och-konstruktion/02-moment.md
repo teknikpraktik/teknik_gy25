@@ -41,7 +41,7 @@ F = M / r = 16 / 0,1 = 160 N
 
 Ett moment har, förutom storlek, också en riktning: det vrider antingen medurs eller moturs kring vridpunkten. När flera moment verkar samtidigt räknas de åt ena hållet som positiva och åt andra hållet som negativa, och det spelar ingen roll vilket håll som väljs som positivt så länge samma val används genom hela beräkningen.
 
-[[figur:fig-6.2.1-a]]
+[BILD 6.2-1] Innehåll: En dörr sedd uppifrån med gångjärnet till vänster. Två pilar av samma längd (samma kraft) ritas: en vid handtaget långt från gångjärnet, en nära gångjärnet. Momentarmen r markeras med ett mått i båda fallen, och den resulterande vridningen illustreras med en böjd pil vars tjocklek skiljer sig mellan de två fallen. Bildtext: "Samma kraft ger olika stort moment beroende på momentarmen. Därför sitter dörrhandtag långt från gångjärnen."
 
 Verkar kraften snett håller inte den enkla formen längre. Antag att en mutter ska lossas med en nyckel vars handtag är 0,25 m långt, och att handen drar med 300 N men i en vinkel på 70 grader mot handtaget i stället för rakt vinkelrätt. Att multiplicera 300 med 0,25 vore fel: det skulle ge 75 Nm, vilket är mer än kraften faktiskt åstadkommer.
 
@@ -59,7 +59,7 @@ M = 300 · 0,235 ≈ 70 Nm
 
 Svaret är rimligt: 70 Nm är något mindre än de 75 Nm som en helt vinkelrät kraft hade gett, vilket stämmer med att bara en del av kraften bidrar till vridningen. Ju mer kraften lutar mot handtaget, desto mindre blir momentet, och en kraft som drar rakt längs handtaget ger inget moment alls.
 
-[[figur:fig-6.2.1-b]]
+[BILD 6.2-2] Innehåll: En nyckel på en mutter, sedd rakt uppifrån, med handtaget 0,25 m långt. Kraften 300 N ritas i vinkeln 70 grader mot handtaget. Kraftens verkningslinje förlängs som en streckad linje åt båda hållen förbi angreppspunkten. Från muttern dras ett vinkelrätt streck ut till verkningslinjen, måttsatt 0,235 m och märkt "momentarm". I samma bild ritas kraften även uppdelad i två komposanter, en längs handtaget och en vinkelrät mot det, där den vinkelräta är märkt 282 N. Bredvid visas i blekare linjer samma nyckel med en helt vinkelrät kraft på 300 N och momentarmen 0,25 m, som jämförelsefall. Båda fallens moment skrivs ut, 70 Nm respektive 75 Nm. Bildtext: "När kraften verkar snett räknas momentet antingen med kraftens vinkelräta komposant eller med den vinkelräta momentarmen. Båda ger samma svar."
 
 ## Hävarmsprincipen
 
@@ -85,7 +85,7 @@ Bultsaxen förvandlar alltså 200 N handkraft till drygt 2 kN i skäreggen, en u
 
 Samma princip förklarar varför en lyftkrans bom är kraftigast byggd närmast masten. Lastens tyngd verkar med en lång momentarm ut mot bomspetsen, vilket ger ett stort moment som kranens konstruktion och motvikt måste klara av, och det momentet är som störst just där bommen möter masten.
 
-[[figur:fig-6.2.2-a]]
+[BILD 6.2-3] Innehåll: Två delbilder. Vänster: en skiftnyckel som drar åt en mutter, med och utan pårör, där momentarmarna 0,3 m och 0,6 m är måttsatta och de kraftvärden som krävs, 400 N och 200 N, är utskrivna. Höger: en bultsax i genomskärning vid leden, med handkraften 200 N inritad 0,45 m från leden och kraften i skäreggen 2250 N inritad 0,04 m från samma led. Båda momentarmarna är måttsatta och det gemensamma momentet 90 Nm markeras kring leden. Under bilden visas med två streckade bågar hur långt handtaget respektive skäreggen rör sig, så att den längre rörelsesträckan vid handtaget framgår. Bildtext: "Utväxlingen betalas med rörelsesträcka: handtaget rör sig lika många gånger längre som kraften förstärks."
 
 ## Instuderingsfrågor
 
@@ -95,7 +95,7 @@ Samma princip förklarar varför en lyftkrans bom är kraftigast byggd närmast 
 4. Vad menas med att ett moment är medurs eller moturs, och varför måste riktningen hållas reda på när flera moment verkar samtidigt?
 5. Förklara vad utväxling innebär, och vad man betalar för en hög utväxling hos ett handverktyg.
 
-## Praktiska uppgifter
+## Övningar
 
 1. En skruv dras åt med en kraft på 40 N vinkelrätt mot en skruvmejsels handtag, vars radie är 0,02 m. Beräkna momentet.
 2. En dörr har handtaget 0,9 m från gångjärnen. Vilken vinkelrät kraft krävs för att ge momentet 27 Nm?

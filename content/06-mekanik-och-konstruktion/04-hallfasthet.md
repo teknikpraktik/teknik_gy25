@@ -38,13 +38,13 @@ Fem grundläggande belastningssätt räcker för att beskriva det mesta som hän
 
 Sprickor, hål och skarpa hörn är kritiska i samtliga dessa fall, eftersom belastningen koncentreras kring den lokala formförändringen i stället för att fördelas jämnt över tvärsnittet. Det är därför hål i en konstruktionsdel förses med rundade kanter, och därför en liten spricka kan växa och till slut orsaka brott vid en belastning som materialet i övrigt klarar utan problem.
 
-[[figur:fig-6.4.1-a]]
+[BILD 6.4-1] Innehåll: Fem smårutor i en rad, en per belastningstyp: drag (spänd lyftkätting), tryck (belastad pelare), böjning (balk som böjer sig, med dragzonen på undersidan och tryckzonen på ovansidan markerade och området mellan dem märkt som lågspänningsområde), skjuvning (en nit som håller ihop två plåtar som dras åt var sitt håll, med snittet markerat) och vridning (en drivaxel som vrids av ett vridmoment, med vridmomentet ritat som en böjd pil märkt "belastning" och den vridna deformationen visad med en ursprungligen rak linje längs axeln som blivit spiralformad, märkt "följd"). Varje ruta har pilar som visar kraftens eller momentets riktning. Bildtext: "De fem belastningstyperna på igenkännbara delar. Vid vridning är vridmomentet orsaken och vridningen följden."
 
 Tryckbelastning har dessutom en egen risk som inte har någon motsvarighet vid drag. En lång, slank detalj som trycks i längdriktningen kan plötsligt vika ut åt sidan långt innan materialet nått sin tryckhållfasthet. Fenomenet heter **knäckning**, och det är inte ett sjätte sätt att belasta en detalj utan ett sätt för en tryckbelastad detalj att gå sönder. Knäckning är en instabilitet: så länge lasten är liten står detaljen rak, men vid en viss last blir det raka läget instabilt och den minsta skevhet som redan finns i detaljen växer okontrollerat.
 
 Två saker avgör om knäckning blir dimensionerande. Den ena är slankheten, alltså förhållandet mellan detaljens längd och tvärsnittets utbredning: en lång, tunn pelare knäcks vid mycket lägre last än en kort och tjock av exakt samma material. Den andra är hur detaljens ändar är fastsatta, eftersom en pelare som är fast inspänd i båda ändar knäcks vid högre last än en som bara vilar ledat mot sina stöd. Det är därför slanka tryckstänger görs kortare, grövre eller stagas på mitten. En lika slank detalj i drag har inte problemet alls: en spänd vajer kan vara hur lång och tunn som helst utan att bli instabil.
 
-[[figur:fig-6.4.1-b]]
+[BILD 6.4-2] Innehåll: Tre delbilder. Vänster: tre pelare av samma material och samma tvärsnitt men med olika längd, alla tryckbelastade uppifrån, där den längsta har vikt ut kraftigt åt sidan, den mellersta börjat böja ut och den kortaste står rak. Under varje pelare anges den last som orsakade knäckning, så att sambandet mellan längd och bärförmåga framgår. Mitten: samma pelarlängd i två infästningar, en ledad i båda ändar och en fast inspänd i båda ändar, där den inspända bär högre last innan den viker ut. Höger: en lång, slank vajer belastad i drag, ritad rak och stabil, med texten att samma slankhet inte är något problem vid drag. Bildtext: "Knäckning är en instabilitet hos slanka tryckta delar, inte en materialgräns. En dragen del av samma slankhet har inte problemet."
 
 ## Spänning och töjning
 
@@ -74,7 +74,7 @@ Stången ovan, ursprungligen 2000 mm lång, förlängs 1 mm under belastningen. 
 
 Spänning beskriver alltså hur hårt belastat materialet är, medan töjning beskriver hur mycket det faktiskt ger efter.
 
-[[figur:fig-6.4.2-a]]
+[BILD 6.4-3] Innehåll: Två delbilder. Vänster: två lika långa stänger med samma dragkraft men olika tvärsnittsarea, 100 mm² och 200 mm², med respektive spänning 200 MPa och 100 MPa angiven. Höger: en stång före och efter belastning, med ursprungslängden 2000 mm och förlängningen 1 mm tydligt uppmätta och markerade. Bildtext: "Samma kraft ger olika spänning beroende på tvärsnittsarean. Det är spänningen, inte kraften, som avgör om materialet håller."
 
 ## Dragprovet
 
@@ -94,7 +94,7 @@ Vad som händer efter den punkten förklarar skillnaden. Många sega material, s
 
 Elasticitetsmodul, sträckgräns och brottgräns är tillsammans den information som behövs för att avgöra hur styvt ett material är, när det börjar deformeras permanent och när det närmar sig sin gräns.
 
-[[figur:fig-6.4.3-a]]
+[BILD 6.4-4] Innehåll: Ett spänning-töjning-diagram för en stålprovstav. Den räta, elastiska delen av kurvan markeras med sin lutning och märks elasticitetsmodulen, med en not om att lutningen bara går att avläsa här. Punkten där kurvan böjer av markeras som sträckgränsen, och området till höger om den märks plastiskt område. Kurvans högsta punkt markeras som brottgränsen, med förtydligandet att detta är den största nominella spänningen under provet. Den fallande delen efter toppen märks halsning, och kurvans slutpunkt märks brott, tydligt lägre än brottgränsen. Under diagrammet visas provstaven i fyra lägen som motsvarar fyra punkter på kurvan: obelastad, elastiskt sträckt, med begynnande midja vid halsningen, och avsliten. En liten skiss av dragprovningsmaskinen placeras bredvid. Bildtext: "Dragprovkurvan: elasticitetsmodulen är den räta delens lutning, sträckgränsen där den böjer av, brottgränsen den högsta punkten."
 
 ## Instuderingsfrågor
 
@@ -105,7 +105,7 @@ Elasticitetsmodul, sträckgräns och brottgräns är tillsammans den information
 5. Varför beskriver σ = F / A inte spänningen i en balk som böjs? Vad är det som skiljer böjningsfallet från det centriska dragfallet?
 6. Brottgränsen är inte den spänning där provstaven går av. Förklara vad brottgränsen faktiskt är, och varför dragprovkurvan faller efter den punkten.
 
-## Praktiska uppgifter
+## Övningar
 
 1. En stång med tvärsnittsarean 50 mm² belastas centriskt med dragkraften 15 000 N. Beräkna spänningen.
 2. Ett dragstag ska klara dragkraften 25 000 N utan att spänningen överstiger 125 N/mm². Beräkna den tvärsnittsarea staget minst måste ha.

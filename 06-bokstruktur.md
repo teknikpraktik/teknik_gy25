@@ -297,6 +297,7 @@ Det finns inga separata projektuppgiftsavsnitt. Kapitlets större, integrerande 
 
 ### Kraftbegreppet
 ### Kraftresultanter
+### Krafter på ett lutande plan
 ### Friläggning
 
 ## 6.2 Moment

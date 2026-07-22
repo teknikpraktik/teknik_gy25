@@ -41,7 +41,7 @@ Villkoren används tillsammans med [[begrepp:friläggning]]. Först friläggs f�
 
 Momentsumman får beräknas kring vilken punkt som helst, eftersom ett föremål i jämvikt inte roterar kring någon punkt alls. Den friheten är värd att utnyttja. Väljs vridpunkten där en okänd kraft griper an försvinner den kraften ur ekvationen, eftersom dess momentarm blir noll, och kvar blir en ekvation med färre obekanta. Väljs i stället en annan punkt går samma problem att lösa, men med mer räknearbete. Att räkna om kring en andra punkt är dessutom ett enkelt sätt att kontrollera ett svar.
 
-[[figur:fig-6.3.1-a]]
+[BILD 6.3-1] Innehåll: Två delbilder. Vänster: ett föremål med två motriktade, lika stora krafter som griper an i samma punkt (kraftsumma noll, momentsumma noll, verklig jämvikt). Höger: samma föremål med samma två krafter men förskjutna till olika angreppspunkter (kraftsumma fortfarande noll, men ett moment kvarstår och föremålet roterar). Bildtext: "Kraftsumman kan vara noll och föremålet ändå rotera. Alla tre jämviktsvillkoren måste gälla samtidigt."
 
 ## Stödreaktioner
 
@@ -51,7 +51,7 @@ Vilka krafter ett stöd kan ge beror på hur det är byggt, och i beräkningar e
 
 Gångbron har ett ledstöd vid A och ett rullstöd vid B. I kapitlets beräkningar antas dessutom att all last verkar lodrätt, vilket gör att ledstödets vågräta reaktion blir noll. Under det antagandet ger båda stöden bara lodräta krafter, och beräkningen förenklas till en enda kraft per stöd. Antagandet är rimligt för en gångbro med lodrät trafiklast, men det håller inte generellt: en bro som belastas av vind i sidled, eller en stege som lutar mot en vägg, får vågräta reaktioner som inte får glömmas bort.
 
-[[figur:fig-6.3.2-b]]
+[BILD 6.3-2] Innehåll: Tre delbilder i rad, var och en med en balkände i ett stöd ritad med den symbol som normalt används på konstruktionsritningar. Ledstöd: triangel med fast spets, med två reaktionspilar inritade, en lodrät och en vågrät, och en böjd pil markerad med kryss för att visa att stödet inte tar upp moment. Rullstöd: triangel på rullar, med endast en lodrät reaktionspil, och en dubbelriktad pil längs underlaget som visar att balken får röra sig i sidled. Inspänning: balken infäst i en väggsektion, med lodrät reaktionspil, vågrät reaktionspil och en böjd momentpil. Under varje delbild ett verkligt exempel: brolager, rullager på en stålbro som får längdändra sig i värme, och en balkong som skjuter ut ur en husvägg. Bildtext: "De tre idealiserade stödtyperna tar upp olika krafter och moment. Förenklingen till lodräta reaktioner är ett val, inte en naturlag."
 
 Gångbron är 6,0 m lång mellan stöden A och B. En cyklist med cykel, tillsammans 900 N, står stilla 2,0 m från stöd A. För att isolera själva metoden försummar vi tills vidare brons egen tyngd, så att bara den nyttiga lasten och de två stödreaktionerna finns med. Den frilagda bron har då tre yttre krafter: cyklistens tyngd nedåt och stödreaktionerna R_A och R_B uppåt.
 
@@ -83,7 +83,7 @@ Kontroll kring B: 2400 · 6,0 − 900 · 4,0 − 3600 · 3,0 = 14 400 − 3600 �
 
 Två saker framgår av jämförelsen. Stöden bär nu 2400 N och 2100 N i stället för 600 N och 300 N, alltså mångdubbelt mer, eftersom egentyngden är fyra gånger så stor som cyklisten. Och skillnaden mellan stöden har krympt, från förhållandet 2:1 till nästan 1:1, eftersom egentyngden är symmetrisk och belastar båda stöden lika. Att försumma egentyngden är alltså en förenkling som kan vara helt rimlig när en metod ska visas, men som ger allvarligt fel svar när en verklig bro ska dimensioneras.
 
-[[figur:fig-6.3.2-a]]
+[BILD 6.3-3] Innehåll: Två frilagda balkar under varandra, båda 6,0 m långa med stöden A och B. Övre: endast cyklistens tyngd 900 N, markerad 2,0 m från stöd A, med måtten 2,0 m och 4,0 m och de beräknade stödreaktionerna 600 N och 300 N utskrivna. En text markerar att egentyngden är försummad i det här steget. Undre: samma balk med cyklisten kvar och dessutom egentyngden 3600 N inritad som en pil i brons mitt, 3,0 m från vardera stödet, med de beräknade stödreaktionerna 2400 N och 2100 N utskrivna. Bredvid den undre bilden visas den jämnt fördelade egentyngden som en rad små pilar längs balken, med en likhetspil till den enda samlade pilen i mitten, för att visa vilken idealisering som gjorts. Bildtext: "Att försumma egentyngden kan visa en metod, men ger allvarligt fel svar när en verklig bro ska dimensioneras."
 
 ## Tyngdpunkt och stabilitet
 
@@ -103,7 +103,7 @@ Eftersom det stabiliserande momentet, 75 000 Nm, är större än det vältande, 
 
 Samma princip avgör varför en hög, fylld bokhylla lättare välter framåt än en låg och bred, och varför den understa hyllan bör bära det tyngsta: en låg tyngdpunkt och en bred stödyta ger tillsammans god stabilitet.
 
-[[figur:fig-6.3.3-a]]
+[BILD 6.3-4] Innehåll: Tre delbilder. Först en lyftkran med tyngdpunkt och stödyta markerade, med det stabiliserande och det vältande momentet inritade som pilar kring stödpunkten. Sedan samma kran med en tyngre last, där den lodräta linjen genom den samlade tyngdpunkten faller utanför stödytan. Sist en hög bokhylla jämförd med en låg och bred, med tyngdpunktens höjd och stödytans bredd markerade i båda. Bildtext: "Så länge tyngdpunktens lodlinje faller innanför stödytan står föremålet. Låg tyngdpunkt och bred stödyta ger stabilitet."
 
 ## Instuderingsfrågor
 
@@ -115,7 +115,7 @@ Samma princip avgör varför en hög, fylld bokhylla lättare välter framåt ä
 6. Förklara sambandet mellan tyngdpunkt, stödyta och stabilitet, och beskriv vad som händer i det ögonblick ett föremål börjar välta.
 7. En hyllkonsol är fastskruvad i en vägg och bär en last ytterst på hyllplanet. Frilägg konsolen och avgör vilken idealiserad stödtyp infästningen mot väggen motsvarar. Förklara därefter varför den övre skruven i infästningen belastas i drag medan den nedre pressas mot väggen, och vad som händer med den dragkraften om hyllplanet görs dubbelt så djupt utan att lasten ändras. Bedöm slutligen vilket av de tre jämviktsvillkoren som är avgörande för att den här konstruktionen ska hålla.
 
-## Praktiska uppgifter
+## Övningar
 
 1. En balk är 4,0 m lång och vilar på stöd i båda ändarna, A och B. En last på 600 N placeras 1,0 m från stöd A. Beräkna R_A och R_B. Avgör innan du räknar vilket stöd som bör bära mest.
 2. En byggnadsställnings bärbalk är 8,0 m lång och vilar på stöd i ändarna. Två laster verkar nedåt: 2000 N på 2,0 m från stöd A och 3000 N på 6,0 m från stöd A. Beräkna stödreaktionerna.

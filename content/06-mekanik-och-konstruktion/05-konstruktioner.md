@@ -35,7 +35,7 @@ Den insikten ligger bakom **I-balken**, en av de vanligaste balkformerna i broar
 
 Samma resonemang förklarar varför en cykelram byggs av rör. Ett rör placerar sitt material långt från centrum och ger därför hög böj- och vridstyvhet i förhållande till sin vikt. Formuleringen är viktig, för påståendet att ett rör är styvare än en massiv stång är inte sant utan tillägget. En massiv stång med samma ytterdiameter innehåller allt det material röret har, plus materialet i mitten, och är därför styvare. Den väger också betydligt mer. Röret vinner när vikten eller materialåtgången spelar roll, alltså i en cykelram, ett flygplan eller en byggnadsställning, och det är nästan alltid fallet i verklig konstruktion. Materialet i mitten av en massiv stång bidrar lite till böjstyvheten men allt till vikten.
 
-[[figur:fig-6.5.1-a]]
+[BILD 6.5-1] Innehåll: Tre delbilder. Vänster: ett I-balkstvärsnitt med flänsarna och livet utmärkta med namn, neutralaxeln inritad som en streckad linje genom livets mitt, och spänningsfördelningen ritad som en triangulär fördelning intill tvärsnittet: största tryckspänning i övre flänsen, största dragspänning i undre flänsen, noll vid neutralaxeln. Två textnotiser pekar ut att flänsarna tar huvuddelen av drag- och tryckspänningen och att livet håller flänsarna åtskilda och överför huvuddelen av skjuvkraften. Mitten: en massiv rektangulär balk med samma materialmängd som I-balken, med samma spänningsfördelning inritad, så att det framgår hur mycket av materialet som sitter nära neutralaxeln och bidrar lite. Höger: ett rör och en massiv rundstång med samma ytterdiameter, sedda i tvärsnitt, med vikt per meter angiven för båda och en text som slår fast att den massiva stången är styvare men tyngre, medan röret ger mest styvhet per kilogram. Bildtext: "Material långt från neutralaxeln bär mest böjning. Ett rör är styvast per kilogram, en massiv stång styvast men tyngst."
 
 ## Fackverk, bågar, ramar och stagning
 
@@ -49,13 +49,13 @@ Verkliga fackverk uppfyller inte antagandena helt. Knutpunkterna svetsas eller s
 
 Krafterna i ett fackverk går att spåra genom att följa lastens **lastväg**, den väg lasten tar genom konstruktionens delar från angreppspunkten, via stavarna, till stöden och vidare ner i marken. I en takstol förs taklasten via de tryckbelastade takstolsbenen ner mot väggarna, där den tas upp som en [[begrepp:stödreaktion]], medan den vågräta dragstången hindrar benens nedre ändar från att glida isär och därför tar upp en dragkraft. I en fackverksbro växlar diagonalstavarna mellan drag och tryck beroende på var lasten befinner sig, medan de övre och undre stavarna bär huvuddelen av böjningens tryck- respektive dragkrafter längs brons längd.
 
-[[figur:fig-6.5.2-a]]
+[BILD 6.5-2] Innehåll: Två delbilder. Vänster: en takstol med sneda ben i tryck och en vågrät dragstång i drag, markerade med olika färg eller mönster, och taklasten och stödreaktionerna vid väggarna inritade. Höger: en fackverksbro i genomskärning med diagonalstavar markerade som drag respektive tryck beroende på position, och lastvägen från körbanan till stöden markerad med pilar genom konstruktionen. Bildtext: "I ett fackverk bärs lasten av stavar i rent drag eller tryck, längs en spårbar lastväg till stöden."
 
 En **båge** är en krökt konstruktionsdel som för en lodrät last vidare huvudsakligen som tryckkraft längs sin egen krökning, ner mot bågens fötter. Det är anledningen till att äldre stenbroar och valv kunde bära stora laster utan armering: sten tål tryck väl men drag dåligt, och en rätt formad båge belastar stenen nästan enbart i tryck.
 
 Tryckkraften följer emellertid bågens lutning, och nere vid foten lutar bågen kraftigt. Kraften som bågen levererar till sitt upplag är därför inte lodrät utan sned, och den har en betydande vågrät komposant. Bågen strävar helt enkelt efter att sparka ut sina fötter åt sidorna. Ett bågupplag måste alltså kunna ta upp både en lodrät och en vågrät kraft, och kan det inte marken göra måste konstruktionen lösa det själv. I en stenbro tas den vågräta kraften upp av tunga landfästen och av berget bakom dem, och i en takstol av dragstången mellan takstolsbenens fötter. Ett bågupplag som inte klarar den vågräta kraften glider isär, och bågen rasar.
 
-[[figur:fig-6.5.2-b]]
+[BILD 6.5-3] Innehåll: En stenvalvbro i genomskärning med en lodrät last ovanifrån. Tryckkraften ritas som en kedja av pilar som följer bågens krökning ner mot fötterna, där pilarna successivt lutar mer. Vid vardera foten delas upplagskraften upp i sina komposanter: en lodrät och en tydligt utmärkt vågrät, riktad utåt från bron, märkt "bågen strävar efter att sparka ut fötterna". De tunga landfästena och berget bakom dem ritas in som det som tar upp den vågräta kraften. En mindre delbild bredvid visar en takstol med samma sak löst på ett annat sätt: dragstången mellan takstolsbenens fötter markeras med en dragpil som balanserar den vågräta kraften. En tredje, liten delbild visar vad som händer när upplaget inte klarar kraften: fötterna glider isär och bågen sjunker ihop. Bildtext: "En båge för lasten som tryck ner till fötterna, men sparkar samtidigt utåt. Upplaget måste ta upp den vågräta kraften."
 
 En **ram** består i stället av balkar och pelare som är styvt sammanfogade i hörnen, till skillnad från fackverkets ledade knutpunkter. Det gör att både balkar och pelare i en ram kan behöva bära böjning, inte bara rent drag eller tryck, men det ger också ramen formstabilitet utan diagonalstag. En byggnads stomme av pelare och bjälklag är ofta uppbyggd som en ram.
 
@@ -71,7 +71,7 @@ Valet av tvärsnitt följer samma logik. En I-balk ger hög böjstyvhet per kilo
 
 Underhåll väger också in. Ett fackverk med många förband kräver mer regelbunden kontroll än en solid balk, eftersom varje förband är en punkt som måste hålla. En konstruktörs uppgift är sällan att hitta den objektivt bästa principen, utan att väga egenskaperna mot varandra utifrån vad just den här konstruktionen faktiskt ska klara, och att kunna motivera valet efteråt.
 
-[[figur:fig-6.5.3-a]]
+[BILD 6.5-4] Innehåll: En balkbro och en fackverksbro ritade sida vid sida över samma spännvidd, med ungefärlig materialmängd och antal förband angivet för respektive lösning. En liten tabell eller ikonrad under bilderna sammanfattar hållfasthet, vikt, materialåtgång, tillverkning och kostnad för de två alternativen. Bildtext: "Valet av konstruktionsprincip är en avvägning mellan hållfasthet, vikt, materialåtgång, tillverkning och kostnad."
 
 ## Instuderingsfrågor
 
@@ -85,7 +85,7 @@ Underhåll väger också in. Ett fackverk med många förband kräver mer regelb
 8. Följ lastvägen för en snöhög som ligger mitt på ett tak: beskriv vilka delar lasten passerar, i vilken ordning, och om varje del belastas av drag, tryck eller böjning, tills lasten når marken.
 9. En gångbro ska byggas över en 30 m bred ravin. Jämför en fackverksbro och en bågbro för uppdraget. Redogör för hur lasten förs till marken i respektive lösning, vilka krafter markens fästen måste klara i de två fallen, och vilken av lösningarna som ställer högst krav på berggrunden vid ravinens kanter. Ange vilken du skulle välja om berget är fast, och vilken du skulle välja om marken är lös lera, och motivera båda valen.
 
-## Praktiska uppgifter
+## Övningar
 
 1. En massiv rundstång har diametern 40 mm. Ett rör har samma ytterdiameter, 40 mm, och väggtjockleken 4,0 mm. Beräkna båda tvärsnittsareorna och avgör hur många procent av den massiva stångens material röret använder.
 2. En takstol spänner 10,0 m mellan två upplag. Egentyngden 4000 N verkar i mitten, och en snölast på 6000 N ligger samlad 3,0 m från upplag A. Beräkna upplagskrafterna, och kontrollera svaret genom att räkna momentsumman kring det andra upplaget.

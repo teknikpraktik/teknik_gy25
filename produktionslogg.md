@@ -45,6 +45,18 @@ Den gamla `05-projektuppgifter.md` ligger kvar som migreringsskuld (raderas vid 
 
 ---
 
+# Kapitel 6 — revidering, mekanisk del klar, begreppsdel avvaktar beslut (2026-07-22)
+
+Kapitel 6 (procedurspår) reviderat mekaniskt: rubrik "Praktiska uppgifter" → "Övningar" i 6.1–6.6, in-texthänvisningen "en av de praktiska uppgifterna" i 6.1 ändrad till "en av övningarna", alla 23 `[[figur:ID]]` → `[BILD X.Y-N]` med Innehåll ordagrant ur registret och nyskrivna bildtexter. 6.1–6.6 avregistrerade ur `legacyOvningsrubrikFiler`.
+
+**06-synk (lutande plan):** 6.1:s delavsnitt "Krafter på ett lutande plan" fanns i filen men saknades i 06-bokstruktur.md. Det är ett avsett, fullständigt delavsnitt (egen figur, flera stycken, parallellt med de andra), så det lades till i 06 mellan Kraftresultanter och Friläggning.
+
+**Avvaktar projektägarens beslut innan begreppsdelen görs:** kapitlets `concepts_introduced` registrerar ca 60 genuina begrepp, men begreppslistans `ordlista` har bara 29. Bindande huvudställe-kursivering + markerat=listat pekar mot att kursivera alla 60 och utöka listan till 60; task-formuleringen "Begrepp (29 st)" pekar mot en kurerad lista. Begreppsmarkering (fetstil → kursiv), begreppslistans konvertering och helkapitelövningarna (projektuppgifterna) väntar tills omfånget är avgjort. Kapitel 6:s begreppslista ligger kvar som `legacyBegreppFiler`-skuld tills dess.
+
+Kapitel 6 är alltså ännu inte i `migreradeKapitel`; brödtexten har fortfarande fetstilta begrepp i väntan på beslutet.
+
+---
+
 # Begreppslistans format — ordlista (2026-07-22)
 
 Redaktionellt beslut: begreppslistorna (kapitelavslutningen Begrepp) skrivs som en kompakt ordlista i stället för punktlista med tankstreck. Obligatoriskt format, en post per rad utan punktmarkering:
