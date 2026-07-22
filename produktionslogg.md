@@ -8,6 +8,16 @@ betraktas som färdig första version. "Överträffar referensimplementationen" 
 motiveras och eventuell ny standard lyftas för redaktionellt beslut. Loggen
 ingår inte i bokexporten (export läser endast content/).
 
+---
+
+# Backlog: väntande uppslag till ännu ej skrivna kapitel
+
+Uppslag som flyttats ut ur ett skrivet kapitel men hör hemma i ett kapitel som ännu inte är producerat. Bevakas här tills målkapitlet skrivs, så att inget innehåll tappas.
+
+- **Kapitel 13 — värdering av digitaliseringens fördelningskonsekvenser (vinnare och förlorare).** Flyttad 2026-07-22 ur kapitel 1:s projektuppgifter (forna projektuppgift 3, "Digitaliseringens vinnare och förlorare") eftersom den är värderande, inte teknikhistorisk, och hör till kapitel 13:s värderande stoff (n1-14 / n2-10, värdering utifrån bl.a. genus, etik och hållbar utveckling). Uppgiftens kärna: välj en bransch som digitaliserats (musik, foto, bank, tidningar, resebyråer, taxi …), kartlägg hur informationen lämnade sin fysiska bärare och vilka tekniska komponenter som möjliggjorde skiftet, och värdera vad som blev bättre och för vem, vad som gick förlorat och vilka yrken eller företag som försvann eller tillkom, med källor. **Koppling:** bygger vidare på 1.2:s digitaliseringsinnehåll (delavsnittet "Digitalisering, internet och AI" och mönstret att informationen frigörs från sin fysiska bärare); förutsätter att eleven läst 1.2. När kapitel 13 produceras: forma om till en värderingsuppgift i det kapitlets modell.
+
+---
+
 **Redaktionell revision 2026-07-22 (produktionsstandard, uttryckligt beslut av
 projektägaren; kvalitetsreferensen bytt namn från Golden Master till
 referensimplementation):** Avsnitt 1.1 "Vad är teknik?" ersattes i sin helhet av

@@ -30,7 +30,7 @@ Ett exempel visar hur det kan gå till. På 1880-talet bar en montör med sig en
 
 [BILD 1.1-1] Innehåll: en skiftnyckel bredvid den uppsättning fasta nycklar i olika storlekar som den ersatte. Gapet markerat med pil eller mått som visar att det är ställbart. Bilden ska visa problem och lösning i samma blick: många verktyg blev ett. Bildtext: "Ett verktyg ersatte ett helt nyckelset. Johan Petter Johansson fick patent på skiftnyckeln 1892."
 
-Skiftnyckeln visar var teknik börjar. Först finns ett mänskligt behov eller problem, sedan skapar någon en lösning. Behovet kan vara något man vill uppnå, som att se skarpt eller få rent vatten i kranen, eller något man vill slippa, som att bära en tung verktygslåda. Teknik är hur människor utvecklar och använder produkter, processer, anläggningar och system för att uppfylla behov och önskemål. En enskild sådan lösning, utformad för ett visst behov eller problem, kallas en teknisk lösning.
+Skiftnyckeln visar var teknik börjar. Först finns ett mänskligt behov eller problem, sedan skapar någon en lösning. *Behovet* kan vara något man vill uppnå, som att se skarpt eller få rent vatten i kranen, eller något man vill slippa, som att bära en tung verktygslåda. *Teknik* är hur människor utvecklar och använder produkter, processer, anläggningar och system för att uppfylla behov och önskemål. En enskild sådan lösning, utformad för ett visst behov eller problem, kallas en *teknisk lösning*.
 
 ## Teknik är mer än bara föremål
 
