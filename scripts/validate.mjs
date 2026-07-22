@@ -278,6 +278,14 @@ for (const f of allaMedBody) {
 			warnings.push(`${f.file}: [[begrepp:${namn}]] används i texten men står inte i concepts_used.`);
 		}
 	}
+	// Gransknings-/utkastnotiser får aldrig stå i brödtext (05, "Granskningsnotiser";
+	// CLAUDE.md, "Hårda regler"). Mönstret är riktat mot hakparentesformen [UTKAST …]
+	// så att strukturerade [BILD X.Y-N]-platshållare och frontmatter inte träffas;
+	// en [UTKAST]-markör inne i en [BILD]-bildtext fångas dock (den ska bort).
+	// Utkaststatus spåras på kapitelnivå via migreradeKapitel, inte via inline-taggar.
+	for (const m of synligText.matchAll(/\[\s*UTKAST\b[^\]]*\]/gi)) {
+		errors.push(`${f.file}: granskningsnotis "${m[0]}" i brödtext — får aldrig stå i elevtexten (05-forfattarmanual.md, "Granskningsnotiser"). Flytta till rapport/produktionslogg.md; utkaststatus spåras via migreradeKapitel.`);
+	}
 }
 
 // Förkunskapsordning

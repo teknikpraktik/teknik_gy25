@@ -36,6 +36,7 @@ Alltid: 03 (pedagogisk modell), 05 (språk), 11 (begreppshantering). Vid taggnin
 ## Hårda regler
 
 - Skriv aldrig innehåll utanför kursplanen; hitta aldrig på fakta eller fiktiva exempel när verkliga finns.
+- Inga gransknings-, process- eller utkastnotiser i brödtext (t.ex. `[UTKAST …]`, "vad som ändrats", betygsresonemang). Elevtexten ska vara ren; utkaststatus spåras via `migreradeKapitel` (kapitelnivå), inte inline-taggar. Sådant hör i rapporten och/eller produktionslogg.md (05-forfattarmanual.md, "Granskningsnotiser"). `[BILD X.Y-N]`-platshållare är legitima och undantagna. Validate flaggar `[UTKAST …]` i brödtext som aktivt fel.
 - Aldrig ett helt kapitel i ett steg — ett avsnitt i taget (08).
 - Ett begrepp introduceras i exakt en fil (`concepts_introduced`); återanvänd via `concepts_used`/`[[begrepp:namn]]`.
 - Ett avsnitt har inget fast sid-/uppslagsomfång; uppslag är en layout-/tryckfråga, inte en nivå i datamodellen. Fälten `module`, `uppslag` och `practical_component` är pensionerade.

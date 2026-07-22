@@ -303,10 +303,25 @@ Boken ska inte innehålla:
 - upprepningar
 - metakommentarer
 - självreferenser
+- gransknings-, process- och utkastnotiser (se nedan)
 - sammanfattningar efter varje avsnitt
 - tomma övergångar mellan avsnitt
 
 Texten går direkt till innehållet.
+
+---
+
+# Granskningsnotiser (hård regel)
+
+Gransknings-, process- och utkastkommentarer får **aldrig** stå i innehållets brödtext. Det gäller allt sådant som "vad som utkastats", "vad som ändrats", "vad som ska granskas", betygskopplingsresonemang och liknande meta-text. Elevtexten ska vara ren.
+
+Utkaststatus spåras på **kapitelnivå** via `migreradeKapitel` (scripts/migreringsstatus.mjs), inte via markörer i prosan. Ett ogranskat kapitel känns igen på att det inte ligger i `migreradeKapitel`, inte på inline-taggar som `[UTKAST …]`.
+
+Sådant innehåll hör i stället hemma i rapporten till projektägaren och/eller i produktionslogg.md.
+
+Detta gäller **inte** strukturerade platshållare: `[BILD X.Y-N]` med Innehåll (illustratörsbrief) och Bildtext är legitimt, permanent innehåll och ska stå kvar. En bildtext får dock inte bära en utkastmarkör; skriv den färdig eller lämna kapitlet omigrerat.
+
+`scripts/validate.mjs` flaggar en `[UTKAST …]`-markör eller granskningsnotis i brödtext som **aktivt fel** (09-kvalitetssakring.md).
 
 ---
 

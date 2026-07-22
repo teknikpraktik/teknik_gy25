@@ -26,7 +26,7 @@ prerequisites: ["1.1", "1.2"]
 
 Den historiska genomgången visar vad som hände, men inte varför det hände just då. Människor har velat kunna nå varandra på avstånd i alla tider, och den fasta telefonen fanns redan på 1880-talet. Ändå dröjde det ett sekel innan telefonen gick att bära med sig. Varför just då och inte tidigare? Frågan har ett svar, och svaret är en modell som går att använda på nästan all teknik. En *drivkraft* är ett förhållande som får teknik att utvecklas i en viss riktning, och den som känner igen drivkrafterna kan förklara varför en teknik uppstod just där och just då, i historien och i nutiden.
 
-[BILD 1.3-1] Innehåll: En teknisk lösning i mitten. Runt om de drivkrafter som kan sätta utvecklingen i rörelse, grupperade: behov och problem; kunskap och nya tekniska möjligheter; ekonomi och konkurrens; samt samhälle (politik, lagstiftning, kriser, infrastruktur och användarnas beteenden). Pilar från flera drivkrafter pekar in mot lösningen samtidigt. Tre historiska spår i kanten exemplifierar de vanligaste startpunkterna: ett behov (konserven), en möjlighet (telegrafen) och en samhällsförändring (Londons avlopp). Bildtext [UTKAST – för granskning]: "Flera drivkrafter verkar oftast samtidigt bakom en och samma tekniska lösning."
+[BILD 1.3-1] Innehåll: En teknisk lösning i mitten. Runt om de drivkrafter som kan sätta utvecklingen i rörelse, grupperade: behov och problem; kunskap och nya tekniska möjligheter; ekonomi och konkurrens; samt samhälle (politik, lagstiftning, kriser, infrastruktur och användarnas beteenden). Pilar från flera drivkrafter pekar in mot lösningen samtidigt. Tre historiska spår i kanten exemplifierar de vanligaste startpunkterna: ett behov (konserven), en möjlighet (telegrafen) och en samhällsförändring (Londons avlopp). Bildtext: "Flera drivkrafter verkar oftast samtidigt bakom en och samma tekniska lösning."
 
 ### Behovet fanns länge, möjligheten kom sent
 
@@ -48,7 +48,7 @@ Ingen av drivkrafterna verkar ensam särskilt ofta. Bakom mobiltelefonen fanns e
 
 Drivkrafterna förklarar varför en teknik tas fram, men de förklarar inte varför den ser ut som den gör. En [[begrepp:teknisk lösning]] utvecklas aldrig fritt: den formas av det som redan finns, av vad som är möjligt just nu och av alla krav och begränsningar som omger arbetet. Mobiltelefonen får fortsätta bära exemplet, för varje telefon i en jackficka är resultatet av tusentals val som ingenjörer har gjort.
 
-[BILD 1.3-2] Innehåll: En teknisk lösning i centrum, till exempel en mobiltelefon. Runt om, som faktorer som pekar in mot och formar lösningen: behov och användare, befintlig teknik att bygga vidare på, naturvetenskaplig och matematisk kunskap, material, energiförsörjning, digital infrastruktur, ekonomi och resurser, lagar och standarder, säkerhetskrav, underhåll samt tekniska avvägningar mellan konkurrerande krav. Figuren är medvetet en omgivningsbild, inte en pil- eller stegkedja. Bildtext [UTKAST – för granskning]: "En teknisk lösning utvecklas aldrig fritt. Krav, resurser och begränsningar omger den och formar den."
+[BILD 1.3-2] Innehåll: En teknisk lösning i centrum, till exempel en mobiltelefon. Runt om, som faktorer som pekar in mot och formar lösningen: behov och användare, befintlig teknik att bygga vidare på, naturvetenskaplig och matematisk kunskap, material, energiförsörjning, digital infrastruktur, ekonomi och resurser, lagar och standarder, säkerhetskrav, underhåll samt tekniska avvägningar mellan konkurrerande krav. Figuren är medvetet en omgivningsbild, inte en pil- eller stegkedja. Bildtext: "En teknisk lösning utvecklas aldrig fritt. Krav, resurser och begränsningar omger den och formar den."
 
 ### Lösningen bygger på det som redan finns
 
@@ -84,8 +84,6 @@ Skiftnyckeln i kapitlets början bar en enda uppfinnares namn. En mobiltelefon h
 10. Varför är bilden av den ensamma uppfinnaren missvisande för hur det mesta av modern teknik utvecklas?
 
 ## Övningar
-
-*[UTKAST – för granskning. Hela sektionen är nyskriven; 1.3 saknade tidigare övningar. Övning 1–4 är avsnittsnära, övning 5–6 är helkapitelövningar som viker in kapitlets tidigare projektuppgifter. I helkapitelövningarna är grunduppgift, "Bygg ut" och "Bygg ut vidare" tänkta att motsvara stigande nivå (E/C/A); den uttryckliga betygskopplingen hör enligt 03 hemma i lärarhandledningen, inte i elevtexten.]*
 
 1. **Behovsdriven eller möjlighetsdriven?** Här är fyra tekniska lösningar ur kapitlet: konservburken, telegrafen, mobiltelefonen och Londons avloppssystem. Avgör för var och en om utvecklingen främst sattes i rörelse av ett behov som sökte en lösning eller av en möjlighet som sökte en användning, och motivera kort. Välj sedan en av dem där gränsen är svår att dra och förklara varför.
 

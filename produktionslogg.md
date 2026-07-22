@@ -18,6 +18,18 @@ Uppslag som flyttats ut ur ett skrivet kapitel men hör hemma i ett kapitel som 
 
 ---
 
+# Kapitel 1 — utkaststatus och produktionsnoteringar (2026-07-22)
+
+Kapitel 1 är reviderat mot referensstandarden men **ännu inte färdiggranskat** (ligger inte i `migreradeKapitel`). Följande noteringar flyttades hit ur brödtexten när inline-`[UTKAST]`-markörerna togs bort (05-forfattarmanual.md, "Granskningsnotiser"):
+
+- **1.3 Övningar** skrevs nya (avsnittet saknade tidigare övningar): fyra avsnittsnära övningar samt två helkapitelövningar (nr 5–6) som viker in kapitlets tidigare projektuppgifter. I helkapitelövningarna är grunduppgift, "Bygg ut" och "Bygg ut vidare" tänkta att motsvara stigande nivå (E/C/A). Den uttryckliga betygskopplingen hör enligt 03 hemma i lärarhandledningen, inte i elevtexten, och står därför inte i uppgiftstexten.
+- **1.3/1.2 bildtexter** ([BILD]-block) är utkast till illustratörsbrief, byggda på figures/registry.yml; bör läsas igenom vid facit-/fackgranskning.
+- **Begrepp (05-begrepp.md)** omvandlades från gammalt ifyllnadsformat till definitionslista (uppslagsfunktion). Definitionerna är nyskrivna, byggda på hur begreppen införs i 1.1–1.3, max ungefär en mening per begrepp; granska sakinnehållet.
+
+Allt kapitel 1-innehåll är alltså utkast tills projektägaren läst det och kapitlet förs till `migreradeKapitel`.
+
+---
+
 **Redaktionell revision 2026-07-22 (produktionsstandard, uttryckligt beslut av
 projektägaren; kvalitetsreferensen bytt namn från Golden Master till
 referensimplementation):** Avsnitt 1.1 "Vad är teknik?" ersattes i sin helhet av

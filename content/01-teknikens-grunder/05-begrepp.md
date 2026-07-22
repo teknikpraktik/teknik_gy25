@@ -24,8 +24,6 @@ ordlista:
   - tekniskt genombrott
 ---
 
-*[UTKAST – för granskning. Omvandlad från gammalt ifyllnadsformat till definitionslista (uppslagsfunktion) enligt nya modellen. Definitionerna är nyskrivna utkast, byggda på hur begreppen införs i 1.1–1.3, max ungefär en mening per begrepp.]*
-
 - **artificiell intelligens (AI)** — program som utför uppgifter som annars kräver mänsklig intelligens.
 - **automation** — att låta maskiner utföra och styra ett arbete med liten mänsklig inblandning.
 - **avvägning** — ett val mellan krav där mer av det ena betyder mindre av det andra.

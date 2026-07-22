@@ -99,6 +99,8 @@ Rubrikkonvention i källfilerna: eftersom sidtiteln (frontmatterns `title`) är 
 
 Vid ett begrepps huvudställe (filen där det står i `concepts_introduced`) skrivs begreppet **kursiverat** i den mening där det definieras, aldrig i fetstil. Detta är bindande standard (05, "Begreppsmarkering").
 
+Skriv aldrig gransknings-, process- eller utkastnotiser i brödtexten (`[UTKAST …]`, "vad som ändrats", betygskopplingsresonemang och liknande). Elevtexten ska vara ren; utkaststatus spåras via `migreradeKapitel`, inte via inline-taggar. Lägg sådant i rapporten och/eller produktionslogg.md (05, "Granskningsnotiser"). `[BILD X.Y-N]`-platshållare är undantagna. `npm run validate` flaggar en `[UTKAST …]`-markör i brödtext som aktivt fel.
+
 Bilder skrivs som platshållare direkt i löptexten: `[BILD X.Y-N]` följt av Innehåll och färdigformulerad Bildtext (03, "Bilder"), numrerat löpande inom avsnittet. (I ännu icke migrerade kapitel kan `[[figur:ID]]` mot `figures/registry.yml` fortsätta användas tills kapitlet migreras, se "Migreringsläge".) Begrepp som introducerats i andra avsnitt refereras med `[[begrepp:namn]]`.
 
 En övning som hör hemma i avsnittet skrivs som en numrerad post under `## Övningar` med namn i fetstil, inte som en boolesk flagga (`practical_component` är pensionerat) och inte som löptext i teorin.

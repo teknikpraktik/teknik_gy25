@@ -120,6 +120,8 @@ Granskning sker på tre nivåer.
 
 □ Ordet "uppslag" förekommer inte som självreferens i elevtexten (05, "Självreferenser").
 
+□ Inga gransknings-, process- eller utkastnotiser i brödtext (`[UTKAST …]`, "vad som ändrats", betygsresonemang o.d.). Utkaststatus spåras via `migreradeKapitel`, inte inline-taggar. `[BILD X.Y-N]`-platshållare är undantagna (05, "Granskningsnotiser").
+
 □ Synlig rubriknumrering har högst två nivåer: kapitel, avsnitt (12, "Rubriknumrering"). Delavsnitt (H3) är onumrerade.
 
 ---
