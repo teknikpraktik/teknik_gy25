@@ -23,7 +23,7 @@ prerequisites: ["1.1"]
 
 Den som köper en borrmaskin vill egentligen inte ha en borrmaskin, utan ett hål i väggen, och inte ens hålet är målet: målet är en uppsatt bokhylla. Att hålla isär vad någon vill uppnå och hur det ska gå till är kärnan i allt tekniskt arbete, och det kräver tre ord med skarpa betydelser.
 
-Ett behov är det tillstånd någon vill uppnå: en bokhylla på väggen, rent vatten i kranen, att komma torr till skolan. Ett **tekniskt problem** är hindret mellan nuläget och behovet, formulerat så att det går att angripa med teknik. Den [[begrepp:teknisk lösning]] som undanröjer hindret är svaret på problemet, inte på behovet direkt. I ett problemlösningsarbete går kedjan samma väg: behovet pekar ut målet, problemet ringar in hindret och lösningen tar bort det. En ny teknik kan också växa fram ur en möjlighet som ännu inte har något behov, men även då får den betydelse först när den kopplas till ett behov eller problem.
+Ett behov är det tillstånd någon vill uppnå: en bokhylla på väggen, rent vatten i kranen, att komma torr till skolan. Ett *tekniskt problem* är hindret mellan nuläget och behovet, formulerat så att det går att angripa med teknik. Den [[begrepp:teknisk lösning]] som undanröjer hindret är svaret på problemet, inte på behovet direkt. I ett problemlösningsarbete går kedjan samma väg: behovet pekar ut målet, problemet ringar in hindret och lösningen tar bort det. En ny teknik kan också växa fram ur en möjlighet som ännu inte har något behov, men även då får den betydelse först när den kopplas till ett behov eller problem.
 
 ### Många svar, olika bra
 
@@ -33,7 +33,7 @@ En matematikuppgift har ett facit. Ett tekniskt problem har det nästan aldrig. 
 
 Cykelhjälmen skyddar huvudet, men många låter den hänga hemma: den är i vägen, plattar frisyren och glöms bort. Två industridesignstudenter vid Lunds universitet, Anna Haupt och Terese Alstin, tog sig an saken i sitt examensarbete 2005. De formulerade inte problemet som att göra hjälmen bekvämare. De frågade i stället hur huvudet kan skyddas utan att cyklisten bär något på det. Svaret blev Hövding, en krage som läser av cyklistens rörelser och blåser upp en airbag runt huvudet i olycksögonblicket. Samma behov, en annan problemformulering, en helt annan lösning.
 
-[[figur:fig-2.1.1-a]]
+[BILD 2.1-1] Innehåll: Förgrenad kedja med Hövdingfallet: behovet att skydda cyklistens huvud överst, därunder två problemformuleringar sida vid sida (gör hjälmen bekvämare respektive skydda huvudet utan att cyklisten bär något på det), och under varje formulering dess lösning: en förbättrad cykelhjälm respektive airbagkragen. Kedjans tre nivåer märks behov, tekniskt problem och teknisk lösning. Bildtext: "Samma behov, två olika problemformuleringar, två helt olika lösningar. Problemformuleringen är en vägkorsning, inte en formalitet."
 
 Exemplet visar varför problemformuleringen aldrig är en formalitet. Den vanligaste fällan är att baka in lösningen i problemet: den som säger att skolan behöver fler mobilladdare har redan bestämt sig för laddare, fast behovet kanske är laddade mobiler och problemet lika gärna kan angripas med lånebatterier eller laddskåp. Ett väl formulerat problem nämner ingen lösning. Det beskriver hindret och lämnar vägarna öppna.
 
@@ -41,9 +41,9 @@ Exemplet visar varför problemformuleringen aldrig är en formalitet. Den vanlig
 
 År 1956 skulle en av IKEA:s medarbetare få in ett bord i en bil. Det gick inte, så han sågade av benen och lade dem under bordsskivan. Ur den irritationen växte det platta paketet, principen som gjorde att möbler kunde fraktas och säljas till en bråkdel av kostnaden. Men för att göra platta paket av en hel möbelkatalog räcker ingen såg. Då krävs att problemet formuleras så exakt att konstruktörer kan arbeta efter det.
 
-Vägen från behov till teknisk lösning går genom problemformuleringen, och en användbar formulering har tre delar. **Funktionen** beskriver vad lösningen ska göra, aldrig hur: bordet ska bära sin last och kunna sättas ihop av kunden. **Krav** är villkor som lösningen måste uppfylla och som går att pröva: skivan ska bära en viss vikt, monteringen ska klara sig utan specialverktyg, paketet ska rymmas i en personbil. **Begränsningar** är ramarna som inte får överskridas: högsta tillverkningskostnad, valt material, gällande säkerhetsregler. Ett [[begrepp:tekniskt problem]] är färdigformulerat först när alla tre delarna är på plats.
+Vägen från behov till teknisk lösning går genom problemformuleringen, och en användbar formulering har tre delar. *Funktionen* beskriver vad lösningen ska göra, aldrig hur: bordet ska bära sin last och kunna sättas ihop av kunden. *Krav* är villkor som lösningen måste uppfylla och som går att pröva: skivan ska bära en viss vikt, monteringen ska klara sig utan specialverktyg, paketet ska rymmas i en personbil. *Begränsningar* är ramarna som inte får överskridas: högsta tillverkningskostnad, valt material, gällande säkerhetsregler. Ett [[begrepp:tekniskt problem]] är färdigformulerat först när alla tre delarna är på plats.
 
-[[figur:fig-2.1.2-a]]
+[BILD 2.1-2] Innehåll: En komplett problemformulering för ett möbelexempel uppställd i tre fält: funktionen (vad lösningen ska göra, formulerad utan att nämna någon lösning), kraven (prövbara villkor som måste uppfyllas, t.ex. bärförmåga och montering utan verktyg) och begränsningarna (ramar som kostnad, material och fraktvolym). Pilar visar att kraven prövar funktionen och att begränsningarna ramar in båda. Bildtext: "En problemformulering är färdig först när funktion, krav och begränsningar alla är på plats."
 
 ### Vad, aldrig hur
 
@@ -67,7 +67,7 @@ Begränsningar känns som hinder men fungerar ofta tvärtom. Utan bilens bagageu
 6. Vad är en begränsning, och varför fungerar begränsningar ofta som hjälp snarare än hinder?
 7. Här är två formuleringar av samma problem: (a) "Bordet ska ha fyra avskruvbara ben." (b) "Bordet ska kunna transporteras platt och monteras av kunden." Vilken är den bättre problemformuleringen, och varför?
 
-## Praktiska uppgifter
+## Övningar
 
 1. **Behov, problem eller lösning?** Här är sex påståenden: (a) eleverna blir blöta på väg till cykelstället, (b) skolan behöver ett tak över cykelstället, (c) cyklarna välter i blåst, (d) skolan behöver fler mobilladdare, (e) matsalen är för högljudd vid lunch, (f) matsalen behöver ljudabsorbenter i taket. Sortera varje påstående som behov, tekniskt problem eller inbakad lösning. Skriv därefter om de påståenden som bakar in en lösning så att de blir tekniska problem som lämnar vägarna öppna.
 

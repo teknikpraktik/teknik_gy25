@@ -42,7 +42,7 @@ Den andra frågan: hur väl förstått är problemet? Ett välkänt problem har 
 
 Den tredje frågan avgör bara när problemet inte är välkänt: vad kostar eller innebär ett misslyckat försök? Är det billigt, snabbt och ofarligt, till exempel för en app som kan testas på riktiga användare samma dag, passar det att pröva och förbättra. Är det dyrt, farligt eller svårt att göra om, som för en bro som bara byggs en gång, krävs i stället analys, beräkning och kontrollerade tester innan bygget.
 
-[[figur:fig-2.2.1-a]]
+[BILD 2.2-1] Innehåll: Diagram med två axlar, utan eget namn på diagrammet: hur väl förstått problemet är (dåligt till väl) och vad ett misslyckat försök kostar (lågt till högt). Hela det välförstådda området märks återanvänd befintlig lösning (standarder, kardborren), eftersom kostnaden inte spelar roll när svaret redan är känt. I det dåligt förstådda området delas fälten efter kostnad: låg kostnad ger pröva och förbättra (apptester, Edisons glödtrådar), hög kostnad ger analysera innan du bygger (broar, Apollo 13). Diagrammet gäller bara problem som redan går att överblicka; en kort bildtext hänvisar till nästa avsnitt om nedbrytning för problem som inte gör det. Bildtext: "Hur väl förstått problemet är och vad ett misslyckande kostar pekar tillsammans ut en lämplig strategi."
 
 ### Motivera valet
 
@@ -54,9 +54,9 @@ En gräsmatta som klipper sig själv låter som ett enda problem, men när Husqv
 
 ### Överblick före allt annat
 
-Innan frågorna om kostnad och kunskapsläge går att ställa måste problemet gå att greppa i sin helhet. Ett sammansatt problem som Husqvarnas är för stort för det: det svarar inte på "vad kostar ett misslyckat försök" utan på en helt annan fråga, är problemet över huvud taget möjligt att överblicka. Ett sådant problem bryts ned i **delproblem**: mindre problem som kan formuleras, lösas och testas var för sig. När delproblemen är formulerade kan varje del bedömas för sig utifrån hur väl förstådd den är och vad ett misslyckande skulle kosta.
+Innan frågorna om kostnad och kunskapsläge går att ställa måste problemet gå att greppa i sin helhet. Ett sammansatt problem som Husqvarnas är för stort för det: det svarar inte på "vad kostar ett misslyckat försök" utan på en helt annan fråga, är problemet över huvud taget möjligt att överblicka. Ett sådant problem bryts ned i *delproblem*: mindre problem som kan formuleras, lösas och testas var för sig. När delproblemen är formulerade kan varje del bedömas för sig utifrån hur väl förstådd den är och vad ett misslyckande skulle kosta.
 
-[[figur:fig-2.2.2-a]]
+[BILD 2.2-2] Innehåll: Nedbrytningsträd för robotgräsklipparen: det sammansatta problemet överst, därunder delproblemen klippa gräset, hålla sig inom arbetsområdet, undvika hinder, försörja sig med energi och tåla väder. Under ett av delproblemen (hålla sig inom området) visas en ytterligare nivå med exempel på hur även det kan delas. Tunna linjer mellan grenarna markerar kopplingar där delarna måste passa ihop. Bildtext: "Ett sammansatt problem bryts ned i delproblem som kan formuleras, lösas och testas var för sig."
 
 ### Bryt ned efter funktion
 
@@ -74,7 +74,7 @@ Ett problem som går att överblicka, direkt eller efter en nedbrytning, kan ang
 
 En schweizisk ingenjör undersökte kardborrar som fastnat i hundens päls efter en jakttur, såg krokarna i mikroskop och tog patent på kardborrebandet 1955. Naturen hade redan löst ett [[begrepp:tekniskt problem]], ett föremål ska sitta fast men gå att lossa igen; hans insats var att känna igen lösningen och flytta den till tyg och plast, en av teknikens äldsta tricks.
 
-[[figur:fig-2.2.3-a]]
+[BILD 2.2-3] Innehåll: Två bilder sida vid sida: kardborrens krokformade taggar i mikroskopförstoring, och kardborrebandets konstgjorda krokar och öglor i motsvarande förstoring, med pilar som visar den formmässiga likheten. Bildtext: "Kardborrebandet kopierade en lösning naturen redan hade: krokar som fäster men går att lossa."
 
 ### Tre källor till en beprövad lösning
 
@@ -88,7 +88,7 @@ Att uppfinna på nytt kostar tid, pengar och risk, utan att nödvändigtvis ge e
 
 När Thomas Edison sökte en glödtråd som lyste länge utan att brinna av var det [[begrepp:tekniskt problem]] han ställdes inför olöst av teorin. Hans laboratorium testade i stället tusentals material, från förkolnad bomullstråd till bambu. Ingen teori kunde peka ut svaret; det fick sökas försök för försök, med mätning och dokumentation som skilde metoden från rent gissande.
 
-[[figur:fig-2.2.4-a]]
+[BILD 2.2-4] Innehåll: Enkel iterationscykel med fyra steg i en ring: pröva, mät resultatet, dokumentera, justera. Vid ringen en kort logg i Edisons stil, tre rader med material, resultat och slutsats, som visar hur varje varv bygger på det förra i stället för att upprepa det. Bildtext: "Det som skiljer pröva-och-förbättra från gissning är dokumentationen. Varje varv bygger på det förra."
 
 ### Billiga försök bygger snabbast förståelse
 
@@ -108,7 +108,7 @@ Ett misslyckat försök hade kostat tre liv, och ingen visste i förväg exakt h
 
 Houston-teamet räknade ut vilket material som fanns tillgängligt ombord och skissade en adapter av plastpåsar, kartong, tejp och en slang från en tryckdräkt. Innan instruktionerna skickades till besättningen byggde teamet en likadan adapter på marken och kontrollerade att den faktiskt höll tätt. Först då lästes bygginstruktionen upp över radio, och koldioxidhalten sjönk inom en timme.
 
-[[figur:fig-2.2.5-a]]
+[BILD 2.2-5] Innehåll: Bildpar från Apollo 13: till vänster adaptern byggd och testad på marken i Houston (kontrollerad miljö, möjligt att öppna och göra om), till höger samma adapter byggd av besättningen ombord efter radioinstruktionerna (skarpt läge, ett enda försök). En pil mellan bilderna markerar att bygginstruktionen skickades först sedan marktestet godkänts. Bildtext: "Adaptern testades i en kontrollerad kopia på marken innan besättningen litade på den i skarpt läge."
 
 Det kontrollerade testet på marken var inte ett extra steg, det var själva poängen. En lösning som bara fungerar i teorin men aldrig prövats i något kontrollerat sammanhang är en gissning i finare kläder. Ju dyrare eller farligare det är att misslyckas i skarpt läge, desto viktigare är det att hitta ett sätt att pröva lösningen i förväg: i beräkningar, i en simulering, i en modell eller i en kopia byggd under kontrollerade former.
 
@@ -133,10 +133,18 @@ När problemet är formulerat och en strategi vald börjar arbetet med att ta fr
 9. Vad skiljer ett dokumenterat försök från en isolerad slump, och vad är det som gör SpaceX sätt att testa raketer till pröva och förbättra snarare än gissande?
 10. Varför krävde Apollo 13-problemet analys och kontrollerade tester snarare än att pröva sig fram i skarpt läge? Beskriv vad Houston-teamet gjorde på marken innan bygginstruktionen skickades upp, och förklara utifrån det vad som avgör när analysera-innan-du-bygger är rätt strategi.
 
-## Praktiska uppgifter
+## Övningar
 
 1. **Leta upp den beprövade lösningen.** Här är tre små tekniska problem: en hylla ska fästas i väggen och bära tunga böcker, två plaströr ska skarvas så att skarven blir tät, och en affisch ska sitta uppe ett halvår utan att skada väggen. Ta för vart och ett reda på en befintlig, beprövad lösning och ange vilken av källorna standard, handbok eller naturen den kommer från. Redovisa vad du sökte på eller slog upp i, och skissa hur lösningen sitter fast eller tätar. Ange sist vilket av de tre problemen som var svårast att hitta ett färdigt svar på, och varför.
 
 2. **Fem försök och en slutsats.** Genomför ett eget pröva-och-förbättra-arbete på ett litet konstruktionsproblem som läraren anger eller som du väljer själv, till exempel en pappersremsa som ska bära en mynthög, ett pappersflygplan som ska flyga så långt som möjligt eller en förpackning som ska skydda ett rått ägg vid ett fall. Genomför minst fem försök och för protokoll: vad du ändrade från förra försöket, vad som hände och vilken slutsats du drog. Redovisa protokollet som en tabell, och visa i en avslutande kommentar hur varje försök byggde på det föregående i stället för att upprepa det.
 
 3. **Testa i det lilla först.** En cykeltillverkare vill veta hur en ny däckblandning slits, och överväger att låta hundra kunder cykla på däcken i sex månader. Bedöm problemet utifrån de tre frågorna och avgör om det är rimligt att pröva sig fram i skarpt läge. Utforma därefter ett kontrollerat test som kan göras innan däcken går ut till kunder: beskriv vad som ska mätas, på vilken modell eller uppställning, hur länge, och vilket resultat som skulle få tillverkaren att gå vidare respektive avbryta. Skissa uppställningen.
+
+4. **Från behov till vald strategi.** Välj ett sammansatt tekniskt problem ur vardagen, till exempel en odlingslåda som ska vattna sig själv under sommarlovet, ett cykelställ som skyddar cyklarna mot väder och stöld, eller ett eget förslag som läraren godkänner. Formulera problemet med funktion, minst tre prövbara krav och minst två begränsningar, utan att bygga in en lösning.
+   Bygg ut: bryt ned det sammansatta problemet i delproblem och rita nedbrytningen som ett träd. Bryt ned minst ett delproblem i ytterligare en nivå, och markera skarvarna där delarna måste passa ihop och vad de måste komma överens om.
+   Bygg ut vidare: bedöm varje delproblem med de tre frågorna, alltså om det går att överblicka, hur väl förstått det är och vad ett misslyckat försök kostar, och välj och motivera en problemlösningsstrategi för var och en. Ange för minst ett delproblem vad som skulle få dig att byta strategi.
+
+5. **Samma behov, en annan problemformulering.** Välj ett behov som har mötts av två tekniska lösningar med helt olika princip, till exempel att skydda cyklistens huvud (cykelhjälm med hårt skal respektive uppblåsbar krage med airbag), eller ett eget par som läraren godkänner. Formulera för varje lösning den problemformulering den svarar mot, och visa hur en annan formulering av samma behov ledde till en annan lösning. Den uppblåsbara kragen såldes som Hövding men drogs tillbaka från marknaden efter att säkerhetsbrister uppdagats; uppgiften gäller skillnaden i skyddsprincip, inte att rekommendera en produkt.
+   Bygg ut: jämför de två lösningarna i en tabell utifrån skyddsprincip eller funktion, energibehov och laddning, underhåll, vad som händer i och efter användning, samt begränsningar, och rita en enkel principskiss av varje lösning.
+   Bygg ut vidare: bedöm det tekniska problemet bakom en av lösningarna med de tre frågorna, ange vilken problemlösningsstrategi som rimligen använts i dess utveckling och motivera valet, och beskriv ett kontrollerat test som skulle kunna avgöra om lösningen håller innan den släpps till användare.

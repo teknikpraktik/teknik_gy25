@@ -48,8 +48,6 @@ export const strukturskuldKategorier = {
 // har därför lyfts ut (rättat 2026-07-22). Att bara 1.1 är omskrivet är exakt varför
 // kapitel 1 inte längre är migrerat (se migreradeKapitel).
 export const legacyOvningsrubrikFiler = new Set([
-	'02-att-losa-tekniska-problem/01-vad-ar-ett-tekniskt-problem.md',
-	'02-att-losa-tekniska-problem/02-att-valja-problemlosningsstrategi.md',
 	'06-mekanik-och-konstruktion/01-krafter.md',
 	'06-mekanik-och-konstruktion/02-moment.md',
 	'06-mekanik-och-konstruktion/03-jamvikt.md',

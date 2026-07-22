@@ -30,6 +30,21 @@ Allt kapitel 1-innehåll är alltså utkast tills projektägaren läst det och k
 
 ---
 
+# Kapitel 2 — utkaststatus och produktionsnoteringar (2026-07-22)
+
+Kapitel 2 (2.1, 2.2 + avslutning) reviderat mot referensstandarden, beskrivande spår. **Ännu inte färdiggranskat** (ligger inte i `migreradeKapitel`).
+
+Mekaniskt: rubriken "Praktiska uppgifter" → "Övningar" i 2.1 och 2.2; begrepp fetstil → kursiv vid definierande förekomst (2.1: *tekniskt problem*, *funktion*, *krav*, *begränsning*; 2.2: *delproblem*); `[[figur:ID]]` → `[BILD X.Y-N]` med Innehåll ordagrant ur figures/registry.yml (7 bilder). Inga begreppsgränsfall — alla fetade ord var registrerade begrepp. `01-vad-ar-ett-tekniskt-problem.md` och `02-att-valja-problemlosningsstrategi.md` avregistrerade ur `legacyOvningsrubrikFiler`.
+
+Nyskrivet utkast (granska sakinnehåll):
+- **Bildtexter** till alla 7 `[BILD]`-block är nyskrivna (registret saknar bildtextfält); Innehåll är däremot ordagrant ur registret.
+- **Begrepp (04-begrepp.md)** omvandlat från ifyllnadsövning till definitionslista, sex begrepp, byggda på hur de införs i 1.1–2.2.
+- **2.2 Övningar** fick två helkapitelövningar (nr 4–5) som viker in kapitlets fyra projektuppgifter: nr 4 "Från behov till vald strategi" (formulering → nedbrytning → strategival, viker in projektuppgift 2–4) och nr 5 "Samma behov, en annan problemformulering" (viker in projektuppgift 1, Hövding/skal). Grund/"Bygg ut"/"Bygg ut vidare" motsvarar stigande nivå; betygskopplingen hör till lärarhandledningen, inte elevtexten.
+
+Den gamla `05-projektuppgifter.md` ligger kvar som migreringsskuld (raderas vid kapitlets finalisering, som för kapitel 1).
+
+---
+
 **Redaktionell revision 2026-07-22 (produktionsstandard, uttryckligt beslut av
 projektägaren; kvalitetsreferensen bytt namn från Golden Master till
 referensimplementation):** Avsnitt 1.1 "Vad är teknik?" ersattes i sin helhet av
