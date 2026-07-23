@@ -23,7 +23,7 @@ prerequisites: ["6.1", "6.2"]
 
 ## Jämviktsvillkoren
 
-Gångbron står stilla, hur mycket trafik den än bär. Den varken accelererar uppåt, nedåt eller åt sidan, och den roterar inte. Ett föremål i det tillståndet, där alla krafter och moment som verkar på det tar ut varandra fullständigt, sägs befinna sig i *jämvikt*. Att ett föremål ser ut att stå stilla räcker inte som förklaring: jämvikt är ett tillstånd som går att kontrollera med räkning.
+Gångbron står stilla, hur mycket trafik den än bär. Den accelererar inte uppåt, nedåt eller åt sidan, och den roterar inte. En konstruktion i det tillståndet, där alla krafter och moment som verkar på den tar ut varandra fullständigt, befinner sig i *jämvikt*. För en konstruktör är jämvikt inte bara att något ser ut att stå stilla, utan ett villkor som går att kontrollera med räkning, och det är den kontrollen som visar att stöden och delarna faktiskt bär lasten innan något byggs.
 
 För en konstruktion som belastas i ett plan, vilket är den situation kapitlet behandlar, uttrycks jämvikt i tre jämviktsvillkor:
 
