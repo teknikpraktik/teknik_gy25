@@ -318,7 +318,7 @@ Det finns inga separata projektuppgiftsavsnitt. Kapitlets större, integrerande 
 ## 6.4 Hållfasthet
 - Identifiera drag, tryck, böjning, skjuvning, vridning och knäckning i verkliga konstruktioner.
 - Förklara begreppen spänning och töjning samt beräkna normalspänning i en belastad detalj.
-- Tolka en dragprovkurva och avläsa elasticitetsmodul, sträckgräns och brottgräns.
+- Läsa av elasticitetsmodul, sträckgräns och brottgräns ur en dragprovkurva och använda värdena som underlag för materialval och dimensionering.
 
 ### Belastningstyper
 ### Spänning och töjning

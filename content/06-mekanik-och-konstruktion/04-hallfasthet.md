@@ -13,8 +13,8 @@ learningGoals:
     verkliga konstruktioner.
   - Förklara begreppen spänning och töjning samt beräkna normalspänning i en
     belastad detalj.
-  - Tolka en dragprovkurva och avläsa elasticitetsmodul, sträckgräns och
-    brottgräns.
+  - Läsa av elasticitetsmodul, sträckgräns och brottgräns ur en dragprovkurva
+    och använda värdena som underlag för materialval och dimensionering.
 abilities: [f3]
 concepts_introduced: ["elastisk deformation", "plastisk deformation", "böjning", "skjuvning", "vridning", "knäckning", "spänning", "töjning", "elasticitetsmodul", "sträckgräns"]
 concepts_used: ["kraft", "dragkraft", "tryckkraft", "moment"]
@@ -24,7 +24,7 @@ prerequisites: ["6.1", "6.2"]
 
 ## Belastningstyper
 
-Gångbrons balk bär inte bara en tyngd, den bär den på ett bestämt sätt. En [[begrepp:dragkraft]] i en lyftkrans kätting sträcker materialet, en [[begrepp:tryckkraft]] i en pelare pressar samman det, och en trafikant som går över bron böjer balken något nedåt. Den samlade benämningen för de krafter och moment en konstruktion utsätts för under användning är belastning. Hur en detalj klarar en given belastning avgör dess hållfasthet, och första steget är att skilja på hur en belastning kan verka.
+Gångbrons balk bär inte bara en tyngd, den bär den på ett bestämt sätt. En [[begrepp:dragkraft]] i en lyftkrans kätting sträcker materialet, en [[begrepp:tryckkraft]] i en pelare pressar samman det, och en trafikant som går över bron böjer balken något nedåt. Den samlade benämningen för de krafter och moment en konstruktion utsätts för under användning är belastning. Att konstruktionen håller betyder att ingen del går sönder eller deformeras för mycket under den belastningen, och hur väl en detalj klarar det kallas dess hållfasthet. Det första en konstruktör behöver kunna är därför att skilja på hur en belastning verkar, eftersom drag, tryck, böjning, skjuvning och vridning ställer helt olika krav på materialet och formen.
 
 All belastning ger upphov till någon grad av deformation, en förändring av föremålets form eller storlek. Är deformationen liten och materialet återgår helt till sin ursprungsform när belastningen tas bort kallas den *elastisk deformation*, som ett gummiband som sträcks och sedan släpps. Blir belastningen tillräckligt stor kvarstår en del av deformationen permanent även efter avlastning, vilket kallas *plastisk deformation*, som en böjd metallklädhängare som inte rätar ut sig igen. Fortsätter belastningen bortom vad materialet tål inträffar till slut brott: materialet spricker eller separeras.
 
@@ -78,7 +78,7 @@ Spänning beskriver alltså hur hårt belastat materialet är, medan töjning be
 
 ## Dragprovet
 
-För att ta reda på hur ett material faktiskt beter sig under belastning utsätts en standardiserad provstav för ett dragprov: staven spänns fast i en provningsmaskin som drar isär den med långsamt ökande kraft, samtidigt som både kraften och förlängningen mäts kontinuerligt. Resultatet räknas om till spänning och töjning och ritas upp som en dragprovkurva, med töjning på den vågräta axeln och spänning på den lodräta.
+Innan en konstruktör kan välja material till en detalj eller räkna på om den håller måste materialets egenskaper vara kända som siffror. De siffrorna tas fram med ett dragprov. En standardiserad provstav spänns fast i en provningsmaskin som drar isär den med långsamt ökande kraft, samtidigt som både kraften och förlängningen mäts kontinuerligt. Resultatet räknas om till spänning och töjning och ritas upp som en dragprovkurva, med töjning på den vågräta axeln och spänning på den lodräta. Ur kurvan läser konstruktören av de tal som sedan styr materialval och dimensionering.
 
 Kurvan har en tydlig, återkommande form. I det första skedet är den rak: spänningen ökar proportionellt mot töjningen, och provstaven återgår helt till sin ursprungslängd om belastningen tas bort. Det är det elastiska området. Lutningen på den räta delen kallas *elasticitetsmodulen*:
 
