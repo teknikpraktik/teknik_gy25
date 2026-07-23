@@ -296,8 +296,7 @@ Det finns inga separata projektuppgiftsavsnitt. Kapitlets större, integrerande 
 - Frilägga en enkel konstruktion och identifiera de krafter som verkar på den.
 
 ### Kraftbegreppet
-### Kraftresultanter
-### Krafter på ett lutande plan
+### Att lägga samman och dela upp krafter
 ### Friläggning
 
 ## 6.2 Moment
