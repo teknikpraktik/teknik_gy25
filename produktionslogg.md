@@ -82,7 +82,7 @@ Den gamla `05-projektuppgifter.md` ligger kvar som migreringsskuld (raderas vid 
 
 ---
 
-# Kapitel 6 — revidering: mekanisk del + begreppsdel klar, helkapitelövningar kvarstår (2026-07-22, uppdaterad 2026-07-23)
+# Kapitel 6 — revidering klar (mekanik + begrepp + helkapitelövning), avvaktar granskning (2026-07-22, uppdaterad 2026-07-23)
 
 Kapitel 6 (procedurspår) reviderat mekaniskt: rubrik "Praktiska uppgifter" → "Övningar" i 6.1–6.6, in-texthänvisningen "en av de praktiska uppgifterna" i 6.1 ändrad till "en av övningarna", alla 23 `[[figur:ID]]` → `[BILD X.Y-N]` med Innehåll ordagrant ur registret och nyskrivna bildtexter. 6.1–6.6 avregistrerade ur `legacyOvningsrubrikFiler`.
 
@@ -112,8 +112,25 @@ och unionen över 6.1–6.6 är exakt de 30 (9 + 2 + 4 + 10 + 3 + 2).
   (scripts/migreringsstatus.mjs); begreppslistans aktiva formatkontroll gäller nu och
   passeras. `npm run validate`: 0 aktiva fel.
 
-**Kvarstår för kapitel 6:** helkapitelövningarna (viker in 09-projektuppgifter.md) och
-därefter radering av `09-projektuppgifter.md`. Kapitel 6 är ännu inte i
+**Helkapitelövning invikt (2026-07-23, ny avgränsad form).** De fem projektuppgifterna i
+`09-projektuppgifter.md` ersattes av EN fokuserad helkapitelövning enligt den nya standarden
+(03, "Helkapitelövningar"): övning 6 i 6.6, "Gångbron från last till dimension". Den väver
+samman friläggning (6.1), jämvikt och stödreaktioner (6.3), belastningsfall och dimensionering
+(6.6) samt lastväg och belastningstyper (6.4/6.5) längs kapitlets röda tråd, gångbron, och ger
+ett dokumenterat resultat (friläggningsdiagram, beräkningsgång, dimensioneringskedja). Ingen
+utskriven nivåstapling, ingen betygsetikett i elevtexten. `09-projektuppgifter.md` raderad
+(migreringsskulden för kapitel 6 därmed avförd). De övriga fyra projektuppgifternas praktiska
+kärnor (kraftdiagram/hävstång, tyngdpunkt/vältning, tvärsnitt/knäckning, bygg-och-testa) täcks i
+allt väsentligt av avsnittsnära övningar i 6.1–6.6; den nya standarden håller banken avskaffad.
+
+**Statuskoll (bekräftad 2026-07-23):** rubrik "Övningar" i alla sex avsnitten (klart tidigare),
+in-texthänvisningen i 6.1 lyder "en av övningarna" (klart tidigare), alla `[[figur:ID]]` är
+`[BILD X.Y-N]` (klart tidigare), begreppsmarkering och definitionslista klara (commit b8979f1).
+06-synken för 6.1:s delavsnitt "Krafter på ett lutande plan" var redan gjord: 06-bokstruktur.md
+listar det som ett av 6.1:s fyra delavsnitt och det speglar filens faktiska struktur (eget
+delavsnitt med egen figur BILD 6.1-4). Ingen åtgärd behövdes.
+
+Kapitel 6 är mekaniskt och innehållsligt klart mot referensstandarden men står **inte** i
 `migreradeKapitel` — det avvaktar projektägarens genomläsning.
 
 ---
