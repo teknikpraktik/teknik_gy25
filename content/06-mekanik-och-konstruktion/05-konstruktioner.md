@@ -75,15 +75,16 @@ Underhåll väger också in. Ett fackverk med många förband kräver mer regelb
 
 ## Instuderingsfrågor
 
-1. Vad är en balks neutralaxel, och varför bidrar material långt från den mer till böjstyvheten än material nära den?
-2. Beskriv arbetsfördelningen mellan flänsarna och livet i en I-balk. Vilka två uppgifter har livet?
-3. Ett rör sägs ofta vara styvare än en massiv stång. Under vilken förutsättning stämmer påståendet, och när stämmer det inte? Förklara med hänvisning till var materialet sitter.
-4. Fackverksmodellen bygger på fyra antaganden. Räkna upp dem, och förklara vad som händer i en verklig stav när ett av antagandena inte är uppfyllt.
-5. Varför måste ett bågupplag kunna ta upp en vågrät kraft, och hur löses det i en stenbro respektive i en takstol?
-6. Varför är formuleringen "förbandet är konstruktionens svagaste punkt" missvisande? Ge tre olika sätt ett förband kan svikta på.
-7. En byggnadsställning är uppbyggd av rektanglar utan diagonalstag. Beskriv vad som händer när den belastas i sidled, och hur stagning löser problemet.
-8. Följ lastvägen för en snöhög som ligger mitt på ett tak. Beskriv vilka delar lasten passerar, i vilken ordning, och om varje del belastas av drag, tryck eller böjning, tills lasten når marken.
-9. En gångbro ska byggas över en 30 m bred ravin. Jämför en fackverksbro och en bågbro för uppdraget. Redogör för hur lasten förs till marken i respektive lösning, vilka krafter markens fästen måste klara i de två fallen, och vilken av lösningarna som ställer högst krav på berggrunden vid ravinens kanter. Ange vilken du skulle välja om berget är fast, och vilken du skulle välja om marken är lös lera, och motivera båda valen.
+1. Vad är skillnaden mellan hur en balk och en pelare belastas?
+2. Vad är en balks neutralaxel?
+3. Varför bidrar material långt från neutralaxeln mer till böjstyvheten än material nära den?
+4. Vilken uppgift har de två flänsarna i en I-balk?
+5. Vilka två uppgifter har livet i en I-balk?
+6. Varför byggs ett fackverk upp av trianglar?
+7. Varför förses en rektangulär ram utan styva hörn med diagonalstag?
+8. Varför måste ett bågupplag kunna ta upp en vågrät kraft?
+9. Vad menas med en lasts lastväg genom en konstruktion?
+10. Ge två sätt som ett förband kan svikta på.
 
 ## Övningar
 

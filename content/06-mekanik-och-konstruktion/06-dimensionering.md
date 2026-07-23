@@ -94,11 +94,14 @@ En tredje kontroll är att fråga sig vad svaret betyder fysiskt. En stång på 
 
 ## Instuderingsfrågor
 
-1. Förklara skillnaden mellan egentyngd och nyttig last, och ge ett exempel på vardera för en byggnad.
-2. Varför räknas en konstruktion mot flera belastningsfall i stället för mot det vanligaste fallet? Använd gångbron som exempel.
-3. Beskriv vad som hände med Londons Millennium Bridge. Varför är förklaringen "fotgängarna råkade gå i takt" otillräcklig?
-4. Varför sätts den tillåtna spänningen lägre än sträckgränsen, och vad är det säkerhetsfaktorn ska täcka in?
-5. En elev skriver i en labbrapport att "säkerhetsfaktorn 2 är ett rimligt värde för konstruktioner". Vad är fel med påståendet, och hur bestäms säkerhetsfaktorn i verkligheten?
+1. Vad är skillnaden mellan egentyngd och nyttig last? Ge ett exempel på vardera.
+2. Varför räknas en konstruktion mot flera belastningsfall och inte bara mot det vanligaste?
+3. Vad är skillnaden mellan en statisk och en dynamisk belastning?
+4. Varför kan en dynamisk last ge större verkan än dess egen storlek antyder?
+5. Vad menas med tillåten spänning?
+6. Varför sätts den tillåtna spänningen lägre än materialets sträckgräns?
+7. Varför är kontrollräkningen av den valda dimensionen ett nödvändigt sista steg?
+8. Hur kan en överslagsräkning eller en enhetskontroll avslöja ett fel i en dimensionering?
 
 ## Övningar
 

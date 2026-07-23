@@ -92,12 +92,14 @@ Samma princip förklarar varför en lyftkrans bom är kraftigast byggd närmast 
 
 ## Instuderingsfrågor
 
-1. Förklara vad ett moment är, och varför både kraftens storlek och momentarmens längd påverkar det.
-2. Vad är en krafts verkningslinje, och hur används den för att bestämma momentarmen?
-3. En kraft dras rakt längs en skiftnyckels handtag, i riktning bort från muttern. Vilket moment ger den kring muttern? Förklara med hjälp av verkningslinjen.
-4. Varför måste ett moments riktning, medurs eller moturs, hållas reda på när flera moment verkar på en konstruktion samtidigt?
-5. Vad är ett åtdragningsmoment, och varför anger tillverkare det i newtonmeter i stället för att lita på montörens handkraft?
-6. Förklara vad utväxling innebär, och vad man betalar för en hög utväxling hos ett handverktyg.
+1. Vad är ett moment?
+2. Vad menas med en krafts momentarm?
+3. Varför ger samma kraft olika stort moment beroende på hur långt från vridpunkten den griper an?
+4. Varför ger en kraft som verkar rakt längs en skiftnyckels handtag inget moment kring muttern?
+5. Hur beräknas momentet när kraften verkar snett mot handtaget?
+6. Vad är ett åtdragningsmoment?
+7. Vad menas med utväxling i ett verktyg eller en maskin?
+8. Vad kostar en hög utväxling, uttryckt i rörelsesträcka?
 
 ## Övningar
 

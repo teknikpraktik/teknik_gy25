@@ -93,13 +93,17 @@ Friläggs bron ersätts marken vid de två stöden med varsin stödkraft riktad 
 
 ## Instuderingsfrågor
 
-1. Vilka tre egenskaper beskriver en kraft fullständigt, och varför räcker det inte att ange bara storleken när man analyserar en konstruktion?
-2. Förklara skillnaden mellan tyngdkraft och normalkraft. Var i gångbron verkar de, och kan de vara lika stora? Motivera.
-3. I en konstruktion beskrivs friktion ofta som något som bara bromsar. Ge två exempel på att friktion i stället håller ihop eller håller kvar en konstruktion.
-4. Varför kan en vajer bara bära dragkraft, medan ett diagonalstag kan bära både drag och tryck? Förklara också varför en lång, smal del beter sig olika vid drag och vid tryck, och vad det får för följd för hur delen formges.
-5. En resultant kan bestämmas grafiskt eller med Pythagoras sats och trigonometri. Förklara kort vad var och en av de två metoderna går ut på, och varför de ger samma svar.
-6. Ett stag drar snett i sin infästning. Varför delar en konstruktör upp stagets kraft i en vågrät och en lodrät komposant, och vad används var och en av komposanterna till?
-7. Vad innebär det att frilägga en konstruktion, och varför måste gångbron ersättas av en förenklad modell innan den kan friläggas? Förklara också varför en kraft som glöms bort i friläggningen ger ett fel som ingen senare beräkning kan hitta.
+1. Vilka tre egenskaper beskriver en kraft fullständigt?
+2. Varför räcker det inte att bara ange en krafts storlek när en konstruktion analyseras?
+3. Hur beräknas tyngdkraften på ett föremål med känd massa?
+4. Vad är skillnaden mellan tyngdkraft och normalkraft?
+5. Ge ett verkligt exempel på att friktion håller ihop eller håller kvar en konstruktion i stället för att bromsa den.
+6. Varför kan en vajer bara bära dragkraft?
+7. Varför kan en lång, smal del knäckas när den trycks men inte när den dras?
+8. Hur bestäms storleken på resultanten av två krafter som är vinkelräta mot varandra?
+9. Varför delar en konstruktör upp en snett verkande stagkraft i en vågrät och en lodrät komposant?
+10. Vad innebär det att frilägga en konstruktion?
+11. Varför ersätts gångbron av en förenklad modell innan den friläggs?
 
 ## Övningar
 

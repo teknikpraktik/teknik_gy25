@@ -98,12 +98,17 @@ Elasticitetsmodul, sträckgräns och brottgräns är tillsammans den information
 
 ## Instuderingsfrågor
 
-1. Förklara skillnaden mellan elastisk och plastisk deformation, och ge ett exempel på vardera från en verklig konstruktion eller produkt.
-2. Ett vridmoment och en vridning är inte samma sak. Förklara skillnaden, och ge ett exempel på en maskindel där båda förekommer.
-3. Varför räknas knäckning inte som en sjätte belastningstyp vid sidan av drag, tryck, böjning, skjuvning och vridning? Vad är det i stället?
-4. Två stag av samma material och samma slanka dimension sitter i en byggställning. Det ena belastas i drag, det andra i tryck. Förklara varför det ena riskerar att knäckas men inte det andra.
-5. Varför beskriver σ = F / A inte spänningen i en balk som böjs? Vad är det som skiljer böjningsfallet från det centriska dragfallet?
-6. Brottgränsen är inte den spänning där provstaven går av. Förklara vad brottgränsen faktiskt är, och varför dragprovkurvan faller efter den punkten.
+1. Vad är skillnaden mellan elastisk och plastisk deformation?
+2. Ge ett verkligt exempel på en konstruktionsdel som utsätts för böjning.
+3. Vad är skillnaden mellan ett vridmoment och den vridning det ger?
+4. Varför räknas knäckning inte som ett sjätte belastningssätt vid sidan av drag, tryck, böjning, skjuvning och vridning?
+5. Varför riskerar ett slankt tryckbelastat stag att knäckas medan ett lika slankt dragbelastat stag inte gör det?
+6. Vad menas med spänningen i en belastad detalj?
+7. Varför kan två stänger av samma material tåla olika stor kraft?
+8. Vad menas med töjning?
+9. Vad beskriver ett materials elasticitetsmodul?
+10. Vad är ett materials sträckgräns?
+11. Varför är brottgränsen inte den spänning där provstaven går av?
 
 ## Övningar
 

@@ -107,13 +107,15 @@ Samma princip avgör varför en hög, fylld bokhylla lättare välter framåt ä
 
 ## Instuderingsfrågor
 
-1. Skriv upp de tre jämviktsvillkoren för ett plant problem och förklara vad var och en innebär. Varför räcker det inte med ett enda villkor för kraftsumman?
-2. Ge ett exempel på ett föremål som har kraftsumman noll i båda riktningarna men ändå inte är i jämvikt. Förklara varför.
-3. Varför får momentsumman beräknas kring vilken punkt som helst, och varför väljs ofta en punkt där en okänd kraft griper an?
-4. Förklara skillnaden mellan ett ledstöd, ett rullstöd och en inspänning utifrån vilka krafter och moment de kan ta upp.
-5. I kapitlets beräkningar på gångbron antas att stöden bara ger lodräta krafter. Vilket antagande om lasten ligger bakom förenklingen, och ge ett exempel på en konstruktion där den inte håller.
-6. Förklara sambandet mellan tyngdpunkt, stödyta och stabilitet, och beskriv vad som händer i det ögonblick ett föremål börjar välta.
-7. En hyllkonsol är fastskruvad i en vägg och bär en last ytterst på hyllplanet. Frilägg konsolen och avgör vilken idealiserad stödtyp infästningen mot väggen motsvarar. Förklara därefter varför den övre skruven i infästningen belastas i drag medan den nedre pressas mot väggen, och vad som händer med den dragkraften om hyllplanet görs dubbelt så djupt utan att lasten ändras. Bedöm slutligen vilket av de tre jämviktsvillkoren som är avgörande för att den här konstruktionen ska hålla.
+1. Vad innebär det att en konstruktion är i jämvikt?
+2. Vilka tre jämviktsvillkor gäller för en konstruktion som belastas i ett plan?
+3. Varför kan kraftsumman vara noll i båda riktningarna medan konstruktionen ändå inte är i jämvikt?
+4. Vad är en stödreaktion?
+5. Varför beräknas stödreaktionerna ofta först när en konstruktion ska analyseras?
+6. Vad är skillnaden mellan ett ledstöd och ett rullstöd i fråga om vilka krafter de kan ta upp?
+7. Vad menas med en konstruktions tyngdpunkt?
+8. När välter ett föremål, uttryckt med tyngdpunktens lodlinje och stödytan?
+9. Varför ger en låg tyngdpunkt och en bred stödyta god stabilitet? Ge ett verkligt exempel.
 
 ## Övningar
 
