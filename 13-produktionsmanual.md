@@ -19,7 +19,7 @@ Alla kommandon körs från projektroten.
 | Kommando | Gör |
 |---|---|
 | `npm run skeleton` | Skapar mappar och tomma avsnittsfiler ur bokstrukturen. Skriver aldrig över befintliga filer. |
-| `npm run validate` | Kör samtliga tvärgående kontroller och skriver status- och täckningsöversikt. Körs också automatiskt före varje webbygge. |
+| `npm run validate` | Kör samtliga tvärgående kontroller. Standardläget skriver ut sammanfattning, varningar, migreringsskuld och fel; `-- --full` lägger till status- och täckningsöversikt (se "Uppföljning"). Körs också automatiskt före varje webbygge. |
 | `npm run begrepp` | Genererar det centrala begreppsregistret till `export/begreppsregister.md`. |
 | `npm run export` | Sammanställer förlagsmanus i läsordning till `export/` (Word via Pandoc). Tar bara med avsnitt med status `fardig-forsta-version` eller högre; annan lägstanivå väljs med `-- --status=<status>` eller `-- --status=alla`. |
 | `npm run export:review` | Bygger det redaktionella granskningsmanuset till `dist/review/granskningsmanus.docx` och `.html` (samma innehåll och ordning, endast `fardig-forsta-version` och uppåt) och kör automatiska efterkontroller. Kräver Pandoc. Words innehållsförteckning uppdateras med Ctrl+A, F9. Referensdokumentet `scripts/review-reference.docx` återskapas vid behov med `node scripts/make-review-reference.mjs`. |
@@ -208,7 +208,7 @@ Kapitel- och avsnittsstruktur ändras inte utan uttryckligt beslut (08, "AI får
 
 # Uppföljning
 
-`npm run validate` är produktionens lägesrapport:
+`npm run validate -- --full` är produktionens lägesrapport (`kapitel-klar` kör detta läge):
 
 - **Statusöversikt** — antal avsnitt per status, totalt och per kapitel.
 - **Kursplanetäckning** — antal påbörjade avsnitt per kursplanepunkt: `●` = täckt i primärkapitlet, `◐` = hittills endast i berörda kapitel, `·` = inget påbörjat innehåll ännu.

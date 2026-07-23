@@ -10,7 +10,7 @@
     "begrepp": "node scripts/begreppsregister.mjs",
     "export": "node scripts/export-manuscript.mjs",
     "export:review": "node scripts/export-review.mjs",
-    "kapitel-klar": "npm run validate && npm run begrepp && npm --prefix site run build && npm run export && npm run export:review"
+    "kapitel-klar": "npm run validate -- --full && npm run begrepp && npm --prefix site run build && npm run export && npm run export:review"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

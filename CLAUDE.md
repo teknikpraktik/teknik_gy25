@@ -14,7 +14,7 @@ Lärobok i Teknik nivå 1+2 (Gy25) som utvecklas som en modulär kunskapsdatabas
 ## Kommandon (körs från projektroten)
 
 - `npm run skeleton` — skapar mappar och tomma avsnittsfiler ur 06. Skriver aldrig över, tar aldrig bort.
-- `npm run validate` — alla kontroller + status- och täckningsrapport. **Snabb grind under redaktionell iteration:** vid vanliga textändringar (rubriktext, frågor, faktarättning, brödtext, uppgift, figurspec) räcker detta — kör inte webbygge/export/deploy per ändring, rensa inte Astro-cachen (13-produktionsmanual.md, "Arbetslägen").
+- `npm run validate` — alla kontroller; standardläget skriver ut sammanfattning, varningar, migreringsskuld och fel. `npm run validate -- --full` lägger till statusöversikt, per-kapitel-lista och kursplanetäckning (körs av `kapitel-klar`). **Snabb grind under redaktionell iteration:** vid vanliga textändringar (rubriktext, frågor, faktarättning, brödtext, uppgift, figurspec) räcker detta — kör inte webbygge/export/deploy per ändring, rensa inte Astro-cachen (13-produktionsmanual.md, "Arbetslägen").
 - `npm run kapitel-klar` — samlad "uppdatera allt" (validering + begreppsregister + webbygge + båda exporterna). Körs vid **kapitelavslut**, inte per ändring. Fullt bygge krävs dock direkt vid ändring i schema, remark-plugin, figurregister, Astro-config eller routing/struktur.
 - `npm run begrepp` — genererar begreppsregistret till `export/begreppsregister.md`.
 - `npm run export` — förlagsmanus från status `fardig-forsta-version` och uppåt (`-- --status=alla` för allt).

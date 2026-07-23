@@ -33,6 +33,12 @@ const root = path.dirname(fileURLToPath(import.meta.url));
 const contentDir = path.join(root, '..', 'content');
 const figuresRegistryPath = path.join(root, '..', 'figures', 'registry.yml');
 
+// Standardläget skriver bara ut det som avgör utfallet (sammanfattningsrad,
+// varningar, migreringsskuld, aktiva fel). --full lägger till statusöversikt,
+// per-kapitel-lista och kursplanetäckning för alla avsnitt — oförändrat
+// innehåll, bara villkorad utskrift. Ingen kontroll tas bort i något läge.
+const fullMode = process.argv.includes('--full');
+
 // Statusnivå från vilken de statusstyrda innehållskontrollerna gäller.
 const GRANSKNINGSSTATUS = statusEnum.indexOf('fardig-forsta-version');
 
@@ -594,7 +600,7 @@ for (const avs of avsnittFiler) {
 const totaltAntalAvsnitt = plan.filter((p) => !p.type).length;
 console.log(`Kontrollerade ${avsnittFiler.length} avsnittsfiler och ${kapitelavslutningsFiler.length} kapitelavslutningar av ${files.length} markdown-filer totalt (${totaltAntalAvsnitt} avsnitt i bokstrukturen, ${kapitel.length} kapitel).\n`);
 
-if (avsnittFiler.length > 0) {
+if (fullMode && avsnittFiler.length > 0) {
 	console.log('Statusöversikt (avsnitt):');
 	for (const [status, count] of Object.entries(statusCount)) {
 		console.log(`  ${status}: ${count}`);
@@ -618,14 +624,18 @@ function tackningsrad(punkt, nivaKey) {
 	const symbol = primar > 0 ? '●' : taggade.length > 0 ? '◐' : '·';
 	return `  ${symbol} ${punkt.id} [kap ${String(punkt.primar).padStart(2)}] ${punkt.text.slice(0, 80)}${punkt.text.length > 80 ? '…' : ''} (${primar} i primärkapitlet${ovriga > 0 ? `, ${ovriga} övriga` : ''})`;
 }
-console.log('Kursplanetäckning (påbörjade avsnitt per punkt; ● = täckt i primärkapitlet, ◐ = endast i övriga):');
-console.log(' Nivå 1:');
-for (const punkt of niva1) console.log(tackningsrad(punkt, 'niva1'));
-console.log(' Nivå 2:');
-for (const punkt of niva2) console.log(tackningsrad(punkt, 'niva2'));
-console.log(' Syftesmål:');
-for (const punkt of syftesmal) console.log(tackningsrad(punkt, 'bada'));
-console.log('');
+if (fullMode) {
+	console.log('Kursplanetäckning (påbörjade avsnitt per punkt; ● = täckt i primärkapitlet, ◐ = endast i övriga):');
+	console.log(' Nivå 1:');
+	for (const punkt of niva1) console.log(tackningsrad(punkt, 'niva1'));
+	console.log(' Nivå 2:');
+	for (const punkt of niva2) console.log(tackningsrad(punkt, 'niva2'));
+	console.log(' Syftesmål:');
+	for (const punkt of syftesmal) console.log(tackningsrad(punkt, 'bada'));
+	console.log('');
+} else {
+	console.log('(Statusöversikt, per-kapitel-lista och kursplanetäckning dolda i standardläge — kör `npm run validate -- --full` för fullständig rapport.)\n');
+}
 
 // Skilj känd, förväntad migreringsskuld från aktiva fel. Strukturskulden
 // (kapitel 1-mappen + de utfasade projektuppgiftsfilerna) genereras som vanliga

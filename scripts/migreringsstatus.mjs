@@ -15,13 +15,12 @@
 // migrerat först när ALLA dess avsnitt följer referensstandarden (03; 1.1). I ett
 // migrerat kapitel är utfasade rubriker och gamla mönster aktiva fel, inte skuld.
 //
-// Inget kapitel är migrerat ännu. Kapitel 1 (Teknikens grunder) är påbörjat men
-// inte klart: bara 1.1 är omskrivet till referensstandarden, medan 1.2 fortfarande
-// bär rubriken "Praktiska uppgifter" och 1.3 saknar övningssektion. Kapitel 1 flyttas
-// hit först när 1.1, 1.2 och 1.3 alla följer standarden (rättat 2026-07-22, se
-// produktionslogg.md). Så länge settet är tomt behandlas varje kapitels utfasade
-// rubriker som förväntad migreringsskuld — utom när ett kapitel läggs till här, då de
-// blir aktiva fel (säkerhetsgrind: en osann migreringsflagga döljer aldrig avvikelser).
+// Inget kapitel är formellt migrerat än. migreradeKapitel flippas per kapitel
+// efter genomläsning och bekräftad full standardkonformitet (se
+// produktionslogg.md för respektive beslut). Så länge settet är tomt behandlas
+// varje kapitels utfasade rubriker som förväntad migreringsskuld — utom när ett
+// kapitel läggs till här, då de blir aktiva fel (säkerhetsgrind: en osann
+// migreringsflagga döljer aldrig avvikelser).
 export const migreradeKapitel = new Set();
 
 // Låsta kapitel — redigeringsskydd (redaktionellt beslut 2026-07-23).
