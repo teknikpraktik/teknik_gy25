@@ -99,11 +99,11 @@ figures: ["fig-6.1.1-a", "fig-6.1.2-a"]
 prerequisites: []              # id:n på andra avsnitt (t.ex. "5.2"), inte enskilda lärandemål
 ```
 
-Fälten `module`, `uppslag` och `practical_component` är **pensionerade** (redaktionellt beslut). Modul fanns bara som mellannivå i den tidigare, nu avvecklade arkitekturen. Uppslag är en layoutfråga, och praktisk täckning härleds från uppgiftsbankens kopplingar till avsnitten, inte från en boolesk flagga.
+Fälten `module`, `uppslag` och `practical_component` är **pensionerade** (redaktionellt beslut). Modul fanns bara som mellannivå i den tidigare, nu avvecklade arkitekturen. Uppslag är en layoutfråga, och praktisk täckning härleds från avsnittets och kapitlets Övningar (inklusive helkapitelövningen), inte från en boolesk flagga.
 
 Schemat är gemensamt för webbplatsens byggtidsvalidering (Astro content collections) och `scripts/validate.mjs`. Det finns bara på ett ställe och importeras av båda — ändra bara i `schemas/larandemal.schema.mjs`.
 
-Enda rent strukturella sidan i content/ är startsidan (`index.md`), som bara sätter `title`. Kapitelöversikten är inte en fil utan en genererad vy (se "Webbformat") och har därför ingen frontmatter alls. Kapitelavslutningarna (sammanfattning, begreppsövning, uppgiftsbank) är egna avsnitt med `type`-baserad frontmatter (se "Kapitelavslutningar").
+Enda rent strukturella sidan i content/ är startsidan (`index.md`), som bara sätter `title`. Kapitelöversikten är inte en fil utan en genererad vy (se "Webbformat") och har därför ingen frontmatter alls. Kapitelavslutningarna (sammanfattning, begreppsövning) är egna avsnitt med `type`-baserad frontmatter (se "Kapitelavslutningar").
 
 ---
 
@@ -211,7 +211,7 @@ Kapitelavslutningarna är onumrerade i all synlig rubriknumrering; `sectionNumbe
 - **Figur-ID** — varje refererad figur finns i registret; oanvända figurer flaggas.
 - **Förkunskapsordning** — en fils `prerequisites` (avsnitts-id:n) måste ligga tidigare i läsordningen (kapitel.sektionsnummer), i linje med 04 §10.
 - **Kursplantaggning** — `curriculumReferences.niva1`/`niva2` innehåller punkt-id:n enligt 07 (via `kursplan-data.mjs`); tagg i ett kapitel utanför punktens matrisrad ger varning.
-- **Statusstyrda innehållskontroller** (målmodell; skriptmigrering pågår, se "Migreringsläge") — från status `fardig-forsta-version` krävs en **icke-tom sektion Instuderingsfrågor** (5–10 frågor, exakt en sektion) följd av en **icke-tom sektion Övningar** (2–10 övningar, exakt en sektion) enligt 03, icke-tomma `learningGoals` och `curriculumReferences`, och att inga HTML-kommentarer, TODO, uppslagsrubriker, äldre uppgiftsrubriker (Praktiska uppgifter, Projektuppgifter, Förstå/Utveckla/Utmana med flera) eller numrerade rubriker finns kvar; tom `abilities`, AI-typiska formuleringar, tankstreck i elevtexten (05), fetstilade begrepp, förbjudna frågeformuleringar ("enligt texten", "i texten", "vad visar figuren"), markdownlänkar i elevtext, "uppslag" som självreferens och ovanligt många personnamn (05) ger varning eller fel.
+- **Statusstyrda innehållskontroller** (målmodell; skriptmigrering pågår, se "Migreringsläge") — från status `fardig-forsta-version` krävs bland annat icke-tomma sektioner Instuderingsfrågor och Övningar inom de spann som 03-bokens-arkitektur.md anger, ifyllda `learningGoals` och `curriculumReferences`, och frånvaro av HTML-kommentarer, TODO, uppslagsrubriker och äldre uppgiftsrubriker. Den fullständiga, gällande listan (exakta spann, förbjudna formuleringar, språkregler) definieras i 03 och CLAUDE.md ("Hårda regler"), inte här, så att den här sammanfattningen aldrig kan hamna i konflikt med den gällande regeln.
 - **Kapitelavslutningar** — stäms av mot 06-bokstruktur.md åt båda håll (rätt `type`/`chapter`/`sectionNumber`/`title`): sammanfattning och begreppslista, inga uppgiftsbanker.
 - **Statusöversikt** — sammanställer antal avsnitt per status, totalt och per kapitel, som ersättning för manuell bokföring i 06.
 - **Kursplanetäckningsöversikt** — antal påbörjade avsnitt per kursplanepunkt, uppdelat på primärkapitlet och övriga kapitel.

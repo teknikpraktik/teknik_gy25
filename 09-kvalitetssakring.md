@@ -80,9 +80,9 @@ Granskning sker på tre nivåer.
 
 □ Avsnittet följer mönstret löptext, instuderingsfrågor, övningar (03, redaktionellt beslut 2026-07-22).
 
-□ Avsnittet har EN samlad sektion Instuderingsfrågor med 5–10 frågor.
+□ Avsnittet har EN samlad sektion Instuderingsfrågor inom spannet 03 anger (5–15 frågor).
 
-□ Frågorna testar teknisk förståelse, inte läsförståelse: funktion, samband, begrepp, resonemang.
+□ Frågorna testar teknisk förståelse, inte läsförståelse: funktion, samband, begrepp, resonemang. Teknisk karaktär prioriteras framför samhällsvetenskaplig, utom i avsnitt vars innehåll faktiskt är teknik och samhälle (03, "Instuderingsfrågor").
 
 □ Inga formuleringar av typen "enligt texten", "i texten" eller "vad visar figuren".
 
@@ -146,6 +146,8 @@ Granskning sker på tre nivåer.
 
 □ Språket är sakligt.
 
+□ Kolon och semikolon används sparsamt, aldrig som pausmarkörer i prosa (strukturella kolon i definitionslista/uppställning/skala undantagna); bryt hellre meningen (05, "Kolon och semikolon").
+
 ---
 
 ## Helhetsbedömning
@@ -192,9 +194,9 @@ Granskning sker på tre nivåer.
 
 □ Kapitlet har inga projektuppgiftsavsnitt och ingen projektbank.
 
-□ Kapitlet har en eller två helkapitelövningar i de senare avsnittens övningar (03).
+□ Kapitlet har EN fokuserad, avgränsad helkapitelövning i ett av de senare avsnittens övningar (03).
 
-□ Varje helkapitelövning uppfyller de tre kraven: kräver stoff från flera avsnitt, resulterar i något dokumenterat, och har utskrivna utbyggnadssteg i formatet grunduppgift plus "Bygg ut: ..." så att eleven kan visa arbete på E-, C- och A-nivå.
+□ Helkapitelövningen kräver stoff från flera avsnitt, resulterar i något dokumenterat, och har ingen utskriven nivåstapling ("Bygg ut"/"Bygg ut vidare" utgår, produktionsstandard 2026-07-23): E-till-A ligger i öppenheten och betygskriterierna, inte i elevtexten.
 
 □ Helkapitelövningarna har inte trängt ut sista avsnittens egna grundövningar.
 

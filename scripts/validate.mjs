@@ -26,8 +26,6 @@ import {
 	migreradeKapitel,
 	lastaKapitel,
 	strukturskuldKategorier,
-	legacyOvningsrubrikFiler,
-	legacyBegreppFiler,
 	klassificeraStrukturskuld,
 } from './migreringsstatus.mjs';
 
@@ -522,19 +520,6 @@ for (const avs of avsnittFiler) {
 	}
 }
 
-// Hygien för legacyOvningsrubrikFiler: registret ska bara innehålla filer som
-// FAKTISKT ännu bär den utfasade rubriken "Praktiska uppgifter". Har en post
-// migrerats (fått "Övningar") utan att avregistreras, eller saknas filen, flaggas
-// den så registret inte ruttnar (migreringsstatus.mjs).
-for (const relPath of legacyOvningsrubrikFiler) {
-	const avs = avsnittFiler.find((a) => a.file === relPath);
-	if (!avs) {
-		warnings.push(`legacyOvningsrubrikFiler: posten ${relPath} saknar avsnittsfil — ta bort den ur scripts/migreringsstatus.mjs.`);
-	} else if (!/^#{2,4}\s+Praktiska uppgifter\s*$/m.test(avs.body)) {
-		warnings.push(`legacyOvningsrubrikFiler: ${relPath} bär inte längre rubriken "Praktiska uppgifter" — ta bort den ur scripts/migreringsstatus.mjs.`);
-	}
-}
-
 // -------------------------------------------------------- Kapitelavslutningar
 // Strukturkällan är 06-bokstruktur.md självt (via bokstruktur-data.mjs) — varje
 // kapitel har (nya modellen, 2026-07-22) Sammanfattning och Begrepp som sina två
@@ -570,18 +555,10 @@ for (const ka of kapitelavslutningsFiler) {
 // 2026-07-22): en kompakt ordlista utan punktmarkering, en post per rad på formen
 // "**Begrepp:** Definition." — fetstilt begrepp med kolon inom fetstilen, inga
 // tankstreck, definition som fullständig mening med avslutande punkt. Kontrolleras
-// från granskningsstatus. Filer i legacyBegreppFiler har ännu det gamla
-// ifyllnadsformatet och redovisas som migreringsskuld i stället för aktivt fel.
+// från granskningsstatus.
 for (const ka of kapitelavslutningsFiler) {
 	if (ka.type !== 'begreppsovning') continue;
 	if (statusEnum.indexOf(ka.status) < GRANSKNINGSSTATUS) continue;
-	if (legacyBegreppFiler.has(ka.file)) {
-		skuld.push({
-			kategori: strukturskuldKategorier.BEGREPP_FORMAT,
-			msg: `${ka.file}: gammalt ifyllnadsformat i begreppslistan — migreras till ordlisteformatet "**Begrepp:** Definition." när kapitlet revideras.`,
-		});
-		continue;
-	}
 	const rader = ka.body.split('\n').map((r) => r.replace(/\r$/, '')).filter((r) => r.trim() !== '');
 	if (rader.length === 0) {
 		errors.push(`${ka.file}: begreppslistan är tom (03-bokens-arkitektur.md, "Begrepp").`);

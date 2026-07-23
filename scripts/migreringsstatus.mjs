@@ -9,9 +9,7 @@
 //
 // Denna fil är den enda redigeringsytan för migreringsläget. validate.mjs läser
 // den för att skilja förväntad migreringsskuld från aktiva fel. Uppdatera den i
-// takt med att kapitel migreras (flytta kapitelnummer till migreradeKapitel, ta
-// bort poster ur legacyOvningsrubrikFiler när respektive avsnitt fått rubriken
-// "Övningar", osv.).
+// takt med att kapitel migreras (flytta kapitelnummer till migreradeKapitel).
 
 // Kapitel vars innehållsmodell räknas som migrerad. Ett kapitel räknas som
 // migrerat först när ALLA dess avsnitt följer referensstandarden (03; 1.1). I ett
@@ -47,37 +45,7 @@ export const lastaKapitel = new Set([2]);
 export const strukturskuldKategorier = {
 	PROJEKTUPPGIFTER: 'Utfasade projektuppgiftsfiler kvar i content/ (NN-projektuppgifter.md saknas i 06)',
 	OVNINGSRUBRIK: 'Utfasad övningsrubrik "Praktiska uppgifter" i ej migrerat kapitel (migreras till "Övningar")',
-	BEGREPP_FORMAT: 'Gammalt begreppslisteformat (ifyllnadslista) i ej migrerat kapitel (migreras till ordlisteformatet)',
 };
-
-// Explicit register över avsnittsfiler i ej migrerade kapitel som ännu bär den
-// utfasade rubriken "Praktiska uppgifter" i stället för "Övningar". Klassificeringen
-// aktivt fel/skuld styrs av kapitlets migreringsstatus (migreradeKapitel), inte av
-// detta register — en "Praktiska uppgifter"-rubrik i ett ej migrerat kapitel är alltid
-// förväntad skuld, i ett migrerat kapitel alltid aktivt fel. Registret dokumenterar
-// vilka konkreta filer som återstår och hålls ärligt av en hygienkontroll i validate
-// (varnar för en post som inte längre bär rubriken, dvs. har migrerats utan att
-// avregistreras). Ta bort posten när avsnittet fått rubriken "Övningar".
-//
-// Kapitel 1 hanteras numera via sin migreringsstatus, inte via detta register: 1.2
-// har därför lyfts ut (rättat 2026-07-22). Att bara 1.1 är omskrivet är exakt varför
-// kapitel 1 inte längre är migrerat (se migreradeKapitel).
-// Tomt: alla avsnitt som hade den utfasade rubriken "Praktiska uppgifter" har
-// migrerats till "Övningar" (kapitel 1, 2 och 6). Registret behålls för framtida
-// bruk om ett ännu ej migrerat kapitel skulle visa sig ha den gamla rubriken.
-export const legacyOvningsrubrikFiler = new Set([]);
-
-// Begreppsövningsfiler (kapitelavslutningar) som ännu använder det gamla
-// ifyllnadsformatet (punktlista med bara begrepp, utan definitioner) i stället
-// för ordlisteformatet `**Begrepp:** Definition.` (03-bokens-arkitektur.md,
-// "Begrepp"). Begreppslistans formatkontroll i validate hoppar över dessa och
-// redovisar dem som förväntad migreringsskuld i stället för aktivt fel, eftersom
-// de kräver nyskrivna definitioner som hör till kapitlets revidering. Ta bort
-// posten när kapitlet fått definitioner i det nya formatet. Kapitel 6:s
-// begreppslista är numera konverterad till ordlisteformatet (30 definitioner,
-// 2026-07-23) och har därför lyfts ut; övriga ej producerade kapitels
-// begreppsfiler är tomma skelett (status ej-paborjad) och kontrolleras inte.
-export const legacyBegreppFiler = new Set([]);
 
 // Klassificerar ett redan genererat valideringsfel som känd strukturell
 // migreringsskuld och returnerar kategorietiketten, annars null. Signaturen är
