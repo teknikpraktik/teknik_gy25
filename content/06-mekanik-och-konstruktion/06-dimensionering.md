@@ -16,17 +16,17 @@ learningGoals:
     av tillåten spänning och säkerhetsfaktor.
   - Bedöma beräkningsresultats rimlighet med överslagsräkning och enhetskontroll.
 abilities: [f3, f2]
-concepts_introduced: ["last", "egentyngd", "nyttig last", "vindlast", "snölast", "statisk belastning", "dynamisk belastning", "tillåten spänning", "säkerhetsfaktor", "dimensionering", "överslagsräkning"]
-concepts_used: ["kraft", "belastning", "spänning", "sträckgräns", "tvärsnitt", "dragkraft"]
+concepts_introduced: ["säkerhetsfaktor", "dimensionering"]
+concepts_used: ["kraft", "spänning", "sträckgräns", "dragkraft"]
 figures: ["fig-6.6.1-a", "fig-6.6.2-a", "fig-6.6.3-a"]
 prerequisites: ["6.1", "6.3", "6.4", "6.5"]
 ---
 
 ## Laster och belastningsfall
 
-Innan en enda dimension kan bestämmas måste konstruktören veta vad konstruktionen faktiskt ska klara. De yttre orsakerna till en konstruktions belastning kallas **laster**, och att kartlägga dem är dimensioneringens första steg.
+Innan en enda dimension kan bestämmas måste konstruktören veta vad konstruktionen faktiskt ska klara. De yttre orsakerna till en konstruktions belastning kallas laster, och att kartlägga dem är dimensioneringens första steg.
 
-Alla konstruktioner bär sin egen **egentyngd**, vikten av materialet konstruktionen själv består av. Den är alltid närvarande och förändras sällan över tid. Utöver egentyngden tillkommer den **nyttiga lasten**, den last konstruktionen är till för att bära: trafikanterna på en gångbro, möblerna i ett rum, godset i ett lager. Utomhuskonstruktioner måste dessutom klara **vindlast**, det tryck och sug vinden utövar mot konstruktionens ytor, och i snörika klimat **snölast**, tyngden av snö som lägger sig på tak och andra ytor.
+Alla konstruktioner bär sin egen egentyngd, vikten av materialet konstruktionen själv består av. Den är alltid närvarande och förändras sällan över tid. Utöver egentyngden tillkommer den nyttiga lasten, den last konstruktionen är till för att bära: trafikanterna på en gångbro, möblerna i ett rum, godset i ett lager. Utomhuskonstruktioner måste dessutom klara vindlast, det tryck och sug vinden utövar mot konstruktionens ytor, och i snörika klimat snölast, tyngden av snö som lägger sig på tak och andra ytor.
 
 Gångbron visar varför den nyttiga lasten måste bestämmas för sig och inte gissas ur ett enskilt fall. Bron är 6,0 m lång och 1,5 m bred, alltså 9,0 m² gångbana, och egentyngden är 3600 N. Enstaka cyklister, som tidigare avsnitt räknat med, väger några hundra newton. Men en gångbro ska klara att vara full av folk, och för gångtrafik räknar man i Sverige normalt med storleksordningen 4 kN per kvadratmeter gångbana. Full last blir då
 
@@ -34,7 +34,7 @@ Gångbron visar varför den nyttiga lasten måste bestämmas för sig och inte g
 
 alltså tio gånger brons egentyngd, och fyrtio gånger den enskilda cyklist bron dimensioneras för att klara utan att någon reflekterar över saken. En konstruktion räknas därför alltid mot flera belastningsfall, och det är sällan det vardagliga fallet som blir avgörande.
 
-Lasterna skiljer sig också åt i hur de varierar över tid. En **statisk belastning** förändras långsamt eller inte alls, som egentyngden eller ett stillastående lager. En **dynamisk belastning** varierar snabbt, upprepas eller innefattar rörelse och stöt, som trafik i rörelse, vindbyar eller ett fordon som bromsar hårt. Dynamiska laster kan ge en långt större verkan än deras egen storlek antyder, om de träffar konstruktionen i takt med dess egen naturliga svängning.
+Lasterna skiljer sig också åt i hur de varierar över tid. En statisk belastning förändras långsamt eller inte alls, som egentyngden eller ett stillastående lager. En dynamisk belastning varierar snabbt, upprepas eller innefattar rörelse och stöt, som trafik i rörelse, vindbyar eller ett fordon som bromsar hårt. Dynamiska laster kan ge en långt större verkan än deras egen storlek antyder, om de träffar konstruktionen i takt med dess egen naturliga svängning.
 
 Londons Millennium Bridge, en gångbro invigd år 2000, visar hur det kan gå till. På invigningsdagen började bron röra sig något i sidled när den fylldes av folk. Rörelsen i sig var liten, men den räckte för att fotgängarna skulle behöva anpassa sina steg för att hålla balansen, och en människa som balanserar på ett underlag som rör sig i sidled börjar automatiskt gå i takt med underlaget. Ju fler som anpassade sig, desto mer samtidiga blev sidokrafterna från stegen, och desto kraftigare blev rörelsen, som i sin tur fick ännu fler att anpassa sig. Bron och de gående kopplades alltså ihop i en återkoppling som byggde upp sig själv. Det var inte fråga om att tusentals människor råkade gå i takt av en slump. Bron stängdes efter två dagar och öppnades igen först efter att ha försetts med dämpare.
 
@@ -42,9 +42,9 @@ Londons Millennium Bridge, en gångbro invigd år 2000, visar hur det kan gå ti
 
 ## Säkerhetsfaktor och dimensioneringsprocessen
 
-**Dimensionering** är processen att välja material, form och mått för en konstruktion så att den klarar sina laster med god marginal. Kärnan i beräkningen är ett enkelt villkor: den verkliga spänningen i en detalj får aldrig överstiga den spänning materialet säkert klarar.
+*Dimensionering* är processen att välja material, form och mått för en konstruktion så att den klarar sina laster med god marginal. Kärnan i beräkningen är ett enkelt villkor: den verkliga spänningen i en detalj får aldrig överstiga den spänning materialet säkert klarar.
 
-Den spänning en detalj tillåts belastas med kallas **tillåten spänning**. Den sätts lägre än materialets sträckgräns för att ge marginal mot osäkerheter i beräkningen, mot laster som är större än väntat och mot att materialet inte är exakt så bra som tabellen påstår. Förhållandet mellan sträckgränsen och den tillåtna spänningen kallas **säkerhetsfaktorn**:
+Den spänning en detalj tillåts belastas med kallas tillåten spänning. Den sätts lägre än materialets sträckgräns för att ge marginal mot osäkerheter i beräkningen, mot laster som är större än väntat och mot att materialet inte är exakt så bra som tabellen påstår. Förhållandet mellan sträckgränsen och den tillåtna spänningen kallas *säkerhetsfaktorn*:
 
 tillåten spänning = sträckgräns / säkerhetsfaktor
 
@@ -84,7 +84,7 @@ Beräkningen ovan är alltså ett steg i en betydligt längre process. En verkli
 
 Ett beräknat svar är inte automatiskt ett korrekt svar. Ett enhets- eller teckenfel kan ge en diameter som är hundra gånger för liten utan att räkningen innehåller något synligt matematiskt fel, och den kontroll som fångar det är att fråga sig om svaret är rimligt.
 
-**Överslagsräkning** är en snabb, förenklad beräkning med avrundade tal som ger en ungefärlig storleksordning att jämföra det exakta svaret med. Lyftstagets dragkraft på 47 000 N avrundas till 50 000 N och den tillåtna spänningen till 100 N/mm², vilket ger arean 50 000 / 100 = 500 mm², i samma storleksordning som det exakta svaret 400 mm². Hade den exakta beräkningen i stället gett 4 mm² eller 40 000 mm² hade överslaget avslöjat felet omedelbart, långt innan diametern räknades ut.
+Överslagsräkning är en snabb, förenklad beräkning med avrundade tal som ger en ungefärlig storleksordning att jämföra det exakta svaret med. Lyftstagets dragkraft på 47 000 N avrundas till 50 000 N och den tillåtna spänningen till 100 N/mm², vilket ger arean 50 000 / 100 = 500 mm², i samma storleksordning som det exakta svaret 400 mm². Hade den exakta beräkningen i stället gett 4 mm² eller 40 000 mm² hade överslaget avslöjat felet omedelbart, långt innan diametern räknades ut.
 
 En enhetskontroll innebär att kontrollera att enheterna går ihop. I exemplet mäts kraften i newton och spänningen i newton per kvadratmillimeter, vilket ger arean direkt i kvadratmillimeter. Hade kraften av misstag lämnats kvar i kilonewton, 47 i stället för 47 000, hade arean blivit tusen gånger för liten och diametern under en millimeter, uppenbart orimlig för en stång som ska bära nästan fem ton. Blandas millimeter och meter, eller newton och kilonewton, uppstår fel som är lätta att missa om bara siffrorna kontrolleras.
 

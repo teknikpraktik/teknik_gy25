@@ -59,12 +59,11 @@ export const legacyOvningsrubrikFiler = new Set([]);
 // "Begrepp"). Begreppslistans formatkontroll i validate hoppar över dessa och
 // redovisar dem som förväntad migreringsskuld i stället för aktivt fel, eftersom
 // de kräver nyskrivna definitioner som hör till kapitlets revidering. Ta bort
-// posten när kapitlet fått definitioner i det nya formatet. Endast kapitel 6 har
-// producerat innehåll som ännu inte reviderats; övriga ej producerade kapitels
+// posten när kapitlet fått definitioner i det nya formatet. Kapitel 6:s
+// begreppslista är numera konverterad till ordlisteformatet (30 definitioner,
+// 2026-07-23) och har därför lyfts ut; övriga ej producerade kapitels
 // begreppsfiler är tomma skelett (status ej-paborjad) och kontrolleras inte.
-export const legacyBegreppFiler = new Set([
-	'06-mekanik-och-konstruktion/08-begrepp.md',
-]);
+export const legacyBegreppFiler = new Set([]);
 
 // Klassificerar ett redan genererat valideringsfel som känd strukturell
 // migreringsskuld och returnerar kategorietiketten, annars null. Signaturen är

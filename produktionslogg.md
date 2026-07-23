@@ -45,15 +45,39 @@ Den gamla `05-projektuppgifter.md` ligger kvar som migreringsskuld (raderas vid 
 
 ---
 
-# Kapitel 6 — revidering, mekanisk del klar, begreppsdel avvaktar beslut (2026-07-22)
+# Kapitel 6 — revidering: mekanisk del + begreppsdel klar, helkapitelövningar kvarstår (2026-07-22, uppdaterad 2026-07-23)
 
 Kapitel 6 (procedurspår) reviderat mekaniskt: rubrik "Praktiska uppgifter" → "Övningar" i 6.1–6.6, in-texthänvisningen "en av de praktiska uppgifterna" i 6.1 ändrad till "en av övningarna", alla 23 `[[figur:ID]]` → `[BILD X.Y-N]` med Innehåll ordagrant ur registret och nyskrivna bildtexter. 6.1–6.6 avregistrerade ur `legacyOvningsrubrikFiler`.
 
 **06-synk (lutande plan):** 6.1:s delavsnitt "Krafter på ett lutande plan" fanns i filen men saknades i 06-bokstruktur.md. Det är ett avsett, fullständigt delavsnitt (egen figur, flera stycken, parallellt med de andra), så det lades till i 06 mellan Kraftresultanter och Friläggning.
 
-**Avvaktar projektägarens beslut innan begreppsdelen görs:** kapitlets `concepts_introduced` registrerar ca 60 genuina begrepp, men begreppslistans `ordlista` har bara 29. Bindande huvudställe-kursivering + markerat=listat pekar mot att kursivera alla 60 och utöka listan till 60; task-formuleringen "Begrepp (29 st)" pekar mot en kurerad lista. Begreppsmarkering (fetstil → kursiv), begreppslistans konvertering och helkapitelövningarna (projektuppgifterna) väntar tills omfånget är avgjort. Kapitel 6:s begreppslista ligger kvar som `legacyBegreppFiler`-skuld tills dess.
+**Begreppsdelen genomförd (2026-07-23, kurerad lista):** omfånget avgjordes till den
+kurerade listan — de 30 begrepp som redan stod i begreppslistans `ordlista`
+(08-begrepp.md), inte alla ca 60 registrerade. Principen markerat = listat är nu
+uppfylld: varje avsnitts `concepts_introduced` är trimmat till snittet med ordlistan,
+och unionen över 6.1–6.6 är exakt de 30 (9 + 2 + 4 + 10 + 3 + 2).
 
-Kapitel 6 är alltså ännu inte i `migreradeKapitel`; brödtexten har fortfarande fetstilta begrepp i väntan på beslutet.
+- **Begreppsmarkering (fetstil → kursiv) i 6.1–6.6:** de 30 listade begreppen kursiveras
+  vid sitt huvudställe; alla övriga tidigare fetstilta ord (bl.a. *jämviktsvillkor,
+  ledstöd, rullstöd, inspänning, stödyta, belastning, deformation, brott, dragprov,
+  brottgräns, tvärsnitt, pelare, neutralaxel, I-balken, triangulering, stagning, båge,
+  ram, förband, last, egentyngd, nyttig last, vindlast, snölast, statisk/dynamisk
+  belastning, tillåten spänning, överslagsräkning, verkningslinje, hävstång, utväxling*)
+  är avfetade till vanlig brödtext och avregistrerade ur `concepts_introduced`. Inga
+  fetstilta ord kvar i 6.1–6.6:s brödtext. Redaktionell konsekvens att notera vid
+  fackgranskning: ett par bärande mekanikord (t.ex. *belastning*, *last*) är därmed inte
+  längre registrerade begrepp — de behålls som vanliga ord, i linje med den kurerade
+  listan. `concepts_used` i 6.6 rensat från `belastning`/`tvärsnitt` (nu oregistrerade).
+- **Begreppslistan (08-begrepp.md) konverterad** från gammalt ifyllnadsformat till
+  ordlisteformatet `**Begrepp:** Definition.` med 30 nyskrivna definitioner (max ~en
+  mening, byggda på hur begreppen införs i 6.1–6.6). Granska sakinnehållet i
+  definitionerna vid fackgranskning. Filen avregistrerad ur `legacyBegreppFiler`
+  (scripts/migreringsstatus.mjs); begreppslistans aktiva formatkontroll gäller nu och
+  passeras. `npm run validate`: 0 aktiva fel.
+
+**Kvarstår för kapitel 6:** helkapitelövningarna (viker in 09-projektuppgifter.md) och
+därefter radering av `09-projektuppgifter.md`. Kapitel 6 är ännu inte i
+`migreradeKapitel` — det avvaktar projektägarens genomläsning.
 
 ---
 

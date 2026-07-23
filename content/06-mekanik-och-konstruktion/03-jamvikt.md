@@ -15,7 +15,7 @@ learningGoals:
   - Bedöma en konstruktions stabilitet utifrån tyngdpunktens läge och stödytans
     storlek, och förklara när den välter.
 abilities: [f3]
-concepts_introduced: ["jämvikt", "jämviktsvillkor", "stödreaktion", "ledstöd", "rullstöd", "inspänning", "tyngdpunkt", "stödyta", "stabilitet"]
+concepts_introduced: ["jämvikt", "stödreaktion", "tyngdpunkt", "stabilitet"]
 concepts_used: ["kraft", "moment", "friläggning", "komposant"]
 figures: ["fig-6.3.1-a", "fig-6.3.2-b", "fig-6.3.2-a", "fig-6.3.3-a"]
 prerequisites: ["6.1", "6.2"]
@@ -23,9 +23,9 @@ prerequisites: ["6.1", "6.2"]
 
 ## Jämviktsvillkoren
 
-Gångbron står stilla, hur mycket trafik den än bär. Den varken accelererar uppåt, nedåt eller åt sidan, och den roterar inte. Ett föremål i det tillståndet, där alla krafter och moment som verkar på det tar ut varandra fullständigt, sägs befinna sig i **jämvikt**. Att ett föremål ser ut att stå stilla räcker inte som förklaring: jämvikt är ett tillstånd som går att kontrollera med räkning.
+Gångbron står stilla, hur mycket trafik den än bär. Den varken accelererar uppåt, nedåt eller åt sidan, och den roterar inte. Ett föremål i det tillståndet, där alla krafter och moment som verkar på det tar ut varandra fullständigt, sägs befinna sig i *jämvikt*. Att ett föremål ser ut att stå stilla räcker inte som förklaring: jämvikt är ett tillstånd som går att kontrollera med räkning.
 
-För en konstruktion som belastas i ett plan, vilket är den situation kapitlet behandlar, uttrycks jämvikt i tre **jämviktsvillkor**:
+För en konstruktion som belastas i ett plan, vilket är den situation kapitlet behandlar, uttrycks jämvikt i tre jämviktsvillkor:
 
 ΣF_x = 0
 
@@ -45,9 +45,9 @@ Momentsumman får beräknas kring vilken punkt som helst, eftersom ett föremål
 
 ## Stödreaktioner
 
-En balk som vilar på två stöd, som gångbrons körbana, hålls uppe av krafter från just de stöden. Dessa krafter kallas **stödreaktioner**: de är stödens svar på den last balken för vidare till dem. Att beräkna stödreaktionerna är ofta det första steget när en konstruktion ska analyseras, eftersom allt som sedan beräknas i balken bygger på hur stor last varje stöd faktiskt bär.
+En balk som vilar på två stöd, som gångbrons körbana, hålls uppe av krafter från just de stöden. Dessa krafter kallas *stödreaktioner*: de är stödens svar på den last balken för vidare till dem. Att beräkna stödreaktionerna är ofta det första steget när en konstruktion ska analyseras, eftersom allt som sedan beräknas i balken bygger på hur stor last varje stöd faktiskt bär.
 
-Vilka krafter ett stöd kan ge beror på hur det är byggt, och i beräkningar ersätts verkliga stöd med några få idealiserade typer. Ett **ledstöd** kan ta upp krafter både lodrätt och vågrätt, men hindrar inte balken från att vrida sig kring stödpunkten. Ett **rullstöd** kan bara ta upp kraft vinkelrätt mot underlaget och släpper igenom rörelser i sidled, vilket är hela poängen: en stålbro som värms av solen blir längre, och rullstödet låter den röra sig i stället för att spränga sina egna infästningar. En **inspänning** låser detaljen helt och kan ta upp både krafter och moment, som en flaggstång gjuten i ett fundament eller en balkong som skjuter ut ur en husvägg.
+Vilka krafter ett stöd kan ge beror på hur det är byggt, och i beräkningar ersätts verkliga stöd med några få idealiserade typer. Ett ledstöd kan ta upp krafter både lodrätt och vågrätt, men hindrar inte balken från att vrida sig kring stödpunkten. Ett rullstöd kan bara ta upp kraft vinkelrätt mot underlaget och släpper igenom rörelser i sidled, vilket är hela poängen: en stålbro som värms av solen blir längre, och rullstödet låter den röra sig i stället för att spränga sina egna infästningar. En inspänning låser detaljen helt och kan ta upp både krafter och moment, som en flaggstång gjuten i ett fundament eller en balkong som skjuter ut ur en husvägg.
 
 Gångbron har ett ledstöd vid A och ett rullstöd vid B. I kapitlets beräkningar antas dessutom att all last verkar lodrätt, vilket gör att ledstödets vågräta reaktion blir noll. Under det antagandet ger båda stöden bara lodräta krafter, och beräkningen förenklas till en enda kraft per stöd. Antagandet är rimligt för en gångbro med lodrät trafiklast, men det håller inte generellt: en bro som belastas av vind i sidled, eller en stege som lutar mot en vägg, får vågräta reaktioner som inte får glömmas bort.
 
@@ -87,9 +87,9 @@ Två saker framgår av jämförelsen. Stöden bär nu 2400 N och 2100 N i ställ
 
 ## Tyngdpunkt och stabilitet
 
-Varje föremål har en punkt där hela dess tyngd kan tänkas verka samlad, som om resten av föremålet vore viktlöst. Den punkten kallas föremålets **tyngdpunkt**. För ett jämnt fördelat föremål, som en rak balk eller en symmetrisk platta, ligger tyngdpunkten i geometrins mittpunkt, och det var precis den egenskapen som lät gångbrons egentyngd ersättas av en enda kraft i mitten. För en ojämnt fördelad konstruktion, som en lyftkran med tung motvikt i ena änden, ligger tyngdpunkten förskjuten mot den tyngre delen.
+Varje föremål har en punkt där hela dess tyngd kan tänkas verka samlad, som om resten av föremålet vore viktlöst. Den punkten kallas föremålets *tyngdpunkt*. För ett jämnt fördelat föremål, som en rak balk eller en symmetrisk platta, ligger tyngdpunkten i geometrins mittpunkt, och det var precis den egenskapen som lät gångbrons egentyngd ersättas av en enda kraft i mitten. För en ojämnt fördelad konstruktion, som en lyftkran med tung motvikt i ena änden, ligger tyngdpunkten förskjuten mot den tyngre delen.
 
-Ett föremåls **stödyta** är den yta som spänns upp mellan dess kontaktpunkter mot underlaget: avståndet mellan fötterna hos en stående person, eller den rektangel som en mobilkrans fyra utfällda stödben bildar mot marken. Sambandet mellan tyngdpunkt och stödyta avgör föremålets **stabilitet**. Så länge den lodräta linjen genom tyngdpunkten faller innanför stödytan skapar tyngdkraften inget moment som kan välta föremålet. Hamnar linjen utanför stödytan uppstår i stället ett moment kring stödytans kant, och föremålet välter.
+Ett föremåls stödyta är den yta som spänns upp mellan dess kontaktpunkter mot underlaget: avståndet mellan fötterna hos en stående person, eller den rektangel som en mobilkrans fyra utfällda stödben bildar mot marken. Sambandet mellan tyngdpunkt och stödyta avgör föremålets *stabilitet*. Så länge den lodräta linjen genom tyngdpunkten faller innanför stödytan skapar tyngdkraften inget moment som kan välta föremålet. Hamnar linjen utanför stödytan uppstår i stället ett moment kring stödytans kant, och föremålet välter.
 
 En mobilkran som lyfter en tung last riskerar att välta kring det stödben som ligger närmast lasten. Kranens egen tyngd, 50 000 N, verkar genom kranens tyngdpunkt 1,5 m på den stabila sidan om det stödbenet och ger ett stabiliserande moment på
 

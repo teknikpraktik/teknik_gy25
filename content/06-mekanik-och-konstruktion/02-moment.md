@@ -13,7 +13,7 @@ learningGoals:
   - Använda hävarmsprincipen för att förklara och beräkna utväxling i enkla
     maskiner och verktyg.
 abilities: [f3]
-concepts_introduced: ["moment", "momentarm", "verkningslinje", "hävstång", "utväxling"]
+concepts_introduced: ["moment", "momentarm"]
 concepts_used: ["kraft", "komposant"]
 figures: ["fig-6.2.1-a", "fig-6.2.1-b", "fig-6.2.2-a"]
 prerequisites: ["6.1"]
@@ -21,9 +21,9 @@ prerequisites: ["6.1"]
 
 ## Momentbegreppet
 
-En dörr öppnas lätt med ett tryck mot handtaget, men samma dörr rör sig knappt om man i stället trycker precis intill gångjärnen, hur hårt man än tar i. Kraften är densamma, men verkan skiljer sig helt. Det som avgör är inte bara kraftens storlek utan också var den griper an i förhållande till den punkt dörren vrider sig kring. Den vridande verkan av en kraft kallas **moment**, och den är lika central för att förstå tekniska lösningar som kraften själv: en skiftnyckel, en bultsax, en lyftkran och ett skruvförband fungerar alla för att en kraft omvandlas till en vridning kring en punkt.
+En dörr öppnas lätt med ett tryck mot handtaget, men samma dörr rör sig knappt om man i stället trycker precis intill gångjärnen, hur hårt man än tar i. Kraften är densamma, men verkan skiljer sig helt. Det som avgör är inte bara kraftens storlek utan också var den griper an i förhållande till den punkt dörren vrider sig kring. Den vridande verkan av en kraft kallas *moment*, och den är lika central för att förstå tekniska lösningar som kraften själv: en skiftnyckel, en bultsax, en lyftkran och ett skruvförband fungerar alla för att en kraft omvandlas till en vridning kring en punkt.
 
-Momentets storlek beror på två saker: kraftens storlek, och det vinkelräta avståndet från vridpunkten till kraften. Det avståndet behöver definieras noga. Varje kraft kan tänkas fortsätta obegränsat framåt och bakåt längs sin egen riktning, och den tänkta linjen kallas kraftens **verkningslinje**. **Momentarmen** är det vinkelräta avståndet från vridpunkten till kraftens verkningslinje. Sambandet skrivs
+Momentets storlek beror på två saker: kraftens storlek, och det vinkelräta avståndet från vridpunkten till kraften. Det avståndet behöver definieras noga. Varje kraft kan tänkas fortsätta obegränsat framåt och bakåt längs sin egen riktning, och den tänkta linjen kallas kraftens verkningslinje. *Momentarmen* är det vinkelräta avståndet från vridpunkten till kraftens verkningslinje. Sambandet skrivs
 
 *M = F · r*
 
@@ -63,7 +63,7 @@ Svaret är rimligt: 70 Nm är något mindre än de 75 Nm som en helt vinkelrät 
 
 ## Hävarmsprincipen
 
-En **hävstång** är en stel stång som kan vrida sig kring en fast punkt, och den är ett av de äldsta och mest grundläggande verktygen för att förstärka en kraft. Principen bygger direkt på momentformeln: eftersom M = F · r ger samma moment antingen en stor kraft på en kort arm eller en liten kraft på en lång arm.
+En hävstång är en stel stång som kan vrida sig kring en fast punkt, och den är ett av de äldsta och mest grundläggande verktygen för att förstärka en kraft. Principen bygger direkt på momentformeln: eftersom M = F · r ger samma moment antingen en stor kraft på en kort arm eller en liten kraft på en lång arm.
 
 En mutter som kräver ett moment på 120 Nm för att lossna kan lossas med en skiftnyckel vars handtag är 0,3 m långt genom att pressa vinkelrätt med kraften
 
@@ -73,7 +73,7 @@ Träs ett rör över nyckeln så att handtagets effektiva längd blir 0,6 m halv
 
 F = 120 / 0,6 = 200 N
 
-Förhållandet mellan den kraft ett verktyg avger och den kraft användaren lägger in kallas **utväxling**. En bultsax visar principen tydligt. Handtagen är långa och käftarna sitter tätt intill leden: kraften griper an 0,45 m från leden, medan skäreggen ligger 0,04 m från samma led. Trycker användaren med 200 N blir momentet kring leden
+Förhållandet mellan den kraft ett verktyg avger och den kraft användaren lägger in kallas utväxling. En bultsax visar principen tydligt. Handtagen är långa och käftarna sitter tätt intill leden: kraften griper an 0,45 m från leden, medan skäreggen ligger 0,04 m från samma led. Trycker användaren med 200 N blir momentet kring leden
 
 M = 200 · 0,45 = 90 Nm
 
