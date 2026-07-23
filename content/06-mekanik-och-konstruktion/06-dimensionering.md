@@ -42,13 +42,13 @@ Londons Millennium Bridge, en gångbro invigd år 2000, visar hur det kan gå ti
 
 ## Säkerhetsfaktor och dimensioneringsprocessen
 
-*Dimensionering* är processen att välja material, form och mått för en konstruktion så att den klarar sina laster med god marginal. Kärnan i beräkningen är ett enkelt villkor: den verkliga spänningen i en detalj får aldrig överstiga den spänning materialet säkert klarar.
+*Dimensionering* är processen att välja material, form och mått för en konstruktion så att den klarar sina laster med god marginal. Kärnan i beräkningen är ett enkelt villkor. Den verkliga spänningen i en detalj får aldrig överstiga den spänning materialet säkert klarar.
 
 Den spänning en detalj tillåts belastas med kallas tillåten spänning. Den sätts lägre än materialets sträckgräns för att ge marginal mot osäkerheter i beräkningen, mot laster som är större än väntat och mot att materialet inte är exakt så bra som tabellen påstår. Förhållandet mellan sträckgränsen och den tillåtna spänningen kallas *säkerhetsfaktorn*:
 
 tillåten spänning = sträckgräns / säkerhetsfaktor
 
-Kapitlets uppgifter anger alltid vilken säkerhetsfaktor som ska användas. Det är en pedagogisk förenkling. I verkligheten plockas ingen säkerhetsfaktor ur luften: den följer av standarder och föreskrifter, och den beror på vad som byggs, vilket material som används, hur väl lasten är känd, hur allvarliga följderna av ett brott skulle bli och om detaljen kan inspekteras. Moderna byggnormer använder dessutom oftast inte en enda säkerhetsfaktor alls, utan separata faktorer på lastsidan och på materialsidan. Ett tal som 2 eller 3 ska därför läsas som en siffra given i uppgiften, aldrig som ett allmängiltigt riktvärde.
+Kapitlets uppgifter anger alltid vilken säkerhetsfaktor som ska användas. Det är en pedagogisk förenkling. I verkligheten plockas ingen säkerhetsfaktor ur luften. Den följer av standarder och föreskrifter, och den beror på vad som byggs, vilket material som används, hur väl lasten är känd, hur allvarliga följderna av ett brott skulle bli och om detaljen kan inspekteras. Moderna byggnormer använder dessutom oftast inte en enda säkerhetsfaktor alls, utan separata faktorer på lastsidan och på materialsidan. Ett tal som 2 eller 3 ska därför läsas som en siffra given i uppgiften, aldrig som ett allmängiltigt riktvärde.
 
 Ett lyftstag i en verkstadstravers får bli exempel. Staget är en rak, rund stålstång som hänger lodrätt och bär lasten i ren dragkraft, vilket är precis det centriska fall där σ = F / A gäller. Staget ska bära dragkraften 47 000 N, materialet är konstruktionsstålet S235 med sträckgränsen 235 N/mm², och säkerhetsfaktorn 2 är given.
 
@@ -72,7 +72,7 @@ och den verkliga spänningen
 
 σ = 47 000 / 491 ≈ 96 N/mm²
 
-vilket ligger under de tillåtna 117,5 N/mm². Staget håller alltså med den valda dimensionen, och kontrollräkningen är ett nödvändigt sista steg: det räcker inte att räkna fram ett minsta mått, man måste också kontrollera att den dimension man faktiskt väljer klarar lasten.
+vilket ligger under de tillåtna 117,5 N/mm². Staget håller alltså med den valda dimensionen, och kontrollräkningen är ett nödvändigt sista steg. Det räcker inte att räkna fram ett minsta mått, man måste också kontrollera att den dimension man faktiskt väljer klarar lasten.
 
 Även efter det steget är staget inte färdigkonstruerat. Ska ändarna gängas blir tvärsnittet mindre i gängans botten än i den släta stången, och det är det minsta tvärsnittet som avgör. Infästningarna i båda ändar måste dimensioneras för sig. Utomhus eller i fuktig miljö tär korrosion på materialet över tid, och en travers som lyfter och sänker last gång på gång utsätter staget för en upprepad, dynamisk belastning som på lång sikt kan ge utmattningsbrott vid en spänning som staget klarar hur länge som helst under statisk last.
 
@@ -88,7 +88,7 @@ Ett beräknat svar är inte automatiskt ett korrekt svar. Ett enhets- eller teck
 
 En enhetskontroll innebär att kontrollera att enheterna går ihop. I exemplet mäts kraften i newton och spänningen i newton per kvadratmillimeter, vilket ger arean direkt i kvadratmillimeter. Hade kraften av misstag lämnats kvar i kilonewton, 47 i stället för 47 000, hade arean blivit tusen gånger för liten och diametern under en millimeter, uppenbart orimlig för en stång som ska bära nästan fem ton. Blandas millimeter och meter, eller newton och kilonewton, uppstår fel som är lätta att missa om bara siffrorna kontrolleras.
 
-En tredje kontroll är att fråga sig vad svaret betyder fysiskt. En stång på 25 mm som bär fem ton går att jämföra med något man sett: ungefär en tumme i tjocklek, och fem ton är ungefär tre personbilar. Den jämförelsen känns rimlig. Ett svar på 2 mm för samma last hade inte gjort det. Att ha en känsla för storleksordningar är en av de mest användbara egenskaperna hos en tekniker, och den byggs upp genom att göra jämförelsen varje gång, inte bara när svaret ser konstigt ut.
+En tredje kontroll är att fråga sig vad svaret betyder fysiskt. En stång på 25 mm som bär fem ton går att jämföra med något man sett, ungefär en tumme i tjocklek, och fem ton är ungefär tre personbilar. Den jämförelsen känns rimlig. Ett svar på 2 mm för samma last hade inte gjort det. Att ha en känsla för storleksordningar är en av de mest användbara egenskaperna hos en tekniker, och den byggs upp genom att göra jämförelsen varje gång, inte bara när svaret ser konstigt ut.
 
 [BILD 6.6-3] Innehåll: Två parallella uträkningar av lyftstagets tvärsnittsarea sida vid sida: en korrekt, med kraften i newton, som ger 400 mm², och en felaktig, där kraften av misstag lämnats i kilonewton (47 i stället för 47 000), som ger en area på 0,4 mm² och en diameter under en millimeter. De två diametrarna ritas ut i verklig storlek intill varandra, den korrekta som en stång ungefär lika grov som en tumme och den felaktiga som en tunn tråd, med lasten på nästan fem ton, motsvarande ungefär tre personbilar, angiven ovanför båda. Bildtext: "En enhetskontroll avslöjar det fel som annars är lätt att missa: en förväxlad enhet ger en tråd i stället för en stång."
 
