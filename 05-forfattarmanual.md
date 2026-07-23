@@ -190,6 +190,20 @@ Läsaren ska aldrig behöva gissa ett mellanled.
 
 ---
 
+# Detaljnivå i historiska översiktsavsnitt
+
+Historiska översikts- och svepavsnitt, till exempel 1.2 Teknik genom historien, får bära utvecklingsbågen med mer generell beskrivning än bokens övriga text i stället för en tät uppräkning av specifika namn, årtal och händelser. Detta bygger på den befintliga principen att beskrivande stoff tål hård komprimering (se "Informationstäthet" ovan och 03-bokens-arkitektur.md, "Löptext").
+
+Undantaget är avgränsat och har tre spärrar.
+
+Det gäller bara översiktsgenren. Resten av boken omfattas inte.
+
+Det upphäver inte konkret före abstrakt (se "Förklaringar" ovan). Den principen gäller fortsatt fullt ut för arbetade huvudexempel, procedur- och beräkningsstoff, begreppsintroducerande avsnitt och referensimplementationen 1.1.
+
+Även i översiktsavsnitt behålls några få konkreta ankare, så att texten inte blir helt abstrakt. Överkomprimering är samma misslyckande som babbel, fast från andra hållet.
+
+---
+
 # Exempel
 
 Exempel ska vara verkliga.

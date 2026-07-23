@@ -140,6 +140,8 @@ Konkret exempel före definition. Definitioner växer ur exemplen och står i l�
 
 Beskrivande stoff följer bågen vardag, problem, lösning, förklaring, generalisering. Procedur- och beräkningsstoff följer i stället förklara, visa uppställt exempel, öva, och tål mindre komprimering: stryk aldrig steg.
 
+Historiska översikts- och svepavsnitt får inom ett avgränsat undantag tillämpa hårdare komprimering än övriga avsnitt, med bibehållna konkreta ankare (05-forfattarmanual.md, "Detaljnivå i historiska översiktsavsnitt").
+
 Ett huvudexempel per avsnitt där det är möjligt, valt ur verkliga exempelområden (02-redaktionell-specifikation.md, "Exempel"), återkommande genom resonemang, bilder, frågor och övningar.
 
 ## Instuderingsfrågor
