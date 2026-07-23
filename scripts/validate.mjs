@@ -10,6 +10,7 @@
 // strukturell sida (bara index.md är tillåten).
 
 import { readFile, readdir } from 'node:fs/promises';
+import { execSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
@@ -23,6 +24,7 @@ import { allaAvsnitt, kapitel } from './bokstruktur-data.mjs';
 import { niva1, niva2, syftesmal, allaPunkter } from './kursplan-data.mjs';
 import {
 	migreradeKapitel,
+	lastaKapitel,
 	strukturskuldKategorier,
 	legacyOvningsrubrikFiler,
 	legacyBegreppFiler,
@@ -627,6 +629,34 @@ console.log('');
 		else kvarErrors.push(e);
 	}
 	errors = kvarErrors;
+}
+
+// ------------------------------------------------ Låsta kapitel (redigeringsskydd)
+// Ett låst kapitel (migreringsstatus.mjs, lastaKapitel) får aldrig ändras av Claude
+// Code (CLAUDE.md, "Låsta kapitel"). Vakten fångar en oavsiktlig redigering INNAN den
+// committas: skiljer sig någon fil under kapitlets mapp från HEAD (oincheckad ändring
+// — modifierad, staged eller untracked) ges aktivt fel. Läggs efter skuldomklassningen
+// så att det alltid blir ett hårt aktivt fel, aldrig omklassat till migreringsskuld.
+if (lastaKapitel.size > 0) {
+	const repoRoot = path.join(root, '..');
+	const contentEntries = await readdir(contentDir, { withFileTypes: true });
+	for (const kap of [...lastaKapitel].sort((a, b) => a - b)) {
+		const prefix = `${String(kap).padStart(2, '0')}-`;
+		const mapp = contentEntries.find((e) => e.isDirectory() && e.name.startsWith(prefix));
+		if (!mapp) continue;
+		const relPath = `content/${mapp.name}`;
+		let porslin;
+		try {
+			porslin = execSync(`git status --porcelain -- "${relPath}"`, { cwd: repoRoot, encoding: 'utf8' });
+		} catch {
+			warnings.push(`Låst kapitel ${kap}: kunde inte kontrollera ${relPath} mot HEAD (git ej tillgängligt) — redigeringsskyddet gick inte att verifiera.`);
+			continue;
+		}
+		for (const rad of porslin.split('\n').map((r) => r.trimEnd()).filter(Boolean)) {
+			const fil = rad.slice(3).replace(/^"(.*)"$/, '$1'); // porslin: XY <path>
+			errors.push(`Låst kapitel ${kap}: "${fil}" har oincheckade ändringar men kapitel ${kap} är låst för redigering (CLAUDE.md, "Låsta kapitel"). Återställ filen eller be projektägaren lyfta låset.`);
+		}
+	}
 }
 
 if (warnings.length > 0) {

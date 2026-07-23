@@ -26,6 +26,20 @@
 // blir aktiva fel (säkerhetsgrind: en osann migreringsflagga döljer aldrig avvikelser).
 export const migreradeKapitel = new Set();
 
+// Låsta kapitel — redigeringsskydd (redaktionellt beslut 2026-07-23).
+// Ett kapitel i detta set är låst för redigering av Claude Code: filer under
+// kapitlets mapp (content/NN-...) får läsas men ALDRIG ändras (CLAUDE.md, "Låsta
+// kapitel"). Validate har en vakt som ger aktivt fel om någon fil under ett låst
+// kapitels mapp skiljer sig från HEAD (oincheckad ändring), så en oavsiktlig
+// redigering fångas innan den committas. Låset lyfts bara på projektägarens
+// uttryckliga begäran — ta då bort kapitelnumret här.
+//
+// Kapitel 2 (Att lösa tekniska problem) låstes 2026-07-23 sedan det reviderats
+// klart mot referensstandarden (rubrik Övningar, [BILD]-format, kursiverade
+// begrepp, definitionslista, helkapitelövningar). Kvarvarande 05-projektuppgifter.md
+// är förväntad migreringsskuld och raderas först vid projektägarens finalisering.
+export const lastaKapitel = new Set([2]);
+
 // Kategorietiketter för grupperingen i validate-utdata.
 // KAP1_MAPP (kapitel 1-mappen ej omdöpt) är borttagen 2026-07-22: mappen
 // content/01-teknik-och-teknikutveckling har döpts om till 01-teknikens-grunder,
