@@ -300,8 +300,8 @@ Det finns inga separata projektuppgiftsavsnitt. Kapitlets större, integrerande 
 ### Friläggning
 
 ## 6.2 Moment
-- Förklara vad ett moment är och beräkna moment kring en punkt.
-- Använda hävarmsprincipen för att förklara och beräkna utväxling i enkla maskiner och verktyg.
+- Beräkna momentet av en kraft kring en punkt, även när kraften verkar snett, med hjälp av momentarmen eller kraftens vinkelräta komposant.
+- Använda hävarmsprincipen för att förklara och beräkna utväxling i verktyg och maskiner, och redogöra för vad en hög utväxling kostar i rörelsesträcka.
 
 ### Momentbegreppet
 ### Hävarmsprincipen
