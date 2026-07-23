@@ -10,6 +10,43 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# Produktionsstandard 2026-07-23 — tre regeländringar (projektägarens beslut)
+
+Tre regler inskrivna i styrdokumenten (03-bokens-arkitektur.md, 05-forfattarmanual.md,
+CLAUDE.md) och delvis i validate. Gäller Claude Codes generering och revidering framåt,
+**inte retroaktivt mot låsta kapitel** (kapitel 2).
+
+1. **Språk — kolon och semikolon.** Talstreck fortsatt förbjudet (oförändrat, 05
+   "Tankstreck"). Nytt avsnitt 05 "Kolon och semikolon": kolon och semikolon används
+   sparsamt, aldrig som pausmarkörer i prosa, bryt hellre meningen. Strukturella kolon
+   (definitionslista, uppställning, figuretiketter `Innehåll:`/`Bildtext:`, skalor som
+   2:1) är undantagna. Ingen hård lint (falska träffar på strukturella kolon); validate
+   ger en **mjuk varning** vid fler än 4 semikolon i ett avsnitt (endast avsnittsfiler,
+   så definitionslistor i begreppsövningar träffas inte).
+2. **Instuderingsfrågor.** Spannet ändrat från 5–10 till **5–15** per avsnitt. Hård
+   validate-regel tillagd (från status `fardig-forsta-version`, låsta kapitel undantas).
+   Alla befintliga icke-låsta avsnitt ligger på 5–10 och passerar. Nytt innehållskrav i
+   03: frågorna prioriterar teknisk karaktär (funktion, samband, beräkning, konstruktion)
+   framför samhällsvetenskaplig, med undantag åt samma håll som procedurspåret för avsnitt
+   vars innehåll faktiskt är teknik och samhälle (kapitel 1:s samspel teknik/naturvetenskap/
+   matematik, kapitel 13). Regeln är "prioritera", inte "förbjud".
+3. **Helkapitelövningar.** EN fokuserad, avgränsad helkapitelövning per kapitel (inte
+   flera). Den utskrivna nivåstaplingen grund + "Bygg ut:" + "Bygg ut vidare:" utgår —
+   E-till-A-progressionen ligger i uppgiftens öppenhet och betygskriteriernas kvalitetsord,
+   inte i utskrivna delsteg. Storprojektet bor kvar i kapitel 11; inget nytt projektkapitel.
+   Formuleringsregeln står fast (boken låter eleven visa, mäter inte). Validate ger en
+   **mjuk varning** (regressionsskydd) om "Bygg ut" står kvar i en övningssektion, inte
+   hårt fel eftersom befintlig text ännu inte är deflaterad.
+
+**Öppen deflateringspost — kapitel 1:s helkapitelövningar.** Kapitel 1:s befintliga
+staplade helkapitelövningar i `01-teknikens-grunder/03-drivkrafter-och-ingenjorsmassiga-val.md`
+(övningar med "Bygg ut" och "Bygg ut vidare") bryter nu mot regel 3 ovan. De **deflaterades
+inte** i detta steg (projektägarens uttryckliga instruktion). Validate flaggar dem med den
+mjuka "Bygg ut"-varningen. **Att göra separat:** skriv om kapitel 1:s helkapitelövningar till
+EN fokuserad, avgränsad övning utan utskriven nivåstapling när kapitel 1 revideras vidare.
+
+---
+
 # Backlog: väntande uppslag till ännu ej skrivna kapitel
 
 Uppslag som flyttats ut ur ett skrivet kapitel men hör hemma i ett kapitel som ännu inte är producerat. Bevakas här tills målkapitlet skrivs, så att inget innehåll tappas.

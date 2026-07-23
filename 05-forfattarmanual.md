@@ -83,9 +83,19 @@ Tankstreck och talstreck används inte i elevtexten.
 
 Detta gäller brödtext, uppgifter och figurtext.
 
-Meningar skrivs i stället om med punkt, komma, kolon eller annan naturlig meningsbyggnad.
+Meningar skrivs i stället om med punkt, komma eller annan naturlig meningsbyggnad. Kolon som pausersättning är inte ett fritt alternativ, se "Kolon och semikolon".
 
 Bindestreck i sammansatta ord och etablerade skrivsätt behålls när de språkligt behövs.
+
+---
+
+# Kolon och semikolon
+
+Kolon och semikolon används sparsamt, aldrig som stilistiska pausmarkörer i prosan. Där ett tankstreck vore fel är oftast även ett kolon eller semikolon fel som paus: bryt hellre meningen i två.
+
+Semikolon som binder ihop två huvudsatser hör i regel inte hemma i elevtexten. Skriv två meningar i stället.
+
+Gränsdragningen gäller pausmarkörer i löptext, inte strukturell notation. Strukturella kolon är legitima och omfattas inte: definitionslistans `**Begrepp:** definition` (03, "Begrepp"), kolon som inleder en kort uppställning, en figurspecifikations etiketter `Innehåll:` och `Bildtext:`, samt kolon i förhållanden och skalor som 2:1. Regeln riktar sig mot pausmarkörer i prosan, inte mot dessa uppställningar. `scripts/validate.mjs` lägger ingen hård kontroll här (risken för falska träffar på strukturella kolon är för stor) men varnar mjukt vid hög semikolontäthet i ett avsnitts prosa.
 
 ---
 

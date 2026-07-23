@@ -347,6 +347,41 @@ for (const avs of avsnittFiler) {
 		errors.push(`${beskr}: flera "Instuderingsfrågor"-sektioner — avsnittet ska avslutas med EN samlad sektion, inte en per delavsnitt.`);
 	}
 
+	// Antal instuderingsfrågor: 5–15 per avsnitt (03-bokens-arkitektur.md,
+	// "Instuderingsfrågor", redaktionellt beslut 2026-07-23). Hård regel från
+	// granskningsstatus. Låsta kapitel undantas — de nya reglerna gäller inte
+	// retroaktivt mot handredigerat, låst innehåll (migreringsstatus.mjs, lastaKapitel).
+	if (isSektioner.length === 1 && !lastaKapitel.has(avs.chapter)) {
+		const antalFragor = (isSektioner[0].match(/^\s*\d+\.\s+\S/gm) || []).length;
+		if (antalFragor >= 1 && (antalFragor < 5 || antalFragor > 15)) {
+			errors.push(`${beskr}: ${antalFragor} instuderingsfrågor — spannet är 5–15 per avsnitt (03-bokens-arkitektur.md, "Instuderingsfrågor").`);
+		}
+	}
+
+	// Mjukt regressionsskydd (03, "Helkapitelövningar", 2026-07-23): den utskrivna
+	// nivåstaplingen "Bygg ut"/"Bygg ut vidare" utgår ur helkapitelövningar.
+	// Varnar men felar inte — befintlig text är ännu inte deflaterad. Låsta kapitel
+	// undantas (kapitel 2 är auktoritativt och exemt).
+	if (!lastaKapitel.has(avs.chapter)) {
+		const harByggUt = ['Övningar', 'Praktiska uppgifter']
+			.flatMap((r) => extractSections(avs.body, r))
+			.some((sekt) => /\bBygg ut\b/.test(sekt));
+		if (harByggUt) {
+			warnings.push(`${beskr}: "Bygg ut" i en övningssektion — utskriven nivåstapling utgår ur helkapitelövningar (03-bokens-arkitektur.md, "Helkapitelövningar"); skriv om till EN sammanhållen uppgift.`);
+		}
+	}
+
+	// Mjuk varning vid hög semikolontäthet i prosa (05-forfattarmanual.md, "Kolon
+	// och semikolon", 2026-07-23). Endast avsnittsfiler — definitionslistor bor i
+	// begreppsövningar och träffas alltså inte. Ingen hård kontroll (falska träffar
+	// på strukturella kolon). Låsta kapitel undantas.
+	if (!lastaKapitel.has(avs.chapter)) {
+		const antalSemikolon = (avs.body.match(/;/g) || []).length;
+		if (antalSemikolon > 4) {
+			warnings.push(`${beskr}: ${antalSemikolon} semikolon i avsnittet — kolon och semikolon används sparsamt i prosa, aldrig som pausmarkörer (05-forfattarmanual.md, "Kolon och semikolon").`);
+		}
+	}
+
 	// Övningssektionen. Nya modellen (03, redaktionellt beslut 2026-07-22):
 	// avsnittets uppgifter samlas under EN rubrik "Övningar". Rubriken "Praktiska
 	// uppgifter" är utfasad (task 3, 2026-07-22). En kvarvarande "Praktiska
