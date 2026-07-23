@@ -72,16 +72,18 @@ Skiftnyckeln i kapitlets början bar en enda uppfinnares namn. En mobiltelefon h
 
 ## Instuderingsfrågor
 
-1. Förklara med egna ord vad en drivkraft bakom teknikutveckling är.
-2. Behovet av att nå varandra på avstånd är urgammalt. Varför kom den bärbara telefonen ändå först på 1980-talet?
-3. Vad är skillnaden mellan behovsdriven och möjlighetsdriven teknikutveckling? Ge ett exempel på varje ur texten, och förklara varför en teknisk möjlighet behöver möta ett behov för att få betydelse.
-4. Beskriv hur ekonomi och konkurrens drev mobiltelefonens utveckling under 1990-talet.
-5. Londons avloppssystem beskrivs som framtvingat av samhället. Förklara vad som menas.
-6. Varför bör den som vill förklara ett tekniskt genombrott leta efter flera drivkrafter samtidigt? Pröva modellen på ett genombrott ur kapitlets historiska avsnitt.
-7. Vad menas med infrastruktur och standard, och varför är båda avgörande för att en mobiltelefon ska fungera?
-8. Ge två exempel på yttre gränser som material, energi eller kunskap sätter för hur en telefon kan konstrueras.
-9. Förklara med egna ord vad en avvägning är. Ge ett eget exempel, och förklara utifrån det varför två telefoner som löser samma behov kan se helt olika ut och båda ändå vara bra lösningar.
-10. Varför är bilden av den ensamma uppfinnaren missvisande för hur det mesta av modern teknik utvecklas?
+1. Vad är en drivkraft bakom teknikutveckling?
+2. Varför kom den bärbara telefonen först på 1980-talet trots att behovet var mycket äldre?
+3. Vad är skillnaden mellan behovsdriven och möjlighetsdriven teknikutveckling?
+4. Varför får en teknisk möjlighet betydelse först när den möter ett behov?
+5. Hur drev ekonomi och konkurrens fram mindre och billigare mobiltelefoner under 1990-talet?
+6. Vad menas med att Londons avloppssystem framtvingades av samhället?
+7. Varför bör man leta efter flera drivkrafter samtidigt bakom ett tekniskt genombrott?
+8. Vad menas med infrastruktur?
+9. Varför är en gemensam standard avgörande för att telefoner från olika tillverkare ska fungera i samma nät?
+10. Ge ett exempel på en yttre gräns som material, energi eller kunskap sätter för hur en telefon kan konstrueras.
+11. Vad är en avvägning i teknisk konstruktion?
+12. Varför kan två telefoner som löser samma behov se helt olika ut och ändå båda vara bra lösningar?
 
 ## Övningar
 

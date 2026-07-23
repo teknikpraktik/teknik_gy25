@@ -164,16 +164,19 @@ Digitaliseringen har gjort kommunikation, tjänster och information snabbare och
 
 ## Instuderingsfrågor
 
-1. Förklara med egna ord vad ett tekniskt genombrott är.
-2. Vad menas med att jordbruket vände på människans hela tillvaro, och vilka följder fick matöverskottet?
-3. Vattenhjulet och boktryckarkonsten var båda tekniska genombrott. Förklara varför de räknas som genombrott och hur de förändrade samhället på olika sätt.
-4. Vad menas med att ett tekniskt genombrott kan få både positiva och negativa konsekvenser? Ge ett exempel.
-5. Förklara skillnaden mellan ett teknikskifte och en industriell revolution. Ge ett exempel på vardera.
-6. Vad menas med mekanisering? Förklara hur den förändrade var fabriker kunde byggas.
-7. Beskriv tre sätt som fabriksarbetet skilde sig från arbetet hemma eller hos hantverkaren.
-8. Vilka två nya grunder vilade den andra industriella revolutionen på?
-9. Vad är en transistor, och varför beskrivs den som grunden för allt digitalt?
-10. Vad menas med digitalisering? Beskriv också det gemensamma mönstret när musiken, fotografiet och bankärendet blev digitala.
+1. Vad är ett tekniskt genombrott?
+2. Varför räknas jordbruket som ett av historiens största tekniska genombrott?
+3. Vad var historiskt nytt med vattenhjulet jämfört med tidigare kraftkällor?
+4. Vad förändrade boktryckarkonsten framför allt?
+5. Vad är skillnaden mellan ett teknikskifte och en industriell revolution?
+6. Vad menas med mekanisering?
+7. Hur förändrade ångmaskinen var fabriker kunde placeras?
+8. Nämn ett sätt som fabriksarbetet skilde sig från hantverket eller arbetet i hemmet.
+9. Vilka två nya grunder vilade den andra industriella revolutionen på?
+10. Vad är en transistor?
+11. Varför beskrivs transistorn som grunden för all digital teknik?
+12. Vad menas med digitalisering?
+13. Vad är det gemensamma mönstret när musiken, fotografiet och bankärendet blev digitala?
 
 ## Övningar
 
