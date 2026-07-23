@@ -122,16 +122,18 @@ När problemet är formulerat och en strategi vald börjar arbetet med att ta fr
 
 ## Instuderingsfrågor
 
-1. Vilka tre frågor avgör vilken problemlösningsstrategi som passar ett tekniskt problem, och varför måste frågan om problemet går att överblicka besvaras före de andra två?
-2. Varför gäller strategin återanvänd befintlig lösning oavsett kostnad, så fort problemet är välkänt?
-3. Vad är det, enligt texten, som skiljer ingenjören från gissaren?
-4. Förklara med egna ord vad ett delproblem är, och varför en nedbrytning ska följa vad lösningen ska göra i stället för hur den ser ut.
-5. En robotdammsugare ska både hitta hem till laddstationen och undvika att köra i trappan. Bör de två funktionerna brytas ned som ett delproblem tillsammans eller som två separata delproblem? Motivera ditt val.
-6. Vad menas med att nedbrytningens risk sitter i skarvarna, och vad måste den som bryter ned ett problem därför bestämma om delarnas gränssnitt? Använd Mars Climate Orbiter som exempel.
-7. Vilka tre källor till en beprövad lösning tar texten upp? Förklara utifrån kardborrebandet vad den schweiziske ingenjörens egen insats bestod i, om naturen redan hade löst fästproblemet.
-8. Beskriv strategin pröva och förbättra med Edisons glödtråd som exempel, och förklara varför den passar särskilt bra när ett misslyckat försök är billigt.
-9. Vad skiljer ett dokumenterat försök från en isolerad slump, och vad är det som gör SpaceX sätt att testa raketer till pröva och förbättra snarare än gissande?
-10. Varför krävde Apollo 13-problemet analys och kontrollerade tester snarare än att pröva sig fram i skarpt läge? Beskriv vad Houston-teamet gjorde på marken innan bygginstruktionen skickades upp, och förklara utifrån det vad som avgör när analysera-innan-du-bygger är rätt strategi.
+1. Vilka tre frågor avgör vilken problemlösningsstrategi som passar ett tekniskt problem?
+2. Varför måste frågan om problemet går att överblicka besvaras före de andra två?
+3. Varför gäller strategin återanvänd befintlig lösning så fort problemet är välkänt, oavsett vad ett misslyckande skulle kosta?
+4. Vad skiljer ingenjören från gissaren när en strategi väljs?
+5. Vad är ett delproblem?
+6. Varför ska en nedbrytning följa vad lösningen ska göra i stället för hur den ser ut?
+7. Varför sitter den största risken vid en nedbrytning i skarvarna mellan delproblemen?
+8. Vilka tre källor till en beprövad lösning tar avsnittet upp?
+9. Vad kännetecknar strategin pröva och förbättra?
+10. Vad skiljer ett dokumenterat pröva-och-förbättra-arbete från ren gissning?
+11. När passar strategin analysera innan du bygger bäst?
+12. Varför testade Houston-teamet Apollo 13-adaptern i en kopia på marken innan besättningen byggde den?
 
 ## Övningar
 

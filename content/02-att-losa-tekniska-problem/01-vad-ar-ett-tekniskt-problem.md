@@ -59,13 +59,14 @@ Begränsningar känns som hinder men fungerar ofta tvärtom. Utan bilens bagageu
 
 ## Instuderingsfrågor
 
-1. Beskriv kedjan mellan behov, problem och lösning med egna ord, och ge ett eget exempel.
+1. Vad är sambandet mellan behov, tekniskt problem och teknisk lösning?
 2. Varför har ett tekniskt problem nästan aldrig bara ett rätt svar, till skillnad från en matematikuppgift?
-3. Vilka tre delar ska en problemformulering innehålla, vad beskriver var och en, och när är ett tekniskt problem färdigformulerat?
-4. Vad beskriver funktionen, och vad ska den aldrig göra?
-5. Vad krävs för att ett krav ska göra nytta, enligt texten?
-6. Vad är en begränsning, och varför fungerar begränsningar ofta som hjälp snarare än hinder?
-7. Här är två formuleringar av samma problem: (a) "Bordet ska ha fyra avskruvbara ben." (b) "Bordet ska kunna transporteras platt och monteras av kunden." Vilken är den bättre problemformuleringen, och varför?
+3. Vilka tre delar ska en problemformulering innehålla?
+4. Vad beskriver funktionen i en problemformulering?
+5. Varför ska funktionen beskriva vad lösningen ska göra och inte hur den ser ut?
+6. Vad krävs för att ett krav ska vara till nytta?
+7. Vad är en begränsning i en problemformulering?
+8. Varför kan en begränsning vara till hjälp snarare än ett hinder? Ge ett verkligt exempel.
 
 ## Övningar
 
