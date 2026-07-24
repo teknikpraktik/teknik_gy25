@@ -44,9 +44,9 @@ Drivkrafterna förklarar varför en teknik tas fram. De förklarar inte varför 
 
 [BILD 1.3-2] Innehåll: En teknisk lösning i centrum, till exempel en mobiltelefon. Runt om, som faktorer som pekar in mot och formar lösningen: behov och användare, befintlig teknik att bygga vidare på, naturvetenskaplig och matematisk kunskap, material, energiförsörjning, digital infrastruktur, ekonomi och resurser, lagar och standarder, säkerhetskrav, underhåll samt tekniska avvägningar mellan konkurrerande krav. Figuren är medvetet en omgivningsbild, inte en pil- eller stegkedja. Bildtext: "En teknisk lösning utvecklas aldrig fritt. Krav, resurser och begränsningar omger den och formar den."
 
-### Varje beslut låser nästa
+### Val som hänger ihop
 
-Föreställ dig att du leder utvecklingen av nästa mobiltelefon. Var börjar du? Du kan inte välja batteri förrän du vet hur stor telefonen får vara. Du kan inte välja skärm förrän du vet hur länge batteriet ska räcka. Du kan inte välja material till höljet förrän du vet hur mycket telefonen får väga. Samtidigt ska den tåla att tappas, klara lagkrav på värme och strålning, och gå att tillverka till ett pris någon vill betala. Inget val görs fritt. Varje beslut låser nästa.
+Föreställ dig att du leder utvecklingen av nästa mobiltelefon. Var börjar du? Du kan inte välja batteri förrän du vet hur stor telefonen får vara. Du kan inte välja skärm förrän du vet hur länge batteriet ska räcka. Du kan inte välja material till höljet förrän du vet hur mycket telefonen får väga. Samtidigt ska den tåla att tappas, klara lagkrav på värme och strålning, och gå att tillverka till ett pris någon vill betala. Inget val görs fritt, och varje val påverkar de andra. Därför får ingenjören ofta gå tillbaka och göra om tidigare beslut när ett nytt krav dyker upp.
 
 ### Material, energi och kunskap sätter ramarna
 
@@ -54,7 +54,7 @@ Först sätter naturen och kunskapen de yttre gränserna. Hur mycket energi som 
 
 En lösning bygger dessutom vidare på det som redan finns. Mobiltelefonen fungerar bara därför att det finns *infrastruktur* att ansluta till, de gemensamma system som andra tekniska lösningar bygger vidare på, som elnät, mobilnät och internet. Och för att telefoner från olika tillverkare ska fungera i samma nät krävs en *standard*, gemensamma regler som gör delar och system utbytbara. NMT var en sådan standard.
 
-### Avvägningen
+### Att väga krav mot varandra
 
 Innanför de gränserna görs ingenjörens svåraste val. En *avvägning* är ett val mellan krav där mer av det ena betyder mindre av det andra. En större skärm ger bättre bild men kortare batteritid. Ett tunnare hölje väger mindre men gör telefonen ömtåligare. Ett vattentätt hölje skyddar elektroniken men gör batteriet svårare att byta. Det finns sällan en lösning som är bäst på allt. Att utveckla teknik är till stor del att väga krav som inte kan uppfyllas samtidigt.
 
