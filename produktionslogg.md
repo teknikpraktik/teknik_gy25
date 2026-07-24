@@ -60,13 +60,16 @@ krävde EN fokuserad helkapitelövning per kapitel).
 - **Styrdokument uppdaterade:** 03 (avsnittet "Helkapitelövningar" omdöpt till
   "Kapitelövergripande uppgifter"), 05, 09, 12, 13, CLAUDE.md samt validate-meddelandena
   i scripts/validate.mjs och kommentaren i scripts/bokstruktur-data.mjs.
-- **Tillämpat nu:** avsnitt 1.3:s Övningar omskrivna till tre avsnittsnära uppgifter
-  (helkapitelövningen borttagen).
-- **Migreringsskuld:** befintliga helkapitelövningar i redan skrivna kapitel (t.ex.
-  kapitel 6) flyttas till lärarmaterialet när respektive kapitel revideras vidare. Låsta
-  kapitel (kapitel 2) rörs inte förrän de låses upp. Ingen ny validate-flagga tillkommer
-  (ingen regel kräver en helkapitelövning; "Bygg ut"-varningen står kvar som
-  regressionsskydd).
+- **Tillämpat:** helkapitelövningarna borttagna ur kapitel 1 (1.3), kapitel 2 (2.2) och
+  kapitel 6 (6.6). Kapitel 2 låstes upp 2026-07-24 på projektägarens begäran för denna
+  revidering (CLAUDE.md och `lastaKapitel` synkade, settet är tomt). I 1.3 skrevs Övningarna
+  om till tre avsnittsnära uppgifter; i 2.2 ersattes helkapitelövningen "Från behov till
+  vald strategi" av en avsnittsnära "Bryt ned och välj strategi" (nedbrytning + strategival
+  inom 2.2, utan att dra in 2.1:s problemformulering); i 6.6 togs "Gångbron från last till
+  dimension" bort (övningarna 1–5, alla dimensioneringsnära, räcker).
+- **Kvarvarande migreringsskuld:** övriga skrivna kapitel bör scannas för integrerande
+  storuppgifter när de revideras vidare. Ingen ny validate-flagga tillkommer (ingen regel
+  kräver en helkapitelövning; "Bygg ut"-varningen står kvar som regressionsskydd).
 
 ---
 
