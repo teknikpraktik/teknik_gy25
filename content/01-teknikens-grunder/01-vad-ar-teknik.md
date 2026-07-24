@@ -71,10 +71,15 @@ Teknik är alltså människans sätt att möta behov och problem med lösningar,
 7. Varför behövdes matematiska beräkningar när Öresundsförbindelsen dimensionerades?
 8. Vilka faktorer påverkade valet av en kombination av bro och tunnel för Öresundsförbindelsen?
 9. Ge ett exempel på hur tekniken har bidragit till naturvetenskapens utveckling.
-10. Förklara med egna ord vad som menas med begreppen behov, teknik och teknisk lösning.
 
 ## Övningar
 
-1. **Behovet bakom föremålet.** Välj ett vardagsföremål, till exempel en pennvässare, ett paraply eller en cykelpump. Skissa föremålet med dess viktigaste delar. Ange vilket behov eller problem det löser och skriv vid varje del vilken funktion den har. Beskriv avslutningsvis vilken naturvetenskaplig kunskap som du tror ligger bakom någon del av konstruktionen.
-2. **Två lösningar på samma behov.** Välj ett behov, till exempel att transportera människor, hålla mat kall eller ge ljus i mörker. Hitta två olika tekniska lösningar som uppfyller samma behov. Beskriv hur de fungerar och jämför deras fördelar och nackdelar utifrån funktion, användning och andra viktiga egenskaper.
-3. **Utveckla en egen teknisk lösning.** Identifiera ett problem i din vardag som skulle kunna lösas bättre. Skissa en egen teknisk lösning och beskriv vilket behov den uppfyller, hur den fungerar, vilka material den skulle kunna tillverkas av och vilken naturvetenskaplig kunskap som kan behövas för att den ska fungera.
+1. **Behovet bakom föremålet.** Välj ett vardagsföremål, till exempel en pennvässare, ett paraply eller en cykelpump. Skissa föremålet på fri hand med dess viktigaste delar och skriv vid varje del vilken funktion den har. Ange vilket behov eller problem föremålet löser.
+
+2. **Utveckla en egen teknisk lösning.** Identifiera något i din vardag som löses dåligt i dag. Skissa en egen teknisk lösning och beskriv vilket behov den svarar mot, hur den fungerar och vilka material den skulle kunna tillverkas av.
+
+3. **Teknik du inte kan hålla i.** Välj en teknisk lösning som inte är ett föremål, till exempel vattenförsörjningen, elnätet, kollektivtrafiken, sophämtningen eller en betaltjänst. Rita ett enkelt flödesschema som visar lösningens väg från början till den punkt där du möter den. Namnge minst tre delar i systemet och markera vilken enda del du själv kommer i kontakt med. Beskriv sedan vad som skulle hända om en av de andra delarna slutade fungera.
+
+4. **Två lösningar på samma behov.** Välj ett behov, till exempel att ta sig korta sträckor, hålla mat kall eller ge ljus i mörker, och två föremål som löser det på olika sätt: cykel och sparkcykel, kylskåp och kylväska, stearinljus och ficklampa. Skissa först vardera föremålet så att det framgår hur det fungerar. Ställ dem sedan mot varandra i en tabell med föremålen som kolumner och en rad för varje jämförelsepunkt: hur väl behovet uppfylls, fördelar, nackdelar samt minst två egenskaper till, till exempel pris, livslängd, användbarhet eller miljöpåverkan. Sammanställ skisser och tabell på ett A3-blad. Avsluta med vilken av lösningarna du skulle välja och varför.
+
+5. **Vad sätter gränserna?** Välj en teknisk lösning i din närhet, till exempel en cykelhjälm, en hiss, en termos eller en bro du passerar. Ange minst en naturvetenskaplig omständighet som sätter ramarna för hur den kan utformas, och minst en storhet som måste beräknas eller mätas för att lösningen ska fungera. Förklara vad som skulle kunna hända om den beräkningen gjordes fel.
