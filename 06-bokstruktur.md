@@ -119,12 +119,14 @@ Det finns inga separata projektuppgiftsavsnitt. Kapitlets större, integrerande 
 ### Elektronik och datorer
 ### Digitalisering, internet och AI
 
-## 1.3 Drivkrafter och ingenjörsmässiga val
+## 1.3 Vad driver teknikutvecklingen?
 - Identifiera och förklara hur behov, kunskap, tekniska möjligheter, ekonomiska intressen och samhällsförändringar kan samverka som drivkrafter bakom teknikutveckling.
-- Förklara hur befintlig teknik, kunskap, resurser, krav, begränsningar och tekniska avvägningar påverkar vilka tekniska lösningar som utvecklas och hur de utformas.
+- Förklara hur ny teknik oftast bygger vidare på befintlig teknik och därför ärver både dess möjligheter och dess begränsningar.
 
-### Vad sätter teknikutvecklingen i rörelse?
-### Vad formar den färdiga lösningen?
+### Behov och möjlighet
+### Ekonomi, politik och samhälle
+### Teknik bygger vidare på teknik
+### Flera drivkrafter samtidigt
 
 ## Sammanfattning
 

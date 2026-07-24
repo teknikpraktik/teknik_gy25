@@ -173,10 +173,12 @@ Digitaliseringen har gjort kommunikation, tjänster och information snabbare och
 7. Hur förändrade ångmaskinen var fabriker kunde placeras?
 8. Nämn ett sätt som fabriksarbetet skilde sig från hantverket eller arbetet i hemmet.
 9. Vilka två nya grunder vilade den andra industriella revolutionen på?
-10. Vad är en transistor?
-11. Varför beskrivs transistorn som grunden för all digital teknik?
-12. Vad menas med digitalisering?
-13. Vad är det gemensamma mönstret när musiken, fotografiet och bankärendet blev digitala?
+10. Vad menas med massproduktion, och varför förutsätter den standardiserade delar?
+11. Vad är en transistor?
+12. Varför beskrivs transistorn som grunden för all digital teknik?
+13. Vad menas med automation, och hur förändrade den arbetsuppgifterna i verkstäderna?
+14. Vad menas med digitalisering?
+15. Vad är det gemensamma mönstret när musiken, fotografiet och bankärendet blev digitala?
 
 ## Övningar
 

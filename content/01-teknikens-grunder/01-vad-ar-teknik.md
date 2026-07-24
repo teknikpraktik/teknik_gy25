@@ -66,11 +66,12 @@ Teknik är alltså människans sätt att möta behov och problem med lösningar,
 2. Nämn två tekniska lösningar som inte är fysiska föremål och förklara vilket behov var och en uppfyller.
 3. Tekniska lösningar kan delas in i fyra typer. Vilka, och ge ett exempel på varje.
 4. Ge tre exempel på behov och en teknisk lösning som uppfyller vart och ett.
-5. Ge tre exempel på naturvetenskaplig kunskap som behövdes när Öresundsförbindelsen konstruerades.
-6. Varför behövdes matematiska beräkningar när Öresundsförbindelsen dimensionerades?
-7. Vilka faktorer påverkade valet av en kombination av bro och tunnel för Öresundsförbindelsen?
-8. Ge ett exempel på hur tekniken har bidragit till naturvetenskapens utveckling.
-9. Förklara med egna ord vad som menas med begreppen behov, teknik och teknisk lösning.
+5. Hur kan man känna igen en teknisk lösning?
+6. Ge tre exempel på naturvetenskaplig kunskap som behövdes när Öresundsförbindelsen konstruerades.
+7. Varför behövdes matematiska beräkningar när Öresundsförbindelsen dimensionerades?
+8. Vilka faktorer påverkade valet av en kombination av bro och tunnel för Öresundsförbindelsen?
+9. Ge ett exempel på hur tekniken har bidragit till naturvetenskapens utveckling.
+10. Förklara med egna ord vad som menas med begreppen behov, teknik och teknisk lösning.
 
 ## Övningar
 

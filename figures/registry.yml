@@ -39,7 +39,7 @@ fig-1.2.1-b:
 
 fig-1.3.1-a:
   syfte: "Ge eleven en modell över drivkrafterna bakom teknikutveckling och visa att flera verkar samtidigt"
-  innehall: "En teknisk lösning i mitten. Runt om de drivkrafter som kan sätta utvecklingen i rörelse, grupperade: behov och problem; kunskap och nya tekniska möjligheter; ekonomi och konkurrens; samt samhälle (politik, lagstiftning, kriser, infrastruktur och användarnas beteenden). Pilar från flera drivkrafter pekar in mot lösningen samtidigt. Tre historiska spår i kanten exemplifierar de vanligaste startpunkterna: ett behov (konserven), en möjlighet (telegrafen) och en samhällsförändring (Londons avlopp)"
+  innehall: "En teknisk lösning i mitten. Runt om de drivkrafter som kan sätta utvecklingen i rörelse, grupperade: behov och problem; ny kunskap och tekniska möjligheter; ekonomi och konkurrens; samt politik och samhällsförändringar. Pilar från flera drivkrafter pekar in mot lösningen samtidigt, och en pil visar att lösningen dessutom bygger vidare på tidigare teknik. Tre spår i kanten exemplifierar de vanligaste startpunkterna: ett behov (den bärbara telefonen som väntade på tekniken), en möjlighet (lasern som först sökte en användning) och en samhällsförändring"
   referens: "Placeras vid textens inledning; texten hänvisar till figuren när drivkrafterna namnges och när samspelet mellan dem beskrivs"
   pedagogisk_funktion: "Ger eleven en analysmodell: varje historiskt eller nutida exempel kan sorteras efter drivkraft, och de samtidiga pilarna visar att teknik sällan uppstår av en enda orsak"
   anvands_i: ["1.3"]
@@ -85,13 +85,6 @@ fig-1.2.5-a:
   referens: "Placeras efter branschexemplen; texten hänvisar till figuren när det gemensamma mönstret formuleras"
   pedagogisk_funktion: "Lyfter eleven från tre berättelser till ett återanvändbart mönster som kan tillämpas på nya branscher"
   anvands_i: ["1.2"]
-
-fig-1.3.2-a:
-  syfte: "Visa att en teknisk lösning formas av många faktorer samtidigt, inte utvecklas fritt"
-  innehall: "En teknisk lösning i centrum, till exempel en mobiltelefon. Runt om, som faktorer som pekar in mot och formar lösningen: behov och användare, befintlig teknik att bygga vidare på, naturvetenskaplig och matematisk kunskap, material, energiförsörjning, digital infrastruktur, ekonomi och resurser, lagar och standarder, säkerhetskrav, underhåll samt tekniska avvägningar mellan konkurrerande krav. Figuren är medvetet en omgivningsbild, inte en pil- eller stegkedja"
-  referens: "Placeras vid genomgången av vad som formar en lösning; texten hänvisar till figuren när faktorerna räknas upp och när mobiltelefonen används som exempel"
-  pedagogisk_funktion: "Gör kärnpoängen avläsbar: lösningen i mitten omges av krav, resurser och begränsningar, och eleven ser att samma behov kan ge olika lösningar när omgivningen skiljer sig"
-  anvands_i: ["1.3"]
 
 fig-2.1.1-a:
   syfte: "Visa att samma behov kan ge helt olika lösningar beroende på hur problemet formuleras"
