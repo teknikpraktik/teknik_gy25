@@ -180,7 +180,7 @@ Granskning sker på tre nivåer.
 
 □ Kapitlet känns jämnt i kvalitet.
 
-## Kapitelavslutningar och helkapitelövningar
+## Kapitelavslutningar och övningar
 
 □ Kapitlet avslutas i ordningen Sammanfattning, Begrepp — två onumrerade avsnitt utan lärandemål (03).
 
@@ -194,15 +194,13 @@ Granskning sker på tre nivåer.
 
 □ Kapitlet har inga projektuppgiftsavsnitt och ingen projektbank.
 
-□ Kapitlet har EN fokuserad, avgränsad helkapitelövning i ett av de senare avsnittens övningar (03).
+□ Varje avsnitts Övningar tränar och hänvisar bara till det egna avsnittets stoff; boken har inga helkapitelövningar eller integrerande storuppgifter över flera avsnitt (03, "Kapitelövergripande uppgifter").
 
-□ Helkapitelövningen kräver stoff från flera avsnitt, resulterar i något dokumenterat, och har ingen utskriven nivåstapling ("Bygg ut"/"Bygg ut vidare" utgår, produktionsstandard 2026-07-23): E-till-A ligger i öppenheten och betygskriterierna, inte i elevtexten.
+□ Kapitlets större, integrerande och kapitelövergripande uppgifter ligger i ett separat lärarmaterial utanför boken, inte i elevtexten (03).
 
-□ Helkapitelövningarna har inte trängt ut sista avsnittens egna grundövningar.
+□ Övningarna har ingen utskriven nivåstapling ("Bygg ut"/"Bygg ut vidare" utgår): E-till-A ligger i öppenheten och betygskriterierna, inte i elevtexten (03).
 
-□ Minst en helkapitelövning fungerar som egentlig syntesuppgift.
-
-□ Varje helkapitelövning fungerar fristående (inga hänvisningar till "föregående avsnitt" eller "figuren ovan") och innebär ett verkligt producerande eller genomförande moment.
+□ Varje övning fungerar fristående (inga hänvisningar till "föregående avsnitt" eller "figuren ovan").
 
 □ Övningarna över kapitlet varierar i form på ett sätt som är relevant för kapitlets ämnesinnehåll. Variationen är inte artificiellt konstruerad.
 

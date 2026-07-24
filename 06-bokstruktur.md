@@ -92,7 +92,7 @@ Regler:
 
 Varje kapitel avslutas med två onumrerade H2-avsnitt, alltid i denna ordning och med exakt dessa titlar: **Sammanfattning**, **Begrepp**. De är egna innehållstyper (`type: kapitelsammanfattning` / `begreppsovning`), inte lärandemål, saknar `learningGoals` och sammanfattar respektive definierar kapitlets innehåll som helhet (03-bokens-arkitektur.md, "Kapitelavslutningar"; 12-produktionsarkitektur.md).
 
-Det finns inga separata projektuppgiftsavsnitt. Kapitlets större, integrerande uppgifter skrivs som helkapitelövningar i Övningar-sektionen i kapitlets senare avsnitt (03-bokens-arkitektur.md, "Övningar").
+Det finns inga separata projektuppgiftsavsnitt. Kapitlets större, integrerande uppgifter ligger i ett separat lärarmaterial utanför boken, inte i avsnittens Övningar (03-bokens-arkitektur.md, "Kapitelövergripande uppgifter").
 
 ---
 

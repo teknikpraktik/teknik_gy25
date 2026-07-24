@@ -362,8 +362,8 @@ for (const avs of avsnittFiler) {
 		}
 	}
 
-	// Mjukt regressionsskydd (03, "Helkapitelövningar", 2026-07-23): den utskrivna
-	// nivåstaplingen "Bygg ut"/"Bygg ut vidare" utgår ur helkapitelövningar.
+	// Mjukt regressionsskydd (03, "Kapitelövergripande uppgifter", 2026-07-24): den
+	// utskrivna nivåstaplingen "Bygg ut"/"Bygg ut vidare" utgår ur övningar.
 	// Varnar men felar inte — befintlig text är ännu inte deflaterad. Låsta kapitel
 	// undantas (kapitel 2 är auktoritativt och exemt).
 	if (!lastaKapitel.has(avs.chapter)) {
@@ -371,7 +371,7 @@ for (const avs of avsnittFiler) {
 			.flatMap((r) => extractSections(avs.body, r))
 			.some((sekt) => /\bBygg ut\b/.test(sekt));
 		if (harByggUt) {
-			warnings.push(`${beskr}: "Bygg ut" i en övningssektion — utskriven nivåstapling utgår ur helkapitelövningar (03-bokens-arkitektur.md, "Helkapitelövningar"); skriv om till EN sammanhållen uppgift.`);
+			warnings.push(`${beskr}: "Bygg ut" i en övningssektion — utskriven nivåstapling utgår (03-bokens-arkitektur.md, "Kapitelövergripande uppgifter"); skriv om till EN sammanhållen uppgift.`);
 		}
 	}
 
@@ -435,7 +435,7 @@ for (const avs of avsnittFiler) {
 	for (const forbjuden of forbjudnaRubriker) {
 		const traff = avs.body.match(forbjuden);
 		if (traff) {
-			errors.push(`${beskr}: rubriken "${traff[0].replace(/^#+\s*/, '')}" får inte förekomma i ett avsnitt — avsnittets uppgifter ligger under "Övningar", kapitlets större uppgifter som helkapitelövningar i senare avsnitts "Övningar" (03, redaktionellt beslut 2026-07-22).`);
+			errors.push(`${beskr}: rubriken "${traff[0].replace(/^#+\s*/, '')}" får inte förekomma i ett avsnitt — avsnittets uppgifter ligger under "Övningar" och tränar bara det egna avsnittets stoff; kapitlets större, integrerande uppgifter ligger i ett separat lärarmaterial utanför boken (03, redaktionellt beslut 2026-07-24).`);
 		}
 	}
 

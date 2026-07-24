@@ -128,7 +128,7 @@ Uppslag och sidbrytningar är frågor för layout och tryckexport, inte nivåer 
 - **Instuderingsfrågor**
 - **Övningar**
 
-Kapitlet avslutas med två avsnitt utan lärandemål, **Sammanfattning** och **Begrepp** (se "Kapitelavslutningar"). Det finns inga separata projektuppgiftsavsnitt: kapitlets större, integrerande uppgifter skrivs som helkapitelövningar i Övningar i kapitlets senare avsnitt.
+Kapitlet avslutas med två avsnitt utan lärandemål, **Sammanfattning** och **Begrepp** (se "Kapitelavslutningar"). Det finns inga separata projektuppgiftsavsnitt. Kapitlets större, integrerande uppgifter ligger i ett separat lärarmaterial utanför boken, inte i elevtexten (se "Kapitelövergripande uppgifter").
 
 Tidigare uppgiftsdelar används inte längre: rubrikerna Praktiska uppgifter och Projektuppgifter samt de äldre uppdelade kategorierna (Beräkningsuppgifter, Rituppgifter, CAD-uppgifter, Programmeringsuppgifter, Laborationer, Konstruktionsuppgifter, Tillämpningsuppgifter, Analysuppgifter, Tillämpningsproblem, Fördjupningsuppgifter, Kortare uppgifter, Projekt, Förstå/Utveckla/Utmana).
 
@@ -168,21 +168,17 @@ Varje övning har ett namn i fetstil följt av uppgiften, och numreras 1, 2, 3 �
 
 **Formuleringsregel:** boken mäter, testar eller examinerar ingenting. Skriv "låter eleven visa". Kopplingen till betygskriterierna görs i lärarhandledningen, inte i elevtexten.
 
-## Helkapitelövningar
+## Kapitelövergripande uppgifter
 
-I kapitlets senare avsnitt växer övningarna mot **en enda helkapitelövning**. Den uppfyller tre krav:
+Varje avsnitts **Övningar** tränar och hänvisar bara till det egna avsnittets stoff. Boken har **inga helkapitelövningar** och inga integrerande storuppgifter som spänner över flera avsnitt (redaktionellt beslut 2026-07-24, som ersätter det tidigare kravet på en helkapitelövning per kapitel).
 
-- Den kräver stoff från flera avsnitt.
-- Den resulterar i något dokumenterat: skiss, ritning, modell, kod, rapport, värdering.
-- Den hålls avgränsad och fokuserad.
+Kapitlets större, integrerande och kapitelövergripande uppgifter (syntesprojekt, tvärgående tillämpningar, storprojekt) hör hemma i ett **separat lärarmaterial utanför boken**, inte i elevtexten. Där kan läraren välja, tidsätta och betygssätta dem fritt.
 
-**En fokuserad helkapitelövning per kapitel, inte flera** (redaktionellt beslut 2026-07-23). Den fungerar som en syntesuppgift som använder betydande delar av kapitlet, men hålls avgränsad, inte staplad till ett storprojekt.
+**Ingen utskriven nivåstapling i övningar.** Progressionen från E till A ligger i uppgiftens öppenhet och i betygskriteriernas kvalitetsord, inte i utskrivna delsteg i elevtexten. Formatet grunduppgift plus "Bygg ut: ..." plus "Bygg ut vidare: ..." används inte. `scripts/validate.mjs` varnar (mjukt) om "Bygg ut" står kvar i en övningssektion, som regressionsskydd.
 
-**Ingen utskriven nivåstapling.** Progressionen från E till A ligger i uppgiftens öppenhet och i betygskriteriernas kvalitetsord, inte i utskrivna delsteg i elevtexten. Formatet grunduppgift plus "Bygg ut: ..." plus "Bygg ut vidare: ..." används inte längre. Övningen skrivs som en sammanhållen uppgift som låter eleven visa arbete på olika nivåer utan att stegen skrivs ut. `scripts/validate.mjs` varnar (mjukt) om "Bygg ut" står kvar i en övningssektion, som regressionsskydd.
+Varje övning ska fungera fristående, med stabil information i själva instruktionen, utan hänvisningar av typen "som i figuren ovan" eller "i föregående avsnitt".
 
-Det stora, sammanhållna projektet bor kvar i kapitel 11. Boken har inget nytt projektkapitel och ingen genomgående projektstruktur (se "Exempel").
-
-Sista avsnittets egna grundövningar behålls alltid. Helkapitelövningen kommer därutöver och får inte tränga ut avsnittsnära träning. Den ska fungera fristående med stabil information i själva instruktionen, utan hänvisningar av typen "som i figuren ovan".
+Det stora, sammanhållna projektet bor kvar som ämnesinnehåll i kapitel 11. Boken har inget nytt projektkapitel och ingen genomgående projektstruktur (se "Exempel").
 
 Det finns **inget synligt Begrepp-block** efter avsnittet. Begreppsundervisningen sker i löptexten (11-begreppsfilosofi.md); kapitlets begreppslista är en uppslagsdel.
 
@@ -227,15 +223,15 @@ Begrepp som kursiveras vid sitt huvudställe i löptexten (05, "Begreppsmarkerin
 
 Varje begrepp i listan ska ha sitt huvudställe i eller före kapitlet (`concepts_introduced`, 12-produktionsarkitektur.md). Listan inför aldrig nya begrepp.
 
-Det finns inga projektuppgiftsavsnitt: kapitlets större, integrerande uppgifter ligger som helkapitelövningar i Övningar i kapitlets senare avsnitt (se "Avsnittets struktur").
+Det finns inga projektuppgiftsavsnitt. Kapitlets större, integrerande uppgifter ligger i ett separat lärarmaterial utanför boken, inte i avsnittens Övningar (se "Kapitelövergripande uppgifter").
 
 ---
 
 # Praktiskt arbete
 
-Praktisk träning är central (10-amnesfilosofi.md, "Teknik är praktiskt") och säkras på två nivåer: lokalt genom avsnittets Övningar, och samlat genom kapitlets helkapitelövningar. Ett avsnitt utan meningsfull praktisk tillämpning får ha få och enkla övningar; övningar skapas aldrig enbart för symmetrins skull, men varje avsnitt har minst två.
+Praktisk träning är central (10-amnesfilosofi.md, "Teknik är praktiskt") och säkras genom avsnittets Övningar, som tränar det egna avsnittets stoff. Ett avsnitt utan meningsfull praktisk tillämpning får ha få och enkla övningar; övningar skapas aldrig enbart för symmetrins skull, men varje avsnitt har minst två.
 
-Hör ett praktiskt moment naturligt hemma i ett enskilt avsnitt läggs det bland avsnittets övningar. Är det stort nog att integrera flera avsnitt skrivs det som helkapitelövning i ett av kapitlets senare avsnitt. Praktiska övningar prioriteras framför motsvarande teoretiska uppgifter när båda tränar samma förmåga.
+Hör ett praktiskt moment naturligt hemma i ett enskilt avsnitt läggs det bland avsnittets övningar. Är det stort nog att integrera flera avsnitt hör det hemma i lärarmaterialet utanför boken, inte i elevtexten. Praktiska övningar prioriteras framför motsvarande teoretiska uppgifter när båda tränar samma förmåga.
 
 ---
 
@@ -340,4 +336,4 @@ Ett avsnitt är färdigt först när:
 - eleven rimligen kan uppnå avsnittets lärandemål utan ytterligare teori
 - kvaliteten motsvarar referensimplementationen 1.1
 
-Ett kapitel är färdigt först när det dessutom har en fokuserad helkapitelövning i ett av de senare avsnittens övningar och avslutas med en sammanfattning i löpande text och en begreppslista med färdiga definitioner som täcker kapitlets centrala begrepp.
+Ett kapitel är färdigt först när det avslutas med en sammanfattning i löpande text och en begreppslista med färdiga definitioner som täcker kapitlets centrala begrepp.

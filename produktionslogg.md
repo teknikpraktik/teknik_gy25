@@ -38,12 +38,35 @@ CLAUDE.md) och delvis i validate. Gäller Claude Codes generering och revidering
    **mjuk varning** (regressionsskydd) om "Bygg ut" står kvar i en övningssektion, inte
    hårt fel eftersom befintlig text ännu inte är deflaterad.
 
-**Öppen deflateringspost — kapitel 1:s helkapitelövningar.** Kapitel 1:s befintliga
-staplade helkapitelövningar i `01-teknikens-grunder/03-drivkrafter-och-ingenjorsmassiga-val.md`
-(övningar med "Bygg ut" och "Bygg ut vidare") bryter nu mot regel 3 ovan. De **deflaterades
-inte** i detta steg (projektägarens uttryckliga instruktion). Validate flaggar dem med den
-mjuka "Bygg ut"-varningen. **Att göra separat:** skriv om kapitel 1:s helkapitelövningar till
-EN fokuserad, avgränsad övning utan utskriven nivåstapling när kapitel 1 revideras vidare.
+**Öppen deflateringspost — kapitel 1:s helkapitelövningar (avslutad 2026-07-24).**
+Kapitel 1:s tidigare staplade helkapitelövningar är borta. Regel 3 ovan (en fokuserad
+helkapitelövning per kapitel) är dessutom upphävd av beslutet 2026-07-24 nedan:
+helkapitelövningar utgår helt ur boken. Ingen deflatering behövs längre.
+
+---
+
+# Produktionsstandard 2026-07-24 — helkapitelövningar utgår (projektägarens beslut)
+
+Boken innehåller **inga helkapitelövningar** och inga integrerande storuppgifter som
+spänner över flera avsnitt. Beslutet ersätter regel 3 i 2026-07-23-standarden (som
+krävde EN fokuserad helkapitelövning per kapitel).
+
+- **Övningar refererar bara sitt eget avsnitt.** Varje avsnitts Övningar tränar och
+  hänvisar enbart till det egna avsnittets stoff.
+- **Storuppgifter flyttar ut ur boken.** Kapitlets större, integrerande och
+  kapitelövergripande uppgifter (syntesprojekt, tvärgående tillämpningar, storprojekt)
+  ligger i ett separat lärarmaterial utanför boken, inte i elevtexten. Storprojektet bor
+  kvar som ämnesinnehåll i kapitel 11.
+- **Styrdokument uppdaterade:** 03 (avsnittet "Helkapitelövningar" omdöpt till
+  "Kapitelövergripande uppgifter"), 05, 09, 12, 13, CLAUDE.md samt validate-meddelandena
+  i scripts/validate.mjs och kommentaren i scripts/bokstruktur-data.mjs.
+- **Tillämpat nu:** avsnitt 1.3:s Övningar omskrivna till tre avsnittsnära uppgifter
+  (helkapitelövningen borttagen).
+- **Migreringsskuld:** befintliga helkapitelövningar i redan skrivna kapitel (t.ex.
+  kapitel 6) flyttas till lärarmaterialet när respektive kapitel revideras vidare. Låsta
+  kapitel (kapitel 2) rörs inte förrän de låses upp. Ingen ny validate-flagga tillkommer
+  (ingen regel kräver en helkapitelövning; "Bygg ut"-varningen står kvar som
+  regressionsskydd).
 
 ---
 

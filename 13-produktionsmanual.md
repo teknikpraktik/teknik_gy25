@@ -59,7 +59,7 @@ Avsnitts- och kapitelmodellen nedan (löptext → Instuderingsfrågor → Övnin
 
 Skript och befintligt content/ migreras **kapitel för kapitel**, inte i ett svep. Fram till att ett kapitel tas om hand gäller därför i praktiken den äldre modellen (Praktiska uppgifter, uppgiftsbank/Projektuppgifter, `[[figur:ID]]`) för dess filer, och `npm run validate` visar kända fel för icke-migrerat innehåll (kvarvarande `NN-projektuppgifter.md`-filer i ännu ej migrerade kapitel). Det är väntad migreringsskuld, inte nya fel att jaga för varje ändring.
 
-När ett kapitel produceras eller revideras enligt den nya modellen: byt filens uppgiftsrubriker till Instuderingsfrågor/Övningar, skriv bilder som `[BILD X.Y-N]` i stället för `[[figur:ID]]`, och arbeta in kapitlets projektuppgifter som EN fokuserad helkapitelövning i ett av de senare avsnittens Övningar innan `NN-projektuppgifter.md` tas bort och 06/skeleton stäms av.
+När ett kapitel produceras eller revideras enligt den nya modellen: byt filens uppgiftsrubriker till Instuderingsfrågor/Övningar, skriv bilder som `[BILD X.Y-N]` i stället för `[[figur:ID]]`, och flytta kapitlets projektuppgifter till det separata lärarmaterialet utanför boken innan `NN-projektuppgifter.md` tas bort och 06/skeleton stäms av.
 
 ---
 
@@ -93,7 +93,7 @@ Sätt `status: under-utveckling`. Identifiera enligt 08:
 
 ## 3. Skriv
 
-Skriv löptext (med bildplatshållare), delavsnitt (H3) vid behov, en avslutande **samlad sektion Instuderingsfrågor** (5–15, teknisk karaktär prioriterad, se 03) och därefter en **samlad sektion Övningar** (2–10), enligt 03 och 05. Avsnittet har inget fast sidomfång; flödar det över flera delar struktureras det med H3-delavsnitt (rena underrubriker, se 06 "Avsnittens och delavsnittens format"), inte med egen numrering. Rubrikerna är alltid "Instuderingsfrågor" och "Övningar", aldrig Praktiska uppgifter, Projektuppgifter eller äldre uppdelade kategorier (Beräkningsuppgifter, Rituppgifter, Laborationer med flera). Det finns **inget Begrepp-block** i avsnittsfilen — begreppen behandlas i löptexten (11) — och kapitlets större, integrerande uppgift skrivs i stället som EN fokuserad helkapitelövning i ett av de senare avsnittens Övningar (se "Kapitelavslutningar" nedan), inte i en egen projektbank.
+Skriv löptext (med bildplatshållare), delavsnitt (H3) vid behov, en avslutande **samlad sektion Instuderingsfrågor** (5–15, teknisk karaktär prioriterad, se 03) och därefter en **samlad sektion Övningar** (2–10), enligt 03 och 05. Avsnittet har inget fast sidomfång; flödar det över flera delar struktureras det med H3-delavsnitt (rena underrubriker, se 06 "Avsnittens och delavsnittens format"), inte med egen numrering. Rubrikerna är alltid "Instuderingsfrågor" och "Övningar", aldrig Praktiska uppgifter, Projektuppgifter eller äldre uppdelade kategorier (Beräkningsuppgifter, Rituppgifter, Laborationer med flera). Det finns **inget Begrepp-block** i avsnittsfilen — begreppen behandlas i löptexten (11) — och kapitlets större, integrerande uppgift skrivs inte i boken alls utan i ett separat lärarmaterial utanför den (se "Kapitelavslutningar" nedan); varje avsnitts Övningar tränar bara det egna avsnittets stoff.
 
 Rubrikkonvention i källfilerna: eftersom sidtiteln (frontmatterns `title`) är avsnittets h1 på webben, skrivs delavsnitt på `##`-nivå i källfilen och en eventuell ytterligare nedbrytning på `###` (undantagsvis). `## Instuderingsfrågor` och `## Övningar` skrivs på samma nivå som delavsnitten, i den ordningen sist i filen, som EN samlad sektion vardera även när avsnittet har flera delavsnitt eller lärandemål. Exporten sänker brödtextens rubriker ett steg (kapitel H1 → avsnitt H2 → delavsnitt H3). Frågorna och övningarna numreras var för sig 1, 2, 3 … Instuderingsfrågorna testar teknisk förståelse (aldrig "enligt texten" eller "vad visar figuren"), minst en tränar avsnittets begrepp. Övningarna är autentiska uppgifter i tydlig progression (identifiera, analysera, jämföra, konstruera, förbättra, eget arbete) och formuleras som "låter eleven visa", aldrig att boken mäter, testar eller examinerar (03).
 
@@ -123,15 +123,15 @@ Senare granskningssteg (fackgranskad → språkgranskad → klar) uppdaterar sta
 
 ---
 
-# Kapitelavslutningar och helkapitelövningar
+# Kapitelavslutningar och övningar
 
 När ett kapitels avsnitt är producerade får kapitlet sina två avslutningar (12, "Kapitelavslutningar"). De skapas inte i förväg för kapitel som inte är påbörjade.
 
 **Filer.** Skapa avsnittsfilerna för de två sista posterna i kapitlets del av 06-bokstruktur.md: `<NN>-sammanfattning.md` (`type: kapitelsammanfattning`) och `<NN>-begrepp.md` (`type: begreppsovning`), i den ordningen. 06 styr existens och ordning — det finns inget separat manifest. Det finns ingen tredje kapitelavslutande fil för projektuppgifter.
 
-**Helkapitelövningar.** Innan sammanfattningen skrivs: säkerställ att kapitlet har EN fokuserad, avgränsad helkapitelövning i ett av de senare avsnittens `## Övningar`-sektion (03, "Helkapitelövningar"). En helkapitelövning kräver stoff från flera avsnitt och resulterar i något dokumenterat (skiss, ritning, modell, kod, rapport, värdering), utan utskriven nivåstapling ("Bygg ut"/"Bygg ut vidare" utgår, produktionsstandard 2026-07-23): E-till-A ligger i öppenheten och betygskriterierna, inte i elevtexten. Den fungerar fristående (05, "Självreferenser"): ersätt "från föregående avsnitt" och "figuren ovan" med stabil information i uppgiften. Den kommer utöver, aldrig i stället för, avsnittets egna grundövningar.
+**Övningar hör till sitt avsnitt.** Varje avsnitts `## Övningar` tränar och hänvisar bara till det egna avsnittets stoff. Boken har inga helkapitelövningar (redaktionellt beslut 2026-07-24). Kapitlets större, integrerande och kapitelövergripande uppgifter ligger i ett separat lärarmaterial utanför boken, inte i elevtexten. Varje övning fungerar fristående (05, "Självreferenser"): ersätt "från föregående avsnitt" och "figuren ovan" med stabil information i uppgiften, och har ingen utskriven nivåstapling ("Bygg ut"/"Bygg ut vidare" utgår).
 
-**Sammanfattning.** Skriv sist, när begreppslistan och helkapitelövningarna redan finns. Kort löpande text, inte punktlista, som låter eleven repetera hela kapitlet på några minuter (riktmärke cirka 300 ord) — repetition, inga nya fakta eller begrepp, inga instuderingsfrågor.
+**Sammanfattning.** Skriv sist, när begreppslistan redan finns. Kort löpande text, inte punktlista, som låter eleven repetera hela kapitlet på några minuter (riktmärke cirka 300 ord) — repetition, inga nya fakta eller begrepp, inga instuderingsfrågor.
 
 **Begreppslista.** Skriv kapitlets begrepp (frontmatterfältet `ordlista`) med **färdiga definitioner**, max ungefär en mening per begrepp. En uppslagsfunktion: eleven fyller inte i något här. Begreppen ska redan ha sitt huvudställe i eller före kapitlet; listan är repetition och uppslag, aldrig första mötet. Facit-liknande innehåll (definitionerna själva) är tillåtet här eftersom listan är den avsedda uppslagsdelen, till skillnad från bedömningsfacit, som fortfarande ligger i en separat privat lärarmaterialkälla (12).
 
