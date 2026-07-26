@@ -1,6 +1,8 @@
 # Referensimplementation — avsnitt 1.1 Vad är teknik?
 
-Detta dokument är projektets redaktionella guldstandard, fastställd av projektägaren 2026-07-22. Den är referens för hela boken i fråga om ton, kompressionsgrad, exempelanvändning, bildplaceholders, instuderingsfrågor och övningar. Texten nedan återges ordagrant och får inte redigeras utan projektägarens beslut. Den skarpa manusversionen ligger i `content/01-teknikens-grunder/01-vad-ar-teknik.md`.
+Detta dokument är projektets redaktionella guldstandard, fastställd av projektägaren 2026-07-22. Den är referens för hela boken i fråga om ton, kompressionsgrad, exempelanvändning, bildplaceholders, instuderingsfrågor och övningar. Den skarpa manusversionen ligger i `content/01-teknikens-grunder/01-vad-ar-teknik.md` och gäller alltid framför detta dokument: vid skillnad synkas referensen mot content, aldrig tvärtom. Texten nedan speglar content per 2026-07-26 och får inte redigeras utan projektägarens beslut.
+
+Rubriknivåerna nedan (`###` under `## 1.1`) skiljer sig från content-filens (`##`), eftersom avsnittet där är en egen fil. Skillnaden är strukturell och inte saklig.
 
 ---
 
@@ -18,11 +20,13 @@ Ett exempel visar hur det kan gå till. På 1880-talet bar en montör med sig en
 
 [BILD 1.1-1] Innehåll: en skiftnyckel bredvid den uppsättning fasta nycklar i olika storlekar som den ersatte. Gapet markerat med pil eller mått som visar att det är ställbart. Bilden ska visa problem och lösning i samma blick: många verktyg blev ett. Bildtext: "Ett verktyg ersatte ett helt nyckelset. Johan Petter Johansson fick patent på skiftnyckeln 1892."
 
-Skiftnyckeln visar var teknik börjar. Först finns ett mänskligt behov eller problem, sedan skapar någon en lösning. Behovet kan vara något man vill uppnå, som att se skarpt eller få rent vatten i kranen, eller något man vill slippa, som att bära en tung verktygslåda. Teknik är hur människor utvecklar och använder produkter, processer, anläggningar och system för att uppfylla behov och önskemål. En enskild sådan lösning, utformad för ett visst behov eller problem, kallas en teknisk lösning.
+Skiftnyckeln visar var teknik börjar. Först finns ett mänskligt behov eller problem, sedan skapar någon en lösning. *Behovet* kan vara något man vill uppnå, som att se skarpt eller få rent vatten i kranen, eller något man vill slippa, som att bära en tung verktygslåda. *Teknik* är hur människor utvecklar och använder produkter, processer, anläggningar och system för att uppfylla behov och önskemål. En enskild sådan lösning, utformad för ett visst behov eller problem, kallas en *teknisk lösning*.
 
 ### Teknik är mer än bara föremål
 
-Ordet teknik leder ofta tanken till fysiska föremål, men tekniska lösningar kan också bestå av program, system och anläggningar. Betaltjänsten Swish, som sex banker på den svenska marknaden lanserade gemensamt 2012, svarar mot behovet att föra över pengar direkt mellan människor, och ändå går den inte att hålla i handen. Lösningen består av program, servrar och avtal mellan banker. Vattnet i kranen är på samma sätt slutpunkten i en teknisk lösning av ett annat slag: reningsverk, pumpstationer och vattentorn som tillsammans ger rent vatten med jämnt tryck, dygnet runt. Tekniska lösningar kan alltså vara system och anläggningar lika väl som saker.
+Ordet teknik leder ofta tanken till produkter, alltså fysiska föremål. En teknisk lösning kan lika gärna vara en process, ett system eller en anläggning.
+
+Pastörisering är en process. Mjölken hettas upp och kyls snabbt ned igen för att bakterierna ska dö utan att smaken förstörs. Lösningen ligger i förfarandet, inte i utrustningen som utför det. Betaltjänsten Swish, som sex banker på den svenska marknaden lanserade gemensamt 2012, är ett system. Den svarar mot behovet att föra över pengar direkt mellan människor, och ändå går den inte att hålla i handen. Lösningen består av program, servrar och avtal mellan banker. Vattnet i kranen är slutpunkten i en anläggning: reningsverk, pumpstationer och vattentorn som tillsammans ger rent vatten med jämnt tryck, dygnet runt. Tekniska lösningar kan alltså vara processer, system och anläggningar lika väl som saker.
 
 [BILD 1.1-2] Innehåll: enkelt flödesschema över vattnets väg: vattentäkt, reningsverk, pumpstation, vattentorn, kran. Poängen är att kranen bara är slutpunkten i ett system, alltså en teknisk lösning som inte är ett föremål. Bildtext: "Vattnet i kranen är slutpunkten i ett tekniskt system som arbetar dygnet runt."
 
@@ -54,14 +58,20 @@ Teknik är alltså människans sätt att möta behov och problem med lösningar,
 2. Nämn två tekniska lösningar som inte är fysiska föremål och förklara vilket behov var och en uppfyller.
 3. Tekniska lösningar kan delas in i fyra typer. Vilka, och ge ett exempel på varje.
 4. Ge tre exempel på behov och en teknisk lösning som uppfyller vart och ett.
-5. Ge tre exempel på naturvetenskaplig kunskap som behövdes när Öresundsförbindelsen konstruerades.
-6. Varför behövdes matematiska beräkningar när Öresundsförbindelsen dimensionerades?
-7. Vilka faktorer påverkade valet av en kombination av bro och tunnel för Öresundsförbindelsen?
-8. Ge ett exempel på hur tekniken har bidragit till naturvetenskapens utveckling.
-9. Förklara med egna ord vad som menas med begreppen behov, teknik och teknisk lösning.
+5. Hur kan man känna igen en teknisk lösning?
+6. Ge tre exempel på naturvetenskaplig kunskap som behövdes när Öresundsförbindelsen konstruerades.
+7. Varför behövdes matematiska beräkningar när Öresundsförbindelsen dimensionerades?
+8. Vilka faktorer påverkade valet av en kombination av bro och tunnel för Öresundsförbindelsen?
+9. Ge ett exempel på hur tekniken har bidragit till naturvetenskapens utveckling.
 
 ### Övningar
 
-1. **Behovet bakom föremålet.** Välj ett vardagsföremål, till exempel en pennvässare, ett paraply eller en cykelpump. Skissa föremålet med dess viktigaste delar. Ange vilket behov eller problem det löser och skriv vid varje del vilken funktion den har. Beskriv avslutningsvis vilken naturvetenskaplig kunskap som du tror ligger bakom någon del av konstruktionen.
-2. **Två lösningar på samma behov.** Välj ett behov, till exempel att transportera människor, hålla mat kall eller ge ljus i mörker. Hitta två olika tekniska lösningar som uppfyller samma behov. Beskriv hur de fungerar och jämför deras fördelar och nackdelar utifrån funktion, användning och andra viktiga egenskaper.
-3. **Utveckla en egen teknisk lösning.** Identifiera ett problem i din vardag som skulle kunna lösas bättre. Skissa en egen teknisk lösning och beskriv vilket behov den uppfyller, hur den fungerar, vilka material den skulle kunna tillverkas av och vilken naturvetenskaplig kunskap som kan behövas för att den ska fungera.
+1. **Behovet bakom föremålet.** Välj ett vardagsföremål, till exempel en pennvässare, ett paraply eller en cykelpump. Skissa föremålet på fri hand med dess viktigaste delar och skriv vid varje del vilken funktion den har. Ange vilket behov eller problem föremålet löser.
+
+2. **Utveckla en egen teknisk lösning.** Identifiera något i din vardag som löses dåligt i dag. Skissa en egen teknisk lösning och beskriv vilket behov den svarar mot, hur den fungerar och vilka material den skulle kunna tillverkas av.
+
+3. **Teknik du inte kan hålla i.** Välj en teknisk lösning som inte är ett föremål, till exempel vattenförsörjningen, elnätet, kollektivtrafiken, sophämtningen eller en betaltjänst. Rita ett enkelt flödesschema som visar lösningens väg från början till den punkt där du möter den. Namnge minst tre delar i systemet och markera vilken enda del du själv kommer i kontakt med. Beskriv sedan vad som skulle hända om en av de andra delarna slutade fungera.
+
+4. **Två lösningar på samma behov.** Välj ett behov, till exempel att ta sig korta sträckor, hålla mat kall eller ge ljus i mörker, och två föremål som löser det på olika sätt: cykel och sparkcykel, kylskåp och kylväska, stearinljus och ficklampa. Skissa först vardera föremålet så att det framgår hur det fungerar. Ställ dem sedan mot varandra i en tabell med föremålen som kolumner och en rad för varje jämförelsepunkt: hur väl behovet uppfylls, fördelar, nackdelar samt minst två egenskaper till, till exempel pris, livslängd, användbarhet eller miljöpåverkan. Sammanställ skisser och tabell på ett A3-blad. Avsluta med vilken av lösningarna du skulle välja och varför.
+
+5. **Vad sätter gränserna?** Välj en teknisk lösning i din närhet, till exempel en cykelhjälm, en hiss, en termos eller en bro du passerar. Ange minst en naturvetenskaplig omständighet som sätter ramarna för hur den kan utformas, och minst en storhet som måste beräknas eller mätas för att lösningen ska fungera. Förklara vad som skulle kunna hända om den beräkningen gjordes fel.
