@@ -195,12 +195,21 @@ Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgift
 
 ## 3.5 Prototyper
 - Förklara vad prototyper används till och skilja mellan olika typer av prototyper.
-- Bygga en enkel prototyp och använda den för att testa och förbättra ett koncept.
+- Bygga en enkel prototyp av ett koncept och avgöra vilka frågor om konceptet prototypen kan besvara och vilka den inte kan.
 
 ### Prototypers roll
-### Bygga och testa prototyp
+### Bygga en prototyp
 
-## 3.6 Produktens livscykel
+## 3.6 Testning och utvärdering
+- Planera och genomföra ett test av en teknisk lösning mot uppställda krav, med testmetod, mätning och godkäntgräns bestämda före testet.
+- Utvärdera en teknisk lösning utifrån funktion, kostnad, säkerhet och hållbar utveckling och redogöra för avvägningarna mellan aspekterna.
+- Spåra grundorsaken till ett fel med upprepade varför-frågor och föreslå en konkret förbättring riktad mot orsaken i stället för mot symptomet.
+
+### Testplan och godkäntgräns
+### Utvärdering ur flera aspekter
+### Från testresultat till förbättring
+
+## 3.7 Produktens livscykel
 - Beskriva en produkts livscykel från råvara till återvinning och koppla miljöpåverkan till livscykelns faser.
 - Förklara hur konstruktionsval påverkar produktens livslängd, underhåll och återvinning.
 

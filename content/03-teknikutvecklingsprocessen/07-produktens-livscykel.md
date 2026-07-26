@@ -1,7 +1,7 @@
 ---
-id: "3.6"
+id: "3.7"
 chapter: 3
-sectionNumber: 6
+sectionNumber: 7
 title: Produktens livscykel
 status: ej-paborjad
 levels: []

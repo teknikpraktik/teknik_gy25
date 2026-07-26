@@ -1,7 +1,7 @@
 ---
 type: kapitelsammanfattning
 chapter: 3
-sectionNumber: 7
+sectionNumber: 8
 title: Sammanfattning
 status: ej-paborjad
 ---

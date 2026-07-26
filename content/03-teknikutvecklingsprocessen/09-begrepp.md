@@ -1,7 +1,7 @@
 ---
 type: begreppsovning
 chapter: 3
-sectionNumber: 8
+sectionNumber: 9
 title: Begrepp
 status: ej-paborjad
 ordlista: []
