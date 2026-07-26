@@ -67,6 +67,10 @@ for (const k of kapitel) {
 					title: avs.titel,
 					status: 'ej-paborjad',
 					...(avs.type === 'begreppsovning' ? { ordlista: [] } : {}),
+					// Facit: uppgifter som medvetet lämnas utan svar registreras här
+					// (03-bokens-arkitektur.md, "Facit"), så att validate kan skilja
+					// en öppen uppgift från en glömd.
+					...(avs.type === 'facit' ? { utanSvar: { instuderingsfragor: [], ovningar: [] } } : {}),
 				}
 			: {
 					id: avsnittId(k, i),

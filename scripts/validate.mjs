@@ -557,6 +557,102 @@ for (const ka of kapitelavslutningsFiler) {
 	}
 }
 
+// ------------------------------------------------------------------- Facit
+// Facit är en spegling av kapitlets instuderingsfrågor och övningar och glider
+// tyst isär från dem så snart en uppgift läggs till, tas bort eller numreras om.
+// Det är hela skälet till att facit lagras hos sitt kapitel och inte samlat
+// sist i boken (12-produktionsarkitektur.md, "Facit").
+//
+// Kontrollen: för varje kapitel som har en facitfil ska varje numrerad
+// instuderingsfråga och övning i kapitlets teoriavsnitt antingen ha ett svar i
+// facit eller stå upptagen i frontmatterfältet `utanSvar`
+// (03-bokens-arkitektur.md, "Facit"). Hård regel från granskningsstatus; under
+// utveckling rapporteras i stället hur långt facit har kommit.
+//
+// Facitfilens disposition: "## <avsnitts-id> <titel>" per avsnitt, därunder
+// "### Instuderingsfrågor" och "### Övningar" med svaren numrerade som i
+// avsnittet.
+function numreradeItem(text) {
+	return new Set((text.match(/^\s*(\d+)\.\s+\S/gm) || []).map((r) => Number(r.trim().split('.')[0])));
+}
+
+function facitAvsnittBlock(body) {
+	// Delar facitkroppen i block per "## <id> ..."-rubrik.
+	const block = new Map();
+	const re = /^##\s+(\d+\.\d+)\b[^\n]*$/gm;
+	const traffar = [...body.matchAll(re)];
+	traffar.forEach((m, i) => {
+		const start = m.index + m[0].length;
+		const slut = i + 1 < traffar.length ? traffar[i + 1].index : body.length;
+		block.set(m[1], body.slice(start, slut));
+	});
+	return block;
+}
+
+for (const facit of kapitelavslutningsFiler.filter((f) => f.type === 'facit')) {
+	if (lastaKapitel.has(facit.chapter)) continue;
+	const harda = statusEnum.indexOf(facit.status) >= GRANSKNINGSSTATUS;
+	const block = facitAvsnittBlock(facit.body);
+	const utanSvarI = new Set(facit.utanSvar?.instuderingsfragor ?? []);
+	const utanSvarO = new Set(facit.utanSvar?.ovningar ?? []);
+	const kapitletsAvsnitt = avsnittFiler
+		.filter((a) => a.chapter === facit.chapter)
+		.sort((a, b) => compareIds(a.id, b.id));
+
+	let besvarade = 0;
+	let totalt = 0;
+	const saknade = [];
+
+	for (const avs of kapitletsAvsnitt) {
+		const facitBlock = block.get(avs.id) ?? '';
+		for (const [rubrik, kalla, utanSvarSet] of [
+			['Instuderingsfrågor', 'Instuderingsfrågor', utanSvarI],
+			['Övningar', 'Övningar', utanSvarO],
+		]) {
+			const kallSektioner = extractSections(avs.body, kalla);
+			if (kallSektioner.length === 0) continue;
+			const forvantade = numreradeItem(kallSektioner[0]);
+			const facitSektioner = extractSections(facitBlock, rubrik);
+			const svarade = facitSektioner.length > 0 ? numreradeItem(facitSektioner[0]) : new Set();
+			for (const nr of [...forvantade].sort((a, b) => a - b)) {
+				totalt++;
+				const ref = `${avs.id}:${nr}`;
+				if (svarade.has(nr) || utanSvarSet.has(ref)) besvarade++;
+				else saknade.push(`${rubrik.toLowerCase()} ${ref}`);
+			}
+			// Svar i facit som inte motsvarar någon uppgift i avsnittet.
+			for (const nr of svarade) {
+				if (!forvantade.has(nr)) {
+					const msg = `${facit.file}: facit besvarar ${rubrik.toLowerCase()} ${avs.id}:${nr}, men avsnittet har ingen sådan uppgift (03-bokens-arkitektur.md, "Facit").`;
+					if (harda) errors.push(msg);
+					else warnings.push(msg);
+				}
+			}
+		}
+	}
+
+	// Poster i utanSvar som inte motsvarar någon uppgift.
+	for (const [faltnamn, set] of [['instuderingsfragor', utanSvarI], ['ovningar', utanSvarO]]) {
+		for (const ref of set) {
+			const [avsId, nrText] = ref.split(':');
+			const avs = kapitletsAvsnitt.find((a) => a.id === avsId);
+			const rubrik = faltnamn === 'ovningar' ? 'Övningar' : 'Instuderingsfrågor';
+			const sektioner = avs ? extractSections(avs.body, rubrik) : [];
+			const finns = sektioner.length > 0 && numreradeItem(sektioner[0]).has(Number(nrText));
+			if (!finns) {
+				errors.push(`${facit.file}: utanSvar.${faltnamn} anger "${ref}", som inte motsvarar någon uppgift i kapitlet (03-bokens-arkitektur.md, "Facit").`);
+			}
+		}
+	}
+
+	if (saknade.length > 0) {
+		const utdrag = saknade.slice(0, 8).join(', ') + (saknade.length > 8 ? ` … (+${saknade.length - 8})` : '');
+		const msg = `${facit.file}: ${saknade.length} av ${totalt} uppgifter i kapitel ${facit.chapter} saknar både svar i facit och post i utanSvar: ${utdrag} (03-bokens-arkitektur.md, "Facit").`;
+		if (harda) errors.push(msg);
+		else warnings.push(`${facit.file} (status ${facit.status}): facit för kapitel ${facit.chapter} är ${besvarade} av ${totalt} poster klart — ${saknade.length} återstår.`);
+	}
+}
+
 // Begreppslistans format (03-bokens-arkitektur.md, "Begrepp", redaktionellt beslut
 // 2026-07-22): en kompakt ordlista utan punktmarkering, en post per rad på formen
 // "**Begrepp:** Definition." — fetstilt begrepp med kolon inom fetstilen, inga

@@ -84,6 +84,18 @@ export const larandemalFields = {
   // får ha en ordlista.
   type: z.enum(kapitelavslutningTyper).optional(),
   ordlista: z.array(z.string()).optional(),
+  // Facit (03-bokens-arkitektur.md, "Facit"): uppgifter som medvetet lämnas
+  // utan svar, eftersom elevens egna mätvärden eller eget objekt är indata,
+  // eller eftersom uppgiften ber om en bedömning utan bestämt svar. De skrivs
+  // inte ut i facittexten — fältet finns för att `scripts/validate.mjs` ska
+  // kunna skilja en medvetet öppen uppgift från en glömd. Referensform
+  // "<avsnitts-id>:<nummer>", t.ex. "6.1:7".
+  utanSvar: z
+    .object({
+      instuderingsfragor: z.array(z.string()).default([]),
+      ovningar: z.array(z.string()).default([]),
+    })
+    .optional(),
 };
 
 export const larandemalSchema = z.object(larandemalFields);
