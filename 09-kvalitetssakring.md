@@ -86,7 +86,7 @@ Granskning sker på tre nivåer.
 
 □ Inga formuleringar av typen "enligt texten", "i texten" eller "vad visar figuren".
 
-□ Minst en fråga låter eleven återge innebörden i ett av avsnittets centrala begrepp. Formen är fri ("Vad är ...", "Vad menas med ...", "Vad är skillnaden mellan ... och ...", "Förklara med egna ord ..."), men frågan ska efterfråga begreppets innebörd, inte igenkänning eller tillämpning (03, "Instuderingsfrågor").
+□ Minst en fråga låter eleven återge innebörden i ett av avsnittets centrala begrepp. Formen är fri ("Vad är ...", "Vad menas med ...", "Vad är skillnaden mellan ... och ...", "Förklara med egna ord ..."), men frågan ska efterfråga begreppets innebörd, inte igenkänning eller tillämpning. Frågan får vara enkel. En rak definitionsfråga räcker (03, "Instuderingsfrågor").
 
 □ Frågorna kan besvaras med avsnittets innehåll men prövar förståelse av tekniken, inte minne av formuleringar.
 

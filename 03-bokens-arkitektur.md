@@ -150,7 +150,7 @@ Ett huvudexempel per avsnitt där det är möjligt, valt ur verkliga exempelomr�
 
 Frågorna testar teknisk förståelse, inte läsförståelse: funktion, samband, begrepp, resonemang. Formuleringar som "enligt texten", "i texten" eller "vad visar figuren" är förbjudna. Frågorna ska kunna besvaras med avsnittets innehåll men prövar förståelse av tekniken, inte minne av formuleringar.
 
-Minst en fråga per avsnitt låter eleven återge innebörden i ett av avsnittets centrala begrepp. Formen är fri ("Vad är ...", "Vad menas med ...", "Vad är skillnaden mellan ... och ...", "Förklara med egna ord ..."), men frågan ska efterfråga begreppets innebörd, inte igenkänning eller tillämpning.
+Minst en fråga per avsnitt låter eleven återge innebörden i ett av avsnittets centrala begrepp. Formen är fri ("Vad är ...", "Vad menas med ...", "Vad är skillnaden mellan ... och ...", "Förklara med egna ord ..."), men frågan ska efterfråga begreppets innebörd, inte igenkänning eller tillämpning. Frågan får vara enkel. En rak definitionsfråga räcker.
 
 **Prioritera teknisk karaktär.** Frågorna ska i första hand pröva sådant som är tekniskt till sin karaktär: funktion, samband, orsak och verkan, beräkning och konstruktion, framför frågor av samhällsvetenskaplig karaktär. Undantaget går åt samma håll som i procedurspåret: i avsnitt vars faktiska innehåll är teknik och samhälle (kapitel 1:s samspel mellan teknik, naturvetenskap och matematik, och kapitel 13) får frågorna matcha det innehållet. Regeln är att prioritera teknisk karaktär, inte att förbjuda samhällsfrågor (redaktionellt beslut 2026-07-23).
 
