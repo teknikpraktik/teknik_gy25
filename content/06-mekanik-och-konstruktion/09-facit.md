@@ -133,4 +133,19 @@ utanSvar:
 
 ### Instuderingsfrågor
 
+1. Egentyngden är vikten av materialet konstruktionen själv består av, till exempel en gångbros balkar och trädäck. Den nyttiga lasten är det konstruktionen är till för att bära, till exempel trafikanterna på bron.
+2. Därför att det sällan är det vardagliga fallet som blir dimensionerande. En gångbro ska klara att vara full av folk, vilket kan vara fyrtio gånger lasten från en enskild cyklist.
+3. En statisk belastning förändras långsamt eller inte alls, som egentyngden. En dynamisk belastning varierar snabbt, upprepas eller innefattar rörelse och stöt, som trafik i rörelse eller vindbyar.
+4. Om lasten träffar konstruktionen i takt med dess egen naturliga svängning byggs rörelsen upp av sig själv. Londons Millennium Bridge svängde av det skälet, eftersom de gående anpassade stegen efter brons rörelse och därmed förstärkte den.
+5. Den spänning en detalj tillåts belastas med, satt som materialets sträckgräns delad med säkerhetsfaktorn.
+6. För att ge marginal mot osäkerheter i beräkningen, mot laster som blir större än väntat och mot att materialet inte är exakt så bra som tabellen anger.
+7. Därför att den framräknade minsta dimensionen sällan finns att köpa. Den standarddimension man faktiskt väljer måste kontrolleras mot den tillåtna spänningen, annars vet man inte om den valda detaljen håller.
+8. En överslagsräkning med avrundade tal ger en ungefärlig storleksordning att jämföra det exakta svaret med, och ett svar som avviker med en faktor hundra avslöjas direkt. En enhetskontroll fångar förväxlingar mellan newton och kilonewton eller millimeter och meter, som annars ger svar tusen gånger fel utan att räkningen ser konstig ut.
+
 ### Övningar
+
+1. 110 N/mm².
+2. 200 mm².
+3. 19,5 mm.
+4. Svaret bör ifrågasättas eftersom 0,02 mm² är mindre än tvärsnittet på en tunn tråd, vilket är orimligt för ett stag som ska bära flera ton. Felet är sannolikt ett enhetsfel, till exempel att kraften lämnats kvar i kilonewton i stället för newton. Överslagsräkningen ger cirka 333 mm², alltså några hundra kvadratmillimeter.
+5. Tillåten spänning 118 N/mm², minsta tvärsnittsarea 152 mm², teoretisk minsta diameter 13,9 mm. Närmast större standarddimension är 16 mm, vilken ger arean 201 mm² och den verkliga spänningen 89,5 N/mm², alltså under den tillåtna. Dimensionen är rimlig för en lyftögla som ska bära knappt två ton. Beräkningen tar inte hänsyn till att ett gängat parti har mindre tvärsnitt i gängans botten, att upprepade lyft ger en dynamisk belastning som på sikt kan ge utmattningsbrott, och att korrosion tär på materialet i fuktig miljö.
