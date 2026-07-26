@@ -21,6 +21,17 @@ precisa antal och priser.
 | Hövding som aktuell produkt/produktrekommendation (2.1.1) | Skrivet neutralt/historiskt; produktrekommendations- och kostnadsuppgifter borttagna; nämner tillbakadragandet | Konsumentverket, "Hövding 3 har allvarliga brister" (säljförbud sent 2023; bolaget överklagade och gick sedan i konkurs) | Verifierat (institutionell) |
 | Behovsdriven/möjlighetsdriven, absoluta formuleringar (1.5.1 telegrafen, 2.1.1 "kedjan är alltid densamma") | Harmoniserat: utveckling kan starta i behov/problem eller i en möjlighet som får betydelse när den kopplas till ett behov | Redaktionellt beslut (10-amnesfilosofi.md, "Teknikutvecklingens startpunkt") | Verifierat (principbeslut) |
 
+## Korrigeringar gjorda i kapitelgranskningen av kapitel 6 (2026-07-26)
+
+| Påstående (före) | Åtgärd | Källa | Status |
+|---|---|---|---|
+| "för gångtrafik räknar man i Sverige normalt med storleksordningen 4 kN per kvadratmeter gångbana" (6.6) | Rättat till 5 kN/m². Kaskad genom exemplets tal: full last 9,0 · 5000 = 45 000 N (var 36 000 N), drygt tolv gånger egentyngden (var tio), femtio gånger den enskilda cyklisten (var fyrtio). Figurspecifikationen för `[BILD 6.6-1]` uppdaterad med samma siffror. | EN 1991-2 (gäller genom EKS) ger för gångbroar q_fk = 2,0 + 120/(L+30) kN/m², med övre gräns 5,0 kN/m². För kapitlets bro, L = 6 m, ger formeln 5,33 och därmed 5,0 kN/m². | Verifierat (standard) |
+| Ursprunget till det felaktiga värdet | 4 kN/m² är golvlast för byggnader enligt EN 1991-1-1, kategori C (utrymmen där människor samlas), alltså rätt storleksordning hämtad ur fel tabell. Gångbrolasten är högre eftersom en bro kan bli helt fullpackad. | EN 1991-1-1, kategori C | Noterat (felkälla) |
+| "Ökar lasten till 9400 N … är momenten lika stora" (6.3) | Rättat till 9375 N. Vid 9400 N blir det vältande momentet 75 200 Nm, alltså större än det stabiliserande 75 000 Nm, så kranen hade passerat gränsen i stället för att nå den. Andra ledet rättat från "drygt en meter" till "knappt en och en halv meter": 75 000/8000 = 9,375 m, alltså 1,375 m längre ut än 8,0 m. | Kapitlets egna tal, kontrollräknade | Verifierat (räknefel) |
+
+Standardernas beteckningar nämns inte i elevtexten. Kapitlet citerar inga
+standarder någon annanstans, och lastvärdet anges därför som ett normalvärde.
+
 ## Kvarstående uppgifter att stämma mot primär/institutionell källa
 
 Följande precisa uppgifter bör kontrolleras mot primär eller institutionell källa
