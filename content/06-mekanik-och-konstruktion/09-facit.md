@@ -88,7 +88,25 @@ utanSvar:
 
 ### Instuderingsfrågor
 
+1. En elastisk deformation försvinner helt när belastningen tas bort, som ett gummiband som släpps. En plastisk deformation kvarstår delvis även efter avlastning, som en böjd metallklädhängare.
+2. En gångbros balk böjs när någon går över den. Andra exempel är en hylla med last, en bjälke i ett bjälklag och en lyftkrans bom.
+3. Vridmomentet är belastningen, alltså den vridande kraftverkan som verkar på detaljen. Vridningen är följden, alltså att materialet vrids och tvärsnitten förskjuts i förhållande till varandra längs axeln.
+4. Knäckning är inte ett sätt att belasta en detalj utan ett sätt för en tryckbelastad detalj att gå sönder. Belastningen är fortfarande tryck.
+5. Knäckning är en instabilitet. En tryckt slank del kan plötsligt vika ut åt sidan när det raka läget blir instabilt, medan en dragen del i stället rätas ut av lasten och därför inte kan bli instabil.
+6. Kraften delad med den tvärsnittsarea kraften verkar över. Spänningen visar hur hårt belastat materialet är oberoende av detaljens storlek.
+7. Därför att bärförmågan avgörs av spänningen, inte av kraften. Har den ena stången större tvärsnittsarea fördelas samma kraft över mer material och ger lägre spänning.
+8. Den relativa längdändringen hos en belastad detalj, alltså längdändringen delad med ursprungslängden. Töjningen är dimensionslös och anges ofta i procent.
+9. Hur styvt materialet är, alltså hur mycket det töjs för en given spänning. Ett material med hög elasticitetsmodul, som stål, töjs mycket lite, medan ett med låg, som gummi, töjs desto mer.
+10. Den spänning där materialets deformation övergår från elastisk till plastisk. Ovanför sträckgränsen återgår detaljen inte längre helt till sin ursprungsform.
+11. Brottgränsen är den största nominella spänningen under hela provet, alltså största kraften delad med provstavens ursprungliga tvärsnittsarea. Efter den punkten halsar staven, den verkliga arean minskar snabbt och den nominella spänningen sjunker, så staven går av vid ett lägre värde.
+
 ### Övningar
+
+1. 300 N/mm².
+2. 200 mm².
+3. 0,0500 %.
+4. Töjningen 0,0600 % och förlängningen 1,50 mm. Svaret är rimligt: en och en halv millimeter på en 2,5 m lång stålstång är en mycket liten formändring.
+5. Spänningen 180 N/mm², vilket ligger under sträckgränsen 235 N/mm², så staget befinner sig i det elastiska området. Töjningen blir 0,0900 %. Vid 300 N/mm² hade beräkningen varit ogiltig, eftersom sambandet mellan spänning och töjning bara gäller under sträckgränsen. Ökas lasten till 250 N/mm², också över sträckgränsen, deformeras staget plastiskt och behåller en bestående förlängning även efter att lasten tagits bort.
 
 ## 6.5 Konstruktioner
 
