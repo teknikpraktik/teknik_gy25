@@ -44,7 +44,23 @@ utanSvar:
 
 ### Instuderingsfrågor
 
+1. Den vridande verkan av en kraft kring en punkt, lika med kraften gånger momentarmen. Momentet mäts i newtonmeter (Nm).
+2. Det vinkelräta avståndet från vridpunkten till kraftens verkningslinje, alltså till den tänkta linje kraften följer framåt och bakåt.
+3. Momentet är kraften gånger momentarmen. Griper kraften an längre från vridpunkten blir momentarmen längre, och samma kraft ger då ett större moment.
+4. Kraftens verkningslinje går då rakt genom vridpunkten, så momentarmen blir noll. Produkten av kraft och momentarm blir därmed också noll.
+5. Antingen med kraftens vinkelräta komposant gånger handtagets längd, eller med hela kraften gånger det vinkelräta avståndet från vridpunkten till verkningslinjen. De två sätten ger alltid samma svar.
+6. Det moment en skruv ska dras åt med, angivet av tillverkaren i newtonmeter. Det anges eftersom ett skruvförbands bärförmåga beror på hur hårt skruven är spänd, vilket inte går att bedöma med handkraft.
+7. Förhållandet mellan den kraft ett verktyg eller en maskin avger och den kraft användaren lägger in.
+8. Rörelsesträcka. Den ände där kraften läggs in måste röra sig lika många gånger längre sträcka som kraften förstärks.
+
 ### Övningar
+
+1. 0,800 Nm.
+2. 150 N.
+3. 360 N med handtaget, 180 N med pårör.
+4. 1,50 m från masten.
+5. 46,0 Nm. En helt vinkelrät kraft hade gett 60,0 Nm, eftersom bara kraftens vinkelräta komposant bidrar till vridningen.
+6. Lastens tyngdkraft 11,8 kN, momentet kring ledpunkten 24,7 kNm, cylinderkraften 70,6 kN. Förhållandet mellan cylinderkraften och tyngdkraften är 6,0, lika med förhållandet mellan momentarmarna 2,1 / 0,35. Storleksordningen är rimlig för en verklig maskin.
 
 ## 6.3 Jämvikt
 
