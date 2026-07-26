@@ -137,6 +137,8 @@ När ett kapitels avsnitt är producerade får kapitlet sina två avslutningar (
 
 Format (obligatoriskt, se 03-bokens-arkitektur.md, "Begrepp"): en kompakt ordlista utan punktmarkering, en post per rad på formen `**Begrepp:** Definition.` — begreppet i fetstil med kolon inom fetstilen, versal på både begrepp och definition, definitionen en fullständig mening som slutar med punkt, inga tankstreck som avskiljare. Posterna skrivs en per rad. Radavstånd och vertikal rytm är en formgivningsfråga och regleras inte här. `npm run validate` felar på punktlista, tankstreck, ofetstilat begrepp eller saknad avslutande punkt.
 
+**Facit.** När kapitlets övningar är klara läggs raden `## Facit` till sist i kapitlets del av 06-bokstruktur.md, och `npm run skeleton` skapar `<NN>-facit.md` (`type: facit`). Disponera per avsnitt med `## <avsnitts-id> <titel>` och därunder `### Instuderingsfrågor` och `### Övningar`, numrerade som i avsnittet. Räkna igenom varje räkneuppgift innan den publiceras. Uppgifter som medvetet lämnas utan svar skrivs inte ut i texten utan registreras i frontmatterfältet `utanSvar` (03-bokens-arkitektur.md, "Facit"). `npm run validate` stämmer av varje uppgiftsnummer mot avsnittsfilerna och rapporterar hur långt facit har kommit tills status höjs till `fardig-forsta-version`, då täckningen blir ett hårt krav. Exporten samlar kapitlens facit sist i boken; källfilen ligger kvar hos sitt kapitel.
+
 **Kör** `npm run validate`: 06-bokstruktur.md stäms av mot filerna åt båda håll.
 
 ---

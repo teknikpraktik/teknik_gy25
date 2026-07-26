@@ -204,7 +204,7 @@ Kapitel 1 ska därför inte innehålla en egen problemlösningsmetod, en egen te
 
 # Kapitelavslutningar
 
-Varje färdigproducerat kapitel avslutas med två onumrerade avsnitt, i denna ordning: **Sammanfattning**, **Begrepp**. De är egna innehållstyper, inte lärandemål (12-produktionsarkitektur.md, "Kapitelavslutningar").
+Varje färdigproducerat kapitel avslutas med onumrerade avsnitt, i denna ordning: **Sammanfattning**, **Begrepp**, **Facit**. De är egna innehållstyper, inte lärandemål (12-produktionsarkitektur.md, "Kapitelavslutningar"). Sammanfattning och Begrepp är obligatoriska. Facit är en tredje, valfri kapitelavslutning som läggs till när kapitlets övningar är klara (se "Facit").
 
 ## Sammanfattning
 
@@ -233,15 +233,17 @@ Det finns inga projektuppgiftsavsnitt. Kapitlets större, integrerande uppgifter
 
 Facit är bokens sista kapitel (redaktionellt beslut, projektägaren). Det följer av att boken ska kunna läsas utan lärare. Eleven måste kunna kontrollera sitt eget svar. Elevfacit är publikt läsbart, medan bedömningsstöd och betygsunderlag ligger utanför boken (12-produktionsarkitektur.md, "Facit").
 
+**Lagring och läsordning.** Facit **lagras per kapitel** som kapitlets tredje kapitelavslutning (`type: facit`, efter Sammanfattning och Begrepp) och sätts ihop till ett samlat facit sist i boken av exporten. Läsaren möter alltså ett facit sist, medan källfilen ligger hos sitt kapitel och skrivs, committas och låses tillsammans med det.
+
 **Disposition.** Facit följer boken kapitel för kapitel och avsnitt för avsnitt. Under varje avsnitt står två delar, Instuderingsfrågor och Övningar, i samma numrering som i avsnittet. Någon egen referenssyntax behövs därför inte.
 
 **Räkneuppgifter** får slutsvar med enhet, avrundat till tre värdesiffror om inte uppgiften säger annat. Ett flerstegssvar redovisar varje beräknad storhet i ordning. Lösningsgången ges inte i facit, den bor i avsnittets arbetade exempel.
 
 **Instuderingsfrågor** får ett kort svar, en till tre meningar.
 
-**Utan svar** lämnas, och tas inte upp i facit alls, uppgifter där eleven väljer eget föremål eller eget område, gör egna mätningar, intervjuar någon eller skissar en egen lösning, samt uppgifter som ber om en motivering, bedömning eller jämförelse utan bestämt svar.
+**Utan svar** lämnas, och tas inte upp i facittexten alls, uppgifter där eleven väljer eget föremål eller eget område, gör egna mätningar, intervjuar någon eller skissar en egen lösning, samt uppgifter som ber om en motivering, bedömning eller jämförelse utan bestämt svar. De registreras däremot i facitfilens frontmatterfält `utanSvar` på formen `"<avsnitts-id>:<nummer>"`, så att en medvetet öppen uppgift går att skilja från en glömd. Fältet syns inte för eleven.
 
-**Kontroll.** Varje räkneuppgift ska räknas igenom innan den publiceras. Kontrollen är samtidigt det som avslöjar uppgifter med obestämbar eller orimlig indata.
+**Kontroll.** Varje räkneuppgift ska räknas igenom innan den publiceras. Kontrollen är samtidigt det som avslöjar uppgifter med obestämbar eller orimlig indata. `scripts/validate.mjs` kontrollerar dessutom täckningen maskinellt: varje numrerad instuderingsfråga och övning i kapitlet ska antingen ha ett svar i facit eller stå i `utanSvar`, och ett svar utan motsvarande uppgift flaggas. Hård regel från status `fardig-forsta-version`; dessförinnan rapporteras hur långt facit har kommit.
 
 ---
 
