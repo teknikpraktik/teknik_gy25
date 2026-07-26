@@ -112,8 +112,8 @@ Elasticitetsmodul, sträckgräns och brottgräns är tillsammans den information
 
 ## Övningar
 
-1. En stång med tvärsnittsarean 50 mm² belastas centriskt med dragkraften 15 000 N. Beräkna spänningen.
-2. Ett dragstag ska klara dragkraften 25 000 N utan att spänningen överstiger 125 N/mm². Beräkna den tvärsnittsarea staget minst måste ha.
-3. En balk som ursprungligen är 3000 mm lång töjs 1,5 mm under belastning. Beräkna töjningen i procent.
-4. En stålstång är 2500 mm lång och belastas till spänningen 120 N/mm². Stålets elasticitetsmodul är 200 000 N/mm². Beräkna töjningen och därefter stångens förlängning i millimeter. Bedöm om svaret är rimligt för en stålstång.
-5. Ett dragstag av stålet S235 har tvärsnittsarean 300 mm² och belastas med dragkraften 54 000 N. Stålets sträckgräns är 235 N/mm², brottgränsen 360 N/mm² och elasticitetsmodulen 200 000 N/mm². Beräkna spänningen och avgör om staget befinner sig i det elastiska eller det plastiska området. Beräkna därefter töjningen, och förklara varför beräkningen av töjningen hade varit ogiltig om spänningen i stället legat på 300 N/mm². Vad skulle hända med staget om lasten ökades så att spänningen nådde 250 N/mm² och sedan togs bort helt?
+1. **Kraft per area.** En stång med tvärsnittsarean 50 mm² belastas centriskt med dragkraften 15 000 N. Beräkna spänningen.
+2. **Hur klent räcker?** Ett dragstag ska klara dragkraften 25 000 N utan att spänningen överstiger 125 N/mm². Beräkna den tvärsnittsarea staget minst måste ha.
+3. **Absolut och relativt.** En balk som ursprungligen är 3000 mm lång töjs 1,5 mm under belastning. Beräkna töjningen i procent.
+4. **Från spänning till förlängning.** En stålstång är 2500 mm lång och belastas till spänningen 120 N/mm². Stålets elasticitetsmodul är 200 000 N/mm². Beräkna töjningen och därefter stångens förlängning i millimeter. Bedöm om svaret är rimligt för en stålstång.
+5. **När formeln slutar gälla.** Ett dragstag av stålet S235 har tvärsnittsarean 300 mm² och belastas med dragkraften 54 000 N. Stålets sträckgräns är 235 N/mm², brottgränsen 360 N/mm² och elasticitetsmodulen 200 000 N/mm². Beräkna spänningen och avgör om staget befinner sig i det elastiska eller det plastiska området. Beräkna därefter töjningen, och förklara varför beräkningen av töjningen hade varit ogiltig om spänningen i stället legat på 300 N/mm². Vad skulle hända med staget om lasten ökades så att spänningen nådde 250 N/mm² och sedan togs bort helt?
