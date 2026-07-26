@@ -10,6 +10,36 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-26 — Projektuppgiftsfilerna raderade, migreringsskulden noll
+
+Samtliga elva `NN-projektuppgifter.md` är raderade ur `content/` (kapitel 2, 3, 4,
+5, 7, 8, 9, 10, 11, 12 och 13). De var utfasade sedan 2026-07-22 och stod aldrig i
+06-bokstruktur.md, vilket är precis vad validate rapporterade om dem. 06 krävde
+därför ingen ändring.
+
+Tio av filerna var tomma skelett på 49 ord utan en enda numrerad uppgift. Den
+elfte, `content/02-att-losa-tekniska-problem/05-projektuppgifter.md`, innehöll
+fyra skrivna uppgifter på 327 ord. **Innehållet är bevarat** i det interna
+arbetsdokumentet `uppskjutna-projektuppgifter.md` i projektroten, som inte ingår
+i bokexporten och inte publiceras på webbplatsen.
+
+Skuldkategorin `PROJEKTUPPGIFTER` är borttagen ur `scripts/migreringsstatus.mjs`.
+**Migreringsskulden är därmed 0**, och siffran är åter informativ: en post som
+dyker upp där är verklig skuld, inte bakgrundsbrus. Validate skriver numera
+"ingen migreringsskuld" i stället för att hänvisa till en tom lista.
+
+Utfall: markdownfiler 87 → 76, kapitelavslutningar 38 → 27, migreringsskuld
+11 → 0, webbsidor 106 → 95. Noll aktiva fel, fyra varningar, oförändrat.
+
+**Beslutet om var kapitelövergripande uppgifter hör hemma är fortfarande
+uppskjutet.** Boken har inga helkapitelövningar och inga projektuppgiftsavsnitt,
+och varje avsnitts Övningar tränar bara det egna avsnittets stoff. Var de större,
+integrerande uppgifterna ska ligga avgörs separat; projektägaren bygger dem i ett
+senare, fristående projekt. Raderingen är en städning av skräpdata, inte ett svar
+på den frågan.
+
+---
+
 # 2026-07-26 — Två uppskjutna frågor efter införandet från gamla specen
 
 **Projektuppgifterna och lärarmaterialet är en uppskjuten fråga.** Ambitionen att
