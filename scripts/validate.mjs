@@ -69,6 +69,37 @@ function extractSections(body, rubrik) {
 	return sektioner;
 }
 
+// Som extractSections, men returnerar också sektionens offset i brödtexten så
+// att radnummer kan räknas ut för enskilda poster.
+function extractSectionsMedOffset(body, rubrik) {
+	const re = new RegExp(`^#{2,4}\\s+${rubrik}\\s*$`, 'gm');
+	const sektioner = [];
+	let m;
+	while ((m = re.exec(body)) !== null) {
+		const start = m.index + m[0].length;
+		const rest = body.slice(start);
+		const next = rest.search(/^#{2,4}\s+/m);
+		sektioner.push({ text: next === -1 ? rest : rest.slice(0, next), offset: start, rubrikOffset: m.index });
+	}
+	return sektioner;
+}
+
+// Numrerade poster i en sektion, med nummer, hela radens text och offset.
+function numreradePoster(sektionText, sektionOffset) {
+	const re = /^[ \t]*(\d+)\.[ \t]+(\S.*)$/gm;
+	const ut = [];
+	let m;
+	while ((m = re.exec(sektionText)) !== null) {
+		ut.push({ nr: Number(m[1]), rad: m[0].trim(), offset: sektionOffset + m.index });
+	}
+	return ut;
+}
+
+// Radnummer i filen (1-indexerat) för en offset i brödtexten.
+function radnummer(body, offset, radOffset = 0) {
+	return radOffset + (body.slice(0, offset).match(/\n/g) || []).length + 1;
+}
+
 let errors = [];
 let warnings = [];
 // Förväntad, känd migreringsskuld (produktionslogg.md 2026-07-22). Poster här
@@ -113,6 +144,10 @@ for (const file of files) {
 	const raw = await readFile(file, 'utf8');
 	const { data, content } = matter(raw);
 	const relPath = path.relative(contentDir, file).replaceAll(path.sep, '/');
+	// Radnummer i felmeddelanden ska peka på rad i filen, inte i brödtexten.
+	// Frontmatter räknas därför bort en gång per fil.
+	const bodyStart = raw.length - content.length;
+	const radOffset = (raw.slice(0, bodyStart).match(/\n/g) || []).length;
 
 	if (data.id !== undefined) {
 		const result = larandemalRequiredSchema.safeParse(data);
@@ -120,7 +155,7 @@ for (const file of files) {
 			errors.push(`${relPath}: ogiltig metadata — ${result.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).join('; ')}`);
 			continue;
 		}
-		avsnittFiler.push({ file: relPath, body: content, ...result.data });
+		avsnittFiler.push({ file: relPath, body: content, radOffset, ...result.data });
 		continue;
 	}
 
@@ -130,7 +165,7 @@ for (const file of files) {
 			errors.push(`${relPath}: ogiltig kapitelavslutning — ${result.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).join('; ')}`);
 			continue;
 		}
-		kapitelavslutningsFiler.push({ file: relPath, body: content, ...result.data });
+		kapitelavslutningsFiler.push({ file: relPath, body: content, radOffset, ...result.data });
 		continue;
 	}
 
@@ -420,6 +455,24 @@ for (const avs of avsnittFiler) {
 				errors.push(`${beskr}: "${rubrik}" ligger före "Instuderingsfrågor" — ordningen ska vara löptext, instuderingsfrågor, övningar (03).`);
 			}
 		}
+	}
+
+	// ------------------------------------------------- Övningarnas form (5B)
+	// Låsta kapitel undantas från de hårda kontrollerna: ett fel i ett låst
+	// kapitel går inte att rätta och skulle göra validate permanent rött
+	// (migreringsstatus.mjs, lastaKapitel — samma undantag som frågespannet).
+	const arLast = lastaKapitel.has(avs.chapter);
+	const ovnSektioner = extractSectionsMedOffset(avs.body, 'Övningar');
+	if (ovnSektioner.length === 1 && !arLast) {
+		const sektion = ovnSektioner[0];
+		const poster = numreradePoster(sektion.text, sektion.offset);
+
+		// (1) Övningar 2–10 per avsnitt (03-bokens-arkitektur.md, "Övningar").
+		if (poster.length >= 1 && (poster.length < 2 || poster.length > 10)) {
+			const rad = radnummer(avs.body, sektion.rubrikOffset, avs.radOffset);
+			errors.push(`${beskr}:${rad}: ${poster.length} övningar — spannet är 2–10 per avsnitt (03-bokens-arkitektur.md, "Övningar").`);
+		}
+
 	}
 
 	// Äldre eller uppdelade uppgiftsrubriker och synliga uppslagsrubriker får inte
