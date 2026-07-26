@@ -78,6 +78,11 @@ export async function sammanstallManus({ minStatusIdx, figurBlock = defaultFigur
 	const saknadeFiler = [];
 	const inkluderade = []; // { id, titel } i manusordning
 
+	// Facit lagras hos sitt kapitel men läses som ett samlat facit sist i boken
+	// (03-bokens-arkitektur.md, "Facit"; 12-produktionsarkitektur.md). Blocken
+	// samlas här under kapitelloopen och skrivs ut efter sista kapitlet.
+	const facitDelar = []; // { kapitel, titel, brodtext }
+
 	for (const k of kapitel) {
 		let kapitelDel = '';
 		for (let i = 0; i < k.avsnitt.length; i++) {
@@ -98,6 +103,11 @@ export async function sammanstallManus({ minStatusIdx, figurBlock = defaultFigur
 				continue;
 			}
 			const brodtext = resolveShortcodes(demoteHeadings(stripArbetsanteckningar(content)), figureRegistry, figurBlock);
+			if (avs.type === 'facit') {
+				facitDelar.push({ kapitel: k.nr, titel: k.titel, brodtext });
+				exporterade++;
+				continue;
+			}
 			// Kapitelavslutningar har ingen synlig sektionsnumrering i den
 			// publicerade rubriken (06-bokstruktur.md, "Kapitelavslutningar").
 			const rubrik = avs.type ? data.title : `${id} ${data.title}`;
@@ -107,6 +117,13 @@ export async function sammanstallManus({ minStatusIdx, figurBlock = defaultFigur
 		}
 		if (kapitelDel !== '') {
 			manuscript += `\n\n# Kapitel ${k.nr} · ${k.titel}\n${kapitelDel}`;
+		}
+	}
+
+	if (facitDelar.length > 0) {
+		manuscript += `\n\n# Facit\n`;
+		for (const f of facitDelar) {
+			manuscript += `\n\n${avsnittPrefix}## Kapitel ${f.kapitel} · ${f.titel}\n\n${f.brodtext}\n`;
 		}
 	}
 
