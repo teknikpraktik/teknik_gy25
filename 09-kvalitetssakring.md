@@ -182,7 +182,7 @@ Granskning sker på tre nivåer.
 
 ## Kapitelavslutningar och övningar
 
-□ Kapitlet avslutas i ordningen Sammanfattning, Begrepp — två onumrerade avsnitt utan lärandemål (03).
+□ Kapitlet avslutas i ordningen Sammanfattning, Begrepp, Facit — onumrerade avsnitt utan lärandemål (03). Sammanfattning och Begrepp är obligatoriska; Facit läggs till när kapitlets övningar är klara och lagras hos kapitlet men samlas av exporten sist i boken (03, "Facit").
 
 □ Sammanfattningen är kort löpande text, inte punktlista, och låter eleven repetera hela kapitlet på några minuter (riktmärke cirka 300 ord), utan nya fakta, begrepp eller instuderingsfrågor (03).
 
