@@ -10,6 +10,32 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-26 — Kapitel 6 låst
+
+Kapitel 6 (Mekanik och konstruktion) är fryst och ligger i `lastaKapitel`
+(`scripts/migreringsstatus.mjs`). Vakten är verifierad: en provocerad ändring i
+`09-facit.md` gav aktivt fel med HEAD-avstämning, och filen återställdes.
+
+Kapitlet är genomarbetat enligt den nya modellen: trettiosex övningar med namn i
+fetstil, sex autentiska övningar med elevens egen indata, instuderingsfrågor och
+övningar inom 03:s spann i samtliga sex avsnitt, samtliga metakommentarer
+åtgärdade, tre svällande passager komprimerade, och två faktafel rättade i
+kapitelgranskningen (gångtrafiklasten i 6.6 och vältgränsen i 6.3, båda
+dokumenterade i faktagranskning.md).
+
+**Facit är verifierat i två led.** Samtliga trettio räkneövningar är genomräknade
+steg för steg och redovisade, och de sex autentiska övningarna är upptagna i
+`utanSvar` eftersom elevens egna mätvärden är indata. Utöver det har
+projektägaren gjort ett stickprov av de fem uppgifter som har flest beräkningsled.
+Facittäckningen är dessutom maskinellt kontrollerad: 93 av 93 poster har antingen
+svar eller post i `utanSvar`, som hårt krav från status `fardig-forsta-version`.
+
+Kapitel 6 är därmed bokens referenskapitel för **procedur- och beräkningsstoff**,
+på samma sätt som kapitel 1 är referens för beskrivande stoff. Facitfilen ligger
+på `fardig-forsta-version` och är inte fackgranskad; låset omfattar även den.
+
+---
+
 # 2026-07-26 — Projektuppgiftsfilerna raderade, migreringsskulden noll
 
 Samtliga elva `NN-projektuppgifter.md` är raderade ur `content/` (kapitel 2, 3, 4,

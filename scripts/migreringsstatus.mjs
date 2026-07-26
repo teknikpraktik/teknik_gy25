@@ -34,11 +34,14 @@ export const migreradeKapitel = new Set();
 // Kapitel 1 (Teknikens grunder) är låst sedan 2026-07-26. Kapitlet är
 // korrekturläst och godkänt av projektägaren och är bokens referenskapitel för
 // struktur, ton, instuderingsfrågor och övningar (se produktionslogg.md).
+// Kapitel 6 (Mekanik och konstruktion) är låst sedan 2026-07-26. Kapitlet är
+// kapitelgranskat, facit är skrivet och kontrollerat, och det är bokens
+// referenskapitel för procedur- och beräkningsstoff.
 // Kapitel 2 (Att lösa tekniska problem) låstes 2026-07-23 sedan det reviderats
 // klart, och låstes upp igen 2026-07-23 på projektägarens uttryckliga begäran
 // för en översyn av instuderingsfrågorna.
 // Lås ett kapitel genom att lägga till dess nummer i settet.
-export const lastaKapitel = new Set([1]);
+export const lastaKapitel = new Set([1, 6]);
 
 // Kategorietiketter för grupperingen i validate-utdata.
 //
