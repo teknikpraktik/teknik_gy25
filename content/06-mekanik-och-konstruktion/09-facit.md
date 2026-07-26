@@ -112,7 +112,22 @@ utanSvar:
 
 ### Instuderingsfrågor
 
+1. En balk belastas vinkelrätt mot sin längdriktning, böjs och för lasten i sidled mellan sina stöd. En pelare belastas i längdriktningen, trycks och för lasten rakt nedåt.
+2. Det område i en böjd balk som skiljer dragzonen från tryckzonen. Där byter spänningen tecken och är därför nära noll.
+3. Vid böjning växer spänningen med avståndet från neutralaxeln, så material långt ut tar upp en större del av drag- och tryckkrafterna. Material nära neutralaxeln bidrar lite, eftersom spänningen där är nära noll.
+4. De ligger längst från neutralaxeln och tar därför huvuddelen av de drag- och tryckspänningar som böjningen ger. Den undre flänsen dras och den övre trycks när balken belastas uppifrån.
+5. Att hålla flänsarna på plats på behörigt avstånd från varandra, vilket är själva förutsättningen för böjstyvheten, och att ta upp huvuddelen av den skjuvning som uppstår när lasten förs längs balken mot stöden.
+6. En triangel är den enda form som håller sin form utan att någon sida behöver ändra längd. En rektangel kan pressas snett till en parallellogram utan att någon sida ändras.
+7. Utan styva hörn kan ramen pressas snett till en parallellogram. Diagonalstaget delar rektangeln i två trianglar och gör konstruktionen formstabil.
+8. Tryckkraften följer bågens krökning och lutar kraftigt nere vid foten, så kraften mot upplaget är sned och har en betydande vågrät komposant. Bågen strävar efter att sparka ut sina fötter åt sidorna, och klarar upplaget inte den kraften glider fötterna isär och bågen rasar.
+9. Den väg lasten tar genom konstruktionens delar, från angreppspunkten via stavar och balkar till stöden och vidare ner i marken.
+10. Skruven kan gå av eller skjuvas, niten kan förlora sin klämkraft, svetsen kan spricka i sig själv eller i övergången mot grundmaterialet, limfogen kan släppa från ytan, och materialet runt ett skruvhål kan dra ut sig till ett långhål.
+
 ### Övningar
+
+1. Den massiva stångens area 1260 mm², rörets area 452 mm². Röret använder 36,0 % av den massiva stångens material.
+2. R_A = 6200 N, R_B = 3800 N.
+3. Massiv fyrkantstång: area 3600 mm², tryckspänning 33,3 N/mm². Fyrkantrör: area 1900 mm², tryckspänning 63,2 N/mm². Röret använder 52,8 % av den massiva stångens material. Röret väljs ändå eftersom materialet sitter långt från tvärsnittets centrum, vilket ger betydligt högre styvhet per kilogram. Beräkningen säger inget om knäckning, som kan bli avgörande för en slank pelare och som beror på pelarens längd och infästning, inte bara på spänningen.
 
 ## 6.6 Dimensionering
 
