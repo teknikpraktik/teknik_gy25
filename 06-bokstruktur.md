@@ -397,6 +397,8 @@ Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgift
 
 ## Begrepp
 
+## Facit
+
 ---
 
 # Kapitel 8 · Modellering och simulering
