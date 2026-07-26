@@ -123,6 +123,28 @@ Senare granskningssteg (fackgranskad → språkgranskad → klar) uppdaterar sta
 
 ---
 
+# Kapitelgranskning
+
+Kapitelgranskningen är ett eget arbetspass, inte en kryssrunda. 09-kvalitetssakring.md innehåller kriterierna; det här avsnittet beskriver när passet körs, i vilken ordning och vad det ska lämna ifrån sig.
+
+**När.** När kapitlets samtliga avsnitt står på `fardig-forsta-version`, före statushöjning och före en eventuell frysning i `lastaKapitel`. Passet körs på hela kapitlet på en gång, aldrig avsnitt för avsnitt vid olika tillfällen, eftersom flera av fynden bara syns när avsnitten läses i följd.
+
+**Steg 1, det maskinella.** Kör `npm run validate`. Den täcker frågespann, övningsspann, övningsnamn i fetstil, numrering, bildplatshållarnas format och fullständighet, begreppslistans ordlisteformat, facittäckningen och de förbjudna rubrikerna och formuleringarna. Rätta allt som kommer ut innan läsningen börjar. Det som validate fångar ska aldrig ta läsarens uppmärksamhet.
+
+**Steg 2, läsningen.** Läs kapitlet i sin helhet, avsnitt för avsnitt, mot 09:s kriterier under Innehåll, Pedagogik, AI och Helhetsbedömning. Det är den delen ingen maskin gör: faktafel, svårighetsgrad, om eleven behöver något som ännu inte introducerats, om exemplen är autentiska, och jämförelsen mot referensimplementationen 1.1.
+
+**Steg 3, fem kontroller som 09:s kriterier inte fångade.** Erfarenheten från kapitel 6 (produktionslogg.md 2026-07-26) visade att följande går igenom en kriteriegenomgång utan att märkas. De ska prövas uttryckligen:
+
+- **Autentiska övningar.** Har varje avsnitt minst en uppgift där eleven skaffar sin egen indata genom att mäta, väga, räkna eller läsa av? Kapitel 6 hade noll av trettio uppgifter av det slaget, trots att 03 och 09 kräver autentiska övningar.
+- **Metakommentarer läses fram, de söks inte fram.** Läs hela avsnittet. Frassökning ger falska negativ: i kapitel 6 hittades sex av nio metakommentarer bara genom läsning, eftersom formuleringarna varierar i böjning och ordval ("det är värt att", "är värd att", "här är det viktigt att", "får bli exempel").
+- **Begreppsfrågan.** Har varje avsnitt en instuderingsfråga som efterfrågar innebörden i ett av avsnittets centrala begrepp, inte igenkänning eller tillämpning (03, "Instuderingsfrågor")?
+- **Svällande passager.** Gör något stycke samma poäng mer än en gång? Ett stycke som illustrerar samma sak med tre exempel i rad ska ner till ett, om inte exemplen visar olika fall.
+- **Uppräkningar som ersätter undervisning.** Finns listor på fler än fyra poster som katalogiserar i stället för att lära ut? Boken avvisar den encyklopediska ansatsen (01, "Bokens position"; 02). Behåll de poster eleven kan koppla till kapitlets eget stoff och säg att listan är längre.
+
+**Utfallet.** Passet lämnar en rapport med fynden ordnade per kategori, inte en ifylld checklista. Fynd som kan rättas direkt rättas direkt, med ett commit per avsnitt. Bara avvikelser som kräver ett redaktionellt beslut eskaleras till projektägaren, med underlag och en rekommendation. Ett kapitel utan fynd rapporteras som en rad, inte som en genomgång av samtliga kriterier.
+
+---
+
 # Kapitelavslutningar och övningar
 
 När ett kapitels avsnitt är producerade får kapitlet sina två avslutningar (12, "Kapitelavslutningar"). De skapas inte i förväg för kapitel som inte är påbörjade.
