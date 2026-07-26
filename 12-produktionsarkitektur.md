@@ -198,7 +198,11 @@ Kapitelavslutningarna är onumrerade i all synlig rubriknumrering; `sectionNumbe
 
 **Placering:** kapitelavslutningarna slottas sist i kapitlet (efter sista teoriavsnittet) i sidopanelen, kapitelöversikten, granskningsvyn `/review/` och exporten, i 06:s ordning.
 
-**Facit** stöds tekniskt men lagras aldrig i klartext i detta repo, eftersom repot är **offentligt** (GitHub Pages). Begreppsövningens facit och uppgiftsbankens bedömningsstöd ligger i en separat, privat lärarmaterialkälla. I detta repo finns bara det tekniska gränssnittet: facit ingår aldrig i elevmanuset (`npm run export`) eller på den publika elevwebben, och en framtida lärarmaterialexport läser facit ur den privata källan. Skulle repot göras privat får facit ligga i en egen lärarmaterialstruktur i samma repo.
+**Facit.** Skilj på elevfacit och bedömningsstöd.
+
+**Elevfacit** är svar på instuderingsfrågor och övningar. Det ingår i boken som ett eget kapitel sist (03-bokens-arkitektur.md, "Facit") och ligger därmed i klartext i detta repo, i elevmanuset (`npm run export`) och på elevwebben. Eftersom repot är **offentligt** (GitHub Pages) blir elevfacit publikt läsbart. Det är ett accepterat beslut av projektägaren, inte en förbisedd följd: facit är avsett för eleven, och boken ska kunna läsas utan lärare, vilket förutsätter att eleven kan kontrollera sitt eget svar.
+
+**Bedömningsstöd**, betygsunderlag och övrigt lärarmaterial ligger kvar i en separat, privat lärarmaterialkälla utanför repot. En framtida lärarmaterialexport läser det ur den källan.
 
 ---
 

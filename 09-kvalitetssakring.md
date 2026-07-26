@@ -204,7 +204,7 @@ Granskning sker på tre nivåer.
 
 □ Övningarna över kapitlet varierar i form på ett sätt som är relevant för kapitlets ämnesinnehåll. Variationen är inte artificiellt konstruerad.
 
-□ Facit ingår aldrig i elevmanuset eller på den publika elevwebben (12).
+□ Elevfacit, alltså svar på instuderingsfrågor och övningar, ingår i boken som ett eget kapitel sist (03, "Facit"). Bedömningsstöd, betygsunderlag och lärarmaterial ingår aldrig i elevmanuset eller på den publika elevwebben, utan ligger i den separata privata källan (12).
 
 ---
 
