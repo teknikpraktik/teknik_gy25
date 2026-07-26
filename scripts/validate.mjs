@@ -484,6 +484,20 @@ for (const avs of avsnittFiler) {
 		}
 	}
 
+	// ------------------------------------------------ Bildplatshållare (5B)
+	// (3) Minst en [BILD X.Y-N] per avsnitt. Räknaren utgår från platshållare i
+	// brödtexten, inte frontmatterfältet `figures`, eftersom registret och
+	// [[figur:ID]] är under avveckling och `figures` inte fylls i för avsnitt
+	// som skrivs med [BILD] (12-produktionsarkitektur.md, "Bilder").
+	//
+	// Mjuk varning, inte fel: 03 säger "minst en figur NÄR den förbättrar
+	// förståelsen". Villkoret är redaktionellt, och ett hårt fel skulle tvinga
+	// fram dekorationsbilder.
+	const bildTraffar = [...avs.body.matchAll(/\[BILD\s+([^\]]*)\]/g)];
+	if (bildTraffar.length === 0) {
+		warnings.push(`${beskr}: inga [BILD X.Y-N]-platshållare — kontrollera att detta är ett medvetet beslut (03-bokens-arkitektur.md, "Bilder").`);
+	}
+
 	// Äldre eller uppdelade uppgiftsrubriker och synliga uppslagsrubriker får inte
 	// förekomma. Uppgiftstypen styrs av uppgiften själv, inte av en egen rubrik
 	// (03-bokens-arkitektur.md, "Avsnittets struktur").
@@ -564,9 +578,10 @@ for (const avs of avsnittFiler) {
 	if ((avs.curriculumReferences.niva1?.length ?? 0) + (avs.curriculumReferences.niva2?.length ?? 0) === 0) {
 		errors.push(`${beskr}: curriculumReferences är tomt — tagga med punkt-id från 07 innan status höjs.`);
 	}
-	if (avs.figures.length === 0) {
-		warnings.push(`${beskr}: inga figurer — kontrollera att detta är ett medvetet beslut (03: "minst en figur när den förbättrar förståelsen").`);
-	}
+	// Figurkontrollen räknar [BILD X.Y-N] i brödtexten, se ovan. Det gamla
+	// måttet på frontmatterfältet `figures` är borttaget: fältet fylls inte i
+	// för avsnitt som skrivs med [BILD], och kontrollen gav därför falskt utslag
+	// på kapitel 1 (12-produktionsarkitektur.md, "Bilder").
 	if (avs.abilities.length === 0) {
 		warnings.push(`${beskr}: abilities är tomt — tagga vilken/vilka av de fem bedömda förmågorna (07) avsnittet primärt tränar.`);
 	}
