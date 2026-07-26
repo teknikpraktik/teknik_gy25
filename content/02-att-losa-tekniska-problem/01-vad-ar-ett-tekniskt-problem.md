@@ -15,7 +15,7 @@ learningGoals:
 abilities: [f2]
 concepts_introduced: ["tekniskt problem", "funktion", "krav", "begränsning"]
 concepts_used: ["teknik", "teknisk lösning", "behov"]
-figures: ["fig-2.1.1-a", "fig-2.1.2-a"]
+figures: []
 prerequisites: ["1.1"]
 ---
 

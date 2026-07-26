@@ -39,7 +39,7 @@ export const migreradeKapitel = new Set();
 // referenskapitel för procedur- och beräkningsstoff.
 // Kapitel 2 (Att lösa tekniska problem) låstes 2026-07-23 sedan det reviderats
 // klart, låstes upp igen samma dag för en översyn av instuderingsfrågorna, och
-// är låst på nytt 2026-07-26 sedan facit skrivits.
+// är låst på nytt 2026-07-26 sedan facit skrivits och kapitelgranskningen körts.
 // Kapitel 7 (Mätteknik och dataanalys) är låst sedan 2026-07-26. Kapitlet är
 // producerat under det färdiga ramverket, kapitelgranskat och försett med facit.
 // Lås ett kapitel genom att lägga till dess nummer i settet.

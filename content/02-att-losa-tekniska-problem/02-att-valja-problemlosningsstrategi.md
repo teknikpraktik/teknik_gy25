@@ -24,7 +24,7 @@ learningGoals:
 abilities: [f2]
 concepts_introduced: ["delproblem"]
 concepts_used: ["teknik", "tekniskt problem", "krav", "funktion", "begränsning"]
-figures: ["fig-2.2.1-a", "fig-2.2.2-a", "fig-2.2.3-a", "fig-2.2.4-a", "fig-2.2.5-a"]
+figures: []
 prerequisites: ["2.1"]
 ---
 
