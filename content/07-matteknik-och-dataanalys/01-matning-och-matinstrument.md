@@ -33,7 +33,7 @@ Sju storheter är grundstorheter i SI-systemet, det internationella måttsystem 
 
 Kraften är ett exempel. En newton är den kraft som ger massan ett kilogram accelerationen en meter per sekundkvadrat, alltså 1 N = 1 kg · m/s². Newton är därför ingen fristående enhet utan en förkortning för en kombination av tre grundenheter. Samma sak gäller [[begrepp:spänning]], som mäts i newton per kvadratmillimeter och alltså kombinerar kraft med area.
 
-[BILD 7.1-1] Innehåll: SI-systemets sju grundstorheter i en rad, var och en med storhetens namn, enhetens namn och beteckningen. Under raden tre härledda storheter som eleven redan mött: kraft i newton, area i kvadratmillimeter och spänning i newton per kvadratmillimeter. Från varje härledd storhet går pilar upp till de grundstorheter den byggs av, så att newton kopplas till kilogram, meter och sekund, och spänning till newton och meter. Bildtext: "Härledda enheter är inte nya enheter utan kombinationer av grundenheterna."
+[BILD 7.1-1] Innehåll: Tre härledda storheter som eleven redan mött, ordnade under varandra: kraft i newton, area i kvadratmillimeter och spänning i newton per kvadratmillimeter. Från varje härledd storhet går pilar ner till de grundstorheter och grundenheter den byggs av, så att newton bryts ner i kilogram, meter och sekund, arean i meter gånger meter, och spänningen i newton delat med area. Grundenheterna står längst ner som byggstenar och återanvänds mellan de tre. Bildtext: "Härledda enheter är inte nya enheter utan kombinationer av grundenheterna."
 
 För att slippa skriva ut långa tal används *prefix*, förstavelser som anger en tiopotens. Kilo (k) betyder tusen, mega (M) en miljon och giga (G) en miljard, medan milli (m) betyder tusendel och mikro (µ) miljondel. Egentyngden 3600 N skrivs därför lika gärna 3,6 kN, och sträckgränsen 235 N/mm² kan skrivas 235 MPa.
 
@@ -61,7 +61,7 @@ och spänningen i staget
 
 σ = F / A = 18 000 / 199,8 ≈ 90,1 N/mm²
 
-Sambandet är detsamma som i kapitlet om hållfasthet och lärs inte ut på nytt här. Det nya är att arean vilar på ett uppmätt värde, och att mätningen därför avgör hur mycket svaret är värt. Svaret är rimligt: 90 N/mm² ligger klart under konstruktionsstålets sträckgräns 235 N/mm², vilket det ska göra för ett stag i bruk. Hade diametern i stället mätts med tumstock till 16 mm hade arean blivit 201 mm² och spänningen 89,6 N/mm², en skillnad på en halv procent. För den här kontrollen spelar den skillnaden ingen roll, och då räcker tumstocken.
+Sambandet är detsamma som i kapitlet om hållfasthet och lärs inte ut på nytt här. Det nya är att arean vilar på ett uppmätt värde, och att mätningen därför avgör hur mycket svaret är värt. Svaret är rimligt: 90 N/mm² ligger klart under konstruktionsstålets sträckgräns 235 N/mm², vilket det ska göra för ett stag i bruk. Hade diametern i stället mätts med tumstock till 16 mm hade arean blivit 201,1 mm² och spänningen 89,5 N/mm², en skillnad på drygt en halv procent. För den här kontrollen spelar den skillnaden ingen roll, och då räcker tumstocken.
 
 [BILD 7.1-2] Innehåll: Samma sträcka på en konstruktionsdetalj mätt med tre instrument bredvid varandra: tumstock, måttband och skjutmått. Vid varje instrument anges dess upplösning, 1 mm, 1 mm respektive 0,02 mm, och det avlästa värdet med det antal siffror instrumentet tillåter, 16 mm, 16 mm och 15,95 mm. En markering visar att skjutmåttets skala är graderad så mycket finare att avläsningen bär två decimaler. Bildtext: "Instrumentets upplösning avgör hur många siffror mätvärdet kan bära."
 

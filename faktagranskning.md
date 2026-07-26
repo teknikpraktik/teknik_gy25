@@ -32,6 +32,12 @@ precisa antal och priser.
 Standardernas beteckningar nämns inte i elevtexten. Kapitlet citerar inga
 standarder någon annanstans, och lastvärdet anges därför som ett normalvärde.
 
+## Korrigeringar gjorda i kapitelgranskningen av kapitel 7 (2026-07-26)
+
+| Påstående (före) | Åtgärd | Källa | Status |
+|---|---|---|---|
+| "arean blivit 201 mm² och spänningen 89,6 N/mm²" (7.1) | Rättat till 201,1 mm² och 89,5 N/mm². Med den avrundade arean 201 mm² ger divisionen 89,55, som avrundas uppåt till 89,6, medan full precision (π · 16² / 4 = 201,06) ger 89,52 och därmed 89,5. Eleven kunde alltså inte reproducera det angivna svaret. Följdmeningen ändrad från "en halv procent" till "drygt en halv procent", eftersom skillnaden mot 90,1 N/mm² är 0,67 %. | Kapitlets egna tal, kontrollräknade | Verifierat (avrundningsfel) |
+
 ## Kvarstående uppgifter att stämma mot primär/institutionell källa
 
 Följande precisa uppgifter bör kontrolleras mot primär eller institutionell källa
@@ -39,6 +45,7 @@ före fackgranskning (status `fackgranskad`). De bedöms i dag som korrekta men 
 av den typ (exakt årtal, antal, "först", patent) som kräver institutionellt stöd.
 
 - Skiftnyckelns patent 1892 och Johan Petter Johansson (1.1.1) – t.ex. Tekniska museet.
+- Tumstockens noggrannhetsangivelse "±0,3 mm för en tumstock av en viss klass" (7.1) – bör stämmas mot gällande mätdonsklassning innan status höjs. Klassen är medvetet inte namngiven i elevtexten, men siffran bör vara rätt storleksordning för den klass som är vanligast i handeln.
 - Öresundsförbindelsen: avtal 1991, invigning 2000, Pepparholm, sänktunnel (1.1.2) – Øresundsbron/officiella källor.
 - Appert-belöningen 12 000 franc 1795, konservburken 1810 (1.5.1) – livsmedels-/teknikhistorisk institution.
 - Domesday Book ">5 000 vattenkvarnar" (1.2.1) – historisk institution.

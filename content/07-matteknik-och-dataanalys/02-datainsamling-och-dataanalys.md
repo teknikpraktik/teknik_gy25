@@ -30,7 +30,7 @@ En mätserie som inte är planerad går inte att tolka. Planeringen handlar om a
 
 Den *oberoende variabeln* är den som ändras med avsikt, steg för steg. Den *beroende variabeln* är den som mäts och som förväntas ändra sig som följd. Alla övriga storheter som kan påverka resultatet är *kontrollerade variabler*, och de ska hållas så konstanta som möjligt genom hela serien.
 
-En balk på två stöd får bli exempel. Balken belastas i mitten med en vikt som ökas steg för steg, och för varje last mäts hur långt balkens mitt sjunker. Lasten är den oberoende variabeln och nedböjningen den beroende. De kontrollerade variablerna är spännvidden mellan stöden, den punkt där nedböjningen läses av, vilken balk som används och rumstemperaturen. Flyttas stöden mitt i serien blir mätvärdena obrukbara, eftersom två saker då ändrats samtidigt och det inte längre går att veta vilken av dem som orsakade skillnaden.
+En balk på två stöd belastas i mitten med en vikt som ökas steg för steg, och för varje last mäts hur långt balkens mitt sjunker. Lasten är den oberoende variabeln och nedböjningen den beroende. De kontrollerade variablerna är spännvidden mellan stöden, den punkt där nedböjningen läses av, vilken balk som används och rumstemperaturen. Flyttas stöden mitt i serien blir mätvärdena obrukbara, eftersom två saker då ändrats samtidigt och det inte längre går att veta vilken av dem som orsakade skillnaden.
 
 [BILD 7.2-1] Innehåll: Mätuppställningen sedd från sidan. En balk vilar på två stöd, en vikt hänger i balkens mitt, och nedböjningen mäts mot en fast referenslinje med en linjal ställd lodrätt vid mittpunkten. Tre etiketter pekar ut variabeltyperna direkt i bilden: lasten märkt oberoende variabel, nedböjningen märkt beroende variabel, och spännvidden, avläsningspunkten och balken märkta kontrollerade variabler. Bildtext: "En mätserie går bara att tolka om allt utom en storhet hålls fast."
 
@@ -40,13 +40,9 @@ Mätningen kan göras för hand eller med digital datainsamling, där en sensor 
 
 ## Sammanställa mätdata
 
-Rådata från balkförsöket ser ut så här, med lasten i newton och nedböjningen i millimeter avläst med linjal på tiondels millimeter.
+Balkförsöket gav sex mätpunkter, från obelastad balk till 25 N, med nedböjningen avläst på tiondels millimeter och störst nedböjning drygt tio millimeter. Uppställd i en tabell med en kolumn per variabel blir serien överblickbar, men tabellen visar bara talen. Ritas samma tal som punkter i ett diagram, med den oberoende variabeln på den vågräta axeln och den beroende på den lodräta, framträder något tabellen döljer: punkterna följer en rät linje, och det syns direkt om någon punkt faller utanför mönstret. Diagrammet är därför inte en prydnad utan själva analysverktyget.
 
-Last 0 N ger 0,0 mm, 5 N ger 2,1 mm, 10 N ger 4,0 mm, 15 N ger 6,2 mm, 20 N ger 8,1 mm och 25 N ger 10,1 mm.
-
-Uppställd i en tabell med en kolumn per variabel blir serien överblickbar, men tabellen visar bara talen. Ritas samma tal som punkter i ett diagram, med den oberoende variabeln på den vågräta axeln och den beroende på den lodräta, framträder något tabellen döljer: punkterna följer en rät linje, och det syns direkt om någon punkt faller utanför mönstret. Diagrammet är därför inte en prydnad utan själva analysverktyget.
-
-[BILD 7.2-2] Innehåll: Samma mätdata i två former bredvid varandra. Vänster: en tabell med två kolumner, last i newton och nedböjning i millimeter, med de sex mätvärdena. Höger: ett punktdiagram av exakt samma tal, med lasten på den vågräta axeln och nedböjningen på den lodräta, båda axlarna märkta med storhet och enhet. En pil mellan de två markerar att det är samma data. Bildtext: "Tabellen visar talen, diagrammet visar mönstret."
+[BILD 7.2-2] Innehåll: Samma mätdata i två former bredvid varandra. Vänster: en tabell med två kolumner, last i newton och nedböjning i millimeter, med de sex mätvärdena 0 och 0,0, 5 och 2,1, 10 och 4,0, 15 och 6,2, 20 och 8,1 samt 25 och 10,1. Höger: ett punktdiagram av exakt samma tal, med lasten på den vågräta axeln och nedböjningen på den lodräta, båda axlarna märkta med storhet och enhet. En pil mellan de två markerar att det är samma data. Bildtext: "Tabellen visar talen, diagrammet visar mönstret."
 
 Upprepas en mätning flera gånger vid samma inställning sprider sig värdena något, av de skäl som beskrevs i föregående avsnitt. Vid lasten 15 N mäts nedböjningen fem gånger och ger 6,2 mm, 6,0 mm, 6,3 mm, 6,1 mm och 6,2 mm. *Medelvärdet* är summan av mätvärdena delad med antalet mätningar:
 
@@ -74,7 +70,7 @@ Faller en enskild punkt tydligt utanför mönstret ska den undersökas, inte sud
 
 En sista försiktighet gäller vad ett samband betyder. Att två storheter följer varandra visar att de hänger ihop, inte att den ena orsakar den andra. Det är just därför de kontrollerade variablerna hålls fasta: när allt annat är oförändrat återstår få andra förklaringar än den man undersöker.
 
-Slutsatsen ska slutligen dras med [[begrepp:mätosäkerhet]]en i handen. Ett [[begrepp:mätvärde]] som avviker från det väntade är bara intressant om avvikelsen är större än osäkerheten, och en trendlinje som ligger nära punkterna säger inget om hur väl den beskriver verkligheten utanför mätområdet. Frågan om vad som händer vid laster som aldrig mättes besvaras inte med en linjal utan med en modell som räknar och simulerar, och den hör hemma i ett senare kapitel.
+Att en trendlinje ligger nära sina punkter säger alltså ingenting om hur väl den beskriver verkligheten utanför mätområdet, hur liten [[begrepp:mätosäkerhet]]en i varje enskilt [[begrepp:mätvärde]] än är. Frågan om vad som händer vid laster som aldrig mättes besvaras inte med en linjal utan med en modell som räknar och simulerar, och den hör hemma i ett senare kapitel.
 
 ## Instuderingsfrågor
 
