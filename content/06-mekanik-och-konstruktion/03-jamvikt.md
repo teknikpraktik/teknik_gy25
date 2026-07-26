@@ -99,7 +99,7 @@ Lasten på 8000 N hänger 8,0 m ut från samma stödben och ger ett vältande mo
 
 8000 · 8,0 = 64 000 Nm
 
-Eftersom det stabiliserande momentet, 75 000 Nm, är större än det vältande, 64 000 Nm, förblir kranen stående. Marginalen är däremot inte stor. Ökar lasten till 9400 N, eller svänger föraren ut bommen ytterligare drygt en meter, är momenten lika stora och kranen står på gränsen till att tippa. Det är därför en verklig kran aldrig körs till sin beräknade vältgräns: lastdiagrammet i förarhytten anger en tillåten last med marginal, och den marginalen ska täcka in vindlast, ojämnt underlag, lasten som svänger och kranens egen rörelse.
+Eftersom det stabiliserande momentet, 75 000 Nm, är större än det vältande, 64 000 Nm, förblir kranen stående. Marginalen är däremot inte stor. Ökar lasten till 9375 N, eller svänger föraren ut bommen ytterligare knappt en och en halv meter, är momenten lika stora och kranen står på gränsen till att tippa. Det är därför en verklig kran aldrig körs till sin beräknade vältgräns: lastdiagrammet i förarhytten anger en tillåten last med marginal, och den marginalen ska täcka in vindlast, ojämnt underlag, lasten som svänger och kranens egen rörelse.
 
 Samma princip avgör varför en hög, fylld bokhylla lättare välter framåt än en låg och bred, och varför den understa hyllan bör bära det tyngsta: en låg tyngdpunkt och en bred stödyta ger tillsammans god stabilitet.
 
