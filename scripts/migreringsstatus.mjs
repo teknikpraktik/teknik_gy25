@@ -41,23 +41,28 @@ export const migreradeKapitel = new Set();
 export const lastaKapitel = new Set([1]);
 
 // Kategorietiketter för grupperingen i validate-utdata.
-// KAP1_MAPP (kapitel 1-mappen ej omdöpt) är borttagen 2026-07-22: mappen
-// content/01-teknik-och-teknikutveckling har döpts om till 01-teknikens-grunder,
-// så den skulden är åtgärdad.
+//
+// Två kategorier är borttagna sedan skulden åtgärdats:
+// KAP1_MAPP (2026-07-22), sedan content/01-teknik-och-teknikutveckling döpts om
+// till 01-teknikens-grunder, och PROJEKTUPPGIFTER (2026-07-26), sedan de elva
+// NN-projektuppgifter.md raderats ur content/. Kapitel 2:s innehåll är bevarat
+// i uppskjutna-projektuppgifter.md.
+//
+// Kvar finns bara OVNINGSRUBRIK, som ingen fil träffar i dag. Siffran för
+// migreringsskuld är därmed 0 och åter informativ: varje post som dyker upp här
+// är verklig skuld, inte bakgrundsbrus.
 export const strukturskuldKategorier = {
-	PROJEKTUPPGIFTER: 'Utfasade projektuppgiftsfiler kvar i content/ (NN-projektuppgifter.md saknas i 06)',
 	OVNINGSRUBRIK: 'Utfasad övningsrubrik "Praktiska uppgifter" i ej migrerat kapitel (migreras till "Övningar")',
 };
 
 // Klassificerar ett redan genererat valideringsfel som känd strukturell
-// migreringsskuld och returnerar kategorietiketten, annars null. Signaturen är
-// medvetet smal och förankrad i den konkreta skuldposten (de 13
-// NN-projektuppgifter.md-filerna) så att ett nytt, äkta fel — även i ett ej
-// migrerat kapitel — inte råkar sväljas som skuld.
-export function klassificeraStrukturskuld(msg) {
-	// De 13 NN-projektuppgifter.md-filerna finns kvar i content/ men saknas i 06.
-	if (/\/\d{2}-projektuppgifter\.md: kapitelavslutning \(type uppgiftsbank\) finns inte i 06-bokstruktur\.md\.$/.test(msg)) {
-		return strukturskuldKategorier.PROJEKTUPPGIFTER;
-	}
+// migreringsskuld och returnerar kategorietiketten, annars null. Signaturen
+// hålls medvetet smal och förankrad i konkreta skuldposter, så att ett nytt,
+// äkta fel — även i ett ej migrerat kapitel — inte råkar sväljas som skuld.
+//
+// Ingen felsignatur klassificeras längre som skuld. Funktionen behålls som
+// inhängning för kommande migreringssteg (OVNINGSRUBRIK klassificeras i
+// validate.mjs där rubriken upptäcks).
+export function klassificeraStrukturskuld() {
 	return null;
 }

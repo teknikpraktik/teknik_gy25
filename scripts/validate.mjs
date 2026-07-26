@@ -922,4 +922,8 @@ if (errors.length > 0) {
 	process.exit(1);
 }
 
-console.log(`Validering OK — 0 aktiva fel. Förväntad migreringsskuld: ${skuld.length} (se lista ovan; känd, väntad tills kapitlen migreras).`);
+console.log(
+	skuld.length === 0
+		? 'Validering OK — 0 aktiva fel, ingen migreringsskuld.'
+		: `Validering OK — 0 aktiva fel. Förväntad migreringsskuld: ${skuld.length} (se lista ovan; känd, väntad tills kapitlen migreras).`,
+);
