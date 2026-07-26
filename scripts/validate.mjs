@@ -473,6 +473,15 @@ for (const avs of avsnittFiler) {
 			errors.push(`${beskr}:${rad}: ${poster.length} övningar — spannet är 2–10 per avsnitt (03-bokens-arkitektur.md, "Övningar").`);
 		}
 
+		// (2) Varje övning har ett namn i fetstil följt av uppgiften
+		// (03-bokens-arkitektur.md, "Övningar"; 09-kvalitetssakring.md).
+		for (const p of poster) {
+			if (!/^\d+\.[ \t]+\*\*[^*]+\*\*/.test(p.rad)) {
+				const rad = radnummer(avs.body, p.offset, avs.radOffset);
+				const utdrag = p.rad.length > 50 ? `${p.rad.slice(0, 50)}…` : p.rad;
+				errors.push(`${beskr}:${rad}: övning ${p.nr} saknar namn i fetstil ("${utdrag}") — varje övning har ett namn i fetstil följt av uppgiften (03-bokens-arkitektur.md, "Övningar").`);
+			}
+		}
 	}
 
 	// Äldre eller uppdelade uppgiftsrubriker och synliga uppslagsrubriker får inte
