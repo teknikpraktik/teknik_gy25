@@ -22,6 +22,23 @@ Granskning sker på tre nivåer.
 2. Kapitel
 3. Hela boken
 
+**Kör `npm run validate` först.** En del av kriterierna nedan kontrolleras
+maskinellt och behöver inte läsas efter för hand. Validate täcker i dag:
+antalet instuderingsfrågor (5–15) och övningar (2–10), övningsnamn i fetstil,
+explicit stigande numrering, bildplatshållarnas id-format och att de har
+Innehåll och Bildtext, begreppslistans ordlisteformat, facittäckningen mot
+kapitlets uppgifter, utfasade uppgiftsrubriker, granskningsnotiser i brödtext,
+länkar i elevtext, numrerade delavsnittsrubriker, begreppsunikhet,
+kursplanetaggning, förkunskapsordning samt mjuka varningar för semikolon,
+tankstreck, AI-typiska formuleringar, personnamn och avsnitt utan
+bildplatshållare.
+
+Låsta kapitel undantas från de hårda innehållskontrollerna, eftersom ett fel
+där inte går att rätta.
+
+Granskningen läser alltså efter det som inte går att kontrollera maskinellt:
+allt under Innehåll, Pedagogik, AI och Helhetsbedömning.
+
 ---
 
 # Granskning av avsnitt
@@ -68,7 +85,7 @@ Granskning sker på tre nivåer.
 
 □ Bilder som undervisar (förklarar samband, visualiserar system, visar processer eller jämför lösningar) finns i varje större avsnitt. Inga dekorationsbilder.
 
-□ Varje bild är specificerad som platshållare i formatet `[BILD X.Y-N]` med Innehåll (vad bilden ska visa och varför) och färdigformulerad Bildtext (03, "Bilder").
+□ Varje bild är specificerad som platshållare i formatet `[BILD X.Y-N]` med Innehåll (vad bilden ska visa och varför) och färdigformulerad Bildtext (03, "Bilder"). `npm run validate` kontrollerar id-format, Innehåll och Bildtext, och varnar för avsnitt helt utan platshållare.
 
 □ Bild och text använder samma exempel.
 
@@ -94,7 +111,11 @@ Granskning sker på tre nivåer.
 
 □ Inga frågor upprepar varandra, testar en oviktig detalj eller ligger utanför avsnittets lärandemål.
 
-□ Avsnittet har EN samlad sektion Övningar med 2–10 övningar i tydlig progression: identifiera, analysera, jämföra, konstruera, förbättra, eget arbete.
+□ Avsnittet har EN samlad sektion Övningar med 2–10 övningar i tydlig progression: identifiera, analysera, jämföra, konstruera, förbättra, eget arbete. `npm run validate` kontrollerar antalet.
+
+□ Varje övning har ett namn i fetstil följt av uppgiften (03, "Övningar"). `npm run validate` kontrollerar detta.
+
+□ Instuderingsfrågor och övningar är numrerade explicit stigande 1, 2, 3 i källan. `npm run validate` kontrollerar detta.
 
 □ Övningarna är autentiska och knutna till sådant eleven känner igen, inte instängda läroboksuppgifter.
 
