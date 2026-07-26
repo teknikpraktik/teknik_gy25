@@ -484,6 +484,25 @@ for (const avs of avsnittFiler) {
 		}
 	}
 
+	// (5) Numreringen ska vara explicit stigande 1, 2, 3 i källan. Markdown
+	// renderar "1. 1. 1." som 1, 2, 3, så en sådan fil har inga hopp men inget
+	// läsbart nummer i källan — och facitkontrollen behöver numret för att
+	// kunna knyta ett svar till rätt uppgift (03-bokens-arkitektur.md, "Facit").
+	if (!arLast) {
+		for (const rubrik of ['Instuderingsfrågor', 'Övningar']) {
+			const sektioner = extractSectionsMedOffset(avs.body, rubrik);
+			if (sektioner.length !== 1) continue;
+			const poster = numreradePoster(sektioner[0].text, sektioner[0].offset);
+			for (let i = 0; i < poster.length; i++) {
+				if (poster[i].nr !== i + 1) {
+					const rad = radnummer(avs.body, poster[i].offset, avs.radOffset);
+					errors.push(`${beskr}:${rad}: ${rubrik.toLowerCase()} är numrerade ${poster.map((p) => p.nr).join(', ')} — numreringen ska vara explicit stigande 1, 2, 3 i källan (03-bokens-arkitektur.md).`);
+					break;
+				}
+			}
+		}
+	}
+
 	// ------------------------------------------------ Bildplatshållare (5B)
 	// (3) Minst en [BILD X.Y-N] per avsnitt. Räknaren utgår från platshållare i
 	// brödtexten, inte frontmatterfältet `figures`, eftersom registret och
