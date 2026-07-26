@@ -33,16 +33,20 @@ export const formagaIds = formagor.map((f) => f.id);
 // Kapitelavslutningarnas innehållstyper (12-produktionsarkitektur.md,
 // "Kapitelavslutningar"). Egna innehållstyper, aldrig ett teoriavsnitt med
 // lärandemål. De är H2-avsnitt som vilka andra som helst i 06-bokstruktur.md,
-// alltid sist i kapitlet i ordningen sammanfattning, begreppsövning,
-// uppgiftsbank.
+// alltid sist i kapitlet i ordningen sammanfattning, begreppsövning, facit.
 //
 // Kapitelsammanfattningen är löpande brödtext, cirka 300 ord, utan ordlista.
-// Uppgiftsbanken har ingen uppgiftsmetadata: uppgifterna skrivs som en enkel
-// numrerad lista i brödtexten (löpnummer + namn), utan nivåer, arbetsform,
-// tidsåtgång eller lärandemålskoppling — utförandet överlåts till läraren och
-// eleven (redaktionellt beslut). Begreppsövningen är en punktlista (`ordlista`)
-// där eleven förklarar varje begrepp med en egen mening.
-export const kapitelavslutningTyper = ['kapitelsammanfattning', 'begreppsovning', 'uppgiftsbank'];
+// Begreppsövningen är en ordlista (`ordlista`) med färdiga definitioner.
+// Facit (redaktionellt beslut 2026-07-26) är kapitlets svar på
+// instuderingsfrågor och övningar, disponerat per avsnitt i avsnittets egen
+// numrering. Det saknar `learningGoals` och `ordlista` och har ingen egen
+// metadata utöver kapitelavslutningarnas gemensamma fält — svaren skrivs som
+// löptext under rubriker (03-bokens-arkitektur.md, "Facit").
+//
+// `uppgiftsbank` är pensionerad men behålls i listan tills de elva kvarvarande
+// NN-projektuppgifter.md är borttagna, så att de kan läsas och rapporteras som
+// migreringsskuld i stället för att krascha schemavalideringen.
+export const kapitelavslutningTyper = ['kapitelsammanfattning', 'begreppsovning', 'facit', 'uppgiftsbank'];
 
 // Fält som gäller för content-filer i den delade collectionen. Allt är valfritt
 // så att teoriavsnitt, kapitelavslutningar (type-filer) och startsidan
