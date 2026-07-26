@@ -128,7 +128,7 @@ Uppslag och sidbrytningar är frågor för layout och tryckexport, inte nivåer 
 - **Instuderingsfrågor**
 - **Övningar**
 
-Kapitlet avslutas med två avsnitt utan lärandemål, **Sammanfattning** och **Begrepp** (se "Kapitelavslutningar"). Det finns inga separata projektuppgiftsavsnitt. Kapitlets större, integrerande uppgifter ligger i ett separat lärarmaterial utanför boken, inte i elevtexten (se "Kapitelövergripande uppgifter").
+Kapitlet avslutas med avsnitt utan lärandemål, **Sammanfattning**, **Begrepp** och **Facit** (se "Kapitelavslutningar"). Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgifter ingår inte i bokprojektet (se "Kapitelövergripande uppgifter").
 
 Tidigare uppgiftsdelar används inte längre: rubrikerna Praktiska uppgifter och Projektuppgifter samt de äldre uppdelade kategorierna (Beräkningsuppgifter, Rituppgifter, CAD-uppgifter, Programmeringsuppgifter, Laborationer, Konstruktionsuppgifter, Tillämpningsuppgifter, Analysuppgifter, Tillämpningsproblem, Fördjupningsuppgifter, Kortare uppgifter, Projekt, Förstå/Utveckla/Utmana).
 
@@ -174,7 +174,7 @@ Varje övning har ett namn i fetstil följt av uppgiften, och numreras 1, 2, 3 �
 
 Varje avsnitts **Övningar** tränar och hänvisar bara till det egna avsnittets stoff. Boken har **inga helkapitelövningar** och inga integrerande storuppgifter som spänner över flera avsnitt (redaktionellt beslut 2026-07-24, som ersätter det tidigare kravet på en helkapitelövning per kapitel).
 
-Kapitlets större, integrerande och kapitelövergripande uppgifter (syntesprojekt, tvärgående tillämpningar, storprojekt) hör hemma i ett **separat lärarmaterial utanför boken**, inte i elevtexten. Där kan läraren välja, tidsätta och betygssätta dem fritt.
+Kapitelövergripande uppgifter (syntesprojekt, tvärgående tillämpningar, storprojekt) **ingår inte i bokprojektet** (redaktionellt beslut 2026-07-26). De skrivs varken i elevtexten eller i något åtföljande material inom ramen för det här arbetet.
 
 **Ingen utskriven nivåstapling i övningar.** Progressionen från E till A ligger i uppgiftens öppenhet och i betygskriteriernas kvalitetsord, inte i utskrivna delsteg i elevtexten. Formatet grunduppgift plus "Bygg ut: ..." plus "Bygg ut vidare: ..." används inte. `scripts/validate.mjs` varnar (mjukt) om "Bygg ut" står kvar i en övningssektion, som regressionsskydd.
 
@@ -225,7 +225,7 @@ Begrepp som kursiveras vid sitt huvudställe i löptexten (05, "Begreppsmarkerin
 
 Varje begrepp i listan ska ha sitt huvudställe i eller före kapitlet (`concepts_introduced`, 12-produktionsarkitektur.md). Listan inför aldrig nya begrepp.
 
-Det finns inga projektuppgiftsavsnitt. Kapitlets större, integrerande uppgifter ligger i ett separat lärarmaterial utanför boken, inte i avsnittens Övningar (se "Kapitelövergripande uppgifter").
+Det finns inga projektuppgiftsavsnitt, och kapitelövergripande uppgifter ingår inte i bokprojektet (se "Kapitelövergripande uppgifter").
 
 ---
 
@@ -251,7 +251,7 @@ Facit är bokens sista kapitel (redaktionellt beslut, projektägaren). Det följ
 
 Praktisk träning är central (10-amnesfilosofi.md, "Teknik är praktiskt") och säkras genom avsnittets Övningar, som tränar det egna avsnittets stoff. Ett avsnitt utan meningsfull praktisk tillämpning får ha få och enkla övningar; övningar skapas aldrig enbart för symmetrins skull, men varje avsnitt har minst två.
 
-Hör ett praktiskt moment naturligt hemma i ett enskilt avsnitt läggs det bland avsnittets övningar. Är det stort nog att integrera flera avsnitt hör det hemma i lärarmaterialet utanför boken, inte i elevtexten. Praktiska övningar prioriteras framför motsvarande teoretiska uppgifter när båda tränar samma förmåga.
+Hör ett praktiskt moment naturligt hemma i ett enskilt avsnitt läggs det bland avsnittets övningar. Är det stort nog att integrera flera avsnitt ingår det inte i bokprojektet. Praktiska övningar prioriteras framför motsvarande teoretiska uppgifter när båda tränar samma förmåga.
 
 ---
 

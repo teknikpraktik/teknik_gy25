@@ -196,7 +196,7 @@ Granskning sker på tre nivåer.
 
 □ Varje avsnitts Övningar tränar och hänvisar bara till det egna avsnittets stoff; boken har inga helkapitelövningar eller integrerande storuppgifter över flera avsnitt (03, "Kapitelövergripande uppgifter").
 
-□ Kapitlets större, integrerande och kapitelövergripande uppgifter ligger i ett separat lärarmaterial utanför boken, inte i elevtexten (03).
+□ Inga kapitelövergripande uppgifter förekommer i elevtexten. Sådana ingår inte i bokprojektet (03, "Kapitelövergripande uppgifter").
 
 □ Övningarna har ingen utskriven nivåstapling ("Bygg ut"/"Bygg ut vidare" utgår): E-till-A ligger i öppenheten och betygskriterierna, inte i elevtexten (03).
 

@@ -19,10 +19,10 @@ import { fileURLToPath } from 'node:url';
 
 // Kapitelavslutningarnas fasta titlar → type, i den ordning de alltid avslutar
 // ett kapitel (06-bokstruktur.md, "Kapitelavslutningar"). Redaktionellt beslut
-// 2026-07-22: Projektuppgifter avvecklat som egen kapitelavslutning (större,
-// integrerande uppgifter ligger i separat lärarmaterial utanför boken, beslut
-// 2026-07-24). Kapitelavslutningarna är nu två och skrivs onumrerade i 06
-// ("## Sammanfattning", "## Begrepp").
+// 2026-07-22: Projektuppgifter avvecklat som egen kapitelavslutning
+// (kapitelövergripande uppgifter ingår inte i bokprojektet, beslut 2026-07-26).
+// Kapitelavslutningarna skrivs onumrerade i 06 ("## Sammanfattning",
+// "## Begrepp", "## Facit").
 const KAPITELAVSLUTNING_TYP_AV_TITEL = {
 	Sammanfattning: 'kapitelsammanfattning',
 	Begrepp: 'begreppsovning',

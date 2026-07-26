@@ -178,7 +178,7 @@ Varje färdigproducerat kapitel avslutas med två avsnitt som saknar `learningGo
 - `type: kapitelsammanfattning` — kort löpande text, inte punktlista, som låter eleven repetera hela kapitlet på några minuter (riktmärke cirka 300 ord). Ingen `ordlista`.
 - `type: begreppsovning` — kapitlets **begreppslista**: kapitlets centrala begrepp med färdiga definitioner, max ungefär en mening per begrepp, i det obligatoriska ordlisteformatet `**Begrepp:** Definition.` (03-bokens-arkitektur.md, "Begrepp"). Uppslagsfunktion, inget som eleven fyller i. Type-värdet `begreppsovning` behålls som tekniskt id tills schema och skript migreras; innehållsmodellen är begreppslistan.
 
-Det finns ingen `type: uppgiftsbank` längre (redaktionellt beslut 2026-07-22). Kapitlets större, integrerande uppgifter skrivs inte i boken utan i ett separat lärarmaterial utanför den (03, redaktionellt beslut 2026-07-24). Befintliga projektuppgiftsfiler avvecklas kapitel för kapitel i innehållsmigreringen; deras användbara uppgifter flyttas till lärarmaterialet.
+Det finns ingen `type: uppgiftsbank` längre (redaktionellt beslut 2026-07-22). Kapitelövergripande uppgifter ingår inte i bokprojektet (03, redaktionellt beslut 2026-07-26). Befintliga projektuppgiftsfiler avvecklas kapitel för kapitel i innehållsmigreringen och raderas.
 
 Ordningen sist i kapitlet är sammanfattning, begreppslista (redaktionellt beslut 2026-07-22, produktionslogg.md).
 

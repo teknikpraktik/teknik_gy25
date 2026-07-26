@@ -10,6 +10,34 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-26 — Lärarmaterialet utgår ur bokprojektet
+
+Beslutet från 2026-07-24, att kapitlens större och integrerande uppgifter skulle
+ligga i ett separat lärarmaterial utanför boken, **återtas**. Projektägaren bygger
+projektuppgifterna i ett senare, fristående projekt.
+
+Konsekvens för styrdokumenten: formuleringen "ligger i ett separat lärarmaterial
+utanför boken" är struken ur 03, 05, 06, 09, 12, 13, CLAUDE.md,
+`scripts/bokstruktur-data.mjs` och felmeddelandet i `scripts/validate.mjs`. Den
+ersätts av att kapitelövergripande uppgifter **inte ingår i bokprojektet**.
+
+Oförändrat: boken har inga helkapitelövningar och inga projektuppgiftsavsnitt,
+och varje avsnitts Övningar tränar bara det egna avsnittets stoff. Det som
+ändras är var de större uppgifterna sägs ta vägen, inte vad boken innehåller.
+
+Oförändrat är också att **bedömningsstöd och betygsunderlag** ligger i en separat
+privat källa utanför repot (12, "Facit"). Det är en annan sak än
+projektuppgifter och berörs inte av det här beslutet.
+
+De elva kvarvarande `NN-projektuppgifter.md` raderas nu i migreringen i stället
+för att flyttas. Tio av dem är tomma skelett; `02-att-losa-tekniska-problem/05-projektuppgifter.md`
+innehåller fyra skrivna uppgifter och kräver därför projektägarens besked om
+innehållet ska sparas undan först.
+
+Tidigare loggposter är oförändrade. De är protokoll över vad som beslutades då.
+
+---
+
 # 2026-07-26 — Kapitel 1 färdigställt och låst, nio redaktionella beslut
 
 Kapitel 1 (Teknikens grunder) är korrekturläst, godkänt och låst. Samtidigt

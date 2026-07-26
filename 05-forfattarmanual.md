@@ -276,7 +276,7 @@ Undvik rubriker som försöker vara fyndiga.
 
 Avsnittets uppgiftssektion har alltid rubriken **Övningar**. Det är den enda tillåtna rubriken för avsnittets uppgifter (03-bokens-arkitektur.md, "Avsnittets struktur"; termlista.md).
 
-Den tidigare rubriken "Praktiska uppgifter" är utfasad (redaktionellt beslut 2026-07-22) och skrivs aldrig i nytt innehåll. Rubriken "Projektuppgifter" används inte heller. Kapitlets större, integrerande uppgifter skrivs inte i boken alls utan i ett separat lärarmaterial utanför den (redaktionellt beslut 2026-07-24); varje avsnitts Övningar tränar bara det egna avsnittets stoff.
+Den tidigare rubriken "Praktiska uppgifter" är utfasad (redaktionellt beslut 2026-07-22) och skrivs aldrig i nytt innehåll. Rubriken "Projektuppgifter" används inte heller. Kapitelövergripande uppgifter ingår inte i bokprojektet (redaktionellt beslut 2026-07-26); varje avsnitts Övningar tränar bara det egna avsnittets stoff.
 
 `npm run validate` flaggar en kvarvarande "Praktiska uppgifter"-rubrik i content-filer. I nyskrivna eller redan migrerade avsnitt är det ett aktivt fel; i den kända legacy-uppsättningen (avsnitt som ännu inte migrerats) redovisas den som förväntad migreringsskuld och rättas när respektive kapitel migreras.
 
