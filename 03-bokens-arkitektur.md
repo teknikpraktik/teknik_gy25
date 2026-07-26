@@ -182,6 +182,18 @@ Varje övning ska fungera fristående, med stabil information i själva instrukt
 
 Det stora, sammanhållna projektet bor kvar som ämnesinnehåll i kapitel 11. Boken har inget nytt projektkapitel och ingen genomgående projektstruktur (se "Exempel").
 
+## Betygskriteriernas roll
+
+Betygskriterierna är gemensamma för ämnet som helhet. Samma kriterier tillämpas på nivå 1 och nivå 2, och progressionen ligger i kvalitetsorden, inte i skilda kriterieuppsättningar för de två nivåerna. Kriterierna har fem parallella stycken per betygsnivå, ett för var och en av de fem bedömda förmågorna (07-kursplanetackning.md, "Förmågekontroll").
+
+**Kriterierna styr uppgiftsdesign, inte kapitelstruktur.** De är ribbor för elevprestation, inte innehållsblock. Kapitlen byggs efter ämnets struktur och kursplanens centrala innehåll, aldrig efter betygsstegen.
+
+**Kvalitetsorden är progressionsstegen.** E motsvarar "enkel" och "i huvudsak fungerande", C "genomarbetade" och "fungerande", A "väl genomarbetade" och "väl fungerande". Samma uppgift kan därför bära både den som siktar på E och den som siktar på A, vilket också är bokens sätt att hantera blandad förkunskap i en klass.
+
+**Progressionen skrivs inte ut i elevtexten.** Att samma uppgift bär från E till A är en egenskap hos uppgiftens öppenhet och hos kriteriernas kvalitetsord, inte något som ska stå som delsteg i boken. Formatet grunduppgift plus "Bygg ut: ..." plus "Bygg ut vidare: ..." är avskaffat och återinförs inte (se "Kapitelövergripande uppgifter", "Ingen utskriven nivåstapling i övningar"). Skriv alltså en öppen uppgift som tål att lösas på flera nivåer, inte en uppgift med utskrivna utbyggnadssteg.
+
+**Det femte stycket motiverar kommunikationskapitlet.** Att dokumentera, visualisera och kommunicera tekniska lösningar är en bedömd förmåga i nivå med de andra fyra. Det är skälet till att boken har ett eget kapitel om teknisk kommunikation (kapitel 4) och till att varje producerande moment faktiskt ska dokumenteras.
+
 Det finns **inget synligt Begrepp-block** efter avsnittet. Begreppsundervisningen sker i löptexten (11-begreppsfilosofi.md); kapitlets begreppslista är en uppslagsdel.
 
 ---
