@@ -24,7 +24,7 @@ prerequisites: ["6.1"]
 
 Ett dörrhandtag sitter alltid långt från gångjärnen, aldrig intill dem, och det är inget slumpmässigt val. Trycker man mot handtaget öppnas dörren lätt, men trycker man precis intill gångjärnen rör den sig knappt, hur hårt man än tar i. Kraften kan vara densamma, men verkan skiljer sig helt. Det som avgör är inte bara kraftens storlek utan också var den griper an i förhållande till den punkt dörren vrider sig kring. Den vridande verkan av en kraft kallas *moment*, och den är lika central för tekniska lösningar som kraften själv. Ett skruvförband dras åt med ett moment, en skiftnyckel och en lyftkran arbetar med moment, och en balk böjs av det moment lasten ger. En konstruktör behöver kunna räkna på moment lika säkert som på krafter.
 
-Momentets storlek beror på två saker: kraftens storlek och det vinkelräta avståndet från vridpunkten till kraften. Det avståndet behöver definieras noga. Varje kraft kan tänkas fortsätta obegränsat framåt och bakåt längs sin egen riktning, och den tänkta linjen kallas kraftens verkningslinje. *Momentarmen* är det vinkelräta avståndet från vridpunkten till kraftens verkningslinje. Sambandet skrivs
+Momentets storlek beror på två saker: kraftens storlek och det vinkelräta avståndet från vridpunkten till kraften. Varje kraft kan tänkas fortsätta obegränsat framåt och bakåt längs sin egen riktning, och den tänkta linjen kallas kraftens verkningslinje. *Momentarmen* är det vinkelräta avståndet från vridpunkten till kraftens verkningslinje. Sambandet skrivs
 
 *M = F · r*
 
@@ -40,7 +40,7 @@ F = M / r = 16 / 0,1 = 160 N
 
 Åtta gånger så mycket kraft för samma vridande verkan, bara för att momentarmen är åtta gånger kortare. Det är hela anledningen till att dörrhandtag, ventilrattar och manöverspakar placeras långt från sin vridpunkt. Den som konstruerar ett handtag väljer momentarmen för att en rimlig handkraft ska räcka.
 
-Ett moment har, förutom storlek, också en riktning. Det vrider antingen medurs eller moturs kring vridpunkten. När flera moment verkar samtidigt räknas de åt ena hållet som positiva och åt andra hållet som negativa, och det spelar ingen roll vilket håll som väljs som positivt så länge samma val används genom hela beräkningen. Att hålla reda på riktningen blir avgörande i nästa avsnitt, där de moment som verkar på en konstruktion ska ta ut varandra.
+Ett moment har, förutom storlek, också en riktning. Det vrider antingen medurs eller moturs kring vridpunkten. När flera moment verkar samtidigt räknas de åt ena hållet som positiva och åt andra hållet som negativa, och det spelar ingen roll vilket håll som väljs som positivt så länge samma val används genom hela beräkningen. Att hålla reda på riktningen blir avgörande i avsnittet om jämvikt, där de moment som verkar på en konstruktion ska ta ut varandra.
 
 [BILD 6.2-1] Innehåll: En dörr sedd uppifrån med gångjärnet till vänster. Två pilar av samma längd (samma kraft) ritas: en vid handtaget långt från gångjärnet, en nära gångjärnet. Momentarmen r markeras med ett mått i båda fallen, och den resulterande vridningen illustreras med en böjd pil vars tjocklek skiljer sig mellan de två fallen. Bildtext: "Samma kraft ger olika stort moment beroende på momentarmen. Därför placeras handtag och manöverdon långt från sin vridpunkt."
 
