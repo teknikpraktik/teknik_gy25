@@ -220,6 +220,24 @@ Ytterligare tre gränser är skrivna. Övriga kapitels gränser skrivs när resp
 
 ---
 
+# Skrivanvisningar per kapitel
+
+Bokens kapitelordning är inte godtycklig, och några kapitel har skrivrestriktioner som följer av var de ligger. Anvisningarna nedan är hämtade ur projektets tidigare redaktionella specifikation och fördes in samlat 2026-07-26, eftersom den filen är avvecklad. De styr hur ett kapitel skrivs, inte vad det innehåller; innehållet står i 06-bokstruktur.md.
+
+**Bokens ordningslogik är tredelad.** Först ämnets grunder och arbetssätt (teknikbegreppet och historiken, problemlösning, process, ritande), sedan ämnesinnehållet (material, mekanik, mätning, modellering, digitalt), sedan tillämpning och samhällsperspektiv. Ordningen är alltså inte kronologisk och följer inte kursplanens uppräkning. Ett kapitel får därför förutsätta det som ligger före i den bågen, men aldrig det som ligger efter.
+
+**Kapitel 2 · Att lösa tekniska problem** ligger tidigt, på en plats där eleven ännu har lite att hänga upp abstraktioner på. Kapitlet ska därför bäras av ett konkret exempel som löses steg för steg, så att det inte blir abstrakt metateori. Problemlösning lärs ut explicit, inte problembaserat: eleven ska inte behöva lösa ett problem för att upptäcka metoden.
+
+**Kapitel 3 · Teknikutvecklingsprocessen** rör vid tillverkning som en del av produktsteget i processkedjan. Tillverkning är inget eget bärande stoff i boken, utan vävs in där det obligatoriska innehållet kräver det (02-redaktionell-specifikation.md, "Exempelområden").
+
+**Kapitel 4 · Skiss, ritteknik och CAD** ligger tidigt eftersom ritande och dokumentation är basfärdigheter som bär resten av boken. Det får en direkt följd för skrivandet: kapitlets egna exempel hålls enkla och vardagliga, eftersom eleven ännu inte mött konstruktion eller material. Ett exempel som förutsätter hållfasthet eller materialval hör inte hemma här, hur naturligt det än känns för en ingenjör.
+
+**Kapitel 6 · Mekanik och konstruktion** måste ha mekaniken utskriven, inte underförstådd. Man kan inte räkna på en konstruktion utan den, och den självstuderande eleven har ingen lärare som fyller luckan. Kapitlet är procedurtätt och bärs av uppställda exempel och bild snarare än av prosa; det tål mindre komprimering än beskrivande stoff och inga steg får strykas (05-forfattarmanual.md, "Variera kompressionsgraden efter stoffet").
+
+**Kapitel 13 · Teknik, människa och samhälle** ligger sist därför att det värderande stoffet kräver att eleven först har tekniska lösningar att värdera. Kapitlet får förutsätta hela bokens innehåll, och boken får därmed en båge från teknikens grunder till teknikens framtid.
+
+---
+
 # Kapitelavslutningar
 
 Varje färdigproducerat kapitel avslutas med onumrerade avsnitt, i denna ordning: **Sammanfattning**, **Begrepp**, **Facit**. De är egna innehållstyper, inte lärandemål (12-produktionsarkitektur.md, "Kapitelavslutningar"). Sammanfattning och Begrepp är obligatoriska. Facit är en tredje, valfri kapitelavslutning som läggs till när kapitlets övningar är klara (se "Facit").
