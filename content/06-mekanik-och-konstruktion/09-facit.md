@@ -3,7 +3,7 @@ type: facit
 chapter: 6
 sectionNumber: 9
 title: Facit
-status: under-utveckling
+status: fardig-forsta-version
 utanSvar:
   instuderingsfragor: []
   ovningar:
