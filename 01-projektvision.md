@@ -69,6 +69,26 @@ Den ska vara ett genomarbetat läromedel.
 
 ---
 
+# Bokens position
+
+Boken är medvetet ett koncentrerat läromedel. Den vanliga ansatsen i ämnet är encyklopedisk: brett och grunt, med ambitionen att lista varje tänkbar metod och variant för att garantera täckning. Den ansatsen ger tjocka böcker med uppräknande avsnitt som förutsätter en lärare som väljer ut det relevanta, och som eleven inte läser självständigt.
+
+Boken väljer motsatt väg, på fyra punkter.
+
+**Urval på djupet framför fullständighet på bredden.** Där ämnet erbjuder många likvärdiga metoder lär boken ut de få som fungerar, ordentligt, i stället för att katalogisera alla. Eleven lär sig något i stället för att möta en lista.
+
+**Självstudiebar.** Boken är skriven för att kunna läsas och förstås av eleven ensam (se "Pedagogisk utgångspunkt"). Det är bokens tydligaste särdrag och det svåraste att kopiera utan att skriva om en bok från grunden.
+
+**Fokuserad på nivå 1 och nivå 2.** Boken sträcker sig inte upp i nivå 3-stoff som inte alla teknikelever läser. Det håller boken relevant och fri från sidor eleven betalar för men inte använder.
+
+**Koncentrerat omfång.** Kondenseringen ger en väsentligt tunnare bok än den encyklopediska normen. Lägre sidantal sänker produktionskostnaden och därmed priset, en konkret fördel för skolor som köper klassuppsättningar. Prissättningen är förlagets beslut; författarens bidrag är omfånget.
+
+**Omfånget sänks genom att skära omsvep, aldrig genom att skära förklaring.** Positionen är inget skäl att korta där förståelsen kräver text. Begriplighet går före korthet (04-redaktionsprinciper.md, princip 3): ökar ytterligare en mening förståelsen ska den skrivas, oavsett vad den gör med sidantalet. Det som ska bort är uppvärmningar, upprepningar och metakommentarer (05-forfattarmanual.md, "Skär omsvep, inte information"), inte led i ett resonemang eller steg i en procedur.
+
+Trygghetskravet detta ställer: **en tunnare bok får inte läsas som en ofullständig bok.** Kursplanetäckningen i 07-kursplanetackning.md är därför inte bara ett redaktionellt arbetsverktyg utan bokens bevis på att allt centralt innehåll är behandlat trots det mindre omfånget. Den måste därför hållas noggrann och aktuell.
+
+---
+
 # Målgrupp
 
 Boken riktar sig främst till elever på Teknikprogrammet som läser Teknik nivå 1 och Teknik nivå 2 enligt Gy25.
