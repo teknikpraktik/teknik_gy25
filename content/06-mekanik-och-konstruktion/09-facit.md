@@ -66,7 +66,23 @@ utanSvar:
 
 ### Instuderingsfrågor
 
+1. Att alla krafter och moment som verkar på konstruktionen tar ut varandra fullständigt. Konstruktionen varken accelererar eller roterar.
+2. ΣF_x = 0, ΣF_y = 0 och ΣM = 0. Alla tre måste vara uppfyllda samtidigt.
+3. Två lika stora men motriktade krafter som griper an på olika ställen ger kraftsumman noll men lämnar kvar ett moment. Föremålet roterar då i stället för att stå stilla.
+4. Den kraft ett stöd ger som svar på den last konstruktionen för vidare till det.
+5. Därför att allt som sedan beräknas i konstruktionen bygger på hur stor last varje stöd faktiskt bär.
+6. Ett ledstöd kan ta upp kraft både lodrätt och vågrätt. Ett rullstöd kan bara ta upp kraft vinkelrätt mot underlaget och släpper igenom rörelser i sidled, till exempel när en stålbro blir längre av värme.
+7. Den punkt där hela föremålets tyngd kan tänkas verka samlad, som om resten av föremålet vore viktlöst.
+8. När den lodräta linjen genom tyngdpunkten faller utanför stödytan. Då uppstår ett moment kring stödytans kant som välter föremålet.
+9. Därför att tyngdpunktens lodlinje då har längre väg att röra sig innan den hamnar utanför stödytan, och föremålet tål större lutning eller sidokraft innan det välter. En mobilkran fäller därför ut sina stödben så brett som möjligt, och en bokhylla bör bära det tyngsta på den understa hyllan.
+
 ### Övningar
+
+1. R_A = 450 N, R_B = 150 N. Stöd A bär mest, eftersom lasten står närmast A.
+2. R_A = 2250 N, R_B = 2750 N.
+3. R_A = 2100 N, R_B = 2700 N.
+4. 8000 N.
+5. R_A = 15,25 kN och R_B = 7,75 kN. Stöden bär lika mycket när lyftvagnen står 6,0 m från stöd A, alltså mitt på balken, och bär då 11,5 kN vardera. Den största reaktionskraften i stöd A är 19,0 kN, när vagnen står rakt över stödet. Värdet är rimligt: av den totala lasten 23,0 kN bär stöd A då nästan allt, medan resten är den del av egentyngden som stöd B fortfarande bär.
 
 ## 6.4 Hållfasthet
 
