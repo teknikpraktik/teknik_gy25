@@ -127,7 +127,9 @@ I december 1947 visade tre forskare vid Bell Labs i USA upp en komponent stor so
 
 ### Kretsen som krymper
 
-Nästa steg var att slippa löda ihop transistorerna en och en. I slutet av 1950-talet visade två amerikanska ingenjörer, oberoende av varandra, hur flera transistorer kunde tillverkas på samma kiselplatta. En sådan *integrerad krets* rymmer många elektroniska komponenter som är sammanbyggda på ett enda litet chip. År 1965 gjorde ingenjören Gordon Moore en iakttagelse som blev berömd: antalet transistorer som får plats på en krets fördubblas ungefär vartannat år. Denna iaktagelse brukar kallas Moores lag och fortsatte att gälla i över ett halvt sekel. Intels första mikroprocessor från 1971 rymde 2 300 transistorer. Idag rymmer ett enda chip tiotals miljarder transistorer. Varje fördubbling gjorde datorerna mindre, snabbare och billigare. Datorerna flyttade från räknecentralerna till skrivborden, och kring 1980 slog persondatorn igenom. Genom att installera olika program kunde samma dator nu användas till många olika uppgifter. 
+Nästa steg var att slippa löda ihop transistorerna en och en. I slutet av 1950-talet visade två amerikanska ingenjörer, oberoende av varandra, hur flera transistorer kunde tillverkas på samma kiselplatta. En sådan *integrerad krets* rymmer många elektroniska komponenter som är sammanbyggda på ett enda litet chip.
+
+År 1965 gjorde ingenjören Gordon Moore en iakttagelse som blev berömd: antalet transistorer som får plats på en krets fördubblas ungefär vartannat år. Denna iakttagelse brukar kallas Moores lag och fortsatte att gälla i över ett halvt sekel. Intels första mikroprocessor från 1971 rymde 2 300 transistorer. Idag rymmer ett enda chip tiotals miljarder transistorer. Varje fördubbling gjorde datorerna mindre, snabbare och billigare. Datorerna flyttade från räknecentralerna till skrivborden, och kring 1980 slog persondatorn igenom. Genom att installera olika program kunde samma dator nu användas till många olika uppgifter.
 
 ### Maskiner styr maskiner
 
