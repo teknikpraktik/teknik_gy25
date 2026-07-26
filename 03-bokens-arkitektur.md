@@ -144,6 +144,8 @@ Historiska översikts- och svepavsnitt får inom ett avgränsat undantag tilläm
 
 Ett huvudexempel per avsnitt där det är möjligt, valt ur verkliga exempelområden (02-redaktionell-specifikation.md, "Exempel"), återkommande genom resonemang, bilder, frågor och övningar.
 
+**Ren löptext.** Manuset skrivs som löpande text. Inga rutor, faktablock, formelrutor, marginaltexter eller utbrutna exempel, oavsett stofftyp. Arbetade exempel skrivs i löptexten. Enda undantaget är bildplatshållare i formatet `[BILD X.Y-N]`. Typografisk urskiljning av formler, definitioner och exempel är förlagets formgivningsbeslut och avgörs inte i manus. Gäller även procedur- och beräkningsstoff. (Redaktionellt beslut, projektägaren.)
+
 ## Instuderingsfrågor
 
 5–15 per avsnitt, samlade i EN sektion direkt efter löptexten. `scripts/validate.mjs` felar utanför spannet (från status `fardig-forsta-version`; låsta kapitel undantas).
