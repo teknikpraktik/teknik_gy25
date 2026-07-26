@@ -498,6 +498,27 @@ for (const avs of avsnittFiler) {
 		warnings.push(`${beskr}: inga [BILD X.Y-N]-platshållare — kontrollera att detta är ett medvetet beslut (03-bokens-arkitektur.md, "Bilder").`);
 	}
 
+	// (4) Varje platshållare ska ha rätt id och både Innehåll och Bildtext
+	// (03-bokens-arkitektur.md, "Bilder"; 09-kvalitetssakring.md). En
+	// platshållare utan dem är obrukbar som underlag för förlaget.
+	if (!arLast) {
+		for (const m of bildTraffar) {
+			const id = m[1].trim();
+			const rad = radnummer(avs.body, m.index, avs.radOffset);
+			if (!new RegExp(`^${avs.chapter}\\.${avs.sectionNumber}-\\d+$`).test(id)) {
+				errors.push(`${beskr}:${rad}: [BILD ${id}] följer inte formatet [BILD ${avs.chapter}.${avs.sectionNumber}-N] (03-bokens-arkitektur.md, "Bilder").`);
+				continue;
+			}
+			const stycke = avs.body.slice(m.index + m[0].length).split(/\n\s*\n/)[0];
+			const saknas = [];
+			if (!/Innehåll:/.test(stycke)) saknas.push('Innehåll:');
+			if (!/Bildtext:/.test(stycke)) saknas.push('Bildtext:');
+			if (saknas.length > 0) {
+				errors.push(`${beskr}:${rad}: [BILD ${id}] saknar ${saknas.join(' och ')} — platshållaren ska ange vad bilden visar och ha en färdigformulerad bildtext (03-bokens-arkitektur.md, "Bilder").`);
+			}
+		}
+	}
+
 	// Äldre eller uppdelade uppgiftsrubriker och synliga uppslagsrubriker får inte
 	// förekomma. Uppgiftstypen styrs av uppgiften själv, inte av en egen rubrik
 	// (03-bokens-arkitektur.md, "Avsnittets struktur").
