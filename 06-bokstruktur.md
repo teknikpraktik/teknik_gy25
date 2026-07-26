@@ -75,6 +75,8 @@ Maskinläst radformat (exakt):
 ## Sammanfattning
 
 ## Begrepp
+
+## Facit
 ```
 
 Regler:
@@ -82,7 +84,8 @@ Regler:
 - Kapitelraden inleder ett kapitel. Mellanslagstecknet är "·".
 - Avsnittsraden (`## <kapitel>.<sektionsnr> <titel>`) numreras löpande utan luckor inom kapitlet. Endast teoriavsnitt numreras.
 - Punktlistan direkt under en avsnittsrad (rader som inleds med `- ` innan nästa `##`/`###`) är avsnittets lärandemål. Ett teoriavsnitt har minst ett lärandemål.
-- De två kapitelavslutande avsnitten (se nedan) skrivs som onumrerade H2-rader, alltid sist i kapitlet, alltid i ordningen `## Sammanfattning`, `## Begrepp`, med exakt dessa titlar. De saknar lärandemål och har därför ingen punktlista.
+- De kapitelavslutande avsnitten (se nedan) skrivs som onumrerade H2-rader, alltid sist i kapitlet, alltid i ordningen `## Sammanfattning`, `## Begrepp`, `## Facit`, med exakt dessa titlar. De saknar lärandemål och har därför ingen punktlista.
+- `## Sammanfattning` och `## Begrepp` är obligatoriska i varje kapitel. `## Facit` är valfri och läggs till kapitel för kapitel i takt med att facit skrivs; ett kapitel utan facitrad är därför inte ett formatfel. Står raden där måste den stå sist.
 - `### <delavsnittstitel>`-rader är valfria och används bara när avsnittet naturligt delas i flera delar. De är inte lärandemål och har ingen egen punktlista eller numrering — de är rena underrubriker i avsnittets löptext.
 - H4 används undantagsvis, bara när ett H3-delavsnitt verkligen behöver delas upp ytterligare, och skrivs direkt i innehållsfilen (inte i detta dokument, som bara disponerar ner till H3).
 
@@ -90,7 +93,9 @@ Regler:
 
 # Kapitelavslutningar
 
-Varje kapitel avslutas med två onumrerade H2-avsnitt, alltid i denna ordning och med exakt dessa titlar: **Sammanfattning**, **Begrepp**. De är egna innehållstyper (`type: kapitelsammanfattning` / `begreppsovning`), inte lärandemål, saknar `learningGoals` och sammanfattar respektive definierar kapitlets innehåll som helhet (03-bokens-arkitektur.md, "Kapitelavslutningar"; 12-produktionsarkitektur.md).
+Varje kapitel avslutas med onumrerade H2-avsnitt, alltid i denna ordning och med exakt dessa titlar: **Sammanfattning**, **Begrepp**, **Facit**. De är egna innehållstyper (`type: kapitelsammanfattning` / `begreppsovning` / `facit`), inte lärandemål, saknar `learningGoals` och sammanfattar, definierar respektive besvarar kapitlets innehåll som helhet (03-bokens-arkitektur.md, "Kapitelavslutningar" och "Facit"; 12-produktionsarkitektur.md).
+
+Sammanfattning och Begrepp är obligatoriska. **Facit är en tredje, valfri kapitelavslutning** (redaktionellt beslut 2026-07-26). Facit lagras per kapitel men läses av eleven som ett samlat facit sist i boken, satt av exporten. Raden läggs till kapitel för kapitel när facit skrivs, eftersom ett facit inte kan skrivas förrän kapitlets övningar är klara. **Kapitel 1 saknar facitrad och är låst** (`lastaKapitel`, scripts/migreringsstatus.mjs); det behöver kompletteras med `## Facit` när låset lyfts.
 
 Det finns inga separata projektuppgiftsavsnitt. Kapitlets större, integrerande uppgifter ligger i ett separat lärarmaterial utanför boken, inte i avsnittens Övningar (03-bokens-arkitektur.md, "Kapitelövergripande uppgifter").
 

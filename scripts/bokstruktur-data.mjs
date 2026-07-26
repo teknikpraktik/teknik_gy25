@@ -26,9 +26,17 @@ import { fileURLToPath } from 'node:url';
 const KAPITELAVSLUTNING_TYP_AV_TITEL = {
 	Sammanfattning: 'kapitelsammanfattning',
 	Begrepp: 'begreppsovning',
+	Facit: 'facit',
 };
 const KAPITELAVSLUTNING_TITLAR = Object.keys(KAPITELAVSLUTNING_TYP_AV_TITEL);
-const ANTAL_KAPITELAVSLUTNINGAR = KAPITELAVSLUTNING_TITLAR.length;
+
+// Sammanfattning och Begrepp är obligatoriska i varje kapitel. Facit är en
+// tredje, valfri avslutning (redaktionellt beslut 2026-07-26): den läggs till
+// kapitel för kapitel i takt med att facit skrivs, och ett kapitel utan
+// facitrad är därför inte ett formatfel. Ordningen sist i kapitlet är alltid
+// Sammanfattning → Begrepp → Facit.
+const KAPITELAVSLUTNING_OBLIGATORISKA = ['Sammanfattning', 'Begrepp'];
+const KAPITELAVSLUTNING_VALFRIA = ['Facit'];
 
 // Filen importeras både direkt av Node (skripten, astro.config) och bundlad av
 // Vite (webbplatsens genererade kapitel-/avsnittsvyer). I det senare fallet
@@ -158,12 +166,23 @@ function parseBokstruktur(text) {
 			fel.push(`kapitel ${kap.nr} saknar avsnitt.`);
 			continue;
 		}
-		const sistaN = kap.avsnitt.slice(-ANTAL_KAPITELAVSLUTNINGAR).map((a) => a.titel);
-		if (JSON.stringify(sistaN) !== JSON.stringify(KAPITELAVSLUTNING_TITLAR)) {
-			fel.push(`kapitel ${kap.nr}: de sista ${ANTAL_KAPITELAVSLUTNINGAR} avsnitten ska vara ${KAPITELAVSLUTNING_TITLAR.join(' → ')} (hittade: ${sistaN.join(' → ') || '—'}).`);
+		// Kapitlets avslutande svans: de obligatoriska två, eventuellt följda av
+		// de valfria i fastställd ordning. Svansens längd varierar därför mellan
+		// kapitel under migreringen.
+		const antalValfriaSist = KAPITELAVSLUTNING_VALFRIA.filter((t) =>
+			kap.avsnitt.map((a) => a.titel).includes(t),
+		).length;
+		const svanslangd = KAPITELAVSLUTNING_OBLIGATORISKA.length + antalValfriaSist;
+		const vantadSvans = [
+			...KAPITELAVSLUTNING_OBLIGATORISKA,
+			...KAPITELAVSLUTNING_VALFRIA.slice(0, antalValfriaSist),
+		];
+		const sistaN = kap.avsnitt.slice(-svanslangd).map((a) => a.titel);
+		if (JSON.stringify(sistaN) !== JSON.stringify(vantadSvans)) {
+			fel.push(`kapitel ${kap.nr}: de sista ${svanslangd} avsnitten ska vara ${vantadSvans.join(' → ')} (hittade: ${sistaN.join(' → ') || '—'}).`);
 		}
 		kap.avsnitt.forEach((avs, i) => {
-			const arKapitelavslutning = i >= kap.avsnitt.length - ANTAL_KAPITELAVSLUTNINGAR;
+			const arKapitelavslutning = i >= kap.avsnitt.length - svanslangd;
 			if (!arKapitelavslutning && avs.larandemal.length === 0) {
 				fel.push(`avsnitt ${kap.nr}.${i + 1} "${avs.titel}" saknar lärandemål.`);
 			}
