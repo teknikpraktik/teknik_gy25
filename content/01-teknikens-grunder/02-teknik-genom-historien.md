@@ -160,7 +160,11 @@ Den stora datamängden och den ökade datorkraften gav nytt liv åt en gammal id
 
 ### Bekvämlighet och sårbarhet
 
-Digitaliseringen har gjort kommunikation, tjänster och information snabbare och billigare för de flesta. Men den har också gjort samhället mer sårbart och skapat ett digitalt utanförskap. Precis som tidigare industriella revolutioner har den skapat nya möjligheter, samtidigt som gamla arbetssätt och yrken har förändrats eller försvunnit. Liksom tryckpressen en gång sänkte priset på kunskap har digitaltekniken sänkt priset på att lagra, bearbeta och sprida information. Det är därför digitaliseringen räknas som grunden för en egen industriell revolution.
+Digitaliseringen har gjort kommunikation, tjänster och information snabbare och billigare för de flesta. Men när allt fler funktioner vilar på samma digitala system blir följderna av ett avbrott större. I juli 2021 drabbades det amerikanska programvaruföretaget Kaseya av ett utpressningsangrepp som via en svensk leverantör nådde Coops kassasystem. Omkring 700 av kedjans 800 butiker höll stängt i flera dagar. Ingen butik var själv angripen, men ingen kunde ta betalt.
+
+Beroendet skapar också ett digitalt utanförskap. År 2025 använde 3 procent av svenskarna över 15 år inte internet, oftast äldre, boende på landsbygden eller personer med låg inkomst. Samtidigt kräver bank, vård och myndigheter e-legitimation. Den som står utanför tekniken stängs därför ute från tjänster som tidigare sköttes över en disk.
+
+Precis som tidigare industriella revolutioner har digitaliseringen skapat nya möjligheter samtidigt som gamla arbetssätt och yrken förändrats eller försvunnit. Liksom tryckpressen en gång sänkte priset på kunskap har digitaltekniken sänkt priset på att lagra, bearbeta och sprida information. Det är därför digitaliseringen räknas som grunden för en egen industriell revolution.
 
 ## Instuderingsfrågor
 
@@ -182,7 +186,7 @@ Digitaliseringen har gjort kommunikation, tjänster och information snabbare och
 
 ## Övningar
 
-1. **Historien på 297 millimeter** Rita teknikhistorien från jordbruket till i dag på bredden av ett A4-papper, 297 mm. Räkna först om varje årtal till antal år före i dag och sedan ut hur många år en millimeter motsvarar. Räkna därefter ut hur långt från nutidsänden var och en av dessa händelser hamnar och rita in dem som går att skilja åt: jordbruket omkring 8000 f.Kr., skriften omkring 3000 f.Kr., boktryckarkonsten 1450, ångmaskinen 1769, elkraftverket 1882, det löpande bandet 1913, transistorn 1947 och webben 1991
+1. **Historien på 297 millimeter** Rita teknikhistorien från jordbruket till i dag på bredden av ett A4-papper, 297 mm. Räkna först om varje årtal till antal år före i dag och sedan ut hur många år en millimeter motsvarar. Räkna därefter ut hur långt från nutidsänden var och en av dessa händelser hamnar och rita in dem som går att skilja åt: jordbruket omkring 8000 f.Kr., skriften omkring 3000 f.Kr., boktryckarkonsten 1450, ångmaskinen 1769, elkraftverket 1882, det löpande bandet 1913, transistorn 1947 och webben 1991.
 
 2. **Löpande bandets värde.** Monteringstiden för ett T-Ford-chassi föll från 12,5 timmar till 1,5 timmar när Ford lade om till löpande band. Räkna ut hur många chassin en arbetare hann montera under ett tiotimmarsskift före och efter omläggningen, och hur många arbetare som krävdes för tusen chassin per dag i vardera fallet. Priset på en T-Ford föll från 850 dollar 1909 till 260 dollar 1925. Jämför med din uträkning och förklara sambandet mellan monteringstid och pris.
 

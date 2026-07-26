@@ -34,7 +34,9 @@ Skiftnyckeln visar var teknik börjar. Först finns ett mänskligt behov eller p
 
 ## Teknik är mer än bara föremål
 
-Ordet teknik leder ofta tanken till fysiska föremål, men tekniska lösningar kan också bestå av program, system och anläggningar. Betaltjänsten Swish, som sex banker på den svenska marknaden lanserade gemensamt 2012, svarar mot behovet att föra över pengar direkt mellan människor, och ändå går den inte att hålla i handen. Lösningen består av program, servrar och avtal mellan banker. Vattnet i kranen är på samma sätt slutpunkten i en teknisk lösning av ett annat slag: reningsverk, pumpstationer och vattentorn som tillsammans ger rent vatten med jämnt tryck, dygnet runt. Tekniska lösningar kan alltså vara system och anläggningar lika väl som saker.
+Ordet teknik leder ofta tanken till produkter, alltså fysiska föremål. En teknisk lösning kan lika gärna vara en process, ett system eller en anläggning.
+
+Pastörisering är en process. Mjölken hettas upp och kyls snabbt ned igen för att bakterierna ska dö utan att smaken förstörs. Lösningen ligger i förfarandet, inte i utrustningen som utför det. Betaltjänsten Swish, som sex banker på den svenska marknaden lanserade gemensamt 2012, är ett system. Den svarar mot behovet att föra över pengar direkt mellan människor, och ändå går den inte att hålla i handen. Lösningen består av program, servrar och avtal mellan banker. Vattnet i kranen är slutpunkten i en anläggning: reningsverk, pumpstationer och vattentorn som tillsammans ger rent vatten med jämnt tryck, dygnet runt. Tekniska lösningar kan alltså vara processer, system och anläggningar lika väl som saker.
 
 [BILD 1.1-2] Innehåll: enkelt flödesschema över vattnets väg: vattentäkt, reningsverk, pumpstation, vattentorn, kran. Poängen är att kranen bara är slutpunkten i ett system, alltså en teknisk lösning som inte är ett föremål. Bildtext: "Vattnet i kranen är slutpunkten i ett tekniskt system som arbetar dygnet runt."
 

@@ -61,7 +61,7 @@ Skiftnyckeln i det här kapitlets början bar en enda uppfinnares namn och löst
 2. Varför kom den bärbara telefonen först på 1980-talet trots att behovet var mycket äldre?
 3. Vilka tekniska förutsättningar gjorde den bärbara telefonen möjlig?
 4. Vad är skillnaden mellan ett behov och en teknisk möjlighet?
-5. Vad menas med behovsdriven respektive möjlighetsdriven teknikutveckling?
+5. Ge ett exempel på en teknisk lösning där behovet fanns långt före den tekniska möjligheten, och ett där möjligheten fanns före behovet.
 6. Varför beskrevs lasern som en lösning som letade efter ett problem, och vilka användningar fick den senare?
 7. Hur påverkar ekonomi och konkurrens vilken teknik som utvecklas?
 8. Ge ett exempel på hur staten kan påverka teknikutvecklingen.
