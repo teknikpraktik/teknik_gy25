@@ -103,9 +103,9 @@ Samma princip förklarar varför en lyftkrans bom är kraftigast byggd närmast 
 
 ## Övningar
 
-1. En skruv dras åt med en kraft på 40 N vinkelrätt mot en skruvmejsels handtag, vars radie är 0,02 m. Beräkna momentet.
-2. En avstängningsventil öppnas med en ratt vars radie är 0,18 m. Vilken vinkelrät kraft krävs vid rattens kant för att ge momentet 27 Nm?
-3. En mutter kräver 90 Nm för att lossna. Beräkna kraften som krävs med en nyckel vars handtag är 0,25 m, och beräkna sedan kraften om handtaget förlängs till 0,5 m med ett pårör. Kraften antas verka vinkelrätt i båda fallen.
-4. En lyftkran balanserar sin last kring masten. Lasten på 3000 N hänger 6,0 m ut på bommen. Hur långt från masten åt andra hållet måste en motvikt på 12 000 N sitta för att de två momenten ska ta ut varandra?
-5. En hand drar med 300 N i en nyckel vars handtag är 0,20 m långt, men i vinkeln 50 grader mot handtaget. Beräkna momentet kring muttern. Jämför med det moment samma kraft hade gett om den verkat vinkelrätt, och förklara skillnaden.
-6. En hjullastares skopa lyfts av en hydraulcylinder som griper an 0,35 m från lyftarmens ledpunkt, medan lastens tyngd verkar 2,1 m från samma punkt. Lasten i skopan väger 1200 kg. Beräkna först lastens tyngdkraft, sedan det moment lasten ger kring ledpunkten, och slutligen den kraft cylindern minst måste ge. Kontrollera att förhållandet mellan cylinderkraften och lastens tyngdkraft stämmer med förhållandet mellan de båda momentarmarna, och bedöm om storleksordningen på cylinderkraften är rimlig för en verklig maskin.
+1. **Kraft gånger arm.** En skruv dras åt med en kraft på 40 N vinkelrätt mot en skruvmejsels handtag, vars radie är 0,02 m. Beräkna momentet.
+2. **Baklänges till kraften.** En avstängningsventil öppnas med en ratt vars radie är 0,18 m. Vilken vinkelrät kraft krävs vid rattens kant för att ge momentet 27 Nm?
+3. **Dubbla armen.** En mutter kräver 90 Nm för att lossna. Beräkna kraften som krävs med en nyckel vars handtag är 0,25 m, och beräkna sedan kraften om handtaget förlängs till 0,5 m med ett pårör. Kraften antas verka vinkelrätt i båda fallen.
+4. **Kranen i balans.** En lyftkran balanserar sin last kring masten. Lasten på 3000 N hänger 6,0 m ut på bommen. Hur långt från masten åt andra hållet måste en motvikt på 12 000 N sitta för att de två momenten ska ta ut varandra?
+5. **Snett drag.** En hand drar med 300 N i en nyckel vars handtag är 0,20 m långt, men i vinkeln 50 grader mot handtaget. Beräkna momentet kring muttern. Jämför med det moment samma kraft hade gett om den verkat vinkelrätt, och förklara skillnaden.
+6. **Kort arm, stor kraft.** En hjullastares skopa lyfts av en hydraulcylinder som griper an 0,35 m från lyftarmens ledpunkt, medan lastens tyngd verkar 2,1 m från samma punkt. Lasten i skopan väger 1200 kg. Beräkna först lastens tyngdkraft, sedan det moment lasten ger kring ledpunkten, och slutligen den kraft cylindern minst måste ge. Kontrollera att förhållandet mellan cylinderkraften och lastens tyngdkraft stämmer med förhållandet mellan de båda momentarmarna, och bedöm om storleksordningen på cylinderkraften är rimlig för en verklig maskin.
