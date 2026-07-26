@@ -10,6 +10,79 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-26 — Kapitel 1 färdigställt och låst, nio redaktionella beslut
+
+Kapitel 1 (Teknikens grunder) är korrekturläst, godkänt och låst. Samtidigt
+avgjordes en rad frågor som utredningen inför frysningen lyfte. Besluten gäller
+framåt och är inte retroaktiva mot låsta kapitel.
+
+1. **Den skarpa texten gäller framför referensimplementationen.**
+   `referensimplementation-avsnitt-1-1.md` hade glidit ifrån
+   `content/01-teknikens-grunder/01-vad-ar-teknik.md` på fem punkter och kunde
+   därför inte längre användas som kalibrering. Synken går åt ett håll:
+   referensen uppdateras mot content, aldrig tvärtom. Regeln står nu i
+   referensfilens egen ingress.
+
+2. **Referensens tidigare fråga 9 utgår ur projektet.** "Förklara med egna ord
+   vad som menas med begreppen behov, teknik och teknisk lösning" fanns bara i
+   referensen, inte i den skarpa texten, och förs inte in.
+
+3. **03:s begreppsfråga läses som frågetyp, inte som obligatorisk
+   formulering.** Frasen "Förklara med egna ord" förekom inte i en enda
+   avsnittsfil och kontrollerades inte av validate, medan flera avsnitt hade
+   fullgoda begreppsfrågor i annan form. Kravet gäller nu vad frågan ska
+   efterfråga: begreppets innebörd, inte igenkänning eller tillämpning. Frågan
+   får vara enkel, och en rak definitionsfråga räcker. Inskrivet i 03
+   ("Instuderingsfrågor") och 09.
+
+4. **Avsnitt 1.1 kompletterat med "Vad menas med en teknisk lösning?"** som
+   fråga 2. 1.1 var bokens enda avsnitt utan en fråga som efterfrågar
+   innebörden i ett centralt begrepp. Ingen befintlig fråga togs bort, och
+   frågan om igenkänning står kvar eftersom den svarar mot en verklig poäng i
+   texten. Avsnittet har därmed tio frågor.
+
+5. **Kravet på hård radbrytning i begreppslistan är borttaget** ur 03 och 13.
+   Kapitel 1:s lista skrevs 2026-07-24 om till blankrad mellan posterna, vilket
+   satte styrdokumenten i konflikt med den godkända texten. Radavstånd och
+   vertikal rytm är en formgivningsfråga och regleras inte i 03. Övriga
+   formatkrav står kvar som hårda fel: fetstilt begrepp med kolon inom
+   fetstilen, versal, fullständig mening med avslutande punkt, inga tankstreck,
+   ingen punktmarkering. `validate.mjs` behövde inte ändras, eftersom den redan
+   accepterade båda formerna.
+
+6. **Avsnitt 1.1 omtaggat från n1-13 till s-02 och s-03.** n1-13 ("Tekniska
+   framsteg som har haft betydelse för samhället") svarar mot 1.2, inte mot
+   1.1. Syftesstoffet s-02 (teknikbegreppet) och s-03 (samspelet teknik,
+   naturvetenskap och matematik) pekar enligt 07 ut 1.1 som huvudställe men
+   saknade tagg. Båda slår nu om till täckt i primärkapitlet, och n1-13 står
+   kvar som täckt via 1.2 och 1.3.
+
+7. **Kapitel 1 migrerat till `[BILD]`.** Frontmatterfältet `figures` är tömt i
+   de tre teoriavsnitten, och kapitlets elva poster är borttagna ur
+   `figures/registry.yml` (44 till 33 poster). Kapitlet har tolv
+   `[BILD X.Y-N]`-platshållare och noll `[[figur:]]`-shortcodes.
+   **Kvarstående verktygsskuld:** validate räknar bara frontmatterfältet och
+   känner inte igen `[BILD]`-platshållare, så de tre avsnitten ger var sin
+   falsk varning "inga figurer". Åtgärdas när figurkontrollen migreras.
+
+8. **Kapitel 1 låst** i `lastaKapitel` (`scripts/migreringsstatus.mjs`).
+   Filerna under `content/01-teknikens-grunder/` får läsas men aldrig ändras av
+   Claude Code. Vakten är verifierad: en provocerad ändring gav aktivt fel med
+   HEAD-avstämning. Kapitlet läses som förlaga för struktur, ton,
+   instuderingsfrågor och övningar, men dess exempel, kompressionsgrad och
+   övningstyper kopieras inte rakt av — kapitel 1 är beskrivande stoff, och
+   procedurkapitel följer procedurdelen i 03.
+
+9. **Ny hård regel i CLAUDE.md: projektroten är arbetsytan.** Claude Code
+   arbetar uteslutande i projektroten. Filer utanför den läses aldrig och ändras
+   aldrig. Namnger en instruktion en fil som inte finns i projektet ska arbetet
+   stanna och frågan ställas, aldrig en snarlik fil letas upp i en annan mapp.
+
+Valideringsläge efter frysningen: 0 aktiva fel, 7 varningar (från 18), 11 kända
+migreringsskuldposter (`NN-projektuppgifter.md` i kapitel 2–5 och 7–13).
+
+---
+
 # Produktionsstandard 2026-07-23 — tre regeländringar (projektägarens beslut)
 
 Tre regler inskrivna i styrdokumenten (03-bokens-arkitektur.md, 05-forfattarmanual.md,
