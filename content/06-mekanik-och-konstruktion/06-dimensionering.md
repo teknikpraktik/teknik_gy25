@@ -48,9 +48,9 @@ Den spänning en detalj tillåts belastas med kallas tillåten spänning. Den s�
 
 tillåten spänning = sträckgräns / säkerhetsfaktor
 
-Kapitlets uppgifter anger alltid vilken säkerhetsfaktor som ska användas. Det är en pedagogisk förenkling. I verkligheten plockas ingen säkerhetsfaktor ur luften. Den följer av standarder och föreskrifter, och den beror på vad som byggs, vilket material som används, hur väl lasten är känd, hur allvarliga följderna av ett brott skulle bli och om detaljen kan inspekteras. Moderna byggnormer använder dessutom oftast inte en enda säkerhetsfaktor alls, utan separata faktorer på lastsidan och på materialsidan. Ett tal som 2 eller 3 ska därför läsas som en siffra given i uppgiften, aldrig som ett allmängiltigt riktvärde.
+Kapitlets uppgifter anger alltid vilken säkerhetsfaktor som ska användas. I verkligheten plockas ingen säkerhetsfaktor ur luften. Den följer av standarder och föreskrifter, och den beror på vad som byggs, vilket material som används, hur väl lasten är känd, hur allvarliga följderna av ett brott skulle bli och om detaljen kan inspekteras. Moderna byggnormer använder dessutom oftast inte en enda säkerhetsfaktor alls, utan separata faktorer på lastsidan och på materialsidan. Ett tal som 2 eller 3 ska därför läsas som en siffra given i uppgiften, aldrig som ett allmängiltigt riktvärde.
 
-Ett lyftstag i en verkstadstravers får bli exempel. Staget är en rak, rund stålstång som hänger lodrätt och bär lasten i ren dragkraft, vilket är precis det centriska fall där σ = F / A gäller. Staget ska bära dragkraften 47 000 N, materialet är konstruktionsstålet S235 med sträckgränsen 235 N/mm², och säkerhetsfaktorn 2 är given.
+Ett lyftstag i en verkstadstravers är en rak, rund stålstång som hänger lodrätt och bär lasten i ren dragkraft, vilket är precis det centriska fall där σ = F / A gäller. Staget ska bära dragkraften 47 000 N, materialet är konstruktionsstålet S235 med sträckgränsen 235 N/mm², och säkerhetsfaktorn 2 är given.
 
 Den tillåtna spänningen blir
 
@@ -64,7 +64,7 @@ En rund stång med den tvärsnittsarean har diametern
 
 d = √(4A / π) = √(4 · 400 / 3,14) ≈ √509 ≈ 22,6 mm
 
-Här är det viktigt att uttrycka slutsatsen rätt. Den förenklade dragspänningsberäkningen ger en teoretisk minsta diameter på ungefär 22,6 mm. Det är inte samma sak som en färdig konstruktionsuppgift. Rundstång tillverkas i standarddimensioner, och nästa dimension uppåt är 25 mm. Med den blir den verkliga arean
+Den förenklade dragspänningsberäkningen ger en teoretisk minsta diameter på ungefär 22,6 mm. Det är inte samma sak som en färdig konstruktionsuppgift. Rundstång tillverkas i standarddimensioner, och nästa dimension uppåt är 25 mm. Med den blir den verkliga arean
 
 A = π · 25² / 4 ≈ 491 mm²
 
