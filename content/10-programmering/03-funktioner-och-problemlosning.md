@@ -13,6 +13,9 @@ learningGoals:
     strukturera programkod.
   - Bryta ned ett tekniskt problem i delsteg och implementera lösningen som ett
     strukturerat Python-program.
+  - Tillämpa programmering på ett tekniskt problem inom ett valt teknikområde,
+    där programmet bearbetar mätdata eller andra tekniska data och resultatet
+    tolkas tekniskt.
   - Testa ett program systematiskt samt lokalisera och rätta fel i programkod.
 abilities: []
 concepts_introduced: []

@@ -11,8 +11,8 @@ curriculumReferences:
 learningGoals:
   - Förklara vad prototyper används till och skilja mellan olika typer av
     prototyper.
-  - Bygga en enkel prototyp och använda den för att testa och förbättra ett
-    koncept.
+  - Bygga en enkel prototyp av ett koncept och avgöra vilka frågor om konceptet
+    prototypen kan besvara och vilka den inte kan.
 abilities: []
 concepts_introduced: []
 concepts_used: []
