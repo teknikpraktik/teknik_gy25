@@ -212,6 +212,12 @@ De tre inledande kapitlen avgränsas så här:
 
 Kapitel 1 ska därför inte innehålla en egen problemlösningsmetod, en egen teknikutvecklingsprocess eller en fristående framtidsanalys. Kapitel 1:s syntes beskriver *att* och *varför* tekniska lösningar formas av behov, möjligheter, krav och avvägningar, inte *hur* ett utvecklingsarbete steg för steg genomförs.
 
+Ytterligare tre gränser är skrivna. Övriga kapitels gränser skrivs när respektive kapitel produceras.
+
+- **Kapitel 3 · Teknikutvecklingsprocessen mot kapitel 8 · Modellering och simulering.** Kapitel 3 äger prototypen som *steg i utvecklingsarbetet*: varför en tidig, konkret modell byggs, och hur den används för att pröva och förbättra ett koncept innan något dyrt eller riskfyllt görs. Kapitel 8 äger modellen som *metod*: vad en modell är, vilka typer som finns, hur en modell byggs digitalt och hur man räknar, simulerar och verifierar på den. Samma prototyp kan förekomma i båda kapitlen, men kapitel 3 frågar vad den ska användas till i processen och kapitel 8 hur man arbetar med den systematiskt.
+- **Kapitel 4 · Skiss, ritteknik och CAD mot kapitel 8 · Modellering och simulering.** Kapitel 4 äger att *framställa* ritningen och modellen: skiss, vyer, måttsättning, toleranser, CAD och sammanställningar. Kapitel 8 äger att *räkna och testa på* modellen. En modell som ritas upp hör till kapitel 4; samma modell som belastas, simuleras eller verifieras hör till kapitel 8. Kapitel 4 lär inte ut simulering, och kapitel 8 lär inte ut modellering som ritteknik.
+- **Kapitel 11 · Projekt och entreprenörskap mot kapitel 2 och kapitel 12.** Kapitel 11 äger *arbetsformen*: hur ett tekniskt projekt planeras, bemannas, genomförs, följs upp och utvärderas, och entreprenörskapets villkor. Metoderna som används inuti projektet ägs av andra kapitel och lärs inte ut på nytt: att välja och motivera en problemlösningsstrategi är kapitel 2:s ansvar, och systematiskt kvalitetsarbete, riskanalys, arbetsmiljö och miljösäkring är kapitel 12:s. Kapitel 11 tillämpar dem i ett sammanhang. Riskbegreppet delas därför: kapitel 11 behandlar **projektrisk**, alltså hot mot tid, resurser och leverans, medan kapitel 12 behandlar **teknisk riskanalys** med bedömning av sannolikhet och konsekvens för person, egendom och miljö.
+
 ---
 
 # Kapitelavslutningar
