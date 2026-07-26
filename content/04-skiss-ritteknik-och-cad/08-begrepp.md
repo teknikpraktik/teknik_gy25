@@ -1,9 +1,10 @@
 ---
-type: kapitelsammanfattning
+type: begreppsovning
 chapter: 4
-sectionNumber: 6
-title: Sammanfattning
+sectionNumber: 8
+title: Begrepp
 status: ej-paborjad
+ordlista: []
 ---
 
 <!--

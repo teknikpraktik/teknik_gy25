@@ -1,17 +1,20 @@
 ---
-id: "4.5"
+id: "4.6"
 chapter: 4
-sectionNumber: 5
-title: Ritningar och modeller
+sectionNumber: 6
+title: Dokumentation och presentation
 status: ej-paborjad
 levels: []
 curriculumReferences:
   niva1: []
   niva2: []
 learningGoals:
-  - Ta fram en måttsatt ritning ur en 3D-modell.
-  - Välja lämplig form för att dokumentera och presentera en teknisk lösning för
-    en given mottagare, muntligt och skriftligt med digitala medier.
+  - Välja lämplig form för att dokumentera en teknisk lösning för en given
+    mottagare och motivera valet.
+  - Presentera en teknisk lösning muntligt och skriftligt med digitala medier,
+    anpassat till mottagarens förkunskaper.
+  - Dokumentera och presentera en teknisk lösning inom ett valt teknikområde med
+    de redovisningsformer som är etablerade där.
 abilities: []
 concepts_introduced: []
 concepts_used: []
