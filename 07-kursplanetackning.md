@@ -45,7 +45,7 @@ Kapitelnumrering (fastställd):
 | | **Begrepp, teorier och modeller** | | |
 | n1-09 | Begrepp, teorier och modeller, däribland för konstruktion | 6 ● | — |
 | n1-10 | Beräkningar och rimlighetsbedömningar som gäller konstruktion | 6 ● | 7 ○ |
-| n1-11 | Metoder för modellering och simulering, t.ex. prototyper samt testning och verifiering | 8 ● | 6 ○ |
+| n1-11 | Metoder för modellering och simulering, t.ex. prototyper samt testning och verifiering | 8 ● | 3 ○, 6 ○ |
 | | **Teknik, människa och samhälle** | | |
 | n1-12 | Teknikens och teknikerns roll i ett hållbart samhälle, möjligheter och risker med framtidens teknik | 13 ● | 1 ○ |
 | n1-13 | Tekniska framsteg som har haft betydelse för samhället | 1 ● | 13 ○ |

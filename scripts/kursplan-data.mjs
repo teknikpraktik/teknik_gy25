@@ -99,7 +99,7 @@ export const niva1 = [
 		text: 'Metoder för modellering och simulering, t.ex. prototyper samt testning och verifiering',
 		kategori: 'Begrepp, teorier och modeller',
 		primar: 8,
-		berors: [6],
+		berors: [3, 6],
 	},
 	{
 		id: "n1-12",
