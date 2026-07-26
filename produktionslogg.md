@@ -10,6 +10,35 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-26 — Två uppskjutna frågor efter införandet från gamla specen
+
+**Projektuppgifterna och lärarmaterialet är en uppskjuten fråga.** Ambitionen att
+kapitlens större, integrerande uppgifter ska ligga i ett separat lärarmaterial
+utanför boken är utlyft ur bokprojektet (commit `2bd421f`, se posten nedan).
+Projektägaren bygger projektuppgifterna i ett senare, fristående projekt, och
+frågan avgörs separat. Till samma uppskjutna beslut hör
+`content/02-att-losa-tekniska-problem/05-projektuppgifter.md`, som innehåller
+fyra skrivna uppgifter och därför inte raderas tillsammans med de tio tomma
+skelettfilerna. Ingenting i den frågan rörs tills den avgörs.
+
+Precisering av läget: i `2bd421f` ersattes formuleringarna i 03, 12, 13 och
+CLAUDE.md av att kapitelövergripande uppgifter inte ingår i bokprojektet. Det
+finns alltså i dag ingen formulering kvar som motiverar frånvaron av
+helkapitelövningar med att uppgifterna ligger i ett lärarmaterial. Kvarvarande
+omnämnanden av lärarmaterial i 03, 09, 12 och 13 gäller bedömningsstöd och
+betygsunderlag i en separat privat källa, vilket är en annan fråga och inte
+berörs av det uppskjutna beslutet.
+
+**Kursplanematrisen tryckt i boken är en öppen fråga.** Den gamla specifikationen
+föreslog att innehållsmatrisen skulle ligga synligt i boken och kunna användas i
+säljmaterial. Trygghetskravet är infört i 01 och 07 (commit `2816eef`), men
+förslaget att trycka matrisen är **inte** infört. Det är ett strukturbeslut av
+samma slag som facit: det kräver plats i 06-bokstruktur.md, en egen `type`, en
+väg genom skeleton, validate och båda exporterna, samt ett svar på om matrisen
+ska visas per kapitel eller samlat. Ingenting är byggt. Frågan avgörs separat.
+
+---
+
 # 2026-07-26 — Lärarmaterialet utgår ur bokprojektet
 
 Beslutet från 2026-07-24, att kapitlens större och integrerande uppgifter skulle

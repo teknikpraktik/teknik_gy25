@@ -156,6 +156,25 @@ Exempel hämtas från verkliga produkter, företag, konstruktioner och tekniska 
 
 Exemplen ska spegla modern teknik samtidigt som de i möjligaste mån väljs så att de har lång livslängd.
 
+## Exempelområden
+
+Exempel hämtas inte fritt. Två slag av teknikområden ska hållas isär, och tillämpningsområdena är en sluten lista att välja ur.
+
+**Processkunskap (produktion och tillverkning)** handlar om hur saker framställs. Det är inget exempelområde att hämta illustrationer ur, utan stoff som vävs in där det obligatoriska innehållet kräver det: produktsteget i processkedjan (kapitel 3), material och tillverkningsmetod (kapitel 5) och kvalitetsdimensionen (kapitel 12). Processkunskap blir aldrig ett eget bärande kapitel och används inte som exempelkälla i övriga kapitel.
+
+**Tillämpningsområden** är vad tekniken riktas mot. Det är härifrån exemplen hämtas, och läraren ska kunna byta ut dem. Fyra områden används, vart och ett för det det illustrerar bäst:
+
+- **Produktdesign och formgivning.** Starkast allround: konkret, självstudievänlig, bär hela utvecklingsprocessen och knyter an till CAD. Den mest återkommande källan.
+- **Informationsteknik och mjukvara.** Bärare i de digitala kapitlen (9, 10). Kräver bara en dator, vilket gör exemplen genomförbara för alla elever.
+- **Bygg och konstruktion.** Bärare för dimensionering och hållfasthet (kapitel 6).
+- **Hållbar teknik och energi.** Bärare för värdering (kapitel 13): cirkulär ekonomi och livscykel.
+
+**Regel för den som skriver ett kapitel:** använd tre till fyra återkommande områden över boken som helhet, inte fler. Välj för varje kapitel det område som illustrerar just det kapitlets stoff bäst, enligt listan ovan. Skälet är dubbelt: eleven ska inte tro att teknik är detsamma som produktdesign, och exemplen ska inte spreta utan röd tråd genom boken.
+
+Ett kapitel utan uttryckligt bärarområde i listan hämtar sina exempel ur produktdesign, som är standardvalet, om inte kapitlets stoff tydligt pekar mot ett annat.
+
+Alla exempel är utbytbara (03-bokens-arkitektur.md, "Exempel"). Konkreta verktyg som nämns, till exempel Onshape för CAD och kalkylark för dataanalys, märks uttryckligen som utbytbara där de förekommer.
+
 ---
 
 # Illustrationer
