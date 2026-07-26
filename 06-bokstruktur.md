@@ -95,7 +95,7 @@ Regler:
 
 Varje kapitel avslutas med onumrerade H2-avsnitt, alltid i denna ordning och med exakt dessa titlar: **Sammanfattning**, **Begrepp**, **Facit**. De är egna innehållstyper (`type: kapitelsammanfattning` / `begreppsovning` / `facit`), inte lärandemål, saknar `learningGoals` och sammanfattar, definierar respektive besvarar kapitlets innehåll som helhet (03-bokens-arkitektur.md, "Kapitelavslutningar" och "Facit"; 12-produktionsarkitektur.md).
 
-Sammanfattning och Begrepp är obligatoriska. **Facit är en tredje, valfri kapitelavslutning** (redaktionellt beslut 2026-07-26). Facit lagras per kapitel men läses av eleven som ett samlat facit sist i boken, satt av exporten. Raden läggs till kapitel för kapitel när facit skrivs, eftersom ett facit inte kan skrivas förrän kapitlets övningar är klara. **Kapitel 1 saknar facitrad och är låst** (`lastaKapitel`, scripts/migreringsstatus.mjs); det behöver kompletteras med `## Facit` när låset lyfts.
+Sammanfattning och Begrepp är obligatoriska. **Facit är en tredje, valfri kapitelavslutning** (redaktionellt beslut 2026-07-26). Facit lagras per kapitel men läses av eleven som ett samlat facit sist i boken, satt av exporten. Raden läggs till kapitel för kapitel när facit skrivs, eftersom ett facit inte kan skrivas förrän kapitlets övningar är klara.
 
 Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgifter ingår inte i bokprojektet (03-bokens-arkitektur.md, "Kapitelövergripande uppgifter").
 
@@ -136,6 +136,8 @@ Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgift
 ## Sammanfattning
 
 ## Begrepp
+
+## Facit
 
 ---
 
