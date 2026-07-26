@@ -6,7 +6,7 @@ title: Vad är teknik?
 status: fardig-forsta-version
 levels: [niva1]
 curriculumReferences:
-  niva1: ["n1-13"]
+  niva1: ["s-02", "s-03"]
   niva2: []
 learningGoals:
   - Förklara vad teknik är och ge exempel på hur tekniska lösningar svarar mot
