@@ -107,9 +107,9 @@ Friläggs bron ersätts marken vid de två stöden med varsin stödkraft riktad 
 
 ## Övningar
 
-1. En rak stålbalk som ska monteras i en konstruktion har massan 240 kg. Beräkna balkens egentyngd, alltså tyngdkraften som verkar på den.
-2. En travers lyfter en last rakt uppåt. Lyftkroken drar med 4,5 kN uppåt och lastens tyngdkraft är 3,2 kN nedåt. Bestäm resultantens storlek och riktning.
-3. Två trådar drar i en hörnstolpe med 6000 N respektive 8000 N, vinkelrätt mot varandra. Avgör först, utan att räkna, om resultanten bör bli större eller mindre än 8000 N, och motivera. Bestäm sedan den resultant som stolpen ska stagas mot.
-4. Ett diagonalstag i en byggställning är spänt med 2,5 kN och lutar 55° mot vågplanet. Beräkna hur stor del av stagets kraft som verkar vågrätt respektive lodrätt. Vilken av komposanterna är störst, och stämmer det med vad du kan vänta dig av vinkeln?
-5. En armatur hänger stilla i en enda lina från ett tak. Frilägg armaturen, rita in samtliga yttre krafter och ange vad som måste gälla mellan dem för att den ska hänga stilla. Vad blir linans dragkraft om armaturens massa är 3,0 kg?
-6. En vajer som stagar en mast är spänd med 5,0 kN och lutar 40° mot marken. Beräkna hur stor vågrät kraft markfästet måste hålla emot och hur stor lodrät kraft vajern pressar ned i masten. Bedöm om det är rimligt att den vågräta komposanten är störst, och förklara vad som skulle hända med de två komposanterna om vajern spändes brantare.
+1. **Från massa till tyngd.** En rak stålbalk som ska monteras i en konstruktion har massan 240 kg. Beräkna balkens egentyngd, alltså tyngdkraften som verkar på den.
+2. **Uppåt eller nedåt?** En travers lyfter en last rakt uppåt. Lyftkroken drar med 4,5 kN uppåt och lastens tyngdkraft är 3,2 kN nedåt. Bestäm resultantens storlek och riktning.
+3. **Bedöm först, räkna sedan.** Två trådar drar i en hörnstolpe med 6000 N respektive 8000 N, vinkelrätt mot varandra. Avgör först, utan att räkna, om resultanten bör bli större eller mindre än 8000 N, och motivera. Bestäm sedan den resultant som stolpen ska stagas mot.
+4. **Vinkeln avgör.** Ett diagonalstag i en byggställning är spänt med 2,5 kN och lutar 55° mot vågplanet. Beräkna hur stor del av stagets kraft som verkar vågrätt respektive lodrätt. Vilken av komposanterna är störst, och stämmer det med vad du kan vänta dig av vinkeln?
+5. **Vad håller emot?** En armatur hänger stilla i en enda lina från ett tak. Frilägg armaturen, rita in samtliga yttre krafter och ange vad som måste gälla mellan dem för att den ska hänga stilla. Vad blir linans dragkraft om armaturens massa är 3,0 kg?
+6. **Vad fästet måste tåla.** En vajer som stagar en mast är spänd med 5,0 kN och lutar 40° mot marken. Beräkna hur stor vågrät kraft markfästet måste hålla emot och hur stor lodrät kraft vajern pressar ned i masten. Bedöm om det är rimligt att den vågräta komposanten är störst, och förklara vad som skulle hända med de två komposanterna om vajern spändes brantare.
