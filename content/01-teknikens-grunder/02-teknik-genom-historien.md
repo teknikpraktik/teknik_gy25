@@ -23,8 +23,7 @@ abilities: [f4]
 concepts_introduced:
   ["tekniskt genombrott", "teknikskifte", "industriell revolution", "mekanisering", "industrialisering", "massproduktion", "transistor", "integrerad krets", "automation", "digitalisering", "artificiell intelligens"]
 concepts_used: ["teknik", "teknisk lösning"]
-figures:
-  ["fig-1.2.1-a", "fig-1.2.1-b", "fig-1.2.2-a", "fig-1.2.2-b", "fig-1.2.3-a", "fig-1.2.4-a", "fig-1.2.4-b", "fig-1.2.5-a"]
+figures: []
 prerequisites: ["1.1"]
 ---
 

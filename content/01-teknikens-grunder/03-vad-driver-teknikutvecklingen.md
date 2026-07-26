@@ -17,7 +17,7 @@ learningGoals:
 abilities: [f4]
 concepts_introduced: ["drivkraft", "teknisk möjlighet"]
 concepts_used: ["teknik", "tekniskt genombrott", "teknisk lösning", "behov", "transistor", "integrerad krets"]
-figures: ["fig-1.3.1-a"]
+figures: []
 prerequisites: ["1.1", "1.2"]
 ---
 

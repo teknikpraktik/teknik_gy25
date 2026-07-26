@@ -16,7 +16,7 @@ learningGoals:
 abilities: [f4]
 concepts_introduced: ["teknik", "teknisk lösning", "behov"]
 concepts_used: []
-figures: ["fig-1.1.1-a", "fig-1.1.2-a"]
+figures: []
 prerequisites: []
 ---
 
