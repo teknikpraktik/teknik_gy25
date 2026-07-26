@@ -353,6 +353,8 @@ Det finns inga separata projektuppgiftsavsnitt. Kapitlets större, integrerande 
 
 ## Begrepp
 
+## Facit
+
 ---
 
 # Kapitel 7 · Mätteknik och dataanalys

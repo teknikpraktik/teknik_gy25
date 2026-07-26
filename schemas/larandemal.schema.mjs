@@ -123,9 +123,8 @@ export const larandemalRequiredSchema = z.object({
 });
 
 // Striktare variant för kapitelavslutningsavsnitt (känns igen på "type", saknar
-// "learningGoals"). Uppgiftsbankens uppgifter ligger som numrerad lista i
-// brödtexten och har ingen frontmatter-metadata; endast begreppsövningen har en
-// valfri ordlista.
+// "learningGoals"). Begreppsövningen har en valfri ordlista och facit ett
+// valfritt utanSvar; övriga typer har ingen egen frontmatter-metadata.
 export const kapitelavslutningRequiredSchema = z.object({
   type: z.enum(kapitelavslutningTyper),
   chapter: z.number().int(),
@@ -133,4 +132,5 @@ export const kapitelavslutningRequiredSchema = z.object({
   title: z.string(),
   status: z.enum(statusEnum),
   ordlista: z.array(z.string()).optional(),
+  utanSvar: larandemalFields.utanSvar,
 });
