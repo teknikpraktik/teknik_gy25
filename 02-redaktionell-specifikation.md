@@ -171,7 +171,7 @@ Exempel hämtas inte fritt. Två slag av teknikområden ska hållas isär, och t
 
 **Regel för den som skriver ett kapitel:** använd tre till fyra återkommande områden över boken som helhet, inte fler. Välj för varje kapitel det område som illustrerar just det kapitlets stoff bäst, enligt listan ovan. Skälet är dubbelt: eleven ska inte tro att teknik är detsamma som produktdesign, och exemplen ska inte spreta utan röd tråd genom boken.
 
-Ett kapitel utan uttryckligt bärarområde i listan hämtar sina exempel ur produktdesign, som är standardvalet, om inte kapitlets stoff tydligt pekar mot ett annat.
+Har ett kapitel inget uttryckligt bärarområde i listan väljer den som skriver kapitlet det av de fyra som bäst illustrerar kapitlets stoff, och motiverar valet. Det finns inget standardområde att falla tillbaka på.
 
 Alla exempel är utbytbara (03-bokens-arkitektur.md, "Exempel"). Konkreta verktyg som nämns, till exempel Onshape för CAD och kalkylark för dataanalys, märks uttryckligen som utbytbara där de förekommer.
 
