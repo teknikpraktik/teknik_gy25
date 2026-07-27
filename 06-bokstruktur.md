@@ -279,6 +279,8 @@ Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgift
 
 ## Begrepp
 
+## Facit
+
 ---
 
 # Kapitel 5 · Material och deras egenskaper

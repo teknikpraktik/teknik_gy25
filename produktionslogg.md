@@ -10,6 +10,39 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-27 — Kapitel 4 färdigt i första version
+
+Kapitel 4 (Skiss, ritteknik och CAD) är producerat, ett avsnitt per commit, med
+sammanfattning, begreppslista och facit. Samtliga sex avsnitt har status
+`fardig-forsta-version`. Kapitlet omfattar cirka 12 400 ord, 13
+bildplatshållare, 82 instuderingsfrågor, 30 övningar och 22 begrepp.
+
+**Röd tråd.** Mobilhållaren följer kapitlet från idéskiss till utlämnad
+handling: fyra idéskisser och en volymskiss i 4.1, tre vyer i 4.2, måttsättning
+och toleranser i 4.3, parametrisk modell och sammanställning i 4.4, genererad
+ritning och revidering i 4.5, samt fyra handlingar för fyra mottagare i 4.6.
+
+**Verkliga ankare, kontrollerade mot källa.** Första vinkelns projektion med
+vyn ovanifrån under huvudvyn och vyn från vänster till höger, samt
+projektionssymbolen med de koncentriska cirklarna till höger om konen.
+Legoklossens knopp på 4,8 millimeter och klosshöjden 9,6 millimeter med
+tillverkningstolerans på hundradels millimeter, i 4.3. IKEA:s textlösa
+monteringsanvisningar som exempel på mottagaranpassning i 4.6. CAD-avsnittet är
+skrivet programneutralt med en kort orientering om vanliga program.
+
+**Facit.** Kapitlet fick facit som tredje kapitelavslutning, och raden
+`## Facit` lades till i 06. Samtliga 82 instuderingsfrågor är besvarade. Två
+övningar har bestämda svar och är genomräknade (4.3:2 gränsmått och passning,
+4.3:3 felstapling i kedja mot referenskant), medan 28 är registrerade i
+`utanSvar`. Andelen öppna övningar är hög eftersom kapitlets övningar i huvudsak
+är rit-, modellerings- och redovisningsuppgifter vars resultat är elevens eget
+alster.
+
+**Kvar att göra:** kapitelgranskning i en egen genomläsning, och därefter beslut
+om kapitlet ska låsas.
+
+---
+
 # 2026-07-27 — Kapitel 4 förberett: strukturfel i 06 rättat och två gränser skrivna
 
 Kapitel 4 (Skiss, ritteknik och CAD) tas i produktion. Tre beslut fattades av
