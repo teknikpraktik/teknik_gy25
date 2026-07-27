@@ -10,6 +10,38 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-27 — Kapitel 4 förberett: strukturfel i 06 rättat och två gränser skrivna
+
+Kapitel 4 (Skiss, ritteknik och CAD) tas i produktion. Tre beslut fattades av
+projektägaren i förberedelsesteget.
+
+**Strukturfel i 06 rättat.** Avsnitt 4.6 bar två delavsnittsrader som blivit
+kvar från strukturen före 4.6 lades till (`### Ritning ur modell` och
+`### Presentera teknik`), medan 4.5 stod utan delavsnitt. Parsern läste båda
+raderna som delavsnitt i 4.6. Raderna är strukna, och 4.5 har i stället fått två
+egna delavsnitt: `### Vyer ur modellen` och `### Revidering och gällande
+ritning`. Revideringsfrågan, alltså vilken handling som styr tillverkningen och
+hur en ändring i modellen följs upp i ritningen, får därmed ett hem i boken.
+
+**Röd tråd genom kapitlet**, samma upplägg som i kapitel 3. Ett enkelt
+vardagsföremål skissas i 4.1, ritas i tre vyer i 4.2, måttsätts i 4.3,
+modelleras i CAD i 4.4, får sin ritning ur modellen i 4.5 och dokumenteras för
+en mottagare i 4.6. Kapitlets moment är stegen i en och samma arbetsgång, så
+tråden följer stoffet. Övningarna hålls fristående enligt 03.
+
+**CAD skrivs programneutralt.** Arbetsgång och funktioner beskrivs med termer
+som fungerar i alla parametriska program, kompletterat med en kort orientering
+om de program som faktiskt används i skolan. Skälet är att kapitlet annars
+åldras snabbt och blir fel för skolor med andra licenser.
+
+**Två kapitelgränser skrevs in i 03**, som därmed har elva skrivna gränser: 4
+mot 11 (kommunikationshantverket mot projektets redovisning) och 4 mot 5 och 6
+(framställningen mot materialval och dimensionering). Den andra befäster
+skrivanvisningen att kapitel 4:s exempel varken förutsätter hållfasthet eller
+materialkunskap.
+
+---
+
 # 2026-07-27 — Kapitel 3 färdigt i första version
 
 Kapitel 3 (Teknikutvecklingsprocessen) är producerat i ett svep, ett avsnitt per

@@ -264,6 +264,9 @@ Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgift
 ## 4.5 Från modell till ritning
 - Ta fram en måttsatt ritning ur en 3D-modell.
 
+### Vyer ur modellen
+### Revidering och gällande ritning
+
 ## 4.6 Dokumentation och presentation
 - Välja lämplig form för att dokumentera en teknisk lösning för en given mottagare och motivera valet.
 - Presentera en teknisk lösning muntligt och skriftligt med digitala medier, anpassat till mottagarens förkunskaper.
@@ -271,9 +274,6 @@ Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgift
 
 ### Att dokumentera för en mottagare
 ### Muntlig och skriftlig presentation
-
-### Ritning ur modell
-### Presentera teknik
 
 ## Sammanfattning
 
