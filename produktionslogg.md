@@ -10,6 +10,36 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-27 — Kapitel 5 förberett: krocken med det låsta kapitel 6 löst
+
+Kapitel 5 (Material och deras egenskaper) tas i produktion. Tre beslut fattades
+av projektägaren i förberedelsesteget.
+
+**Gränsen mot det låsta kapitel 6.** Avsnitt 5.2 ska behandla hållfasthet och
+styvhet och tolka materialdata ur datablad, medan 6.4 redan äger spänning,
+töjning, elasticitetsmodul, sträckgräns samt dragprovet. Eftersom kapitel 5 läses
+före kapitel 6 får det varken införa begreppen på nytt eller luta sig mot dem.
+Beslutet är att 5.2 behandlar egenskaperna **kvalitativt och jämförande** med
+egna begrepp, och att databladets storheter får nämnas vid namn med sin
+praktiska innebörd medan definitioner, formler och dragprov ligger kvar i 6.4.
+Kapitel 6 förblir låst och orört.
+
+**Röd tråd:** cykelramen i stål, aluminium och kolfiber, samma detalj i tre
+materialgrupper genom hela kapitlet.
+
+**03 uppdaterat om tillverkning.** Meningen om att tillverkning inte är eget
+bärande stoff stämde inte längre sedan 06 fått avsnitt 5.4, och den hänvisade
+till den avvecklade redaktionella specifikationen. Den är omskriven: tillverkning
+har sitt hem i 5.4, övriga kapitel rör vid den utan att lära ut den, och
+tillverkningsteknik i egen rätt ingår inte i boken.
+
+**Två kapitelgränser skrevs in i 03**, som därmed har tretton skrivna gränser: 5
+mot 6 enligt ovan, och 5 mot 13, där 5.5 äger materialets miljöpåverkan och
+återvinningsformerna medan hållbar utveckling som begrepp och cirkulär ekonomi
+ägs av 13.3.
+
+---
+
 # 2026-07-27 — Kapitel 4 färdigt i första version
 
 Kapitel 4 (Skiss, ritteknik och CAD) är producerat, ett avsnitt per commit, med
