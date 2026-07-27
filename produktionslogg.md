@@ -10,6 +10,38 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-27 — Kapitel 3 färdigt i första version
+
+Kapitel 3 (Teknikutvecklingsprocessen) är producerat i ett svep, ett avsnitt per
+commit, med sammanfattning, begreppslista och facit. Samtliga sju avsnitt har
+status `fardig-forsta-version`. Kapitlet omfattar cirka 15 600 ord, 15
+bildplatshållare, 81 instuderingsfrågor, 36 övningar och 22 begrepp.
+
+**Röd tråd.** Hela kapitlet bärs av robotgräsklipparens utveckling, enligt
+projektägarens beslut i förberedelsesteget. Trådens fakta är kontrollerade mot
+källa: Husqvarnas konstruktörsgrupp 1992, Solar Mower 1995 som världens första
+robotgräsklippare med 50 kvadratmeters kapacitet, den batteridrivna modellen
+1998 med laddstation och 500 kvadratmeter, säkerhetsstandardens provkroppar med
+den knästående barnfoten tillagd 2020, igelkottstestet från Oxford och Aalborg
+2024 med 3D-utskrivna provkroppar, samt satellitpositioneringen med virtuella
+gränser 2021 som nådde konsumentmodellerna 2023. I 3.7 tillkommer EU:s
+ekodesignkrav från mars 2021 (reservdelar i sju till tio år, leverans inom
+femton arbetsdagar, byte med vanliga verktyg) och batteriförordningens krav på
+användarutbytbara batterier från februari 2027.
+
+**Facit.** Kapitlet fick en tredje kapitelavslutning, och raden `## Facit` lades
+till i 06. Sju övningar har bestämda svar och redovisas i facit, medan 29 är
+registrerade i `utanSvar`. Andelen öppna övningar är hög för att kapitlets stoff
+är metod: en idésession, en egen kravspecifikation och en egen testplan har inga
+bestämda svar. Samtliga 81 instuderingsfrågor är besvarade. De två räknande
+övningarna (3.4:2 och 3.4:3, viktade beslutsmatriser) är genomräknade och
+kontrollerade, liksom exemplet i löptexten i 3.4.
+
+**Kvar att göra:** kapitelgranskning i en egen genomläsning, och därefter beslut
+om kapitlet ska låsas.
+
+---
+
 # 2026-07-27 — Kapitel 3 påbörjat: fyra avgränsningar och ett nytt lärandemål
 
 Kapitel 3 (Teknikutvecklingsprocessen) tas i produktion. Skelettet var redan

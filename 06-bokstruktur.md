@@ -225,6 +225,8 @@ Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgift
 
 ## Begrepp
 
+## Facit
+
 ---
 
 # Kapitel 4 · Skiss, ritteknik och CAD
