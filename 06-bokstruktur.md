@@ -189,6 +189,7 @@ Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgift
 
 ## 3.3 Idégenerering
 - Använda metoder för idégenerering för att ta fram flera olika lösningsförslag på ett tekniskt problem.
+- Förklara varför idégenerering skiljer på att skapa och att värdera idéer och genomföra en idésession efter den principen.
 
 ## 3.4 Konceptutveckling
 - Utveckla en idé till ett koncept som beskriver funktion, utformning och tänkt användning.

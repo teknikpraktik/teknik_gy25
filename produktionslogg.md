@@ -10,6 +10,38 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-27 — Kapitel 3 påbörjat: fyra avgränsningar och ett nytt lärandemål
+
+Kapitel 3 (Teknikutvecklingsprocessen) tas i produktion. Skelettet var redan
+strukturellt migrerat, så kapitlet skrivs direkt under den nya standarden. Tre
+beslut fattades av projektägaren i förberedelsesteget.
+
+**Röd tråd genom kapitlet.** Kapitel 3 bärs av ett genomgående huvudexempel i
+stället för ett eget exempel per avsnitt, eftersom kapitlets stoff är en
+sammanhängande process. Övningarna hålls ändå fristående enligt 03,
+"Kapitelövergripande uppgifter": all information en övning behöver står i
+uppgiften, aldrig som hänvisning till ett tidigare avsnitt.
+
+**3.3 Idégenerering fick ett andra lärandemål** ("Förklara varför idégenerering
+skiljer på att skapa och att värdera idéer och genomföra en idésession efter den
+principen"), infört i 06-bokstruktur.md och synkat i avsnittsfilens frontmatter.
+Skälet är att avsnittet med ett enda mål blev tunt mot grannavsnitten, som har
+två till tre. Inga delavsnittsrader lades till; avsnittet disponeras med fria
+underrubriker i löptexten.
+
+**Fyra kapitelgränser skrevs in i 03-bokens-arkitektur.md**, som därmed har nio
+skrivna gränser: 3 mot 5 (produktens livscykel mot materialets miljöpåverkan och
+återvinningsformerna), 3 mot 11 (processen som metod mot arbetsformen), 3 mot 12
+(test under utveckling mot kvalitetsarbete i drift och produktion) samt 3 mot 8
+och 13 i utvärderingen (verifiering/validering tillhör 8, hållbar utveckling som
+begrepp och cirkulär ekonomi tillhör 13).
+
+Kursplanetäckningen är oförändrad: kapitel 3 är primärt hem för n1-01 och n1-08
+och berör n1-11 och n2-01. Ändringarna committades separat från
+avsnittsproduktionen.
+
+---
+
 # 2026-07-26 — Kapitel 6 låst
 
 Kapitel 6 (Mekanik och konstruktion) är fryst och ligger i `lastaKapitel`
