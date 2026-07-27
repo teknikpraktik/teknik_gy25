@@ -318,6 +318,8 @@ Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgift
 
 ## Begrepp
 
+## Facit
+
 ---
 
 # Kapitel 6 · Mekanik och konstruktion

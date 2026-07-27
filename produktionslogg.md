@@ -10,6 +10,46 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-27 — Kapitel 5 färdigt i första version
+
+Kapitel 5 (Material och deras egenskaper) är producerat, ett avsnitt per commit,
+med sammanfattning, begreppslista och facit. Samtliga fem avsnitt har status
+`fardig-forsta-version`. Kapitlet omfattar cirka 11 300 ord, 12
+bildplatshållare, 71 instuderingsfrågor, 26 övningar och 28 begrepp.
+
+**Gränsen mot kapitel 6 hölls.** Inget av kapitel 6:s begrepp införs i kapitel 5.
+Avsnitt 5.2 behandlar hållfasthet, styvhet, hårdhet, seghet och utmattning
+kvalitativt och jämförande, och nämner elasticitetsmodul och sträckgräns endast
+som databladets storheter med sin praktiska innebörd. Dessa två står i 5.2:s
+`concepts_used` utan shortcode, eftersom en länk framåt skulle peka mot ett
+kapitel eleven ännu inte läst. Kapitel 6 är orört och fortfarande låst.
+
+**Röd tråd.** Cykelramen i stål, aluminium och kolfiber bär hela kapitlet: tre
+materialgrupper i 5.1, rörens grovlek som följd av styvheten i 5.2, tre olika
+rätta svar beroende på användare i 5.3, tre tillverkningskedjor i 5.4 och tre
+olika slut i återvinningen i 5.5.
+
+**Verkliga ankare, kontrollerade mot källa.** Elektrolysens omkring fjorton
+kilowattimmar per kilo aluminium och omsmältningens fem procent av den energin,
+kolfiberpyrolysen vid 450 till 600 grader med sjuttio till sjuttiofem procents
+kvarvarande hållfasthet, RoHS-bytet till blyfri lödning 2006 som exempel på
+substitution, samt Sara kulturhus i Skellefteå från 2021 som exempel på
+korslimmat trä i flervåningshus.
+
+**Två uppställda beräkningar** bär de kvantitativa inslagen: hållfasthet delad med
+densitet för de tre ramarna i 5.2, och styckkostnaden med verktygskostnaden
+utslagen på antalet med framräknad brytpunkt i 5.4.
+
+**Facit.** Samtliga 71 instuderingsfrågor är besvarade. Två övningar har bestämda
+svar och är genomräknade (5.2:3 specifik hållfasthet och 5.4:2 styckkostnad med
+brytpunkt), medan 24 är registrerade i `utanSvar`, eftersom de bygger på elevens
+egna föremål, mätningar eller materialval.
+
+**Kvar att göra:** kapitelgranskning i en egen genomläsning, och därefter beslut
+om kapitlet ska låsas. Kapitel 3, 4 och 5 väntar nu alla på granskning.
+
+---
+
 # 2026-07-27 — Kapitel 5 förberett: krocken med det låsta kapitel 6 löst
 
 Kapitel 5 (Material och deras egenskaper) tas i produktion. Tre beslut fattades
