@@ -10,6 +10,67 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-28 — Kapitel 10 färdigt i första version
+
+Kapitel 10 (Programmering) är producerat, ett avsnitt per commit, med
+sammanfattning, begreppslista och facit. Samtliga tre avsnitt har status
+`fardig-forsta-version`. Kapitlet omfattar cirka 6 200 ord, 3
+bildplatshållare, 18 kodblock, 44 instuderingsfrågor, 16 övningar och 20
+begrepp.
+
+**Tre beslut av projektägaren före skrivandet.**
+
+*Kodblock blev ett andra undantag från regeln om ren löptext.* 03 förbjöd
+utbrutna exempel oavsett stofftyp, vilket gör ett programmeringskapitel
+omöjligt att skriva: i Python är indraget syntax, och kod skriven som prosa
+upphör att vara kod. Undantaget är infört i 03 och speglat i CLAUDE.md, snävt
+hållet till körbar programkod och med kravet att prosan förklarar koden före
+och efter blocket. `scripts/validate.mjs` undantog redan kodblock från
+tankstreckskontrollen, så verktygen förutsatte detta.
+
+*Röd tråd valdes bort.* Till skillnad från kapitel 5, 6, 8 och 9 har kapitel 10
+inga genomgående exempel utan fristående småexempel per avsnitt, enligt
+projektägarens beslut. Avsnitt 10.3 knyter ändå an till balkens mätserie från
+7.2, eftersom lärandemålet kräver att programmet bearbetar mätdata.
+
+*AI-stödd programmering togs med som eget inslag*, vilket krävde ett fjärde
+delavsnitt i 10.3 i 06: "Att granska kod du inte skrivit själv". Innehållet är
+hållet inom n1-07, skapande och strukturering av programkod, och formulerat som
+en granskningsfärdighet som gäller all kod man inte skrivit själv, oavsett om
+den kommer från ett bibliotek, en kollega, en webbplats eller ett AI-verktyg.
+Därmed hamnar det inte utanför kursplanen.
+
+**Två termkollisioner upptäckta av validate och lösta.** *Iteration* har
+huvudställe i 3.1 och betyder där ett varv i utvecklingsarbetet, vilket inte är
+ett loopvarv. Kapitel 10 säger därför varv. *Funktion* ägs av 2.1 i betydelsen
+vad en lösning ska göra, och *parameter* av 8.1 i betydelsen ett tal i en
+modell. Båda är oundgängliga programmeringstermer, så huvudställena skiljs åt i
+metadatan (`funktion (programmering)`, `parameter (programmering)`) och 10.3
+varnar eleven för dubbelbetydelsen vid introduktionen. Samtliga tre termval är
+införda i termlista.md.
+
+**Koden är verifierad för hand, inte körd.** Python är inte installerat i
+utvecklingsmiljön (bara Windows Store-stubben), vilket är värt att veta inför
+kommande revideringar av kapitlet. Två konsekvenser drogs av det. Dels valdes
+värdena i while-exemplet så att svaret inte avgörs av flyttalsavrundning:
+starttemperaturen är 21,5 och inte 21,0, eftersom 21,0 med 0,3 grader per varv
+landar exakt på tröskeln 15,0. Samma justering gjordes i övning 3, där de
+ursprungliga sänkningarna 0,5 och 0,1 grader per timme båda landade exakt på
+gränsen. Dels ändrade kontrollräkningen texten i 10.3: delvärdenas spridning
+blir 0,06 och inte 0,030 som först skrevs, och med det ursprungliga
+tiondelskriteriet hade programmet dragit motsatt slutsats om linjäriteten.
+Gränsen är satt till en femtedel, och avsnittet förklarar nu varför
+differenser mellan närliggande mätpunkter förstorar avläsningsfelet.
+
+**Facit.** Samtliga 44 instuderingsfrågor är besvarade. Sju övningar har
+bestämda svar och är genomräknade, medan nio är registrerade i `utanSvar`,
+eftersom de bygger på elevens eget program, eget problemval eller arbete i par.
+
+**Kvar att göra:** kapitelgranskning i en egen genomläsning. Kapitel 3, 4, 5, 8,
+9 och 10 väntar nu alla på granskning, och kön växer fortare än den betas av.
+
+---
+
 # 2026-07-28 — Kapitel 9 färdigt i första version
 
 Kapitel 9 (IT-system) är producerat, ett avsnitt per commit, med
