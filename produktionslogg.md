@@ -49,18 +49,36 @@ metadatan (`funktion (programmering)`, `parameter (programmering)`) och 10.3
 varnar eleven för dubbelbetydelsen vid introduktionen. Samtliga tre termval är
 införda i termlista.md.
 
-**Koden är verifierad för hand, inte körd.** Python är inte installerat i
-utvecklingsmiljön (bara Windows Store-stubben), vilket är värt att veta inför
-kommande revideringar av kapitlet. Två konsekvenser drogs av det. Dels valdes
-värdena i while-exemplet så att svaret inte avgörs av flyttalsavrundning:
-starttemperaturen är 21,5 och inte 21,0, eftersom 21,0 med 0,3 grader per varv
-landar exakt på tröskeln 15,0. Samma justering gjordes i övning 3, där de
-ursprungliga sänkningarna 0,5 och 0,1 grader per timme båda landade exakt på
-gränsen. Dels ändrade kontrollräkningen texten i 10.3: delvärdenas spridning
-blir 0,06 och inte 0,030 som först skrevs, och med det ursprungliga
-tiondelskriteriet hade programmet dragit motsatt slutsats om linjäriteten.
-Gränsen är satt till en femtedel, och avsnittet förklarar nu varför
-differenser mellan närliggande mätpunkter förstorar avläsningsfelet.
+**Koden är provkörd i Python 3.13.14.** Kapitlet skrevs först med handverifierad
+kod, eftersom ingen Python fanns i utvecklingsmiljön. Python 3.13 installerades
+därefter för användaren med `winget install Python.Python.3.13 --scope user`,
+och samtliga kodblock, utskrifter och facitsvar kördes och stämdes av mot vad
+texten påstår. Alla 41 värdekontroller och samtliga ordagranna utskrifter
+stämmer. Observera att Windows appkörningsalias i `WindowsApps` fortfarande kan
+skugga `python` i PATH; anropa vid behov
+`%LOCALAPPDATA%\Programs\Python\Python313\python.exe` direkt.
+
+Provkörningen bekräftade tre påståenden i texten. Att en loop som börjar på 0
+tyst räknar mot listans sista värde utan felmeddelande stämmer, och fällan är
+värre än väntat: felet ger här lutningen 0,404 och spridningen 0,06, alltså
+exakt samma svar och samma slutsats som den riktiga koden. Ett logiskt fel som
+inte ens ändrar resultatet är precis den poäng avsnittet gör. Vidare ger det
+trasiga `print`-anropet `SyntaxError: unterminated string literal (detected at
+line 1)` med returkod 1.
+
+**Två rättelser under skrivandet, båda gjorda före provkörningen.** Delvärdenas
+spridning i 10.3 blir 0,06 och inte 0,030 som först skrevs, och med det
+ursprungliga tiondelskriteriet hade programmet dragit motsatt slutsats om
+linjäriteten. Gränsen är satt till en femtedel, och avsnittet förklarar nu
+varför differenser mellan närliggande mätpunkter förstorar avläsningsfelet.
+Dessutom byttes starttemperaturen i while-exemplet från 21,0 till 21,5.
+Provkörningen visar att 21,0 faktiskt hade gett 20 varv, eftersom flyttalsdriften
+landar på 14,999999999999986 och alltså under tröskeln, men bytet står kvar av
+pedagogiska skäl: med 21,0 ger elevens handräkning 6,0 delat med 0,3 lika med
+exakt 20, och då går det inte att avgöra om loopen slutar på 20 eller 21 varv
+utan att känna till flyttalsdriften. Med 21,5 ger handräkningen 21,67, och
+svaret 22 följer entydigt. Samma skäl gäller övning 3, där de ursprungliga
+sänkningarna 0,5 och 0,1 grader per timme båda landade exakt på gränsen.
 
 **Facit.** Samtliga 44 instuderingsfrågor är besvarade. Sju övningar har
 bestämda svar och är genomräknade, medan nio är registrerade i `utanSvar`,
@@ -68,6 +86,8 @@ eftersom de bygger på elevens eget program, eget problemval eller arbete i par.
 
 **Kvar att göra:** kapitelgranskning i en egen genomläsning. Kapitel 3, 4, 5, 8,
 9 och 10 väntar nu alla på granskning, och kön växer fortare än den betas av.
+Koden i kapitel 10 är däremot avklarad och behöver inte granskas på nytt annat
+än om texten ändras.
 
 ---
 
