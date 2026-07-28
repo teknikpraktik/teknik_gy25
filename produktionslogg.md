@@ -10,6 +10,49 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-28 — Kapitel 9 färdigt i första version
+
+Kapitel 9 (IT-system) är producerat, ett avsnitt per commit, med
+sammanfattning, begreppslista och facit. Samtliga fyra avsnitt har status
+`fardig-forsta-version`. Kapitlet omfattar cirka 7 000 ord, 10
+bildplatshållare, 53 instuderingsfrågor, 19 övningar och 25 begrepp.
+
+**Två förberedande beslut.** 03 saknade skrivna avgränsningar för kapitel 9, och
+fyra gränser skrevs därför in före skrivandet: mot kapitel 1, 10, 12 och 13.
+Gränsen mot kapitel 13 fastställdes av projektägaren så att kapitel 9 äger
+digitaliseringens faktiska verkan på produktion, kommunikation och livsmiljö,
+medan värderingen ligger kvar i 13. Utan den fördelningen hade halva n2-11
+fallit mellan stolarna, vilket 07 varnar för i observation 4. Facitraden lades
+till i 06 på samma sätt som för kapitel 8.
+
+**Krocken med det låsta kapitel 1 löstes utan att röra kapitel 1.** Avsnitt 1.2
+äger redan begreppen digitalisering, automation, transistor, integrerad krets
+och artificiell intelligens, mönstret att informationen lämnar sin fysiska
+bärare, samt Coop-fallet 2021. Kapitel 9 återanvänder begreppen via
+`concepts_used` och väljer medvetet en annan vinkel i 9.4: vad som händer med
+systemets anatomi när giltigheten flyttar från ett papper till en databas.
+Coop-fallet nämns inte, och det generella resonemanget om delade
+molnleverantörer skrivs utan namngivet exempel.
+
+**Röd tråd.** Kollektivtrafikens biljettsystem bär hela kapitlet. Systemets fem
+delar i 9.1, telefonen och fordonsdatorn som datorer i 9.2, bussens lokala nät
+och biljettköpets väg genom flera operatörers routrar i 9.3, och övergången
+från papperskort till app i 9.4.
+
+**Ett uppställt räkneexempel** i 9.2 enligt kapitel 6 som förlaga: omvandlingen
+mellan 25 och 11001 i båda riktningarna med kontrollräkning, samt en
+tolvmegapixelbilds 36 megabyte obehandlad.
+
+**Facit.** Samtliga 53 instuderingsfrågor är besvarade. Fem övningar har
+bestämda svar, medan 14 är registrerade i `utanSvar`, eftersom de bygger på
+elevens eget system, egen utrustning eller egna mätningar. Andelen är hög men
+följer av kapitlets karaktär: övningarna är undersökande snarare än räknande.
+
+**Kvar att göra:** kapitelgranskning i en egen genomläsning. Kapitel 3, 4, 5, 8
+och 9 väntar nu alla på granskning.
+
+---
+
 # 2026-07-28 — Kapitel 8 färdigt i första version
 
 Kapitel 8 (Modellering och simulering) är producerat, ett avsnitt per commit,
