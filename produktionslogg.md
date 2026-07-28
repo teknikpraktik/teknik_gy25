@@ -10,6 +10,48 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-28 — Kapitel 8 färdigt i första version
+
+Kapitel 8 (Modellering och simulering) är producerat, ett avsnitt per commit,
+med sammanfattning, begreppslista och facit. Båda avsnitten har status
+`fardig-forsta-version`. Kapitlet omfattar cirka 4 100 ord, 6 bildplatshållare,
+27 instuderingsfrågor, 10 övningar och 12 begrepp.
+
+**Två strukturbeslut fattades av projektägaren före skrivandet.** Facitraden
+lades till för kapitel 8 i 06-bokstruktur.md, i linje med kapitel 1 till 7.
+Lärandemålet om digital modellbyggnad i 8.1 skrevs om från "kalkylprogram eller
+Python" till "ett kalkylprogram", eftersom kapitel 10 ligger efter kapitel 8 och
+ett kapitel inte får förutsätta det som kommer senare i bokens ordningslogik.
+Båda ändringarna committades separat från avsnittsarbetet.
+
+**Röd tråd.** Huset som svalnar vid ett strömavbrott bär hela kapitlet, med
+stormen Gudrun i januari 2005 som verkligt ankare. Samma hus förenklas till en
+modell i 8.1, byggs som kalkylark med tidssteg, körs i fyra parametervarianter
+i 8.2, verifieras mot handräkning och halverat tidssteg, och valideras mot en
+uppmätt avsvalning.
+
+**Gränserna hölls.** Prototypen som steg i utvecklingsarbetet är kvar i 3.5 och
+återanvänds här bara som exempel på en fysisk modell. CAD-modellens
+framställning är kvar i 4.4. Mätserien, den kontrollerade variabeln,
+mätosäkerheten och extrapolationen återanvänds från kapitel 7 utan att läras ut
+på nytt. Testplan och godkäntgräns skrivs inte, eftersom de ägs av kapitel 3;
+modellens valideringsgräns formuleras i stället utan de begreppen.
+
+**Kvantitativa ankare, genomräknade.** Husets parametrar är värmegenomgången
+0,15 kW/°C och värmekapaciteten 13 kWh/°C, vilket ger tidskonstanten cirka
+87 timmar. Första timmens avsvalning är uppställd i löptexten (3,9 kW, 3,9 kWh,
+0,3 grader) med enhetskontroll och rimlighetsbedömning. Samtliga timtal i
+texten, övningarna och facit är framräknade ur samma modell.
+
+**Facit.** Alla 27 instuderingsfrågor och 7 av 10 övningar är besvarade. Tre
+övningar är registrerade i `utanSvar`, eftersom de bygger på elevens eget val av
+förlopp, egen modell eller egna mätningar.
+
+**Kvar att göra:** kapitelgranskning i en egen genomläsning, och därefter beslut
+om kapitlet ska låsas. Kapitel 3, 4, 5 och 8 väntar nu alla på granskning.
+
+---
+
 # 2026-07-27 — Kapitel 5 färdigt i första version
 
 Kapitel 5 (Material och deras egenskaper) är producerat, ett avsnitt per commit,
