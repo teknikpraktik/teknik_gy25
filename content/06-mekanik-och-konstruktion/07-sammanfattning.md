@@ -6,7 +6,7 @@ title: Sammanfattning
 status: fardig-forsta-version
 ---
 
-Kapitlet följde en och samma gångbro från de första krafterna till en färdig dimension. Bron beskrevs tidigt som en modell: en balkbro med 6,0 m spännvidd, två stöd och en känd egentyngd, där räcken, förband och markrörelser lämnades utanför. Den modellen gjorde bron räknebar, och varje gång kapitlet räknade på den skrevs antagandena ut. Att redovisa sina förenklingar är inte en formalitet utan det som avgör om ett resultat går att lita på.
+En och samma gångbro har följts från de första krafterna till en färdig dimension. Bron beskrevs tidigt som en modell: en balkbro med 6,0 m spännvidd, två stöd och en känd egentyngd, där räcken, förband och markrörelser lämnades utanför. Den modellen gjorde bron räknebar, och antagandena skrevs ut varje gång den användes i en beräkning. Att redovisa sina förenklingar är inte en formalitet utan det som avgör om ett resultat går att lita på.
 
 Analysen byggdes upp i tre steg. Kraften beskrevs med storlek, riktning och angreppspunkt, fick namn efter hur den uppstår, och lades samman till en resultant eller delades upp i komposanter. Momentet visade att var en kraft griper an är lika avgörande som hur stor den är, med momentarmen mätt vinkelrätt mot kraftens verkningslinje. Jämviktsvillkoren, att kraftsumman är noll i varje riktning för sig och att momentsumman är noll, gav sedan verktyget för att räkna ut vad som faktiskt händer i stöden. Friläggningen band ihop de tre stegen: utan en korrekt bild av vilka krafter som verkar finns inget att räkna på.
 
