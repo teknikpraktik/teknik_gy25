@@ -16,6 +16,8 @@ utanSvar:
     - "10.3:4"
     - "10.3:5"
     - "10.3:6"
+    - "10.3:7"
+    - "10.3:8"
 ---
 
 ## 10.1 Grunderna i Python
@@ -75,19 +77,19 @@ utanSvar:
 
 1. Ett namngivet stycke kod som utför en avgränsad uppgift och kan anropas var som helst i programmet. Den gör att en beräkning står på ett enda ställe även när den används på flera, så att en ändring bara behöver göras en gång.
 2. Parametern tar emot ett värde som skickas in till funktionen, medan returvärdet är det funktionen lämnar tillbaka till den som anropade den.
-3. Funktionen kan då inte användas när resultatet ska räknas vidare med, eftersom värdet försvinner ut på skärmen i stället för tillbaka till programmet. Beräkning och utskrift hålls därför isär.
-4. För att varje delsteg ska bli litet nog att överblicka och sluta i något en dator kan utföra. Nedbrytningen avgör dessutom vilka data som behövs och vad som ska räknas fram, vilket är svårt att upptäcka mitt i kodskrivandet.
+3. För att varje delsteg ska bli litet nog att överblicka och sluta i något en dator kan utföra. Nedbrytningen avgör dessutom vilka data som behövs och vad som ska räknas fram, vilket är svårt att upptäcka mitt i kodskrivandet.
+4. Indata med enhet, vad som ska räknas fram, hur gränsfall ska hanteras och vad som ska visas. Den behövs lika mycket vid hämtad eller beställd kod, eftersom oprecisa krav ger fel program oavsett vem som skriver det. Saknas enheten räknar programmet i fel enhet, och saknas beskedet om tomma indata avbryts det mitt i en körning hos användaren.
 5. Varje varv jämför en mätpunkt med den föregående, och den första punkten har ingen föregående. Med start på 0 skulle `last[-1]` peka på listans sista värde, och programmet skulle räkna en lutning mellan sista och första mätpunkten utan att avbryta med felmeddelande.
-6. Att varje newton ytterligare last sänker balkens mitt fyra hundradels millimeter, vilket är ett mått på hur eftergivlig balken är.
-7. Mätningarna säger ingenting om vad som händer utanför det område de gjordes i. Vid tillräckligt hög last passerar materialet sin sträckgräns och sambandet upphör att vara linjärt, så en förlängning av lutningen är en extrapolation utan täckning.
-8. Varje delvärde bygger på skillnaden mellan två närliggande mätpunkter, och i en sådan skillnad kan avläsningsfelen från båda punkterna läggas ihop. Ett fel som är litet i mätvärdet blir därför stort i lutningen mellan två punkter.
-9. Ett syntaxfel bryter mot språkets regler och stoppar programmet direkt, medan ett logiskt fel körs utan invändning men får programmet att räkna fel. Det logiska felet är farligast, eftersom programmet svarar villigt och svaret ser rimligt ut.
-10. Bestämd indata tillsammans med det svar programmet ska ge. Svaret måste vara känt i förväg, till exempel genom en handräkning, annars går det inte att avgöra om programmet räknade rätt.
-11. Normalfall med vanlig indata och känt svar, gränsfall vid kanten av det tillåtna, extremfall med orimlig men tänkbar indata, och feltillfälle med indata som inte hör hemma alls, till exempel en tom lista eller en bokstav där ett tal väntas.
-12. Kontrollera först att indata är det du tror genom att skriva ut den, skriv sedan ut mellanresultat för att ringa in felet till en rad, och jämför med en handräkning av samma steg. En sak ändras i taget, eftersom flera samtidiga ändringar lämnar kvar frågan om vilken av dem som löste problemet.
-13. Den som använder programmet ansvarar för vad det räknar ut, oavsett vem eller vad som skrivit raderna.
-14. Vad koden gör rad för rad, om den räknar rätt, vilka antaganden den bär, och om den är begriplig för nästa läsare.
-15. Kod som ser välskriven ut inbjuder inte till granskning, medan uppenbart trasig kod gör det. Verktyg som skriver kod på beskrivning producerar dessutom text som ser rätt ut även när innehållet är fel, och därför prövas sådan kod hårdare.
+6. Att varje newton ytterligare last sänker balkens mitt fyra hundradels millimeter, vilket är ett mått på hur eftergivlig balken är. Talet gäller bara inom det område mätningarna gjordes i, eftersom materialet vid tillräckligt hög last passerar sin sträckgräns och sambandet upphör att vara linjärt. Att förlänga lutningen utanför mätområdet är en extrapolation utan täckning.
+7. Varje delvärde bygger på skillnaden mellan två närliggande mätpunkter, och i en sådan skillnad kan avläsningsfelen från båda punkterna läggas ihop. Ett fel som är litet i mätvärdet blir därför stort i lutningen mellan två punkter.
+8. Ett syntaxfel bryter mot språkets regler och stoppar programmet direkt, medan ett logiskt fel körs utan invändning men får programmet att räkna fel. Det logiska felet är farligast, eftersom programmet svarar villigt och svaret ser rimligt ut.
+9. Bestämd indata tillsammans med det svar programmet ska ge. De fyra sorterna är normalfall med vanlig indata, gränsfall vid kanten av det tillåtna, extremfall med orimlig men tänkbar indata, och feltillfälle med indata som inte hör hemma alls, till exempel en tom lista eller en bokstav där ett tal väntas. Svaret måste vara känt i förväg, till exempel genom en handräkning, annars går det inte att avgöra om programmet räknade rätt.
+10. Kontrollera först att indata är det du tror genom att skriva ut den, skriv sedan ut mellanresultat för att ringa in felet till en rad, och jämför med en handräkning av samma steg. En sak ändras i taget, eftersom flera samtidiga ändringar lämnar kvar frågan om vilken av dem som löste problemet.
+11. Precisera vad programmet ska göra, hämta eller beställ koden, granska den, och pröva den mot testfall med kända svar. Det första och de två sista stegen är desamma som när koden skrivs för hand, så bara ett av fyra steg försvinner.
+12. Den som använder programmet ansvarar för vad det räknar ut, oavsett vem eller vad som skrivit raderna. Ansvaret följer med användningen och går inte att lämna vidare till den som skrev koden.
+13. Vad koden gör rad för rad, om den räknar rätt, vilka antaganden den bär, och om den är begriplig för nästa läsare.
+14. Att bedöma om en loop börjar på rätt tal, om ett villkor är feltecknat eller om en enhet blandats ihop kräver att man själv byggt sådana loopar och villkor. Läsförmågan växer ur skrivandet, och den som aldrig skrivit en rad kan bara konstatera att koden ser prydlig ut.
+15. Kod som ser välskriven ut inbjuder inte till granskning, medan uppenbart trasig kod gör det, och verktyg som skriver kod på beskrivning producerar text som ser rätt ut även när innehållet är fel. Frågan om koden räknar på rätt sak är svårare, eftersom ett felfritt program kan svara på en annan fråga än den som ställdes. Att avgöra om ett tal är rimligt, vilken enhet det har och inom vilka förutsättningar det gäller kräver kunskap om tekniken, inte om språket.
 
 ### Övningar
 

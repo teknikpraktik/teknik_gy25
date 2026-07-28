@@ -10,6 +10,52 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-28 — Kodning och AI förstärkta i 10.3, yrkesfrågan placerad i 13
+
+Projektägaren lyfte frågan om att framtidens tekniker sannolikt inte kommer att
+skriva kod för hand, och att kapitel 10 borde spegla det tydligare. Underlaget
+kontrollerades mot kursplanen före beslut, och två fynd drog åt olika håll.
+
+Centralt innehåll nivå 1 kräver uttryckligen **"Skapande och strukturering av
+programkod"**, alltså att eleven skapar kod. Punkten är bindande, och boken har
+en hård regel mot innehåll utanför kursplanen. Samtidigt nämner
+**betygskriterierna inte programmering med ett ord**: de fem kriterierna rör
+teknikutvecklingsprocessen, problemlösning, begrepp och beräkningar, teknik och
+samhälle samt dokumentation. Programmering bedöms alltså bara genom
+problemlösningen, vilket ger stöd för en förskjutning av tyngdpunkten utan att
+kravet på att skapa kod kan tas bort.
+
+**Beslut:** förstärk inom kapitel 10:s befintliga struktur och lägg
+yrkesfrågan i kapitel 13. Ingen ändring av 06 behövdes.
+
+Avsnitt 10.3 reviderat på fyra punkter. Delavsnittet "Från problem till
+program" avslutas nu med att nedbrytningen mynnar ut i en skriven beskrivning
+av vad programmet ska göra, med indata och enhet, gränsfall och utdata, och med
+poängen att den behövs lika mycket vid hämtad eller beställd kod som vid egen.
+Granskningsdelavsnittet har fått arbetsgången precisera, hämta, granska, pröva,
+där tre av fyra steg är desamma som vid handskriven kod, samt ett stycke om att
+ansvaret följer med användningen och ett om att läsförmågan växer ur skrivandet.
+Sist tillkommer att den svåraste bedömningen inte är om koden är riktigt
+skriven utan om den räknar på rätt sak, vilket kräver teknikkunskap och inte
+språkkunskap.
+
+Instuderingsfrågorna låg redan på maxgränsen 15. Två par slogs därför ihop och
+en fråga om utskrift ur funktioner utgick, vilket gav plats åt fyra nya frågor
+om kravformulering, arbetsgången vid hämtad kod, varför granskaren behöver
+kunna skriva, och skillnaden mellan riktigt skriven och rätt räknande kod.
+Övningarna utökades från sex till åtta: en där eleven skriver ett krav som en
+klasskamrat implementerar ordagrant, och en där egen och hämtad lösning på
+samma krav prövas mot samma testfall. Sammanfattningen följer texten.
+
+**Gränsen mot kapitel 13 är skriven i 03.** Kapitel 10 äger hantverket,
+inklusive granskningsfärdigheten. Frågan om hur yrket förändras när kod skrivs
+med AI-stöd ägs av 13.4 med stöd i 13.1, enligt n1-12 och n2-09. Skälet till
+uppdelningen är att verktygsbeteende åldras snabbt i en tryckt bok, medan
+metoden att precisera ett krav, granska ett resultat och pröva det mot kända
+svar är hållbar.
+
+---
+
 # 2026-07-28 — Kapitel 10 färdigt i första version
 
 Kapitel 10 (Programmering) är producerat, ett avsnitt per commit, med

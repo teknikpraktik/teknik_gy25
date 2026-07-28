@@ -19,7 +19,7 @@ learningGoals:
   - Testa ett program systematiskt samt lokalisera och rätta fel i programkod.
 abilities: [f2, f3, f5]
 concepts_introduced: ["funktion (programmering)", "parameter (programmering)", "returvärde", "testfall", "logiskt fel", "kodgranskning"]
-concepts_used: ["program", "variabel", "lista", "loop", "villkorssats", "syntaxfel", "delproblem", "mätserie", "trendlinje", "extrapolation", "artificiell intelligens"]
+concepts_used: ["program", "variabel", "lista", "loop", "villkorssats", "syntaxfel", "delproblem", "kravspecifikation", "mätserie", "trendlinje", "extrapolation", "artificiell intelligens"]
 figures: []
 prerequisites: ["10.2"]
 ---
@@ -84,6 +84,10 @@ Uppgiften är att analysera en [[begrepp:mätserie]] från ett böjprov. En balk
 
 Nedbrytningen görs innan en enda rad skrivs. Vilka data finns, och i vilken form? Två serier lika långa tal, last och nedböjning. Vad ska räknas fram? Nedböjningen per newton, alltså lutningen. Hur avgörs om sambandet är linjärt? Genom att lutningen räknas mellan varje par av mätpunkter och jämföras: håller de sig nära varandra är sambandet rakt. Vad ska visas? Lutningen, spridningen mellan delvärdena och en slutsats.
 
+Svaren utgör tillsammans en beskrivning av vad programmet ska göra, och den beskrivningen är värd att skriva ner i klartext innan kodandet börjar. Den liknar en [[begrepp:kravspecifikation]] i litet format: indata med enhet, det som ska räknas fram, hur gränsfall ska hanteras och vad som ska visas. Här skulle den lyda att programmet tar emot två lika långa listor med last i newton och nedböjning i millimeter, räknar lutningen mellan varje par av intilliggande punkter, redovisar medelvärde och spridning i millimeter per newton med tre decimaler, och slutligen avgör om spridningen är liten nog för att sambandet ska kallas linjärt.
+
+Att kunna formulera den beskrivningen är den mest hållbara färdigheten i hela avsnittet. Den behövs lika mycket när koden ska skrivas för hand som när den ska hämtas eller beställas färdig, eftersom oprecisa krav ger fel program oavsett vem som skriver det. En beskrivning som inte anger enhet på indata ger ett program som råkar räkna i fel enhet. En som inte säger vad som ska hända vid en tom lista ger ett program som avbryts mitt i en körning hos den som använder det.
+
 Först då skrivs koden, ett delsteg i taget:
 
 ```python
@@ -142,7 +146,11 @@ En vana skyddar mer än alla andra. Kör programmet ofta, redan medan det växer
 
 Kod som ska användas kommer sällan enbart ur det egna huvudet. Den hämtas ur ett bibliotek, ur en kollegas program, ur ett svar på en teknikwebbplats eller ur ett verktyg som bygger på [[begrepp:artificiell intelligens]] och skriver kod på beskrivning. Att läsa och bedöma sådan kod är en färdighet i sig, och den är i dag lika mycket en del av programmeringsarbetet som att skriva koden från början.
 
-Utgångspunkten är enkel. Den som använder ett program ansvarar för vad det räknar ut, oavsett vem eller vad som skrivit raderna. En kod som inte går att förklara går inte heller att försvara, och därmed inte att lämna ifrån sig.
+Arbetsgången blir då en annan än när allt skrivs för hand, men den är inte kortare. Först preciseras vad programmet ska göra, med samma beskrivning som nyss. Sedan hämtas eller beställs koden. Därefter granskas den, och sist prövas den mot testfall med kända svar. Två av de fyra stegen är alltså desamma oavsett varifrån koden kommer, och det är i dem tiden går. Den som hoppar över dem har inte sparat tid utan flyttat felet framåt, till den punkt där det kostar mest.
+
+Utgångspunkten är enkel. Den som använder ett program ansvarar för vad det räknar ut, oavsett vem eller vad som skrivit raderna. Ansvaret följer med användningen och går inte att lämna vidare till den som skrev koden, lika lite som en konstruktör kan skylla ett hållfasthetsfel på den som räknade åt hen. En kod som inte går att förklara går inte heller att försvara, och därmed inte att lämna ifrån sig.
+
+Här finns också skälet till att den som ska granska kod behöver kunna skriva den. Att avgöra om en loop börjar på rätt tal, om ett villkor är feltecknat eller om en enhet blandats ihop kräver att man själv byggt sådana loopar och villkor. Läsförmågan växer ur skrivandet, och den som aldrig skrivit en rad kan bara konstatera att koden ser prydlig ut.
 
 *Kodgranskning* är att systematiskt läsa igenom kod för att bedöma om den gör rätt sak och går att förstå. Fyra frågor bär granskningen.
 
@@ -156,23 +164,25 @@ Vilka antaganden bär den? Kod som hämtats någon annanstans ifrån bär nästa
 
 Verktyg som skriver kod på beskrivning har en egenhet värd att känna till. De producerar text som ser rätt ut, med rimliga variabelnamn och en trovärdig struktur, även när innehållet är fel. Ett program som är uppenbart trasigt inbjuder till granskning, medan ett som ser välskrivet ut inte gör det. Just därför prövas sådan kod hårdare än annan, inte mildare, och det gäller lika mycket ett kodsvar hämtat från en webbplats som ett från ett AI-verktyg.
 
+Den svåraste bedömningen är ändå inte om koden är riktigt skriven utan om den räknar på rätt sak. Ett program kan vara felfritt och ändå svara på en annan fråga än den som ställdes, precis som en modell kan vara felfritt uppställd och ändå vila på antaganden som inte håller. Att avgöra om ett framräknat tal är rimligt, vilken enhet det har och inom vilka förutsättningar det gäller kräver kunskap om tekniken, inte om språket. Det är den bedömningen som avgör om ett resultat duger, och den blir viktigare, inte mindre viktig, ju mer av själva skrivandet som utförs av något annat.
+
 ## Instuderingsfrågor
 
 1. Vad är en funktion i ett program, och vilket problem löser den i ett växande program?
 2. Vad är skillnaden mellan en parameter och ett returvärde?
-3. Varför bör en funktion som räknar ut ett värde inte samtidigt skriva ut det?
-4. Varför bryts ett problem ned i delsteg innan koden skrivs?
+3. Varför bryts ett problem ned i delsteg innan koden skrivs?
+4. Vad ska beskrivningen av vad programmet ska göra innehålla, och varför behövs den lika mycket när koden hämtas eller beställs färdig som när den skrivs för hand?
 5. I analysprogrammet börjar loopen på 1 i stället för på 0. Varför, och vad skulle hända om den började på 0?
-6. Programmet svarar att lutningen är 0,404 millimeter per newton. Vad betyder talet tekniskt?
-7. Varför gäller den framräknade lutningen bara inom det område där mätningarna gjordes?
-8. Varför blir spridningen mellan delvärdena större än spridningen i själva mätserien?
-9. Vad är skillnaden mellan ett syntaxfel och ett logiskt fel, och vilket är farligast?
-10. Vad är ett testfall, och vad måste vara känt för att det ska gå att använda?
-11. Ange de fyra sorternas testfall och ge ett exempel på var och en.
-12. Beskriv hur en systematisk felsökning går till, och varför en sak ändras i taget.
-13. Vem ansvarar för vad ett program räknar ut när koden hämtats någon annanstans ifrån?
-14. Ange de fyra frågor som bär en kodgranskning.
-15. Varför prövas kod som ser välskriven ut hårdare än kod som uppenbart är trasig?
+6. Programmet svarar att lutningen är 0,404 millimeter per newton. Vad betyder talet tekniskt, och varför gäller det bara inom det område där mätningarna gjordes?
+7. Varför blir spridningen mellan delvärdena större än spridningen i själva mätserien?
+8. Vad är skillnaden mellan ett syntaxfel och ett logiskt fel, och vilket är farligast?
+9. Vad är ett testfall, vilka fyra sorter finns, och vad måste vara känt för att ett testfall ska gå att använda?
+10. Beskriv hur en systematisk felsökning går till, och varför en sak ändras i taget.
+11. Ange de fyra stegen i arbetsgången när koden hämtas eller beställs färdig, och vilka av dem som är desamma som när koden skrivs för hand.
+12. Vem ansvarar för vad ett program räknar ut när koden hämtats någon annanstans ifrån?
+13. Ange de fyra frågor som bär en kodgranskning.
+14. Varför behöver den som ska granska kod kunna skriva kod själv?
+15. Varför prövas kod som ser välskriven ut hårdare än kod som uppenbart är trasig, och varför är frågan om koden räknar på rätt sak svårare än frågan om den är riktigt skriven?
 
 ## Övningar
 
@@ -187,3 +197,7 @@ Verktyg som skriver kod på beskrivning har en egenhet värd att känna till. De
 5. **Hitta det planterade felet.** Byt program med en klasskamrat. Lägg in ett logiskt fel i varandras program, till exempel en ändrad operator, ett fel startvärde i en loop eller en förväxlad enhet, och låt den andra hitta det genom att köra testfall och skriva ut mellanresultat. Redovisa hur lång tid det tog, vilket testfall som avslöjade felet och hur ni gick till väga.
 
 6. **Granska främmande kod.** Skaffa fram ett kort program som du inte skrivit själv, till exempel ur ett exempelbibliotek, från en teknikwebbplats eller genom att be ett AI-verktyg skriva en lösning på en beräkningsuppgift. Granska koden med avsnittets fyra frågor och skriv ett kort utlåtande. Ange minst ett antagande koden gör utan att skriva ut det, kör den mot två egna testfall med kända svar, och avsluta med om du skulle använda koden som den är, ändra i den eller skriva om den själv.
+
+7. **Kravet före koden.** Skriv en beskrivning av ett litet program utan att skriva någon kod, till exempel ett som räknar ut medelförbrukning ur en tankningslista eller kontrollerar om ett mått ligger inom sin tolerans. Beskrivningen ska ange indata med enhet, vad som ska räknas fram, hur gränsfall ska hanteras och vad som ska visas. Lämna beskrivningen till en klasskamrat som skriver programmet efter den, ordagrant och utan att fråga. Jämför resultatet med vad du tänkte dig, ange varje punkt där beskrivningen visade sig otydlig och skriv om den så att missförståndet inte kan uppstå igen.
+
+8. **Samma krav, två program.** Utgå från din beskrivning i föregående uppgift. Skriv först programmet själv. Skaffa därefter en andra lösning på samma beskrivning från ett annat håll, till exempel ur ett exempelbibliotek eller genom att be ett AI-verktyg om den. Kör båda mot samma fyra testfall och ställ upp svaren i en tabell. Redovisa var de skiljer sig, vilken av dem du skulle använda och varför, samt minst en sak du lärde dig om din egen lösning genom att läsa den andra.
