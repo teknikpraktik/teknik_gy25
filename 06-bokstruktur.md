@@ -501,10 +501,13 @@ Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgift
 ### Funktioner
 ### Från problem till program
 ### Testa och felsöka
+### Att granska kod du inte skrivit själv
 
 ## Sammanfattning
 
 ## Begrepp
+
+## Facit
 
 ---
 
