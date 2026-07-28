@@ -417,7 +417,7 @@ Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgift
 ## 8.1 Modeller och digital modellering
 - Förklara vad en modell är, varför modeller används och vilka begränsningar de har.
 - Skilja mellan fysiska, matematiska och digitala modeller och välja modelltyp för ett givet syfte.
-- Bygga en enkel digital modell av ett tekniskt förlopp i kalkylprogram eller Python.
+- Bygga en enkel digital modell av ett tekniskt förlopp i ett kalkylprogram.
 
 ### Modellbegreppet
 ### Välja modelltyp
@@ -435,6 +435,8 @@ Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgift
 ## Sammanfattning
 
 ## Begrepp
+
+## Facit
 
 ---
 
