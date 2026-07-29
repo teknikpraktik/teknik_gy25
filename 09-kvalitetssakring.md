@@ -215,9 +215,9 @@ allt under Innehåll, Pedagogik, AI och Helhetsbedömning.
 
 □ Kapitlet har inga projektuppgiftsavsnitt och ingen projektbank.
 
-□ Varje avsnitts Övningar tränar och hänvisar bara till det egna avsnittets stoff; boken har inga helkapitelövningar eller integrerande storuppgifter över flera avsnitt (03, "Kapitelövergripande uppgifter").
+□ Varje avsnitts Övningar tränar och hänvisar bara till det egna avsnittets stoff (03, "Elevdrivna projekt och kapitelövergripande uppgifter").
 
-□ Inga kapitelövergripande uppgifter förekommer i elevtexten. Sådana ingår inte i bokprojektet (03, "Kapitelövergripande uppgifter").
+□ Utanför kapitel 11 förekommer inga kapitelövergripande uppgifter i elevtexten. I kapitel 11 är det elevdrivna projektet ett tillägg vid sidan av avsnittsövningarna, som står kvar oförändrade i antal och krav (03, samma avsnitt).
 
 □ Övningarna har ingen utskriven nivåstapling ("Bygg ut"/"Bygg ut vidare" utgår): E-till-A ligger i öppenheten och betygskriterierna, inte i elevtexten (03).
 

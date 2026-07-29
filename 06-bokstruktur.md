@@ -97,7 +97,7 @@ Varje kapitel avslutas med onumrerade H2-avsnitt, alltid i denna ordning och med
 
 Sammanfattning och Begrepp är obligatoriska. **Facit är en tredje, valfri kapitelavslutning** (redaktionellt beslut 2026-07-26). Facit lagras per kapitel men läses av eleven som ett samlat facit sist i boken, satt av exporten. Raden läggs till kapitel för kapitel när facit skrivs, eftersom ett facit inte kan skrivas förrän kapitlets övningar är klara.
 
-Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgifter ingår inte i bokprojektet (03-bokens-arkitektur.md, "Kapitelövergripande uppgifter").
+Det finns inga separata projektuppgiftsavsnitt. Kapitel 11 har ett elevdrivet projekt som tillägg vid sidan av avsnittsövningarna; det är ingen kapitelavslutning utan hör till kapitlets avsnitt (03-bokens-arkitektur.md, "Elevdrivna projekt och kapitelövergripande uppgifter").
 
 ---
 

@@ -10,6 +10,43 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-29 — Elevdrivna projekt tillåts i kapitel 11
+
+**Beslutet ersätter besluten 2026-07-24 och 2026-07-26** i den del de förbjöd
+integrerande storuppgifter. Beslutet 2026-07-24 tog bort kravet på en
+helkapitelövning per kapitel och förbjöd integrerande storuppgifter över flera
+avsnitt. Beslutet 2026-07-26 slog fast att kapitelövergripande uppgifter inte
+ingår i bokprojektet alls. Förbudsdelen i båda upphävs nu. Det som står kvar
+oförändrat från 2026-07-24 är att kravet på en helkapitelövning per kapitel inte
+återinförs, och att nivåstaplingen `Bygg ut` inte återinförs.
+
+**Vad som gäller framåt.** Elevdrivna projekt är tillåtna. Ett elevdrivet projekt
+är en sammanhållen uppgift där eleven själv driver arbetet från uppdrag till
+redovisning och som därför spänner över mer än ett avsnitts stoff. Projektet är
+ett **tillägg vid sidan av avsnittsövningarna, aldrig en ersättning**: inget
+avsnitt får färre övningar för att ett projekt finns, och ingen avsnittsövning
+byts mot en hänvisning till projektet. Huvudregeln att en avsnittsövning tränar
+sitt eget avsnitts stoff står alltså fast.
+
+**Räckvidden är oförändrad och snäv.** Projektet ligger i kapitel 11 och ingen
+annanstans. Övriga kapitel behåller fristående exempel. Ett bokomspännande
+projekt är ett aktivt avvisat förslag och ska inte föreslås på nytt.
+
+**Utfasade rubriker återinförs inte.** Beslutet gäller vad boken får innehålla,
+inte hur det rubriceras. Rubriken Projektuppgifter används fortfarande inte, det
+finns ingen kapitelavslutande uppgiftsbank, och projektet får varken egen `type`
+eller egen fil utan skrivs i kapitel 11:s avsnittsfiler.
+
+**Berörda filer.** Regeln levde i sju styrdokument plus ett felmeddelande. Alla är
+ändrade i samma steg: 03 (avsnittet omdöpt till "Elevdrivna projekt och
+kapitelövergripande uppgifter", plus följdändringar i "Avsnittets struktur",
+"Kapitelavslutningar", "Betygskriteriernas roll" och "Praktiskt arbete"), 05, 06,
+09, 12, 13, CLAUDE.md och felmeddelandet i `scripts/validate.mjs`. Kontrollen som
+blockerar rubriken Projektuppgifter i en avsnittsfil är kvar, eftersom rubriken
+inte återinförs.
+
+---
+
 # 2026-07-28 — Kodning och AI förstärkta i 10.3, yrkesfrågan placerad i 13
 
 Projektägaren lyfte frågan om att framtidens tekniker sannolikt inte kommer att

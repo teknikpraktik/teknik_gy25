@@ -128,7 +128,7 @@ Uppslag och sidbrytningar är frågor för layout och tryckexport, inte nivåer 
 - **Instuderingsfrågor**
 - **Övningar**
 
-Kapitlet avslutas med avsnitt utan lärandemål, **Sammanfattning**, **Begrepp** och **Facit** (se "Kapitelavslutningar"). Det finns inga separata projektuppgiftsavsnitt, och kapitelövergripande uppgifter ingår inte i bokprojektet (se "Kapitelövergripande uppgifter").
+Kapitlet avslutas med avsnitt utan lärandemål, **Sammanfattning**, **Begrepp** och **Facit** (se "Kapitelavslutningar"). Det finns inga separata projektuppgiftsavsnitt. Elevdrivna projekt är tillåtna som tillägg vid sidan av avsnittsövningarna, och bara i kapitel 11 (se "Elevdrivna projekt och kapitelövergripande uppgifter").
 
 Tidigare uppgiftsdelar används inte längre: rubrikerna Praktiska uppgifter och Projektuppgifter samt de äldre uppdelade kategorierna (Beräkningsuppgifter, Rituppgifter, CAD-uppgifter, Programmeringsuppgifter, Laborationer, Konstruktionsuppgifter, Tillämpningsuppgifter, Analysuppgifter, Tillämpningsproblem, Fördjupningsuppgifter, Kortare uppgifter, Projekt, Förstå/Utveckla/Utmana).
 
@@ -172,17 +172,19 @@ Varje övning har ett namn i fetstil följt av uppgiften, och numreras 1, 2, 3 �
 
 **Formuleringsregel:** boken mäter, testar eller examinerar ingenting. Skriv "låter eleven visa". Kopplingen till betygskriterierna görs i lärarhandledningen, inte i elevtexten.
 
-## Kapitelövergripande uppgifter
+## Elevdrivna projekt och kapitelövergripande uppgifter
 
-Varje avsnitts **Övningar** tränar och hänvisar bara till det egna avsnittets stoff. Boken har **inga helkapitelövningar** och inga integrerande storuppgifter som spänner över flera avsnitt (redaktionellt beslut 2026-07-24, som ersätter det tidigare kravet på en helkapitelövning per kapitel).
+**Huvudregeln står fast.** Varje avsnitts **Övningar** tränar och hänvisar bara till det egna avsnittets stoff, och fungerar fristående. Den regeln gäller i hela boken och i varje kapitel.
 
-Kapitelövergripande uppgifter (syntesprojekt, tvärgående tillämpningar, storprojekt) **ingår inte i bokprojektet** (redaktionellt beslut 2026-07-26). De skrivs varken i elevtexten eller i något åtföljande material inom ramen för det här arbetet.
+**Elevdrivna projekt är tillåtna** (redaktionellt beslut 2026-07-29, som ersätter besluten 2026-07-24 och 2026-07-26 i den del de förbjöd integrerande storuppgifter). Ett elevdrivet projekt är en sammanhållen uppgift där eleven själv driver arbetet från uppdrag till redovisning, och som därför spänner över mer än ett avsnitts stoff.
 
-**Ingen utskriven nivåstapling i övningar.** Progressionen från E till A ligger i uppgiftens öppenhet och i betygskriteriernas kvalitetsord, inte i utskrivna delsteg i elevtexten. Formatet grunduppgift plus "Bygg ut: ..." plus "Bygg ut vidare: ..." används inte. `scripts/validate.mjs` varnar (mjukt) om "Bygg ut" står kvar i en övningssektion, som regressionsskydd.
+**Projektet är ett tillägg, aldrig en ersättning.** Det läggs vid sidan av avsnittsövningarna, som står kvar oförändrade i antal och krav. Ett avsnitt får alltså inte ha färre övningar för att ett projekt finns, och en avsnittsövning får inte ersättas av en hänvisning till projektet.
 
-Varje övning ska fungera fristående, med stabil information i själva instruktionen, utan hänvisningar av typen "som i figuren ovan" eller "i föregående avsnitt".
+**Räckvidden är kapitel 11.** Det sammanhållna projektet ligger i kapitel 11 och ingen annanstans. Övriga kapitel behåller fristående exempel och har varken projekt eller genomgående projektstruktur. Boken har inget bokomspännande projekt, vilket är ett aktivt avvisat förslag och inte en öppen fråga.
 
-Det stora, sammanhållna projektet bor kvar som ämnesinnehåll i kapitel 11. Boken har inget nytt projektkapitel och ingen genomgående projektstruktur (se "Exempel").
+**Ingen utskriven nivåstapling i övningar.** Progressionen från E till A ligger i uppgiftens öppenhet och i betygskriteriernas kvalitetsord, inte i utskrivna delsteg i elevtexten. Formatet grunduppgift plus "Bygg ut: ..." plus "Bygg ut vidare: ..." används inte. `scripts/validate.mjs` varnar (mjukt) om "Bygg ut" står kvar i en övningssektion, som regressionsskydd. Regeln gäller även projektet: dess omfattning bärs av öppenheten, inte av utskrivna nivåer.
+
+**Utfasade uppgiftsrubriker återinförs inte.** Beslutet gäller vad boken får innehålla, inte hur det rubriceras. Rubriken Projektuppgifter används fortfarande inte, och det finns ingen kapitelavslutande uppgiftsbank. Var projektet placeras i kapitel 11 framgår av 06-bokstruktur.md.
 
 ## Betygskriteriernas roll
 
@@ -192,7 +194,7 @@ Betygskriterierna är gemensamma för ämnet som helhet. Samma kriterier tilläm
 
 **Kvalitetsorden är progressionsstegen.** E motsvarar "enkel" och "i huvudsak fungerande", C "genomarbetade" och "fungerande", A "väl genomarbetade" och "väl fungerande". Samma uppgift kan därför bära både den som siktar på E och den som siktar på A, vilket också är bokens sätt att hantera blandad förkunskap i en klass.
 
-**Progressionen skrivs inte ut i elevtexten.** Att samma uppgift bär från E till A är en egenskap hos uppgiftens öppenhet och hos kriteriernas kvalitetsord, inte något som ska stå som delsteg i boken. Formatet grunduppgift plus "Bygg ut: ..." plus "Bygg ut vidare: ..." är avskaffat och återinförs inte (se "Kapitelövergripande uppgifter", "Ingen utskriven nivåstapling i övningar"). Skriv alltså en öppen uppgift som tål att lösas på flera nivåer, inte en uppgift med utskrivna utbyggnadssteg.
+**Progressionen skrivs inte ut i elevtexten.** Att samma uppgift bär från E till A är en egenskap hos uppgiftens öppenhet och hos kriteriernas kvalitetsord, inte något som ska stå som delsteg i boken. Formatet grunduppgift plus "Bygg ut: ..." plus "Bygg ut vidare: ..." är avskaffat och återinförs inte (se "Elevdrivna projekt och kapitelövergripande uppgifter", "Ingen utskriven nivåstapling i övningar"). Skriv alltså en öppen uppgift som tål att lösas på flera nivåer, inte en uppgift med utskrivna utbyggnadssteg.
 
 **Det femte stycket motiverar kommunikationskapitlet.** Att dokumentera, visualisera och kommunicera tekniska lösningar är en bedömd förmåga i nivå med de andra fyra. Det är skälet till att boken har ett eget kapitel om teknisk kommunikation (kapitel 4) och till att varje producerande moment faktiskt ska dokumenteras.
 
@@ -282,7 +284,7 @@ Begrepp som kursiveras vid sitt huvudställe i löptexten (05, "Begreppsmarkerin
 
 Varje begrepp i listan ska ha sitt huvudställe i eller före kapitlet (`concepts_introduced`, 12-produktionsarkitektur.md). Listan inför aldrig nya begrepp.
 
-Det finns inga projektuppgiftsavsnitt, och kapitelövergripande uppgifter ingår inte i bokprojektet (se "Kapitelövergripande uppgifter").
+Det finns inga projektuppgiftsavsnitt. Kapitel 11:s elevdrivna projekt är ingen kapitelavslutning utan hör till kapitlets avsnitt (se "Elevdrivna projekt och kapitelövergripande uppgifter").
 
 ---
 
@@ -308,7 +310,7 @@ Facit är bokens sista kapitel (redaktionellt beslut, projektägaren). Det följ
 
 Praktisk träning är central (10-amnesfilosofi.md, "Teknik är praktiskt") och säkras genom avsnittets Övningar, som tränar det egna avsnittets stoff. Ett avsnitt utan meningsfull praktisk tillämpning får ha få och enkla övningar; övningar skapas aldrig enbart för symmetrins skull, men varje avsnitt har minst två.
 
-Hör ett praktiskt moment naturligt hemma i ett enskilt avsnitt läggs det bland avsnittets övningar. Är det stort nog att integrera flera avsnitt ingår det inte i bokprojektet. Praktiska övningar prioriteras framför motsvarande teoretiska uppgifter när båda tränar samma förmåga.
+Hör ett praktiskt moment naturligt hemma i ett enskilt avsnitt läggs det bland avsnittets övningar. Är det stort nog att integrera flera avsnitt hör det till kapitel 11:s elevdrivna projekt och ingen annanstans (se "Elevdrivna projekt och kapitelövergripande uppgifter"). Praktiska övningar prioriteras framför motsvarande teoretiska uppgifter när båda tränar samma förmåga.
 
 ---
 

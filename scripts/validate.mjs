@@ -551,7 +551,7 @@ for (const avs of avsnittFiler) {
 	for (const forbjuden of forbjudnaRubriker) {
 		const traff = avs.body.match(forbjuden);
 		if (traff) {
-			errors.push(`${beskr}: rubriken "${traff[0].replace(/^#+\s*/, '')}" får inte förekomma i ett avsnitt — avsnittets uppgifter ligger under "Övningar" och tränar bara det egna avsnittets stoff; kapitelövergripande uppgifter ingår inte i bokprojektet (03, redaktionellt beslut 2026-07-26).`);
+			errors.push(`${beskr}: rubriken "${traff[0].replace(/^#+\s*/, '')}" får inte förekomma i ett avsnitt — avsnittets uppgifter ligger under "Övningar" och tränar bara det egna avsnittets stoff. Kapitel 11:s elevdrivna projekt är ett tillåtet tillägg men rubriceras inte så (03, "Elevdrivna projekt och kapitelövergripande uppgifter", beslut 2026-07-29).`);
 		}
 	}
 
