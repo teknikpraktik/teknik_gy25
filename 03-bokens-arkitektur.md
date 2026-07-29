@@ -206,6 +206,8 @@ Varje kapitel ska ha en tydlig ämnesmässig avgränsning mot närliggande kapit
 
 Ett **syntesavsnitt** (ett avsnitt som knyter ihop ett kapitels innehåll) ska fungera som just en syntes eller analysmodell. Det får inte duplicera en process eller metod som är ett senare kapitels huvudansvar.
 
+**Kapiteloberoende.** Kapitel ska i möjligaste mån kunna läsas fristående. Hänvisningar till andra kapitel görs korta och används bara när tidigare kunskaper verkligen är nödvändiga för att förstå det som står. Regeln är samma sak som ordningslogiken sedd från andra hållet: ett kapitel får luta sig mot det som ligger före, men ska luta sig så lite som möjligt. Hur en hänvisning formuleras regleras av 05-forfattarmanual.md, "Självreferenser". (Flyttad hit från 02-redaktionell-specifikation.md 2026-07-29, eftersom det är en strukturregel och inte en exempel- eller verktygsregel.)
+
 De tre inledande kapitlen avgränsas så här:
 
 - **Kapitel 1 · Teknikens grunder** besvarar *varför*: varför teknik uppstår, varför den utvecklas i en viss riktning och varför tekniska lösningar får den utformning de får. Kapitlet behandlar vad teknik är, teknikens historiska utveckling, teknikens och samhällets historiska växelverkan, vad som driver teknikutveckling och vilka förutsättningar, krav, resurser och avvägningar som formar tekniska lösningar.
@@ -241,7 +243,7 @@ Ytterligare tjugo gränser är skrivna. Övriga kapitels gränser skrivs när re
 
 # Skrivanvisningar per kapitel
 
-Bokens kapitelordning är inte godtycklig, och några kapitel har skrivrestriktioner som följer av var de ligger. Anvisningarna nedan är hämtade ur projektets tidigare redaktionella specifikation och fördes in samlat 2026-07-26, eftersom den filen är avvecklad. De styr hur ett kapitel skrivs, inte vad det innehåller; innehållet står i 06-bokstruktur.md.
+Bokens kapitelordning är inte godtycklig, och några kapitel har skrivrestriktioner som följer av var de ligger. Anvisningarna nedan är hämtade ur projektets externa kunskapsdokument i Claude.ai-projektet och fördes in samlat 2026-07-26, eftersom det dokumentet är avvecklat och dess innehåll fördelat på 01, 02, 03 och 06. Det avvecklade dokumentet ska inte förväxlas med repofilen `02-redaktionell-specifikation.md`, som är levande och behåller plats två i prioriteringsordningen (08-claude-code-manual.md). Anvisningarna styr hur ett kapitel skrivs, inte vad det innehåller; innehållet står i 06-bokstruktur.md.
 
 **Bokens ordningslogik är tredelad.** Först ämnets grunder och arbetssätt (teknikbegreppet och historiken, problemlösning, process, ritande), sedan ämnesinnehållet (material, mekanik, mätning, modellering, digitalt), sedan tillämpning och samhällsperspektiv. Ordningen är alltså inte kronologisk och följer inte kursplanens uppräkning. Ett kapitel får därför förutsätta det som ligger före i den bågen, men aldrig det som ligger efter.
 
@@ -394,6 +396,14 @@ Boken innehåller inte:
 - snabbspår eller separata fördjupningsspår
 
 Allt innehåll ska motiveras av ett tydligt lärandemål.
+
+**Bärande innehåll är det enda undantaget.** Innehåll utan eget lärandemål tillåts endast när det bär annat innehåll. Tre former, och inga andra:
+
+- **genomgående exempel**, alltså ett fall som återkommer genom ett kapitel och håller ihop dess stoff
+- **ramberättelser**, alltså den korta inramning som gör ett stoff begripligt eller ger det ett sammanhang
+- **orienterande bilder**, alltså bilder som placerar eleven i ett förlopp eller en helhet i stället för att lära ut ett moment
+
+Uppräkningen är uttömmande. Det finns ingen öppen kategori och inget fjärde fall att åberopa. Bärande innehåll ska dessutom märkas som sådant när det förs in, så att det går att skilja från innehåll som råkat bli omotiverat.
 
 ---
 

@@ -8,7 +8,7 @@ inte ett styrdokument: bokens täckningsbeslut fattas i 07-kursplanetackning.md,
 som förkortar vissa lydelser i sina tabeller — vid behov av exakt formulering
 gäller texten nedan.
 
-Nivå 3 ingår i ämnesplanen men omfattas inte av boken (02-redaktionell-specifikation.md).
+Nivå 3 ingår i ämnesplanen men omfattas inte av boken (02-redaktionell-specifikation.md, "Avgränsningar").
 
 ---
 

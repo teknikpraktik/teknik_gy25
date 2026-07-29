@@ -11,7 +11,7 @@ Varje punkt har ett stabilt id (n1-01…, n2-01…, s-01…). Id:t används som 
 **● = kapitlets primära ansvar** (här behandlas innehållet fullständigt)
 **○ = berörs / vävs in** (stödjande, men inte huvudansvar)
 
-Kapitelnumrering (fastställd):
+Kapitelnumrering, härledd ur 06-bokstruktur.md, som är enda källan till kapitel, avsnitt, delavsnitt och lärandemål. Listan nedan är en spegling för läsbarhetens skull och ändras aldrig här först:
 1. Teknikens grunder
 2. Att lösa tekniska problem
 3. Teknikutvecklingsprocessen

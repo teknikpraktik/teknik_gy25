@@ -4,113 +4,35 @@
 
 ---
 
-# Redaktionell specifikation
+# Exempel, verktyg och avgränsningar
 
-Detta dokument definierar lärobokens omfattning, innehåll och redaktionella avgränsningar.
+Detta dokument avgör **vilka exempel, verktyg och språk boken använder, och vad den avstår från**.
 
-Dokumentet beskriver vad boken ska vara. Pedagogisk struktur beskrivs i *03-bokens-arkitektur.md*. Språkliga riktlinjer beskrivs i *05-forfattarmanual.md*.
+Allt annat som tidigare stod här är flyttat (se "Flyttat innehåll"). Bokens vision och position beskrivs i *01-projektvision.md*, pedagogisk struktur i *03-bokens-arkitektur.md*, kapitel- och avsnittsstrukturen i *06-bokstruktur.md*, kursplanetäckningen i *07-kursplanetackning.md* och språkliga riktlinjer i *05-forfattarmanual.md*.
 
----
-
-# Omfattning
-
-Boken omfattar ämnet Teknik enligt Gy25.
-
-Den täcker:
-
-- Teknik nivå 1 (TEKI1000X)
-- Teknik nivå 2 (TEKI2000X)
-
-Nivå 3 ingår inte.
+Filnamnet är oförändrat för att inte bryta befintliga hänvisningar. Dokumentet behåller plats två i prioriteringsordningen (08-claude-code-manual.md).
 
 ---
 
-# En bok
+# Flyttat innehåll
 
-Projektet består av en sammanhållen bok.
+Bantningen 2026-07-29 tog bort de avsnitt vars innehåll ägs av annat styrdokument. Raderna nedan pekar vidare.
 
-Nivå 1 och nivå 2 integreras i samma volym.
+| Tidigare avsnitt här | Ägs nu av |
+|---|---|
+| Omfattning | 01-projektvision.md, "Bokens position" |
+| En bok | 07-kursplanetackning.md, ingressen |
+| Målgrupp | 01-projektvision.md, "Målgrupp" |
+| Disposition | 03-bokens-arkitektur.md, "Skrivanvisningar per kapitel" |
+| Kursplanetäckning | 01-projektvision.md, "Kursplanetäckning", och 07-kursplanetackning.md |
+| Ämnesmässiga prioriteringar | 01-projektvision.md, "Bokens position", och 03-bokens-arkitektur.md, "Pedagogisk filosofi" |
+| Illustrationer | 03-bokens-arkitektur.md, "Bilder" |
+| Arbetsbok | 03-bokens-arkitektur.md, "Elevens arbete" |
+| Kapiteloberoende | 03-bokens-arkitektur.md, "Kapitlens avgränsning" |
+| Redaktionella mål | 01-projektvision.md, "Ambitionsnivå" och "Framgångskriterier" |
+| Aktualitet | Uppgått i "Exempel" nedan |
 
-Kapitlen delas därför inte upp efter kursnivå utan efter ämnesområde.
-
-Kursplanetäckningen säkerställs genom innehållsmatrisen.
-
----
-
-# Målgrupp
-
-Primär målgrupp är elever på Teknikprogrammet.
-
-Boken ska även kunna användas på andra gymnasieprogram där kursen förekommer.
-
----
-
-# Disposition
-
-Boken är temabaserad.
-
-Kapitlen följer teknikämnets naturliga struktur snarare än kursplanens ordningsföljd.
-
-Varje kapitel behandlar ett sammanhängande teknikområde.
-
----
-
-# Kapitel
-
-Boken består av följande huvudkapitel.
-
-1. Teknikens grunder
-
-2. Att lösa tekniska problem
-
-3. Teknikutvecklingsprocessen
-
-4. Skiss, ritteknik och CAD
-
-5. Material och deras egenskaper
-
-6. Mekanik och konstruktion
-
-7. Mätteknik och dataanalys
-
-8. Modellering och simulering
-
-9. IT-system
-
-10. Programmering
-
-11. Projekt och entreprenörskap
-
-12. Kvalitet, risk och arbetsmiljö
-
-13. Teknik, människa och samhälle
-
-Kapitelstrukturen underhålls i ett separat dokument.
-
----
-
-# Kursplanetäckning
-
-Allt centralt innehåll ska behandlas.
-
-Varje punkt i ämnesplanen ska ha ett tydligt huvudansvarigt kapitel.
-
-Överlapp mellan kapitel används endast när det ger ett tydligt pedagogiskt mervärde.
-
-Innehållsmatrisen är den formella verifieringen av kursplanetäckningen.
-
----
-
-# Ämnesmässiga prioriteringar
-
-Boken prioriterar:
-
-- förståelse framför memorering
-- principer framför kataloger
-- metoder framför uppräkningar
-- verkliga tillämpningar framför konstruerade exempel
-
-När flera likvärdiga metoder finns väljs ett mindre antal som behandlas grundligt.
+Kapitellistan är struken utan ersättningsrad. **06-bokstruktur.md är enda källan** till kapitel, avsnitt, delavsnitt och lärandemål.
 
 ---
 
@@ -142,11 +64,9 @@ Boken är inte knuten till specifika produkter.
 
 # AI
 
-AI behandlas som ett modernt ingenjörsverktyg.
-
-AI integreras där den naturligt hör hemma.
-
 AI utgör inte ett eget tema genom boken.
+
+Hur AI används i innehållet regleras av 03-bokens-arkitektur.md, "AI", och bokens hållning till digitalisering och AI av 01-projektvision.md, "Digitalisering och AI".
 
 ---
 
@@ -154,7 +74,7 @@ AI utgör inte ett eget tema genom boken.
 
 Exempel hämtas från verkliga produkter, företag, konstruktioner och tekniska system.
 
-Exemplen ska spegla modern teknik samtidigt som de i möjligaste mån väljs så att de har lång livslängd.
+Exemplen ska spegla modern teknik samtidigt som de i möjligaste mån väljs så att de har lång livslängd. Teknik utvecklas snabbt, och ett exempel som är bundet till en enskild produktgeneration åldras med den.
 
 ## Exempelområden
 
@@ -177,68 +97,13 @@ Alla exempel är utbytbara (03-bokens-arkitektur.md, "Exempel"). Konkreta verkty
 
 ---
 
-# Illustrationer
-
-Illustrationer är en central del av boken.
-
-Den slutliga grafiska produktionen utförs av förlaget.
-
-Manuset innehåller därför endast platshållare och specifikationer för illustrationernas pedagogiska innehåll.
-
----
-
-# Arbetsbok
-
-Boken innehåller inte skrivytor.
-
-Eleven arbetar i separat häfte eller digitalt dokument.
-
----
-
-# Kapiteloberoende
-
-Kapitel ska i möjligaste mån kunna läsas fristående.
-
-När hänvisningar görs ska de vara korta och endast användas när tidigare kunskaper är nödvändiga.
-
----
-
-# Aktualitet
-
-Teknik utvecklas snabbt.
-
-Boken ska därför fokusera på:
-
-- principer
-- metoder
-- arbetssätt
-
-Exempel får vara moderna men ska väljas med hänsyn till bokens livslängd.
-
----
-
-# Redaktionella mål
-
-Boken ska vara:
-
-- komplett
-- koncentrerad
-- tekniskt korrekt
-- pedagogiskt tydlig
-- lätt att använda
-- enkel att uppdatera
-
----
-
 # Avgränsningar
 
 Boken innehåller inte:
 
 - nivå 3
-- separata repetitionskapitel
 - omfattande historiska utvikningar utanför teknikhistoriekapitlet
 - kataloger över alternativa metoder
 - produktreklam
-- innehåll som ligger utanför kursplanen
 
-Varje avsnitt ska kunna motiveras utifrån ämnesplanen eller bokens övergripande pedagogiska idé.
+Övriga avgränsningar, till exempel repetitionskapitel, utfyllnad och sammanfattningar efter varje avsnitt, står i 03-bokens-arkitektur.md, "Avgränsningar".

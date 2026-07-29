@@ -31,7 +31,7 @@ När AI identifierar en bättre lösning än den ursprungliga ska den föreslå 
 Vid konflikter mellan olika dokument gäller följande ordning.
 
 1. Projektvision (01-projektvision.md)
-2. Redaktionell specifikation (02-redaktionell-specifikation.md)
+2. Exempel, verktyg och avgränsningar (02-redaktionell-specifikation.md)
 3. Pedagogisk modell (03-bokens-arkitektur.md)
 4. Redaktionsprinciper (04-redaktionsprinciper.md)
 5. Ämnesfilosofi (10-amnesfilosofi.md)
