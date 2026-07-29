@@ -12,29 +12,29 @@ learningGoals:
   - Förklara vad som kännetecknar ett projekt samt beskriva vanliga faser och
     roller i tekniska projekt.
 abilities: [f1]
-concepts_introduced: ["projekt", "uppdragsgivare", "projektmål", "leverans", "projektledare"]
+concepts_introduced: ["projekt", "uppdragsgivare", "projektmål", "leverans", "projektledare", "styrgrupp"]
 concepts_used: ["teknikutvecklingsprocess"]
 figures: []
 prerequisites: ["3.1"]
 ---
 
-En elev som spelar altsaxofon tar sig till skolan på cykel. Instrumentet väger drygt fem kilo i sitt fodral, och fodralet är brett, styvt och känsligt för stötar. Ryggsäcksbärning fungerar dåligt eftersom fodralet vippar i sidled, och en vanlig pakethållare är för smal. Tre elever i samma årskurs åtar sig att konstruera en lastbärare som löser problemet, och får sex veckor och åtta hundra kronor på sig.
+Under centrala Stockholm går Citybanan, en cirka sex kilometer lång pendeltågstunnel med två nya stationer, byggd av Trafikverket för att pendeltågen skulle få egna spår och trafiken startade 2017.
 
-Det arbetet är ett projekt. Ett *projekt* är en arbetsform där en grupp under en bestämd tid och med bestämda resurser ska nå ett mål som inte nås av det löpande arbetet. Fyra kännetecken skiljer det från allt annat arbete.
+Att bygga tunneln var ett projekt. Att köra tågen i den är inte det. Skillnaden är inte storleken utan formen, och ett *projekt* är en arbetsform där en grupp under en bestämd tid och med bestämda resurser ska nå ett mål som inte nås av det löpande arbetet. Fyra kännetecken skiljer det från allt annat arbete.
 
-Projektet har ett **bestämt mål**. Här är målet en fungerande lastbärare för det här fodralet på den här cykeln, inte att förbättra cykeltransporter i allmänhet.
+Projektet har ett **bestämt mål**. Målet var en tunnel med två stationer och egna spår för pendeltågen, inte att förbättra Stockholms järnvägar i allmänhet.
 
-Projektet är **tidsbegränsat**. Det har en början och ett slut, och slutet är bestämt i förväg. Ett arbete som pågår tills vidare är drift, inte projekt.
+Projektet är **tidsbegränsat**. Det har en början och ett slut, och när tunneln togs i drift upphörde projektet att finnas. Ett arbete som pågår tills vidare är drift, inte projekt.
 
-Projektet har **egna resurser**. Här tre personer, sex veckor och åtta hundra kronor. Resurserna är kända och begränsade, vilket är det som gör planeringen meningsfull.
+Projektet har **egna resurser**. Pengar, personer och utrustning avsätts för uppgiften och räcker bara till den. Att resurserna är kända och begränsade är det som gör planeringen meningsfull.
 
-Projektet är **unikt**. Ingen har byggt exakt den här bäraren förut. Skulle samma bärare tillverkas i hundra exemplar vore tillverkningen löpande arbete, medan projektet var det som tog fram den.
+Projektet är **unikt**. Varje tunnel går genom sin egen berggrund under sina egna byggnader. Skulle exakt samma sak utföras hundra gånger vore det tillverkning, inte projekt.
 
-**Uppdraget kommer utifrån.** Den som beställer arbetet, anger vad som ska uppnås och tar emot resultatet kallas *uppdragsgivare*. Här är det saxofonisten själv. I ett företag kan det vara en kund, en annan avdelning eller företagsledningen, och i skolan är det ofta läraren. Uppdragsgivaren står utanför gruppen och är den som avgör om resultatet duger.
+Just därför tar drift vid där projektet slutar. Tågen som rullar genom tunneln varje dag, städningen av stationerna och underhållet av spåren är löpande arbete som ska pågå i decennier. Projektet levererade förutsättningen, driften använder den.
 
-Ett uppdrag är sällan färdigformulerat när det ges. Beställaren i det här fallet sa att fodralet ska sitta säkert. Vad det betyder i millimeter, kilo och sekunder är gruppens jobb att ta reda på, genom att fråga och genom att pröva. Ett *projektmål* är den formulering gruppen och uppdragsgivaren till slut enas om, tillräckligt bestämd för att gå att pröva mot när projektet är slut. Det som gruppen faktiskt lämnar ifrån sig kallas *leverans*, och här består leveransen av tre delar: bäraren, ritningsunderlaget och en kort provningsrapport.
+**Uppdraget kommer utifrån.** Den som beställer arbetet, anger vad som ska uppnås och tar emot resultatet kallas *uppdragsgivare*. För tunneln var det Trafikverket. I ett företag kan det vara en kund, en annan avdelning eller företagsledningen, och i skolan är det ofta läraren. Uppdragsgivaren står utanför den grupp som utför arbetet och är den som avgör om resultatet duger.
 
-*Exemplet är utbytbart. En lastbärare åt en saxofonist kan bytas mot vilket annat konkret uppdrag som helst utan att något i kapitlet behöver skrivas om, och delarna nedan fungerar likadant oavsett vad som byggs.*
+Ett uppdrag är sällan färdigformulerat när det ges. En beställare som säger att något ska fungera bra har sagt vad den vill uppnå, inte vad som ska byggas. Ett *projektmål* är den formulering som gruppen och uppdragsgivaren till slut enas om, tillräckligt bestämd för att gå att pröva mot när projektet är slut. Det gruppen faktiskt lämnar ifrån sig kallas *leverans*, och den omfattar nästan alltid mer än en produkt. Ritningar, provningsresultat och drift- eller underhållsanvisningar hör till leveransen, eftersom den som ska förvalta resultatet behöver dem.
 
 ## Projektets faser
 
@@ -50,38 +50,42 @@ I **avslutet** överlämnas leveransen, resultatet prövas mot projektmålet och
 
 Här behövs en åtskillnad som är lätt att missa. Projektets faser handlar om hur arbetet styrs, medan [[begrepp:teknikutvecklingsprocess]]en handlar om hur en teknisk lösning växer fram från behov till färdig produkt. De två löper samtidigt men är inte samma sak. Idégenerering, konceptval och prototyper hör till utvecklingsprocessen och sker inuti genomförandefasen. Möten, tidsuppföljning och avstämning mot uppdragsgivaren hör till projektet och pågår oavsett vad som utvecklas.
 
-[BILD 11.1-1] Innehåll: Två parallella band över samma tidsaxel för lastbärarprojektets sex veckor. Det övre bandet visar projektets faser som fyra block: uppstart, planering, genomförande och avslut, med genomförandet som det klart bredaste. Det undre bandet visar teknikutvecklingsprocessens steg för samma projekt, alltså behov, krav, idéer, konceptval, konstruktion, tillverkning och provning, samtliga inrymda inom genomförandeblocket ovanför. Pilar mellan banden markerar att utvecklingsstegen ligger inuti genomförandefasen. Bildtext: "Projektets faser styr arbetet. Utvecklingsprocessen tar fram lösningen. De två pågår samtidigt men svarar på olika frågor."
+[BILD 11.1-1] Innehåll: Två parallella band över samma tidsaxel för ett projekt. Det övre bandet visar projektets faser som fyra block: uppstart, planering, genomförande och avslut, med genomförandet som det klart bredaste. Det undre bandet visar teknikutvecklingsprocessens steg för samma arbete, alltså behov, krav, idéer, konceptval, konstruktion, tillverkning och provning, samtliga inrymda inom genomförandeblocket ovanför. Pilar mellan banden markerar att utvecklingsstegen ligger inuti genomförandefasen. Bildtext: "Projektets faser styr arbetet. Utvecklingsprocessen tar fram lösningen. De två pågår samtidigt men svarar på olika frågor."
 
 Faserna är inte vattentäta. Visar sig i genomförandet att en förutsättning inte höll får gruppen gå tillbaka till planeringen och lägga om. Att det sker är normalt och inget misslyckande. Det som vore ett misslyckande är att fortsätta efter en plan som slutat stämma.
 
-## Roller i gruppen
+## Roller i ett projekt
 
-Arbete som är allas ansvar blir ingens. Därför fördelas ansvaret på roller.
+Arbete som är allas ansvar blir ingens. Därför fördelas ansvaret på roller, och rollerna korsar ofta gränsen mellan organisationer.
 
-*Projektledaren* håller ihop arbetet. Rollen innebär att kalla till möten, hålla planen aktuell, se till att beslut fattas och fattade beslut skrivs ner, och att hålla kontakten med uppdragsgivaren. Projektledaren är inte gruppens chef och inte den som kan mest. Rollen är att se helheten medan de andra arbetar i detaljen.
+Ta ett konstruerat men typiskt fall. En kommun med fjorton skolor ska byta system för schemaläggning och frånvaroregistrering. Systemet ska vara i drift till höstterminens start, alltså om nio månader, och byggs av en extern leverantör medan kommunen är beställare. Exemplet är konstruerat för att visa rollerna, men uppdelningen är den som gäller i verkliga systeminföranden.
 
-Övriga i gruppen är projektmedlemmar och har var sitt ansvarsområde. I lastbärarprojektet delas arbetet i konstruktion, alltså skisser, modell och ritningar, i tillverkning och provning, alltså material, hopfogning och prov, och i dokumentation och kontakt med användaren. En av de tre är dessutom projektledare vid sidan av sitt ansvarsområde.
+*Projektledaren* håller ihop arbetet. Rollen innebär att kalla till möten, hålla planen aktuell, se till att beslut fattas och att fattade beslut skrivs ner. Här finns två projektledare, en hos kommunen och en hos leverantören, och de har olika uppgifter: leverantörens svarar för att systemet byggs, kommunens för att verksamheten är redo att använda det. Projektledaren är inte gruppens chef och inte den som kan mest. Rollen är att se helheten medan de andra arbetar i detaljen.
 
-Roller är inte personer. I en grupp om tre bär var och en flera roller, och det är själva poängen med att skriva ut dem. Alla arbetar med allt, men för varje del finns någon som ansvarar för att den blir gjord och som svarar på frågan om hur den ligger till.
+En *styrgrupp* fattar de beslut som är för stora för projektledaren, till exempel att skjuta upp införandet eller att stryka en funktion. I det här fallet sitter kommunens skolchef och leverantörens säljansvarige där. Styrgruppen är också den som får besked när något inte längre ryms i tid eller pengar.
 
-En roll som ofta glöms är den som bevakar användaren. I det här projektet är det den som ringer saxofonisten när en fråga uppstår, och som ser till att lösningen prövas av den som faktiskt ska använda den och inte bara av gruppen själv.
+Övriga i projektet har var sitt ansvarsområde. I systeminförandet är det utvecklingen av systemet, överföringen av befintliga uppgifter till det nya systemet, och utbildningen av dem som ska använda det. Till det kommer några lärare från skolorna som prövar systemet innan det tas i drift, eftersom den som ska använda något är den enda som kan avgöra om det fungerar i verkligheten.
 
-[BILD 11.1-2] Innehåll: Lastbärarprojektets grupp om tre ritad som tre cirklar. Varje cirkel märks med personens ansvarsområde, alltså konstruktion, tillverkning och provning respektive dokumentation och användarkontakt. En av de tre cirklarna har dessutom en yttre ring märkt projektledare, som visar att rollen bärs vid sidan av ett ansvarsområde. Utanför de tre står uppdragsgivaren som en fyrkant med pilar in och ut, märkta uppdrag respektive leverans, för att visa att uppdragsgivaren står utanför gruppen. Bildtext: "Rollerna fördelar ansvaret, inte arbetet. Uppdragsgivaren står utanför gruppen."
+Roller är inte personer. I ett litet projekt bär en och samma person flera roller, och det är själva poängen med att skriva ut dem. Alla arbetar med allt, men för varje del finns någon som ansvarar för att den blir gjord och som svarar på frågan om hur den ligger till.
+
+[BILD 11.1-2] Innehåll: Ett projekt ritat som två fält sida vid sida, märkta beställare respektive leverantör, med en lodrät linje emellan som visar organisationsgränsen. I varje fält en projektledare. Ovanför båda fälten en styrgrupp som spänner över gränsen, med pil ner till båda projektledarna, märkt beslut som är för stora för projektledaren. Under respektive projektledare de ansvarsområden som hör dit. Vid sidan om, kopplad till beställarfältet, en grupp användare märkt de som ska använda resultatet. Bildtext: "Rollerna fördelar ansvaret, inte arbetet. I ett projekt mellan två organisationer finns ofta en projektledare på varje sida."
 
 ## Instuderingsfrågor
 
 1. Vad är ett projekt?
-2. Ange projektets fyra kännetecken och förklara vad vart och ett innebär för lastbärarprojektet.
+2. Ange projektets fyra kännetecken och förklara vad vart och ett innebär.
 3. Vad skiljer ett projekt från löpande arbete? Ge ett exempel på vardera.
-4. Samma lastbärare tillverkas senare i hundra exemplar. Är den tillverkningen ett projekt? Motivera.
-5. Vem är uppdragsgivare, och varför står den utanför gruppen?
-6. Vad menas med ett projektmål, och varför räcker det inte att uppdragsgivaren säger att något ska sitta säkert?
-7. Vad menas med leverans?
+4. Varför upphörde tunnelprojektet att finnas när tågen började gå, trots att arbetet med tunneln fortsätter i form av underhåll?
+5. Vem är uppdragsgivare, och varför står den utanför den grupp som utför arbetet?
+6. Vad menas med ett projektmål, och varför räcker det inte att uppdragsgivaren säger att något ska fungera bra?
+7. Vad menas med leverans, och varför omfattar den mer än själva produkten?
 8. Ange projektets fyra faser och vad som sker i var och en.
 9. Vad skiljer projektets faser från teknikutvecklingsprocessens steg, och hur förhåller de sig till varandra i tiden?
 10. Varför är det inget misslyckande att gå tillbaka från genomförandet till planeringen?
 11. Vad ansvarar en projektledare för, och vad ansvarar rollen inte för?
-12. Varför skrivs roller ut i en grupp om tre, trots att alla ändå arbetar med allt?
+12. Varför finns det två projektledare när beställare och leverantör är olika organisationer, och vad svarar var och en för?
+13. Vilka beslut fattar en styrgrupp, och varför fattas de inte av projektledaren?
+14. Varför skrivs roller ut i ett litet projekt, trots att alla ändå arbetar med allt?
 
 ## Övningar
 
@@ -91,4 +95,32 @@ En roll som ofta glöms är den som bevakar användaren. I det här projektet ä
 
 3. **Lägg faserna på ett verkligt arbete.** Välj något som byggts eller byggs om i din närhet, till exempel en ny lekplats, en ombyggd lokal eller ett evenemang. Ta reda på så mycket du kan om hur arbetet gick till och placera in det du vet i de fyra faserna. Ange minst en sak som hörde till projektets styrning och minst en som hörde till utvecklingen av själva lösningen.
 
-4. **Fördela ansvaret.** Utgå från en grupp om tre som ska ta fram en lösning på ett uppdrag du väljer. Fördela ansvarsområdena mellan de tre, ange vem som är projektledare och vad den rollen innebär utöver ansvarsområdet, och ange vem som ansvarar för kontakten med användaren. Motivera fördelningen och ange vad som skulle bli svårare om gruppen i stället var två personer.
+4. **Fördela ansvaret.** Utgå från en grupp om tre som ska ta fram en lösning på ett uppdrag du väljer. Fördela ansvarsområdena mellan de tre, ange vem som är projektledare och vad den rollen innebär utöver ansvarsområdet, och ange vem som ansvarar för kontakten med dem som ska använda resultatet. Motivera fördelningen och ange vad som skulle bli svårare om gruppen i stället var två personer.
+
+## Ditt eget projekt
+
+Genom kapitlet driver du ett eget projekt, i par eller grupp om tre. Varje avsnitt flyttar fram det ett steg, och i det sista avsnittet redovisar och utvärderar du det.
+
+Kapitlets exempel visar projektmetodiken i full skala, med organisationer, år och miljoner. Ditt projekt är samma metodik i sin minsta fungerande form. Skillnaden ligger i omfattningen, inte i kvaliteten, och ett litet projekt som drivs ordentligt lär ut mer än ett stort som beskrivs.
+
+**Steg 1. Behov och problemformulering.** Bilda grupp och välj ett uppdrag. Varje uppdrag är formulerat som ett behov med randvillkor, inte som en färdig produkt, och det är avsiktligt: en formulering som pekar ut lösningen har redan bestämt vad ni ska bygga.
+
+*En dörr ska kunna stå öppen i valfritt läge och stängas utan verktyg.* Randvillkor: får inte skada golv eller dörr, ska fungera vid drag, ska kunna hanteras med foten.
+
+*En väska ska kunna förvaras vid arbetsplatsen utan att stå i gången eller på golvet.* Randvillkor: får inte skruvas i bänken, ska fungera för olika väskstorlekar, ska gå att ta av.
+
+*Föremål av olika storlek ska kunna förvaras så att lösningen går att bygga ut när behovet ändras.* Randvillkor: ska rymmas på en bestämd yta, ska gå att bygga ut utan att det som redan finns görs om.
+
+*En cykel ska kunna parkeras upprätt utan stöd mot vägg eller staket.* Randvillkor: får inte fästas permanent i marken, ska fungera för olika ramtyper, ska tåla att någon råkar stöta till cykeln.
+
+*Utrustning ska kunna återlämnas till rätt plats utan att någon behöver leta.* Randvillkor: ingen el, ska tåla daglig hantering, får inte kräva att lokalen möbleras om.
+
+Ni får också formulera ett eget behov, om det är avgränsat, prototypbart och testbart.
+
+Skillnaden mellan de två sätten att skriva ett uppdrag syns tydligast om samma behov formuleras på båda. "Utveckla en gummikil som håller upp dörren" låser lösningen till friktion mot golvet innan arbetet har börjat. Formuleringen om dörren ovan lämnar minst fem vägar öppna: friktion, tyngd, magnet, en hakande arm och en fjäderbroms. Den andra formuleringen är svårare att börja med och betydligt mer värd att arbeta med.
+
+Skriv därefter ned vilket behov ni valt, vem som har det, och hur ni vet att det finns. Fråga någon som faktiskt berörs.
+
+*Vill ni gå vidare:* ta reda på hur behovet ser ut för mer än en person. Fråga minst tre, och skriv ned var de är överens och var de skiljer sig åt.
+
+*Vill ni gå längre än så:* undersök hur behovet löses i dag, med eller utan hjälpmedel, och ange vad som är otillfredsställande med den nuvarande lösningen. Det ni hittar där blir era första krav i nästa avsnitt.

@@ -62,3 +62,63 @@ av den typ (exakt årtal, antal, "först", patent) som kräver institutionellt s
 
 - Encyclopædia Britannica: https://www.britannica.com/technology/spinning-jenny , https://www.britannica.com/technology/water-frame
 - Konsumentverket: https://www.konsumentverket.se/aktuellt/nyheter-och-pressmeddelanden/nyheter/2024/hovding-3-har-allvarliga-brister/
+
+---
+
+## Kontrollposter inför kapitel 11 (2026-07-29)
+
+Kapitel 11 har inget bärande exempel. Teorin illustreras av flera fristående
+exempel, och två av dem är verkliga svenska infrastrukturprojekt. Det
+koncentrerade fallet sist i 11.3 är Tetra Pak. Posterna nedan är kontrollerade i
+detta steg och ska stämmas av på nytt före tryck.
+
+MIPS-posterna som fördes in tidigare samma dag är borttagna. Rotationsskyddet
+utgick som exempel och posterna saknade därmed innehåll att stödja.
+
+### Tetra Pak, koncentrerat fall i 11.3
+
+| Påstående | Status | Källa |
+|---|---|---|
+| Erik Wallenberg fick idén till den tetraederformade förpackningen 1944, och Ruben Rausing lämnade in patentansökan i slutet av mars samma år | Verifierat | Tekniska museet |
+| Den första maskinen levererades i september 1952 till Lundaortens mejeriförening, som i november samma år började sälja grädde i tetraederformade förpackningar om en deciliter | Verifierat | Tekniska museet |
+| Geometrins poäng: en tetraeder kan vikas ur ett enda pappersark, och ett rör av papper kan delas i hur många tetraedrar som helst utan spill | Verifierat | Tekniska museet |
+| Maskiner och förpackningsmaterial såldes tillsammans, och köparen bands avtalsmässigt till Tetra Paks egna förpackningar | Verifierat. EU-kommissionens beslut 1991 i ärendet Tetra Pak II slog fast att köpare och leasetagare av maskinerna var bundna, direkt eller indirekt, att använda bolagets egna förpackningar, och att bindningen upprätthölls av avtalsvillkor och prissättning och inte bara av teknisk passform | EU-kommissionen, beslut 92/163/EEG (IV/31043 Tetra Pak II) |
+| **"Maskinerna säljs med låg marginal"** | **Ej belagt.** Beskrivningen är vanlig i populär affärslitteratur men jag hittar ingen institutionell källa. Tetra Laval är privatägt och marginaler per produktled är inte offentliga. Skrivs därför inte som faktapåstående. Texten säger i stället det som är dokumenterat: att intäkten återkommer med förpackningsmaterialet och att kunden binds till leverantören | Ingen |
+| Marknadsandelar omkring 90 procent för både maskiner och förpackningar på den aseptiska marknaden vid tiden för beslutet | Verifierat, men tidsbundet till 1991 och skrivs bara med årtal utsatt | EU-kommissionen, samma beslut |
+
+**Avgränsning enligt uppdraget:** expansionshistorien lämnas. Fallet behandlar
+behovet, geometrin och affärsmodellen, inget annat.
+
+### Citybanan, exempel i 11.1
+
+| Påstående | Status | Källa |
+|---|---|---|
+| Ungefär sex kilometer lång pendeltågstunnel under centrala Stockholm, med två nya stationer, byggd av Trafikverket för att skilja pendeltågen från övrig tågtrafik | Verifierat | Trafikverket |
+| Trafiken startade 2017 | Verifierat hos Trafikverket. Det exakta datumet 10 juli 2017 och byggstarten 24 januari 2009 kommer från andrahandskällor och skrivs bara ut om de bekräftas mot Trafikverket före tryck | Trafikverket, delvis |
+| Kostnad omkring 16,8 miljarder kronor i 2007 års prisnivå | **Ej belagt hos institutionell källa.** Skrivs inte ut, eftersom exemplet inte behöver siffran | Ingen |
+
+### Hallandsåsen, exempel i 11.2
+
+| Påstående | Status | Källa |
+|---|---|---|
+| Arbetet inleddes 1992 och avbröts 1997 sedan tätningsmedlet Rhoca-Gil förorenat vattendrag i åsen | Verifierat i sak av flera oberoende källor. Bekräftas mot Trafikverket före tryck | Skanska; SVT; behöver Trafikverket |
+| Arbetet återupptogs efter uppehåll, och tunneln färdigställdes med en tunnelborrmaskin i stället för den ursprungliga metoden | Verifierat i sak | Skanska |
+| Tunneln öppnade i december 2015 | Verifierat i sak, bekräftas före tryck | Skanska |
+
+**Skrivregel för det här fallet.** Hallandsåsen används som exempel på en
+projektrisk som realiseras och tvingar fram metodbyte. Miljöhändelsen refereras
+sakligt och kort, utan moraliserande och utan detaljer om hälsoeffekter, som
+ligger utanför kapitlets ämne.
+
+### Konstruerade exempel
+
+De fem övriga exemplen i kapitlet är konstruerade och benämns öppet så i texten.
+De registreras inte som faktapåståenden och ska inte förses med källa. Inga
+möten, kravvärden, protokoll eller beslut i dem framställs som historiska.
+
+**Källor i denna omgång**
+
+- Tekniska museet, "Tetra Pak": https://www.tekniskamuseet.se/lar-dig-mer/100-innovationer/tetrapak/
+- EU-kommissionen, beslut 92/163/EEG: https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:31992D0163
+- Trafikverket, Citybanan: https://www.trafikverket.se/resa-och-trafik/jarnvag/sveriges-jarnvagsnat/citybanan/
+- Skanska, Hallandsåstunnlarna: https://www.skanska.se/om-skanska/press/nyheter/hallandsastunnlarna-ar-klara-efter-en-lang-resa/
