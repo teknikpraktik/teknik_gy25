@@ -56,14 +56,25 @@ const aiFraser = [
 ];
 
 // Extraherar texten under samtliga förekomster av en rubrik (##–####) fram
-// till nästa rubrik på samma nivå eller lägre, eller filens slut.
+// till nästa rubrik på samma nivå eller högre (färre #), eller filens slut.
+//
+// Underrubriker avslutar alltså INTE sektionen. En H3 inuti "Övningar" kapade
+// tidigare sektionen, så att övningar efter underrubriken inte räknades och
+// facittäckningen såg fel ut. Rättat 2026-07-29 sedan kapitel 11 infört
+// underrubriker för läsbarhet (redaktionellt beslut: validatorn justeras, inte
+// kapiteltexten).
+function stoppRegex(rubrikTraff) {
+	const niva = rubrikTraff.match(/^#+/)[0].length;
+	return new RegExp(`^#{1,${niva}}\\s+`, 'm');
+}
+
 function extractSections(body, rubrik) {
 	const re = new RegExp(`^#{2,4}\\s+${rubrik}\\s*$`, 'gm');
 	const sektioner = [];
 	let m;
 	while ((m = re.exec(body)) !== null) {
 		const rest = body.slice(m.index + m[0].length);
-		const next = rest.search(/^#{2,4}\s+/m);
+		const next = rest.search(stoppRegex(m[0]));
 		sektioner.push(next === -1 ? rest : rest.slice(0, next));
 	}
 	return sektioner;
@@ -78,7 +89,7 @@ function extractSectionsMedOffset(body, rubrik) {
 	while ((m = re.exec(body)) !== null) {
 		const start = m.index + m[0].length;
 		const rest = body.slice(start);
-		const next = rest.search(/^#{2,4}\s+/m);
+		const next = rest.search(stoppRegex(m[0]));
 		sektioner.push({ text: next === -1 ? rest : rest.slice(0, next), offset: start, rubrikOffset: m.index });
 	}
 	return sektioner;

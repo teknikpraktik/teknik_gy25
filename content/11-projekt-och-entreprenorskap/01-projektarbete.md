@@ -58,13 +58,13 @@ Faserna är inte vattentäta. Visar sig i genomförandet att en förutsättning 
 
 Arbete som är allas ansvar blir ingens. Därför fördelas ansvaret på roller, och rollerna korsar ofta gränsen mellan organisationer.
 
-Ta ett konstruerat men typiskt fall. En kommun med fjorton skolor ska byta system för schemaläggning och frånvaroregistrering. Systemet ska vara i drift till höstterminens start, alltså om nio månader, och byggs av en extern leverantör medan kommunen är beställare. Exemplet är konstruerat för att visa rollerna, men uppdelningen är den som gäller i verkliga systeminföranden.
+Ta ett konstruerat men typiskt fall. En kommun ska byta system för schemaläggning och frånvaroregistrering i sina skolor. Systemet ska vara i drift till höstterminens start och byggs av en extern leverantör, medan kommunen är beställare. Exemplet är konstruerat för att visa rollerna, men uppdelningen är den som gäller i verkliga systeminföranden.
 
 *Projektledaren* håller ihop arbetet. Rollen innebär att kalla till möten, hålla planen aktuell, se till att beslut fattas och att fattade beslut skrivs ner. Här finns två projektledare, en hos kommunen och en hos leverantören, och de har olika uppgifter: leverantörens svarar för att systemet byggs, kommunens för att verksamheten är redo att använda det. Projektledaren är inte gruppens chef och inte den som kan mest. Rollen är att se helheten medan de andra arbetar i detaljen.
 
-En *styrgrupp* fattar de beslut som är för stora för projektledaren, till exempel att skjuta upp införandet eller att stryka en funktion. I det här fallet sitter kommunens skolchef och leverantörens säljansvarige där. Styrgruppen är också den som får besked när något inte längre ryms i tid eller pengar.
+En *styrgrupp* fattar de beslut som är för stora för projektledaren, till exempel att skjuta upp införandet eller att stryka en funktion. Där sitter personer med mandat att omfördela pengar och tid hos båda parter. Styrgruppen är också den som får besked när något inte längre ryms i tid eller pengar.
 
-Övriga i projektet har var sitt ansvarsområde. I systeminförandet är det utvecklingen av systemet, överföringen av befintliga uppgifter till det nya systemet, och utbildningen av dem som ska använda det. Till det kommer några lärare från skolorna som prövar systemet innan det tas i drift, eftersom den som ska använda något är den enda som kan avgöra om det fungerar i verkligheten.
+Övriga i projektet har var sitt ansvarsområde. I systeminförandet är det utvecklingen av systemet, överföringen av befintliga uppgifter till det nya systemet, och utbildningen av dem som ska använda det. Till det kommer några lärare som prövar systemet innan det tas i drift, eftersom den som ska använda något är den enda som kan avgöra om det fungerar i verkligheten.
 
 Roller är inte personer. I ett litet projekt bär en och samma person flera roller, och det är själva poängen med att skriva ut dem. Alla arbetar med allt, men för varje del finns någon som ansvarar för att den blir gjord och som svarar på frågan om hur den ligger till.
 
@@ -97,30 +97,26 @@ Roller är inte personer. I ett litet projekt bär en och samma person flera rol
 
 4. **Fördela ansvaret.** Utgå från en grupp om tre som ska ta fram en lösning på ett uppdrag du väljer. Fördela ansvarsområdena mellan de tre, ange vem som är projektledare och vad den rollen innebär utöver ansvarsområdet, och ange vem som ansvarar för kontakten med dem som ska använda resultatet. Motivera fördelningen och ange vad som skulle bli svårare om gruppen i stället var två personer.
 
-## Ditt eget projekt
+5. **Eget projekt, steg 1: behov och problemformulering.** Den här övningen är den första av flera. Genom kapitlet driver ni ett eget projekt i par eller grupp om tre, och varje avsnitts sista övning flyttar fram det ett steg fram till redovisning och utvärdering. Kapitlets exempel visar arbetsformen i full skala, med organisationer och år. Ert projekt är samma arbetsform i sin minsta fungerande form, och skillnaden ligger i omfattningen och inte i kvaliteten.
 
-Genom kapitlet driver du ett eget projekt, i par eller grupp om tre. Varje avsnitt flyttar fram det ett steg, och i det sista avsnittet redovisar och utvärderar du det.
+   Bilda grupp och välj ett av uppdragen nedan. Vart och ett är formulerat som ett behov med randvillkor, aldrig som en färdig produkt, eftersom en formulering som pekar ut lösningen redan har bestämt vad ni ska bygga.
 
-Kapitlets exempel visar projektmetodiken i full skala, med organisationer, år och miljoner. Ditt projekt är samma metodik i sin minsta fungerande form. Skillnaden ligger i omfattningen, inte i kvaliteten, och ett litet projekt som drivs ordentligt lär ut mer än ett stort som beskrivs.
+   *En dörr ska kunna stå öppen i valfritt läge och stängas utan verktyg.* Randvillkor: får inte skada golv eller dörr, ska fungera vid drag, ska kunna hanteras med foten.
 
-**Steg 1. Behov och problemformulering.** Bilda grupp och välj ett uppdrag. Varje uppdrag är formulerat som ett behov med randvillkor, inte som en färdig produkt, och det är avsiktligt: en formulering som pekar ut lösningen har redan bestämt vad ni ska bygga.
+   *En väska ska kunna förvaras vid arbetsplatsen utan att stå i gången eller på golvet.* Randvillkor: får inte skruvas i bänken, ska fungera för olika väskstorlekar, ska gå att ta av.
 
-*En dörr ska kunna stå öppen i valfritt läge och stängas utan verktyg.* Randvillkor: får inte skada golv eller dörr, ska fungera vid drag, ska kunna hanteras med foten.
+   *Föremål av olika storlek ska kunna förvaras så att lösningen går att bygga ut när behovet ändras.* Randvillkor: ska rymmas på en bestämd yta, ska gå att bygga ut utan att det som redan finns görs om.
 
-*En väska ska kunna förvaras vid arbetsplatsen utan att stå i gången eller på golvet.* Randvillkor: får inte skruvas i bänken, ska fungera för olika väskstorlekar, ska gå att ta av.
+   *En cykel ska kunna parkeras upprätt utan stöd mot vägg eller staket.* Randvillkor: får inte fästas permanent i marken, ska fungera för olika ramtyper, ska tåla att någon råkar stöta till cykeln.
 
-*Föremål av olika storlek ska kunna förvaras så att lösningen går att bygga ut när behovet ändras.* Randvillkor: ska rymmas på en bestämd yta, ska gå att bygga ut utan att det som redan finns görs om.
+   *Utrustning ska kunna återlämnas till rätt plats utan att någon behöver leta.* Randvillkor: ingen el, ska tåla daglig hantering, får inte kräva att lokalen möbleras om.
 
-*En cykel ska kunna parkeras upprätt utan stöd mot vägg eller staket.* Randvillkor: får inte fästas permanent i marken, ska fungera för olika ramtyper, ska tåla att någon råkar stöta till cykeln.
+   Ni får också formulera ett eget behov, om det är avgränsat, prototypbart och testbart.
 
-*Utrustning ska kunna återlämnas till rätt plats utan att någon behöver leta.* Randvillkor: ingen el, ska tåla daglig hantering, får inte kräva att lokalen möbleras om.
+   Skillnaden mellan de två sätten att skriva ett uppdrag syns tydligast om samma behov formuleras på båda. "Utveckla en gummikil som håller upp dörren" låser lösningen till friktion mot golvet innan arbetet har börjat. Formuleringen om dörren ovan lämnar minst fem vägar öppna: friktion, tyngd, magnet, en hakande arm och en fjäderbroms. Den andra formuleringen är svårare att börja med och betydligt mer värd att arbeta med.
 
-Ni får också formulera ett eget behov, om det är avgränsat, prototypbart och testbart.
+   Skriv ned vilket behov ni valt, vem som har det, och hur ni vet att det finns. Fråga någon som faktiskt berörs.
 
-Skillnaden mellan de två sätten att skriva ett uppdrag syns tydligast om samma behov formuleras på båda. "Utveckla en gummikil som håller upp dörren" låser lösningen till friktion mot golvet innan arbetet har börjat. Formuleringen om dörren ovan lämnar minst fem vägar öppna: friktion, tyngd, magnet, en hakande arm och en fjäderbroms. Den andra formuleringen är svårare att börja med och betydligt mer värd att arbeta med.
+   *Vill ni gå vidare:* ta reda på hur behovet ser ut för mer än en person. Fråga minst tre, och skriv ned var de är överens och var de skiljer sig åt.
 
-Skriv därefter ned vilket behov ni valt, vem som har det, och hur ni vet att det finns. Fråga någon som faktiskt berörs.
-
-*Vill ni gå vidare:* ta reda på hur behovet ser ut för mer än en person. Fråga minst tre, och skriv ned var de är överens och var de skiljer sig åt.
-
-*Vill ni gå längre än så:* undersök hur behovet löses i dag, med eller utan hjälpmedel, och ange vad som är otillfredsställande med den nuvarande lösningen. Det ni hittar där blir era första krav i nästa avsnitt.
+   *Vill ni gå längre än så:* undersök hur behovet löses i dag, med eller utan hjälpmedel, och ange vad som är otillfredsställande med den nuvarande lösningen. Det ni hittar där blir era första krav i nästa avsnitt.

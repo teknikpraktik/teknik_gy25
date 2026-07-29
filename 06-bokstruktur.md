@@ -516,6 +516,9 @@ Det finns inga separata projektuppgiftsavsnitt. Kapitel 11 har ett elevdrivet pr
 ## 11.1 Projektarbete
 - Förklara vad som kännetecknar ett projekt samt beskriva vanliga faser och roller i tekniska projekt.
 
+### Projektets faser
+### Roller i ett projekt
+
 ## 11.2 Projektplanering
 - Upprätta en projektplan med mål, aktiviteter, tidsplan och ansvarsfördelning.
 - Identifiera risker i ett projekt och planera förebyggande åtgärder.
@@ -540,6 +543,8 @@ Det finns inga separata projektuppgiftsavsnitt. Kapitel 11 har ett elevdrivet pr
 ## Sammanfattning
 
 ## Begrepp
+
+## Facit
 
 ---
 
