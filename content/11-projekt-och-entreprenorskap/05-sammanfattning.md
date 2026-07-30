@@ -3,12 +3,17 @@ type: kapitelsammanfattning
 chapter: 11
 sectionNumber: 5
 title: Sammanfattning
-status: ej-paborjad
+status: fardig-forsta-version
 ---
 
-<!--
-Kapitelavslutning — skapas inte i förväg för kapitel som inte är påbörjade,
-men skelettfilen finns här som utgångspunkt (12-produktionsarkitektur.md,
-"Kapitelavslutningar"; 13-produktionsmanual.md). Skriv ingen text här förrän
-kapitlets avsnitt är producerade och status sätts till under-utveckling.
--->
+Ett projekt är en arbetsform, inte en storlek. Det har ett bestämt mål, en början och ett slut, egna resurser och en uppgift som är unik, och det skiljer sig därmed från det löpande arbete som tar vid när projektet är slut. Uppdraget kommer utifrån, från en uppdragsgivare som tar emot resultatet och avgör om det duger. Projektmålet är den formulering som gruppen och uppdragsgivaren enas om och som resultatet till slut prövas mot, medan leveransen är allt som lämnas över, alltså också ritningar, provningsresultat och anvisningar. Arbetet löper genom fyra faser: uppstart, planering, genomförande och avslut. Faserna styr arbetet medan teknikutvecklingsprocessen tar fram lösningen, och de två pågår samtidigt utan att vara samma sak. Ansvaret fördelas på roller, där projektledaren håller ihop arbetet utan att vara chef och styrgruppen fattar de beslut som är för stora för projektledaren.
+
+Planeringen ger en projektplan med mål, aktiviteter, tidsplan och ansvarsfördelning. En aktivitet är ett avgränsat arbetsmoment med tydlig början och tydligt slut, uppskattad tid och en ansvarig, och prövningen är om det går att säga när den är klar. Beroendena mellan aktiviteterna bestämmer ordningen och därmed tidsplanen, som ritas som ett Gantt-schema med milstolpar utsatta. Genom planen löper en kritisk linje, den längsta kedjan av aktiviteter som väntar på varandra, och en försening där försenar hela projektet medan aktiviteter utanför linjen har marginal. Den kritiska linjen går ofta genom väntetid snarare än genom det tyngsta arbetet. Tidsuppskattningar blir systematiskt för korta, och de blir bättre av att jämföras med utfört arbete och av att stora poster delas i mindre.
+
+En projektrisk är en händelse som ännu inte har inträffat och som skulle hindra projektet från att nå målet i tid och inom sina resurser. Riskerna hittas genom att tidsplanen gås igenom aktivitet för aktivitet, de vägs efter hur troliga och hur allvarliga de är, och de som förtjänar det får en förebyggande åtgärd och en ansvarig. En förebyggande åtgärd görs i förväg, medan en reservplan används först när något redan har hänt. Mot de risker ingen har tänkt på hjälper bara marginal i tidsplanen, och en åtgärd kan i sig skapa nya risker och bör därför prövas i liten skala först.
+
+En uppfinning är en ny teknisk lösning, men först när lösningen kommer till användning är den en innovation. Steget däremellan tas av en entreprenör, som kopplar en teknisk möjlighet till ett behov och bär risken. Villkoren för det steget är att kostnaderna kommer före intäkterna och måste finansieras under tiden, att kapitalbehovet är större ju mer hårdvara som ingår, att den som betalar inte alltid är den som använder, att ett patent ger ensamrätt i utbyte mot att lösningen offentliggörs men kräver att den inte har visats innan ansökan, och att en produkt måste uppfylla ställda krav innan den får säljas. De flesta försök når aldrig marknaden, och det är en del av hur teknikutveckling fungerar.
+
+En affärsmodell beskriver vilken kundnytta lösningen ger, vad den kostar och hur pengarna kommer in. Kundnyttan formuleras ur kundens synvinkel och inte som en teknisk egenskap. Fasta kostnader finns oavsett antalet enheter, rörliga kostnader uppstår per enhet, och nollpunkten är det antal enheter där intäkterna precis täcker de samlade kostnaderna. Intäktsmodellen kan väljas, och valet ställer egna krav på tekniken, eftersom ett abonnemang kräver uppkoppling och uppdatering på ett sätt som en såld produkt i en kartong inte gör.
+
+Under genomförandet håller korta och regelbundna avstämningar planen levande, besluten skrivs ned och projektdagboken förs samma dag som arbetet utförs. Uppföljningen gäller både tiden och resultatet, och den frågar vad som återstår i stället för hur mycket som är gjort, eftersom milstolpar går att kontrollera medan procentsatser är gissningar. När planen inte håller finns bara tre reglage, tid, resurser och omfattning, och ändras ett av dem måste något annat ge efter. Väljer gruppen inte själv är det kvaliteten som ger efter. Avvikelser som inte ryms i gruppens mandat rapporteras uppåt tidigt, medan mottagaren fortfarande kan agera. Vid avslutet görs två utvärderingar: resultatet prövas krav för krav med prövningar i stället för bedömningar, och arbetet utvärderas med en efterkalkyl som jämför uppskattad tid med verklig. Slutsatserna samlas i en slutrapport och förs vidare till nästa projekt, och presentationen anpassas efter mottagaren och redovisar också det som inte fungerade.
