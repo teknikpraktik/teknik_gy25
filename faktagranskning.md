@@ -122,3 +122,32 @@ möten, kravvärden, protokoll eller beslut i dem framställs som historiska.
 - EU-kommissionen, beslut 92/163/EEG: https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:31992D0163
 - Trafikverket, Citybanan: https://www.trafikverket.se/resa-och-trafik/jarnvag/sveriges-jarnvagsnat/citybanan/
 - Skanska, Hallandsåstunnlarna: https://www.skanska.se/om-skanska/press/nyheter/hallandsastunnlarna-ar-klara-efter-en-lang-resa/
+
+---
+
+## Kapitel 12 (2026-07-30)
+
+Registrerade faktapåståenden i avsnitt 12.1 och 12.2. Kapitlets räkneexempel
+(godkännandebeslut mot gränsmått, riskmatris med risktal) är konstruerade
+skolexempel med given indata och registreras inte som faktapåståenden.
+
+| Påstående | Var | Status | Att kontrollera före tryck |
+|---|---|---|---|
+| ISO 9001 är den internationella standarden för kvalitetsledningssystem, och certifiering görs av utomstående organ | 12.1 | Verifierat i sak | Aktuell utgåva av standarden anges inte i texten, medvetet |
+| Kvalitetsbristkostnaden växer med ungefär en faktor tio per steg felet får vandra | 12.1 | Tumregel, medvetet angiven som storleksordning | Formuleringen "ungefär" ska stå kvar; ingen exakt siffra |
+| Mätdonets osäkerhet bör inte ta mer än en tiondel av toleransen i anspråk | 12.1 | Etablerad tumregel inom mätteknik | Anges som tumregel, inte som norm |
+| En detalj godkänns bara om hela osäkerhetsintervallet ligger innanför gränsmåtten | 12.1 | Verifierat i sak, motsvarar den försiktiga godkännanderegeln i mätteknisk praxis | Kontrollera mot ISO 14253-1 före tryck |
+| I Toyotas produktionssystem har varje montör rätt att stoppa linjen vid fel | 12.1 | Verifierat i sak, väl belagt i litteraturen om produktionssystem | Källa läggs till före tryck |
+| Arbetsmiljölagen styr arbetsmiljön, och Arbetsmiljöverket utfärdar föreskrifterna och utövar tillsyn | 12.2 | Verifierat i sak | Inget föreskriftsnummer anges, medvetet, eftersom regelstrukturen har ändrats |
+| Elever omfattas av arbetsmiljölagen | 12.2 | Verifierat i sak | Källa: Arbetsmiljöverket, elevers arbetsmiljö |
+| Skyddsombud utses av arbetstagarna och får avbryta arbete vid omedelbar och allvarlig fara i väntan på Arbetsmiljöverkets ställningstagande | 12.2 | Verifierat i sak | Kontrollera lydelsen mot arbetsmiljölagen 6 kap. före tryck |
+| Miljöbalken kräver tillstånd eller anmälan för miljöfarlig verksamhet, och verksamhetsutövaren ska bedriva egenkontroll | 12.2 | Verifierat i sak | Källa läggs till före tryck |
+| Substitutionsprincipen är inskriven i miljöbalken | 12.2 | Verifierat i sak, motsvarar produktvalsprincipen i miljöbalken 2 kap. | Kontrollera paragrafhänvisning före tryck; texten nämner medvetet ingen paragraf |
+| ISO 14001 är den internationella standarden för miljöledningssystem | 12.2 | Verifierat i sak | — |
+| Kemikalieinspektionen är svensk myndighet för kemiska produkter, och EU:s kemikalielagstiftning kräver att ämnen är undersökta | 12.2 | Verifierat i sak | Texten nämner medvetet inte Reach vid namn |
+| BT Kemi tillverkade bekämpningsmedel i Teckomatorp under 1960- och 1970-talen, grävde ned kemiskt avfall i tunnor, föroreningen uppdagades på 1970-talet, verksamheten lades ned och området har sanerats i flera omgångar under decennier | 12.2 | Verifierat på decennienivå | **Öppen punkt:** exakta årtal för upptäckten och nedläggningen är medvetet utelämnade ur texten. Ska hämtas från Svalövs kommun eller Länsstyrelsen Skåne och skrivas in före tryck om precision önskas |
+
+**Skrivregel för BT Kemi.** Fallet används som exempel på att miljöpåverkan som
+inte tas om hand vid källan blir dyrare att åtgärda i efterhand. Händelsen
+refereras kort och sakligt, utan detaljer om hälsoeffekter hos enskilda och utan
+moraliserande, av samma skäl som gäller Hallandsåsen i kapitel 11.
