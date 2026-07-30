@@ -570,6 +570,8 @@ Det finns inga separata projektuppgiftsavsnitt. Kapitel 11 har ett elevdrivet pr
 
 ## Begrepp
 
+## Facit
+
 ---
 
 # Kapitel 13 · Teknik, människa och samhälle
