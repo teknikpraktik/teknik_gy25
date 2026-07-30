@@ -10,6 +10,73 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-30 — Kapitel 12 färdigt i första version
+
+Kapitel 12 (Kvalitet, risk och arbetsmiljö) är producerat, ett avsnitt per
+commit, med sammanfattning, begreppslista och facit. Båda avsnitten har status
+`fardig-forsta-version`. Kapitlet omfattar cirka 5 700 ord, 5 bildplatshållare,
+30 instuderingsfrågor, 10 övningar och 24 begrepp.
+
+**Två beslut av projektägaren före skrivandet.** *Facitrad lades till i 06* som
+ett eget förberedande steg, eftersom kapitel 12 var det enda producerade
+kapitlet efter kapitel 7 som saknade facit bland kapitelavslutningarna. Skälet
+är att båda avsnitten bär övningar med bestämt svar, alltså kontrollmätning mot
+gränsmått och riskbedömning mot matris, som självstudenten annars inte kan
+kontrollera. *Nivåtaggningen delades*: 12.1 taggas n1-08 och n2-06 och läses på
+båda nivåerna, medan 12.2 hålls på nivå 2. Kapitlets enda primärpunkt (n2-06) är
+nivå 2, men 07 anger kapitel 12 som berörs-kapitel för n1-08, och
+kontrollmätning mot krav är just testning och utvärdering.
+
+**Kapitlets bidrag ligger i skarven mellan tre tidigare kapitel.** 4.3 äger
+tolerans och gränsmått, 7.1 äger mätosäkerheten, och 3.6 äger testning som
+princip. Ingen av dem svarar på vad som händer när ett mätvärde hamnar nära
+toleransgränsen. 12.1 äger det beslutet och den regel som styr det, alltså att
+hela osäkerhetsintervallet ska ligga innanför gränsmåtten. Det arbetade exemplet
+räknar tre fall, varav det tredje visar att ett mätvärde precis på gränsen inte
+räcker för ett godkännande oavsett hur noggrant mätdonet är. Kapitel 6 användes
+som förlaga för procedurstoffet, inte kapitel 1.
+
+**Tre termkollisioner mot tidigare kapitel, lösta i texten och inte i
+metadatan.** *Risk* skiljs vid introduktionen från 11.2:s projektrisk, och
+skillnaden dras ut till en praktisk poäng: en åtgärd som räddar tidsplanen kan
+öka risken för den som står vid maskinen. *Riskreducerande åtgärd* skiljs från
+11.2:s förebyggande åtgärd genom den bestämda prioriteringsordningen, som
+projektrisken saknar. *Substitutionsprincipen* knyts uttryckligen till 5.3:s
+substitution i materialvalet, med skillnaden att bytet här är en skyldighet så
+snart ett rimligt alternativ finns. Till detta kommer en avsiktlig
+återanvändning: *egenkontroll* introduceras i 12.1 och används i 12.2 i
+miljösammanhang, eftersom det är samma sak.
+
+**Åtgärdstrappan bär 12.2.** Att personlig skyddsutrustning är trappans sista
+steg och inte det första är avsnittets viktigaste enskilda poäng, och den är
+skriven som ett sakskäl och inte som en regel: ju längre ned åtgärden ligger,
+desto mer beror skyddet på att varje person gör rätt varje gång.
+Rimlighetsbedömningen efter det genomräknade exemplet drar den följdsats som
+annars brukar utebli, nämligen att nästan alla åtgärder sänker sannolikheten men
+lämnar konsekvensen orörd.
+
+**Gränsen mot kapitel 13 satt.** 12.2 tar miljösäkring som arbetssätt i
+verksamheten, alltså flöden, tillstånd, egenkontroll och miljökravens grepp om
+konstruktionen. Hållbar utveckling som samhällsfråga lämnas till 13.3, som ännu
+inte är skrivet.
+
+**Facit besvarar 30 instuderingsfrågor och 6 av 10 övningar.** De fyra öppna
+bygger på egen mätserie, eget arbetsmoment, egen produkt eller eget
+förbättringsvarv och är registrerade i `utanSvar`. Facit för riskanalysövningen
+anger uttryckligen att talen kan skilja sig mellan bedömare medan risklistan och
+åtgärdernas placering i trappan ska stämma, vilket är det enda hederliga facit en
+riskbedömning kan ha.
+
+**Faktapåståendena registrerade i faktagranskning.md**, som därmed täcker
+kapitel 1, 2, 6, 11 och 12. En punkt är öppen inför tryck: BT Kemi i Teckomatorp
+anges medvetet på decennienivå, eftersom exakta årtal för upptäckten och
+nedläggningen inte är kontrollerade mot institutionell källa.
+
+Sammanfattningen är skriven fristående, utan orden kapitel eller kapitlet, och
+`npm run kapitel-klar` är körd med samtliga efterkontroller godkända.
+
+---
+
 # 2026-07-30 — Kapitel 11 färdigt i första version
 
 Kapitel 11 (Projekt och entreprenörskap) är producerat, ett avsnitt per commit,

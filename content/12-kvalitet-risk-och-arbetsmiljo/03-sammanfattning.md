@@ -3,12 +3,17 @@ type: kapitelsammanfattning
 chapter: 12
 sectionNumber: 3
 title: Sammanfattning
-status: ej-paborjad
+status: fardig-forsta-version
 ---
 
-<!--
-Kapitelavslutning — skapas inte i förväg för kapitel som inte är påbörjade,
-men skelettfilen finns här som utgångspunkt (12-produktionsarkitektur.md,
-"Kapitelavslutningar"; 13-produktionsmanual.md). Skriv ingen text här förrän
-kapitlets avsnitt är producerade och status sätts till under-utveckling.
--->
+Kvalitet är i vilken grad en produkt eller tjänst uppfyller de krav som ställs på den. Av definitionen följer två saker som är lätta att missa. Kvalitet betyder inte dyrt eller avancerat, eftersom ett enkelt föremål som uppfyller sina krav har hög kvalitet, och kvalitet går inte att bedöma utan att kraven är kända. Kvalitetssäkring är att bygga in kvaliteten i arbetssättet i stället för att sortera bort felen efteråt, eftersom kontrollen upptäcker fel men inte skapar rätta detaljer. En avvikelse är när något inte blev som det skulle, och det systematiska ligger i vad som händer sedan. Avvikelsen skrivs ned, söks tillbaka till sin grundorsak och åtgärdas där, vilket förutsätter att den går att rapportera utan att någon får skulden.
+
+Arbetet drivs i en förbättringscykel som planerar, genomför, följer upp och ändrar arbetssättet, och det tredje steget är det som skiljer kvalitetsarbete från gott uppsåt. ISO 9001 är den internationella standarden för hur cykeln bedrivs, och ett certifikat säger något om arbetssättet men ingenting om den enskilda produkten. Ständig förbättring innebär många små förbättringar från dem som utför arbetet, och rätten att stoppa en produktionslinje vid ett fel bygger på att kvalitetsbristkostnaden växer med ungefär en faktor tio för varje steg felet får vandra, från konstruktion till tillverkning till kund.
+
+Kvalitetskontroll jämför det tillverkade med det beställda. Gränsmåtten räknas fram ur det nominella måttet och toleransen, mätdonet ska vara kalibrerat, och kalibreringen ska vara spårbar i en obruten kedja till en nationell normal. Egenkontroll innebär att den som utför arbetet mäter själv, och stickprov att ett urval kontrolleras när tillverkningen är stabil och följden av ett missat fel är hanterlig. Vid gränsen avgör mätosäkerheten: en detalj godkänns bara om hela osäkerhetsintervallet ligger innanför gränsmåtten, vilket betyder att ett mätvärde precis på gränsen inte räcker för ett godkännande. Det som inte godkänns kasseras eller omarbetas, och omarbetning fungerar bara åt ena hållet eftersom material går att ta bort men inte att lägga tillbaka.
+
+En risk är möjligheten att något oönskat inträffar och orsakar skada på människor, miljö eller egendom, till skillnad från projektrisken som hotar ett projekts mål. Riskanalysen görs i fyra steg. Riskerna söks upp moment för moment, var och en bedöms efter sannolikhet och konsekvens och placeras med sitt risktal i en riskmatris, åtgärder beslutas, och det som blir kvar efter åtgärd är restrisken. Riskreducerande åtgärder väljs inte fritt utan efter åtgärdstrappan, alltså i ordningen eliminera, ersätta, tekniska skydd, organisatoriska åtgärder och sist personlig skyddsutrustning. Ordningen är sakligt grundad: ju längre ned åtgärden ligger, desto mer beror skyddet på att varje person gör rätt varje gång. De flesta åtgärder sänker sannolikheten men lämnar konsekvensen orörd.
+
+Arbetsmiljö omfattar både det fysiska och det organisatoriska och sociala, och de hänger ihop, eftersom en stressad person tar genvägar vid maskinen. Systematiskt arbetsmiljöarbete är samma förbättringscykel tillämpad på risker för människor, med skyddsronder som återkommande undersökning och riskbedömning inför varje ändring. Ett tillbud är en händelse som kunde ha lett till skada men inte gjorde det, och det är gratis information om en verklig risk. Skyddsombudet företräder arbetstagarna och får avbryta arbete som innebär omedelbar och allvarlig fara.
+
+Miljösäkring är att systematiskt förebygga att en verksamhet skadar miljön, kartlagt som flöden in och ut. Miljöbalken kräver tillstånd eller anmälan för miljöfarlig verksamhet och att verksamhetsutövaren själv mäter, dokumenterar och åtgärdar. Substitutionsprincipen innebär att en farlig kemisk produkt ska bytas mot en mindre farlig när det är möjligt, och den verkar samtidigt för den som arbetar och för miljön. Miljökraven griper in i konstruktionen genom materialval, energiförbrukning under användning, demonterbarhet och tillverkningsmetod, och alla fyra är konstruktionsbeslut som fattas tidigt. Den som väntar tills produkten är konstruerad har bara de dyra och verkningslösa åtgärderna kvar.
