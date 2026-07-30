@@ -10,6 +10,57 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-30 — Kapitel 11 färdigt i första version
+
+Kapitel 11 (Projekt och entreprenörskap) är producerat, ett avsnitt per commit,
+med sammanfattning, begreppslista och facit. Samtliga fyra avsnitt har status
+`fardig-forsta-version`. Kapitlet omfattar cirka 10 000 ord, 8 bildplatshållare,
+59 instuderingsfrågor, 20 övningar och 31 begrepp.
+
+**Kapitlet är det första som bär ett elevdrivet projekt.** Beslutet 2026-07-29
+tillät formen, och den är genomförd som avsett. Varje avsnitts sista övning är
+ett steg i ett projekt eleverna driver i par eller grupp om tre, från behov och
+problemformulering i 11.1 via krav och projektplan i 11.2 och affärsmodell i
+11.3 till genomförande, redovisning och utvärdering i 11.4. Projektet ligger
+som tillägg vid sidan av de fyra avsnittsövningarna, som står kvar oförändrade i
+antal och krav. Fördjupningsstegen är utskrivna som frivilliga steg, vilket är
+det avgränsade undantaget från förbudet mot nivåstapling, eftersom
+självstudenten saknar en lärare som visar vad ett mer genomarbetat utförande
+innebär.
+
+**Inget bärande exempel, men två verkliga ankare per avsnitt.** Kapitlet lades
+om tidigt (commit f1805df) så att det inte hänger på ett genomgående fall.
+Citybanan bär projektbegreppet i 11.1, Hallandsåsen bär risk i 11.2 och
+ögonstyrningen bär vägen från uppfinning till innovation i 11.3. Cykelställs-
+och luftgivarexemplen är konstruerade i skolskala och märkta som sådana, vilket
+är tillåtet där ett verkligt fall inte finns i rätt storleksordning.
+
+**Facitkontrollen avslöjade en uppgift med obestämbar indata.** Genomräkningen
+av övningarna inför facit är enligt 03 just det moment som ska fånga sådant, och
+den gjorde det. Övning 11.4:2 angav en horisont på tjugo arbetsdagar, men de
+angivna tiderna och marginalen summerade inte till den, och beroendet mellan
+komponentleveransen och bygget saknades, så frågan om hur många dagar projektet
+låg efter hade flera försvarbara svar. Uppgiften är omskriven så att den frågar
+efter förskjutningen i stället för absoluta dagnummer, och beroendet är utskrivet.
+Övning 11.2:2 räknades igenom och håller som den står: projektet blir klart efter
+21 arbetsdagar, den kritiska linjen går genom beställningens leveranstid, och
+stommen har fyra dagars marginal, vilket är hela poängen med uppgiftens sista
+delfråga.
+
+**Facit besvarar 59 instuderingsfrågor och 9 av 20 övningar.** Övriga 11 bygger
+på eget uppdrag, eget projekt, egen produkt eller egen mottagare och är
+registrerade i `utanSvar`. Andelen öppna övningar är högre än i tidigare kapitel
+och följer av stoffet: en projektplan för ett självvalt uppdrag har inget facit.
+De övningar som har bestämt svar är därför medvetet lagda på givna scenarier,
+alltså bedömningen av vad som är ett projekt, prövningen av
+aktivitetsformuleringar, de två tidsplansuppgifterna, nollpunktsräkningen och
+prövningen av ett resultat mot fyra givna krav.
+
+**Sammanfattningen är skriven fristående**, utan orden kapitel eller kapitlet, och
+`npm run kapitel-klar` är körd med samtliga efterkontroller godkända.
+
+---
+
 # 2026-07-29 — Elevdrivna projekt tillåts i kapitel 11
 
 **Beslutet ersätter besluten 2026-07-24 och 2026-07-26** i den del de förbjöd
