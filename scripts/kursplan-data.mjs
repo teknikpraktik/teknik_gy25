@@ -120,7 +120,10 @@ export const niva1 = [
 		text: 'Hur normer, genusstrukturer och etiska värderingar påverkar teknik, dess användning och tillgänglighet',
 		kategori: 'Teknik, människa och samhälle',
 		primar: 13,
-		berors: ['löpande'],
+		// Tidigare ['löpande']. Markeringen borttagen 2026-07-31 sedan genomgången
+		// inför kapitel 13 visat att tråden inte finns i kapitel 1 till 12
+		// (07-kursplanetackning.md, observation 3).
+		berors: [],
 	},
 	{
 		id: "n1-15",
@@ -207,7 +210,11 @@ export const niva2 = [
 		text: 'Värdering av tekniska lösningar utifrån olika aspekter, däribland genus, etik och hållbar utveckling',
 		kategori: 'Teknik, människa och samhälle',
 		primar: 13,
-		berors: ['löpande'],
+		// Tidigare ['löpande']. Se kommentaren vid n1-14. Kapitel 3 står kvar,
+		// eftersom 3.6 verkligen värderar lösningar utifrån flera aspekter,
+		// däribland hållbar utveckling. Det är genus- och normdelen av punkten
+		// som saknas utanför kapitel 13, inte värderingsdelen.
+		berors: [3],
 	},
 	{
 		id: "n2-11",

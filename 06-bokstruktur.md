@@ -602,9 +602,14 @@ Det finns inga separata projektuppgiftsavsnitt. Kapitel 11 har ett elevdrivet pr
 ## 13.4 Framtidens teknik
 - Beskriva möjligheter och risker med framtidens teknik och värdera teknikens roll i att möta samhällsutmaningar.
 
+### Möjligheter och risker
+### Att bedöma ett framtidspåstående
+
 ## Sammanfattning
 
 ## Begrepp
+
+## Facit
 
 ---
 

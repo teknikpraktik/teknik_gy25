@@ -49,7 +49,7 @@ Kapitelnumrering, härledd ur 06-bokstruktur.md, som är enda källan till kapit
 | | **Teknik, människa och samhälle** | | |
 | n1-12 | Teknikens och teknikerns roll i ett hållbart samhälle, möjligheter och risker med framtidens teknik | 13 ● | 1 ○ |
 | n1-13 | Tekniska framsteg som har haft betydelse för samhället | 1 ● | 13 ○ |
-| n1-14 | Hur normer, genusstrukturer och etiska värderingar påverkar teknik, dess användning och tillgänglighet | 13 ● | löpande tråd ○ |
+| n1-14 | Hur normer, genusstrukturer och etiska värderingar påverkar teknik, dess användning och tillgänglighet | 13 ● | — |
 | | **Teknisk kommunikation** | | |
 | n1-15 | Kommunikation, dokumentation och presentation av teknik, muntligt och skriftligt, med digitala medier | 4 ● | 11 ○ |
 | n1-16 | Användning av ritningar, skiss- och ritteknik samt tekniker för modeller med digitala och manuella verktyg | 4 ● | 8 ○ |
@@ -73,7 +73,7 @@ Kapitelnumrering, härledd ur 06-bokstruktur.md, som är enda källan till kapit
 | n2-08 | Modellering och simulering inom något teknikområde med relevanta metoder | 8 ● | 7 ○ |
 | | **Teknik, människa och samhälle** | | |
 | n2-09 | Tekniska framsteg och teknikutveckling med fokus på framtidens teknik och hållbar utveckling (cirkulär ekonomi, nya affärsmodeller) | 13 ● | 1 ○ |
-| n2-10 | Värdering av tekniska lösningar utifrån olika aspekter, däribland genus, etik och hållbar utveckling | 13 ● | löpande tråd ○ |
+| n2-10 | Värdering av tekniska lösningar utifrån olika aspekter, däribland genus, etik och hållbar utveckling | 13 ● | 3 ○ |
 | n2-11 | Digitaliseringens betydelse för produktion, kommunikation och människans livsmiljö | 9 ● | 13 ○ |
 | | **Teknisk kommunikation** | | |
 | n2-12 | Kommunikation, dokumentation och presentation inom något teknikområde | 4 ● | 11 ○ |
@@ -113,7 +113,11 @@ Betygskriterierna har fem parallella stycken per betygsnivå. Varje förmåga m�
 
 2. **"Testning och utvärdering" (nivå 1)** har sitt hem i kapitel 3 (flyttat från kapitel 2 2026-07-14, se produktionslogg.md) men berörs även i 7, 8 och 12. Mätteknikkapitlet (7) ger testningens mät- och dataanalysdel ett tydligare hem; säkerställ ändå en samlad behandling i 3 av själva utvärderingslogiken när kapitlet produceras.
 
-3. **Normer/genus markeras som "löpande tråd"** i båda nivåerna. Matrisen kan bara garantera ett primärkapitel (13), inte en tråd. Detta är den svagaste täckningspunkten och kräver redaktionell disciplin — utan invävda exempel i andra kapitel krymper den till ett avsnitt, tvärtemot beslutet.
+3. **Norm- och genusdelen bärs av kapitel 13 ensamt** (redaktionellt beslut av projektägaren 2026-07-31). Punkterna n1-14 och n2-10 markerades tidigare som "löpande tråd" i båda nivåerna. Genomgången inför produktionen av kapitel 13 visade att tråden inte finns i det producerade materialet. Inget avsnitt i kapitel 1 till 12 behandlar normer, genusstrukturer eller tillgänglighet, och kapitel 1 och 6 är dessutom låsta. Markeringen är därför borttagen ur båda raderna, så att tabellen speglar boken i stället för en avsikt.
+
+   Skillnaden mellan de två punkterna ska noteras. n2-10 rör värdering av tekniska lösningar utifrån flera aspekter, och den delen är verkligen täckt utanför kapitel 13: avsnitt 3.6 väger en lösning på fyra vågskålar och taggar punkten. Det som saknas där är genus- och etikdelen. n1-14 handlar däremot uteslutande om normer, genusstrukturer och etiska värderingar och saknar helt motsvarighet utanför kapitel 13.
+
+   Täckningen vilar därmed på avsnitt 13.2, som har tre lärandemål och bär norm- och genusstoffet i sin helhet, inklusive det utförande lärandemålet om normkritisk granskning av en teknisk lösning. Detta är bokens smalaste täckning. En framtida invävning i olåsta kapitel förblir möjlig men är ingenting styrdokumenten utlovar.
 
 4. **Digitaliseringens betydelse (nivå 2) ligger i kapitel 9 (IT-system).** Passar tekniskt, men innehållet är lika mycket samhälle som teknik. Kontrollera att kapitel 9 tar samhällsvinkeln, annars faller halva punkten.
 
