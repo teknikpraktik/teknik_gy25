@@ -10,6 +10,71 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-07-31 — Kapitel 13 färdigt, och boken komplett i första version
+
+Kapitel 13 (Teknik, människa och samhälle) är producerat, ett avsnitt per
+commit, med sammanfattning, begreppslista och facit. Samtliga fyra avsnitt har
+status `fardig-forsta-version`. Kapitlet omfattar cirka 9 400 ord, 9
+bildplatshållare, 59 instuderingsfrågor, 20 övningar och 20 begrepp.
+
+**Med detta har hela boken en första version.** Samtliga 50 avsnitt i
+bokstrukturen står på `fardig-forsta-version`, och alla 13 kapitel har
+sammanfattning, begreppslista och facit. Ingen fil i content/ står längre på
+`ej-paborjad`. Nästa steg i statusflödet är fackgranskning, som är en annan
+sorts arbete än produktion och bör planeras som ett eget spår.
+
+**Tre beslut av projektägaren före skrivandet.** *Facitrad tillagd i 06*, trots
+att kapitlets övningar till stor del är öppna. Utfallet blev 10 besvarade av 20
+övningar, alltså en högre andel än väntat, eftersom flera övningar kunde byggas
+på givna scenarier i stället för på elevens egna val. *Två delavsnitt tillagda
+för 13.4*, Möjligheter och risker samt Att bedöma ett framtidspåstående, vilket
+gav avsnittet en metoddel och räddade det från att bli en uppräkning.
+*Norm- och genustråden avfördes* som löpande tråd.
+
+**Om det tredje beslutet.** Genomgången inför kapitlet visade att den löpande
+tråden för normer och genus inte fanns i något av kapitel 1 till 12, och att
+kapitel 1 och 6 dessutom är låsta. Projektägaren beslutade att 13.2 bär punkten
+ensamt, och 07 samt kursplan-data.mjs är ändrade så att styrdokumenten speglar
+boken i stället för en avsikt. En precisering gjordes i samma steg: n2-10:s
+värderingsdel är verkligen täckt utanför kapitel 13, eftersom 3.6 väger en
+lösning på fyra vågskålar och taggar punkten, medan n1-14 saknar motsvarighet
+helt. Kapitel 3 står därför kvar som berörs-kapitel för n2-10.
+
+**Kapitlets svåraste krav var 10-amnesfilosofi.md, "Teknik före samhälle".**
+Ett kapitel med den här rubriken lockar till allmänna samhällsfrågor som kan
+besvaras utan teknisk kunskap, och sådana hör inte hemma i boken. Lösningen blev
+att välja exempel där snedvridningen eller följden är en mätbar egenskap hos en
+teknisk lösning. Pulsoximetern som kalibrerats mot ljus hud, krockdockan byggd
+efter en genomsnittlig man, dubbdäcket som ger grepp och partiklar, spårvidden,
+laddkontakten och arbetsstolens inställningsområde är alla konstruktionsbeslut
+som går att peka på. 13.2:s percentilräkning gör dessutom normfrågan till
+dimensionering, vilket är det enda sättet att behandla den utan att lämna ämnet.
+
+**Avgränsningen mot befintliga kapitel var ovanligt trång.** 1.3 äger
+drivkrafterna och är låst, så 13.1 skriver den motsatta riktningen. 3.7 och 5.5
+äger livscykeln och återvinningsformerna, så 13.3 äger ordningsprincipen i
+avfallshierarkin och kopplingen mellan intäktsmodell och konstruktionsval. 11.3
+äger affärsmodellen, så 13.3 äger vad den gör med incitamenten. 12.2 äger
+miljösäkring som arbetssätt, 13.3 hållbarhet som värderingsram.
+
+**En rättelse mot förarbetet.** Analysen inför kapitlet påstod att begreppet
+hållbar utveckling redan hade sitt huvudställe i 3.6. Det var fel. Uppgiften kom
+från en produktionsloggsrad om det numera borttagna avsnittet 2.3.1 och 2.3.2,
+och efter migreringen är begreppet oupptaget. Validate fångade felet vid första
+körningen av 13.1, och huvudstället ligger nu i 13.3, vars lärandemål är att
+förklara begreppet.
+
+**Faktapåståendena registrerade i faktagranskning.md**, som därmed täcker
+kapitel 1, 2, 6, 11, 12 och 13. Två öppna punkter inför tryck: påståendet om
+belysningens rekyleffekt är kvalitativt och bör beläggas med källa, och årtalet
+för battericellfabrikens konkurs ska kontrolleras. Företagsnamnet är medvetet
+utelämnat i elevtexten.
+
+Sammanfattningen är skriven fristående, utan orden kapitel eller kapitlet, och
+`npm run kapitel-klar` är körd med samtliga efterkontroller godkända.
+
+---
+
 # 2026-07-30 — Kapitel 12 färdigt i första version
 
 Kapitel 12 (Kvalitet, risk och arbetsmiljö) är producerat, ett avsnitt per

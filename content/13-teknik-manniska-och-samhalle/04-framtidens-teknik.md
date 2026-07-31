@@ -26,7 +26,7 @@ Det här avsnittet ger inga förutsägelser. Det ger i stället två saker som �
 
 **Elektrifieringen är det största pågående teknikskiftet.** Transporter, uppvärmning och delar av industrin går från bränsle till el. Möjligheten är att energi som används som el kan utnyttjas mycket effektivare än energi som förbränns, och att den kan komma från källor som inte ger utsläpp under drift.
 
-Riskerna och begränsningarna är tekniska och konkreta. Elen måste finnas när den behövs, vilket kräver lagring eller reglerbar produktion. Den måste kunna transporteras dit den behövs, vilket kräver överföringskapacitet i näten, och den kapaciteten är i dag en av de faktiska begränsningarna för hur snabbt omställningen kan gå. Ny nätkapacitet tar många år att bygga, betydligt längre tid än det tar att bygga den fabrik eller den laddplats som behöver den. Här verkar dessutom [[begrepp:teknisk inlåsning]]: det som byggs nu bestämmer vad som är möjligt i femtio år.
+Riskerna och begränsningarna är tekniska och konkreta. Elen måste finnas när den behövs, vilket kräver lagring eller reglerbar produktion. Den måste kunna transporteras dit den behövs, vilket kräver överföringskapacitet i näten, och den kapaciteten är i dag en av de faktiska begränsningarna för hur snabbt omställningen kan gå. Ny nätkapacitet tar många år att bygga, betydligt längre tid än det tar att bygga den fabrik eller den laddplats som behöver den. Här verkar dessutom [[begrepp:teknisk inlåsning]], eftersom det som byggs nu bestämmer vad som är möjligt i femtio år.
 
 **Digitaliseringen fortsätter, och tyngdpunkten flyttar.** Möjligheten är att mätning, styrning och underhåll kan ske på avstånd och i förväg. En uppkopplad maskin som rapporterar sitt tillstånd kan servas innan den går sönder, vilket sparar både material och stillestånd.
 
@@ -52,7 +52,7 @@ Att avgöra om en ny teknik kommer att slå igenom är omöjligt. Att avgöra om
 
 Skalan är användbar därför att den skiljer mellan påståenden som låter likadana. Att något har visats i ett laboratorium och att något är i drift hos kunder är två helt olika saker, och tiden mellan dem räknas normalt i tiotals år för fysisk teknik. Ett påstående som blandar ihop de två är nästan alltid för optimistiskt.
 
-**Går den att skala upp?** *Skalbarhet* är i vilken utsträckning en lösning fungerar lika bra i stor skala som i liten. Det är det steg där flest tekniker fastnar, och skälet är att helt andra svårigheter uppstår när volymen växer, alltså jämn kvalitet i varje enhet, tillgång på material, energiförsörjning, utrustning som klarar drift dygnet runt och personal med rätt kunnande.
+**Går den att skala upp?** *Skalbarhet* är i vilken utsträckning en lösning fungerar lika bra i stor skala som i liten. Det är det steg där flest tekniker fastnar, och skälet är att fyra helt andra svårigheter uppstår när volymen växer, alltså jämn kvalitet i varje enhet, tillgång på material, energiförsörjning och personal med rätt kunnande.
 
 Batteritillverkning i Sverige är ett exempel som visar det tydligt. Att tillverka en battericell med rätt egenskaper är en sak, och att tillverka miljontals med jämn kvalitet och godtagbart utbyte är en annan. Det företag som byggde en cellfabrik i Skellefteå nådde inte de planerade volymerna och försattes i konkurs 2025, trots att tekniken i sig var känd. Uppskalning är alltså ett eget tekniskt problem och inte en formsak som följer efter utvecklingen.
 
