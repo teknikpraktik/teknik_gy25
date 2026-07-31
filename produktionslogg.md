@@ -59,8 +59,8 @@ miljösäkring som arbetssätt, 13.3 hållbarhet som värderingsram.
 
 **En rättelse mot förarbetet.** Analysen inför kapitlet påstod att begreppet
 hållbar utveckling redan hade sitt huvudställe i 3.6. Det var fel. Uppgiften kom
-från en produktionsloggsrad om det numera borttagna avsnittet 2.3.1 och 2.3.2,
-och efter migreringen är begreppet oupptaget. Validate fångade felet vid första
+från en produktionsloggsrad om det numera borttagna avsnittet 2.3.2, och efter
+migreringen är begreppet oupptaget. Validate fångade felet vid första
 körningen av 13.1, och huvudstället ligger nu i 13.3, vars lärandemål är att
 förklara begreppet.
 
