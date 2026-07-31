@@ -1,0 +1,11 @@
+Teknik handlar om hur människor löser problem. Bakom varje sak du använde i morse finns någon som såg ett behov, undersökte vad som var möjligt, valde en lösning bland flera tänkbara, provade den och förbättrade den. Den här boken handlar om det arbetet och om den kunskap det vilar på.
+
+Boken är skriven för ämnet teknik i gymnasieskolan och täcker innehållet i både nivå 1 och nivå 2. Den börjar i vad teknik är och hur den har utvecklats, går vidare till att lösa tekniska problem och att driva en teknikutvecklingsprocess, och tar sedan upp de kunskapsområden en tekniker arbetar med. Ritteknik och CAD, material, mekanik och konstruktion, mätteknik, modellering, IT-system och programmering. Därefter följer arbetsformerna, alltså projekt och entreprenörskap samt kvalitet, risk och arbetsmiljö, och till sist teknikens förhållande till människa och samhälle.
+
+Varje kapitel är uppdelat i avsnitt. Ett avsnitt inleds med löpande text som förklarar stoffet, och avslutas med instuderingsfrågor och övningar. Instuderingsfrågorna prövar om du har förstått det du läst, och de går att besvara med avsnittets innehåll. Övningarna är av ett annat slag. De kräver att du gör något, alltså räknar, ritar, mäter, bygger, programmerar, undersöker eller granskar, och flera av dem har inget bestämt svar utan bygger på det du själv väljer att arbeta med.
+
+Varje kapitel avslutas med en sammanfattning och en lista över kapitlets begrepp. Sammanfattningen går att läsa fristående, och begreppslistan är avsedd att slås upp i. Sist i boken finns ett facit till instuderingsfrågorna och till de övningar som har ett bestämt svar. Facit finns där för att du ska kunna kontrollera dig själv, och det är särskilt viktigt om du läser boken på egen hand.
+
+Två saker är värda att säga om exemplen. De är hämtade ur verkligheten, alltså ur verkliga konstruktioner, verkliga företag och verkliga händelser, eftersom teknik som lärs ut på påhittade fall blir svår att känna igen när den möts på riktigt. Och de är utbytbara. Om du hittar ett bättre exempel i din egen omgivning fungerar resonemanget lika bra på det.
+
+Det viktigaste rådet till dig som läser är ändå enkelt. Teknik lär man sig genom att göra. Läs texten, men lägg tyngdpunkten på övningarna. Det är där kunskapen fastnar.

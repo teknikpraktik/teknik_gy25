@@ -19,6 +19,7 @@ Lärobok i Teknik nivå 1+2 (Gy25) som utvecklas som en modulär kunskapsdatabas
 - `npm run begrepp` — genererar begreppsregistret till `export/begreppsregister.md`.
 - `npm run export` — förlagsmanus från status `fardig-forsta-version` och uppåt (`-- --status=alla` för allt).
 - `npm run export:review` — redaktionellt granskningsmanus (Word + fristående HTML) till `dist/review/`, med automatiska efterkontroller. Sammanställningen delas med export via `scripts/manuscript-core.mjs`.
+- `npm run export:bok` — läsfärdig bok till `dist/bok/` (Word): titelsida, innehållsförteckning, förord, kapitel med sidbrytning per kapitel, facit och baksidestext. Bildplatshållarna är den enda produktionsmetadata som följer med. För- och eftertexter redigeras i `bokdelar/`. Körs vid leverans, inte per ändring.
 - Webbplats (granskning): `cd site && npm run build` (kör validate som prebuild). Astro cachar renderade sidor per källfil — efter ändringar i `site/src/remark-granskning.mjs` eller `figures/registry.yml`, rensa `site/.astro` och `site/node_modules/.astro` före bygget. Basepath är `/teknik_gy25/` (GitHub Pages, `site/src/site-base.mjs`); efter push till master publiceras sajten automatiskt via `.github/workflows/deploy.yml`. Redaktionell läsvy utan produktionsmetadata: `/review/`.
 
 ## Arbetsflöde för ett avsnitt (detaljer i 13-produktionsmanual.md)
