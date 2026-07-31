@@ -27,7 +27,7 @@ Det är hela avsnittets fråga i ett exempel. En [[begrepp:teknisk lösning]] ve
 
 Kapitlet om teknikens grunder svarade på vad som driver utvecklingen framåt, alltså hur behov, [[begrepp:teknisk möjlighet]], ekonomi och politik verkar som [[begrepp:drivkraft]]er. Här går frågan åt andra hållet. Vad gör tekniken med samhället när den väl är på plats?
 
-**Tekniken förändrar var arbetet utförs och vad det består av.** Grävmaskinen tog inte bort behovet av att gräva, den ändrade vad den som gräver gör. Arbetet flyttade från spade till spakar, kroppsbelastningen minskade, antalet personer per meter dike minskade kraftigt, och kraven på den som utför arbetet blev andra. Samma mönster återkommer vid varje teknikskifte: några arbetsmoment försvinner, andra tillkommer, och de som tillkommer kräver ofta annan kunskap än de som försvann.
+**Tekniken förändrar var arbetet utförs och vad det består av.** Grävmaskinen tog inte bort behovet av att gräva, den ändrade vad den som gräver gör. Arbetet flyttade från spade till spakar, kroppsbelastningen minskade, antalet personer per meter dike minskade kraftigt, och kraven på den som utför arbetet blev andra. Samma mönster återkommer vid varje teknikskifte. Några arbetsmoment försvinner, andra tillkommer, och de som tillkommer kräver ofta annan kunskap än de som försvann.
 
 **Tekniken förändrar var människor kan bo och arbeta.** Det avgörs sällan av en enskild produkt utan av *infrastruktur*, alltså de anläggningar och system som samhället är beroende av och som andra lösningar byggs ovanpå. Vägar, järnväg, elnät, vatten och avlopp, mobilnät och fiber är infrastruktur. Den som drar fiber till en glesbygdsort ändrar inte bara internethastigheten, utan vilka arbeten som går att utföra där.
 

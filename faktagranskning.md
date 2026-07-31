@@ -151,3 +151,44 @@ skolexempel med given indata och registreras inte som faktapåståenden.
 inte tas om hand vid källan blir dyrare att åtgärda i efterhand. Händelsen
 refereras kort och sakligt, utan detaljer om hälsoeffekter hos enskilda och utan
 moraliserande, av samma skäl som gäller Hallandsåsen i kapitel 11.
+
+---
+
+## Kapitel 13 (2026-07-31)
+
+Registrerade faktapåståenden i avsnitt 13.1 till 13.4. Kapitlets räkneexempel
+(percentiler och inställningsområden i 13.2, energianvändning före och efter
+belysningsbyte i 13.4) är konstruerade skolexempel med given indata och
+registreras inte som faktapåståenden.
+
+| Påstående | Var | Status | Att kontrollera före tryck |
+|---|---|---|---|
+| Normalspåret är 1435 mm och används i Sverige och större delen av Europa, medan Finland har en annan spårvidd | 13.1 | Verifierat i sak | Finlands mått anges medvetet inte |
+| Dubbdäck sliter asfalt så att partiklar frigörs, och flera svenska städer har förbjudit dubbdäck på vissa gator | 13.1 | Verifierat i sak | Källa: Trafikverket eller berörda kommuner, läggs till före tryck |
+| Flera laddkontakter fanns parallellt för elbilar, och en gemensam standard har pekats ut inom EU | 13.1 | Verifierat i sak | Ingen standardbeteckning anges, medvetet |
+| Sverige har en lag som skyddar den som slår larm om allvarliga missförhållanden | 13.1 | Verifierat i sak | Lagens namn och år anges medvetet inte |
+| Vissa kontrolluppgifter i byggprocessen kräver en certifierad person | 13.1 | Verifierat i sak | Kontrollera mot plan- och bygglagen före tryck |
+| Pulsoximetern kan systematiskt visa för hög syremättnad hos patienter med mörk hud, vilket uppmärksammades under covidpandemin | 13.2 | Verifierat i sak, väl belagt i medicinsk litteratur och av läkemedelsmyndigheter | Källa läggs till före tryck |
+| Standarddockan i krockprov är byggd efter måtten hos en genomsnittlig vuxen man, och dockor som representerat kvinnor har i huvudsak varit nedskalade versioner | 13.2 | Verifierat i sak | Källa läggs till före tryck |
+| Vid Statens väg- och transportforskningsinstitut har en dockmodell som motsvarar en genomsnittlig kvinna tagits fram, i första hand för prov av skydd mot nackskador vid påkörning bakifrån | 13.2 | Verifierat i sak | Kontrollera modellbeteckning mot VTI före tryck; forskarens namn anges medvetet inte, enligt 05 "Personnamn" |
+| Krav på tillgänglighet finns i lag både för byggd miljö och för digitala tjänster hos det offentliga | 13.2 | Verifierat i sak | Lagarna namnges medvetet inte |
+| Definitionen av hållbar utveckling kommer från FN-rapporten Vår gemensamma framtid från 1987, ofta kallad Brundtlandrapporten | 13.3 | Verifierat i sak | — |
+| Svensk vattenkraft har under senare år genomgått en omprövning av tillstånden för att ställa nya miljövillkor, ofta fiskvägar och krav på minsta vattenföring | 13.3 | Verifierat i sak | Källa: Havs- och vattenmyndigheten eller Energimyndigheten, läggs till före tryck |
+| Elbilens miljöfördel växer med antalet körda kilometer, eftersom celltillverkningen är energikrävande | 13.3 | Verifierat i sak, väl belagt i livscykelanalyser | Ingen siffra för brytpunkten anges, medvetet, eftersom den beror på elmix och antaganden |
+| Det svenska pantsystemet fungerar därför att materialen är få och återvinningsbara, panten gör återlämning lönsam och insamlingen är enkel | 13.3 | Verifierat i sak | Ingen returgrad anges, medvetet |
+| EU ställer ekodesignkrav med bland annat krav på tillgång till reservdelar, och Frankrike har infört ett reparerbarhetsindex | 13.3 | Verifierat i sak | Kontrollera omfattning och produktgrupper före tryck |
+| Teknikmognad anges ofta på en niogradig skala från visad princip till drift i verklig miljö | 13.4 | Verifierat i sak, motsvarar den skala som används av EU och rymdorganisationer | Skalans engelska förkortning anges medvetet inte |
+| Sällsynta jordartsmetaller i permanentmagneter samt litium och kobolt räknas som kritiska råvaror, och EU för en förteckning över sådana material | 13.4 | Verifierat i sak | Förteckningens namn och årtal anges medvetet inte |
+| Ljuskällor har blivit många gånger effektivare medan antalet ljuspunkter och brinntimmar ökat, så att den samlade energianvändningen för belysning inte minskat i takt med verkningsgraden | 13.4 | Verifierat i sak som mönster | **Öppen punkt:** påståendet är kvalitativt och bör beläggas med en källa före tryck om det ska stå kvar i den formen |
+| Det företag som byggde en battericellfabrik i Skellefteå nådde inte planerade volymer och försattes i konkurs 2025 | 13.4 | Verifierat i sak på händelsenivå | **Öppen punkt:** företagsnamnet är medvetet utelämnat i texten, och årtalet ska kontrolleras mot konkursbeslutet före tryck |
+
+**Skrivregel för uppskalningsexemplet.** Fallet används uteslutande för att visa
+att uppskalning är ett eget tekniskt problem. Det refereras kort och sakligt,
+utan omdömen om ledning, ägare eller enskilda, av samma skäl som gäller
+Hallandsåsen i kapitel 11 och BT Kemi i kapitel 12.
+
+**Skrivregel för 13.2.** Norm- och genusexemplen väljs uteslutande bland fall där
+snedvridningen är en mätbar egenskap hos en teknisk lösning, alltså
+kalibreringsunderlag, provdockors mått och dimensionerande kroppsmått. Fall som
+inte går att knyta till ett konstruktionsbeslut hör enligt 10-amnesfilosofi.md,
+"Teknik före samhälle", inte hemma i boken.
