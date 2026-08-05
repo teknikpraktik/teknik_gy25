@@ -10,6 +10,41 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-08-05 — PDF-export av boken, med egen typografi
+
+`npm run export:pdf` bygger boken som PDF, `dist/bok/teknik-niva-1-och-2.pdf`.
+Första utfallet är **325 sidor**, vilket ligger nära uppskattningen samma dag
+(280 till 360 sidor satt text plus figurernas yta) och bekräftar att bokens
+omfång är i samma storleksordning som jämförbara läromedel.
+
+**Väg.** Maskinen har varken LaTeX eller LibreOffice, så Pandocs egna
+PDF-vägar är stängda. Konverteringen görs i stället av Word via COM. Det ger
+en fördel utöver att det fungerar: Word räknar om innehållsförteckningens
+fält, så förteckningen får riktiga sidnummer utan handpåläggning. Dokumentet
+öppnas osynligt och stängs utan att sparas.
+
+**Egen typografi för boken.** `scripts/bok-reference.docx` (byggs av
+`make-bok-reference.mjs`) skiljer boken från manusexporterna, som behåller
+`review-reference.docx`. Titelsidan har titeln nedskjuten på sidan,
+kapitelrubriker är satta i bokens mörkblå med linje under, avsnitts- och
+delavsnittsrubriker är avstämda mot dem, brödtexten har luftigare radavstånd,
+och omslaget saknar sidnummer via `titlePg` med tom förstasidesfot. Delarna
+Innehåll och Baksidestext har en egen stil, Delrubrik, som ser ut som en
+kapitelrubrik men saknar dispositionsnivå och därför inte hamnar i
+innehållsförteckningen.
+
+Zip- och stilhanteringen är utbruten till `scripts/docx-zip.mjs` och delas av
+de två referensskripten. Refaktoreringen verifierades genom att
+`review-reference.docx` byggdes om och blev byte-identisk med den committade
+filen.
+
+**Kontrollerat utfall:** omslaget ensamt på sida 1 utan sidnummer,
+innehållsförteckning på sidorna 2 till 5 med sidhänvisningar, förord på 6,
+kapitel 1 på 7, facit på 262, baksidestext på 325, samt rubriker som
+PDF-bokmärken.
+
+---
+
 # 2026-08-05 — Kapitel 1 upplåst för en språklig rättelse i 1.1
 
 Projektägaren ändrade förordets inledning från "Bakom varje sak du använde i

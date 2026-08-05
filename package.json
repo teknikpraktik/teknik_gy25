@@ -11,7 +11,8 @@
 		"export": "node scripts/export-manuscript.mjs",
 		"export:review": "node scripts/export-review.mjs",
 		"kapitel-klar": "npm run validate -- --full && npm run begrepp && npm --prefix site run build && npm run export && npm run export:review",
-		"export:bok": "node scripts/export-bok.mjs"
+		"export:bok": "node scripts/export-bok.mjs",
+    "export:pdf": "node scripts/export-pdf.mjs"
 	},
 	"dependencies": {
 		"gray-matter": "^4.0.3",

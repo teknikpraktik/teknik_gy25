@@ -21,9 +21,11 @@
 // inte till kursplanestyrt innehåll och ligger därför inte under content/,
 // som enligt CLAUDE.md bara rymmer avsnitt och kapitelavslutningar.
 //
-// Sidnumreringen kommer ur sidfoten i scripts/review-reference.docx, som
-// återanvänds här. Innehållsförteckningen är ett Word-fält och är tom tills
-// den uppdateras med Ctrl+A följt av F9.
+// Typografin kommer ur scripts/bok-reference.docx (byggs av
+// scripts/make-bok-reference.mjs): titelsida, kapitel- och avsnittsrubriker,
+// sidfot med sidnummer och ingen siffra på omslaget. Innehållsförteckningen är
+// ett Word-fält och är tom tills den räknas om, vilket sker automatiskt i
+// npm run export:pdf och annars görs med Ctrl+A följt av F9 i Word.
 
 import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -40,7 +42,7 @@ const root = path.dirname(fileURLToPath(import.meta.url));
 const projektRoot = path.join(root, '..');
 const bokDir = path.join(projektRoot, 'dist', 'bok');
 const bokdelarDir = path.join(projektRoot, 'bokdelar');
-const referenceDoc = path.join(root, 'review-reference.docx');
+const referenceDoc = path.join(root, 'bok-reference.docx');
 const luaFilter = path.join(root, 'bok-filter.lua');
 
 const MIN_STATUS = 'fardig-forsta-version';
@@ -110,7 +112,7 @@ const bokMd = [
 	titelsida.trim(),
 	'',
 	SIDBRYTNING,
-	'::: {custom-style="Subtitle"}',
+	'::: {custom-style="Delrubrik"}',
 	'Innehåll',
 	':::',
 	'',
@@ -125,7 +127,7 @@ const bokMd = [
 	sidbrytPerKapitel(bildblock(manuscript)).trim(),
 	'',
 	SIDBRYTNING,
-	'::: {custom-style="Subtitle"}',
+	'::: {custom-style="Delrubrik"}',
 	'Baksidestext',
 	':::',
 	'',
