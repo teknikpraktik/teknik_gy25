@@ -2,7 +2,7 @@
 
 Mappar Skolverkets centrala innehåll (TEKI nivå 1 och 2) och de fem bedömda förmågorna mot bokens kapitel. Matrisen är bokens enda täckningsgaranti i en temastrukturerad bok som inte är nivåuppdelad — den måste hållas noggrann och uppdateras när strukturen ändras.
 
-Matrisen bär också bokens trygghetskrav (01-projektvision.md, "Bokens position"): eftersom boken medvetet har ett koncentrerat omfång är den här matrisen beviset på att allt centralt innehåll ändå är behandlat. En lucka här är därför inte bara ett produktionsfel utan ett hål i det beviset.
+Matrisen bär också bokens trygghetskrav (01-projektvision.md, "Bokens position"): eftersom boken medvetet väljer bort uppräkning och lär ut ett urval på djupet är den här matrisen beviset på att allt centralt innehåll ändå är behandlat. En lucka här är därför inte bara ett produktionsfel utan ett hål i det beviset.
 
 Kursplanens ordagranna lydelser (syfte, centralt innehåll, betygskriterier) finns i *Skolverket Kursplan Teknik GY25.md*. Tabellerna nedan förkortar vissa punkter; vid behov av exakt formulering gäller textversionen. Maskinläsbar spegling av denna matris: `scripts/kursplan-data.mjs` (uppdateras i samma steg som detta dokument).
 

@@ -10,6 +10,42 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-08-05 — Publik infosida, och omfångspåståendet korrigerat
+
+**Publik infosida `/om-boken/`** (site/src/pages/om-boken.astro med datakällan
+`_om-boken-data.mjs`), skriven för en extern granskare: pedagogiska,
+strukturella, redaktionella och språkliga val, kursplanetäckningen i sin helhet
+och produktionsmodellen, inklusive öppen redovisning av att manuset är skrivet
+med Claude Code under projektägarens redaktionella styrning. Beslutet att
+redovisa det öppet är projektägarens. Sidan ligger i granskningsvyns läsformat,
+är länkad från `/review/` och är `noindex` som resten av webbplatsen. Alla tal
+och hela täckningstabellen genereras vid varje bygge ur content/, 06 och
+kursplan-data.mjs, så att sidan inte kan visa annat än vad manuset innehåller.
+
+**Omfångspåståendet i 01 är korrigerat efter kontrollräkning.** Projektägaren
+noterade att en jämförbar konkurrent täcker samma ämne på 352 sidor och
+ifrågasatte om boken verkligen blir mycket kortare. Mätningen gav omkring
+124 000 ord elevtext och 128 figurer, alltså 280 till 360 sidor satt text plus
+figurernas yta, för- och eftertexter. Boken landar därmed i samma
+storleksordning som jämförbara läromedel, och den tidigare skrivningen i 01,
+"Bokens position", som utlovade en väsentligt tunnare bok med lägre
+produktionskostnad och pris, var inte hållbar.
+
+Punkten heter nu **Täthet, inte tunnhet**: positionen är hög informationstäthet
+per sida, inte lågt sidantal, och får aldrig argumenteras med sidantal,
+produktionskostnad eller pris. Det utrymme som frigörs av att inte katalogisera
+metoder går tillbaka som förklaring, arbetade exempel, uppgifter och facit,
+alltså i det självstudiebarheten kostar. Trygghetskravet är omformulerat från
+"en tunnare bok får inte läsas som ofullständig" till att en bok som väljer bort
+uppräkning inte får läsas som en bok som valt bort innehåll; matrisen bär samma
+bevisbörda som förut. Följdändring i 07:s ingress. Ingen ändring i content/.
+
+**Struket ur infosidan:** påståendet att kapitel 1 och 6 fungerar som förlagor
+för beskrivande respektive procedurstoff. Låsningen är ett produktionsinternt
+arbetssätt och saknar täckning som utåtriktat kvalitetsargument.
+
+---
+
 # 2026-07-31 — Kapitel 13 färdigt, och boken komplett i första version
 
 Kapitel 13 (Teknik, människa och samhälle) är producerat, ett avsnitt per

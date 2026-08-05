@@ -71,7 +71,7 @@ Den ska vara ett genomarbetat läromedel.
 
 # Bokens position
 
-Boken är medvetet ett koncentrerat läromedel. Den vanliga ansatsen i ämnet är encyklopedisk: brett och grunt, med ambitionen att lista varje tänkbar metod och variant för att garantera täckning. Den ansatsen ger tjocka böcker med uppräknande avsnitt som förutsätter en lärare som väljer ut det relevanta, och som eleven inte läser självständigt.
+Boken är medvetet ett koncentrerat läromedel. Den vanliga ansatsen i ämnet är encyklopedisk: brett och grunt, med ambitionen att lista varje tänkbar metod och variant för att garantera täckning. Den ansatsen ger uppräknande avsnitt som förutsätter en lärare som väljer ut det relevanta, och som eleven inte läser självständigt.
 
 Boken väljer motsatt väg, på fyra punkter.
 
@@ -81,11 +81,13 @@ Boken väljer motsatt väg, på fyra punkter.
 
 **Fokuserad på nivå 1 och nivå 2.** Boken sträcker sig inte upp i nivå 3-stoff som inte alla teknikelever läser. Det håller boken relevant och fri från sidor eleven betalar för men inte använder.
 
-**Koncentrerat omfång.** Kondenseringen ger en väsentligt tunnare bok än den encyklopediska normen. Lägre sidantal sänker produktionskostnaden och därmed priset, en konkret fördel för skolor som köper klassuppsättningar. Prissättningen är förlagets beslut; författarens bidrag är omfånget.
+**Täthet, inte tunnhet.** Positionen är hög informationstäthet per sida, inte ett lågt sidantal. Det utrymme som frigörs av att inte katalogisera metoder går tillbaka in i boken som förklaring, arbetade exempel, uppgifter och facit, alltså i det självstudiebarheten kostar. Boken ska därför inte utlova ett väsentligt mindre omfång än etablerade läromedel i ämnet, och positionen får aldrig argumenteras med sidantal, produktionskostnad eller pris. Prissättning och sidantal är förlagets frågor och avgörs dessutom av formgivningen.
+
+Mätt läge (2026-08-05, korrigerar en tidigare skrivning som utlovade en väsentligt tunnare bok): manuset omfattar omkring 124 000 ord elevtext och 128 figurer, vilket satt ger ett omfång i samma storleksordning som jämförbara läromedel. Aktuella tal räknas fram vid varje bygge och redovisas på den publika infosidan `/om-boken/` (site/src/pages/om-boken.astro).
 
 **Omfånget sänks genom att skära omsvep, aldrig genom att skära förklaring.** Positionen är inget skäl att korta där förståelsen kräver text. Begriplighet går före korthet (04-redaktionsprinciper.md, princip 3): ökar ytterligare en mening förståelsen ska den skrivas, oavsett vad den gör med sidantalet. Det som ska bort är uppvärmningar, upprepningar och metakommentarer (05-forfattarmanual.md, "Skär omsvep, inte information"), inte led i ett resonemang eller steg i en procedur.
 
-Trygghetskravet detta ställer: **en tunnare bok får inte läsas som en ofullständig bok.** Kursplanetäckningen i 07-kursplanetackning.md är därför inte bara ett redaktionellt arbetsverktyg utan bokens bevis på att allt centralt innehåll är behandlat trots det mindre omfånget. Den måste därför hållas noggrann och aktuell.
+Trygghetskravet detta ställer: **en bok som medvetet väljer bort uppräkning får inte läsas som en bok som valt bort innehåll.** Kursplanetäckningen i 07-kursplanetackning.md är därför inte bara ett redaktionellt arbetsverktyg utan bokens bevis på att allt centralt innehåll är behandlat trots urvalet. Den måste därför hållas noggrann och aktuell.
 
 ---
 
