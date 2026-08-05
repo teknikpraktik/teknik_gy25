@@ -48,7 +48,11 @@ function sankRubriker(html) {
 		.replace(/<(\/?)h2([ >])/g, '<$1h3$2');
 }
 
-export async function hamtaReviewKapitel() {
+// Facit lagras hos sitt kapitel men läses som ett samlat facit sist i boken
+// (03-bokens-arkitektur.md, "Facit"). Granskningsvyn speglar därför exportens
+// läsordning: facitblocken plockas ur kapitlen här och samlas i en egen del
+// efter sista kapitlet, precis som i scripts/manuscript-core.mjs.
+export async function hamtaReview() {
 	const docs = await getCollection('docs');
 	const byId = new Map(docs.filter((e) => e.data.id !== undefined).map((e) => [e.data.id, e]));
 	const byTypeChapter = new Map(); // "<kapitel>:<type>" -> entry
@@ -68,6 +72,7 @@ export async function hamtaReviewKapitel() {
 	}
 
 	const resultat = [];
+	const facit = [];
 	for (const k of kapitel) {
 		const avsnitt = [];
 		for (let i = 0; i < k.avsnitt.length; i++) {
@@ -79,6 +84,18 @@ export async function hamtaReviewKapitel() {
 			const html = entry.rendered?.html;
 			if (!html) {
 				throw new Error(`Review: renderad HTML saknas för ${id ?? `${k.nr}/${plan.type}`} — content layer-API:t kan ha ändrats.`);
+			}
+			// Facit hör till kapitlet i källan men läses sist i boken. Ankaret är
+			// härlett ur kapitelnumret i stället för ur titeln, eftersom alla
+			// kapitels facit heter likadant.
+			if (plan.type === 'facit') {
+				facit.push({
+					nr: k.nr,
+					titel: k.titel,
+					anchor: `facit-kapitel-${k.nr}`,
+					html: sankRubriker(taBortBegreppslankar(rensaHtml(html, `${k.nr}/facit`))),
+				});
+				continue;
 			}
 			avsnitt.push({
 				id,
@@ -98,5 +115,5 @@ export async function hamtaReviewKapitel() {
 			});
 		}
 	}
-	return resultat;
+	return { kapitel: resultat, facit };
 }

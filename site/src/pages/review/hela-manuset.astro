@@ -2,14 +2,14 @@
 // Hela manuset på en sida: komplement till kapitelsidorna, för Ctrl+F över
 // hela boken och sammanhängande utskrift/PDF via webbläsaren.
 import ReviewLayout from './_ReviewLayout.astro';
-import { hamtaReviewKapitel } from './_data.mjs';
+import { hamtaReview } from './_data.mjs';
 
-const kapitel = await hamtaReviewKapitel();
+const { kapitel, facit } = await hamtaReview();
 const antal = kapitel.reduce((s, k) => s + k.antal, 0);
 const datum = new Date().toISOString().slice(0, 10);
 ---
 
-<ReviewLayout titel="Hela manuset" kapitel={kapitel} expanderaAllt>
+<ReviewLayout titel="Hela manuset" kapitel={kapitel} facit={facit} expanderaAllt>
 	<div class="review-titelblad">
 		<h1>Teknik nivå 1 och 2</h1>
 		<p>Redaktionellt granskningsmanus · hela manuset</p>
@@ -27,4 +27,16 @@ const datum = new Date().toISOString().slice(0, 10);
 			))}
 		</section>
 	))}
+
+	{facit.length > 0 && (
+		<section>
+			<h1 id="facit">Facit</h1>
+			{facit.map((f) => (
+				<article class="larandemal">
+					<h2 id={`hela-${f.anchor}`}>Kapitel {f.nr} · {f.titel}</h2>
+					<Fragment set:html={f.html} />
+				</article>
+			))}
+		</section>
+	)}
 </ReviewLayout>

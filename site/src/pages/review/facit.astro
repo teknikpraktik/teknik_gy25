@@ -1,0 +1,41 @@
+---
+// Samlat facit sist i granskningsvyn. Facit lagras hos sitt kapitel i content/
+// men läses som ett eget avsnitt sist i boken (03-bokens-arkitektur.md,
+// "Facit"), och den här sidan speglar exportens läsordning i webbvyn:
+// scripts/manuscript-core.mjs skriver ut "# Facit" efter sista kapitlet med ett
+// block per kapitel. Ordningen och rubrikerna följer samma mönster här.
+import ReviewLayout from './_ReviewLayout.astro';
+import { hamtaReview } from './_data.mjs';
+import { medBase } from '../../site-base.mjs';
+
+const { kapitel, facit } = await hamtaReview();
+const sistaKapitlet = kapitel.length > 0 ? kapitel[kapitel.length - 1] : null;
+---
+
+<ReviewLayout titel="Facit" kapitel={kapitel} facit={facit} aktivFacit>
+	<h1>Facit</h1>
+
+	<p class="facit-ingress">
+		Svar på instuderingsfrågor och på de övningar som har ett bestämt svar. Uppgifter där eleven väljer
+		eget föremål, gör egna mätningar eller ombeds bedöma något utan bestämt svar saknar medvetet svar
+		och är utelämnade här.
+	</p>
+
+	{facit.map((f) => (
+		<article class="larandemal">
+			<h2 id={f.anchor}>Kapitel {f.nr} · {f.titel}</h2>
+			<Fragment set:html={f.html} />
+		</article>
+	))}
+
+	<nav class="kapitelnav" aria-label="Kapitelnavigering">
+		<span>
+			{sistaKapitlet && (
+				<a href={medBase(`/review/kapitel-${sistaKapitlet.nr}/`)}>
+					← Kapitel {sistaKapitlet.nr} · {sistaKapitlet.titel}
+				</a>
+			)}
+		</span>
+		<span></span>
+	</nav>
+</ReviewLayout>

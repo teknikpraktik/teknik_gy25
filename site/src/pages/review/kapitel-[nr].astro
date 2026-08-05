@@ -3,26 +3,27 @@
 // har minst ett lärandemål i status fardig-forsta-version eller högre.
 // Alla routes genereras vid bygget via getStaticPaths.
 import ReviewLayout from './_ReviewLayout.astro';
-import { hamtaReviewKapitel } from './_data.mjs';
+import { hamtaReview } from './_data.mjs';
 import { medBase } from '../../site-base.mjs';
 
 export async function getStaticPaths() {
-	const kapitel = await hamtaReviewKapitel();
+	const { kapitel, facit } = await hamtaReview();
 	return kapitel.map((k, idx) => ({
 		params: { nr: String(k.nr) },
 		props: {
 			kapitel: k,
 			allaKapitel: kapitel,
+			facit,
 			foregaende: idx > 0 ? kapitel[idx - 1] : null,
 			nasta: idx < kapitel.length - 1 ? kapitel[idx + 1] : null,
 		},
 	}));
 }
 
-const { kapitel: k, allaKapitel, foregaende, nasta } = Astro.props;
+const { kapitel: k, allaKapitel, facit, foregaende, nasta } = Astro.props;
 ---
 
-<ReviewLayout titel={`Kapitel ${k.nr} · ${k.titel}`} kapitel={allaKapitel} aktivKapitelNr={k.nr}>
+<ReviewLayout titel={`Kapitel ${k.nr} · ${k.titel}`} kapitel={allaKapitel} facit={facit} aktivKapitelNr={k.nr}>
 	<h1>Kapitel {k.nr} · {k.titel}</h1>
 
 	{k.avsnitt.map((avs) => (
@@ -34,6 +35,10 @@ const { kapitel: k, allaKapitel, foregaende, nasta } = Astro.props;
 
 	<nav class="kapitelnav" aria-label="Kapitelnavigering">
 		<span>{foregaende && <a href={medBase(`/review/kapitel-${foregaende.nr}/`)}>← Kapitel {foregaende.nr} · {foregaende.titel}</a>}</span>
-		<span>{nasta && <a href={medBase(`/review/kapitel-${nasta.nr}/`)}>Kapitel {nasta.nr} · {nasta.titel} →</a>}</span>
+		<span>
+			{nasta
+				? <a href={medBase(`/review/kapitel-${nasta.nr}/`)}>Kapitel {nasta.nr} · {nasta.titel} →</a>
+				: facit.length > 0 && <a href={medBase('/review/facit/')}>Facit →</a>}
+		</span>
 	</nav>
 </ReviewLayout>

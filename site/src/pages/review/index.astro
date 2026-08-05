@@ -3,15 +3,15 @@
 // allt färdigställt innehåll, med länkar till kapitelsidorna och ankare till
 // enskilda lärandemål. Genereras helt statiskt vid bygget.
 import ReviewLayout from './_ReviewLayout.astro';
-import { hamtaReviewKapitel } from './_data.mjs';
+import { hamtaReview } from './_data.mjs';
 import { medBase } from '../../site-base.mjs';
 
-const kapitel = await hamtaReviewKapitel();
+const { kapitel, facit } = await hamtaReview();
 const antal = kapitel.reduce((s, k) => s + k.antal, 0);
 const datum = new Date().toISOString().slice(0, 10);
 ---
 
-<ReviewLayout titel="Översikt" kapitel={kapitel}>
+<ReviewLayout titel="Översikt" kapitel={kapitel} facit={facit}>
 	<div class="review-titelblad">
 		<h1>Teknik nivå 1 och 2</h1>
 		<p>Redaktionellt granskningsmanus</p>
@@ -35,6 +35,18 @@ const datum = new Date().toISOString().slice(0, 10);
 					</ul>
 				</li>
 			))}
+			{facit.length > 0 && (
+				<li class="toc-kapitel">
+					<a href={medBase('/review/facit/')}>Facit</a>
+					<ul>
+						{facit.map((f) => (
+							<li class="toc-avsnitt">
+								<a href={medBase(`/review/facit/#${f.anchor}`)}>Kapitel {f.nr} · {f.titel}</a>
+							</li>
+						))}
+					</ul>
+				</li>
+			)}
 		</ul>
 	</nav>
 </ReviewLayout>

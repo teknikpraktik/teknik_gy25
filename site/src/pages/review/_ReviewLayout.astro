@@ -6,11 +6,21 @@
 // Vänsterspalten (permanent på desktop) är avgränsad till granskningsvyn
 // (redaktionellt beslut) — den ordinarie Starlight-webbplatsens sidopanel
 // (astro.config.mjs) är oförändrad. Navigeringsträdet byggs av anroparen ur
-// samma hamtaReviewKapitel()-struktur som sidorna själva visar, så den kan
-// aldrig gå ur synk med det faktiska manuset.
+// samma hamtaReview()-struktur som sidorna själva visar, så den kan aldrig gå
+// ur synk med det faktiska manuset. Facit ligger sist i trädet, som en egen
+// del efter kapitlen, eftersom boken läses så (03-bokens-arkitektur.md,
+// "Facit") även om källfilerna ligger hos sina kapitel.
 import { medBase } from '../../site-base.mjs';
 
-const { titel, kapitel = [], aktivKapitelNr = null, aktivAnkare = null, expanderaAllt = false } = Astro.props;
+const {
+	titel,
+	kapitel = [],
+	facit = [],
+	aktivKapitelNr = null,
+	aktivAnkare = null,
+	aktivFacit = false,
+	expanderaAllt = false,
+} = Astro.props;
 ---
 
 <html lang="sv">
@@ -68,6 +78,34 @@ const { titel, kapitel = [], aktivKapitelNr = null, aktivAnkare = null, expander
 							</details>
 						</li>
 					))}
+					{facit.length > 0 && (
+						<li>
+							<details open={expanderaAllt || aktivFacit}>
+								<summary>
+									<a
+										href={medBase('/review/facit/')}
+										class={aktivFacit && !aktivAnkare ? 'active' : ''}
+										aria-current={aktivFacit && !aktivAnkare ? 'page' : undefined}
+									>
+										Facit
+									</a>
+								</summary>
+								<ul>
+									{facit.map((f) => (
+										<li>
+											<a
+												href={medBase(`/review/facit/#${f.anchor}`)}
+												class={aktivAnkare === f.anchor ? 'active' : ''}
+												aria-current={aktivAnkare === f.anchor ? 'page' : undefined}
+											>
+												Kapitel {f.nr} · {f.titel}
+											</a>
+										</li>
+									))}
+								</ul>
+							</details>
+						</li>
+					)}
 				</ul>
 			</nav>
 
