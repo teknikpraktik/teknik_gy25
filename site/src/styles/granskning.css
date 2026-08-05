@@ -94,6 +94,38 @@
 	font-size: var(--sl-text-sm);
 }
 
+/* Bildplatshållare `[BILD X.Y-N]` i löptexten (remark-granskning.mjs).
+   Egen färg och heldragen ram, så att de går att skilja både från brödtext och
+   från den streckade granskningsrutan. Rutan finns bara i produktionsvyn. */
+
+.bildplatshallare {
+	border: 1px solid var(--sl-color-purple, var(--sl-color-accent));
+	border-left-width: 0.3rem;
+	border-radius: 0.35rem;
+	background: var(--sl-color-purple-low, var(--sl-color-gray-6));
+	padding: 0.7rem 1rem;
+	margin: 1.25rem 0;
+}
+
+.bildplatshallare .bild-etikett {
+	display: inline-block;
+	font-family: var(--__sl-font-mono, monospace);
+	font-weight: 700;
+	font-size: var(--sl-text-xs);
+	letter-spacing: 0.05em;
+	color: var(--sl-color-purple-high, var(--sl-color-accent-high));
+	margin-bottom: 0.3rem;
+}
+
+.bildplatshallare p {
+	margin: 0.25rem 0 0;
+	font-size: var(--sl-text-sm);
+}
+
+.bildplatshallare .bild-innehall {
+	color: var(--sl-color-gray-2);
+}
+
 .begreppslank {
 	text-decoration-style: dotted;
 	text-underline-offset: 0.2em;

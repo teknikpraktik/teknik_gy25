@@ -13,18 +13,20 @@ import { statusEnum } from '../../../../schemas/larandemal.schema.mjs';
 const MIN_STATUS_IDX = statusEnum.indexOf('fardig-forsta-version');
 
 // Tar bort produktionsmetadata ur den renderade HTML:en så att granskningsvyn
-// blir ett rent läsmanus: granskningsrutan och de gamla figurplatshållarna
-// (flata <aside>-element från remark-pluginen), samt de nya inline-
-// bildplatshållarna [BILD X.Y-N] som migrerade kapitel skriver som brödtext och
-// som renderas till ett eget <p>[BILD …]…</p>-stycke. Bygget felar om något
-// blir kvar — då har markupen ändrats och rensningen måste följa med.
+// blir ett rent läsmanus: granskningsrutan, de gamla figurplatshållarna och de
+// nya inline-bildplatshållarna [BILD X.Y-N], som remark-pluginen renderar till
+// <aside class="bildplatshallare"> i produktionsvyn. Ett oformaterat
+// <p>[BILD …]</p> tas också bort, för det fall en platshållare inte matchar
+// pluginens format. Bygget felar om något blir kvar — då har markupen ändrats
+// och rensningen måste följa med.
 function rensaHtml(html, id) {
 	const rensad = html
 		.replace(/<aside class="granskningsruta"[\s\S]*?<\/aside>/g, '')
 		.replace(/<aside class="figurplatshallare"[\s\S]*?<\/aside>/g, '')
+		.replace(/<aside class="bildplatshallare"[\s\S]*?<\/aside>\s*/g, '')
 		.replace(/<p>\[BILD[\s\S]*?<\/p>\s*/g, '')
 		.trim();
-	if (/granskningsruta|figurplatshallare|\[BILD/.test(rensad)) {
+	if (/granskningsruta|figurplatshallare|bildplatshallare|\[BILD/.test(rensad)) {
 		throw new Error(`Review: rensningen av ${id} lämnade produktionsmarkup kvar (granskningsruta, figurplatshållare eller [BILD]-platshållare) — markupen har ändrats.`);
 	}
 	return rensad;

@@ -6,6 +6,10 @@
 //    figures/registry.yml. Okänt begrepp eller okänd figur ger byggfel med
 //    filnamn — validate.mjs fångar samma fel före bygget.
 //
+// 1b. Byter stycken som inleds med `[BILD X.Y-N]` mot en markerad ruta, så att
+//    bildplatshållare går att skilja från löptext i produktionsvyn. Källformatet
+//    är oförändrat; se markeraBildplatshallare nedan.
+//
 // 2. Injicerar en granskningsruta överst på varje avsnittssida (frontmatter
 //    med "id") med lärandemål, status, kursplanetaggar, begrepp, figurer och
 //    förkunskaper. Rutan finns bara i webbvyn — exporten läser källfilerna
@@ -193,6 +197,49 @@ function transformTree(node, filePath) {
 	node.children = out;
 }
 
+// Bildplatshållare `[BILD X.Y-N] Innehåll: … Bildtext: …` skrivs som ett eget
+// stycke i löptexten (03-bokens-arkitektur.md, "Bilder"). I produktionsvyn ska
+// de gå att skilja från brödtext på ögonmått, så stycket byts mot en ruta med
+// samma uppbyggnad som figurplatshållaren. Källformatet är oförändrat, och
+// exporten läser källfilerna och påverkas inte.
+//
+// Granskningsvyn /review/ rensar bort rutan i byggsteget (pages/review/_data.mjs)
+// — ändras klassnamnet här måste den rensningen följa med, annars felar bygget.
+const bildRe = /^\[BILD\s+([^\]]+)\]\s*(?:Innehåll:\s*([\s\S]*?))?\s*(?:Bildtext:\s*([\s\S]*))?$/;
+
+function nodText(node) {
+	if (typeof node.value === 'string') return node.value;
+	return (node.children ?? []).map(nodText).join('');
+}
+
+function bildRuta(text) {
+	const m = text.match(bildRe);
+	if (!m) return null;
+	const [, id, innehall, bildtext] = m;
+	// Bildtexten är färdigformulerad och står inom citattecken i källan. De hör
+	// till manuset, inte till rutan, och tas bort i visningen.
+	const ren = (bildtext ?? '').trim().replace(/^["“](.*)["”]$/s, '$1');
+	return (
+		`<aside class="bildplatshallare" aria-label="Bildplatshållare">` +
+		`<span class="bild-etikett">BILD ${esc(id.trim())}</span>` +
+		(innehall ? `<p class="bild-innehall"><strong>Innehåll:</strong> ${esc(innehall.trim())}</p>` : '') +
+		(ren ? `<p class="bild-bildtext"><strong>Bildtext:</strong> ${esc(ren)}</p>` : '') +
+		`</aside>`
+	);
+}
+
+function markeraBildplatshallare(tree) {
+	tree.children = (tree.children ?? []).map((node) => {
+		if (node.type !== 'paragraph') return node;
+		const text = nodText(node);
+		if (!text.startsWith('[BILD')) return node;
+		const html = bildRuta(text);
+		// Ett stycke som inleds med [BILD men inte följer formatet lämnas som
+		// det är. Formatfel är validate.mjs ansvar, inte den här pluginens.
+		return html ? { type: 'html', value: html } : node;
+	});
+}
+
 function rad(rubrik, inneh) {
 	return `<dt>${rubrik}</dt><dd>${inneh || '—'}</dd>`;
 }
@@ -250,6 +297,7 @@ export function remarkGranskning() {
 		const fm = file.data?.astro?.frontmatter;
 		const filePath = file.path ? path.relative(projektRoot, file.path) : '(okänd fil)';
 		transformTree(tree, filePath);
+		markeraBildplatshallare(tree);
 		if (fm?.id !== undefined) {
 			tree.children.unshift({ type: 'html', value: granskningsruta(fm) });
 		}
