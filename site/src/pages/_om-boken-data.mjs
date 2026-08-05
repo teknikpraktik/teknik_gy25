@@ -25,6 +25,7 @@ export async function hamtaNyckeltal() {
 	const avslutningar = docs.filter((e) => e.data.type !== undefined);
 
 	let ord = 0;
+	let ordBildspec = 0;
 	let bildplatshallare = 0;
 	let instuderingsfragor = 0;
 	let ovningar = 0;
@@ -37,11 +38,20 @@ export async function hamtaNyckeltal() {
 		instuderingsfragor += raknaSektionsposter(body, 'Instuderingsfrågor');
 		ovningar += raknaSektionsposter(body, 'Övningar');
 		for (const b of e.data.concepts_introduced ?? []) begrepp.add(b);
+
+		// Bildplatshållarens Innehåll är en brief till illustratören och trycks
+		// aldrig. Bildtexten trycks och räknas därför med. Utan den här
+		// avräkningen överskattas bokens omfång med ett par tiotal sidor.
+		for (const block of body.match(/\[BILD \d[^\n]*/g) || []) {
+			const brytpunkt = block.indexOf('Bildtext:');
+			const spec = brytpunkt >= 0 ? block.slice(0, brytpunkt) : block;
+			ordBildspec += spec.split(/\s+/).filter(Boolean).length;
+		}
 	}
 
 	// Avrundas nedåt till närmaste tusental: ett exakt ordantal ger ett intryck
 	// av precision som ett manus under bearbetning inte har.
-	const ordAvrundat = Math.floor(ord / 1000) * 1000;
+	const ordAvrundat = Math.floor((ord - ordBildspec) / 1000) * 1000;
 
 	return {
 		kapitel: kapitel.length,

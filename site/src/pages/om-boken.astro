@@ -21,7 +21,7 @@ const datum = new Date().toISOString().slice(0, 10);
 const nyckeltal = [
 	{ tal: n.kapitel, etikett: 'kapitel' },
 	{ tal: n.avsnitt, etikett: 'avsnitt' },
-	{ tal: n.ord, etikett: 'ord manustext' },
+	{ tal: n.ord, etikett: 'ord elevtext' },
 	{ tal: n.instuderingsfragor, etikett: 'instuderingsfrågor' },
 	{ tal: n.ovningar, etikett: 'övningar' },
 	{ tal: n.bildplatshallare, etikett: 'bildplatshållare' },
@@ -118,25 +118,34 @@ const nivaer = ['Nivå 1', 'Nivå 2', 'Syftesmål'];
 
 			<p>
 				Den vanliga ansatsen i ämnet är encyklopedisk: brett och grunt, med ambitionen att lista varje
-				tänkbar metod för att garantera täckning. Det ger tjocka böcker med uppräknande avsnitt som
-				förutsätter en lärare som väljer ut det relevanta. Den här boken väljer motsatt väg. Där ämnet
-				erbjuder många likvärdiga metoder lär den ut de få som fungerar, ordentligt, i stället för att
-				katalogisera alla. Den sträcker sig inte upp i nivå 3-stoff. Omfånget blir därmed betydligt
-				mindre än den encyklopediska normen, vilket också sänker produktionskostnad och pris.
+				tänkbar metod för att garantera täckning. Det ger uppräknande avsnitt som förutsätter en lärare
+				som väljer ut det relevanta, och som eleven inte läser på egen hand. Den här boken väljer
+				motsatt väg. Där ämnet erbjuder många likvärdiga metoder lär den ut de få som fungerar,
+				ordentligt, i stället för att katalogisera alla, och den sträcker sig inte upp i nivå 3-stoff.
 			</p>
 
 			<p>
-				Kondenseringen har en uttrycklig gräns. Omfånget sänks genom att skära omsvep, aldrig genom att
-				skära förklaring. Det som ska bort är uppvärmningar, upprepningar och metakommentarer, inte led
-				i ett resonemang eller steg i en procedur. Ökar ytterligare en mening förståelsen ska den
-				skrivas, oavsett vad den gör med sidantalet.
+				Det urvalet gör inte boken tunn, och det är värt att säga rakt ut. Manuset omfattar omkring
+				{' '}{n.ord} ord elevtext och {n.bildplatshallare} figurer, vilket i satt skick ger ett omfång i
+				samma storleksordning som etablerade läromedel i ämnet. Skillnaden ligger inte i antalet sidor
+				utan i vad sidorna används till. Det utrymme som frigörs genom att inte katalogisera metoder går
+				tillbaka in i boken som förklaring, arbetade exempel, instuderingsfrågor, övningar och facit,
+				alltså i det som krävs för att en elev ska kunna läsa sig till stoffet utan lärare. Det slutliga
+				sidantalet avgörs av formgivningen och är förlagets fråga.
 			</p>
 
 			<p>
-				Ett koncentrerat omfång ställer ett trygghetskrav: <strong>en tunnare bok får inte läsas som en
-				ofullständig bok.</strong> Därför är kursplanetäckningen inte bara ett arbetsverktyg utan bokens
-				bevis på att allt centralt innehåll är behandlat trots det mindre omfånget. Den redovisas i sin
-				helhet längre ned.
+				Kondenseringen har därför en bestämd riktning och en uttrycklig gräns. Den riktas mot omsvep,
+				alltså uppvärmningar, upprepningar, motivationsstycken och metakommentarer, och aldrig mot
+				förklaringen. Led i ett resonemang och steg i en procedur stryks inte. Ökar ytterligare en
+				mening förståelsen ska den skrivas, oavsett vad den gör med sidantalet.
+			</p>
+
+			<p>
+				Urvalet ställer i gengäld ett trygghetskrav: <strong>en bok som medvetet väljer bort uppräkning
+				måste kunna visa att inget centralt innehåll är bortvalt.</strong> Kursplanetäckningen är därför
+				inte bara ett arbetsverktyg utan bokens bevis på den punkten, och den redovisas i sin helhet
+				längre ned.
 			</p>
 
 			<h2 id="pedagogiska-val">Pedagogiska val</h2>
@@ -153,10 +162,8 @@ const nivaer = ['Nivå 1', 'Nivå 2', 'Syftesmål'];
 			<p>
 				Beskrivande stoff följer bågen vardag, problem, lösning, förklaring, generalisering. Procedur-
 				och beräkningsstoff följer i stället förklara, visa uppställt exempel, öva, och tål mindre
-				komprimering: inga steg stryks. Skillnaden är medveten och har konsekvenser genom hela boken.
-				De två låsta referenskapitlen speglar den. Kapitel 1 är förlaga för beskrivande stoff, kapitel 6
-				för procedur- och beräkningsstoff med uppställda exempel och rimlighetsbedömning efter varje
-				räkneexempel.
+				komprimering: inga steg stryks. Skillnaden är medveten och styr både kompressionsgraden och
+				uppgifternas utformning genom hela boken.
 			</p>
 
 			<h3>Instuderingsfrågor och övningar är två olika saker</h3>
@@ -464,8 +471,7 @@ const nivaer = ['Nivå 1', 'Nivå 2', 'Syftesmål'];
 				projektägarens uttryckliga beslut. Påhittade fakta och fiktiva företag när verkliga exempel
 				finns är förbjudna. Ett helt kapitel skrivs aldrig i ett steg: arbetet sker ett avsnitt i taget,
 				i ordningen förberedelse, teori, figurer, uppgifter, kvalitetskontroll, med ett commit per
-				avsnitt. Två kapitel är dessutom låsta för redigering och fungerar som fasta referenser för
-				resten av boken, ett för beskrivande stoff och ett för procedur- och beräkningsstoff.
+				avsnitt.
 			</p>
 			<p>
 				En sak är värd att säga rakt ut, eftersom den kan låta motsägelsefull. Ett uttryckligt krav i
