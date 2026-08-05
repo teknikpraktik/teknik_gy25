@@ -521,7 +521,8 @@ const nivaer = ['Nivå 1', 'Nivå 2', 'Syftesmål'];
 
 <style is:global>
 	* { box-sizing: border-box; }
-	html { color-scheme: light; }
+	/* Höjden på den frysta toppraden; ankarhoppen räknar mot den. */
+	:root { --navh: 3.05rem; color-scheme: light; }
 	body {
 		margin: 0;
 		font-family: Georgia, 'Times New Roman', serif;
@@ -532,6 +533,10 @@ const nivaer = ['Nivå 1', 'Nivå 2', 'Syftesmål'];
 	}
 
 	.topnav {
+		position: sticky;
+		top: 0;
+		z-index: 30;
+		background: #fff;
 		display: flex;
 		justify-content: space-between;
 		align-items: baseline;
@@ -564,9 +569,10 @@ const nivaer = ['Nivå 1', 'Nivå 2', 'Syftesmål'];
 		padding-top: 1.2rem;
 		border-top: 1px solid #e3e3e3;
 		color: #222;
-		scroll-margin-top: 1rem;
+		scroll-margin-top: calc(var(--navh) + 0.5rem);
 	}
 	h3 { font-size: 1.13rem; margin: 2.2rem 0 0.5rem; }
+	h3, [id] { scroll-margin-top: calc(var(--navh) + 0.5rem); }
 	p { margin: 0 0 1.1rem; }
 	a { color: #1d3a5f; }
 
