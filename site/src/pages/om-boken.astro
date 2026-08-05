@@ -1,0 +1,731 @@
+---
+// Publik infosida om bokens redaktionella, pedagogiska, strukturella och
+// språkliga val samt om hur manuset har producerats. Skriven för en extern
+// granskare (förlagsredaktör, fackgranskare, lärarkollega) som läser manuset i
+// granskningsvyn /review/ och behöver veta vilka beslut som ligger bakom det.
+//
+// Sidan står utanför Starlight-produktionsmiljön och har samma rena läsvy som
+// /review/. Alla tal och hela täckningstabellen genereras vid bygget ur
+// content/, 06-bokstruktur.md och kursplan-data.mjs (_om-boken-data.mjs), så
+// att sidan inte kan visa något annat än vad manuset faktiskt innehåller.
+//
+// Noindex som resten av webbplatsen (12-produktionsarkitektur.md,
+// "Publicering"): publikt läsbar för den som har adressen, men inte sökbar.
+import { medBase } from '../site-base.mjs';
+import { hamtaNyckeltal, hamtaTackning } from './_om-boken-data.mjs';
+
+const n = await hamtaNyckeltal();
+const tackning = await hamtaTackning();
+const datum = new Date().toISOString().slice(0, 10);
+
+const nyckeltal = [
+	{ tal: n.kapitel, etikett: 'kapitel' },
+	{ tal: n.avsnitt, etikett: 'avsnitt' },
+	{ tal: n.ord, etikett: 'ord manustext' },
+	{ tal: n.instuderingsfragor, etikett: 'instuderingsfrågor' },
+	{ tal: n.ovningar, etikett: 'övningar' },
+	{ tal: n.bildplatshallare, etikett: 'bildplatshållare' },
+	{ tal: n.begrepp, etikett: 'begrepp med huvudställe' },
+	{ tal: n.avslutningar, etikett: 'kapitelavslutningar' },
+];
+
+const innehall = [
+	['utgangspunkt', 'Utgångspunkten'],
+	['pedagogiska-val', 'Pedagogiska val'],
+	['strukturella-val', 'Strukturella val'],
+	['kursplanetackning', 'Kursplanetäckningen'],
+	['sprakliga-val', 'Skrivtekniska och språkliga val'],
+	['produktion', 'Hur manuset har tagits fram'],
+	['aterstar', 'Vad som återstår'],
+];
+
+const nivaer = ['Nivå 1', 'Nivå 2', 'Syftesmål'];
+---
+
+<html lang="sv">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex, nofollow" />
+		<title>Om boken · Teknik nivå 1 och 2</title>
+	</head>
+	<body>
+		<nav class="topnav">
+			<span class="etikett">Teknik nivå 1 och 2 · arbetsmaterial</span>
+			<span class="lankar">
+				<a href={medBase('/review/')}>Läs manuset</a>
+			</span>
+		</nav>
+
+		<main>
+			<header class="titelblad">
+				<h1>Om boken och hur den har tagits fram</h1>
+				<p class="underrubrik">Lärobok i teknik för gymnasieskolan, nivå 1 och 2, enligt ämnesplanen Gy25</p>
+			</header>
+
+			<p class="ingress">
+				Den här sidan beskriver besluten bakom boken, inte innehållet i den. Den är skriven för den som
+				granskar manuset utifrån och vill veta varför boken ser ut som den gör: vilken pedagogisk modell
+				den vilar på, hur den är strukturerad, hur kursplanetäckningen är säkrad, vilka språkliga regler
+				som gäller och hur texten har producerats och kontrollerats. Själva manuset läses i
+				<a href={medBase('/review/')}>granskningsvyn</a>.
+			</p>
+
+			<section class="statusruta">
+				<h2 class="ruta-rubrik">Var manuset står</h2>
+				<p>
+					Hela boken finns i en första version. Samtliga {n.avsnitt} avsnitt i {n.kapitel} kapitel har
+					status <em>färdig första version</em>, vilket betyder att texten, instuderingsfrågorna,
+					övningarna, bildplatshållarna och facit är skrivna och att de maskinella kontrollerna går
+					igenom. Fackgranskning och språkgranskning är egna, senare steg i statusflödet och är ännu
+					inte gjorda.
+				</p>
+				<p>
+					Illustrationerna är inte producerade. Där en bild hör hemma står en platshållare i löptexten
+					med en beskrivning av vad bilden ska visa och en färdigformulerad bildtext. Den grafiska
+					produktionen är förlagets.
+				</p>
+				<dl class="nyckeltal">
+					{nyckeltal.map((k) => (
+						<div>
+							<dt>{k.tal}</dt>
+							<dd>{k.etikett}</dd>
+						</div>
+					))}
+				</dl>
+				<p class="fotnot">Talen räknas fram ur manuset vid varje bygge. Senast uppdaterad {datum}.</p>
+			</section>
+
+			<nav class="innehall" aria-label="Innehåll på sidan">
+				<p class="innehall-rubrik">På den här sidan</p>
+				<ol>
+					{innehall.map(([id, titel]) => (
+						<li><a href={`#${id}`}>{titel}</a></li>
+					))}
+				</ol>
+			</nav>
+
+			<h2 id="utgangspunkt">Utgångspunkten</h2>
+
+			<p>
+				Boken är byggd kring en enda bärande spänning: den ska vara <strong>självstudiebar</strong> och
+				samtidigt <strong>kondenserad</strong>. Självstudiebar betyder att teorin är fullständig och
+				självförklarande, så att en elev utan lärare kan läsa sig till allt. Kondenserad betyder låg
+				ordmängd och hög informationstäthet. Varje redaktionellt val prövas åt båda hållen, eftersom
+				svällande text och överkomprimerad text är samma misslyckande från olika håll. Kort och
+				obegripligt är värre än långt.
+			</p>
+
+			<p>
+				Den vanliga ansatsen i ämnet är encyklopedisk: brett och grunt, med ambitionen att lista varje
+				tänkbar metod för att garantera täckning. Det ger tjocka böcker med uppräknande avsnitt som
+				förutsätter en lärare som väljer ut det relevanta. Den här boken väljer motsatt väg. Där ämnet
+				erbjuder många likvärdiga metoder lär den ut de få som fungerar, ordentligt, i stället för att
+				katalogisera alla. Den sträcker sig inte upp i nivå 3-stoff. Omfånget blir därmed betydligt
+				mindre än den encyklopediska normen, vilket också sänker produktionskostnad och pris.
+			</p>
+
+			<p>
+				Kondenseringen har en uttrycklig gräns. Omfånget sänks genom att skära omsvep, aldrig genom att
+				skära förklaring. Det som ska bort är uppvärmningar, upprepningar och metakommentarer, inte led
+				i ett resonemang eller steg i en procedur. Ökar ytterligare en mening förståelsen ska den
+				skrivas, oavsett vad den gör med sidantalet.
+			</p>
+
+			<p>
+				Ett koncentrerat omfång ställer ett trygghetskrav: <strong>en tunnare bok får inte läsas som en
+				ofullständig bok.</strong> Därför är kursplanetäckningen inte bara ett arbetsverktyg utan bokens
+				bevis på att allt centralt innehåll är behandlat trots det mindre omfånget. Den redovisas i sin
+				helhet längre ned.
+			</p>
+
+			<h2 id="pedagogiska-val">Pedagogiska val</h2>
+
+			<h3>Explicit undervisning, konkret före abstrakt</h3>
+			<p>
+				Stoffet lärs ut explicit. Eleven ska inte behöva lösa ett problem för att upptäcka metoden.
+				Nya idéer introduceras genom verkliga exempel, och abstrakta modeller byggs ovanpå det konkreta.
+				Definitioner växer ur exemplen och står i löpande prosa i stället för i rutor, medan den exakta
+				och uppslagsbara formuleringen samlas i kapitlets begreppslista.
+			</p>
+
+			<h3>Två slags stoff, två bågar</h3>
+			<p>
+				Beskrivande stoff följer bågen vardag, problem, lösning, förklaring, generalisering. Procedur-
+				och beräkningsstoff följer i stället förklara, visa uppställt exempel, öva, och tål mindre
+				komprimering: inga steg stryks. Skillnaden är medveten och har konsekvenser genom hela boken.
+				De två låsta referenskapitlen speglar den. Kapitel 1 är förlaga för beskrivande stoff, kapitel 6
+				för procedur- och beräkningsstoff med uppställda exempel och rimlighetsbedömning efter varje
+				räkneexempel.
+			</p>
+
+			<h3>Instuderingsfrågor och övningar är två olika saker</h3>
+			<p>
+				Varje avsnitt avslutas med en samlad sektion instuderingsfrågor och därefter en samlad sektion
+				övningar. Uppdelningen är inte kosmetisk.
+			</p>
+			<p>
+				<strong>Instuderingsfrågorna</strong> (5 till 15 per avsnitt) prövar teknisk förståelse, inte
+				läsförståelse: funktion, samband, orsak och verkan, begrepp, resonemang. Formuleringar som
+				"enligt texten" eller "vad visar figuren" är förbjudna, liksom frågor av typen vem, när och hur
+				många annat än när personen, tidpunkten eller antalet verkligen är en del av ett lärandemål.
+				Minst en fråga per avsnitt låter eleven återge innebörden i ett av avsnittets centrala begrepp.
+				Frågorna prioriterar teknisk karaktär framför samhällsvetenskaplig, utom i de avsnitt vars
+				faktiska innehåll är teknik och samhälle.
+			</p>
+			<p>
+				<strong>Övningarna</strong> (2 till 10 per avsnitt) kräver att eleven gör något: räknar, ritar,
+				mäter, konstruerar, programmerar, undersöker eller granskar. De är autentiska och knutna till
+				sådant eleven känner igen, och formen följer ämnet i stället för att göras mekaniskt likformig
+				mellan kapitel. Varje avsnitts övningar tränar bara det egna avsnittets stoff och fungerar
+				fristående.
+			</p>
+
+			<h3>Progressionen skrivs inte ut för eleven</h3>
+			<p>
+				Betygskriterierna är gemensamma för ämnet, och progressionen från E till A ligger i
+				kvalitetsorden, alltså i skillnaden mellan enkel, genomarbetad och väl genomarbetad. Samma
+				öppna uppgift kan därför bära både den som siktar på E och den som siktar på A, vilket också är
+				bokens sätt att hantera blandad förkunskap i en klass. Progressionen skrivs däremot aldrig ut
+				som delsteg i elevtexten. Formatet med en grunduppgift följd av utbyggnadssteg är avskaffat, och
+				betygsnivåer publiceras inte. Boken mäter, testar eller examinerar heller ingenting; uppgifter
+				formuleras som att de låter eleven visa något. Kopplingen till betygskriterierna hör till
+				lärarhandledningen, inte till elevtexten.
+			</p>
+			<p>
+				Undantaget är ett enda. I kapitel 11 finns ett elevdrivet projekt där fördjupningsstegen skrivs
+				ut som frivilliga steg, eftersom en elev som driver ett projekt själv över flera veckor annars
+				saknar någon som visar vad ett mer genomarbetat utförande innebär. Projektet är ett tillägg vid
+				sidan av avsnittsövningarna, som står kvar oförändrade i antal och krav, och boken har inget
+				bokomspännande projekt.
+			</p>
+
+			<h3>Facit ingår, och det är ett pedagogiskt beslut</h3>
+			<p>
+				Om boken ska gå att läsa utan lärare måste eleven kunna kontrollera sitt eget svar. Därför
+				innehåller boken ett elevfacit med svar på instuderingsfrågor och på de övningar som har ett
+				bestämt svar. Räkneuppgifter får slutsvar med enhet, avrundat till tre värdesiffror;
+				lösningsgången ligger kvar i avsnittets arbetade exempel. Uppgifter där eleven väljer eget
+				föremål, gör egna mätningar eller ombeds bedöma något utan bestämt svar lämnas medvetet utan
+				facit, men registreras i ett eget metadatafält så att en öppen uppgift går att skilja från en
+				glömd. Kontrollen görs maskinellt: varje numrerad uppgift i ett kapitel ska antingen ha ett svar
+				eller stå registrerad som medvetet öppen.
+			</p>
+
+			<h3>Läraren är fri, eleven tas på allvar</h3>
+			<p>
+				Boken försöker inte styra undervisningen. Ordning, urval, fördjupning, arbetsformer och
+				examination är lärarens beslut. Mot eleven är hållningen att nybörjare inte är detsamma som
+				ointelligent: inga barnsliga liknelser, ingen konstlad berättelse, ingen överdriven
+				pedagogisering. Svåra samband förenklas inte till att bli fel, de förklaras tydligare.
+			</p>
+
+			<h2 id="strukturella-val">Strukturella val</h2>
+
+			<h3>Avsnittet är enheten</h3>
+			<p>
+				Boken har två innehållsnivåer: kapitel och avsnitt. Avsnittet är den minsta enhet som
+				produceras, granskas och publiceras, och produktionsstrukturen är identisk med den struktur
+				läsaren ser. Lärandemålen är metadata på avsnittet, inte en rubriknivå och inte något som visas
+				för eleven; ett avsnitt kan ha ett eller flera. Det finns ingen mellannivå mellan kapitel och
+				avsnitt. Delavsnitt är onumrerade underrubriker, och all synlig numrering har därför exakt två
+				nivåer, till exempel 6.1, aldrig 6.1.1.
+			</p>
+			<p>
+				Ett avsnitt har inget fast sid- eller uppslagsomfång. Det får flöda över så många sidor som
+				förståelsen kräver och delas bara när det innehåller flera tydligt skilda delområden, aldrig
+				enbart för att texten blivit lång. Uppslag och sidbrytningar är layoutfrågor, inte nivåer i
+				innehållsmodellen.
+			</p>
+
+			<h3>Kapitelavslutningar</h3>
+			<p>
+				Varje kapitel avslutas med tre onumrerade avsnitt utan lärandemål. En <strong>sammanfattning</strong>
+				i kort löpande text, inte punktlista, som låter eleven repetera hela kapitlet på några minuter
+				och som är skriven för att gå att läsa fristående. En <strong>begreppslista</strong> med färdiga
+				definitioner, som är en uppslagsfunktion och aldrig elevens första möte med ett begrepp. Och ett
+				<strong>facit</strong>, som lagras hos sitt kapitel men samlas av exporten sist i boken, eftersom
+				ett facit som ligger långt från kapitlets övningar tyst glider isär från dem.
+			</p>
+
+			<h3>Kapitlen äger sina moment</h3>
+			<p>
+				Ett moment lärs ut på exakt ett ställe. Över tjugo gränser mellan kapitel är utskrivna i
+				styrdokumenten, just för att undvika det dubbelarbete som är vanligt i läromedel. Kapitel 3 äger
+				prototypen som steg i utvecklingsarbetet medan kapitel 8 äger modellen som metod. Kapitel 4 äger
+				att framställa ritningen medan kapitel 8 äger att räkna och testa på modellen. Kapitel 5 äger
+				materialet kvalitativt och jämförande medan spänning, töjning och sträckgräns hör till kapitel 6.
+				Kapitel 7 mäter vad som faktiskt händer, kapitel 6 räknar ut vad som bör hända. Kapitel 9
+				beskriver vad digitaliseringen gör, kapitel 13 prövar vad den är värd.
+			</p>
+			<p>
+				Kapitlen ska dessutom i möjligaste mån kunna läsas fristående. Bokens ordningslogik är tredelad:
+				först ämnets grunder och arbetssätt, sedan ämnesinnehållet, sedan tillämpning och
+				samhällsperspektiv. Ett kapitel får förutsätta det som ligger före i den bågen, men aldrig det
+				som ligger efter, och ska luta sig så lite som möjligt även bakåt.
+			</p>
+
+			<h3>Ren löptext</h3>
+			<p>
+				Manuset är löpande text. Det innehåller inga rutor, faktablock, formelrutor, marginaltexter
+				eller utbrutna exempel, oavsett stofftyp; arbetade räkneexempel skrivs i löptexten. Skälet är
+				att typografisk urskiljning av formler, definitioner och exempel är ett formgivningsbeslut som
+				hör till förlaget och inte ska låsas i manus. Två undantag finns. Bildplatshållare, och kodblock
+				för körbar programkod, eftersom indraget i Python är syntax och kod skriven som löpande prosa
+				upphör att vara kod. Prosan förklarar alltid vad programmet ska göra före blocket och vad koden
+				gör efter det.
+			</p>
+
+			<h3>Bilder</h3>
+			<p>
+				Bilder ska undervisa: förklara samband, visualisera system, visa processer eller jämföra
+				lösningar. Inga dekorationsbilder. Kan något förklaras bättre med en bild än med text ska en
+				bild användas, och när en bild tar över informationsbärandet kortas motsvarande prosa, eftersom
+				en bild som dubblerar texten inte har avlastat den. Bild och text använder samma exempel. I
+				manuset står varje bild som en platshållare med två delar: en beskrivning av vad bilden ska visa
+				och varför, och en färdigformulerad bildtext.
+			</p>
+
+			<h2 id="kursplanetackning">Kursplanetäckningen</h2>
+
+			<p>
+				Boken är temastrukturerad och inte uppdelad efter nivå. Nivå 1 och nivå 2 ligger i samma
+				framställning, eftersom stoffet hänger ihop ämnesmässigt och inte kursadministrativt. Det gör
+				täckningen till något som måste bevisas i stället för att synas av dispositionen.
+			</p>
+			<p>
+				Beviset är en innehållsmatris. Varje punkt i det centrala innehållet för båda nivåerna har ett
+				stabilt id som aldrig ändras eller återanvänds. Samma id används som tagg i varje avsnittsfils
+				metadata, och täckningen följs därmed upp maskinellt per punkt: hur många avsnitt som behandlar
+				den, och om de ligger i det kapitel som har det primära ansvaret. Utöver det centrala innehållet
+				bevakas tre punkter ur ämnets syfte och ingress som är obligatoriska eller bärande utan att stå
+				ordagrant i det centrala innehållet.
+			</p>
+			<p>
+				Tabellen nedan genereras ur manuset vid varje bygge. {tackning.utanPrimarkapitel === 0
+					? `Samtliga ${tackning.antalPunkter} punkter har ett kapitel med primärt ansvar`
+					: `${tackning.antalPunkter - tackning.utanPrimarkapitel} av ${tackning.antalPunkter} punkter har ett kapitel med primärt ansvar`}, och {tackning.utanTaggatAvsnitt === 0
+					? 'varje punkt är taggad av minst ett skrivet avsnitt'
+					: `${tackning.utanTaggatAvsnitt} punkter saknar ännu ett taggat avsnitt`}.
+			</p>
+
+			<div class="tabellyta">
+				<table class="tackning">
+					<thead>
+						<tr>
+							<th scope="col">Id</th>
+							<th scope="col">Centralt innehåll</th>
+							<th scope="col">Primärt kapitel</th>
+							<th scope="col">Berörs även</th>
+							<th scope="col">Avsnitt</th>
+						</tr>
+					</thead>
+					{nivaer.map((niva) => (
+						<tbody>
+							<tr class="nivarad"><th colspan="5" scope="colgroup">{niva}</th></tr>
+							{tackning.rader.filter((r) => r.niva === niva).map((r) => (
+								<tr>
+									<td class="id">{r.id}</td>
+									<td>{r.text}</td>
+									<td class="kapitel">{r.primar}. {r.primarTitel}</td>
+									<td class="berors">{r.berors.length > 0 ? r.berors.join(', ') : '—'}</td>
+									<td class="antal">{r.antalAvsnitt}</td>
+								</tr>
+							))}
+						</tbody>
+					))}
+				</table>
+			</div>
+
+			<h3>De fem bedömda förmågorna</h3>
+			<p>
+				Betygskriterierna har fem parallella stycken per betygsnivå, ett för var och en av de fem
+				bedömda förmågorna. Var och en måste tränas återkommande och inte bara i ett kapitel, och var
+				huvudträningen sker följs upp separat från det centrala innehållet. Det femte stycket, att
+				dokumentera, visualisera och kommunicera tekniska lösningar, är skälet till att boken har ett
+				eget kapitel om teknisk kommunikation i stället för att låta den förmågan vara en bieffekt av
+				andra moment.
+			</p>
+			<p>
+				Kriterierna styr uppgiftsdesign, inte kapitelstruktur. Kapitlen byggs efter ämnets struktur och
+				kursplanens centrala innehåll, aldrig efter betygsstegen.
+			</p>
+
+			<h3>Öppet redovisade svaga punkter</h3>
+			<p>
+				Matrisen redovisar också var täckningen är smal, eftersom en täckningsgaranti som bara redovisar
+				styrkor inte är värd något. Två noteringar är särskilt värda en granskares uppmärksamhet.
+			</p>
+			<p>
+				Punkten om normer, genusstrukturer och etiska värderingar bärs i dag av kapitel 13 ensamt, och i
+				praktiken av ett avsnitt i det kapitlet. Den var tidigare markerad som en löpande tråd genom
+				boken, men en genomgång visade att tråden inte fanns i det producerade materialet, och
+				markeringen togs då bort så att matrisen speglar boken i stället för en avsikt. Detta är bokens
+				smalaste täckning.
+			</p>
+			<p>
+				Mätteknik och dataanalys har ett eget kapitel trots att det inte står som en egen punkt i det
+				centrala innehållet. Det är medvetet tillagt utifrån ämnets syfte, som kräver att eleven arbetar
+				med mätning, testning, beräkning, modellering samt risk- och rimlighetsbedömning, och kapitlet
+				hålls kort just därför att det inte får spräcka bokens koncentrerade omfång.
+			</p>
+
+			<h2 id="sprakliga-val">Skrivtekniska och språkliga val</h2>
+
+			<h3>Rösten</h3>
+			<p>
+				Målet är att hela boken ska läsas som skriven av en erfaren tekniklärare med djupa
+				ämneskunskaper: saklig, lugn, trygg och professionell, aldrig säljande, skämtsam eller
+				mästrande. Intresset ska väckas av innehållet, inte av språket. Direkt tilltal används bara när
+				det gör texten tydligare, retoriska frågor mycket sparsamt, och texten bygger inte på ett samtal
+				med läsaren.
+			</p>
+
+			<h3>Interpunktion</h3>
+			<p>
+				Tankstreck och talstreck används inte i elevtexten, varken i brödtext, uppgifter eller
+				bildtexter. Meningar skrivs i stället om. Kolon och semikolon används sparsamt och aldrig som
+				stilistiska pausmarkörer; där ett tankstreck vore fel är oftast även ett kolon fel, och då bryts
+				meningen i två i stället. Strukturella kolon, som i en definitionslista eller en skala som 2:1,
+				omfattas inte.
+			</p>
+
+			<h3>Begreppen</h3>
+			<p>
+				Varje tekniskt begrepp har exakt ett huvudställe. Där kursiveras det första gången det
+				introduceras, aldrig i fetstil, och definitionen växer ur exemplet i löpande prosa. I senare
+				kapitel används begreppet utan att förklaringen upprepas, och det fördjupas i stället för att
+				omdefinieras. Begrepp introduceras först när eleven behöver dem, aldrig i förväg. Kapitlets
+				begreppslista skrivs i ett obligatoriskt ordlisteformat med begreppet i fetstil, ett kolon och en
+				definition som är en fullständig mening. Att ett begrepp bara har ett huvudställe kontrolleras
+				maskinellt över hela boken.
+			</p>
+
+			<h3>Terminologi och personnamn</h3>
+			<p>
+				Ett ord per sak genom hela boken, och vardagsord före fackmetafor. Nya termval förs in i en
+				löpande termlista så att två kapitel inte väljer olika ord för samma sak. Personnamn tas normalt
+				bort när eleven inte behöver kunna namnet för att förstå tekniken; berättelsen bärs i stället av
+				årtal, platser, produkter och förlopp. Personer namnges när de har avgörande teknikhistorisk
+				betydelse eller när namnet tillför något som produkten eller lösningen inte kan förmedla.
+			</p>
+
+			<h3>Exempel</h3>
+			<p>
+				Exemplen är hämtade ur verkligheten: verkliga produkter, företag, konstruktioner och händelser.
+				Fiktiva exempel används inte när ett verkligt fungerar lika bra, och där ett fall ändå är
+				konstruerat sägs det öppet i texten. Exemplen är samtidigt utbytbara, alltså valda så att ett
+				likvärdigt verkligt exempel ska kunna ersätta dem utan att avsnittets resonemang eller uppgifter
+				behöver göras om. För att exemplen inte ska spreta hämtas de ur ett fåtal återkommande
+				tillämpningsområden: produktdesign, informationsteknik och mjukvara, bygg och konstruktion samt
+				hållbar teknik och energi, valda per kapitel efter vad de illustrerar bäst.
+			</p>
+
+			<h3>Vad elevtexten inte innehåller</h3>
+			<p>
+				Inga klickbara länkar i löptext, uppgifter eller bildtexter, eftersom ett bokmanus inte har
+				länkar. Inga självreferenser till produktionsbegrepp som uppslag, modul eller lärandemål. Inga
+				gransknings-, process- eller utkastnotiser; utkaststatus spåras i metadata, inte i prosan. Inga
+				motivationsstycken, tomma övergångar, repetitionskapitel eller sammanfattningar efter varje
+				avsnitt. Och en uttrycklig lista över formuleringar som är typiska för AI-genererad text hålls
+				borta, till exempel "det är viktigt att", "låt oss", "i dagens samhälle" och
+				"sammanfattningsvis".
+			</p>
+
+			<h2 id="produktion">Hur manuset har tagits fram</h2>
+
+			<h3>Boken är en export ur en kunskapsdatabas</h3>
+			<p>
+				Projektet är byggt som en modulär kunskapsdatabas, och den färdiga boken är en export ur den.
+				Varje avsnitt är en egen fil med strukturerad metadata: id, status, lärandemål,
+				kursplanereferenser, vilka förmågor avsnittet tränar, vilka begrepp det introducerar och
+				återanvänder samt vilka avsnitt som är förkunskaper. Kapitel- och avsnittsstrukturen har en enda
+				källa, ett strukturdokument som verktygen läser direkt, så att webbplats, validering och export
+				aldrig kan visa olika bilder av boken. Samma källfiler används av granskningsvyn och av
+				exporterna till förlagsmanus och läsfärdig bok.
+			</p>
+
+			<h3>AI som medförfattare, under redaktionell styrning</h3>
+			<p>
+				Manuset är skrivet av Claude Code, alltså av en AI-assistent, under projektägarens redaktionella
+				styrning. Det redovisas här därför att en granskare bör kunna väga texten med den vetskapen, och
+				därför att arbetsmodellen är en del av svaret på hur kvaliteten har säkrats.
+			</p>
+			<p>
+				Arbetet styrs av tolv styrdokument med en fastställd prioriteringsordning som avgör vilket
+				dokument som gäller vid en direkt motsägelse. De reglerar vision, avgränsningar, pedagogisk
+				modell, redaktionsprinciper, ämnes- och begreppssyn, språk, struktur, kursplantäckning,
+				kvalitetssäkring och produktionsarkitektur. AI:s roll är medförfattare och teknisk redaktör, med
+				uppdraget att aktivt förbättra manuset och föreslå bättre lösningar, inte att utföra
+				instruktioner ordagrant.
+			</p>
+			<p>
+				Befogenheterna är samtidigt avgränsade. Kapitelstruktur och kursplanetäckning ändras aldrig utan
+				projektägarens uttryckliga beslut. Påhittade fakta och fiktiva företag när verkliga exempel
+				finns är förbjudna. Ett helt kapitel skrivs aldrig i ett steg: arbetet sker ett avsnitt i taget,
+				i ordningen förberedelse, teori, figurer, uppgifter, kvalitetskontroll, med ett commit per
+				avsnitt. Två kapitel är dessutom låsta för redigering och fungerar som fasta referenser för
+				resten av boken, ett för beskrivande stoff och ett för procedur- och beräkningsstoff.
+			</p>
+			<p>
+				En sak är värd att säga rakt ut, eftersom den kan låta motsägelsefull. Ett uttryckligt krav i
+				författarmanualen är att läsaren aldrig ska uppleva texten som AI-genererad. Det är inte ett
+				försök att dölja något, utan ett kvalitetskrav på rösten: boken ska läsas som skriven av en
+				erfaren lärare, med den variation i meningsbyggnad och den frånvaro av manér som det innebär.
+				Öppenheten om metoden och kravet på texten hör alltså ihop.
+			</p>
+
+			<h3>Statusflöde och maskinella kontroller</h3>
+			<p>
+				Varje avsnitt går genom ett statusflöde: ej påbörjad, under utveckling, färdig första version,
+				fackgranskad, språkgranskad, klar. Från och med färdig första version ställer valideringen hårda
+				krav, och de kontrolleras vid varje körning och före varje bygge av webbplatsen. Kontrollerna
+				omfattar bland annat att strukturen i content stämmer med strukturdokumentet, att antalet
+				instuderingsfrågor och övningar ligger inom sina spann, att övningarna har namn i fetstil och
+				explicit stigande numrering, att bildplatshållarna har rätt format med både innehåll och
+				bildtext, att begreppslistan följer ordlisteformatet, att varje begrepp har högst ett
+				huvudställe, att förkunskaper ligger tidigare i läsordningen, att kursplantaggarna är giltiga
+				och att facit täcker varje numrerad uppgift i kapitlet. Utöver de hårda felen ges mjuka
+				varningar för semikolontäthet, tankstreck, AI-typiska formuleringar, personnamn och avsnitt utan
+				bildplatshållare. Bygget stannar vid fel.
+			</p>
+			<p>
+				Utöver maskinkontrollen granskas varje avsnitt mot en checklista som täcker det som inte går att
+				kontrollera automatiskt: faktakorrekthet, progression, exempelval, bildernas pedagogiska
+				funktion, gränsdragningen mot andra kapitel och helhetsbedömningen att eleven rimligen kan nå
+				lärandemålet utan ytterligare teori.
+			</p>
+
+			<h3>Faktagranskning</h3>
+			<p>
+				Faktapåståenden i det producerade materialet registreras i en granskningslogg med påstående,
+				åtgärd, källa och status. Institutionella och primära källor går före uppslagsverk och
+				nyhetssidor för exakta årtal, patent, säkerhetsärenden, påståenden om att något var först samt
+				precisa antal och priser. Loggen redovisar också de fel som rättats under arbetet, till exempel
+				en felaktig lastförutsättning hämtad ur fel tabell i en standard, ett räknefel i ett
+				jämviktsexempel och ett avrundningsfel som gjorde att eleven inte kunde reproducera ett angivet
+				svar.
+			</p>
+			<p>
+				Lika viktigt är vad loggen medvetet lämnar öppet. Uppgifter som bedöms korrekta men som är av
+				den typ som kräver institutionellt stöd står uppräknade som kontrollpunkter före tryck, och
+				påståenden som inte gått att belägga skrivs inte ut som fakta i boken. På flera ställen är en
+				precisering avsiktligt utelämnad ur elevtexten, till exempel ett företagsnamn, en
+				paragrafhänvisning eller en siffra som beror på antaganden, just för att texten inte ska påstå
+				mer än vad som är belagt.
+			</p>
+
+			<h3>Versionshantering och publicering</h3>
+			<p>
+				Allt arbete ligger i ett git-repositorium med ett commit per avsnitt eller annan betydande
+				ändring, vilket gör varje redaktionellt steg spårbart. Granskningswebbplatsen byggs och
+				publiceras automatiskt vid varje ändring. Den här sidan och manuset är publikt läsbara för den
+				som har adressen men är märkta så att de inte indexeras av sökmotorer, eftersom manuset är
+				arbetsmaterial och inte en publicerad produkt.
+			</p>
+
+			<h2 id="aterstar">Vad som återstår</h2>
+
+			<p>
+				Fyra saker bör en granskare känna till innan hen läser manuset.
+			</p>
+			<p>
+				<strong>Illustrationerna är inte producerade.</strong> Varje bild finns som en specifikation i
+				löptexten. Bildernas pedagogiska funktion går alltså att bedöma, men inte deras utförande.
+			</p>
+			<p>
+				<strong>Fackgranskning och språkgranskning återstår.</strong> Hela manuset står i status färdig
+				första version. Det som är gjort är författandet, den löpande egengranskningen mot
+				checklistorna, faktagranskningen enligt loggen och de maskinella kontrollerna.
+			</p>
+			<p>
+				<strong>Vissa faktauppgifter väntar på institutionell bekräftelse.</strong> De är uppräknade i
+				granskningsloggen och ska stämmas av före tryck.
+			</p>
+			<p>
+				<strong>Lärarmaterialet ingår inte.</strong> Bedömningsstöd, betygsunderlag och lärarhandledning
+				ligger utanför boken och utanför det här materialet. Elevfacit ingår däremot i boken, av
+				pedagogiska skäl som beskrivs ovan.
+			</p>
+
+			<p class="avslut">
+				Manuset läses i sin helhet i <a href={medBase('/review/')}>granskningsvyn</a>, kapitel för
+				kapitel eller som en sammanhängande text.
+			</p>
+		</main>
+	</body>
+</html>
+
+<style is:global>
+	* { box-sizing: border-box; }
+	html { color-scheme: light; }
+	body {
+		margin: 0;
+		font-family: Georgia, 'Times New Roman', serif;
+		font-size: 1.05rem;
+		line-height: 1.65;
+		color: #1a1a1a;
+		background: #fff;
+	}
+
+	.topnav {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 1rem;
+		flex-wrap: wrap;
+		padding: 0.8rem 1.25rem;
+		border-bottom: 1px solid #ddd;
+		font-family: system-ui, sans-serif;
+		font-size: 0.85rem;
+	}
+	.topnav .etikett { color: #888; letter-spacing: 0.04em; text-transform: uppercase; }
+	.topnav a { color: #234; text-decoration: none; }
+	.topnav a:hover { text-decoration: underline; }
+
+	main {
+		max-width: 44rem;
+		margin: 0 auto;
+		padding: 0 1.25rem 6rem;
+	}
+
+	.titelblad { margin: 3.5rem 0 2rem; }
+	.titelblad h1 { font-size: 1.9rem; line-height: 1.3; margin: 0 0 0.6rem; }
+	.underrubrik { color: #666; margin: 0; font-size: 1rem; }
+
+	.ingress { font-size: 1.12rem; line-height: 1.6; }
+
+	h2 {
+		font-size: 1.45rem;
+		margin: 3.5rem 0 0.9rem;
+		padding-top: 1.2rem;
+		border-top: 1px solid #e3e3e3;
+		color: #222;
+		scroll-margin-top: 1rem;
+	}
+	h3 { font-size: 1.13rem; margin: 2.2rem 0 0.5rem; }
+	p { margin: 0 0 1.1rem; }
+	a { color: #1d3a5f; }
+
+	.statusruta {
+		margin: 2.5rem 0;
+		padding: 1.4rem 1.5rem 1.1rem;
+		background: #f7f8f9;
+		border: 1px solid #e3e3e3;
+		border-radius: 0.35rem;
+	}
+	.statusruta p { font-size: 0.98rem; }
+	.ruta-rubrik {
+		font-family: system-ui, sans-serif;
+		font-size: 0.72rem;
+		text-transform: uppercase;
+		letter-spacing: 0.07em;
+		color: #777;
+		font-weight: 600;
+		margin: 0 0 0.9rem;
+		padding: 0;
+		border: none;
+	}
+
+	.nyckeltal {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+		gap: 1rem 1.2rem;
+		margin: 1.6rem 0 1rem;
+		padding: 1.2rem 0 0;
+		border-top: 1px solid #e3e3e3;
+	}
+	.nyckeltal div { margin: 0; }
+	.nyckeltal dt {
+		font-size: 1.5rem;
+		line-height: 1.1;
+		color: #1d3a5f;
+	}
+	.nyckeltal dd {
+		margin: 0.2rem 0 0;
+		font-family: system-ui, sans-serif;
+		font-size: 0.78rem;
+		line-height: 1.35;
+		color: #666;
+	}
+	.fotnot {
+		font-family: system-ui, sans-serif;
+		font-size: 0.78rem;
+		color: #888;
+		margin: 0;
+	}
+
+	.innehall {
+		font-family: system-ui, sans-serif;
+		font-size: 0.9rem;
+		margin: 2.5rem 0 1rem;
+	}
+	.innehall-rubrik {
+		font-size: 0.72rem;
+		text-transform: uppercase;
+		letter-spacing: 0.07em;
+		color: #888;
+		font-weight: 600;
+		margin: 0 0 0.5rem;
+	}
+	.innehall ol { margin: 0; padding-left: 1.3rem; }
+	.innehall li { margin: 0.2rem 0; }
+	.innehall a { text-decoration: none; }
+	.innehall a:hover { text-decoration: underline; }
+
+	.tabellyta { overflow-x: auto; margin: 1.5rem 0 2rem; }
+	table.tackning {
+		border-collapse: collapse;
+		font-family: system-ui, sans-serif;
+		font-size: 0.82rem;
+		line-height: 1.45;
+		min-width: 42rem;
+		width: 100%;
+	}
+	table.tackning th,
+	table.tackning td {
+		border: 1px solid #ddd;
+		padding: 0.35rem 0.6rem;
+		text-align: left;
+		vertical-align: top;
+	}
+	table.tackning thead th {
+		background: #f2f3f5;
+		font-size: 0.74rem;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: #555;
+	}
+	table.tackning .nivarad th {
+		background: #1d3a5f;
+		color: #fff;
+		font-size: 0.78rem;
+		letter-spacing: 0.05em;
+	}
+	table.tackning .id { white-space: nowrap; color: #666; font-variant-numeric: tabular-nums; }
+	table.tackning .kapitel { white-space: nowrap; }
+	table.tackning .berors,
+	table.tackning .antal { text-align: center; color: #666; font-variant-numeric: tabular-nums; }
+
+	.avslut {
+		margin-top: 3rem;
+		padding-top: 1.2rem;
+		border-top: 1px solid #e3e3e3;
+		font-family: system-ui, sans-serif;
+		font-size: 0.92rem;
+	}
+
+	@media (max-width: 640px) {
+		main { font-size: 1rem; padding: 0 1rem 4rem; }
+		.titelblad h1 { font-size: 1.55rem; }
+		h2 { font-size: 1.3rem; }
+	}
+
+	@media print {
+		.topnav, .innehall { display: none; }
+		main { max-width: none; padding: 0; font-size: 11pt; }
+		a { color: inherit; text-decoration: none; }
+		h2, h3 { break-after: avoid; page-break-after: avoid; }
+		.statusruta, .tabellyta { break-inside: avoid; }
+	}
+</style>
