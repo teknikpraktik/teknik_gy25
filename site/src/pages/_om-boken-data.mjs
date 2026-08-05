@@ -22,7 +22,6 @@ function raknaSektionsposter(body, rubrik) {
 export async function hamtaNyckeltal() {
 	const docs = await getCollection('docs');
 	const avsnitt = docs.filter((e) => e.data.id !== undefined);
-	const avslutningar = docs.filter((e) => e.data.type !== undefined);
 
 	let ord = 0;
 	let ordBildspec = 0;
@@ -56,7 +55,6 @@ export async function hamtaNyckeltal() {
 	return {
 		kapitel: kapitel.length,
 		avsnitt: avsnitt.length,
-		avslutningar: avslutningar.length,
 		ord: ordAvrundat.toLocaleString('sv-SE'),
 		bildplatshallare,
 		instuderingsfragor,
