@@ -443,91 +443,48 @@ const nivaer = ['Nivå 1', 'Nivå 2', 'Syftesmål'];
 
 			<h3>Boken är en export ur en kunskapsdatabas</h3>
 			<p>
-				Projektet är byggt som en modulär kunskapsdatabas, och den färdiga boken är en export ur den.
-				Varje avsnitt är en egen fil med strukturerad metadata: id, status, lärandemål,
-				kursplanereferenser, vilka förmågor avsnittet tränar, vilka begrepp det introducerar och
-				återanvänder samt vilka avsnitt som är förkunskaper. Kapitel- och avsnittsstrukturen har en enda
-				källa, ett strukturdokument som verktygen läser direkt, så att webbplats, validering och export
-				aldrig kan visa olika bilder av boken. Samma källfiler används av granskningsvyn och av
-				exporterna till förlagsmanus och läsfärdig bok.
+				Varje avsnitt är en egen fil med strukturerad metadata: status, lärandemål,
+				kursplanereferenser, begrepp och förkunskaper. Kapitel- och avsnittsstrukturen har en enda
+				källa som verktygen läser direkt. Granskningsvyn, valideringen och exporterna till förlagsmanus
+				och läsfärdig bok utgår därför från samma filer och kan inte visa olika bilder av boken.
 			</p>
 
 			<h3>AI som medförfattare, under redaktionell styrning</h3>
 			<p>
 				Manuset är skrivet av Claude Code, alltså av en AI-assistent, under projektägarens redaktionella
-				styrning. Det redovisas här därför att en granskare bör kunna väga texten med den vetskapen, och
-				därför att arbetsmodellen är en del av svaret på hur kvaliteten har säkrats.
+				styrning. Det redovisas här därför att en granskare bör kunna väga texten med den vetskapen.
+				Arbetet styrs av tolv styrdokument med en fastställd prioriteringsordning vid motsägelser, och
+				AI:s roll är medförfattare och teknisk redaktör med uppdrag att förbättra manuset, inte att
+				utföra instruktioner ordagrant. Befogenheterna är avgränsade: kapitelstruktur och
+				kursplanetäckning ändras aldrig utan projektägarens beslut, påhittade fakta och fiktiva exempel
+				när verkliga finns är förbjudna, och ett helt kapitel skrivs aldrig i ett steg utan ett avsnitt
+				i taget.
 			</p>
 			<p>
-				Arbetet styrs av tolv styrdokument med en fastställd prioriteringsordning som avgör vilket
-				dokument som gäller vid en direkt motsägelse. De reglerar vision, avgränsningar, pedagogisk
-				modell, redaktionsprinciper, ämnes- och begreppssyn, språk, struktur, kursplantäckning,
-				kvalitetssäkring och produktionsarkitektur. AI:s roll är medförfattare och teknisk redaktör, med
-				uppdraget att aktivt förbättra manuset och föreslå bättre lösningar, inte att utföra
-				instruktioner ordagrant.
-			</p>
-			<p>
-				Befogenheterna är samtidigt avgränsade. Kapitelstruktur och kursplanetäckning ändras aldrig utan
-				projektägarens uttryckliga beslut. Påhittade fakta och fiktiva företag när verkliga exempel
-				finns är förbjudna. Ett helt kapitel skrivs aldrig i ett steg: arbetet sker ett avsnitt i taget,
-				i ordningen förberedelse, teori, figurer, uppgifter, kvalitetskontroll, med ett commit per
-				avsnitt.
-			</p>
-			<p>
-				En sak är värd att säga rakt ut, eftersom den kan låta motsägelsefull. Ett uttryckligt krav i
-				författarmanualen är att läsaren aldrig ska uppleva texten som AI-genererad. Det är inte ett
-				försök att dölja något, utan ett kvalitetskrav på rösten: boken ska läsas som skriven av en
-				erfaren lärare, med den variation i meningsbyggnad och den frånvaro av manér som det innebär.
-				Öppenheten om metoden och kravet på texten hör alltså ihop.
+				Ett uttryckligt krav i författarmanualen är samtidigt att läsaren aldrig ska uppleva texten som
+				AI-genererad. Det är ett kvalitetskrav på rösten och inget försök att dölja metoden: boken ska
+				läsas som skriven av en erfaren lärare.
 			</p>
 
-			<h3>Statusflöde och maskinella kontroller</h3>
+			<h3>Kontroller</h3>
 			<p>
-				Varje avsnitt går genom ett statusflöde: ej påbörjad, under utveckling, färdig första version,
-				fackgranskad, språkgranskad, klar. Från och med färdig första version ställer valideringen hårda
-				krav, och de kontrolleras vid varje körning och före varje bygge av webbplatsen. Kontrollerna
-				omfattar bland annat att strukturen i content stämmer med strukturdokumentet, att antalet
-				instuderingsfrågor och övningar ligger inom sina spann, att övningarna har namn i fetstil och
-				explicit stigande numrering, att bildplatshållarna har rätt format med både innehåll och
-				bildtext, att begreppslistan följer ordlisteformatet, att varje begrepp har högst ett
-				huvudställe, att förkunskaper ligger tidigare i läsordningen, att kursplantaggarna är giltiga
-				och att facit täcker varje numrerad uppgift i kapitlet. Utöver de hårda felen ges mjuka
-				varningar för semikolontäthet, tankstreck, AI-typiska formuleringar, personnamn och avsnitt utan
-				bildplatshållare. Bygget stannar vid fel.
+				Varje avsnitt går genom statusflödet ej påbörjad, under utveckling, färdig första version,
+				fackgranskad, språkgranskad, klar. Från färdig första version ställer en maskinell validering
+				hårda krav som körs före varje bygge: att strukturen stämmer med strukturdokumentet, att antalet
+				instuderingsfrågor och övningar ligger inom sina spann, att uppgifterna är rätt numrerade, att
+				bildplatshållarna har både innehåll och bildtext, att begreppslistan följer sitt format, att
+				varje begrepp har högst ett huvudställe och att facit täcker varje numrerad uppgift. Mjuka
+				varningar ges dessutom för tankstreck, AI-typiska formuleringar och personnamn. Bygget stannar
+				vid fel. Det som inte går att kontrollera maskinellt, alltså faktakorrekthet, progression,
+				exempelval och bildernas funktion, granskas mot checklista.
 			</p>
 			<p>
-				Utöver maskinkontrollen granskas varje avsnitt mot en checklista som täcker det som inte går att
-				kontrollera automatiskt: faktakorrekthet, progression, exempelval, bildernas pedagogiska
-				funktion, gränsdragningen mot andra kapitel och helhetsbedömningen att eleven rimligen kan nå
-				lärandemålet utan ytterligare teori.
-			</p>
-
-			<h3>Faktagranskning</h3>
-			<p>
-				Faktapåståenden i det producerade materialet registreras i en granskningslogg med påstående,
-				åtgärd, källa och status. Institutionella och primära källor går före uppslagsverk och
-				nyhetssidor för exakta årtal, patent, säkerhetsärenden, påståenden om att något var först samt
-				precisa antal och priser. Loggen redovisar också de fel som rättats under arbetet, till exempel
-				en felaktig lastförutsättning hämtad ur fel tabell i en standard, ett räknefel i ett
-				jämviktsexempel och ett avrundningsfel som gjorde att eleven inte kunde reproducera ett angivet
-				svar.
-			</p>
-			<p>
-				Lika viktigt är vad loggen medvetet lämnar öppet. Uppgifter som bedöms korrekta men som är av
-				den typ som kräver institutionellt stöd står uppräknade som kontrollpunkter före tryck, och
-				påståenden som inte gått att belägga skrivs inte ut som fakta i boken. På flera ställen är en
-				precisering avsiktligt utelämnad ur elevtexten, till exempel ett företagsnamn, en
-				paragrafhänvisning eller en siffra som beror på antaganden, just för att texten inte ska påstå
-				mer än vad som är belagt.
-			</p>
-
-			<h3>Versionshantering och publicering</h3>
-			<p>
-				Allt arbete ligger i ett git-repositorium med ett commit per avsnitt eller annan betydande
-				ändring, vilket gör varje redaktionellt steg spårbart. Granskningswebbplatsen byggs och
-				publiceras automatiskt vid varje ändring. Den här sidan och manuset är publikt läsbara för den
-				som har adressen men är märkta så att de inte indexeras av sökmotorer, eftersom manuset är
-				arbetsmaterial och inte en publicerad produkt.
+				Faktapåståenden registreras i en granskningslogg med påstående, åtgärd, källa och status, där
+				institutionella och primära källor går före uppslagsverk för årtal, patent och liknande. Loggen
+				redovisar både rättade fel och det som medvetet lämnats öppet: uppgifter som ska stämmas mot
+				institutionell källa före tryck, och påståenden som inte gått att belägga och därför inte skrivs
+				ut som fakta i boken. Allt arbete ligger i ett git-repositorium med ett commit per avsnitt,
+				vilket gör varje redaktionellt steg spårbart.
 			</p>
 
 			<h2 id="aterstar">Vad som återstår</h2>
