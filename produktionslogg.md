@@ -10,6 +10,29 @@ ingår inte i bokexporten (export läser endast content/).
 
 ---
 
+# 2026-08-05 — Kapitel 1 upplåst för en språklig rättelse i 1.1
+
+Projektägaren ändrade förordets inledning från "Bakom varje sak du använde i
+morse" till "Bakom varje sak du använder", eftersom bilden band påståendet till
+morgonen i onödan. Kontrollen av den exporterade Word-filen visade att samma
+formulering fanns i avsnitt 1.1, som dessutom öppnar med en mening som i
+praktiken är förordets första i annan ordning.
+
+**Kapitel 1 är därför upplåst 2026-08-05 på projektägarens uttryckliga begäran**
+(scripts/migreringsstatus.mjs, `lastaKapitel`) och rättelsen är gjord i 1.1:
+"bakom varje sak du använde i morse" heter nu "bakom varje sak du använder".
+Referensimplementationen är synkad mot content i samma steg, i enlighet med
+regeln i dess egen ingress att content gäller och referensen följer efter.
+Kapitlet bör låsas igen när inga fler rättelser är planerade.
+
+**Kvar att ta ställning till.** Förordet inleds nu med "Bakom varje sak du
+använder" och 1.1 har samma formulering längre in i sitt öppningsstycke, som
+dessutom innehåller "Bakom varje sak finns människor som ...". Ekot mellan
+förord och avsnitt 1.1 är alltså starkare efter rättelsen än före. Ingen
+åtgärd är beslutad.
+
+---
+
 # 2026-08-05 — Publik infosida, och omfångspåståendet korrigerat
 
 **Publik infosida `/om-boken/`** (site/src/pages/om-boken.astro med datakällan

@@ -31,9 +31,11 @@ export const migreradeKapitel = new Set();
 // redigering fångas innan den committas. Låset lyfts bara på projektägarens
 // uttryckliga begäran — ta då bort kapitelnumret här.
 //
-// Kapitel 1 (Teknikens grunder) är låst sedan 2026-07-26. Kapitlet är
-// korrekturläst och godkänt av projektägaren och är bokens referenskapitel för
-// struktur, ton, instuderingsfrågor och övningar (se produktionslogg.md).
+// Kapitel 1 (Teknikens grunder) var låst från 2026-07-26 och är upplåst
+// 2026-08-05 på projektägarens begäran, för en språklig rättelse i 1.1. Det är
+// fortfarande bokens referenskapitel för struktur, ton, instuderingsfrågor och
+// övningar (se produktionslogg.md), och bör låsas igen när rättelserna är
+// gjorda — lägg då tillbaka 1 i settet nedan.
 // Kapitel 6 (Mekanik och konstruktion) är låst sedan 2026-07-26. Kapitlet är
 // kapitelgranskat, facit är skrivet och kontrollerat, och det är bokens
 // referenskapitel för procedur- och beräkningsstoff.
@@ -43,7 +45,7 @@ export const migreradeKapitel = new Set();
 // Kapitel 7 (Mätteknik och dataanalys) är låst sedan 2026-07-26. Kapitlet är
 // producerat under det färdiga ramverket, kapitelgranskat och försett med facit.
 // Lås ett kapitel genom att lägga till dess nummer i settet.
-export const lastaKapitel = new Set([1, 2, 6, 7]);
+export const lastaKapitel = new Set([2, 6, 7]);
 
 // Kategorietiketter för grupperingen i validate-utdata.
 //

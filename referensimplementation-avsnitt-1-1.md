@@ -1,6 +1,6 @@
 # Referensimplementation — avsnitt 1.1 Vad är teknik?
 
-Detta dokument är projektets redaktionella guldstandard, fastställd av projektägaren 2026-07-22. Den är referens för hela boken i fråga om ton, kompressionsgrad, exempelanvändning, bildplaceholders, instuderingsfrågor och övningar. Den skarpa manusversionen ligger i `content/01-teknikens-grunder/01-vad-ar-teknik.md` och gäller alltid framför detta dokument: vid skillnad synkas referensen mot content, aldrig tvärtom. Texten nedan speglar content per 2026-07-26 och får inte redigeras utan projektägarens beslut.
+Detta dokument är projektets redaktionella guldstandard, fastställd av projektägaren 2026-07-22. Den är referens för hela boken i fråga om ton, kompressionsgrad, exempelanvändning, bildplaceholders, instuderingsfrågor och övningar. Den skarpa manusversionen ligger i `content/01-teknikens-grunder/01-vad-ar-teknik.md` och gäller alltid framför detta dokument: vid skillnad synkas referensen mot content, aldrig tvärtom. Texten nedan speglar content per 2026-08-05 och får inte redigeras utan projektägarens beslut.
 
 Rubriknivåerna nedan (`###` under `## 1.1`) skiljer sig från content-filens (`##`), eftersom avsnittet där är en egen fil. Skillnaden är strukturell och inte saklig.
 
@@ -14,7 +14,7 @@ Rubriknivåerna nedan (`###` under `## 1.1`) skiljer sig från content-filens (`
 
 En vanlig skolmorgon hinner du använda mer teknik än de flesta människor mötte under en hel livstid för tvåhundra år sedan. Mobilen som väcker dig, kranen som ger vatten med jämnt tryck, kylskåpet som hållit mjölken kall under natten, dragkedjan i jackan och cykeln eller bussen som tar dig till skolan.
 
-Ingenting av detta har uppstått av sig självt. Bakom varje sak finns människor som såg ett problem, undersökte vad som var möjligt, valde en lösning bland flera tänkbara, provade och förbättrade. Det arbetet pågår fortfarande, bakom varje sak du använde i morse, och det är kärnan i vad ingenjörer och tekniker gör: förstår problem, ser möjligheter och utvecklar lösningar.
+Ingenting av detta har uppstått av sig självt. Bakom varje sak finns människor som såg ett problem, undersökte vad som var möjligt, valde en lösning bland flera tänkbara, provade och förbättrade. Det arbetet pågår fortfarande, bakom varje sak du använder, och det är kärnan i vad ingenjörer och tekniker gör: förstår problem, ser möjligheter och utvecklar lösningar.
 
 Ett exempel visar hur det kan gå till. På 1880-talet bar en montör med sig en hel uppsättning fasta skruvnycklar, en för varje mutterstorlek. Verktygslådan blev tung, och den nyckel som behövdes var ofta den som saknades. Johan Petter Johansson, som drev en mekanisk verkstad i Enköping, löste problemet genom att göra nyckelns gap ställbart. Skiftnyckeln, som han fick patent på 1892, ersatte ett helt nyckelset med ett enda verktyg. Den har sedan dess tillverkats i över hundra miljoner exemplar och ser i allt väsentligt likadan ut än i dag.
 

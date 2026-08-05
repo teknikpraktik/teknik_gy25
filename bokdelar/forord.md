@@ -1,4 +1,4 @@
-Teknik handlar om hur människor löser problem. Bakom varje sak du använde i morse finns någon som såg ett behov, undersökte vad som var möjligt, valde en lösning bland flera tänkbara, provade den och förbättrade den. Den här boken handlar om det arbetet och om den kunskap det vilar på.
+Teknik handlar om hur människor löser problem. Bakom varje sak du använder finns någon som såg ett behov, undersökte vad som var möjligt, valde en lösning bland flera tänkbara, provade den och förbättrade den. Den här boken handlar om det arbetet och om den kunskap det vilar på.
 
 Boken är skriven för ämnet teknik i gymnasieskolan och täcker innehållet i både nivå 1 och nivå 2. Den börjar i vad teknik är och hur den har utvecklats, går vidare till att lösa tekniska problem och att driva en teknikutvecklingsprocess, och tar sedan upp de kunskapsområden en tekniker arbetar med. Ritteknik och CAD, material, mekanik och konstruktion, mätteknik, modellering, IT-system och programmering. Därefter följer arbetsformerna, alltså projekt och entreprenörskap samt kvalitet, risk och arbetsmiljö, och till sist teknikens förhållande till människa och samhälle.
 
